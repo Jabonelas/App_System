@@ -1,0 +1,272 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{25FD8C93-1B36-41F3-9DF4-02DB2EDCF375}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DXApplicationPDV</RootNamespace>
+    <AssemblyName>DXApplicationPDV</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.BonusSkins.v23.1" />
+    <Reference Include="DevExpress.Data.Desktop.v23.1" />
+    <Reference Include="DevExpress.Data.v23.1" />
+    <Reference Include="DevExpress.Printing.v23.1.Core" />
+    <Reference Include="DevExpress.Utils.v23.1" />
+    <Reference Include="DevExpress.Xpo.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v23.1" />
+    <Reference Include="DevExpress.Sparkline.v23.1.Core" />
+    <Reference Include="DevExpress.XtraEditors.v23.1" />
+    <Reference Include="DevExpress.Drawing.v23.1" />
+    <Reference Include="DevExpress.XtraGrid.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SQLite, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.118.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.118.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\LogErros.cs" />
+    <Compile Include="Classes\MensagensDoSistema.cs" />
+    <Compile Include="Classes\TelaDeCarregamento.cs" />
+    <Compile Include="frmPamentoPDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPamentoPDV.Designer.cs">
+      <DependentUpon>frmPamentoPDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTelaInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTelaInicial.Designer.cs">
+      <DependentUpon>frmTelaInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\ConnectionHelper.cs" />
+    <Compile Include="ORMDataModelCode\tb_ator.cs" />
+    <Compile Include="ORMDataModelCode\tb_ator.Designer.cs">
+      <DependentUpon>tb_ator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_categoria_produto.cs" />
+    <Compile Include="ORMDataModelCode\tb_categoria_produto.Designer.cs">
+      <DependentUpon>tb_categoria_produto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_certificado_digital.cs" />
+    <Compile Include="ORMDataModelCode\tb_certificado_digital.Designer.cs">
+      <DependentUpon>tb_certificado_digital.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_estados_br.cs" />
+    <Compile Include="ORMDataModelCode\tb_estados_br.Designer.cs">
+      <DependentUpon>tb_estados_br.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_forma_pagamento.cs" />
+    <Compile Include="ORMDataModelCode\tb_forma_pagamento.Designer.cs">
+      <DependentUpon>tb_forma_pagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_marca_produto.cs" />
+    <Compile Include="ORMDataModelCode\tb_marca_produto.Designer.cs">
+      <DependentUpon>tb_marca_produto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_matriz.cs" />
+    <Compile Include="ORMDataModelCode\tb_matriz.Designer.cs">
+      <DependentUpon>tb_matriz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_movimentacao.cs" />
+    <Compile Include="ORMDataModelCode\tb_movimentacao.Designer.cs">
+      <DependentUpon>tb_movimentacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_municipio.cs" />
+    <Compile Include="ORMDataModelCode\tb_municipio.Designer.cs">
+      <DependentUpon>tb_municipio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_nfe.cs" />
+    <Compile Include="ORMDataModelCode\tb_nfe.Designer.cs">
+      <DependentUpon>tb_nfe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_pdv.cs" />
+    <Compile Include="ORMDataModelCode\tb_pdv.Designer.cs">
+      <DependentUpon>tb_pdv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_produto.cs" />
+    <Compile Include="ORMDataModelCode\tb_produto.Designer.cs">
+      <DependentUpon>tb_produto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_produto_filial.cs" />
+    <Compile Include="ORMDataModelCode\tb_produto_filial.Designer.cs">
+      <DependentUpon>tb_produto_filial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_rede.cs" />
+    <Compile Include="ORMDataModelCode\tb_rede.Designer.cs">
+      <DependentUpon>tb_rede.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_relacao_produto_cadastro_XML.cs" />
+    <Compile Include="ORMDataModelCode\tb_relacao_produto_cadastro_XML.Designer.cs">
+      <DependentUpon>tb_relacao_produto_cadastro_XML.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_secao_produto.cs" />
+    <Compile Include="ORMDataModelCode\tb_secao_produto.Designer.cs">
+      <DependentUpon>tb_secao_produto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_subcategoria_produto.cs" />
+    <Compile Include="ORMDataModelCode\tb_subcategoria_produto.Designer.cs">
+      <DependentUpon>tb_subcategoria_produto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_sub_forma_pagamento.cs" />
+    <Compile Include="ORMDataModelCode\tb_sub_forma_pagamento.Designer.cs">
+      <DependentUpon>tb_sub_forma_pagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="uc_PDV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_PDV.Designer.cs">
+      <DependentUpon>uc_PDV.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmPamentoPDV.resx">
+      <DependentUpon>frmPamentoPDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTelaInicial.resx">
+      <DependentUpon>frmTelaInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="uc_PDV.resx">
+      <DependentUpon>uc_PDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="ORMDataModel.xpo" />
+    <None Include="ORMDataModel.xpo.diagram">
+      <DependentUpon>ORMDataModel.xpo</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este projeto faz referência a pacotes do NuGet que não estão presentes neste computador. Use a Restauração de Pacotes do NuGet para baixá-los.  Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkID=322105. O arquivo ausente é {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

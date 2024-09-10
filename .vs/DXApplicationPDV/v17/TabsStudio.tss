@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<ArrayOfArrayOfArrayOfString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ArrayOfArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\Classes\LogErros.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\Classes\MensagensDoSistema.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\frmTelaInicial.cs</string>
+      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\frmTelaInicial.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\uc_PDV.cs</string>
+      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\uc_PDV.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\frmPamentoPDV.cs</string>
+      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\frmPamentoPDV.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\AppData\Local\Temp\.vsdbgsrc\924f1d34b33a73ed948a4715556c41a7275b93c458c6e692d1ac3e18f75af139\BaseEdit.cs</string>
+    </ArrayOfString>
+  </ArrayOfArrayOfString>
+</ArrayOfArrayOfArrayOfString>

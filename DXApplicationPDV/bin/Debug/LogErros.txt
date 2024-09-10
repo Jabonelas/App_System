@@ -1,0 +1,49 @@
+Data: 08/09/2024 20:49:03
+Mensagem: Erro ao preencher produtos selecionado: Requested objects cannot be loaded, because they are absent in the data store. These objects can  already be deleted/purged. If you see this exception once again with the same objects in the list, note that the referential integrity of your data store may be broken. In this instance, contact your system administrator. Requested objects: DXApplicationPDV.bancoSQLite.tb_certificado_digital(0).
+-------------------------------------------
+
+Data: 08/09/2024 20:52:01
+Mensagem: Erro ao preencher produtos selecionado: Requested objects cannot be loaded, because they are absent in the data store. These objects can  already be deleted/purged. If you see this exception once again with the same objects in the list, note that the referential integrity of your data store may be broken. In this instance, contact your system administrator. Requested objects: DXApplicationPDV.bancoSQLite.tb_certificado_digital(0).
+-------------------------------------------
+
+Data: 08/09/2024 20:54:20
+Mensagem: Erro ao preencher produtos selecionado: Requested objects cannot be loaded, because they are absent in the data store. These objects can  already be deleted/purged. If you see this exception once again with the same objects in the list, note that the referential integrity of your data store may be broken. In this instance, contact your system administrator. Requested objects: DXApplicationPDV.bancoSQLite.tb_certificado_digital(0).
+-------------------------------------------
+
+Data: 08/09/2024 20:55:57
+Mensagem: Erro ao preencher produtos selecionado: Requested objects cannot be loaded, because they are absent in the data store. These objects can  already be deleted/purged. If you see this exception once again with the same objects in the list, note that the referential integrity of your data store may be broken. In this instance, contact your system administrator. Requested objects: DXApplicationPDV.bancoSQLite.tb_certificado_digital(0).
+-------------------------------------------
+
+Data: 08/09/2024 20:57:12
+Mensagem: Erro ao preencher produtos selecionado: Requested objects cannot be loaded, because they are absent in the data store. These objects can  already be deleted/purged. If you see this exception once again with the same objects in the list, note that the referential integrity of your data store may be broken. In this instance, contact your system administrator. Requested objects: DXApplicationPDV.bancoSQLite.tb_certificado_digital(0).
+-------------------------------------------
+
+Data: 08/09/2024 21:09:42
+Mensagem: O produto selecionado não tem estoque disponível.
+-------------------------------------------
+
+Data: 08/09/2024 21:09:58
+Mensagem: O produto selecionado não tem estoque disponível.
+-------------------------------------------
+
+Data: 08/09/2024 21:14:09
+Mensagem: O produto selecionado não tem estoque disponível.
+-------------------------------------------
+
+Data: 09/09/2024 12:17:29
+Mensagem: Erro ao preencher produtos selecionado: Referência de objeto não definida para uma instância de um objeto.
+-------------------------------------------
+
+Data: 09/09/2024 15:02:37
+Mensagem: Nenhum produto foi selecionado.
+-------------------------------------------
+
+Data: 09/09/2024 18:21:37
+Mensagem: Erro ao preencher Produtos: database is locked
+database is locked
+-------------------------------------------
+
+Data: 09/09/2024 19:20:33
+Mensagem: Nenhum produto foi selecionado.
+-------------------------------------------
+
