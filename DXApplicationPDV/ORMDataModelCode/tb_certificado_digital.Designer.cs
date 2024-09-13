@@ -57,6 +57,7 @@ namespace DXApplicationPDV.bancoSQLite
             get { return fcd_razSoc; }
             set { SetPropertyValue<string>(nameof(cd_razSoc), ref fcd_razSoc, value); }
         }
+
         byte[] fcd_rawData;
         [Size(SizeAttribute.Unlimited)]
         [MemberDesignTimeVisibility(true)]
@@ -65,6 +66,7 @@ namespace DXApplicationPDV.bancoSQLite
             get { return fcd_rawData; }
             set { SetPropertyValue<byte[]>(nameof(cd_rawData), ref fcd_rawData, value); }
         }
+
         string fcd_pwd;
         [Size(64)]
         public string cd_pwd

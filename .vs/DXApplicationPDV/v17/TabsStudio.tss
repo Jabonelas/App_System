@@ -2,25 +2,33 @@
 <ArrayOfArrayOfArrayOfString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ArrayOfArrayOfString>
     <ArrayOfString>
-      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\Classes\LogErros.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\Classes\MensagensDoSistema.cs</string>
+      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\frmLogin.cs</string>
+      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\frmLogin.cs</string>
     </ArrayOfString>
     <ArrayOfString>
       <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\frmTelaInicial.cs</string>
       <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\frmTelaInicial.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\uc_PDV.cs</string>
-      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\uc_PDV.cs</string>
+      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\PDV\frmSelecionarPDV.cs</string>
+      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\PDV\frmSelecionarPDV.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\frmPamentoPDV.cs</string>
-      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\frmPamentoPDV.cs</string>
+      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\Program.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\Users\israe\AppData\Local\Temp\.vsdbgsrc\924f1d34b33a73ed948a4715556c41a7275b93c458c6e692d1ac3e18f75af139\BaseEdit.cs</string>
+      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\PDV\frmPamentoPDV.cs</string>
+      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\PDV\frmPamentoPDV.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\PDV\uc_PDV.cs</string>
+      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\PDV\uc_PDV.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\ORMDataModelCode\tb_certificado_digital.Designer.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\AppData\Local\Temp\.vsdbgsrc\b0a1f496f0180ee7c030b1c1037de5d3d3f9504eb3993f605cb6189852edb300\ConnectionProviderSql.cs</string>
     </ArrayOfString>
   </ArrayOfArrayOfString>
 </ArrayOfArrayOfArrayOfString>

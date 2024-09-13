@@ -5,6 +5,7 @@ using DevExpress.Xpo.DB;
 using DXApplicationPDV.bancoSQLite;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -51,9 +52,18 @@ namespace DXApplicationPDV
 
             #endregion Aplicacao/selecao dos temas
 
+            #region Definicao de fonte
+
+            // Defina a fonte padrão para todos os controles DevExpress
+            Font minhaFonte = new Font("Exo 2", 8);
+            DevExpress.Utils.AppearanceObject.DefaultFont = minhaFonte;
+
+            #endregion Definicao de fonte
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmTelaInicial());
+            //Application.Run(new frmLogin());
         }
     }
 }

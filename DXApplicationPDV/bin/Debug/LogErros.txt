@@ -47,3 +47,7 @@ Data: 09/09/2024 19:20:33
 Mensagem: Nenhum produto foi selecionado.
 -------------------------------------------
 
+Data: 10/09/2024 20:42:37
+Mensagem: Erro ao buscar dados do certificado digital.
+-------------------------------------------
+
