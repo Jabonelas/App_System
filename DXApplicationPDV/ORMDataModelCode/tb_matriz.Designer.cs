@@ -26,21 +26,21 @@ namespace DXApplicationPDV.bancoSQLite
             set { SetPropertyValue<long>(nameof(id_matriz), ref fid_matriz, value); }
         }
         string fmt_cnpj;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(18)]
         public string mt_cnpj
         {
             get { return fmt_cnpj; }
             set { SetPropertyValue<string>(nameof(mt_cnpj), ref fmt_cnpj, value); }
         }
         string fmt_nomeFant;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(60)]
         public string mt_nomeFant
         {
             get { return fmt_nomeFant; }
             set { SetPropertyValue<string>(nameof(mt_nomeFant), ref fmt_nomeFant, value); }
         }
         string fmt_razSoc;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(60)]
         public string mt_razSoc
         {
             get { return fmt_razSoc; }
@@ -64,35 +64,35 @@ namespace DXApplicationPDV.bancoSQLite
             get { return fmt_dtAcs; }
             set { SetPropertyValue<DateTime>(nameof(mt_dtAcs), ref fmt_dtAcs, value); }
         }
-        long fmt_hrAbertLj;
-        public long mt_hrAbertLj
+        short fmt_hrAbertLj;
+        public short mt_hrAbertLj
         {
             get { return fmt_hrAbertLj; }
-            set { SetPropertyValue<long>(nameof(mt_hrAbertLj), ref fmt_hrAbertLj, value); }
+            set { SetPropertyValue<short>(nameof(mt_hrAbertLj), ref fmt_hrAbertLj, value); }
         }
-        long fmt_hrFchLj;
-        public long mt_hrFchLj
+        short fmt_hrFchLj;
+        public short mt_hrFchLj
         {
             get { return fmt_hrFchLj; }
-            set { SetPropertyValue<long>(nameof(mt_hrFchLj), ref fmt_hrFchLj, value); }
+            set { SetPropertyValue<short>(nameof(mt_hrFchLj), ref fmt_hrFchLj, value); }
         }
-        long fmt_efetuaTestesEletro;
-        public long mt_efetuaTestesEletro
+        decimal fmt_efetuaTestesEletro;
+        public decimal mt_efetuaTestesEletro
         {
             get { return fmt_efetuaTestesEletro; }
-            set { SetPropertyValue<long>(nameof(mt_efetuaTestesEletro), ref fmt_efetuaTestesEletro, value); }
+            set { SetPropertyValue<decimal>(nameof(mt_efetuaTestesEletro), ref fmt_efetuaTestesEletro, value); }
         }
-        long fmt_desat;
-        public long mt_desat
+        decimal fmt_desat;
+        public decimal mt_desat
         {
             get { return fmt_desat; }
-            set { SetPropertyValue<long>(nameof(mt_desat), ref fmt_desat, value); }
+            set { SetPropertyValue<decimal>(nameof(mt_desat), ref fmt_desat, value); }
         }
-        long fmt_persTim;
-        public long mt_persTim
+        byte fmt_persTim;
+        public byte mt_persTim
         {
             get { return fmt_persTim; }
-            set { SetPropertyValue<long>(nameof(mt_persTim), ref fmt_persTim, value); }
+            set { SetPropertyValue<byte>(nameof(mt_persTim), ref fmt_persTim, value); }
         }
         tb_rede ffk_tb_rede;
         [Association(@"tb_matrizReferencestb_rede")]

@@ -32,18 +32,18 @@ namespace DXApplicationPDV.bancoSQLite
             set { SetPropertyValue<long>(nameof(rpc_codRef), ref frpc_codRef, value); }
         }
         string frpc_desc;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(48)]
         public string rpc_desc
         {
             get { return frpc_desc; }
             set { SetPropertyValue<string>(nameof(rpc_desc), ref frpc_desc, value); }
         }
-        string frpc_cnpj;
-        [Size(SizeAttribute.Unlimited)]
-        public string rpc_cnpj
+        string frpc_cnpj_fornecedor;
+        [Size(18)]
+        public string rpc_cnpj_fornecedor
         {
-            get { return frpc_cnpj; }
-            set { SetPropertyValue<string>(nameof(rpc_cnpj), ref frpc_cnpj, value); }
+            get { return frpc_cnpj_fornecedor; }
+            set { SetPropertyValue<string>(nameof(rpc_cnpj_fornecedor), ref frpc_cnpj_fornecedor, value); }
         }
         DateTime frpc_dtCri;
         public DateTime rpc_dtCri
@@ -84,6 +84,8 @@ namespace DXApplicationPDV.bancoSQLite
             get { return ffk_tb_ator; }
             set { SetPropertyValue<tb_ator>(nameof(fk_tb_ator), ref ffk_tb_ator, value); }
         }
+        [Association(@"tb_produtoReferencestb_relacao_produto_cadastro_XML")]
+        public XPCollection<tb_produto> tb_produtos { get { return GetCollection<tb_produto>(nameof(tb_produtos)); } }
     }
 
 }

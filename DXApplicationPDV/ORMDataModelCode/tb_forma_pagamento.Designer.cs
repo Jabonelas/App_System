@@ -43,34 +43,33 @@ namespace DXApplicationPDV.bancoSQLite
             get { return ffp_dtAcs; }
             set { SetPropertyValue<DateTime>(nameof(fp_dtAcs), ref ffp_dtAcs, value); }
         }
-        long ffp_desat;
-        public long fp_desat
+        decimal ffp_desat;
+        public decimal fp_desat
         {
             get { return ffp_desat; }
-            set { SetPropertyValue<long>(nameof(fp_desat), ref ffp_desat, value); }
+            set { SetPropertyValue<decimal>(nameof(fp_desat), ref ffp_desat, value); }
         }
         string ffp_desc;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(60)]
         public string fp_desc
         {
             get { return ffp_desc; }
             set { SetPropertyValue<string>(nameof(fp_desc), ref ffp_desc, value); }
         }
-        long ffp_ordExib;
-        public long fp_ordExib
+        short ffp_ordExib;
+        public short fp_ordExib
         {
             get { return ffp_ordExib; }
-            set { SetPropertyValue<long>(nameof(fp_ordExib), ref ffp_ordExib, value); }
+            set { SetPropertyValue<short>(nameof(fp_ordExib), ref ffp_ordExib, value); }
         }
-        string ffp_atalhoTecl;
-        [Size(SizeAttribute.Unlimited)]
-        public string fp_atalhoTecl
+        char ffp_atalhoTecl;
+        public char fp_atalhoTecl
         {
             get { return ffp_atalhoTecl; }
-            set { SetPropertyValue<string>(nameof(fp_atalhoTecl), ref ffp_atalhoTecl, value); }
+            set { SetPropertyValue<char>(nameof(fp_atalhoTecl), ref ffp_atalhoTecl, value); }
         }
         string ffp_taxaDesc;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(60)]
         public string fp_taxaDesc
         {
             get { return ffp_taxaDesc; }
@@ -172,23 +171,23 @@ namespace DXApplicationPDV.bancoSQLite
             get { return ffp_vlrMax; }
             set { SetPropertyValue<decimal>(nameof(fp_vlrMax), ref ffp_vlrMax, value); }
         }
-        long ffp_parcMin;
-        public long fp_parcMin
+        short ffp_parcMin;
+        public short fp_parcMin
         {
             get { return ffp_parcMin; }
-            set { SetPropertyValue<long>(nameof(fp_parcMin), ref ffp_parcMin, value); }
+            set { SetPropertyValue<short>(nameof(fp_parcMin), ref ffp_parcMin, value); }
         }
-        long ffp_parcMax;
-        public long fp_parcMax
+        short ffp_parcMax;
+        public short fp_parcMax
         {
             get { return ffp_parcMax; }
-            set { SetPropertyValue<long>(nameof(fp_parcMax), ref ffp_parcMax, value); }
+            set { SetPropertyValue<short>(nameof(fp_parcMax), ref ffp_parcMax, value); }
         }
-        long ffp_intParcBase;
-        public long fp_intParcBase
+        short ffp_intParcBase;
+        public short fp_intParcBase
         {
             get { return ffp_intParcBase; }
-            set { SetPropertyValue<long>(nameof(fp_intParcBase), ref ffp_intParcBase, value); }
+            set { SetPropertyValue<short>(nameof(fp_intParcBase), ref ffp_intParcBase, value); }
         }
         long ffp_nfeIndPag;
         public long fp_nfeIndPag
@@ -202,17 +201,17 @@ namespace DXApplicationPDV.bancoSQLite
             get { return ffp_nfeTipoPag; }
             set { SetPropertyValue<long>(nameof(fp_nfeTipoPag), ref ffp_nfeTipoPag, value); }
         }
-        long ffp_nfeTipoIntegr;
-        public long fp_nfeTipoIntegr
+        byte ffp_nfeTipoIntegr;
+        public byte fp_nfeTipoIntegr
         {
             get { return ffp_nfeTipoIntegr; }
-            set { SetPropertyValue<long>(nameof(fp_nfeTipoIntegr), ref ffp_nfeTipoIntegr, value); }
+            set { SetPropertyValue<byte>(nameof(fp_nfeTipoIntegr), ref ffp_nfeTipoIntegr, value); }
         }
-        long ffp_canc;
-        public long fp_canc
+        decimal ffp_canc;
+        public decimal fp_canc
         {
             get { return ffp_canc; }
-            set { SetPropertyValue<long>(nameof(fp_canc), ref ffp_canc, value); }
+            set { SetPropertyValue<decimal>(nameof(fp_canc), ref ffp_canc, value); }
         }
         tb_rede ffk_tb_rede;
         [Association(@"tb_forma_pagamentoReferencestb_rede")]

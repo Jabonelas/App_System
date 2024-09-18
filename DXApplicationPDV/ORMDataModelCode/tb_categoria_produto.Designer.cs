@@ -43,14 +43,14 @@ namespace DXApplicationPDV.bancoSQLite
             get { return fcp_dtAcs; }
             set { SetPropertyValue<DateTime>(nameof(cp_dtAcs), ref fcp_dtAcs, value); }
         }
-        long fcp_desat;
-        public long cp_desat
+        decimal fcp_desat;
+        public decimal cp_desat
         {
             get { return fcp_desat; }
-            set { SetPropertyValue<long>(nameof(cp_desat), ref fcp_desat, value); }
+            set { SetPropertyValue<decimal>(nameof(cp_desat), ref fcp_desat, value); }
         }
         string fcp_desc;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(60)]
         public string cp_desc
         {
             get { return fcp_desc; }

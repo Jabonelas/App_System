@@ -43,43 +43,42 @@ namespace DXApplicationPDV.bancoSQLite
             get { return fsfp_dtAcs; }
             set { SetPropertyValue<DateTime>(nameof(sfp_dtAcs), ref fsfp_dtAcs, value); }
         }
-        long fsfp_desat;
-        public long sfp_desat
+        decimal fsfp_desat;
+        public decimal sfp_desat
         {
             get { return fsfp_desat; }
-            set { SetPropertyValue<long>(nameof(sfp_desat), ref fsfp_desat, value); }
+            set { SetPropertyValue<decimal>(nameof(sfp_desat), ref fsfp_desat, value); }
         }
         string fsfp_desc;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(60)]
         public string sfp_desc
         {
             get { return fsfp_desc; }
             set { SetPropertyValue<string>(nameof(sfp_desc), ref fsfp_desc, value); }
         }
-        long fsfp_ordExib;
-        public long sfp_ordExib
+        short fsfp_ordExib;
+        public short sfp_ordExib
         {
             get { return fsfp_ordExib; }
-            set { SetPropertyValue<long>(nameof(sfp_ordExib), ref fsfp_ordExib, value); }
+            set { SetPropertyValue<short>(nameof(sfp_ordExib), ref fsfp_ordExib, value); }
         }
-        string fsfp_atalhoTecl;
-        [Size(SizeAttribute.Unlimited)]
-        public string sfp_atalhoTecl
+        char fsfp_atalhoTecl;
+        public char sfp_atalhoTecl
         {
             get { return fsfp_atalhoTecl; }
-            set { SetPropertyValue<string>(nameof(sfp_atalhoTecl), ref fsfp_atalhoTecl, value); }
+            set { SetPropertyValue<char>(nameof(sfp_atalhoTecl), ref fsfp_atalhoTecl, value); }
         }
-        long fsfp_intParc;
-        public long sfp_intParc
+        short fsfp_intParc;
+        public short sfp_intParc
         {
             get { return fsfp_intParc; }
-            set { SetPropertyValue<long>(nameof(sfp_intParc), ref fsfp_intParc, value); }
+            set { SetPropertyValue<short>(nameof(sfp_intParc), ref fsfp_intParc, value); }
         }
-        long fsfp_nfeTipoBand;
-        public long sfp_nfeTipoBand
+        byte fsfp_nfeTipoBand;
+        public byte sfp_nfeTipoBand
         {
             get { return fsfp_nfeTipoBand; }
-            set { SetPropertyValue<long>(nameof(sfp_nfeTipoBand), ref fsfp_nfeTipoBand, value); }
+            set { SetPropertyValue<byte>(nameof(sfp_nfeTipoBand), ref fsfp_nfeTipoBand, value); }
         }
         tb_forma_pagamento ffk_tb_forma_pagamento;
         [Association(@"tb_sub_forma_pagamentoReferencestb_forma_pagamento")]
@@ -88,6 +87,10 @@ namespace DXApplicationPDV.bancoSQLite
             get { return ffk_tb_forma_pagamento; }
             set { SetPropertyValue<tb_forma_pagamento>(nameof(fk_tb_forma_pagamento), ref ffk_tb_forma_pagamento, value); }
         }
+        [Association(@"tb_movimentacao_pagamentoReferencestb_sub_forma_pagamento")]
+        public XPCollection<tb_movimentacao_pagamento> tb_movimentacao_pagamentos { get { return GetCollection<tb_movimentacao_pagamento>(nameof(tb_movimentacao_pagamentos)); } }
+        [Association(@"tb_movimentacao_pagamento_parcelaReferencestb_sub_forma_pagamento")]
+        public XPCollection<tb_movimentacao_pagamento_parcela> tb_movimentacao_pagamento_parcelas { get { return GetCollection<tb_movimentacao_pagamento_parcela>(nameof(tb_movimentacao_pagamento_parcelas)); } }
     }
 
 }

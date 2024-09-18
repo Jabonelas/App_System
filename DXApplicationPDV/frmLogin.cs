@@ -25,6 +25,7 @@ namespace DXApplicationPDV
 
             txtUsuario.EditValue = PlaceholderText;
             txtUsuario.ForeColor = Color.Gray;
+            txtUsuario.Text = "geral";
         }
 
         private static bool IsSenhaUsuarioValido(string _senha, string _usuario)
@@ -128,6 +129,8 @@ namespace DXApplicationPDV
                     else
                     {
                         VariaveisGlobais.PDVLogado = cadastroMaquina;
+
+                        VariaveisGlobais.FilialLogada = cadastroMaquina.fk_tb_ator;
 
                         TelaDeCarregamento.EsconderCarregamento();
 

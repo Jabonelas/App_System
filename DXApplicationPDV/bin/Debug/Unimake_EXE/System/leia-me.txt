@@ -1,0 +1,6 @@
+[aviso]
+linha1=Nao apague ou modifique esse arquivo.
+linha2=Se isso acontecer, os sistemas
+linha3=poderao deixar de funcionar.
+[check]
+code=1ac8fd870b93c6b8ac20c2aa6bf8b533

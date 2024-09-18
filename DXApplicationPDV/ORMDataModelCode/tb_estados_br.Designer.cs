@@ -25,37 +25,38 @@ namespace DXApplicationPDV.bancoSQLite
             get { return fid_estados_br; }
             set { SetPropertyValue<long>(nameof(id_estados_br), ref fid_estados_br, value); }
         }
-        long feb_desat;
-        public long eb_desat
+        decimal feb_desat;
+        public decimal eb_desat
         {
             get { return feb_desat; }
-            set { SetPropertyValue<long>(nameof(eb_desat), ref feb_desat, value); }
+            set { SetPropertyValue<decimal>(nameof(eb_desat), ref feb_desat, value); }
         }
-        long feb_id;
-        public long eb_id
+        byte feb_id;
+        public byte eb_id
         {
             get { return feb_id; }
-            set { SetPropertyValue<long>(nameof(eb_id), ref feb_id, value); }
+            set { SetPropertyValue<byte>(nameof(eb_id), ref feb_id, value); }
         }
         string feb_sigla;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(2)]
         public string eb_sigla
         {
             get { return feb_sigla; }
             set { SetPropertyValue<string>(nameof(eb_sigla), ref feb_sigla, value); }
         }
         string feb_nome;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(20)]
         public string eb_nome
         {
             get { return feb_nome; }
             set { SetPropertyValue<string>(nameof(eb_nome), ref feb_nome, value); }
         }
-        long ffk_tb_regioes_br;
-        public long fk_tb_regioes_br
+        tb_regioes_br ffk_tb_regioes_br;
+        [Association(@"tb_estados_brReferencestb_regioes_br")]
+        public tb_regioes_br fk_tb_regioes_br
         {
             get { return ffk_tb_regioes_br; }
-            set { SetPropertyValue<long>(nameof(fk_tb_regioes_br), ref ffk_tb_regioes_br, value); }
+            set { SetPropertyValue<tb_regioes_br>(nameof(fk_tb_regioes_br), ref ffk_tb_regioes_br, value); }
         }
         [Association(@"tb_atorReferencestb_estados_br")]
         public XPCollection<tb_ator> tb_ators { get { return GetCollection<tb_ator>(nameof(tb_ators)); } }

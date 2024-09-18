@@ -32,30 +32,30 @@ namespace DXApplicationPDV.bancoSQLite
             set { SetPropertyValue<long>(nameof(pf_codRef), ref fpf_codRef, value); }
         }
         string fpf_desc;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(120)]
         public string pf_desc
         {
             get { return fpf_desc; }
             set { SetPropertyValue<string>(nameof(pf_desc), ref fpf_desc, value); }
         }
         string fpf_descCurta;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(25)]
         public string pf_descCurta
         {
             get { return fpf_descCurta; }
             set { SetPropertyValue<string>(nameof(pf_descCurta), ref fpf_descCurta, value); }
         }
-        long fpf_proTipo;
-        public long pf_proTipo
+        byte fpf_proTipo;
+        public byte pf_proTipo
         {
             get { return fpf_proTipo; }
-            set { SetPropertyValue<long>(nameof(pf_proTipo), ref fpf_proTipo, value); }
+            set { SetPropertyValue<byte>(nameof(pf_proTipo), ref fpf_proTipo, value); }
         }
-        long fpf_unMedCom;
-        public long pf_unMedCom
+        byte fpf_unMedCom;
+        public byte pf_unMedCom
         {
             get { return fpf_unMedCom; }
-            set { SetPropertyValue<long>(nameof(pf_unMedCom), ref fpf_unMedCom, value); }
+            set { SetPropertyValue<byte>(nameof(pf_unMedCom), ref fpf_unMedCom, value); }
         }
         DateTime fpf_dtCri;
         public DateTime pf_dtCri
@@ -75,12 +75,11 @@ namespace DXApplicationPDV.bancoSQLite
             get { return fpf_dtAcs; }
             set { SetPropertyValue<DateTime>(nameof(pf_dtAcs), ref fpf_dtAcs, value); }
         }
-        string fpf_atorFil;
-        [Size(SizeAttribute.Unlimited)]
-        public string pf_atorFil
+        long fpf_atorFil;
+        public long pf_atorFil
         {
             get { return fpf_atorFil; }
-            set { SetPropertyValue<string>(nameof(pf_atorFil), ref fpf_atorFil, value); }
+            set { SetPropertyValue<long>(nameof(pf_atorFil), ref fpf_atorFil, value); }
         }
         decimal fpf_vlrUnCom;
         public decimal pf_vlrUnCom
@@ -106,24 +105,17 @@ namespace DXApplicationPDV.bancoSQLite
             get { return fpf_est; }
             set { SetPropertyValue<decimal>(nameof(pf_est), ref fpf_est, value); }
         }
-        long fpf_desat;
-        public long pf_desat
+        decimal fpf_desat;
+        public decimal pf_desat
         {
             get { return fpf_desat; }
-            set { SetPropertyValue<long>(nameof(pf_desat), ref fpf_desat, value); }
+            set { SetPropertyValue<decimal>(nameof(pf_desat), ref fpf_desat, value); }
         }
-        long fpf_canc;
-        public long pf_canc
+        decimal fpf_canc;
+        public decimal pf_canc
         {
             get { return fpf_canc; }
-            set { SetPropertyValue<long>(nameof(pf_canc), ref fpf_canc, value); }
-        }
-        tb_ator ffk_tb_ator;
-        [Association(@"tb_produto_filialReferencestb_ator")]
-        public tb_ator fk_tb_ator
-        {
-            get { return ffk_tb_ator; }
-            set { SetPropertyValue<tb_ator>(nameof(fk_tb_ator), ref ffk_tb_ator, value); }
+            set { SetPropertyValue<decimal>(nameof(pf_canc), ref fpf_canc, value); }
         }
         tb_produto ffk_tb_produto;
         [Association(@"tb_produto_filialReferencestb_produto")]
@@ -131,6 +123,13 @@ namespace DXApplicationPDV.bancoSQLite
         {
             get { return ffk_tb_produto; }
             set { SetPropertyValue<tb_produto>(nameof(fk_tb_produto), ref ffk_tb_produto, value); }
+        }
+        tb_ator ffk_tb_ator;
+        [Association(@"tb_produto_filialReferencestb_ator")]
+        public tb_ator fk_tb_ator
+        {
+            get { return ffk_tb_ator; }
+            set { SetPropertyValue<tb_ator>(nameof(fk_tb_ator), ref ffk_tb_ator, value); }
         }
         [Association(@"tb_relacao_produto_cadastro_XMLReferencestb_produto_filial")]
         public XPCollection<tb_relacao_produto_cadastro_XML> tb_relacao_produto_cadastro_XMLs { get { return GetCollection<tb_relacao_produto_cadastro_XML>(nameof(tb_relacao_produto_cadastro_XMLs)); } }

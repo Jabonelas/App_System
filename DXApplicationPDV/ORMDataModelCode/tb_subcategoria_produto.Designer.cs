@@ -25,11 +25,11 @@ namespace DXApplicationPDV.bancoSQLite
             get { return fid_subcategoria_produto; }
             set { SetPropertyValue<long>(nameof(id_subcategoria_produto), ref fid_subcategoria_produto, value); }
         }
-        long fscp_nfePisCofinsReg;
-        public long scp_nfePisCofinsReg
+        byte fscp_nfePisCofinsReg;
+        public byte scp_nfePisCofinsReg
         {
             get { return fscp_nfePisCofinsReg; }
-            set { SetPropertyValue<long>(nameof(scp_nfePisCofinsReg), ref fscp_nfePisCofinsReg, value); }
+            set { SetPropertyValue<byte>(nameof(scp_nfePisCofinsReg), ref fscp_nfePisCofinsReg, value); }
         }
         DateTime fscp_dtCri;
         public DateTime scp_dtCri
@@ -50,37 +50,30 @@ namespace DXApplicationPDV.bancoSQLite
             set { SetPropertyValue<DateTime>(nameof(scp_dtAcs), ref fscp_dtAcs, value); }
         }
         string fscp_desc;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(48)]
         public string scp_desc
         {
             get { return fscp_desc; }
             set { SetPropertyValue<string>(nameof(scp_desc), ref fscp_desc, value); }
         }
-        long fscp_desat;
-        public long scp_desat
+        decimal fscp_desat;
+        public decimal scp_desat
         {
             get { return fscp_desat; }
-            set { SetPropertyValue<long>(nameof(scp_desat), ref fscp_desat, value); }
-        }
-        string fscp_ncm;
-        [Size(SizeAttribute.Unlimited)]
-        public string scp_ncm
-        {
-            get { return fscp_ncm; }
-            set { SetPropertyValue<string>(nameof(scp_ncm), ref fscp_ncm, value); }
+            set { SetPropertyValue<decimal>(nameof(scp_desat), ref fscp_desat, value); }
         }
         string fscp_ncmNum;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(8)]
         public string scp_ncmNum
         {
             get { return fscp_ncmNum; }
             set { SetPropertyValue<string>(nameof(scp_ncmNum), ref fscp_ncmNum, value); }
         }
-        long fscp_nfeCsosn;
-        public long scp_nfeCsosn
+        short fscp_nfeCsosn;
+        public short scp_nfeCsosn
         {
             get { return fscp_nfeCsosn; }
-            set { SetPropertyValue<long>(nameof(scp_nfeCsosn), ref fscp_nfeCsosn, value); }
+            set { SetPropertyValue<short>(nameof(scp_nfeCsosn), ref fscp_nfeCsosn, value); }
         }
         decimal fscp_descMax;
         public decimal scp_descMax
@@ -94,6 +87,12 @@ namespace DXApplicationPDV.bancoSQLite
         {
             get { return ffk_tb_categoria_produto; }
             set { SetPropertyValue<tb_categoria_produto>(nameof(fk_tb_categoria_produto), ref ffk_tb_categoria_produto, value); }
+        }
+        long ffk_tb_Ncm;
+        public long fk_tb_Ncm
+        {
+            get { return ffk_tb_Ncm; }
+            set { SetPropertyValue<long>(nameof(fk_tb_Ncm), ref ffk_tb_Ncm, value); }
         }
         [Association(@"tb_produtoReferencestb_subcategoria_produto")]
         public XPCollection<tb_produto> tb_produtos { get { return GetCollection<tb_produto>(nameof(tb_produtos)); } }

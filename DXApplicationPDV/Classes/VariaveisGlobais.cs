@@ -16,5 +16,7 @@ namespace DXApplicationPDV.Classes
         public static tb_rede RedeLogada { get; set; }
 
         public static tb_pdv PDVLogado { get; set; }
+
+        public static tb_ator FilialLogada { get; set; }
     }
 }

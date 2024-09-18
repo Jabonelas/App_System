@@ -32,12 +32,23 @@ namespace DXApplicationPDV.bancoSQLite
             get { return fat_inscEstSubst; }
             set { SetPropertyValue<string>(nameof(at_inscEstSubst), ref fat_inscEstSubst, value); }
         }
-        string fat_inscEst;
-        [Size(20)]
-        public string at_inscEst
+        byte fat_persTim;
+        public byte at_persTim
         {
-            get { return fat_inscEst; }
-            set { SetPropertyValue<string>(nameof(at_inscEst), ref fat_inscEst, value); }
+            get { return fat_persTim; }
+            set { SetPropertyValue<byte>(nameof(at_persTim), ref fat_persTim, value); }
+        }
+        byte fat_dirRede;
+        public byte at_dirRede
+        {
+            get { return fat_dirRede; }
+            set { SetPropertyValue<byte>(nameof(at_dirRede), ref fat_dirRede, value); }
+        }
+        byte fat_dirMov;
+        public byte at_dirMov
+        {
+            get { return fat_dirMov; }
+            set { SetPropertyValue<byte>(nameof(at_dirMov), ref fat_dirMov, value); }
         }
         DateTime fat_dtCri;
         public DateTime at_dtCri
@@ -57,35 +68,35 @@ namespace DXApplicationPDV.bancoSQLite
             get { return fat_dtAcs; }
             set { SetPropertyValue<DateTime>(nameof(at_dtAcs), ref fat_dtAcs, value); }
         }
-        long fat_desat;
-        public long at_desat
+        decimal fat_desat;
+        public decimal at_desat
         {
             get { return fat_desat; }
-            set { SetPropertyValue<long>(nameof(at_desat), ref fat_desat, value); }
+            set { SetPropertyValue<decimal>(nameof(at_desat), ref fat_desat, value); }
         }
-        long fat_genero;
-        public long at_genero
+        byte fat_genero;
+        public byte at_genero
         {
             get { return fat_genero; }
-            set { SetPropertyValue<long>(nameof(at_genero), ref fat_genero, value); }
+            set { SetPropertyValue<byte>(nameof(at_genero), ref fat_genero, value); }
         }
-        long fat_nfeIndInscEst;
-        public long at_nfeIndInscEst
+        byte fat_nfeIndInscEst;
+        public byte at_nfeIndInscEst
         {
             get { return fat_nfeIndInscEst; }
-            set { SetPropertyValue<long>(nameof(at_nfeIndInscEst), ref fat_nfeIndInscEst, value); }
+            set { SetPropertyValue<byte>(nameof(at_nfeIndInscEst), ref fat_nfeIndInscEst, value); }
         }
-        long fat_nfeCodRegTrib;
-        public long at_nfeCodRegTrib
+        byte fat_nfeCodRegTrib;
+        public byte at_nfeCodRegTrib
         {
             get { return fat_nfeCodRegTrib; }
-            set { SetPropertyValue<long>(nameof(at_nfeCodRegTrib), ref fat_nfeCodRegTrib, value); }
+            set { SetPropertyValue<byte>(nameof(at_nfeCodRegTrib), ref fat_nfeCodRegTrib, value); }
         }
-        long fat_atorTipo;
-        public long at_atorTipo
+        byte fat_atorTipo;
+        public byte at_atorTipo
         {
             get { return fat_atorTipo; }
-            set { SetPropertyValue<long>(nameof(at_atorTipo), ref fat_atorTipo, value); }
+            set { SetPropertyValue<byte>(nameof(at_atorTipo), ref fat_atorTipo, value); }
         }
         string fat_cnpj;
         [Size(18)]
@@ -171,6 +182,12 @@ namespace DXApplicationPDV.bancoSQLite
             get { return fat_end_Cep; }
             set { SetPropertyValue<string>(nameof(at_end_Cep), ref fat_end_Cep, value); }
         }
+        long fat_end_Mun;
+        public long at_end_Mun
+        {
+            get { return fat_end_Mun; }
+            set { SetPropertyValue<long>(nameof(at_end_Mun), ref fat_end_Mun, value); }
+        }
         string fat_telFixo;
         [Size(20)]
         public string at_telFixo
@@ -198,6 +215,13 @@ namespace DXApplicationPDV.bancoSQLite
         {
             get { return fat_respon; }
             set { SetPropertyValue<string>(nameof(at_respon), ref fat_respon, value); }
+        }
+        string fat_inscEst;
+        [Size(20)]
+        public string at_inscEst
+        {
+            get { return fat_inscEst; }
+            set { SetPropertyValue<string>(nameof(at_inscEst), ref fat_inscEst, value); }
         }
         string fat_inscMun;
         [Size(20)]
@@ -262,11 +286,11 @@ namespace DXApplicationPDV.bancoSQLite
             get { return fat_cnae; }
             set { SetPropertyValue<string>(nameof(at_cnae), ref fat_cnae, value); }
         }
-        long fat_prop;
-        public long at_prop
+        decimal fat_prop;
+        public decimal at_prop
         {
             get { return fat_prop; }
-            set { SetPropertyValue<long>(nameof(at_prop), ref fat_prop, value); }
+            set { SetPropertyValue<decimal>(nameof(at_prop), ref fat_prop, value); }
         }
         decimal fat_nfeCredSn;
         public decimal at_nfeCredSn
@@ -280,11 +304,11 @@ namespace DXApplicationPDV.bancoSQLite
             get { return fat_nfeCscTokenProd; }
             set { SetPropertyValue<string>(nameof(at_nfeCscTokenProd), ref fat_nfeCscTokenProd, value); }
         }
-        long fat_nfeCscIdProd;
-        public long at_nfeCscIdProd
+        byte fat_nfeCscIdProd;
+        public byte at_nfeCscIdProd
         {
             get { return fat_nfeCscIdProd; }
-            set { SetPropertyValue<long>(nameof(at_nfeCscIdProd), ref fat_nfeCscIdProd, value); }
+            set { SetPropertyValue<byte>(nameof(at_nfeCscIdProd), ref fat_nfeCscIdProd, value); }
         }
         string fat_nfeCscTokenHom;
         public string at_nfeCscTokenHom
@@ -292,29 +316,29 @@ namespace DXApplicationPDV.bancoSQLite
             get { return fat_nfeCscTokenHom; }
             set { SetPropertyValue<string>(nameof(at_nfeCscTokenHom), ref fat_nfeCscTokenHom, value); }
         }
-        long fat_nfeCscIdHom;
-        public long at_nfeCscIdHom
+        byte fat_nfeCscIdHom;
+        public byte at_nfeCscIdHom
         {
             get { return fat_nfeCscIdHom; }
-            set { SetPropertyValue<long>(nameof(at_nfeCscIdHom), ref fat_nfeCscIdHom, value); }
+            set { SetPropertyValue<byte>(nameof(at_nfeCscIdHom), ref fat_nfeCscIdHom, value); }
         }
-        long fat_revenda;
-        public long at_revenda
+        decimal fat_revenda;
+        public decimal at_revenda
         {
             get { return fat_revenda; }
-            set { SetPropertyValue<long>(nameof(at_revenda), ref fat_revenda, value); }
+            set { SetPropertyValue<decimal>(nameof(at_revenda), ref fat_revenda, value); }
         }
-        long fat_nfeEnqSN;
-        public long at_nfeEnqSN
+        byte fat_nfeEnqSN;
+        public byte at_nfeEnqSN
         {
             get { return fat_nfeEnqSN; }
-            set { SetPropertyValue<long>(nameof(at_nfeEnqSN), ref fat_nfeEnqSN, value); }
+            set { SetPropertyValue<byte>(nameof(at_nfeEnqSN), ref fat_nfeEnqSN, value); }
         }
-        long fat_nfeRecBrutaEnqSN;
-        public long at_nfeRecBrutaEnqSN
+        byte fat_nfeRecBrutaEnqSN;
+        public byte at_nfeRecBrutaEnqSN
         {
             get { return fat_nfeRecBrutaEnqSN; }
-            set { SetPropertyValue<long>(nameof(at_nfeRecBrutaEnqSN), ref fat_nfeRecBrutaEnqSN, value); }
+            set { SetPropertyValue<byte>(nameof(at_nfeRecBrutaEnqSN), ref fat_nfeRecBrutaEnqSN, value); }
         }
         decimal fat_receitaBrutaTotal;
         public decimal at_receitaBrutaTotal
@@ -328,11 +352,11 @@ namespace DXApplicationPDV.bancoSQLite
             get { return fat_receitaBrutaTotal_ImpXml; }
             set { SetPropertyValue<decimal>(nameof(at_receitaBrutaTotal_ImpXml), ref fat_receitaBrutaTotal_ImpXml, value); }
         }
-        long fat_nfeTipoAmb;
-        public long at_nfeTipoAmb
+        byte fat_nfeTipoAmb;
+        public byte at_nfeTipoAmb
         {
             get { return fat_nfeTipoAmb; }
-            set { SetPropertyValue<long>(nameof(at_nfeTipoAmb), ref fat_nfeTipoAmb, value); }
+            set { SetPropertyValue<byte>(nameof(at_nfeTipoAmb), ref fat_nfeTipoAmb, value); }
         }
         decimal fat_percComisAtend;
         public decimal at_percComisAtend
@@ -340,11 +364,11 @@ namespace DXApplicationPDV.bancoSQLite
             get { return fat_percComisAtend; }
             set { SetPropertyValue<decimal>(nameof(at_percComisAtend), ref fat_percComisAtend, value); }
         }
-        decimal fat_metaMensal;
-        public decimal at_metaMensal
+        float fat_metaMensal;
+        public float at_metaMensal
         {
             get { return fat_metaMensal; }
-            set { SetPropertyValue<decimal>(nameof(at_metaMensal), ref fat_metaMensal, value); }
+            set { SetPropertyValue<float>(nameof(at_metaMensal), ref fat_metaMensal, value); }
         }
         string fat_nomeUsuario;
         [Size(20)]
@@ -360,31 +384,29 @@ namespace DXApplicationPDV.bancoSQLite
             get { return fat_senhaUsuarioHashCode; }
             set { SetPropertyValue<string>(nameof(at_senhaUsuarioHashCode), ref fat_senhaUsuarioHashCode, value); }
         }
-        long fat_manutPdv;
-        public long at_manutPdv
+        decimal fat_manutPdv;
+        public decimal at_manutPdv
         {
             get { return fat_manutPdv; }
-            set { SetPropertyValue<long>(nameof(at_manutPdv), ref fat_manutPdv, value); }
+            set { SetPropertyValue<decimal>(nameof(at_manutPdv), ref fat_manutPdv, value); }
         }
-        string fat_atorH;
-        [Size(SizeAttribute.Unlimited)]
-        public string at_atorH
+        long fat_atorH;
+        public long at_atorH
         {
             get { return fat_atorH; }
-            set { SetPropertyValue<string>(nameof(at_atorH), ref fat_atorH, value); }
+            set { SetPropertyValue<long>(nameof(at_atorH), ref fat_atorH, value); }
         }
-        string fat_estH;
-        [Size(SizeAttribute.Unlimited)]
-        public string at_estH
+        long fat_estH;
+        public long at_estH
         {
             get { return fat_estH; }
-            set { SetPropertyValue<string>(nameof(at_estH), ref fat_estH, value); }
+            set { SetPropertyValue<long>(nameof(at_estH), ref fat_estH, value); }
         }
-        long fat_canc;
-        public long at_canc
+        decimal fat_canc;
+        public decimal at_canc
         {
             get { return fat_canc; }
-            set { SetPropertyValue<long>(nameof(at_canc), ref fat_canc, value); }
+            set { SetPropertyValue<decimal>(nameof(at_canc), ref fat_canc, value); }
         }
         tb_municipio ffk_tb_municipio;
         [Association(@"tb_atorReferencestb_municipio")]
@@ -416,12 +438,16 @@ namespace DXApplicationPDV.bancoSQLite
         }
         [Association(@"tb_certificado_digitalReferencestb_ator")]
         public XPCollection<tb_certificado_digital> tb_certificado_digitals { get { return GetCollection<tb_certificado_digital>(nameof(tb_certificado_digitals)); } }
+        [Association(@"tb_historicoReferencestb_ator")]
+        public XPCollection<tb_historico> tb_historicos { get { return GetCollection<tb_historico>(nameof(tb_historicos)); } }
         [Association(@"tb_movimentacaoReferencestb_ator")]
         public XPCollection<tb_movimentacao> tb_movimentacaos { get { return GetCollection<tb_movimentacao>(nameof(tb_movimentacaos)); } }
         [Association(@"tb_movimentacaoReferencestb_ator1")]
         public XPCollection<tb_movimentacao> tb_movimentacaos1 { get { return GetCollection<tb_movimentacao>(nameof(tb_movimentacaos1)); } }
         [Association(@"tb_movimentacaoReferencestb_ator2")]
         public XPCollection<tb_movimentacao> tb_movimentacaos2 { get { return GetCollection<tb_movimentacao>(nameof(tb_movimentacaos2)); } }
+        [Association(@"tb_movimentacao_produtoReferencestb_ator")]
+        public XPCollection<tb_movimentacao_produto> tb_movimentacao_produtos { get { return GetCollection<tb_movimentacao_produto>(nameof(tb_movimentacao_produtos)); } }
         [Association(@"tb_pdvReferencestb_ator")]
         public XPCollection<tb_pdv> tb_pdvs { get { return GetCollection<tb_pdv>(nameof(tb_pdvs)); } }
         [Association(@"tb_produtoReferencestb_ator")]
@@ -430,6 +456,8 @@ namespace DXApplicationPDV.bancoSQLite
         public XPCollection<tb_produto_filial> tb_produto_filials { get { return GetCollection<tb_produto_filial>(nameof(tb_produto_filials)); } }
         [Association(@"tb_relacao_produto_cadastro_XMLReferencestb_ator")]
         public XPCollection<tb_relacao_produto_cadastro_XML> tb_relacao_produto_cadastro_XMLs { get { return GetCollection<tb_relacao_produto_cadastro_XML>(nameof(tb_relacao_produto_cadastro_XMLs)); } }
+        [Association(@"tb_resposta_NFeReferencestb_ator")]
+        public XPCollection<tb_resposta_NFe> tb_resposta_NFes { get { return GetCollection<tb_resposta_NFe>(nameof(tb_resposta_NFes)); } }
     }
 
 }

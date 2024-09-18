@@ -327,13 +327,6 @@ namespace DXApplicationPDV
 
             frmPamentoPDV frmPamentoPDV = new frmPamentoPDV();
             frmPamentoPDV.ShowDialog();
-
-            //_frmTelaInicial.pnlTelaPrincipal.Controls.Clear();
-            //uc_CadProduto ucCadProd = new uc_CadProduto(_frmTelaInicial, _operacao, _idProduto);
-            //_frmTelaInicial.pnlTelaPrincipal.Controls.Add(ucCadProd);
-            //_frmTelaInicial.pnlTelaPrincipal.Tag = ucCadProd;
-            //this.Invoke(new Action(() => TelaDeCarregamento.EsconderCarregamento()));
-            //ucCadProd.Show();
         }
 
         private void btnPagamento_Click(object sender, EventArgs e)

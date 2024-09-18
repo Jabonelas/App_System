@@ -25,10 +25,7 @@
       <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\PDV\uc_PDV.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\ORMDataModelCode\tb_certificado_digital.Designer.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\Users\israe\AppData\Local\Temp\.vsdbgsrc\b0a1f496f0180ee7c030b1c1037de5d3d3f9504eb3993f605cb6189852edb300\ConnectionProviderSql.cs</string>
+      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\Classes\VariaveisGlobais.cs</string>
     </ArrayOfString>
   </ArrayOfArrayOfString>
 </ArrayOfArrayOfArrayOfString>

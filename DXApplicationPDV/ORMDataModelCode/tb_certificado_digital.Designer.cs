@@ -57,7 +57,6 @@ namespace DXApplicationPDV.bancoSQLite
             get { return fcd_razSoc; }
             set { SetPropertyValue<string>(nameof(cd_razSoc), ref fcd_razSoc, value); }
         }
-
         byte[] fcd_rawData;
         [Size(SizeAttribute.Unlimited)]
         [MemberDesignTimeVisibility(true)]
@@ -66,7 +65,6 @@ namespace DXApplicationPDV.bancoSQLite
             get { return fcd_rawData; }
             set { SetPropertyValue<byte[]>(nameof(cd_rawData), ref fcd_rawData, value); }
         }
-
         string fcd_pwd;
         [Size(64)]
         public string cd_pwd
@@ -93,11 +91,11 @@ namespace DXApplicationPDV.bancoSQLite
             get { return fcd_dtExp; }
             set { SetPropertyValue<DateTime>(nameof(cd_dtExp), ref fcd_dtExp, value); }
         }
-        long fcd_ativo;
-        public long cd_ativo
+        decimal fcd_ativo;
+        public decimal cd_ativo
         {
             get { return fcd_ativo; }
-            set { SetPropertyValue<long>(nameof(cd_ativo), ref fcd_ativo, value); }
+            set { SetPropertyValue<decimal>(nameof(cd_ativo), ref fcd_ativo, value); }
         }
         string fcd_tipo;
         [Size(50)]
@@ -126,11 +124,11 @@ namespace DXApplicationPDV.bancoSQLite
             get { return fcd_sHA1String; }
             set { SetPropertyValue<string>(nameof(cd_sHA1String), ref fcd_sHA1String, value); }
         }
-        long fcd_canc;
-        public long cd_canc
+        decimal fcd_canc;
+        public decimal cd_canc
         {
             get { return fcd_canc; }
-            set { SetPropertyValue<long>(nameof(cd_canc), ref fcd_canc, value); }
+            set { SetPropertyValue<decimal>(nameof(cd_canc), ref fcd_canc, value); }
         }
         tb_ator ffk_tb_ator;
         [Association(@"tb_certificado_digitalReferencestb_ator")]

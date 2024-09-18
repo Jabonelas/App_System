@@ -145,10 +145,13 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.2\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
       <Private>True</Private>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Xml, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Xml.8.0.1\lib\net462\System.Security.Cryptography.Xml.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
@@ -178,8 +181,14 @@
     <Reference Include="DevExpress.Drawing.v23.2" />
     <Reference Include="DevExpress.Mvvm.v23.2" />
     <Reference Include="DevExpress.Printing.v23.2.Core" />
-    <Reference Include="Unimake.Business.DFe, Version=2024.9.5.1714, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Unimake.DFe.20240905.1714.26\lib\net472\Unimake.Business.DFe.dll</HintPath>
+    <Reference Include="Unimake.Business.DFe, Version=2024.9.12.1032, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unimake.DFe.20240912.1032.26\lib\net472\Unimake.Business.DFe.dll</HintPath>
+    </Reference>
+    <Reference Include="Unimake.Cryptography, Version=2024.9.5.1544, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unimake.Cryptography.20240905.1544.35\lib\netstandard2.0\Unimake.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Unimake.Extensions, Version=2024.9.5.1544, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unimake.Extensions.20240905.1544.35\lib\netstandard2.0\Unimake.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="Unimake.Primitives, Version=2024.9.5.1544, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Unimake.Primitives.20240905.1544.35\lib\netstandard2.0\Unimake.Primitives.dll</HintPath>
@@ -190,8 +199,12 @@
     <Reference Include="Unimake.Unidanfe, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Unimake.Unidanfe.20240625.1624.45\lib\net472\Unimake.Unidanfe.dll</HintPath>
     </Reference>
+    <Reference Include="Unimake.Utils, Version=2024.9.5.1544, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unimake.Utils.20240905.1544.35\lib\netstandard2.0\Unimake.Utils.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\DadosGeralNfe.cs" />
     <Compile Include="Classes\LogErros.cs" />
     <Compile Include="Classes\MensagensDoSistema.cs" />
     <Compile Include="Classes\TelaDeCarregamento.cs" />
@@ -202,6 +215,139 @@
     </Compile>
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\ConnectionHelper.cs" />
+    <Compile Include="ORMDataModelCode\tb_ator.cs" />
+    <Compile Include="ORMDataModelCode\tb_ator.Designer.cs">
+      <DependentUpon>tb_ator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_categoria_produto.cs" />
+    <Compile Include="ORMDataModelCode\tb_categoria_produto.Designer.cs">
+      <DependentUpon>tb_categoria_produto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_certificado_digital.cs" />
+    <Compile Include="ORMDataModelCode\tb_certificado_digital.Designer.cs">
+      <DependentUpon>tb_certificado_digital.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_clasCont2.cs" />
+    <Compile Include="ORMDataModelCode\tb_clasCont2.Designer.cs">
+      <DependentUpon>tb_clasCont2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_codigo_produto.cs" />
+    <Compile Include="ORMDataModelCode\tb_codigo_produto.Designer.cs">
+      <DependentUpon>tb_codigo_produto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_est.cs" />
+    <Compile Include="ORMDataModelCode\tb_est.Designer.cs">
+      <DependentUpon>tb_est.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_estados_br.cs" />
+    <Compile Include="ORMDataModelCode\tb_estados_br.Designer.cs">
+      <DependentUpon>tb_estados_br.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_forma_pagamento.cs" />
+    <Compile Include="ORMDataModelCode\tb_forma_pagamento.Designer.cs">
+      <DependentUpon>tb_forma_pagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_historico.cs" />
+    <Compile Include="ORMDataModelCode\tb_historico.Designer.cs">
+      <DependentUpon>tb_historico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_jornada.cs" />
+    <Compile Include="ORMDataModelCode\tb_jornada.Designer.cs">
+      <DependentUpon>tb_jornada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_marca_produto.cs" />
+    <Compile Include="ORMDataModelCode\tb_marca_produto.Designer.cs">
+      <DependentUpon>tb_marca_produto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_matriz.cs" />
+    <Compile Include="ORMDataModelCode\tb_matriz.Designer.cs">
+      <DependentUpon>tb_matriz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_movimentacao.cs" />
+    <Compile Include="ORMDataModelCode\tb_movimentacao.Designer.cs">
+      <DependentUpon>tb_movimentacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_movimentacao_caixa.cs" />
+    <Compile Include="ORMDataModelCode\tb_movimentacao_caixa.Designer.cs">
+      <DependentUpon>tb_movimentacao_caixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_movimentacao_impressao.cs" />
+    <Compile Include="ORMDataModelCode\tb_movimentacao_impressao.Designer.cs">
+      <DependentUpon>tb_movimentacao_impressao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_movimentacao_pagamento.cs" />
+    <Compile Include="ORMDataModelCode\tb_movimentacao_pagamento.Designer.cs">
+      <DependentUpon>tb_movimentacao_pagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_movimentacao_pagamento_parcela.cs" />
+    <Compile Include="ORMDataModelCode\tb_movimentacao_pagamento_parcela.Designer.cs">
+      <DependentUpon>tb_movimentacao_pagamento_parcela.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_movimentacao_produto.cs" />
+    <Compile Include="ORMDataModelCode\tb_movimentacao_produto.Designer.cs">
+      <DependentUpon>tb_movimentacao_produto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_municipio.cs" />
+    <Compile Include="ORMDataModelCode\tb_municipio.Designer.cs">
+      <DependentUpon>tb_municipio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_nfe.cs" />
+    <Compile Include="ORMDataModelCode\tb_nfe.Designer.cs">
+      <DependentUpon>tb_nfe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_nfe_enviada_filial.cs" />
+    <Compile Include="ORMDataModelCode\tb_nfe_enviada_filial.Designer.cs">
+      <DependentUpon>tb_nfe_enviada_filial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_pais.cs" />
+    <Compile Include="ORMDataModelCode\tb_pais.Designer.cs">
+      <DependentUpon>tb_pais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_pdv.cs" />
+    <Compile Include="ORMDataModelCode\tb_pdv.Designer.cs">
+      <DependentUpon>tb_pdv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_produto.cs" />
+    <Compile Include="ORMDataModelCode\tb_produto.Designer.cs">
+      <DependentUpon>tb_produto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_produto_filial.cs" />
+    <Compile Include="ORMDataModelCode\tb_produto_filial.Designer.cs">
+      <DependentUpon>tb_produto_filial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_rede.cs" />
+    <Compile Include="ORMDataModelCode\tb_rede.Designer.cs">
+      <DependentUpon>tb_rede.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_regioes_br.cs" />
+    <Compile Include="ORMDataModelCode\tb_regioes_br.Designer.cs">
+      <DependentUpon>tb_regioes_br.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_relacao_produto_cadastro_XML.cs" />
+    <Compile Include="ORMDataModelCode\tb_relacao_produto_cadastro_XML.Designer.cs">
+      <DependentUpon>tb_relacao_produto_cadastro_XML.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_resposta_NFe.cs" />
+    <Compile Include="ORMDataModelCode\tb_resposta_NFe.Designer.cs">
+      <DependentUpon>tb_resposta_NFe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_secao_produto.cs" />
+    <Compile Include="ORMDataModelCode\tb_secao_produto.Designer.cs">
+      <DependentUpon>tb_secao_produto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_subcategoria_produto.cs" />
+    <Compile Include="ORMDataModelCode\tb_subcategoria_produto.Designer.cs">
+      <DependentUpon>tb_subcategoria_produto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_sub_forma_pagamento.cs" />
+    <Compile Include="ORMDataModelCode\tb_sub_forma_pagamento.Designer.cs">
+      <DependentUpon>tb_sub_forma_pagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_unidade_monetaria.cs" />
+    <Compile Include="ORMDataModelCode\tb_unidade_monetaria.Designer.cs">
+      <DependentUpon>tb_unidade_monetaria.cs</DependentUpon>
     </Compile>
     <Compile Include="PDV\frmPamentoPDV.cs">
       <SubType>Form</SubType>
@@ -220,79 +366,6 @@
     </Compile>
     <Compile Include="frmTelaInicial.Designer.cs">
       <DependentUpon>frmTelaInicial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ORMDataModelCode\ConnectionHelper.cs" />
-    <Compile Include="ORMDataModelCode\tb_ator.cs" />
-    <Compile Include="ORMDataModelCode\tb_ator.Designer.cs">
-      <DependentUpon>tb_ator.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ORMDataModelCode\tb_categoria_produto.cs" />
-    <Compile Include="ORMDataModelCode\tb_categoria_produto.Designer.cs">
-      <DependentUpon>tb_categoria_produto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ORMDataModelCode\tb_certificado_digital.cs" />
-    <Compile Include="ORMDataModelCode\tb_certificado_digital.Designer.cs">
-      <DependentUpon>tb_certificado_digital.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ORMDataModelCode\tb_estados_br.cs" />
-    <Compile Include="ORMDataModelCode\tb_estados_br.Designer.cs">
-      <DependentUpon>tb_estados_br.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ORMDataModelCode\tb_forma_pagamento.cs" />
-    <Compile Include="ORMDataModelCode\tb_forma_pagamento.Designer.cs">
-      <DependentUpon>tb_forma_pagamento.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ORMDataModelCode\tb_marca_produto.cs" />
-    <Compile Include="ORMDataModelCode\tb_marca_produto.Designer.cs">
-      <DependentUpon>tb_marca_produto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ORMDataModelCode\tb_matriz.cs" />
-    <Compile Include="ORMDataModelCode\tb_matriz.Designer.cs">
-      <DependentUpon>tb_matriz.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ORMDataModelCode\tb_movimentacao.cs" />
-    <Compile Include="ORMDataModelCode\tb_movimentacao.Designer.cs">
-      <DependentUpon>tb_movimentacao.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ORMDataModelCode\tb_municipio.cs" />
-    <Compile Include="ORMDataModelCode\tb_municipio.Designer.cs">
-      <DependentUpon>tb_municipio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ORMDataModelCode\tb_nfe.cs" />
-    <Compile Include="ORMDataModelCode\tb_nfe.Designer.cs">
-      <DependentUpon>tb_nfe.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ORMDataModelCode\tb_pdv.cs" />
-    <Compile Include="ORMDataModelCode\tb_pdv.Designer.cs">
-      <DependentUpon>tb_pdv.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ORMDataModelCode\tb_produto.cs" />
-    <Compile Include="ORMDataModelCode\tb_produto.Designer.cs">
-      <DependentUpon>tb_produto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ORMDataModelCode\tb_produto_filial.cs" />
-    <Compile Include="ORMDataModelCode\tb_produto_filial.Designer.cs">
-      <DependentUpon>tb_produto_filial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ORMDataModelCode\tb_rede.cs" />
-    <Compile Include="ORMDataModelCode\tb_rede.Designer.cs">
-      <DependentUpon>tb_rede.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ORMDataModelCode\tb_relacao_produto_cadastro_XML.cs" />
-    <Compile Include="ORMDataModelCode\tb_relacao_produto_cadastro_XML.Designer.cs">
-      <DependentUpon>tb_relacao_produto_cadastro_XML.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ORMDataModelCode\tb_secao_produto.cs" />
-    <Compile Include="ORMDataModelCode\tb_secao_produto.Designer.cs">
-      <DependentUpon>tb_secao_produto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ORMDataModelCode\tb_subcategoria_produto.cs" />
-    <Compile Include="ORMDataModelCode\tb_subcategoria_produto.Designer.cs">
-      <DependentUpon>tb_subcategoria_produto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ORMDataModelCode\tb_sub_forma_pagamento.cs" />
-    <Compile Include="ORMDataModelCode\tb_sub_forma_pagamento.Designer.cs">
-      <DependentUpon>tb_sub_forma_pagamento.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

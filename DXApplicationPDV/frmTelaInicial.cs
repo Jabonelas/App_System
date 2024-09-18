@@ -19,12 +19,13 @@ using DXApplicationPDV.Classes;
 using Unimake.Business.DFe.Servicos;
 using Unimake.Business.DFe.Xml.NFe;
 using Unimake.Business.Security;
+using ServicoNFCe = Unimake.Business.DFe.Servicos.NFCe;
+using DANFe = Unimake.Unidanfe;
 
-using System.Security.Cryptography.X509Certificates;
+using XmlNFe = Unimake.Business.DFe.Xml.NFe;
 
-using DevExpress.Internal.WinApi;
-using static DevExpress.Utils.HashCodeHelper.Primitives;
-using System.Diagnostics;
+using Unimake.Business.DFe.Xml.SNCM;
+using System.Text.RegularExpressions;
 
 namespace DXApplicationPDV
 {

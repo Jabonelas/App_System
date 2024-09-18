@@ -25,11 +25,11 @@ namespace DXApplicationPDV.bancoSQLite
             get { return fid_movimentacao; }
             set { SetPropertyValue<long>(nameof(id_movimentacao), ref fid_movimentacao, value); }
         }
-        long fmv_nfeTipoAmb;
-        public long mv_nfeTipoAmb
+        byte fmv_nfeTipoAmb;
+        public byte mv_nfeTipoAmb
         {
             get { return fmv_nfeTipoAmb; }
-            set { SetPropertyValue<long>(nameof(mv_nfeTipoAmb), ref fmv_nfeTipoAmb, value); }
+            set { SetPropertyValue<byte>(nameof(mv_nfeTipoAmb), ref fmv_nfeTipoAmb, value); }
         }
         DateTime fmv_dtCri;
         public DateTime mv_dtCri
@@ -61,29 +61,29 @@ namespace DXApplicationPDV.bancoSQLite
             get { return fmv_numSeq; }
             set { SetPropertyValue<long>(nameof(mv_numSeq), ref fmv_numSeq, value); }
         }
-        long fmv_canc;
-        public long mv_canc
+        decimal fmv_canc;
+        public decimal mv_canc
         {
             get { return fmv_canc; }
-            set { SetPropertyValue<long>(nameof(mv_canc), ref fmv_canc, value); }
+            set { SetPropertyValue<decimal>(nameof(mv_canc), ref fmv_canc, value); }
         }
-        long fmv_conc;
-        public long mv_conc
+        decimal fmv_conc;
+        public decimal mv_conc
         {
             get { return fmv_conc; }
-            set { SetPropertyValue<long>(nameof(mv_conc), ref fmv_conc, value); }
+            set { SetPropertyValue<decimal>(nameof(mv_conc), ref fmv_conc, value); }
         }
-        long fmv_quit;
-        public long mv_quit
+        decimal fmv_quit;
+        public decimal mv_quit
         {
             get { return fmv_quit; }
-            set { SetPropertyValue<long>(nameof(mv_quit), ref fmv_quit, value); }
+            set { SetPropertyValue<decimal>(nameof(mv_quit), ref fmv_quit, value); }
         }
-        long fmv_movTipo;
-        public long mv_movTipo
+        short fmv_movTipo;
+        public short mv_movTipo
         {
             get { return fmv_movTipo; }
-            set { SetPropertyValue<long>(nameof(mv_movTipo), ref fmv_movTipo, value); }
+            set { SetPropertyValue<short>(nameof(mv_movTipo), ref fmv_movTipo, value); }
         }
         long fmv_codSeqAbertFechCx;
         public long mv_codSeqAbertFechCx
@@ -91,27 +91,26 @@ namespace DXApplicationPDV.bancoSQLite
             get { return fmv_codSeqAbertFechCx; }
             set { SetPropertyValue<long>(nameof(mv_codSeqAbertFechCx), ref fmv_codSeqAbertFechCx, value); }
         }
-        string fmv_movAbertCx;
-        [Size(SizeAttribute.Unlimited)]
-        public string mv_movAbertCx
+        long fmv_movAbertCx;
+        public long mv_movAbertCx
         {
             get { return fmv_movAbertCx; }
-            set { SetPropertyValue<string>(nameof(mv_movAbertCx), ref fmv_movAbertCx, value); }
+            set { SetPropertyValue<long>(nameof(mv_movAbertCx), ref fmv_movAbertCx, value); }
         }
-        long fmv_cxAberto;
-        public long mv_cxAberto
+        decimal fmv_cxAberto;
+        public decimal mv_cxAberto
         {
             get { return fmv_cxAberto; }
-            set { SetPropertyValue<long>(nameof(mv_cxAberto), ref fmv_cxAberto, value); }
+            set { SetPropertyValue<decimal>(nameof(mv_cxAberto), ref fmv_cxAberto, value); }
         }
-        long fmv_nfeEnfilGer;
-        public long mv_nfeEnfilGer
+        decimal fmv_nfeEnfilGer;
+        public decimal mv_nfeEnfilGer
         {
             get { return fmv_nfeEnfilGer; }
-            set { SetPropertyValue<long>(nameof(mv_nfeEnfilGer), ref fmv_nfeEnfilGer, value); }
+            set { SetPropertyValue<decimal>(nameof(mv_nfeEnfilGer), ref fmv_nfeEnfilGer, value); }
         }
         string fmv_nfeNatOp;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(60)]
         public string mv_nfeNatOp
         {
             get { return fmv_nfeNatOp; }
@@ -214,7 +213,7 @@ namespace DXApplicationPDV.bancoSQLite
             set { SetPropertyValue<decimal>(nameof(mv_nfeVlrTotTrib), ref fmv_nfeVlrTotTrib, value); }
         }
         string fmv_nfeChave;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(50)]
         public string mv_nfeChave
         {
             get { return fmv_nfeChave; }
@@ -250,29 +249,29 @@ namespace DXApplicationPDV.bancoSQLite
             get { return fmv_nfeVlrTotPis; }
             set { SetPropertyValue<decimal>(nameof(mv_nfeVlrTotPis), ref fmv_nfeVlrTotPis, value); }
         }
-        long fmv_nfeIdentLocDestOp;
-        public long mv_nfeIdentLocDestOp
+        byte fmv_nfeIdentLocDestOp;
+        public byte mv_nfeIdentLocDestOp
         {
             get { return fmv_nfeIdentLocDestOp; }
-            set { SetPropertyValue<long>(nameof(mv_nfeIdentLocDestOp), ref fmv_nfeIdentLocDestOp, value); }
+            set { SetPropertyValue<byte>(nameof(mv_nfeIdentLocDestOp), ref fmv_nfeIdentLocDestOp, value); }
         }
-        long fmv_nfeMod;
-        public long mv_nfeMod
+        byte fmv_nfeMod;
+        public byte mv_nfeMod
         {
             get { return fmv_nfeMod; }
-            set { SetPropertyValue<long>(nameof(mv_nfeMod), ref fmv_nfeMod, value); }
+            set { SetPropertyValue<byte>(nameof(mv_nfeMod), ref fmv_nfeMod, value); }
         }
-        long fmv_nfeIndOpConsumFin;
-        public long mv_nfeIndOpConsumFin
+        byte fmv_nfeIndOpConsumFin;
+        public byte mv_nfeIndOpConsumFin
         {
             get { return fmv_nfeIndOpConsumFin; }
-            set { SetPropertyValue<long>(nameof(mv_nfeIndOpConsumFin), ref fmv_nfeIndOpConsumFin, value); }
+            set { SetPropertyValue<byte>(nameof(mv_nfeIndOpConsumFin), ref fmv_nfeIndOpConsumFin, value); }
         }
-        long fmv_nfeFinEmis;
-        public long mv_nfeFinEmis
+        byte fmv_nfeFinEmis;
+        public byte mv_nfeFinEmis
         {
             get { return fmv_nfeFinEmis; }
-            set { SetPropertyValue<long>(nameof(mv_nfeFinEmis), ref fmv_nfeFinEmis, value); }
+            set { SetPropertyValue<byte>(nameof(mv_nfeFinEmis), ref fmv_nfeFinEmis, value); }
         }
         long fmv_nfeIndInterm;
         public long mv_nfeIndInterm
@@ -280,68 +279,67 @@ namespace DXApplicationPDV.bancoSQLite
             get { return fmv_nfeIndInterm; }
             set { SetPropertyValue<long>(nameof(mv_nfeIndInterm), ref fmv_nfeIndInterm, value); }
         }
-        long fmv_nfeIndPresCompEstMomOp;
-        public long mv_nfeIndPresCompEstMomOp
+        byte fmv_nfeIndPresCompEstMomOp;
+        public byte mv_nfeIndPresCompEstMomOp
         {
             get { return fmv_nfeIndPresCompEstMomOp; }
-            set { SetPropertyValue<long>(nameof(mv_nfeIndPresCompEstMomOp), ref fmv_nfeIndPresCompEstMomOp, value); }
+            set { SetPropertyValue<byte>(nameof(mv_nfeIndPresCompEstMomOp), ref fmv_nfeIndPresCompEstMomOp, value); }
         }
-        long fmv_nfeTipo;
-        public long mv_nfeTipo
+        byte fmv_nfeTipo;
+        public byte mv_nfeTipo
         {
             get { return fmv_nfeTipo; }
-            set { SetPropertyValue<long>(nameof(mv_nfeTipo), ref fmv_nfeTipo, value); }
+            set { SetPropertyValue<byte>(nameof(mv_nfeTipo), ref fmv_nfeTipo, value); }
         }
-        long fmv_nfeTipoImpDanfe;
-        public long mv_nfeTipoImpDanfe
+        byte fmv_nfeTipoImpDanfe;
+        public byte mv_nfeTipoImpDanfe
         {
             get { return fmv_nfeTipoImpDanfe; }
-            set { SetPropertyValue<long>(nameof(mv_nfeTipoImpDanfe), ref fmv_nfeTipoImpDanfe, value); }
+            set { SetPropertyValue<byte>(nameof(mv_nfeTipoImpDanfe), ref fmv_nfeTipoImpDanfe, value); }
         }
         string fmv_nfeCfop;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(3)]
         public string mv_nfeCfop
         {
             get { return fmv_nfeCfop; }
             set { SetPropertyValue<string>(nameof(mv_nfeCfop), ref fmv_nfeCfop, value); }
         }
-        long fmv_nfeProcEmis;
-        public long mv_nfeProcEmis
+        byte fmv_nfeProcEmis;
+        public byte mv_nfeProcEmis
         {
             get { return fmv_nfeProcEmis; }
-            set { SetPropertyValue<long>(nameof(mv_nfeProcEmis), ref fmv_nfeProcEmis, value); }
+            set { SetPropertyValue<byte>(nameof(mv_nfeProcEmis), ref fmv_nfeProcEmis, value); }
         }
         string fmv_nfeVerProcEmis;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(20)]
         public string mv_nfeVerProcEmis
         {
             get { return fmv_nfeVerProcEmis; }
             set { SetPropertyValue<string>(nameof(mv_nfeVerProcEmis), ref fmv_nfeVerProcEmis, value); }
         }
-        long fmv_nfeModFrete;
-        public long mv_nfeModFrete
+        byte fmv_nfeModFrete;
+        public byte mv_nfeModFrete
         {
             get { return fmv_nfeModFrete; }
-            set { SetPropertyValue<long>(nameof(mv_nfeModFrete), ref fmv_nfeModFrete, value); }
+            set { SetPropertyValue<byte>(nameof(mv_nfeModFrete), ref fmv_nfeModFrete, value); }
         }
-        string fmv_nfeDtEmis;
-        [Size(SizeAttribute.Unlimited)]
-        public string mv_nfeDtEmis
+        DateTime fmv_nfeDtEmis;
+        public DateTime mv_nfeDtEmis
         {
             get { return fmv_nfeDtEmis; }
-            set { SetPropertyValue<string>(nameof(mv_nfeDtEmis), ref fmv_nfeDtEmis, value); }
+            set { SetPropertyValue<DateTime>(nameof(mv_nfeDtEmis), ref fmv_nfeDtEmis, value); }
         }
-        long fmv_nfeTipoEmis;
-        public long mv_nfeTipoEmis
+        byte fmv_nfeTipoEmis;
+        public byte mv_nfeTipoEmis
         {
             get { return fmv_nfeTipoEmis; }
-            set { SetPropertyValue<long>(nameof(mv_nfeTipoEmis), ref fmv_nfeTipoEmis, value); }
+            set { SetPropertyValue<byte>(nameof(mv_nfeTipoEmis), ref fmv_nfeTipoEmis, value); }
         }
-        long fmv_nfeTipoDfe;
-        public long mv_nfeTipoDfe
+        byte fmv_nfeTipoDfe;
+        public byte mv_nfeTipoDfe
         {
             get { return fmv_nfeTipoDfe; }
-            set { SetPropertyValue<long>(nameof(mv_nfeTipoDfe), ref fmv_nfeTipoDfe, value); }
+            set { SetPropertyValue<byte>(nameof(mv_nfeTipoDfe), ref fmv_nfeTipoDfe, value); }
         }
         string fmv_nfeXmlProcRes;
         [Size(SizeAttribute.Unlimited)]
@@ -357,23 +355,25 @@ namespace DXApplicationPDV.bancoSQLite
             set { SetPropertyValue<decimal>(nameof(mv_vlrTotPag), ref fmv_vlrTotPag, value); }
         }
         string fmv_cpf_tmp;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(11)]
         public string mv_cpf_tmp
         {
             get { return fmv_cpf_tmp; }
             set { SetPropertyValue<string>(nameof(mv_cpf_tmp), ref fmv_cpf_tmp, value); }
         }
-        long ffk_tb_ClasCont2;
-        public long fk_tb_ClasCont2
+        tb_clasCont2 ffk_tb_clasCont2;
+        [Association(@"tb_movimentacaoReferencestb_clasCont2")]
+        public tb_clasCont2 fk_tb_clasCont2
         {
-            get { return ffk_tb_ClasCont2; }
-            set { SetPropertyValue<long>(nameof(fk_tb_ClasCont2), ref ffk_tb_ClasCont2, value); }
+            get { return ffk_tb_clasCont2; }
+            set { SetPropertyValue<tb_clasCont2>(nameof(fk_tb_clasCont2), ref ffk_tb_clasCont2, value); }
         }
-        long ffk_tb_jornada;
-        public long fk_tb_jornada
+        tb_jornada ffk_tb_jornada;
+        [Association(@"tb_movimentacaoReferencestb_jornada")]
+        public tb_jornada fk_tb_jornada
         {
             get { return ffk_tb_jornada; }
-            set { SetPropertyValue<long>(nameof(fk_tb_jornada), ref ffk_tb_jornada, value); }
+            set { SetPropertyValue<tb_jornada>(nameof(fk_tb_jornada), ref ffk_tb_jornada, value); }
         }
         tb_ator ffk_tb_ator_atend;
         [Association(@"tb_movimentacaoReferencestb_ator2")]
@@ -382,20 +382,28 @@ namespace DXApplicationPDV.bancoSQLite
             get { return ffk_tb_ator_atend; }
             set { SetPropertyValue<tb_ator>(nameof(fk_tb_ator_atend), ref ffk_tb_ator_atend, value); }
         }
-        tb_ator ffk_tb_ator_emit;
-        [Association(@"tb_movimentacaoReferencestb_ator1")]
-        public tb_ator fk_tb_ator_emit
-        {
-            get { return ffk_tb_ator_emit; }
-            set { SetPropertyValue<tb_ator>(nameof(fk_tb_ator_emit), ref ffk_tb_ator_emit, value); }
-        }
         tb_ator ffk_tb_ator_dest;
-        [Association(@"tb_movimentacaoReferencestb_ator")]
+        [Association(@"tb_movimentacaoReferencestb_ator1")]
         public tb_ator fk_tb_ator_dest
         {
             get { return ffk_tb_ator_dest; }
             set { SetPropertyValue<tb_ator>(nameof(fk_tb_ator_dest), ref ffk_tb_ator_dest, value); }
         }
+        tb_ator ffk_tb_ator_emit;
+        [Association(@"tb_movimentacaoReferencestb_ator")]
+        public tb_ator fk_tb_ator_emit
+        {
+            get { return ffk_tb_ator_emit; }
+            set { SetPropertyValue<tb_ator>(nameof(fk_tb_ator_emit), ref ffk_tb_ator_emit, value); }
+        }
+        [Association(@"tb_movimentacao_caixaReferencestb_movimentacao")]
+        public XPCollection<tb_movimentacao_caixa> tb_movimentacao_caixas { get { return GetCollection<tb_movimentacao_caixa>(nameof(tb_movimentacao_caixas)); } }
+        [Association(@"tb_movimentacao_impressaoReferencestb_movimentacao")]
+        public XPCollection<tb_movimentacao_impressao> tb_movimentacao_impressaos { get { return GetCollection<tb_movimentacao_impressao>(nameof(tb_movimentacao_impressaos)); } }
+        [Association(@"tb_movimentacao_pagamentoReferencestb_movimentacao")]
+        public XPCollection<tb_movimentacao_pagamento> tb_movimentacao_pagamentos { get { return GetCollection<tb_movimentacao_pagamento>(nameof(tb_movimentacao_pagamentos)); } }
+        [Association(@"tb_movimentacao_produtoReferencestb_movimentacao")]
+        public XPCollection<tb_movimentacao_produto> tb_movimentacao_produtos { get { return GetCollection<tb_movimentacao_produto>(nameof(tb_movimentacao_produtos)); } }
         [Association(@"tb_nfeReferencestb_movimentacao")]
         public XPCollection<tb_nfe> tb_nfes { get { return GetCollection<tb_nfe>(nameof(tb_nfes)); } }
     }

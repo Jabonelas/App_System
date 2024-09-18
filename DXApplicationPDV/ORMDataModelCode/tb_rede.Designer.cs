@@ -44,32 +44,34 @@ namespace DXApplicationPDV.bancoSQLite
             set { SetPropertyValue<DateTime>(nameof(re_dtAcs), ref fre_dtAcs, value); }
         }
         string fre_desc;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(60)]
         public string re_desc
         {
             get { return fre_desc; }
             set { SetPropertyValue<string>(nameof(re_desc), ref fre_desc, value); }
         }
-        long fre_desat;
-        public long re_desat
+        decimal fre_desat;
+        public decimal re_desat
         {
             get { return fre_desat; }
-            set { SetPropertyValue<long>(nameof(re_desat), ref fre_desat, value); }
+            set { SetPropertyValue<decimal>(nameof(re_desat), ref fre_desat, value); }
         }
-        long fre_desatSinc;
-        public long re_desatSinc
+        decimal fre_desatSinc;
+        public decimal re_desatSinc
         {
             get { return fre_desatSinc; }
-            set { SetPropertyValue<long>(nameof(re_desatSinc), ref fre_desatSinc, value); }
+            set { SetPropertyValue<decimal>(nameof(re_desatSinc), ref fre_desatSinc, value); }
         }
-        long fre_PersTim;
-        public long re_PersTim
+        byte fre_PersTim;
+        public byte re_PersTim
         {
             get { return fre_PersTim; }
-            set { SetPropertyValue<long>(nameof(re_PersTim), ref fre_PersTim, value); }
+            set { SetPropertyValue<byte>(nameof(re_PersTim), ref fre_PersTim, value); }
         }
         [Association(@"tb_forma_pagamentoReferencestb_rede")]
         public XPCollection<tb_forma_pagamento> tb_forma_pagamentos { get { return GetCollection<tb_forma_pagamento>(nameof(tb_forma_pagamentos)); } }
+        [Association(@"tb_marca_produtoReferencestb_rede")]
+        public XPCollection<tb_marca_produto> tb_marca_produtos { get { return GetCollection<tb_marca_produto>(nameof(tb_marca_produtos)); } }
         [Association(@"tb_matrizReferencestb_rede")]
         public XPCollection<tb_matriz> tb_matrizs { get { return GetCollection<tb_matriz>(nameof(tb_matrizs)); } }
         [Association(@"tb_produtoReferencestb_rede")]

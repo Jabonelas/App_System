@@ -37,29 +37,23 @@ namespace DXApplicationPDV.bancoSQLite
             get { return fpd_dtAlt; }
             set { SetPropertyValue<DateTime>(nameof(pd_dtAlt), ref fpd_dtAlt, value); }
         }
-        DateTime fpd_dtAcs;
-        public DateTime pd_dtAcs
-        {
-            get { return fpd_dtAcs; }
-            set { SetPropertyValue<DateTime>(nameof(pd_dtAcs), ref fpd_dtAcs, value); }
-        }
-        long fpd_desat;
-        public long pd_desat
+        decimal fpd_desat;
+        public decimal pd_desat
         {
             get { return fpd_desat; }
-            set { SetPropertyValue<long>(nameof(pd_desat), ref fpd_desat, value); }
+            set { SetPropertyValue<decimal>(nameof(pd_desat), ref fpd_desat, value); }
         }
-        long fpd_genero;
-        public long pd_genero
+        byte fpd_genero;
+        public byte pd_genero
         {
             get { return fpd_genero; }
-            set { SetPropertyValue<long>(nameof(pd_genero), ref fpd_genero, value); }
+            set { SetPropertyValue<byte>(nameof(pd_genero), ref fpd_genero, value); }
         }
-        long fpd_unMedCom;
-        public long pd_unMedCom
+        byte fpd_unMedCom;
+        public byte pd_unMedCom
         {
             get { return fpd_unMedCom; }
-            set { SetPropertyValue<long>(nameof(pd_unMedCom), ref fpd_unMedCom, value); }
+            set { SetPropertyValue<byte>(nameof(pd_unMedCom), ref fpd_unMedCom, value); }
         }
         long fpd_codRef;
         public long pd_codRef
@@ -68,37 +62,37 @@ namespace DXApplicationPDV.bancoSQLite
             set { SetPropertyValue<long>(nameof(pd_codRef), ref fpd_codRef, value); }
         }
         string fpd_codRefStr;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(20)]
         public string pd_codRefStr
         {
             get { return fpd_codRefStr; }
             set { SetPropertyValue<string>(nameof(pd_codRefStr), ref fpd_codRefStr, value); }
         }
         string fpd_barras;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(512)]
         public string pd_barras
         {
             get { return fpd_barras; }
             set { SetPropertyValue<string>(nameof(pd_barras), ref fpd_barras, value); }
         }
         string fpd_impRef;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(60)]
         public string pd_impRef
         {
             get { return fpd_impRef; }
             set { SetPropertyValue<string>(nameof(pd_impRef), ref fpd_impRef, value); }
         }
-        long fpd_proTipo;
-        public long pd_proTipo
+        byte fpd_proTipo;
+        public byte pd_proTipo
         {
             get { return fpd_proTipo; }
-            set { SetPropertyValue<long>(nameof(pd_proTipo), ref fpd_proTipo, value); }
+            set { SetPropertyValue<byte>(nameof(pd_proTipo), ref fpd_proTipo, value); }
         }
-        long fpd_especie;
-        public long pd_especie
+        byte fpd_especie;
+        public byte pd_especie
         {
             get { return fpd_especie; }
-            set { SetPropertyValue<long>(nameof(pd_especie), ref fpd_especie, value); }
+            set { SetPropertyValue<byte>(nameof(pd_especie), ref fpd_especie, value); }
         }
         decimal fpd_estTot;
         public decimal pd_estTot
@@ -106,31 +100,31 @@ namespace DXApplicationPDV.bancoSQLite
             get { return fpd_estTot; }
             set { SetPropertyValue<decimal>(nameof(pd_estTot), ref fpd_estTot, value); }
         }
-        long fpd_invend;
-        public long pd_invend
+        decimal fpd_invend;
+        public decimal pd_invend
         {
             get { return fpd_invend; }
-            set { SetPropertyValue<long>(nameof(pd_invend), ref fpd_invend, value); }
+            set { SetPropertyValue<decimal>(nameof(pd_invend), ref fpd_invend, value); }
         }
         string fpd_descCurta;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(25)]
         public string pd_descCurta
         {
             get { return fpd_descCurta; }
             set { SetPropertyValue<string>(nameof(pd_descCurta), ref fpd_descCurta, value); }
         }
         string fpd_desc;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(120)]
         public string pd_desc
         {
             get { return fpd_desc; }
             set { SetPropertyValue<string>(nameof(pd_desc), ref fpd_desc, value); }
         }
-        long fpd_fxEta;
-        public long pd_fxEta
+        byte fpd_fxEta;
+        public byte pd_fxEta
         {
             get { return fpd_fxEta; }
-            set { SetPropertyValue<long>(nameof(pd_fxEta), ref fpd_fxEta, value); }
+            set { SetPropertyValue<byte>(nameof(pd_fxEta), ref fpd_fxEta, value); }
         }
         decimal fpd_vlrUnComBase;
         public decimal pd_vlrUnComBase
@@ -156,23 +150,23 @@ namespace DXApplicationPDV.bancoSQLite
             get { return fpd_estMaxBase; }
             set { SetPropertyValue<decimal>(nameof(pd_estMaxBase), ref fpd_estMaxBase, value); }
         }
-        long fpd_nfeProdOrigem;
-        public long pd_nfeProdOrigem
+        byte fpd_nfeProdOrigem;
+        public byte pd_nfeProdOrigem
         {
             get { return fpd_nfeProdOrigem; }
-            set { SetPropertyValue<long>(nameof(pd_nfeProdOrigem), ref fpd_nfeProdOrigem, value); }
+            set { SetPropertyValue<byte>(nameof(pd_nfeProdOrigem), ref fpd_nfeProdOrigem, value); }
         }
-        long fpd_nfeCsosn;
-        public long pd_nfeCsosn
+        short fpd_nfeCsosn;
+        public short pd_nfeCsosn
         {
             get { return fpd_nfeCsosn; }
-            set { SetPropertyValue<long>(nameof(pd_nfeCsosn), ref fpd_nfeCsosn, value); }
+            set { SetPropertyValue<short>(nameof(pd_nfeCsosn), ref fpd_nfeCsosn, value); }
         }
-        long fpd_vend;
-        public long pd_vend
+        decimal fpd_vend;
+        public decimal pd_vend
         {
             get { return fpd_vend; }
-            set { SetPropertyValue<long>(nameof(pd_vend), ref fpd_vend, value); }
+            set { SetPropertyValue<decimal>(nameof(pd_vend), ref fpd_vend, value); }
         }
         string fpd_tmpStr;
         [Size(SizeAttribute.Unlimited)]
@@ -181,17 +175,17 @@ namespace DXApplicationPDV.bancoSQLite
             get { return fpd_tmpStr; }
             set { SetPropertyValue<string>(nameof(pd_tmpStr), ref fpd_tmpStr, value); }
         }
-        long fpd_ativo;
-        public long pd_ativo
+        decimal fpd_ativo;
+        public decimal pd_ativo
         {
             get { return fpd_ativo; }
-            set { SetPropertyValue<long>(nameof(pd_ativo), ref fpd_ativo, value); }
+            set { SetPropertyValue<decimal>(nameof(pd_ativo), ref fpd_ativo, value); }
         }
-        long ffk_tb_Est;
-        public long fk_tb_Est
+        long ffk_tb_est;
+        public long fk_tb_est
         {
-            get { return ffk_tb_Est; }
-            set { SetPropertyValue<long>(nameof(fk_tb_Est), ref ffk_tb_Est, value); }
+            get { return ffk_tb_est; }
+            set { SetPropertyValue<long>(nameof(fk_tb_est), ref ffk_tb_est, value); }
         }
         tb_rede ffk_tb_rede;
         [Association(@"tb_produtoReferencestb_rede")]
@@ -200,11 +194,11 @@ namespace DXApplicationPDV.bancoSQLite
             get { return ffk_tb_rede; }
             set { SetPropertyValue<tb_rede>(nameof(fk_tb_rede), ref ffk_tb_rede, value); }
         }
-        long ffk_tb_Ncm;
-        public long fk_tb_Ncm
+        long ffk_tb_ncm;
+        public long fk_tb_ncm
         {
-            get { return ffk_tb_Ncm; }
-            set { SetPropertyValue<long>(nameof(fk_tb_Ncm), ref ffk_tb_Ncm, value); }
+            get { return ffk_tb_ncm; }
+            set { SetPropertyValue<long>(nameof(fk_tb_ncm), ref ffk_tb_ncm, value); }
         }
         tb_ator ffk_tb_ator;
         [Association(@"tb_produtoReferencestb_ator")]
@@ -213,11 +207,12 @@ namespace DXApplicationPDV.bancoSQLite
             get { return ffk_tb_ator; }
             set { SetPropertyValue<tb_ator>(nameof(fk_tb_ator), ref ffk_tb_ator, value); }
         }
-        long ffk_tb_ProRel;
-        public long fk_tb_ProRel
+        tb_relacao_produto_cadastro_XML ffk_tb_relacao_produto_cadastro_XML;
+        [Association(@"tb_produtoReferencestb_relacao_produto_cadastro_XML")]
+        public tb_relacao_produto_cadastro_XML fk_tb_relacao_produto_cadastro_XML
         {
-            get { return ffk_tb_ProRel; }
-            set { SetPropertyValue<long>(nameof(fk_tb_ProRel), ref ffk_tb_ProRel, value); }
+            get { return ffk_tb_relacao_produto_cadastro_XML; }
+            set { SetPropertyValue<tb_relacao_produto_cadastro_XML>(nameof(fk_tb_relacao_produto_cadastro_XML), ref ffk_tb_relacao_produto_cadastro_XML, value); }
         }
         tb_marca_produto ffk_tb_marca_produto;
         [Association(@"tb_produtoReferencestb_marca_produto")]
@@ -240,6 +235,10 @@ namespace DXApplicationPDV.bancoSQLite
             get { return ffk_tb_categoria_produto; }
             set { SetPropertyValue<tb_categoria_produto>(nameof(fk_tb_categoria_produto), ref ffk_tb_categoria_produto, value); }
         }
+        [Association(@"tb_codigo_produtoReferencestb_produto")]
+        public XPCollection<tb_codigo_produto> tb_codigo_produtos { get { return GetCollection<tb_codigo_produto>(nameof(tb_codigo_produtos)); } }
+        [Association(@"tb_movimentacao_produtoReferencestb_produto")]
+        public XPCollection<tb_movimentacao_produto> tb_movimentacao_produtos { get { return GetCollection<tb_movimentacao_produto>(nameof(tb_movimentacao_produtos)); } }
         [Association(@"tb_produto_filialReferencestb_produto")]
         public XPCollection<tb_produto_filial> tb_produto_filials { get { return GetCollection<tb_produto_filial>(nameof(tb_produto_filials)); } }
         [Association(@"tb_relacao_produto_cadastro_XMLReferencestb_produto")]

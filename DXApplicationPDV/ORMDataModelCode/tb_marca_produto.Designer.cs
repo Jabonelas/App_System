@@ -50,12 +50,21 @@ namespace DXApplicationPDV.bancoSQLite
             set { SetPropertyValue<long>(nameof(mp_desat), ref fmp_desat, value); }
         }
         string fmp_desc;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(48)]
         public string mp_desc
         {
             get { return fmp_desc; }
             set { SetPropertyValue<string>(nameof(mp_desc), ref fmp_desc, value); }
         }
+        tb_rede ffk_tb_rede;
+        [Association(@"tb_marca_produtoReferencestb_rede")]
+        public tb_rede fk_tb_rede
+        {
+            get { return ffk_tb_rede; }
+            set { SetPropertyValue<tb_rede>(nameof(fk_tb_rede), ref ffk_tb_rede, value); }
+        }
+        [Association(@"tb_estReferencestb_marca_produto")]
+        public XPCollection<tb_est> tb_ests { get { return GetCollection<tb_est>(nameof(tb_ests)); } }
         [Association(@"tb_produtoReferencestb_marca_produto")]
         public XPCollection<tb_produto> tb_produtos { get { return GetCollection<tb_produto>(nameof(tb_produtos)); } }
     }

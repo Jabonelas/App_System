@@ -26,14 +26,14 @@ namespace DXApplicationPDV.bancoSQLite
             set { SetPropertyValue<long>(nameof(id_pdv), ref fid_pdv, value); }
         }
         string fpdv_serv;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(300)]
         public string pdv_serv
         {
             get { return fpdv_serv; }
             set { SetPropertyValue<string>(nameof(pdv_serv), ref fpdv_serv, value); }
         }
         string fpdv_host;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(300)]
         public string pdv_host
         {
             get { return fpdv_host; }
@@ -57,23 +57,23 @@ namespace DXApplicationPDV.bancoSQLite
             get { return fpdv_dtAcs; }
             set { SetPropertyValue<DateTime>(nameof(pdv_dtAcs), ref fpdv_dtAcs, value); }
         }
-        long fpdv_desat;
-        public long pdv_desat
+        decimal fpdv_desat;
+        public decimal pdv_desat
         {
             get { return fpdv_desat; }
-            set { SetPropertyValue<long>(nameof(pdv_desat), ref fpdv_desat, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_desat), ref fpdv_desat, value); }
         }
-        long fpdv_pdvNum;
-        public long pdv_pdvNum
+        short fpdv_pdvNum;
+        public short pdv_pdvNum
         {
             get { return fpdv_pdvNum; }
-            set { SetPropertyValue<long>(nameof(pdv_pdvNum), ref fpdv_pdvNum, value); }
+            set { SetPropertyValue<short>(nameof(pdv_pdvNum), ref fpdv_pdvNum, value); }
         }
-        long fpdv_nfeHomSerie;
-        public long pdv_nfeHomSerie
+        short fpdv_nfeHomSerie;
+        public short pdv_nfeHomSerie
         {
             get { return fpdv_nfeHomSerie; }
-            set { SetPropertyValue<long>(nameof(pdv_nfeHomSerie), ref fpdv_nfeHomSerie, value); }
+            set { SetPropertyValue<short>(nameof(pdv_nfeHomSerie), ref fpdv_nfeHomSerie, value); }
         }
         long fpdv_nfeHomNum;
         public long pdv_nfeHomNum
@@ -81,11 +81,11 @@ namespace DXApplicationPDV.bancoSQLite
             get { return fpdv_nfeHomNum; }
             set { SetPropertyValue<long>(nameof(pdv_nfeHomNum), ref fpdv_nfeHomNum, value); }
         }
-        long fpdv_nfeProdSerie;
-        public long pdv_nfeProdSerie
+        short fpdv_nfeProdSerie;
+        public short pdv_nfeProdSerie
         {
             get { return fpdv_nfeProdSerie; }
-            set { SetPropertyValue<long>(nameof(pdv_nfeProdSerie), ref fpdv_nfeProdSerie, value); }
+            set { SetPropertyValue<short>(nameof(pdv_nfeProdSerie), ref fpdv_nfeProdSerie, value); }
         }
         long fpdv_nfeProdNum;
         public long pdv_nfeProdNum
@@ -94,132 +94,132 @@ namespace DXApplicationPDV.bancoSQLite
             set { SetPropertyValue<long>(nameof(pdv_nfeProdNum), ref fpdv_nfeProdNum, value); }
         }
         string fpdv_dskCaption;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(64)]
         public string pdv_dskCaption
         {
             get { return fpdv_dskCaption; }
             set { SetPropertyValue<string>(nameof(pdv_dskCaption), ref fpdv_dskCaption, value); }
         }
-        long fpdv_dskIndex;
-        public long pdv_dskIndex
+        decimal fpdv_dskIndex;
+        public decimal pdv_dskIndex
         {
             get { return fpdv_dskIndex; }
-            set { SetPropertyValue<long>(nameof(pdv_dskIndex), ref fpdv_dskIndex, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_dskIndex), ref fpdv_dskIndex, value); }
         }
         string fpdv_dskSerialNumber;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(128)]
         public string pdv_dskSerialNumber
         {
             get { return fpdv_dskSerialNumber; }
             set { SetPropertyValue<string>(nameof(pdv_dskSerialNumber), ref fpdv_dskSerialNumber, value); }
         }
-        long fpdv_dskSignature;
-        public long pdv_dskSignature
+        decimal fpdv_dskSignature;
+        public decimal pdv_dskSignature
         {
             get { return fpdv_dskSignature; }
-            set { SetPropertyValue<long>(nameof(pdv_dskSignature), ref fpdv_dskSignature, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_dskSignature), ref fpdv_dskSignature, value); }
         }
-        long fpdv_dskSize;
-        public long pdv_dskSize
+        decimal fpdv_dskSize;
+        public decimal pdv_dskSize
         {
             get { return fpdv_dskSize; }
-            set { SetPropertyValue<long>(nameof(pdv_dskSize), ref fpdv_dskSize, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_dskSize), ref fpdv_dskSize, value); }
         }
         string fpdv_dskStatus;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(10)]
         public string pdv_dskStatus
         {
             get { return fpdv_dskStatus; }
             set { SetPropertyValue<string>(nameof(pdv_dskStatus), ref fpdv_dskStatus, value); }
         }
         string fpdv_nicAdapterType;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(64)]
         public string pdv_nicAdapterType
         {
             get { return fpdv_nicAdapterType; }
             set { SetPropertyValue<string>(nameof(pdv_nicAdapterType), ref fpdv_nicAdapterType, value); }
         }
-        long fpdv_nicAdapterTypeID;
-        public long pdv_nicAdapterTypeID
+        decimal fpdv_nicAdapterTypeID;
+        public decimal pdv_nicAdapterTypeID
         {
             get { return fpdv_nicAdapterTypeID; }
-            set { SetPropertyValue<long>(nameof(pdv_nicAdapterTypeID), ref fpdv_nicAdapterTypeID, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_nicAdapterTypeID), ref fpdv_nicAdapterTypeID, value); }
         }
         string fpdv_nicCaption;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(64)]
         public string pdv_nicCaption
         {
             get { return fpdv_nicCaption; }
             set { SetPropertyValue<string>(nameof(pdv_nicCaption), ref fpdv_nicCaption, value); }
         }
         string fpdv_nicDescription;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(128)]
         public string pdv_nicDescription
         {
             get { return fpdv_nicDescription; }
             set { SetPropertyValue<string>(nameof(pdv_nicDescription), ref fpdv_nicDescription, value); }
         }
-        long fpdv_nicInterfaceIndex;
-        public long pdv_nicInterfaceIndex
+        decimal fpdv_nicInterfaceIndex;
+        public decimal pdv_nicInterfaceIndex
         {
             get { return fpdv_nicInterfaceIndex; }
-            set { SetPropertyValue<long>(nameof(pdv_nicInterfaceIndex), ref fpdv_nicInterfaceIndex, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_nicInterfaceIndex), ref fpdv_nicInterfaceIndex, value); }
         }
         string fpdv_nicMacAddress;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(32)]
         public string pdv_nicMacAddress
         {
             get { return fpdv_nicMacAddress; }
             set { SetPropertyValue<string>(nameof(pdv_nicMacAddress), ref fpdv_nicMacAddress, value); }
         }
         string fpdv_nicMacAddressVpn;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(32)]
         public string pdv_nicMacAddressVpn
         {
             get { return fpdv_nicMacAddressVpn; }
             set { SetPropertyValue<string>(nameof(pdv_nicMacAddressVpn), ref fpdv_nicMacAddressVpn, value); }
         }
         string fpdv_nicManufacturer;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(64)]
         public string pdv_nicManufacturer
         {
             get { return fpdv_nicManufacturer; }
             set { SetPropertyValue<string>(nameof(pdv_nicManufacturer), ref fpdv_nicManufacturer, value); }
         }
         string fpdv_nicName;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(128)]
         public string pdv_nicName
         {
             get { return fpdv_nicName; }
             set { SetPropertyValue<string>(nameof(pdv_nicName), ref fpdv_nicName, value); }
         }
-        long fpdv_nicNetEnabled;
-        public long pdv_nicNetEnabled
+        decimal fpdv_nicNetEnabled;
+        public decimal pdv_nicNetEnabled
         {
             get { return fpdv_nicNetEnabled; }
-            set { SetPropertyValue<long>(nameof(pdv_nicNetEnabled), ref fpdv_nicNetEnabled, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_nicNetEnabled), ref fpdv_nicNetEnabled, value); }
         }
-        long fpdv_nicSpeed;
-        public long pdv_nicSpeed
+        decimal fpdv_nicSpeed;
+        public decimal pdv_nicSpeed
         {
             get { return fpdv_nicSpeed; }
-            set { SetPropertyValue<long>(nameof(pdv_nicSpeed), ref fpdv_nicSpeed, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_nicSpeed), ref fpdv_nicSpeed, value); }
         }
-        long fpdv_nicCfgDHCPEnabled;
-        public long pdv_nicCfgDHCPEnabled
+        decimal fpdv_nicCfgDHCPEnabled;
+        public decimal pdv_nicCfgDHCPEnabled
         {
             get { return fpdv_nicCfgDHCPEnabled; }
-            set { SetPropertyValue<long>(nameof(pdv_nicCfgDHCPEnabled), ref fpdv_nicCfgDHCPEnabled, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_nicCfgDHCPEnabled), ref fpdv_nicCfgDHCPEnabled, value); }
         }
         string fpdv_nicCfgDHCPServer;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(48)]
         public string pdv_nicCfgDHCPServer
         {
             get { return fpdv_nicCfgDHCPServer; }
             set { SetPropertyValue<string>(nameof(pdv_nicCfgDHCPServer), ref fpdv_nicCfgDHCPServer, value); }
         }
         string fpdv_nicCfgDNSDomain;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(255)]
         public string pdv_nicCfgDNSDomain
         {
             get { return fpdv_nicCfgDNSDomain; }
@@ -239,359 +239,359 @@ namespace DXApplicationPDV.bancoSQLite
             get { return fpdv_nicCfgIPAddressVpn; }
             set { SetPropertyValue<string>(nameof(pdv_nicCfgIPAddressVpn), ref fpdv_nicCfgIPAddressVpn, value); }
         }
-        long fpdv_nicCfgIPConnectionMetric;
-        public long pdv_nicCfgIPConnectionMetric
+        decimal fpdv_nicCfgIPConnectionMetric;
+        public decimal pdv_nicCfgIPConnectionMetric
         {
             get { return fpdv_nicCfgIPConnectionMetric; }
-            set { SetPropertyValue<long>(nameof(pdv_nicCfgIPConnectionMetric), ref fpdv_nicCfgIPConnectionMetric, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_nicCfgIPConnectionMetric), ref fpdv_nicCfgIPConnectionMetric, value); }
         }
-        long fpdv_nicCfgIPEnabled;
-        public long pdv_nicCfgIPEnabled
+        decimal fpdv_nicCfgIPEnabled;
+        public decimal pdv_nicCfgIPEnabled
         {
             get { return fpdv_nicCfgIPEnabled; }
-            set { SetPropertyValue<long>(nameof(pdv_nicCfgIPEnabled), ref fpdv_nicCfgIPEnabled, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_nicCfgIPEnabled), ref fpdv_nicCfgIPEnabled, value); }
         }
-        long fpdv_pcPgFlAllocatedBaseSize;
-        public long pdv_pcPgFlAllocatedBaseSize
+        decimal fpdv_pcPgFlAllocatedBaseSize;
+        public decimal pdv_pcPgFlAllocatedBaseSize
         {
             get { return fpdv_pcPgFlAllocatedBaseSize; }
-            set { SetPropertyValue<long>(nameof(pdv_pcPgFlAllocatedBaseSize), ref fpdv_pcPgFlAllocatedBaseSize, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcPgFlAllocatedBaseSize), ref fpdv_pcPgFlAllocatedBaseSize, value); }
         }
-        long fpdv_pcPgFlCurrentUsage;
-        public long pdv_pcPgFlCurrentUsage
+        decimal fpdv_pcPgFlCurrentUsage;
+        public decimal pdv_pcPgFlCurrentUsage
         {
             get { return fpdv_pcPgFlCurrentUsage; }
-            set { SetPropertyValue<long>(nameof(pdv_pcPgFlCurrentUsage), ref fpdv_pcPgFlCurrentUsage, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcPgFlCurrentUsage), ref fpdv_pcPgFlCurrentUsage, value); }
         }
-        long fpdv_pcPgFlPeakUsage;
-        public long pdv_pcPgFlPeakUsage
+        decimal fpdv_pcPgFlPeakUsage;
+        public decimal pdv_pcPgFlPeakUsage
         {
             get { return fpdv_pcPgFlPeakUsage; }
-            set { SetPropertyValue<long>(nameof(pdv_pcPgFlPeakUsage), ref fpdv_pcPgFlPeakUsage, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcPgFlPeakUsage), ref fpdv_pcPgFlPeakUsage, value); }
         }
         string fpdv_pcPowInstanceID;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(60)]
         public string pdv_pcPowInstanceID
         {
             get { return fpdv_pcPowInstanceID; }
             set { SetPropertyValue<string>(nameof(pdv_pcPowInstanceID), ref fpdv_pcPowInstanceID, value); }
         }
         string fpdv_pcPowElementName;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(60)]
         public string pdv_pcPowElementName
         {
             get { return fpdv_pcPowElementName; }
             set { SetPropertyValue<string>(nameof(pdv_pcPowElementName), ref fpdv_pcPowElementName, value); }
         }
         string fpdv_pcLdCaption;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(60)]
         public string pdv_pcLdCaption
         {
             get { return fpdv_pcLdCaption; }
             set { SetPropertyValue<string>(nameof(pdv_pcLdCaption), ref fpdv_pcLdCaption, value); }
         }
-        long fpdv_pcLdCompressed;
-        public long pdv_pcLdCompressed
+        decimal fpdv_pcLdCompressed;
+        public decimal pdv_pcLdCompressed
         {
             get { return fpdv_pcLdCompressed; }
-            set { SetPropertyValue<long>(nameof(pdv_pcLdCompressed), ref fpdv_pcLdCompressed, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcLdCompressed), ref fpdv_pcLdCompressed, value); }
         }
-        long fpdv_pcLdConfigManagerErrorCode;
-        public long pdv_pcLdConfigManagerErrorCode
+        decimal fpdv_pcLdConfigManagerErrorCode;
+        public decimal pdv_pcLdConfigManagerErrorCode
         {
             get { return fpdv_pcLdConfigManagerErrorCode; }
-            set { SetPropertyValue<long>(nameof(pdv_pcLdConfigManagerErrorCode), ref fpdv_pcLdConfigManagerErrorCode, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcLdConfigManagerErrorCode), ref fpdv_pcLdConfigManagerErrorCode, value); }
         }
         string fpdv_pcLdDeviceID;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(60)]
         public string pdv_pcLdDeviceID
         {
             get { return fpdv_pcLdDeviceID; }
             set { SetPropertyValue<string>(nameof(pdv_pcLdDeviceID), ref fpdv_pcLdDeviceID, value); }
         }
-        long fpdv_pcLdDriveType;
-        public long pdv_pcLdDriveType
+        decimal fpdv_pcLdDriveType;
+        public decimal pdv_pcLdDriveType
         {
             get { return fpdv_pcLdDriveType; }
-            set { SetPropertyValue<long>(nameof(pdv_pcLdDriveType), ref fpdv_pcLdDriveType, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcLdDriveType), ref fpdv_pcLdDriveType, value); }
         }
         string fpdv_pcLdFileSystem;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(20)]
         public string pdv_pcLdFileSystem
         {
             get { return fpdv_pcLdFileSystem; }
             set { SetPropertyValue<string>(nameof(pdv_pcLdFileSystem), ref fpdv_pcLdFileSystem, value); }
         }
-        long fpdv_pcLdFreeSpace;
-        public long pdv_pcLdFreeSpace
+        decimal fpdv_pcLdFreeSpace;
+        public decimal pdv_pcLdFreeSpace
         {
             get { return fpdv_pcLdFreeSpace; }
-            set { SetPropertyValue<long>(nameof(pdv_pcLdFreeSpace), ref fpdv_pcLdFreeSpace, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcLdFreeSpace), ref fpdv_pcLdFreeSpace, value); }
         }
-        long fpdv_pcLdLastErrorCode;
-        public long pdv_pcLdLastErrorCode
+        decimal fpdv_pcLdLastErrorCode;
+        public decimal pdv_pcLdLastErrorCode
         {
             get { return fpdv_pcLdLastErrorCode; }
-            set { SetPropertyValue<long>(nameof(pdv_pcLdLastErrorCode), ref fpdv_pcLdLastErrorCode, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcLdLastErrorCode), ref fpdv_pcLdLastErrorCode, value); }
         }
         string fpdv_pcLdName;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(64)]
         public string pdv_pcLdName
         {
             get { return fpdv_pcLdName; }
             set { SetPropertyValue<string>(nameof(pdv_pcLdName), ref fpdv_pcLdName, value); }
         }
-        long fpdv_pcLdSize;
-        public long pdv_pcLdSize
+        decimal fpdv_pcLdSize;
+        public decimal pdv_pcLdSize
         {
             get { return fpdv_pcLdSize; }
-            set { SetPropertyValue<long>(nameof(pdv_pcLdSize), ref fpdv_pcLdSize, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcLdSize), ref fpdv_pcLdSize, value); }
         }
-        long fpdv_pcLdVolumeDirty;
-        public long pdv_pcLdVolumeDirty
+        decimal fpdv_pcLdVolumeDirty;
+        public decimal pdv_pcLdVolumeDirty
         {
             get { return fpdv_pcLdVolumeDirty; }
-            set { SetPropertyValue<long>(nameof(pdv_pcLdVolumeDirty), ref fpdv_pcLdVolumeDirty, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcLdVolumeDirty), ref fpdv_pcLdVolumeDirty, value); }
         }
         string fpdv_pcLdVolumeSerialNumber;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(60)]
         public string pdv_pcLdVolumeSerialNumber
         {
             get { return fpdv_pcLdVolumeSerialNumber; }
             set { SetPropertyValue<string>(nameof(pdv_pcLdVolumeSerialNumber), ref fpdv_pcLdVolumeSerialNumber, value); }
         }
-        long fpdv_pcAutomaticManagedPagefile;
-        public long pdv_pcAutomaticManagedPagefile
+        decimal fpdv_pcAutomaticManagedPagefile;
+        public decimal pdv_pcAutomaticManagedPagefile
         {
             get { return fpdv_pcAutomaticManagedPagefile; }
-            set { SetPropertyValue<long>(nameof(pdv_pcAutomaticManagedPagefile), ref fpdv_pcAutomaticManagedPagefile, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcAutomaticManagedPagefile), ref fpdv_pcAutomaticManagedPagefile, value); }
         }
-        long fpdv_pcAutomaticResetBootOption;
-        public long pdv_pcAutomaticResetBootOption
+        decimal fpdv_pcAutomaticResetBootOption;
+        public decimal pdv_pcAutomaticResetBootOption
         {
             get { return fpdv_pcAutomaticResetBootOption; }
-            set { SetPropertyValue<long>(nameof(pdv_pcAutomaticResetBootOption), ref fpdv_pcAutomaticResetBootOption, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcAutomaticResetBootOption), ref fpdv_pcAutomaticResetBootOption, value); }
         }
-        long fpdv_pcAutomaticResetCapability;
-        public long pdv_pcAutomaticResetCapability
+        decimal fpdv_pcAutomaticResetCapability;
+        public decimal pdv_pcAutomaticResetCapability
         {
             get { return fpdv_pcAutomaticResetCapability; }
-            set { SetPropertyValue<long>(nameof(pdv_pcAutomaticResetCapability), ref fpdv_pcAutomaticResetCapability, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcAutomaticResetCapability), ref fpdv_pcAutomaticResetCapability, value); }
         }
-        long fpdv_pcBootROMSupported;
-        public long pdv_pcBootROMSupported
+        decimal fpdv_pcBootROMSupported;
+        public decimal pdv_pcBootROMSupported
         {
             get { return fpdv_pcBootROMSupported; }
-            set { SetPropertyValue<long>(nameof(pdv_pcBootROMSupported), ref fpdv_pcBootROMSupported, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcBootROMSupported), ref fpdv_pcBootROMSupported, value); }
         }
         string fpdv_pcBootupState;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(50)]
         public string pdv_pcBootupState
         {
             get { return fpdv_pcBootupState; }
             set { SetPropertyValue<string>(nameof(pdv_pcBootupState), ref fpdv_pcBootupState, value); }
         }
-        long fpdv_pcCurrentTimeZone;
-        public long pdv_pcCurrentTimeZone
+        short fpdv_pcCurrentTimeZone;
+        public short pdv_pcCurrentTimeZone
         {
             get { return fpdv_pcCurrentTimeZone; }
-            set { SetPropertyValue<long>(nameof(pdv_pcCurrentTimeZone), ref fpdv_pcCurrentTimeZone, value); }
+            set { SetPropertyValue<short>(nameof(pdv_pcCurrentTimeZone), ref fpdv_pcCurrentTimeZone, value); }
         }
-        long fpdv_pcDaylightInEffect;
-        public long pdv_pcDaylightInEffect
+        decimal fpdv_pcDaylightInEffect;
+        public decimal pdv_pcDaylightInEffect
         {
             get { return fpdv_pcDaylightInEffect; }
-            set { SetPropertyValue<long>(nameof(pdv_pcDaylightInEffect), ref fpdv_pcDaylightInEffect, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcDaylightInEffect), ref fpdv_pcDaylightInEffect, value); }
         }
         string fpdv_pcDNSHostName;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(255)]
         public string pdv_pcDNSHostName
         {
             get { return fpdv_pcDNSHostName; }
             set { SetPropertyValue<string>(nameof(pdv_pcDNSHostName), ref fpdv_pcDNSHostName, value); }
         }
-        long fpdv_pcDomainRole;
-        public long pdv_pcDomainRole
+        decimal fpdv_pcDomainRole;
+        public decimal pdv_pcDomainRole
         {
             get { return fpdv_pcDomainRole; }
-            set { SetPropertyValue<long>(nameof(pdv_pcDomainRole), ref fpdv_pcDomainRole, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcDomainRole), ref fpdv_pcDomainRole, value); }
         }
-        long fpdv_pcEnableDaylightSavingsTime;
-        public long pdv_pcEnableDaylightSavingsTime
+        decimal fpdv_pcEnableDaylightSavingsTime;
+        public decimal pdv_pcEnableDaylightSavingsTime
         {
             get { return fpdv_pcEnableDaylightSavingsTime; }
-            set { SetPropertyValue<long>(nameof(pdv_pcEnableDaylightSavingsTime), ref fpdv_pcEnableDaylightSavingsTime, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcEnableDaylightSavingsTime), ref fpdv_pcEnableDaylightSavingsTime, value); }
         }
-        long fpdv_pcHypervisorPresent;
-        public long pdv_pcHypervisorPresent
+        decimal fpdv_pcHypervisorPresent;
+        public decimal pdv_pcHypervisorPresent
         {
             get { return fpdv_pcHypervisorPresent; }
-            set { SetPropertyValue<long>(nameof(pdv_pcHypervisorPresent), ref fpdv_pcHypervisorPresent, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcHypervisorPresent), ref fpdv_pcHypervisorPresent, value); }
         }
         string fpdv_pcManufacturer;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(50)]
         public string pdv_pcManufacturer
         {
             get { return fpdv_pcManufacturer; }
             set { SetPropertyValue<string>(nameof(pdv_pcManufacturer), ref fpdv_pcManufacturer, value); }
         }
-        long fpdv_pcNetworkServerModeEnabled;
-        public long pdv_pcNetworkServerModeEnabled
+        decimal fpdv_pcNetworkServerModeEnabled;
+        public decimal pdv_pcNetworkServerModeEnabled
         {
             get { return fpdv_pcNetworkServerModeEnabled; }
-            set { SetPropertyValue<long>(nameof(pdv_pcNetworkServerModeEnabled), ref fpdv_pcNetworkServerModeEnabled, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcNetworkServerModeEnabled), ref fpdv_pcNetworkServerModeEnabled, value); }
         }
-        long fpdv_pcNumberOfLogicalProcessors;
-        public long pdv_pcNumberOfLogicalProcessors
+        decimal fpdv_pcNumberOfLogicalProcessors;
+        public decimal pdv_pcNumberOfLogicalProcessors
         {
             get { return fpdv_pcNumberOfLogicalProcessors; }
-            set { SetPropertyValue<long>(nameof(pdv_pcNumberOfLogicalProcessors), ref fpdv_pcNumberOfLogicalProcessors, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcNumberOfLogicalProcessors), ref fpdv_pcNumberOfLogicalProcessors, value); }
         }
-        long fpdv_pcNumberOfProcessors;
-        public long pdv_pcNumberOfProcessors
+        decimal fpdv_pcNumberOfProcessors;
+        public decimal pdv_pcNumberOfProcessors
         {
             get { return fpdv_pcNumberOfProcessors; }
-            set { SetPropertyValue<long>(nameof(pdv_pcNumberOfProcessors), ref fpdv_pcNumberOfProcessors, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcNumberOfProcessors), ref fpdv_pcNumberOfProcessors, value); }
         }
-        long fpdv_pcPCSystemType;
-        public long pdv_pcPCSystemType
+        decimal fpdv_pcPCSystemType;
+        public decimal pdv_pcPCSystemType
         {
             get { return fpdv_pcPCSystemType; }
-            set { SetPropertyValue<long>(nameof(pdv_pcPCSystemType), ref fpdv_pcPCSystemType, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcPCSystemType), ref fpdv_pcPCSystemType, value); }
         }
-        long fpdv_pcTotalPhysicalMemory;
-        public long pdv_pcTotalPhysicalMemory
+        decimal fpdv_pcTotalPhysicalMemory;
+        public decimal pdv_pcTotalPhysicalMemory
         {
             get { return fpdv_pcTotalPhysicalMemory; }
-            set { SetPropertyValue<long>(nameof(pdv_pcTotalPhysicalMemory), ref fpdv_pcTotalPhysicalMemory, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcTotalPhysicalMemory), ref fpdv_pcTotalPhysicalMemory, value); }
         }
         string fpdv_pcUserName;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(255)]
         public string pdv_pcUserName
         {
             get { return fpdv_pcUserName; }
             set { SetPropertyValue<string>(nameof(pdv_pcUserName), ref fpdv_pcUserName, value); }
         }
-        long fpdv_pcWakeUpType;
-        public long pdv_pcWakeUpType
+        decimal fpdv_pcWakeUpType;
+        public decimal pdv_pcWakeUpType
         {
             get { return fpdv_pcWakeUpType; }
-            set { SetPropertyValue<long>(nameof(pdv_pcWakeUpType), ref fpdv_pcWakeUpType, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcWakeUpType), ref fpdv_pcWakeUpType, value); }
         }
         string fpdv_biosCaption;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(64)]
         public string pdv_biosCaption
         {
             get { return fpdv_biosCaption; }
             set { SetPropertyValue<string>(nameof(pdv_biosCaption), ref fpdv_biosCaption, value); }
         }
         string fpdv_biosSerialNumber;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(64)]
         public string pdv_biosSerialNumber
         {
             get { return fpdv_biosSerialNumber; }
             set { SetPropertyValue<string>(nameof(pdv_biosSerialNumber), ref fpdv_biosSerialNumber, value); }
         }
         string fpdv_biosSMBIOSBIOSVersion;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(64)]
         public string pdv_biosSMBIOSBIOSVersion
         {
             get { return fpdv_biosSMBIOSBIOSVersion; }
             set { SetPropertyValue<string>(nameof(pdv_biosSMBIOSBIOSVersion), ref fpdv_biosSMBIOSBIOSVersion, value); }
         }
         string fpdv_biosSoftwareElementID;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(256)]
         public string pdv_biosSoftwareElementID
         {
             get { return fpdv_biosSoftwareElementID; }
             set { SetPropertyValue<string>(nameof(pdv_biosSoftwareElementID), ref fpdv_biosSoftwareElementID, value); }
         }
         string fpdv_boardManufacturer;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(256)]
         public string pdv_boardManufacturer
         {
             get { return fpdv_boardManufacturer; }
             set { SetPropertyValue<string>(nameof(pdv_boardManufacturer), ref fpdv_boardManufacturer, value); }
         }
         string fpdv_boardProduct;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(64)]
         public string pdv_boardProduct
         {
             get { return fpdv_boardProduct; }
             set { SetPropertyValue<string>(nameof(pdv_boardProduct), ref fpdv_boardProduct, value); }
         }
         string fpdv_boardSerialNumber;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(64)]
         public string pdv_boardSerialNumber
         {
             get { return fpdv_boardSerialNumber; }
             set { SetPropertyValue<string>(nameof(pdv_boardSerialNumber), ref fpdv_boardSerialNumber, value); }
         }
         string fpdv_boardStatus;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(10)]
         public string pdv_boardStatus
         {
             get { return fpdv_boardStatus; }
             set { SetPropertyValue<string>(nameof(pdv_boardStatus), ref fpdv_boardStatus, value); }
         }
         string fpdv_boardVersion;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(64)]
         public string pdv_boardVersion
         {
             get { return fpdv_boardVersion; }
             set { SetPropertyValue<string>(nameof(pdv_boardVersion), ref fpdv_boardVersion, value); }
         }
         string fpdv_pcOsBuildNumber;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(10)]
         public string pdv_pcOsBuildNumber
         {
             get { return fpdv_pcOsBuildNumber; }
             set { SetPropertyValue<string>(nameof(pdv_pcOsBuildNumber), ref fpdv_pcOsBuildNumber, value); }
         }
         string fpdv_pcOsCaption;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(64)]
         public string pdv_pcOsCaption
         {
             get { return fpdv_pcOsCaption; }
             set { SetPropertyValue<string>(nameof(pdv_pcOsCaption), ref fpdv_pcOsCaption, value); }
         }
         string fpdv_pcOsCodeSet;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(6)]
         public string pdv_pcOsCodeSet
         {
             get { return fpdv_pcOsCodeSet; }
             set { SetPropertyValue<string>(nameof(pdv_pcOsCodeSet), ref fpdv_pcOsCodeSet, value); }
         }
         string fpdv_pcOsCountryCode;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(256)]
         public string pdv_pcOsCountryCode
         {
             get { return fpdv_pcOsCountryCode; }
             set { SetPropertyValue<string>(nameof(pdv_pcOsCountryCode), ref fpdv_pcOsCountryCode, value); }
         }
-        long fpdv_pcOsCurrentTimeZone;
-        public long pdv_pcOsCurrentTimeZone
+        decimal fpdv_pcOsCurrentTimeZone;
+        public decimal pdv_pcOsCurrentTimeZone
         {
             get { return fpdv_pcOsCurrentTimeZone; }
-            set { SetPropertyValue<long>(nameof(pdv_pcOsCurrentTimeZone), ref fpdv_pcOsCurrentTimeZone, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcOsCurrentTimeZone), ref fpdv_pcOsCurrentTimeZone, value); }
         }
-        long fpdv_pcOsFreePhysicalMemory;
-        public long pdv_pcOsFreePhysicalMemory
+        decimal fpdv_pcOsFreePhysicalMemory;
+        public decimal pdv_pcOsFreePhysicalMemory
         {
             get { return fpdv_pcOsFreePhysicalMemory; }
-            set { SetPropertyValue<long>(nameof(pdv_pcOsFreePhysicalMemory), ref fpdv_pcOsFreePhysicalMemory, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcOsFreePhysicalMemory), ref fpdv_pcOsFreePhysicalMemory, value); }
         }
-        long fpdv_pcOsFreeSpaceInPagingFiles;
-        public long pdv_pcOsFreeSpaceInPagingFiles
+        decimal fpdv_pcOsFreeSpaceInPagingFiles;
+        public decimal pdv_pcOsFreeSpaceInPagingFiles
         {
             get { return fpdv_pcOsFreeSpaceInPagingFiles; }
-            set { SetPropertyValue<long>(nameof(pdv_pcOsFreeSpaceInPagingFiles), ref fpdv_pcOsFreeSpaceInPagingFiles, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcOsFreeSpaceInPagingFiles), ref fpdv_pcOsFreeSpaceInPagingFiles, value); }
         }
-        long fpdv_pcOsFreeVirtualMemory;
-        public long pdv_pcOsFreeVirtualMemory
+        decimal fpdv_pcOsFreeVirtualMemory;
+        public decimal pdv_pcOsFreeVirtualMemory
         {
             get { return fpdv_pcOsFreeVirtualMemory; }
-            set { SetPropertyValue<long>(nameof(pdv_pcOsFreeVirtualMemory), ref fpdv_pcOsFreeVirtualMemory, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcOsFreeVirtualMemory), ref fpdv_pcOsFreeVirtualMemory, value); }
         }
         DateTime fpdv_pcOsInstallDate;
         public DateTime pdv_pcOsInstallDate
@@ -612,553 +612,549 @@ namespace DXApplicationPDV.bancoSQLite
             set { SetPropertyValue<DateTime>(nameof(pdv_pcOsLocalDateTime), ref fpdv_pcOsLocalDateTime, value); }
         }
         string fpdv_pcOsLocale;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(6)]
         public string pdv_pcOsLocale
         {
             get { return fpdv_pcOsLocale; }
             set { SetPropertyValue<string>(nameof(pdv_pcOsLocale), ref fpdv_pcOsLocale, value); }
         }
-        long fpdv_pcOsNumberOfProcesses;
-        public long pdv_pcOsNumberOfProcesses
+        decimal fpdv_pcOsNumberOfProcesses;
+        public decimal pdv_pcOsNumberOfProcesses
         {
             get { return fpdv_pcOsNumberOfProcesses; }
-            set { SetPropertyValue<long>(nameof(pdv_pcOsNumberOfProcesses), ref fpdv_pcOsNumberOfProcesses, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcOsNumberOfProcesses), ref fpdv_pcOsNumberOfProcesses, value); }
         }
-        long fpdv_pcOsNumberOfUsers;
-        public long pdv_pcOsNumberOfUsers
+        decimal fpdv_pcOsNumberOfUsers;
+        public decimal pdv_pcOsNumberOfUsers
         {
             get { return fpdv_pcOsNumberOfUsers; }
-            set { SetPropertyValue<long>(nameof(pdv_pcOsNumberOfUsers), ref fpdv_pcOsNumberOfUsers, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcOsNumberOfUsers), ref fpdv_pcOsNumberOfUsers, value); }
         }
-        long fpdv_pcOsOperatingSystemSKU;
-        public long pdv_pcOsOperatingSystemSKU
+        decimal fpdv_pcOsOperatingSystemSKU;
+        public decimal pdv_pcOsOperatingSystemSKU
         {
             get { return fpdv_pcOsOperatingSystemSKU; }
-            set { SetPropertyValue<long>(nameof(pdv_pcOsOperatingSystemSKU), ref fpdv_pcOsOperatingSystemSKU, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcOsOperatingSystemSKU), ref fpdv_pcOsOperatingSystemSKU, value); }
         }
         string fpdv_pcOSArchitecture;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(10)]
         public string pdv_pcOSArchitecture
         {
             get { return fpdv_pcOSArchitecture; }
             set { SetPropertyValue<string>(nameof(pdv_pcOSArchitecture), ref fpdv_pcOSArchitecture, value); }
         }
-        long fpdv_pcOSLanguage;
-        public long pdv_pcOSLanguage
+        decimal fpdv_pcOSLanguage;
+        public decimal pdv_pcOSLanguage
         {
             get { return fpdv_pcOSLanguage; }
-            set { SetPropertyValue<long>(nameof(pdv_pcOSLanguage), ref fpdv_pcOSLanguage, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcOSLanguage), ref fpdv_pcOSLanguage, value); }
         }
-        long fpdv_pcOSProductSuite;
-        public long pdv_pcOSProductSuite
+        decimal fpdv_pcOSProductSuite;
+        public decimal pdv_pcOSProductSuite
         {
             get { return fpdv_pcOSProductSuite; }
-            set { SetPropertyValue<long>(nameof(pdv_pcOSProductSuite), ref fpdv_pcOSProductSuite, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcOSProductSuite), ref fpdv_pcOSProductSuite, value); }
         }
-        long fpdv_pcOsPortableOperatingSystem;
-        public long pdv_pcOsPortableOperatingSystem
+        decimal fpdv_pcOsPortableOperatingSystem;
+        public decimal pdv_pcOsPortableOperatingSystem
         {
             get { return fpdv_pcOsPortableOperatingSystem; }
-            set { SetPropertyValue<long>(nameof(pdv_pcOsPortableOperatingSystem), ref fpdv_pcOsPortableOperatingSystem, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcOsPortableOperatingSystem), ref fpdv_pcOsPortableOperatingSystem, value); }
         }
-        long fpdv_pcOsPrimary;
-        public long pdv_pcOsPrimary
+        decimal fpdv_pcOsPrimary;
+        public decimal pdv_pcOsPrimary
         {
             get { return fpdv_pcOsPrimary; }
-            set { SetPropertyValue<long>(nameof(pdv_pcOsPrimary), ref fpdv_pcOsPrimary, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcOsPrimary), ref fpdv_pcOsPrimary, value); }
         }
-        long fpdv_pcOsProductType;
-        public long pdv_pcOsProductType
+        decimal fpdv_pcOsProductType;
+        public decimal pdv_pcOsProductType
         {
             get { return fpdv_pcOsProductType; }
-            set { SetPropertyValue<long>(nameof(pdv_pcOsProductType), ref fpdv_pcOsProductType, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcOsProductType), ref fpdv_pcOsProductType, value); }
         }
         string fpdv_pcOsRegisteredUser;
-        [Size(SizeAttribute.Unlimited)]
         public string pdv_pcOsRegisteredUser
         {
             get { return fpdv_pcOsRegisteredUser; }
             set { SetPropertyValue<string>(nameof(pdv_pcOsRegisteredUser), ref fpdv_pcOsRegisteredUser, value); }
         }
         string fpdv_pcOsSerialNumber;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(50)]
         public string pdv_pcOsSerialNumber
         {
             get { return fpdv_pcOsSerialNumber; }
             set { SetPropertyValue<string>(nameof(pdv_pcOsSerialNumber), ref fpdv_pcOsSerialNumber, value); }
         }
-        long fpdv_pcOsServicePackMajorVersion;
-        public long pdv_pcOsServicePackMajorVersion
+        decimal fpdv_pcOsServicePackMajorVersion;
+        public decimal pdv_pcOsServicePackMajorVersion
         {
             get { return fpdv_pcOsServicePackMajorVersion; }
-            set { SetPropertyValue<long>(nameof(pdv_pcOsServicePackMajorVersion), ref fpdv_pcOsServicePackMajorVersion, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcOsServicePackMajorVersion), ref fpdv_pcOsServicePackMajorVersion, value); }
         }
-        long fpdv_pcOsServicePackMinorVersion;
-        public long pdv_pcOsServicePackMinorVersion
+        decimal fpdv_pcOsServicePackMinorVersion;
+        public decimal pdv_pcOsServicePackMinorVersion
         {
             get { return fpdv_pcOsServicePackMinorVersion; }
-            set { SetPropertyValue<long>(nameof(pdv_pcOsServicePackMinorVersion), ref fpdv_pcOsServicePackMinorVersion, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcOsServicePackMinorVersion), ref fpdv_pcOsServicePackMinorVersion, value); }
         }
-        long fpdv_pcOsSizeStoredInPagingFiles;
-        public long pdv_pcOsSizeStoredInPagingFiles
+        decimal fpdv_pcOsSizeStoredInPagingFiles;
+        public decimal pdv_pcOsSizeStoredInPagingFiles
         {
             get { return fpdv_pcOsSizeStoredInPagingFiles; }
-            set { SetPropertyValue<long>(nameof(pdv_pcOsSizeStoredInPagingFiles), ref fpdv_pcOsSizeStoredInPagingFiles, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcOsSizeStoredInPagingFiles), ref fpdv_pcOsSizeStoredInPagingFiles, value); }
         }
-        long fpdv_pcOsSuiteMask;
-        public long pdv_pcOsSuiteMask
+        decimal fpdv_pcOsSuiteMask;
+        public decimal pdv_pcOsSuiteMask
         {
             get { return fpdv_pcOsSuiteMask; }
-            set { SetPropertyValue<long>(nameof(pdv_pcOsSuiteMask), ref fpdv_pcOsSuiteMask, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcOsSuiteMask), ref fpdv_pcOsSuiteMask, value); }
         }
         string fpdv_pcOsSystemDrive;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(2)]
         public string pdv_pcOsSystemDrive
         {
             get { return fpdv_pcOsSystemDrive; }
             set { SetPropertyValue<string>(nameof(pdv_pcOsSystemDrive), ref fpdv_pcOsSystemDrive, value); }
         }
-        long fpdv_pcOsTotalSwapSpaceSize;
-        public long pdv_pcOsTotalSwapSpaceSize
+        decimal fpdv_pcOsTotalSwapSpaceSize;
+        public decimal pdv_pcOsTotalSwapSpaceSize
         {
             get { return fpdv_pcOsTotalSwapSpaceSize; }
-            set { SetPropertyValue<long>(nameof(pdv_pcOsTotalSwapSpaceSize), ref fpdv_pcOsTotalSwapSpaceSize, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcOsTotalSwapSpaceSize), ref fpdv_pcOsTotalSwapSpaceSize, value); }
         }
-        long fpdv_pcOsTotalVirtualMemorySize;
-        public long pdv_pcOsTotalVirtualMemorySize
+        decimal fpdv_pcOsTotalVirtualMemorySize;
+        public decimal pdv_pcOsTotalVirtualMemorySize
         {
             get { return fpdv_pcOsTotalVirtualMemorySize; }
-            set { SetPropertyValue<long>(nameof(pdv_pcOsTotalVirtualMemorySize), ref fpdv_pcOsTotalVirtualMemorySize, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcOsTotalVirtualMemorySize), ref fpdv_pcOsTotalVirtualMemorySize, value); }
         }
-        long fpdv_pcOsTotalVisibleMemorySize;
-        public long pdv_pcOsTotalVisibleMemorySize
+        decimal fpdv_pcOsTotalVisibleMemorySize;
+        public decimal pdv_pcOsTotalVisibleMemorySize
         {
             get { return fpdv_pcOsTotalVisibleMemorySize; }
-            set { SetPropertyValue<long>(nameof(pdv_pcOsTotalVisibleMemorySize), ref fpdv_pcOsTotalVisibleMemorySize, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcOsTotalVisibleMemorySize), ref fpdv_pcOsTotalVisibleMemorySize, value); }
         }
-        string fpdv_pOsVersion;
-        [Size(SizeAttribute.Unlimited)]
-        public string pdv_pOsVersion
+        string fpdv_pcOsVersion;
+        [Size(20)]
+        public string pdv_pcOsVersion
         {
-            get { return fpdv_pOsVersion; }
-            set { SetPropertyValue<string>(nameof(pdv_pOsVersion), ref fpdv_pOsVersion, value); }
+            get { return fpdv_pcOsVersion; }
+            set { SetPropertyValue<string>(nameof(pdv_pcOsVersion), ref fpdv_pcOsVersion, value); }
         }
         string fpdv_procHandle;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(256)]
         public string pdv_procHandle
         {
             get { return fpdv_procHandle; }
             set { SetPropertyValue<string>(nameof(pdv_procHandle), ref fpdv_procHandle, value); }
         }
-        long fpdv_procHandleCount;
-        public long pdv_procHandleCount
+        decimal fpdv_procHandleCount;
+        public decimal pdv_procHandleCount
         {
             get { return fpdv_procHandleCount; }
-            set { SetPropertyValue<long>(nameof(pdv_procHandleCount), ref fpdv_procHandleCount, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_procHandleCount), ref fpdv_procHandleCount, value); }
         }
-        long fpdv_procKernelModeTime;
-        public long pdv_procKernelModeTime
+        decimal fpdv_procKernelModeTime;
+        public decimal pdv_procKernelModeTime
         {
             get { return fpdv_procKernelModeTime; }
-            set { SetPropertyValue<long>(nameof(pdv_procKernelModeTime), ref fpdv_procKernelModeTime, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_procKernelModeTime), ref fpdv_procKernelModeTime, value); }
         }
-        long fpdv_procOtherOperationCount;
-        public long pdv_procOtherOperationCount
+        decimal fpdv_procOtherOperationCount;
+        public decimal pdv_procOtherOperationCount
         {
             get { return fpdv_procOtherOperationCount; }
-            set { SetPropertyValue<long>(nameof(pdv_procOtherOperationCount), ref fpdv_procOtherOperationCount, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_procOtherOperationCount), ref fpdv_procOtherOperationCount, value); }
         }
-        long fpdv_procOtherTransferCount;
-        public long pdv_procOtherTransferCount
+        decimal fpdv_procOtherTransferCount;
+        public decimal pdv_procOtherTransferCount
         {
             get { return fpdv_procOtherTransferCount; }
-            set { SetPropertyValue<long>(nameof(pdv_procOtherTransferCount), ref fpdv_procOtherTransferCount, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_procOtherTransferCount), ref fpdv_procOtherTransferCount, value); }
         }
-        long fpdv_procPageFaults;
-        public long pdv_procPageFaults
+        decimal fpdv_procPageFaults;
+        public decimal pdv_procPageFaults
         {
             get { return fpdv_procPageFaults; }
-            set { SetPropertyValue<long>(nameof(pdv_procPageFaults), ref fpdv_procPageFaults, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_procPageFaults), ref fpdv_procPageFaults, value); }
         }
-        long fpdv_procPageFileUsage;
-        public long pdv_procPageFileUsage
+        decimal fpdv_procPageFileUsage;
+        public decimal pdv_procPageFileUsage
         {
             get { return fpdv_procPageFileUsage; }
-            set { SetPropertyValue<long>(nameof(pdv_procPageFileUsage), ref fpdv_procPageFileUsage, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_procPageFileUsage), ref fpdv_procPageFileUsage, value); }
         }
-        long fpdv_procPeakPageFileUsage;
-        public long pdv_procPeakPageFileUsage
+        decimal fpdv_procPeakPageFileUsage;
+        public decimal pdv_procPeakPageFileUsage
         {
             get { return fpdv_procPeakPageFileUsage; }
-            set { SetPropertyValue<long>(nameof(pdv_procPeakPageFileUsage), ref fpdv_procPeakPageFileUsage, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_procPeakPageFileUsage), ref fpdv_procPeakPageFileUsage, value); }
         }
-        long fpdv_procPeakVirtualSize;
-        public long pdv_procPeakVirtualSize
+        decimal fpdv_procPeakVirtualSize;
+        public decimal pdv_procPeakVirtualSize
         {
             get { return fpdv_procPeakVirtualSize; }
-            set { SetPropertyValue<long>(nameof(pdv_procPeakVirtualSize), ref fpdv_procPeakVirtualSize, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_procPeakVirtualSize), ref fpdv_procPeakVirtualSize, value); }
         }
-        long fpdv_procPeakWorkingSetSize;
-        public long pdv_procPeakWorkingSetSize
+        decimal fpdv_procPeakWorkingSetSize;
+        public decimal pdv_procPeakWorkingSetSize
         {
             get { return fpdv_procPeakWorkingSetSize; }
-            set { SetPropertyValue<long>(nameof(pdv_procPeakWorkingSetSize), ref fpdv_procPeakWorkingSetSize, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_procPeakWorkingSetSize), ref fpdv_procPeakWorkingSetSize, value); }
         }
-        long fpdv_procPriority;
-        public long pdv_procPriority
+        decimal fpdv_procPriority;
+        public decimal pdv_procPriority
         {
             get { return fpdv_procPriority; }
-            set { SetPropertyValue<long>(nameof(pdv_procPriority), ref fpdv_procPriority, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_procPriority), ref fpdv_procPriority, value); }
         }
-        long fpdv_procPrivatePageCount;
-        public long pdv_procPrivatePageCount
+        decimal fpdv_procPrivatePageCount;
+        public decimal pdv_procPrivatePageCount
         {
             get { return fpdv_procPrivatePageCount; }
-            set { SetPropertyValue<long>(nameof(pdv_procPrivatePageCount), ref fpdv_procPrivatePageCount, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_procPrivatePageCount), ref fpdv_procPrivatePageCount, value); }
         }
-        long fpdv_procProcessId;
-        public long pdv_procProcessId
+        decimal fpdv_procProcessId;
+        public decimal pdv_procProcessId
         {
             get { return fpdv_procProcessId; }
-            set { SetPropertyValue<long>(nameof(pdv_procProcessId), ref fpdv_procProcessId, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_procProcessId), ref fpdv_procProcessId, value); }
         }
-        long fpdv_procReadOperationCount;
-        public long pdv_procReadOperationCount
+        decimal fpdv_procReadOperationCount;
+        public decimal pdv_procReadOperationCount
         {
             get { return fpdv_procReadOperationCount; }
-            set { SetPropertyValue<long>(nameof(pdv_procReadOperationCount), ref fpdv_procReadOperationCount, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_procReadOperationCount), ref fpdv_procReadOperationCount, value); }
         }
-        long fpdv_procReadTransferCount;
-        public long pdv_procReadTransferCount
+        decimal fpdv_procReadTransferCount;
+        public decimal pdv_procReadTransferCount
         {
             get { return fpdv_procReadTransferCount; }
-            set { SetPropertyValue<long>(nameof(pdv_procReadTransferCount), ref fpdv_procReadTransferCount, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_procReadTransferCount), ref fpdv_procReadTransferCount, value); }
         }
-        long fpdv_procThreadCount;
-        public long pdv_procThreadCount
+        decimal fpdv_procThreadCount;
+        public decimal pdv_procThreadCount
         {
             get { return fpdv_procThreadCount; }
-            set { SetPropertyValue<long>(nameof(pdv_procThreadCount), ref fpdv_procThreadCount, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_procThreadCount), ref fpdv_procThreadCount, value); }
         }
-        long fpdv_procUserModeTime;
-        public long pdv_procUserModeTime
+        decimal fpdv_procUserModeTime;
+        public decimal pdv_procUserModeTime
         {
             get { return fpdv_procUserModeTime; }
-            set { SetPropertyValue<long>(nameof(pdv_procUserModeTime), ref fpdv_procUserModeTime, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_procUserModeTime), ref fpdv_procUserModeTime, value); }
         }
-        long fpdv_procVirtualSize;
-        public long pdv_procVirtualSize
+        decimal fpdv_procVirtualSize;
+        public decimal pdv_procVirtualSize
         {
             get { return fpdv_procVirtualSize; }
-            set { SetPropertyValue<long>(nameof(pdv_procVirtualSize), ref fpdv_procVirtualSize, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_procVirtualSize), ref fpdv_procVirtualSize, value); }
         }
-        long fpdv_procWorkingSetSize;
-        public long pdv_procWorkingSetSize
+        decimal fpdv_procWorkingSetSize;
+        public decimal pdv_procWorkingSetSize
         {
             get { return fpdv_procWorkingSetSize; }
-            set { SetPropertyValue<long>(nameof(pdv_procWorkingSetSize), ref fpdv_procWorkingSetSize, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_procWorkingSetSize), ref fpdv_procWorkingSetSize, value); }
         }
-        long fpdv_procWriteOperationCount;
-        public long pdv_procWriteOperationCount
+        decimal fpdv_procWriteOperationCount;
+        public decimal pdv_procWriteOperationCount
         {
             get { return fpdv_procWriteOperationCount; }
-            set { SetPropertyValue<long>(nameof(pdv_procWriteOperationCount), ref fpdv_procWriteOperationCount, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_procWriteOperationCount), ref fpdv_procWriteOperationCount, value); }
         }
-        long fpdv_procWriteTransferCount;
-        public long pdv_procWriteTransferCount
+        decimal fpdv_procWriteTransferCount;
+        public decimal pdv_procWriteTransferCount
         {
             get { return fpdv_procWriteTransferCount; }
-            set { SetPropertyValue<long>(nameof(pdv_procWriteTransferCount), ref fpdv_procWriteTransferCount, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_procWriteTransferCount), ref fpdv_procWriteTransferCount, value); }
         }
-        long fpdv_pcPrcAddressWidth;
-        public long pdv_pcPrcAddressWidth
+        decimal fpdv_pcPrcAddressWidth;
+        public decimal pdv_pcPrcAddressWidth
         {
             get { return fpdv_pcPrcAddressWidth; }
-            set { SetPropertyValue<long>(nameof(pdv_pcPrcAddressWidth), ref fpdv_pcPrcAddressWidth, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcPrcAddressWidth), ref fpdv_pcPrcAddressWidth, value); }
         }
-        long fpdv_pcPrcArchitecture;
-        public long pdv_pcPrcArchitecture
+        decimal fpdv_pcPrcArchitecture;
+        public decimal pdv_pcPrcArchitecture
         {
             get { return fpdv_pcPrcArchitecture; }
-            set { SetPropertyValue<long>(nameof(pdv_pcPrcArchitecture), ref fpdv_pcPrcArchitecture, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcPrcArchitecture), ref fpdv_pcPrcArchitecture, value); }
         }
-        long fpdv_pcPrcAvailability;
-        public long pdv_pcPrcAvailability
+        decimal fpdv_pcPrcAvailability;
+        public decimal pdv_pcPrcAvailability
         {
             get { return fpdv_pcPrcAvailability; }
-            set { SetPropertyValue<long>(nameof(pdv_pcPrcAvailability), ref fpdv_pcPrcAvailability, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcPrcAvailability), ref fpdv_pcPrcAvailability, value); }
         }
         string fpdv_pcPrcCaption;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(64)]
         public string pdv_pcPrcCaption
         {
             get { return fpdv_pcPrcCaption; }
             set { SetPropertyValue<string>(nameof(pdv_pcPrcCaption), ref fpdv_pcPrcCaption, value); }
         }
-        long fpdv_prcCharacteristics;
-        public long pdv_prcCharacteristics
+        decimal fpdv_pcPrcCharacteristics;
+        public decimal pdv_pcPrcCharacteristics
         {
-            get { return fpdv_prcCharacteristics; }
-            set { SetPropertyValue<long>(nameof(pdv_prcCharacteristics), ref fpdv_prcCharacteristics, value); }
+            get { return fpdv_pcPrcCharacteristics; }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcPrcCharacteristics), ref fpdv_pcPrcCharacteristics, value); }
         }
-        long fpdv_pcPrcConfigManagerErrorCode;
-        public long pdv_pcPrcConfigManagerErrorCode
+        decimal fpdv_pcPrcConfigManagerErrorCode;
+        public decimal pdv_pcPrcConfigManagerErrorCode
         {
             get { return fpdv_pcPrcConfigManagerErrorCode; }
-            set { SetPropertyValue<long>(nameof(pdv_pcPrcConfigManagerErrorCode), ref fpdv_pcPrcConfigManagerErrorCode, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcPrcConfigManagerErrorCode), ref fpdv_pcPrcConfigManagerErrorCode, value); }
         }
-        long fpdv_pcPrcConfigManagerUserConfig;
-        public long pdv_pcPrcConfigManagerUserConfig
+        decimal fpdv_pcPrcConfigManagerUserConfig;
+        public decimal pdv_pcPrcConfigManagerUserConfig
         {
             get { return fpdv_pcPrcConfigManagerUserConfig; }
-            set { SetPropertyValue<long>(nameof(pdv_pcPrcConfigManagerUserConfig), ref fpdv_pcPrcConfigManagerUserConfig, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcPrcConfigManagerUserConfig), ref fpdv_pcPrcConfigManagerUserConfig, value); }
         }
-        long fpdv_pcPrcCpuStatus;
-        public long pdv_pcPrcCpuStatus
+        decimal fpdv_pcPrcCpuStatus;
+        public decimal pdv_pcPrcCpuStatus
         {
             get { return fpdv_pcPrcCpuStatus; }
-            set { SetPropertyValue<long>(nameof(pdv_pcPrcCpuStatus), ref fpdv_pcPrcCpuStatus, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcPrcCpuStatus), ref fpdv_pcPrcCpuStatus, value); }
         }
-        long fpdv_pcPrcCurrentClockSpeed;
-        public long pdv_pcPrcCurrentClockSpeed
+        decimal fpdv_pcPrcCurrentClockSpeed;
+        public decimal pdv_pcPrcCurrentClockSpeed
         {
             get { return fpdv_pcPrcCurrentClockSpeed; }
-            set { SetPropertyValue<long>(nameof(pdv_pcPrcCurrentClockSpeed), ref fpdv_pcPrcCurrentClockSpeed, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcPrcCurrentClockSpeed), ref fpdv_pcPrcCurrentClockSpeed, value); }
         }
-        long fpdv_pcPrcCurrentVoltage;
-        public long pdv_pcPrcCurrentVoltage
+        decimal fpdv_pcPrcCurrentVoltage;
+        public decimal pdv_pcPrcCurrentVoltage
         {
             get { return fpdv_pcPrcCurrentVoltage; }
-            set { SetPropertyValue<long>(nameof(pdv_pcPrcCurrentVoltage), ref fpdv_pcPrcCurrentVoltage, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcPrcCurrentVoltage), ref fpdv_pcPrcCurrentVoltage, value); }
         }
-        long fpdv_pcPrcDataWidth;
-        public long pdv_pcPrcDataWidth
+        decimal fpdv_pcPrcDataWidth;
+        public decimal pdv_pcPrcDataWidth
         {
             get { return fpdv_pcPrcDataWidth; }
-            set { SetPropertyValue<long>(nameof(pdv_pcPrcDataWidth), ref fpdv_pcPrcDataWidth, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcPrcDataWidth), ref fpdv_pcPrcDataWidth, value); }
         }
-        long fpdv_pcPrcExtClock;
-        public long pdv_pcPrcExtClock
+        decimal fpdv_pcPrcExtClock;
+        public decimal pdv_pcPrcExtClock
         {
             get { return fpdv_pcPrcExtClock; }
-            set { SetPropertyValue<long>(nameof(pdv_pcPrcExtClock), ref fpdv_pcPrcExtClock, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcPrcExtClock), ref fpdv_pcPrcExtClock, value); }
         }
-        long fpdv_pcPrcFamily;
-        public long pdv_pcPrcFamily
+        decimal fpdv_pcPrcFamily;
+        public decimal pdv_pcPrcFamily
         {
             get { return fpdv_pcPrcFamily; }
-            set { SetPropertyValue<long>(nameof(pdv_pcPrcFamily), ref fpdv_pcPrcFamily, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcPrcFamily), ref fpdv_pcPrcFamily, value); }
         }
-        long fpdv_pcPrcL2CacheSize;
-        public long pdv_pcPrcL2CacheSize
+        decimal fpdv_pcPrcL2CacheSize;
+        public decimal pdv_pcPrcL2CacheSize
         {
             get { return fpdv_pcPrcL2CacheSize; }
-            set { SetPropertyValue<long>(nameof(pdv_pcPrcL2CacheSize), ref fpdv_pcPrcL2CacheSize, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcPrcL2CacheSize), ref fpdv_pcPrcL2CacheSize, value); }
         }
-        long fpdv_pcPrcL2CacheSpeed;
-        public long pdv_pcPrcL2CacheSpeed
+        decimal fpdv_pcPrcL2CacheSpeed;
+        public decimal pdv_pcPrcL2CacheSpeed
         {
             get { return fpdv_pcPrcL2CacheSpeed; }
-            set { SetPropertyValue<long>(nameof(pdv_pcPrcL2CacheSpeed), ref fpdv_pcPrcL2CacheSpeed, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcPrcL2CacheSpeed), ref fpdv_pcPrcL2CacheSpeed, value); }
         }
-        long fpdv_pcPrcL3CacheSize;
-        public long pdv_pcPrcL3CacheSize
+        decimal fpdv_pcPrcL3CacheSize;
+        public decimal pdv_pcPrcL3CacheSize
         {
             get { return fpdv_pcPrcL3CacheSize; }
-            set { SetPropertyValue<long>(nameof(pdv_pcPrcL3CacheSize), ref fpdv_pcPrcL3CacheSize, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcPrcL3CacheSize), ref fpdv_pcPrcL3CacheSize, value); }
         }
-        long fpdv_pcPrcL3CacheSpeed;
-        public long pdv_pcPrcL3CacheSpeed
+        decimal fpdv_pcPrcL3CacheSpeed;
+        public decimal pdv_pcPrcL3CacheSpeed
         {
             get { return fpdv_pcPrcL3CacheSpeed; }
-            set { SetPropertyValue<long>(nameof(pdv_pcPrcL3CacheSpeed), ref fpdv_pcPrcL3CacheSpeed, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcPrcL3CacheSpeed), ref fpdv_pcPrcL3CacheSpeed, value); }
         }
-        long fpdv_pcPrcLevel;
-        public long pdv_pcPrcLevel
+        decimal fpdv_pcPrcLevel;
+        public decimal pdv_pcPrcLevel
         {
             get { return fpdv_pcPrcLevel; }
-            set { SetPropertyValue<long>(nameof(pdv_pcPrcLevel), ref fpdv_pcPrcLevel, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcPrcLevel), ref fpdv_pcPrcLevel, value); }
         }
-        long fpdv_pcPrcLoadPercentage;
-        public long pdv_pcPrcLoadPercentage
+        decimal fpdv_pcPrcLoadPercentage;
+        public decimal pdv_pcPrcLoadPercentage
         {
             get { return fpdv_pcPrcLoadPercentage; }
-            set { SetPropertyValue<long>(nameof(pdv_pcPrcLoadPercentage), ref fpdv_pcPrcLoadPercentage, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcPrcLoadPercentage), ref fpdv_pcPrcLoadPercentage, value); }
         }
-        long fpdv_pcPrcMaxClockSpeed;
-        public long pdv_pcPrcMaxClockSpeed
+        decimal fpdv_pcPrcMaxClockSpeed;
+        public decimal pdv_pcPrcMaxClockSpeed
         {
             get { return fpdv_pcPrcMaxClockSpeed; }
-            set { SetPropertyValue<long>(nameof(pdv_pcPrcMaxClockSpeed), ref fpdv_pcPrcMaxClockSpeed, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcPrcMaxClockSpeed), ref fpdv_pcPrcMaxClockSpeed, value); }
         }
         string fpdv_pcPrcName;
-        [Size(SizeAttribute.Unlimited)]
         public string pdv_pcPrcName
         {
             get { return fpdv_pcPrcName; }
             set { SetPropertyValue<string>(nameof(pdv_pcPrcName), ref fpdv_pcPrcName, value); }
         }
-        long fpdv_pcPrcNumberOfCores;
-        public long pdv_pcPrcNumberOfCores
+        decimal fpdv_pcPrcNumberOfCores;
+        public decimal pdv_pcPrcNumberOfCores
         {
             get { return fpdv_pcPrcNumberOfCores; }
-            set { SetPropertyValue<long>(nameof(pdv_pcPrcNumberOfCores), ref fpdv_pcPrcNumberOfCores, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcPrcNumberOfCores), ref fpdv_pcPrcNumberOfCores, value); }
         }
-        long fpdv_pcPrcNumberOfEnabledCore;
-        public long pdv_pcPrcNumberOfEnabledCore
+        decimal fpdv_pcPrcNumberOfEnabledCore;
+        public decimal pdv_pcPrcNumberOfEnabledCore
         {
             get { return fpdv_pcPrcNumberOfEnabledCore; }
-            set { SetPropertyValue<long>(nameof(pdv_pcPrcNumberOfEnabledCore), ref fpdv_pcPrcNumberOfEnabledCore, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcPrcNumberOfEnabledCore), ref fpdv_pcPrcNumberOfEnabledCore, value); }
         }
-        long fpdv_pcPrcNumberOfLogicalProcessors;
-        public long pdv_pcPrcNumberOfLogicalProcessors
+        decimal fpdv_pcPrcNumberOfLogicalProcessors;
+        public decimal pdv_pcPrcNumberOfLogicalProcessors
         {
             get { return fpdv_pcPrcNumberOfLogicalProcessors; }
-            set { SetPropertyValue<long>(nameof(pdv_pcPrcNumberOfLogicalProcessors), ref fpdv_pcPrcNumberOfLogicalProcessors, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcPrcNumberOfLogicalProcessors), ref fpdv_pcPrcNumberOfLogicalProcessors, value); }
         }
-        long fpdv_pcPrcPowerManagementSupported;
-        public long pdv_pcPrcPowerManagementSupported
+        decimal fpdv_pcPrcPowerManagementSupported;
+        public decimal pdv_pcPrcPowerManagementSupported
         {
             get { return fpdv_pcPrcPowerManagementSupported; }
-            set { SetPropertyValue<long>(nameof(pdv_pcPrcPowerManagementSupported), ref fpdv_pcPrcPowerManagementSupported, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcPrcPowerManagementSupported), ref fpdv_pcPrcPowerManagementSupported, value); }
         }
         string fpdv_pcPrcProcessorId;
-        [Size(SizeAttribute.Unlimited)]
         public string pdv_pcPrcProcessorId
         {
             get { return fpdv_pcPrcProcessorId; }
             set { SetPropertyValue<string>(nameof(pdv_pcPrcProcessorId), ref fpdv_pcPrcProcessorId, value); }
         }
-        long fpdv_pcPrcProcessorType;
-        public long pdv_pcPrcProcessorType
+        decimal fpdv_pcPrcProcessorType;
+        public decimal pdv_pcPrcProcessorType
         {
             get { return fpdv_pcPrcProcessorType; }
-            set { SetPropertyValue<long>(nameof(pdv_pcPrcProcessorType), ref fpdv_pcPrcProcessorType, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcPrcProcessorType), ref fpdv_pcPrcProcessorType, value); }
         }
-        long fpdv_pcPrcRevision;
-        public long pdv_pcPrcRevision
+        decimal fpdv_pcPrcRevision;
+        public decimal pdv_pcPrcRevision
         {
             get { return fpdv_pcPrcRevision; }
-            set { SetPropertyValue<long>(nameof(pdv_pcPrcRevision), ref fpdv_pcPrcRevision, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcPrcRevision), ref fpdv_pcPrcRevision, value); }
         }
-        long fpdv_pcPrcSecondLevelAddressTranslationExtensions;
-        public long pdv_pcPrcSecondLevelAddressTranslationExtensions
+        decimal fpdv_pcPrcSecondLevelAddressTranslationExtensions;
+        public decimal pdv_pcPrcSecondLevelAddressTranslationExtensions
         {
             get { return fpdv_pcPrcSecondLevelAddressTranslationExtensions; }
-            set { SetPropertyValue<long>(nameof(pdv_pcPrcSecondLevelAddressTranslationExtensions), ref fpdv_pcPrcSecondLevelAddressTranslationExtensions, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcPrcSecondLevelAddressTranslationExtensions), ref fpdv_pcPrcSecondLevelAddressTranslationExtensions, value); }
         }
         string fpdv_pcPrcStatus;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(10)]
         public string pdv_pcPrcStatus
         {
             get { return fpdv_pcPrcStatus; }
             set { SetPropertyValue<string>(nameof(pdv_pcPrcStatus), ref fpdv_pcPrcStatus, value); }
         }
-        long fpdv_pcPrcStatusInfo;
-        public long pdv_pcPrcStatusInfo
+        decimal fpdv_pcPrcStatusInfo;
+        public decimal pdv_pcPrcStatusInfo
         {
             get { return fpdv_pcPrcStatusInfo; }
-            set { SetPropertyValue<long>(nameof(pdv_pcPrcStatusInfo), ref fpdv_pcPrcStatusInfo, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcPrcStatusInfo), ref fpdv_pcPrcStatusInfo, value); }
         }
         string fpdv_pcPrcSystemName;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(255)]
         public string pdv_pcPrcSystemName
         {
             get { return fpdv_pcPrcSystemName; }
             set { SetPropertyValue<string>(nameof(pdv_pcPrcSystemName), ref fpdv_pcPrcSystemName, value); }
         }
-        long fpdv_pcPrcThreadCount;
-        public long pdv_pcPrcThreadCount
+        decimal fpdv_pcPrcThreadCount;
+        public decimal pdv_pcPrcThreadCount
         {
             get { return fpdv_pcPrcThreadCount; }
-            set { SetPropertyValue<long>(nameof(pdv_pcPrcThreadCount), ref fpdv_pcPrcThreadCount, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pcPrcThreadCount), ref fpdv_pcPrcThreadCount, value); }
         }
-        long fpdv_gpuAdapterRAM;
-        public long pdv_gpuAdapterRAM
+        decimal fpdv_gpuAdapterRAM;
+        public decimal pdv_gpuAdapterRAM
         {
             get { return fpdv_gpuAdapterRAM; }
-            set { SetPropertyValue<long>(nameof(pdv_gpuAdapterRAM), ref fpdv_gpuAdapterRAM, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_gpuAdapterRAM), ref fpdv_gpuAdapterRAM, value); }
         }
-        long fpdv_gpuAvailability;
-        public long pdv_gpuAvailability
+        decimal fpdv_gpuAvailability;
+        public decimal pdv_gpuAvailability
         {
             get { return fpdv_gpuAvailability; }
-            set { SetPropertyValue<long>(nameof(pdv_gpuAvailability), ref fpdv_gpuAvailability, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_gpuAvailability), ref fpdv_gpuAvailability, value); }
         }
-        long fpdv_gpuConfigManagerErrorCode;
-        public long pdv_gpuConfigManagerErrorCode
+        decimal fpdv_gpuConfigManagerErrorCode;
+        public decimal pdv_gpuConfigManagerErrorCode
         {
             get { return fpdv_gpuConfigManagerErrorCode; }
-            set { SetPropertyValue<long>(nameof(pdv_gpuConfigManagerErrorCode), ref fpdv_gpuConfigManagerErrorCode, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_gpuConfigManagerErrorCode), ref fpdv_gpuConfigManagerErrorCode, value); }
         }
-        long fpdv_gpuCurrentBitsPerPixel;
-        public long pdv_gpuCurrentBitsPerPixel
+        decimal fpdv_gpuCurrentBitsPerPixel;
+        public decimal pdv_gpuCurrentBitsPerPixel
         {
             get { return fpdv_gpuCurrentBitsPerPixel; }
-            set { SetPropertyValue<long>(nameof(pdv_gpuCurrentBitsPerPixel), ref fpdv_gpuCurrentBitsPerPixel, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_gpuCurrentBitsPerPixel), ref fpdv_gpuCurrentBitsPerPixel, value); }
         }
-        long fpdv_gpuCurrentHorizontalResolution;
-        public long pdv_gpuCurrentHorizontalResolution
+        decimal fpdv_gpuCurrentHorizontalResolution;
+        public decimal pdv_gpuCurrentHorizontalResolution
         {
             get { return fpdv_gpuCurrentHorizontalResolution; }
-            set { SetPropertyValue<long>(nameof(pdv_gpuCurrentHorizontalResolution), ref fpdv_gpuCurrentHorizontalResolution, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_gpuCurrentHorizontalResolution), ref fpdv_gpuCurrentHorizontalResolution, value); }
         }
-        long fpdv_gpuCurrentNumberOfColors;
-        public long pdv_gpuCurrentNumberOfColors
+        decimal fpdv_gpuCurrentNumberOfColors;
+        public decimal pdv_gpuCurrentNumberOfColors
         {
             get { return fpdv_gpuCurrentNumberOfColors; }
-            set { SetPropertyValue<long>(nameof(pdv_gpuCurrentNumberOfColors), ref fpdv_gpuCurrentNumberOfColors, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_gpuCurrentNumberOfColors), ref fpdv_gpuCurrentNumberOfColors, value); }
         }
-        long fpdv_gpuCurrentRefreshRate;
-        public long pdv_gpuCurrentRefreshRate
+        decimal fpdv_gpuCurrentRefreshRate;
+        public decimal pdv_gpuCurrentRefreshRate
         {
             get { return fpdv_gpuCurrentRefreshRate; }
-            set { SetPropertyValue<long>(nameof(pdv_gpuCurrentRefreshRate), ref fpdv_gpuCurrentRefreshRate, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_gpuCurrentRefreshRate), ref fpdv_gpuCurrentRefreshRate, value); }
         }
-        long fpdv_gpuCurrentScanMode;
-        public long pdv_gpuCurrentScanMode
+        decimal fpdv_gpuCurrentScanMode;
+        public decimal pdv_gpuCurrentScanMode
         {
             get { return fpdv_gpuCurrentScanMode; }
-            set { SetPropertyValue<long>(nameof(pdv_gpuCurrentScanMode), ref fpdv_gpuCurrentScanMode, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_gpuCurrentScanMode), ref fpdv_gpuCurrentScanMode, value); }
         }
-        long fpdv_gpuCurrentVerticalResolution;
-        public long pdv_gpuCurrentVerticalResolution
+        decimal fpdv_gpuCurrentVerticalResolution;
+        public decimal pdv_gpuCurrentVerticalResolution
         {
             get { return fpdv_gpuCurrentVerticalResolution; }
-            set { SetPropertyValue<long>(nameof(pdv_gpuCurrentVerticalResolution), ref fpdv_gpuCurrentVerticalResolution, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_gpuCurrentVerticalResolution), ref fpdv_gpuCurrentVerticalResolution, value); }
         }
-        long fpdv_gpuDitherType;
-        public long pdv_gpuDitherType
+        decimal fpdv_gpuDitherType;
+        public decimal pdv_gpuDitherType
         {
             get { return fpdv_gpuDitherType; }
-            set { SetPropertyValue<long>(nameof(pdv_gpuDitherType), ref fpdv_gpuDitherType, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_gpuDitherType), ref fpdv_gpuDitherType, value); }
         }
         string fpdv_gpuDriverVersion;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(50)]
         public string pdv_gpuDriverVersion
         {
             get { return fpdv_gpuDriverVersion; }
             set { SetPropertyValue<string>(nameof(pdv_gpuDriverVersion), ref fpdv_gpuDriverVersion, value); }
         }
         string fpdv_gpuStatus;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(10)]
         public string pdv_gpuStatus
         {
             get { return fpdv_gpuStatus; }
             set { SetPropertyValue<string>(nameof(pdv_gpuStatus), ref fpdv_gpuStatus, value); }
         }
         string fpdv_gpuVideoProcessor;
-        [Size(SizeAttribute.Unlimited)]
         public string pdv_gpuVideoProcessor
         {
             get { return fpdv_gpuVideoProcessor; }
             set { SetPropertyValue<string>(nameof(pdv_gpuVideoProcessor), ref fpdv_gpuVideoProcessor, value); }
         }
-        long fpdv_persTim;
-        public long pdv_persTim
+        byte fpdv_persTim;
+        public byte pdv_persTim
         {
             get { return fpdv_persTim; }
-            set { SetPropertyValue<long>(nameof(pdv_persTim), ref fpdv_persTim, value); }
+            set { SetPropertyValue<byte>(nameof(pdv_persTim), ref fpdv_persTim, value); }
         }
         DateTime fpdv_pdvUpdRunVerDt;
         public DateTime pdv_pdvUpdRunVerDt
@@ -1167,7 +1163,7 @@ namespace DXApplicationPDV.bancoSQLite
             set { SetPropertyValue<DateTime>(nameof(pdv_pdvUpdRunVerDt), ref fpdv_pdvUpdRunVerDt, value); }
         }
         string fpdv_pdvUpdRunVer;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(20)]
         public string pdv_pdvUpdRunVer
         {
             get { return fpdv_pdvUpdRunVer; }
@@ -1180,17 +1176,17 @@ namespace DXApplicationPDV.bancoSQLite
             set { SetPropertyValue<DateTime>(nameof(pdv_pdvUpdNewVerDt), ref fpdv_pdvUpdNewVerDt, value); }
         }
         string fpdv_pdvUpdNewVer;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(20)]
         public string pdv_pdvUpdNewVer
         {
             get { return fpdv_pdvUpdNewVer; }
             set { SetPropertyValue<string>(nameof(pdv_pdvUpdNewVer), ref fpdv_pdvUpdNewVer, value); }
         }
-        long fpdv_pdvUpdReady;
-        public long pdv_pdvUpdReady
+        decimal fpdv_pdvUpdReady;
+        public decimal pdv_pdvUpdReady
         {
             get { return fpdv_pdvUpdReady; }
-            set { SetPropertyValue<long>(nameof(pdv_pdvUpdReady), ref fpdv_pdvUpdReady, value); }
+            set { SetPropertyValue<decimal>(nameof(pdv_pdvUpdReady), ref fpdv_pdvUpdReady, value); }
         }
         tb_ator ffk_tb_ator;
         [Association(@"tb_pdvReferencestb_ator")]
@@ -1199,6 +1195,12 @@ namespace DXApplicationPDV.bancoSQLite
             get { return ffk_tb_ator; }
             set { SetPropertyValue<tb_ator>(nameof(fk_tb_ator), ref ffk_tb_ator, value); }
         }
+        [Association(@"tb_clasCont2Referencestb_pdv")]
+        public XPCollection<tb_clasCont2> tb_clasCont2s { get { return GetCollection<tb_clasCont2>(nameof(tb_clasCont2s)); } }
+        [Association(@"tb_jornadaReferencestb_pdv")]
+        public XPCollection<tb_jornada> tb_jornadas { get { return GetCollection<tb_jornada>(nameof(tb_jornadas)); } }
+        [Association(@"tb_nfe_enviada_filialReferencestb_pdv")]
+        public XPCollection<tb_nfe_enviada_filial> tb_nfe_enviada_filials { get { return GetCollection<tb_nfe_enviada_filial>(nameof(tb_nfe_enviada_filials)); } }
     }
 
 }

@@ -25,11 +25,11 @@ namespace DXApplicationPDV.bancoSQLite
             get { return fid_municipio; }
             set { SetPropertyValue<long>(nameof(id_municipio), ref fid_municipio, value); }
         }
-        long fmu_desat;
-        public long mu_desat
+        decimal fmu_desat;
+        public decimal mu_desat
         {
             get { return fmu_desat; }
-            set { SetPropertyValue<long>(nameof(mu_desat), ref fmu_desat, value); }
+            set { SetPropertyValue<decimal>(nameof(mu_desat), ref fmu_desat, value); }
         }
         long fmu_id;
         public long mu_id
@@ -38,7 +38,7 @@ namespace DXApplicationPDV.bancoSQLite
             set { SetPropertyValue<long>(nameof(mu_id), ref fmu_id, value); }
         }
         string fmu_nome;
-        [Size(SizeAttribute.Unlimited)]
+        [Size(40)]
         public string mu_nome
         {
             get { return fmu_nome; }

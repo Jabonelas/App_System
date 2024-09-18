@@ -62,8 +62,8 @@ namespace DXApplicationPDV
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmTelaInicial());
-            //Application.Run(new frmLogin());
+            //Application.Run(new frmTelaInicial());
+            Application.Run(new frmLogin());
         }
     }
 }

@@ -60,7 +60,7 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.EditValue = "teste1";
+            this.txtUsuario.EditValue = "geral";
             this.txtUsuario.Location = new System.Drawing.Point(12, 28);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
