@@ -63,3 +63,17 @@ Data: 16/09/2024 15:13:50
 Mensagem: Não foi possível verificar a identificação da máquina.
 -------------------------------------------
 
+Data: 18/09/2024 15:10:10
+Mensagem: Erro ao salvar movimentação: Não é possível acessar um objeto descartado.
+Nome do objeto: 'DXApplicationPDV.bancoSQLite.tb_ator(18)'.
+-------------------------------------------
+
+Data: 18/09/2024 15:10:16
+Mensagem: Erro ao salvar movimentação pagamento: Passed id type 'System.Int32' incompatible with type 'System.Int64' of key 'DXApplicationPDV.bancoSQLite.tb_sub_forma_pagamento.id_sub_forma_pagamento'.
+-------------------------------------------
+
+Data: 18/09/2024 15:17:04
+Mensagem: Erro ao salvar movimentação pagamento: Não é possível acessar um objeto descartado.
+Nome do objeto: 'DXApplicationPDV.bancoSQLite.tb_movimentacao(1017)'.
+-------------------------------------------
+
