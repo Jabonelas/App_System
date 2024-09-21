@@ -15,6 +15,7 @@ using static System.Collections.Specialized.BitVector32;
 using DevExpress.XtraGrid.Views.Grid;
 using System.Text.RegularExpressions;
 using DevExpress.XtraExport.Helpers;
+using DANFe = Unimake.Unidanfe;
 
 namespace DXApplicationPDV
 {
@@ -24,11 +25,19 @@ namespace DXApplicationPDV
 
         public static BindingList<produtosSelecionados> listaProdutoSelecionado = new BindingList<produtosSelecionados>();
 
-        public uc_PDV()
+        private frmTelaInicial _frmTelaInicial;
+
+        private int idMovimentacao = 0;
+
+        public uc_PDV(frmTelaInicial _form)
         {
             InitializeComponent();
 
+            _frmTelaInicial = _form;
+
             PreencherProduto();
+
+            listaProdutoSelecionado.Clear();
         }
 
         private void PreencherProduto()
@@ -37,10 +46,12 @@ namespace DXApplicationPDV
             {
                 using (UnitOfWork uow = new UnitOfWork())
                 {
+                    tb_ator filialLogado = uow.GetObjectByKey<tb_ator>(VariaveisGlobais.FilialLogada.id_ator);
+
                     var produtos = (from produtoFilial in uow.Query<tb_produto_filial>()
                                     join produto in uow.Query<tb_produto>() on produtoFilial.fk_tb_produto.id_produto equals produto.id_produto
                                     join marca in uow.Query<tb_marca_produto>() on produto.fk_tb_marca_produto.id_marca_produto equals marca.id_marca_produto
-                                    where produtoFilial.pf_desat == 0
+                                    where produtoFilial.pf_desat == 0 && produtoFilial.fk_tb_ator == filialLogado
                                     select new
                                     {
                                         produtoFilial.id_produto_filial,
@@ -203,9 +214,7 @@ namespace DXApplicationPDV
                 quantidadeTotal += item.quantidade;
             }
 
-            txtQuantlProduto.Text = quantidadeTotal.ToString();
             lblTotalGeral.Text = valorTotal.ToString("C2");
-            txtTotalProduto.Text = valorTotal.ToString("C2");
         }
 
         private void btnSelecionarProduto_Click(object sender, EventArgs e)
@@ -301,7 +310,7 @@ namespace DXApplicationPDV
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
+            _frmTelaInicial.TelaVendasPDV();
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -325,7 +334,7 @@ namespace DXApplicationPDV
         {
             TelaDeCarregamento.ExibirCarregamentoUserControl(this);
 
-            frmPamentoPDV frmPamentoPDV = new frmPamentoPDV();
+            frmPamentoPDV frmPamentoPDV = new frmPamentoPDV(_frmTelaInicial);
             frmPamentoPDV.ShowDialog();
         }
 

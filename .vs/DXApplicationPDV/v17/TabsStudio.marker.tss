@@ -2,6 +2,20 @@
 <ArrayOfTabHighlightState xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <TabHighlightState>
     <extensions>
+      <string>DXApplicationPDV\PDV\frmPamentoPDV.cs</string>
+      <string>DXApplicationPDV\PDV\frmPamentoPDV.cs</string>
+    </extensions>
+    <highlightIndex>1</highlightIndex>
+  </TabHighlightState>
+  <TabHighlightState>
+    <extensions>
+      <string>DXApplicationPDV\uc_VisualizarVenda.cs</string>
+      <string>DXApplicationPDV\uc_VisualizarVenda.cs</string>
+    </extensions>
+    <highlightIndex>1</highlightIndex>
+  </TabHighlightState>
+  <TabHighlightState>
+    <extensions>
       <string>DXApplicationPDV\frmTelaInicial.cs</string>
       <string>DXApplicationPDV\frmTelaInicial.cs</string>
     </extensions>

@@ -44,18 +44,6 @@
             this.Marca = new DevExpress.XtraGrid.Columns.GridColumn();
             this.qtd = new DevExpress.XtraGrid.Columns.GridColumn();
             this.vlrTotal = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.txtTotalDesconto = new DevExpress.XtraEditors.TextEdit();
-            this.txtValorPago = new DevExpress.XtraEditors.TextEdit();
-            this.txtTroco = new DevExpress.XtraEditors.TextEdit();
-            this.txtQuantlProduto = new DevExpress.XtraEditors.TextEdit();
-            this.txtTotalProduto = new DevExpress.XtraEditors.TextEdit();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.btnExcluir = new DevExpress.XtraEditors.SimpleButton();
             this.btnPagamento = new DevExpress.XtraEditors.SimpleButton();
@@ -72,19 +60,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdListaProdutos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
-            this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTotalDesconto.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtValorPago.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTroco.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtQuantlProduto.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTotalProduto.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             this.SuspendLayout();
@@ -162,7 +137,7 @@
             this.grdListaProdutos.Location = new System.Drawing.Point(15, 164);
             this.grdListaProdutos.MainView = this.gridView1;
             this.grdListaProdutos.Name = "grdListaProdutos";
-            this.grdListaProdutos.Size = new System.Drawing.Size(1246, 228);
+            this.grdListaProdutos.Size = new System.Drawing.Size(1246, 283);
             this.grdListaProdutos.TabIndex = 3;
             this.grdListaProdutos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -248,153 +223,6 @@
             this.vlrTotal.VisibleIndex = 5;
             this.vlrTotal.Width = 93;
             // 
-            // layoutControl1
-            // 
-            this.layoutControl1.Controls.Add(this.txtTotalDesconto);
-            this.layoutControl1.Controls.Add(this.txtValorPago);
-            this.layoutControl1.Controls.Add(this.txtTroco);
-            this.layoutControl1.Controls.Add(this.txtQuantlProduto);
-            this.layoutControl1.Controls.Add(this.txtTotalProduto);
-            this.layoutControl1.Location = new System.Drawing.Point(256, 400);
-            this.layoutControl1.Name = "layoutControl1";
-            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(916, 272, 650, 400);
-            this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(660, 148);
-            this.layoutControl1.TabIndex = 4;
-            this.layoutControl1.Text = "layoutControl1";
-            // 
-            // txtTotalDesconto
-            // 
-            this.txtTotalDesconto.EditValue = "R$ 0,00";
-            this.txtTotalDesconto.Enabled = false;
-            this.txtTotalDesconto.Location = new System.Drawing.Point(12, 68);
-            this.txtTotalDesconto.Name = "txtTotalDesconto";
-            this.txtTotalDesconto.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtTotalDesconto.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtTotalDesconto.Size = new System.Drawing.Size(310, 20);
-            this.txtTotalDesconto.StyleController = this.layoutControl1;
-            this.txtTotalDesconto.TabIndex = 4;
-            // 
-            // txtValorPago
-            // 
-            this.txtValorPago.EditValue = "R$ 0,00";
-            this.txtValorPago.Enabled = false;
-            this.txtValorPago.Location = new System.Drawing.Point(326, 68);
-            this.txtValorPago.Name = "txtValorPago";
-            this.txtValorPago.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtValorPago.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtValorPago.Size = new System.Drawing.Size(322, 20);
-            this.txtValorPago.StyleController = this.layoutControl1;
-            this.txtValorPago.TabIndex = 4;
-            // 
-            // txtTroco
-            // 
-            this.txtTroco.EditValue = "R$ 0,00";
-            this.txtTroco.Enabled = false;
-            this.txtTroco.Location = new System.Drawing.Point(326, 108);
-            this.txtTroco.Name = "txtTroco";
-            this.txtTroco.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtTroco.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtTroco.Size = new System.Drawing.Size(322, 20);
-            this.txtTroco.StyleController = this.layoutControl1;
-            this.txtTroco.TabIndex = 4;
-            // 
-            // txtQuantlProduto
-            // 
-            this.txtQuantlProduto.EditValue = "0";
-            this.txtQuantlProduto.Enabled = false;
-            this.txtQuantlProduto.Location = new System.Drawing.Point(12, 28);
-            this.txtQuantlProduto.Name = "txtQuantlProduto";
-            this.txtQuantlProduto.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtQuantlProduto.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtQuantlProduto.Size = new System.Drawing.Size(310, 20);
-            this.txtQuantlProduto.StyleController = this.layoutControl1;
-            this.txtQuantlProduto.TabIndex = 5;
-            // 
-            // txtTotalProduto
-            // 
-            this.txtTotalProduto.EditValue = "R$ 0,00";
-            this.txtTotalProduto.Enabled = false;
-            this.txtTotalProduto.Location = new System.Drawing.Point(326, 28);
-            this.txtTotalProduto.Name = "txtTotalProduto";
-            this.txtTotalProduto.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtTotalProduto.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtTotalProduto.Size = new System.Drawing.Size(322, 20);
-            this.txtTotalProduto.StyleController = this.layoutControl1;
-            this.txtTotalProduto.TabIndex = 4;
-            // 
-            // layoutControlGroup1
-            // 
-            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup1.GroupBordersVisible = false;
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem2,
-            this.layoutControlItem4,
-            this.layoutControlItem6,
-            this.layoutControlItem3,
-            this.layoutControlItem5});
-            this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(660, 148);
-            this.layoutControlGroup1.TextVisible = false;
-            // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.Control = this.txtTotalDesconto;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 40);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(314, 88);
-            this.layoutControlItem2.Text = "TOTAL DO DESCONTO";
-            this.layoutControlItem2.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(114, 13);
-            // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.Control = this.txtQuantlProduto;
-            this.layoutControlItem4.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem4.CustomizationFormText = "TOTAL DOS PRODUTOS";
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(314, 40);
-            this.layoutControlItem4.Text = "QUANT. PRODUTOS";
-            this.layoutControlItem4.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(114, 13);
-            // 
-            // layoutControlItem6
-            // 
-            this.layoutControlItem6.Control = this.txtTroco;
-            this.layoutControlItem6.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem6.CustomizationFormText = "TOTAL DO DESCONTO";
-            this.layoutControlItem6.Location = new System.Drawing.Point(314, 80);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(326, 48);
-            this.layoutControlItem6.Text = "TROCO";
-            this.layoutControlItem6.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(114, 13);
-            // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.Control = this.txtTotalProduto;
-            this.layoutControlItem3.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem3.CustomizationFormText = "TOTAL DO DESCONTO";
-            this.layoutControlItem3.Location = new System.Drawing.Point(314, 0);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(326, 40);
-            this.layoutControlItem3.Text = "TOTAL DOS PRODUTOS";
-            this.layoutControlItem3.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(114, 13);
-            // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.Control = this.txtValorPago;
-            this.layoutControlItem5.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem5.CustomizationFormText = "TOTAL DO DESCONTO";
-            this.layoutControlItem5.Location = new System.Drawing.Point(314, 40);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(326, 40);
-            this.layoutControlItem5.Text = "VALOR PAGO";
-            this.layoutControlItem5.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(114, 13);
-            // 
             // labelControl2
             // 
             this.labelControl2.Location = new System.Drawing.Point(15, 145);
@@ -439,7 +267,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(980, 439);
+            this.labelControl1.Location = new System.Drawing.Point(961, 461);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(67, 13);
             this.labelControl1.TabIndex = 12;
@@ -449,7 +277,7 @@
             // 
             this.lblTotalGeral.Appearance.Font = new System.Drawing.Font("Tahoma", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalGeral.Appearance.Options.UseFont = true;
-            this.lblTotalGeral.Location = new System.Drawing.Point(980, 456);
+            this.lblTotalGeral.Location = new System.Drawing.Point(961, 474);
             this.lblTotalGeral.Name = "lblTotalGeral";
             this.lblTotalGeral.Size = new System.Drawing.Size(164, 58);
             this.lblTotalGeral.TabIndex = 13;
@@ -479,7 +307,6 @@
             this.buttonEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.buttonEdit1.Size = new System.Drawing.Size(217, 20);
-            this.buttonEdit1.StyleController = this.layoutControl1;
             this.buttonEdit1.TabIndex = 6;
             // 
             // layoutControlItem7
@@ -501,7 +328,6 @@
             this.Controls.Add(this.btnPagamento);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.labelControl2);
-            this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.grdListaProdutos);
             this.Controls.Add(this.dataLayoutControl1);
             this.Controls.Add(this.btnSelecionarProduto);
@@ -517,19 +343,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdListaProdutos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
-            this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtTotalDesconto.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtValorPago.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTroco.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtQuantlProduto.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTotalProduto.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             this.ResumeLayout(false);
@@ -547,14 +360,6 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraGrid.GridControl grdListaProdutos;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraLayout.LayoutControl layoutControl1;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private DevExpress.XtraEditors.TextEdit txtValorPago;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
-        private DevExpress.XtraEditors.TextEdit txtTroco;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
-        private DevExpress.XtraEditors.TextEdit txtTotalDesconto;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraGrid.Columns.GridColumn idProduto;
         private DevExpress.XtraGrid.Columns.GridColumn CodRef;
@@ -567,12 +372,8 @@
         private DevExpress.XtraEditors.SimpleButton btnPagamento;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl lblTotalGeral;
-        private DevExpress.XtraEditors.TextEdit txtQuantlProduto;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraEditors.SimpleButton btnVoltar;
         private DevExpress.XtraEditors.ButtonEdit buttonEdit1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
-        private DevExpress.XtraEditors.TextEdit txtTotalProduto;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
     }
 }

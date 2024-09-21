@@ -98,3 +98,5 @@ C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\bin\Debug\DevExpre
 C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\obj\Debug\DXApplicationPDV.csproj.CopyComplete
 C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\obj\Debug\DXApplicationPDV.exe
 C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\obj\Debug\DXApplicationPDV.pdb
+C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\obj\Debug\DXApplicationPDV.uc_VendasPDV.resources
+C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\obj\Debug\DXApplicationPDV.uc_VisualizarVenda.resources

@@ -2,19 +2,8 @@
 <ArrayOfArrayOfArrayOfString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ArrayOfArrayOfString>
     <ArrayOfString>
-      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\frmLogin.cs</string>
-      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\frmLogin.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
       <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\frmTelaInicial.cs</string>
       <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\frmTelaInicial.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\PDV\frmSelecionarPDV.cs</string>
-      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\PDV\frmSelecionarPDV.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\Program.cs</string>
     </ArrayOfString>
     <ArrayOfString>
       <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\PDV\frmPamentoPDV.cs</string>
@@ -25,7 +14,12 @@
       <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\PDV\uc_PDV.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\Classes\VariaveisGlobais.cs</string>
+      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\uc_VendasPDV.cs</string>
+      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\uc_VendasPDV.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\uc_VisualizarVenda.cs</string>
+      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\uc_VisualizarVenda.cs</string>
     </ArrayOfString>
   </ArrayOfArrayOfString>
 </ArrayOfArrayOfArrayOfString>

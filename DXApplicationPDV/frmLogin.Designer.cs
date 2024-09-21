@@ -31,20 +31,20 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.txtUsuario = new DevExpress.XtraEditors.TextEdit();
+            this.txtSenha = new DevExpress.UITemplates.Collection.Editors.PasswordBox();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.btnLogar = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.txtSenha = new DevExpress.UITemplates.Collection.Editors.PasswordBox();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtUsuario.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSenha)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -65,7 +65,8 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.Properties.Appearance.Options.UseFont = true;
-            this.txtUsuario.Properties.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("txtUsuario.Properties.ContextImageOptions.Image")));
+            this.txtUsuario.Properties.ContextImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("txtUsuario.Properties.ContextImageOptions.SvgImage")));
+            this.txtUsuario.Properties.ContextImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.txtUsuario.Size = new System.Drawing.Size(298, 20);
             this.txtUsuario.StyleController = this.layoutControl1;
             this.txtUsuario.TabIndex = 4;
@@ -74,6 +75,19 @@
             this.txtUsuario.ToolTipTitle = "Usuário:";
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
             this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
+            // 
+            // txtSenha
+            // 
+            this.txtSenha.EditValue = "123456789";
+            this.txtSenha.Location = new System.Drawing.Point(12, 68);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Placeholder = "Digite a sua senha...";
+            this.txtSenha.Size = new System.Drawing.Size(298, 20);
+            this.txtSenha.StyleController = this.layoutControl1;
+            this.txtSenha.TabIndex = 0;
+            this.txtSenha.ToolTip = "Insira sua senha com pelo menos 8 caracteres.";
+            this.txtSenha.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.txtSenha.ToolTipTitle = "Senha:";
             // 
             // Root
             // 
@@ -85,6 +99,16 @@
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(322, 130);
             this.Root.TextVisible = false;
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.txtSenha;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 40);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(302, 70);
+            this.layoutControlItem1.Text = "Senha";
+            this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(36, 13);
             // 
             // layoutControlItem2
             // 
@@ -123,29 +147,6 @@
             this.labelControl1.TabIndex = 6;
             this.labelControl1.Text = "Digite os seus dados de acesso nos campos abaixo.";
             // 
-            // txtSenha
-            // 
-            this.txtSenha.EditValue = "123456789";
-            this.txtSenha.Location = new System.Drawing.Point(12, 68);
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Placeholder = "Digite a sua senha...";
-            this.txtSenha.Size = new System.Drawing.Size(298, 20);
-            this.txtSenha.StyleController = this.layoutControl1;
-            this.txtSenha.TabIndex = 0;
-            this.txtSenha.ToolTip = "Insira sua senha com pelo menos 8 caracteres.";
-            this.txtSenha.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.txtSenha.ToolTipTitle = "Senha:";
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.txtSenha;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 40);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(302, 70);
-            this.layoutControlItem1.Text = "Senha";
-            this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(36, 13);
-            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -162,10 +163,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtUsuario.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSenha)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

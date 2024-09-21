@@ -1,4 +1,8 @@
-﻿using DevExpress.XtraEditors;
+﻿using DevExpress.Data.Linq;
+using DevExpress.Xpo;
+using DevExpress.XtraEditors;
+using DXApplicationPDV.bancoSQLite;
+using DXApplicationPDV.Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,520 +14,145 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.Utils.Extensions;
-using DXApplicationPDV.Classes;
-using DevExpress.Xpo;
-using DXApplicationPDV.bancoSQLite;
-using static DXApplicationPDV.uc_PDV;
-using static DXApplicationPDV.Classes.DadosGeralNfe;
-using Unimake.Business.DFe.Xml.NFe;
+using System.Xml;
 using Unimake.Business.DFe.Servicos;
-using ServicoNFCe = Unimake.Business.DFe.Servicos.NFCe;
+using Unimake.Business.DFe.Xml.NFe;
+using static DXApplicationPDV.Classes.DadosGeralNfe;
+using static DXApplicationPDV.frmPamentoPDV;
+using static DXApplicationPDV.uc_PDV;
 using DANFe = Unimake.Unidanfe;
+using ServicoNFCe = Unimake.Business.DFe.Servicos.NFCe;
 
 using XmlNFe = Unimake.Business.DFe.Xml.NFe;
 
 namespace DXApplicationPDV
 {
-    public partial class frmPamentoPDV : DevExpress.XtraEditors.XtraForm
+    public partial class uc_VisualizarVenda : DevExpress.XtraEditors.XtraUserControl
     {
-        private decimal valorDesconto = 0;
-
-        public string descontoBruto = "";
-
-        private int numeroNota = 0;
-        private int serie = 0;
+        private frmTelaInicial _frmTelaInicial;
 
         private tb_movimentacao movimentacao;
         private tb_ator dadosEmitente;
         private tb_pdv dadosPDV;
 
-        public List<PamentosRealizados> listaPagamentosRealizados = new List<PamentosRealizados>();
         private List<long> idMovimentacaoProdutos = new List<long>();
-
         private List<long> idMovimentoPagamento = new List<long>();
 
-        private frmTelaInicial _frmTelaInicial;
+        private int idMovimentacaoSelecionado = 0;
+        private int numeroNota = 0;
+        private int serie = 0;
 
-        public frmPamentoPDV(frmTelaInicial _form)
+        public uc_VisualizarVenda(frmTelaInicial _form, int _idMovimentacao)
         {
             InitializeComponent();
 
-            PreencherCampos();
+            _frmTelaInicial = _form;
+            idMovimentacaoSelecionado = _idMovimentacao;
 
-            PreencherFormaPagamento();
+            PreencherDadosMovimentacao();
 
-            PreencherVendedor();
+            CarregarGridProdutosVendaRealizada();
 
             dadosEmitente = VariaveisGlobais.FilialLogada;
-
-            _frmTelaInicial = _form;
         }
 
-        private void ValidarDigitos(KeyPressEventArgs e)
+        private void CarregarGridProdutosVendaRealizada()
         {
-            // Verificar se o caractere digitado é um número, a vírgula, o caractere '%' ou a tecla "Backspace"
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != ',' && e.KeyChar != '%' && e.KeyChar != '\b')
-            {
-                // Cancelar a entrada
-                e.Handled = true;
-            }
+            LinqInstantFeedbackSource linqInstantFeedbackSource = new LinqInstantFeedbackSource();
+
+            linqInstantFeedbackSource.KeyExpression = "id_produto"; //Coluna Primary Key
+            linqInstantFeedbackSource.DefaultSorting = "mp_numItem ASC"; //Coluna de ordenação padrão na ordem escolhida
+
+            linqInstantFeedbackSource.GetQueryable += linqBuscarDadosMovimentacaoCadastradosAtivos; //Buscar os dados que vao preencher o grid.
+
+            linqInstantFeedbackSource.DismissQueryable += linq_DismissQueryable; //Basta deixar vazio dentro do metodo.
+            grdListaProdutosVendidos.DataSource = linqInstantFeedbackSource;
         }
 
-        public void Desconto()
-        {
-            decimal valorTotalProdutos = 0;
-
-            decimal valorTotal = 0;
-
-            decimal valorTotalDesconto = 0;
-
-            foreach (var item in uc_PDV.listaProdutoSelecionado)
-            {
-                valorTotalProdutos += item.vlrUnCom * item.quantidade;
-            }
-
-            if (descontoBruto.Contains("%"))
-            {
-                decimal pocentagemDesconto = decimal.Parse(descontoBruto.Replace("%", ""));
-
-                valorDesconto =
-                    Math.Round(decimal.Divide(decimal.Multiply(pocentagemDesconto, valorTotalProdutos), 100), 2);
-
-                CalcularDescontoPorProduto(valorDesconto, valorTotalProdutos);
-            }
-            else
-            {
-                valorDesconto = Math.Round(decimal.Parse(descontoBruto), 2);
-
-                CalcularDescontoPorProduto(valorDesconto, valorTotalProdutos);
-            }
-
-            valorTotal = decimal.Subtract(valorTotalProdutos, valorDesconto);
-
-            if (valorDesconto > valorTotalProdutos)
-            {
-                MensagensDoSistema.MensagemAtencaoOk("O valor do desconto excede o valor do produto.");
-
-                txtDesconto.Focus();
-
-                return;
-            }
-
-            lblTotalGeral.Text = valorTotal.ToString("C2");
-
-            valorTotalDesconto = valorDesconto;
-
-            txtTotalDesconto.Text = valorTotalDesconto.ToString("C2");
-
-            descontoBruto = txtDesconto.Text;
-
-            descontoBruto = "";
-        }
-
-        private void CalcularDescontoPorProduto(decimal valorDesconto, decimal _valorTotalProdutos)
-        {
-            foreach (var item in uc_PDV.listaProdutoSelecionado)
-            {
-                //Porcentagem do produto no valor total da venda
-                decimal porcentagemProdutoVenda =
-                    decimal.Divide(decimal.Multiply((item.vlrUnCom * item.quantidade), 100), _valorTotalProdutos);
-
-                decimal valorDescontoProduto =
-                    decimal.Divide(decimal.Multiply(porcentagemProdutoVenda, valorDesconto), 100);
-            }
-        }
-
-        private void PreencherVendedor()
+        private void linqBuscarDadosMovimentacaoCadastradosAtivos(object sender, GetQueryableEventArgs e)
         {
             try
             {
-                using (Session session = new Session())
-                {
-                    var vendedor = session.Query<tb_ator>()
-                        .Where(x => x.at_atorTipo == 100 || x.at_atorTipo == 101 || x.at_atorTipo == 102)
-                        .Select(x => new
-                        {
-                            x.id_ator,
-                            x.at_razSoc,
-                            x.at_nomeUsuario
-                        }).ToList();
+                Session session = new Session();
 
-                    cmbVendedor.Properties.DataSource = vendedor;
-                    cmbVendedor.Properties.DisplayMember = "at_razSoc";
-                    cmbVendedor.Properties.ValueMember = "id_ator";
-                    cmbVendedor.Properties.NullText = "Selecione o vendedor";
-
-                    cmbVendedor.EditValue = VariaveisGlobais.UsuarioLogado == null
-                        ? 0
-                        : VariaveisGlobais.UsuarioLogado.id_ator;
-                }
-            }
-            catch (Exception ex)
-            {
-                MensagensDoSistema.MensagemErroOk($"Erro ao preencher vendedor: {ex.Message}");
-            }
-        }
-
-        private void PreencherFormaPagamento()
-        {
-            try
-            {
-                using (Session session = new Session())
-                {
-                    var formaPagamento = session.Query<tb_sub_forma_pagamento>()
-                        //.Where(x => x.eb_desat == 0)
-                        .Select(x => new
-                        {
-                            x.id_sub_forma_pagamento,
-                            x.sfp_desc,
-                        }).ToList();
-
-                    cmbFormaPagamento.Properties.DataSource = formaPagamento;
-                    cmbFormaPagamento.Properties.DisplayMember = "sfp_desc";
-                    cmbFormaPagamento.Properties.ValueMember = "id_sub_forma_pagamento";
-                    cmbFormaPagamento.Properties.NullText = "Selecione a forma de pagamento";
-                }
-            }
-            catch (Exception ex)
-            {
-                MensagensDoSistema.MensagemErroOk($"Erro ao preencher forma pagamento: {ex.Message}");
-            }
-        }
-
-        private void PreencherCampos()
-        {
-            decimal valorTotal = 0;
-            int quantidadeTotal = 0;
-
-            foreach (var item in uc_PDV.listaProdutoSelecionado)
-            {
-                valorTotal += (item.quantidade * item.vlrUnCom);
-
-                quantidadeTotal += item.quantidade;
-
-                txtQuantlProduto.Text = quantidadeTotal.ToString();
-                lblTotalGeral.Text = valorTotal.ToString("C2");
-                txtTotalProduto.Text = valorTotal.ToString("C2");
-            }
-        }
-
-        private void frmPamentoPDV_Load(object sender, EventArgs e)
-        {
-            TelaDeCarregamento.EsconderCarregamento();
-        }
-
-        private void btnVoltar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void txtDesconto_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            ValidarDigitos(e);
-
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-                descontoBruto = txtDesconto.Text;
-
-                if (!string.IsNullOrEmpty(descontoBruto))
-                {
-                    Desconto();
-                }
-            }
-        }
-
-        private void txtDesconto_Leave(object sender, EventArgs e)
-        {
-            descontoBruto = txtDesconto.Text;
-
-            if (!string.IsNullOrEmpty(descontoBruto))
-            {
-                Desconto();
-            }
-        }
-
-        public class PamentosRealizados
-        {
-            public int _idPagamento { get; set; }
-            public string _pagamentoDescricao { get; set; }
-            public decimal _vlrPagamento { get; set; }
-        }
-
-        private void btnConfirmarPagamento_Click(object sender, EventArgs e)
-        {
-            if (cmbVendedor.Text == "Selecione o vendedor")
-            {
-                MensagensDoSistema.MensagemAtencaoOk("Selecione o vendedor.");
-
-                cmbVendedor.Focus();
-
-                return;
-            }
-
-            decimal valorPago = decimal.Parse(txtValorPago.Text.Replace("R$", ""));
-            decimal valorTotal = decimal.Parse(lblTotalGeral.Text.Replace("R$", ""));
-
-            if (!string.IsNullOrEmpty(txtValorPagamento.Text) &&
-                cmbFormaPagamento.Text != "Selecione a forma de pagamento" && valorPago < valorTotal)
-            {
-                PreencherGrid();
-
-                PreencherCampoPagamentoRealizado();
-            }
-        }
-
-        private void PreencherGrid()
-        {
-            int idPaamento = Convert.ToInt16(cmbFormaPagamento.EditValue);
-
-            string descricaoPagamento = cmbFormaPagamento.Text;
-
-            decimal valorPagamento = decimal.Parse(txtValorPagamento.Text.Replace("R$", ""));
-
-            listaPagamentosRealizados.Add(new PamentosRealizados
-            {
-                _idPagamento = idPaamento,
-                _pagamentoDescricao = descricaoPagamento,
-                _vlrPagamento = valorPagamento
-            });
-
-            grdPagamentos.DataSource = null;
-
-            grdPagamentos.DataSource = listaPagamentosRealizados;
-        }
-
-        private void PreencherCampoPagamentoRealizado()
-        {
-            decimal valorTotalPago = 0;
-
-            foreach (var item in listaPagamentosRealizados)
-            {
-                valorTotalPago += item._vlrPagamento;
-            }
-
-            txtValorPago.Text = valorTotalPago.ToString("C2");
-
-            txtTroco.Text = Math.Abs(decimal.Parse(lblTotalGeral.Text.Replace("R$", "")) - valorTotalPago)
-                .ToString("C2");
-
-            cmbFormaPagamento.Clear();
-
-            txtValorPagamento.Text = "";
-        }
-
-        private void SalvarMovimentacao()
-        {
-            try
-            {
-                var asdfasd = listaProdutoSelecionado;
-
-                using (UnitOfWork uow = new UnitOfWork())
-                {
-                    tb_ator usuarioLogado = uow.GetObjectByKey<tb_ator>(VariaveisGlobais.UsuarioLogado.id_ator);
-
-                    tb_ator filialLogada = uow.GetObjectByKey<tb_ator>(VariaveisGlobais.FilialLogada.id_ator);
-
-                    decimal vlrTroco = Convert.ToDecimal(txtTroco.Text.Replace("R$", ""));
-
-                    movimentacao = new tb_movimentacao(uow);
-
-                    movimentacao.mv_nfeTipo = VariaveisGlobais.UsuarioLogado.at_nfeTipoAmb;
-                    movimentacao.mv_dtCri = DateTime.Now;
-                    movimentacao.mv_dtAlt = DateTime.Now;
-                    movimentacao.mv_qtdItens = listaProdutoSelecionado.Sum(x => x.quantidade);
-                    movimentacao.fk_tb_ator_atend = usuarioLogado;
-                    movimentacao.fk_tb_ator_emit = filialLogada;
-                    movimentacao.mv_movTipo = Convert.ToByte(SEnMovTipo.VendaNfce150);
-                    movimentacao.mv_nfeNatOp = "VENDA DE MERCADORIA ADQUIRIDA OU RECEBIDA DE TERCEIROS";
-                    movimentacao.mv_nfeVlrTotProd = listaProdutoSelecionado.Sum(x => (x.vlrUnCom * x.quantidade));
-                    movimentacao.mv_nfeVlrTotDesc = valorDesconto;
-                    movimentacao.mv_nfeVlrTroco = vlrTroco;
-                    movimentacao.mv_nfeTipoAmb = Convert.ToByte(VariaveisGlobais.FilialLogada.at_nfeTipoAmb == 1
-                        ? TipoAmbiente.Producao
-                        : TipoAmbiente.Homologacao);
-                    movimentacao.mv_nfeVlrTotNF =
-                        listaProdutoSelecionado.Sum(x => (x.vlrUnCom * x.quantidade)) - valorDesconto;
-                    movimentacao.mv_nfeTipo = Convert.ToByte(SEnNfeTipo.Saida1);
-                    movimentacao.mv_nfeTipoImpDanfe = Convert.ToByte(SEnNfeTipoImpDanfe.NFCe4);
-                    movimentacao.mv_nfeFinEmis = Convert.ToByte(SEnNfeFinEmis.Normal1);
-                    movimentacao.mv_nfeIndInterm = Convert.ToByte(SEnNfeIndInterm.SemIntermediador0);
-                    movimentacao.mv_nfeIndOpConsumFin = Convert.ToByte(SEnNfeIndOpConsumFin.Final1);
-                    movimentacao.mv_nfeIndPresCompEstMomOp = Convert.ToByte(SEnNfeIndPresCompEstMomOp.Presencial1);
-                    movimentacao.mv_nfeMod = Convert.ToByte(SEnNfeMod.NFCe65);
-                    movimentacao.mv_nfeModFrete = Convert.ToByte(SEnNfeModFrete.SemFrete9);
-                    movimentacao.mv_nfeTipoDfe = Convert.ToByte(SEnNfeTipoDfe.NFe0);
-                    movimentacao.mv_nfeTipoEmis = Convert.ToByte(SEnNfeTipoEmis.Normal1);
-                    movimentacao.mv_nfeCfop = ((int)SEnNfeCfop.CompraPComercializacao1102).ToString();
-                    movimentacao.mv_nfeVerProcEmis = "Unimake.DFe";
-                    movimentacao.mv_nfeDtEmis = DateTime.Now;
-                    movimentacao.mv_vlrTotPag = listaPagamentosRealizados.Sum(x => x._vlrPagamento);
-
-                    uow.Save(movimentacao);
-                    uow.CommitChanges();
-                }
-            }
-            catch (Exception ex)
-            {
-                MensagensDoSistema.MensagemErroOk($"Erro ao salvar movimentação: {ex.Message}");
-            }
-        }
-
-        private void SalvarMovimentacaoPagamento()
-        {
-            try
-            {
-                decimal vlrTroco = Convert.ToDecimal(txtTroco.Text.Replace("R$", ""));
-
-                using (UnitOfWork uow = new UnitOfWork())
-                {
-                    foreach (var item in listaPagamentosRealizados)
+                var queryVendasRealizadas =
+                    from movimentacaoProduto in session.Query<tb_movimentacao_produto>()
+                    join produto in session.Query<tb_produto>()
+                        on movimentacaoProduto.fk_tb_produto.id_produto equals produto.id_produto
+                    join marca in session.Query<tb_marca_produto>()
+                        on produto.fk_tb_marca_produto.id_marca_produto equals marca.id_marca_produto
+                    where movimentacaoProduto.fk_tb_movimentacao.id_movimentacao == idMovimentacaoSelecionado
+                    orderby movimentacaoProduto.mp_numItem ascending
+                    select new
                     {
-                        tb_sub_forma_pagamento subFormaPagamento =
-                            uow.GetObjectByKey<tb_sub_forma_pagamento>(Convert.ToInt64(item._idPagamento));
+                        produto.id_produto,
+                        produto.pd_codRef,
+                        produto.pd_descCurta,
+                        produto.pd_desc,
+                        marca.mp_desc,
+                        movimentacaoProduto.mp_qtdCom,
+                        produto.pd_vlrUnComBase,
+                        movimentacaoProduto.mp_vlrProdTot,
+                        movimentacaoProduto.mp_vlrDesc,
+                        movimentacaoProduto.mp_numItem
+                    };
 
-                        tb_movimentacao _movimentacao =
-                            uow.GetObjectByKey<tb_movimentacao>(Convert.ToInt64(movimentacao.id_movimentacao));
-
-                        tb_movimentacao_pagamento movimentacaoPagamento = new tb_movimentacao_pagamento(uow);
-
-                        movimentacaoPagamento.mpg_dtCri = DateTime.Now;
-                        movimentacaoPagamento.mpg_dtAlt = DateTime.Now;
-                        movimentacaoPagamento.mpg_nfeVlrPag = item._vlrPagamento;
-                        movimentacaoPagamento.mpg_nfeVlrTroco = vlrTroco;
-                        movimentacaoPagamento.mpg_nfeVlrMov = item._vlrPagamento - vlrTroco;
-                        movimentacaoPagamento.fk_tb_movimentacao = _movimentacao;
-                        movimentacaoPagamento.fk_tb_sub_forma_pagamento = subFormaPagamento;
-
-                        uow.Save(movimentacaoPagamento);
-                        uow.CommitChanges();
-
-                        idMovimentoPagamento.Add(movimentacaoPagamento.id_movimentacao_pagamento);
-                    }
-                }
+                e.QueryableSource = queryVendasRealizadas;
             }
-            catch (Exception ex)
+            catch (Exception exception)
             {
-                MensagensDoSistema.MensagemErroOk($"Erro ao salvar movimentação pagamento: {ex.Message}");
+                MensagensDoSistema.MensagemErroOk($"Erro ao preencher tabela com produto que foram vendidos: {exception}");
             }
         }
 
-        private void SalvarMovimentacaoProduto()
+        private void linq_DismissQueryable(object sender, GetQueryableEventArgs e)
+        {
+            //Vazio mesmo
+        }
+
+        private void PreencherDadosMovimentacao()
         {
             try
             {
                 using (UnitOfWork uow = new UnitOfWork())
                 {
-                    var valorTotalVenda = listaProdutoSelecionado.Sum(x => (x.quantidade * x.vlrUnCom));
+                    tb_movimentacao _movimentacao = uow.GetObjectByKey<tb_movimentacao>(Convert.ToInt64(idMovimentacaoSelecionado));
 
-                    short cont = 1;
-
-                    foreach (var item in listaProdutoSelecionado)
-                    {
-                        //Porcentagem do produto no valor total da venda
-                        decimal porcentagemProdutoVenda =
-                            decimal.Divide(decimal.Multiply((item.vlrUnCom * item.quantidade), 100), valorTotalVenda);
-
-                        //Valor do desconto por produto
-                        decimal valorDescontoProduto =
-                            decimal.Divide(decimal.Multiply(porcentagemProdutoVenda, valorDesconto), 100);
-
-                        tb_produto_filial produtoFilial =
-                            uow.GetObjectByKey<tb_produto_filial>(Convert.ToInt64(item.idProdutoFilial));
-
-                        tb_produto produto = uow.GetObjectByKey<tb_produto>(produtoFilial.fk_tb_produto.id_produto);
-
-                        tb_movimentacao _movimentacao =
-                            uow.GetObjectByKey<tb_movimentacao>(Convert.ToInt64(movimentacao.id_movimentacao));
-
-                        tb_ator usuarioLogado = uow.GetObjectByKey<tb_ator>(VariaveisGlobais.UsuarioLogado.id_ator);
-
-                        tb_movimentacao_produto movimentacaoProduto = new tb_movimentacao_produto(uow);
-
-                        movimentacaoProduto.mp_desc = produtoFilial.pf_desc;
-                        movimentacaoProduto.mp_descCurta = produtoFilial.pf_descCurta;
-                        movimentacaoProduto.mp_dtAlt = DateTime.Now;
-                        movimentacaoProduto.mp_dtCri = DateTime.Now;
-                        movimentacaoProduto.mp_qtdCom = item.quantidade;
-                        movimentacaoProduto.mp_vlrUnCom = item.vlrUnCom;
-                        movimentacaoProduto.mp_vlrProdTot = item.quantidade * item.vlrUnCom;
-                        movimentacaoProduto.mp_vlrDesc = valorDescontoProduto;
-                        movimentacaoProduto.mp_nfeCfop = 5102;
-                        movimentacaoProduto.mp_numItem = cont;
-                        movimentacaoProduto.mp_tipoDesc = '$';
-                        //movimentacaoProduto.mp_nfePisCofinsCst = (int)SEnNfePisCofinsCst.OpSemIncidencia08;
-                        movimentacaoProduto.mp_unMedCom = produto.pd_unMedCom;
-                        movimentacaoProduto.fk_tb_atorAtend = usuarioLogado;
-                        movimentacaoProduto.fk_tb_produto = produto;
-                        movimentacaoProduto.fk_tb_movimentacao = _movimentacao;
-
-                        uow.Save(movimentacaoProduto);
-                        uow.CommitChanges();
-
-                        idMovimentacaoProdutos.Add(movimentacaoProduto.id_movimentacao_produto);
-
-                        cont++;
-                    }
+                    txtQuantlProduto.Text = _movimentacao.mv_qtdItens.ToString();
+                    txtTotalDesconto.Text = _movimentacao.mv_nfeVlrTotDesc.ToString("C2");
+                    txtTroco.Text = _movimentacao.mv_nfeVlrTroco.ToString("C2");
+                    txtValorPago.Text = _movimentacao.mv_vlrTotPag.ToString("C2");
+                    txtTotalProduto.Text = _movimentacao.mv_nfeVlrTotProd.ToString("C2");
+                    lblTotalGeral.Text = (_movimentacao.mv_nfeVlrTotProd - _movimentacao.mv_nfeVlrTotDesc).ToString("C2");
                 }
             }
             catch (Exception ex)
             {
-                MensagensDoSistema.MensagemErroOk($"Erro ao salvar movimentação de produto: {ex.Message}");
+                MensagensDoSistema.MensagemErroOk($"Erro ao buscar dados da movimentao para preenchimentos dos campos: {ex.Message}");
             }
         }
 
-        private void AlterarEstoqueProduto()
+        private void SxDanfe(string SNfeXmlProcRes)
         {
             try
             {
-                using (UnitOfWork uow = new UnitOfWork())
+                bool visualizar = false;
+
+                var config = new DANFe.Configurations.UnidanfeConfiguration
                 {
-                    foreach (var item in listaProdutoSelecionado)
-                    {
-                        tb_produto_filial produtoFilial = uow.GetObjectByKey<tb_produto_filial>(item.idProdutoFilial);
+                    Arquivo = SNfeXmlProcRes,
+                    Visualizar = !visualizar,
+                    Imprimir = !visualizar,
+                    EnviaEmail = false,
+                    Configuracao = "PAISAGEM",
+                    //Impressora = nomeImpressora,
+                    //Copias = 1,
+                };
 
-                        produtoFilial.pf_est = produtoFilial.pf_est - item.quantidade;
-
-                        tb_produto produto = uow.GetObjectByKey<tb_produto>(produtoFilial.fk_tb_produto.id_produto);
-
-                        produto.pd_estTot = produto.pd_estTot - item.quantidade;
-
-                        uow.Save(produtoFilial);
-                        uow.Save(produto);
-                    }
-
-                    uow.CommitChanges();
-                }
+                DANFe.UnidanfeServices.Execute(config);
             }
             catch (Exception ex)
             {
-                {
-                    MensagensDoSistema.MensagemErroOk($"Alterar estoque de produto: {ex.Message}");
-                }
-            }
-        }
-
-        public X509Certificate2 CarregarCertificaDigitaldoDoBanco()
-        {
-            try
-            {
-                using (UnitOfWork uow = new UnitOfWork())
-                {
-                    tb_certificado_digital teste = uow.Query<tb_certificado_digital>()
-                        .FirstOrDefault(x => x.cd_cnpj == Regex.Replace(dadosEmitente.at_cnpj, @"[^\d]", ""));
-
-                    // Recuperar os dados do certificado
-                    byte[] rawData = (byte[])teste.cd_rawData;
-                    string senha = teste.cd_pwd.ToString();
-
-                    return new X509Certificate2(rawData, senha, X509KeyStorageFlags.MachineKeySet);
-                }
-            }
-            catch (Exception ex)
-            {
-                MensagensDoSistema.MensagemErroOk("Erro ao carregar o certificado digital." + ex.Message);
-
-                return null;
             }
         }
 
@@ -559,45 +188,327 @@ namespace DXApplicationPDV
             }
         }
 
-        private string ConverterUnidadeMedia(int _tipoUnMedia)
+        public X509Certificate2 CarregarCertificaDigitaldoDoBanco()
         {
-            switch (_tipoUnMedia)
+            try
             {
-                case 0: return "nd";
-                case 1: return "UN";
-                case 2: return "PC";
-                case 3: return "PT";
-                case 4: return "RL";
-                case 5: return "BN";
-                case 6: return "BL";
-                case 7: return "CO";
-                case 10: return "KG";
-                case 11: return "KT";
-                case 20: return "MT";
-                case 21: return "M2";
-                case 22: return "M3";
-                case 30: return "LT";
-                case 31: return "ML";
-                case 32: return "FL";
-                case 42: return "MW";
-                case 50: return "PR";
-                case 51: return "DZ";
-                case 52: return "CJ";
-                case 53: return "CX";
-                case 54: return "FD";
-                case 55: return "SC";
-                case 56: return "JG";
-                case 57: return "FR";
-                case 58: return "TB";
-                case 59: return "BD";
-                case 60: return "FC";
-                case 61: return "TU";
-                case 62: return "GL";
-                case 63: return "LA";
-                case 64: return "MI";
-                default:
+                using (UnitOfWork uow = new UnitOfWork())
+                {
+                    tb_certificado_digital teste = uow.Query<tb_certificado_digital>()
+                        .FirstOrDefault(x => x.cd_cnpj == Regex.Replace(dadosEmitente.at_cnpj, @"[^\d]", ""));
 
-                    return "";
+                    // Recuperar os dados do certificado
+                    byte[] rawData = (byte[])teste.cd_rawData;
+                    string senha = teste.cd_pwd.ToString();
+
+                    return new X509Certificate2(rawData, senha, X509KeyStorageFlags.MachineKeySet);
+                }
+            }
+            catch (Exception ex)
+            {
+                MensagensDoSistema.MensagemErroOk("Erro ao carregar o certificado digital." + ex.Message);
+
+                return null;
+            }
+        }
+
+        private bool IsSefazEstavel()
+        {
+            try
+            {
+                var xml = new ConsStatServ
+                {
+                    Versao = "4.00",
+                    CUF = UFBrasil.SP,
+                    TpAmb = VariaveisGlobais.FilialLogada.at_nfeTipoAmb == 1 ? TipoAmbiente.Producao : TipoAmbiente.Homologacao,
+                };
+
+                var CertificadoSelecionado = CarregarCertificaDigitaldoDoBanco();
+
+                var configuracao = new Configuracao
+                {
+                    TipoDFe = TipoDFe.NFe,
+                    TipoEmissao = TipoEmissao.Normal,
+                    CertificadoDigital = CertificadoSelecionado,
+                };
+
+                var statusServico = new ServicoNFCe.StatusServico(xml, configuracao);
+                statusServico.Executar();
+
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        private int GerarNFCe()
+        {
+            try
+            {
+                var xml = new XmlNFe.EnviNFe
+
+                {
+                    Versao = "4.00",
+                    IdLote = "000000000000001",
+                    IndSinc = SimNao.Sim,
+                    NFe = new List<XmlNFe.NFe>
+                    {
+                    new XmlNFe.NFe
+                        {
+                        InfNFe = new List<XmlNFe.InfNFe>
+                        {
+                            new XmlNFe.InfNFe
+                            {
+                                Versao = "4.00",
+
+                                Ide =  CampoIdeXml(),
+
+                                Emit =  CampoEmitXml(),
+
+                                Dest = CampoDestXml(),
+
+                                Det = CampoDetXml(),
+
+                                Total = CampoTotalXml(),
+
+                                Transp = CampoTranspXml(),
+
+                                Pag = CampoPagXml(),
+
+                                InfAdic =CampoInfAdicXml(),
+
+                                InfRespTec = CampoInfRespTecXml(),
+                            }
+                        }
+                        }
+                    }
+                };
+
+                var CertificadoSelecionado = CarregarCertificaDigitaldoDoBanco();
+
+                var configuracao = new Configuracao
+                {
+                    TipoDFe = TipoDFe.NFCe,
+                    CertificadoDigital = CertificadoSelecionado,
+
+                    CSC = VariaveisGlobais.UsuarioLogado.at_nfeTipoAmb == 1 ? dadosEmitente.at_nfeCscTokenProd : dadosEmitente.at_nfeCscTokenHom,
+                    CSCIDToken = VariaveisGlobais.UsuarioLogado.at_nfeTipoAmb == 1 ? Convert.ToInt32(dadosEmitente.at_nfeCscIdProd) : Convert.ToInt32(dadosEmitente.at_nfeCscIdHom)
+                };
+
+                var autorizacao = new ServicoNFCe.Autorizacao(xml, configuracao);
+                autorizacao.Executar();
+
+                //caso a nota seja rejeitada por duplicidade, incrementa o número da nota ate que seja autorizada
+                if (autorizacao.Result.ProtNFe.InfProt.CStat != null && (autorizacao.Result.ProtNFe.InfProt.CStat == 204 || autorizacao.Result.ProtNFe.InfProt.CStat == 539)) // 204: Rejeição por duplicação de nnf (Já foi emitido por outro PDV)
+                {
+                    serie = ++serie;
+                    numeroNota = ++numeroNota;
+
+                    return GerarNFCe();
+                }
+
+                if (autorizacao.Result.ProtNFe != null)
+                {
+                    switch (autorizacao.Result.ProtNFe.InfProt.CStat)
+                    {
+                        case 100: //Autorizado o uso da NFe
+                        case 110: //Uso Denegado
+                        case 150: //Autorizado o uso da NF-e, autorização fora de prazo
+                        case 205: //NF-e está denegada na base de dados da SEFAZ [nRec:999999999999999]
+                        case 301: //Uso Denegado: Irregularidade fiscal do emitente
+                        case 302: //Uso Denegado: Irregularidade fiscal do destinatário
+                        case 303: //Uso Denegado: Destinatário não habilitado a operar na UF
+                            autorizacao.GravarXmlDistribuicao(@"C:\Users\israe\Desktop\XML - teste");
+                            //var docProcNFe = autorizacao.NfeProcResult.GerarXML(); //Gerar o Objeto para pegar a string e gravar em banco de dados
+
+                            //Como é assíncrono, tenho que prever a possibilidade de ter mais de uma NFe no lote, então teremos vários XMLs com protocolos.
+                            //Se no seu caso vc enviar sempre uma única nota, só vai passar uma única vez no foreach
+                            foreach (var item in autorizacao.NfeProcResults.Values)
+                            {
+                                var docProcNFe = item.GerarXML();
+                                var stringXml = docProcNFe.OuterXml;
+                            }
+
+                            break;
+
+                        default:
+                            //NF Rejeitada
+                            break;
+                    }
+                }
+
+                ImprimirCupomFiscal(autorizacao);
+
+                if (autorizacao.Result.ProtNFe.InfProt.CStat == 100)
+                {
+                    AlterarDadosMovimentacaoConcluida(autorizacao);
+                }
+                else
+                {
+                    MensagensDoSistema.MensagemAtencaoOk($"Não foi possível gerar a NFC-e. Motivo: {autorizacao.Result.ProtNFe.InfProt.XMotivo}");
+                }
+
+                SalvaNfe(autorizacao);
+            }
+            catch (Exception ex)
+            {
+                MensagensDoSistema.MensagemErroOk($"Erro ao gerar NFC-e: {ex.Message}");
+            }
+
+            return 0;
+        }
+
+        private void AlterarDadosMovimentacaoConcluida(ServicoNFCe.Autorizacao autorizacao)
+        {
+            try
+            {
+                using (UnitOfWork uow = new UnitOfWork())
+                {
+                    tb_movimentacao _movimentacao = uow.GetObjectByKey<tb_movimentacao>(Convert.ToInt64(movimentacao.id_movimentacao));
+
+                    _movimentacao.mv_conc = 1;
+                    _movimentacao.mv_quit = 1;
+                    _movimentacao.mv_nfeChave = autorizacao.EnviNFe.NFe[0].InfNFe[0].Chave;
+                    _movimentacao.mv_nfeXmlProcRes = autorizacao.NfeProcResults[autorizacao.EnviNFe.NFe[0].InfNFe[0].Chave].GerarXML().OuterXml;
+
+                    uow.Save(_movimentacao);
+                    uow.CommitChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                MensagensDoSistema.MensagemErroOk($"Erro ao alterar dados da movimentação após finalização da venda: {ex.Message}");
+            }
+        }
+
+        private void ImprimirCupomFiscal(ServicoNFCe.Autorizacao autorizacao)
+        {
+            try
+            {
+                bool visualizar = false;
+
+                var config = new DANFe.Configurations.UnidanfeConfiguration
+                {
+                    Arquivo = autorizacao.NfeProcResults[autorizacao.EnviNFe.NFe[0].InfNFe[0].Chave].GerarXML().OuterXml,
+                    Visualizar = !visualizar,
+                    Imprimir = !visualizar,
+                    EnviaEmail = false,
+                    Configuracao = "PAISAGEM"
+                };
+
+                DANFe.UnidanfeServices.Execute(config);
+            }
+            catch (Exception ex)
+            {
+            }
+        }
+
+        /// <summary>
+        /// Esta funcao contem esta inserindo dados em 3 tabelas:
+        /// tb_nfe = inserindo os dados.
+        /// tb_movimentacao = indicando que foi concluida a venda.
+        /// tb_pdv = alterando o numero da seguencia da nf.
+        /// </summary>
+        private void SalvaNfe(ServicoNFCe.Autorizacao autorizacao)
+        {
+            try
+            {
+                using (UnitOfWork uow = new UnitOfWork())
+                {
+                    tb_movimentacao _movimentacao = uow.GetObjectByKey<tb_movimentacao>(Convert.ToInt64(movimentacao.id_movimentacao));
+
+                    tb_pdv pdv = uow.GetObjectByKey<tb_pdv>(Convert.ToInt64(VariaveisGlobais.PDVLogado.id_pdv));
+
+                    tb_nfe nfe = new tb_nfe(uow);
+
+                    nfe.nf_desat = 0;
+                    nfe.nf_dtCri = DateTime.Now;
+                    nfe.nf_dtAlt = DateTime.Now;
+                    nfe.fk_tb_movimentacao = _movimentacao;
+                    nfe.nf_nfeServico = 0;
+                    nfe.nf_prontoEnviar = 0;
+                    nfe.nf_nfeTipoAmb = Convert.ToByte(VariaveisGlobais.UsuarioLogado.at_nfeTipoAmb == 1 ? TipoAmbiente.Producao : TipoAmbiente.Homologacao);
+                    nfe.nf_nfeXmlProcRes = autorizacao.NfeProcResults[autorizacao.EnviNFe.NFe[0].InfNFe[0].Chave].GerarXML().OuterXml;
+                    nfe.nf_nfeTipoDfe_ImpXml = Convert.ToByte(SEnNfeTipoDfe.nd255);
+                    nfe.nf_nfeVlrTotNF_ImpXml = Convert.ToDecimal(autorizacao.EnviNFe.NFe[0].InfNFe[0].Total.ICMSTot.VNF);
+                    nfe.nf_nfe1CStat = autorizacao.Result.CStat;
+                    nfe.nf_nfe1XMotivo = autorizacao.Result.XMotivo;
+                    nfe.nf_nfe1RetornoWSString = autorizacao.RetornoWSString;
+                    nfe.nf_nfe1WSXMLInnerText = autorizacao.RetornoWSXML.InnerText;
+                    nfe.nf_nfe1ConteudoXMLOriginalOuterXml = autorizacao.ConteudoXMLOriginal.OuterXml;
+                    nfe.nf_nfe1ResProtNFeInfProt0CStat = Convert.ToInt64(autorizacao.Result.ProtNFe?.InfProt?.CStat);
+                    nfe.nf_nfe1ResProtNFeInfProt0ChNFe = autorizacao.Result.ProtNFe?.InfProt?.ChNFe;
+                    nfe.nf_nfe1ResProtNFeInfProt0NProt = autorizacao.Result.ProtNFe?.InfProt?.NProt;
+                    nfe.nf_nfe1ResProtNFeInfProt0XMotivo = autorizacao.Result.ProtNFe?.InfProt?.XMotivo;
+                    nfe.nf_nfe1ResProtNFeInfProt0DhRecbto = Convert.ToDateTime(autorizacao.Result.ProtNFe?.InfProt?.DhRecbto.DateTime);
+                    nfe.nf_nfeXmlProcRes = autorizacao.NfeProcResults[autorizacao.EnviNFe.NFe[0].InfNFe[0].Chave].GerarXML().OuterXml;
+                    nfe.nf_nfeVlrTotTrib_ImpXml = 0;
+                    nfe.nf_nfe1DhRecbto = autorizacao.Result.DhRecbto.DateTime;
+                    nfe.nf_nfe1CStat = Convert.ToInt32(autorizacao.Result?.CStat);
+                    nfe.nf_nfe1XMotivo = autorizacao.Result?.XMotivo;
+                    nfe.nf_nfe1RetornoWSString = autorizacao.RetornoWSString;
+                    nfe.nf_nfe1WSXMLInnerText = autorizacao.RetornoWSXML.InnerText;
+                    nfe.nf_nfe1ConteudoXMLOriginalOuterXml = autorizacao.ConteudoXMLOriginal.OuterXml;
+                    nfe.nf_nfe1ResProtNFeInfProt0CStat = autorizacao.Result.ProtNFe.InfProt.CStat;
+                    nfe.nf_nfe1ResProtNFeInfProt0NProt = autorizacao.Result.ProtNFe?.InfProt?.NProt;
+                    nfe.nf_nfe1ResProtNFeInfProt0XMotivo = autorizacao.Result.ProtNFe?.InfProt?.XMotivo;
+                    nfe.nf_nfe1ResProtNFeInfProt0DhRecbto = autorizacao.Result.ProtNFe.InfProt.DhRecbto.DateTime;
+                    nfe.nf_nfe2ConteudoXMLOuterXml = autorizacao.ConteudoXMLOriginal.OuterXml;
+                    nfe.nf_nfe2RetornoWSString = autorizacao.RetornoWSString;
+                    nfe.nf_nfe2RetornoWSXMLInnerText = autorizacao.RetornoWSXML.InnerText;
+                    nfe.nf_nfe2ResCStat = autorizacao.Result.CStat;
+                    nfe.nf_nfe2ResDhRecbto = autorizacao.Result.DhRecbto.DateTime;
+                    nfe.nf_nfe1ResProtNFeInfProt0CStat = autorizacao.Result.ProtNFe.InfProt.CStat;
+                    nfe.nf_nfe1ResProtNFeInfProt0NProt = autorizacao.Result.ProtNFe.InfProt.NProt;
+                    nfe.nf_nfe1ResProtNFeInfProt0XMotivo = autorizacao.Result.ProtNFe.InfProt.XMotivo;
+                    nfe.nf_nfe1ResProtNFeInfProt0DhRecbto = autorizacao.Result.ProtNFe.InfProt.DhRecbto.DateTime;
+                    nfe.nf_nfeChave = autorizacao.EnviNFe.NFe[0].InfNFe[0].Chave;
+                    nfe.nf_nfeDtEmis = autorizacao.EnviNFe.NFe[0].InfNFe[0].Ide.DhEmi.DateTime;
+                    nfe.nf_nfeVlrTotProd = Convert.ToDecimal(autorizacao.EnviNFe.NFe[0].InfNFe[0].Total.ICMSTot.VProd);
+                    nfe.nf_nfeVlrTotNF = Convert.ToDecimal(autorizacao.EnviNFe.NFe[0].InfNFe[0].Total.ICMSTot.VNF);
+                    nfe.nf_nfeVlrTotDesc = Convert.ToDecimal(autorizacao.EnviNFe.NFe[0].InfNFe[0].Total.ICMSTot.VDesc);
+                    nfe.nf_nfeVlrTotFrete = Convert.ToDecimal(autorizacao.EnviNFe.NFe[0].InfNFe[0].Total.ICMSTot.VFrete);
+                    nfe.nf_nfeVlrTotSeg = Convert.ToDecimal(autorizacao.EnviNFe.NFe[0].InfNFe[0].Total.ICMSTot.VSeg);
+                    nfe.nf_nfeVlrTotOutro = Convert.ToDecimal(autorizacao.EnviNFe.NFe[0].InfNFe[0].Total.ICMSTot.VOutro);
+                    nfe.nf_nfeVlrTotIpi = Convert.ToDecimal(autorizacao.EnviNFe.NFe[0].InfNFe[0].Total.ICMSTot.VIPI);
+                    nfe.nf_nfeVlrTotIpiDevol = Convert.ToDecimal(autorizacao.EnviNFe.NFe[0].InfNFe[0].Total.ICMSTot.VIPIDevol);
+                    nfe.nf_vlrTotPag = Convert.ToDecimal(autorizacao.EnviNFe.NFe[0].InfNFe[0].Total.ICMSTot.VNF);
+                    nfe.nf_nfeVlrTotPis = Convert.ToDecimal(autorizacao.EnviNFe.NFe[0].InfNFe[0].Total.ICMSTot.VPIS);
+                    nfe.nf_nfeVlrTotCofins = Convert.ToDecimal(autorizacao.EnviNFe.NFe[0].InfNFe[0].Total.ICMSTot.VCOFINS);
+                    nfe.nf_nfeVlrTotTrib = Convert.ToDecimal(autorizacao.EnviNFe.NFe[0].InfNFe[0].Total.ICMSTot.VTotTrib);
+                    nfe.nf_nfeVlrTotIcms = Convert.ToDecimal(autorizacao.EnviNFe.NFe[0].InfNFe[0].Total.ICMSTot.VICMS);
+                    nfe.nf_nfeVlrTotIcmsSt = Convert.ToDecimal(autorizacao.EnviNFe.NFe[0].InfNFe[0].Total.ICMSTot.VST);
+                    nfe.nf_nfeVlrTotIcmsFcp = Convert.ToDecimal(autorizacao.EnviNFe.NFe[0].InfNFe[0].Total.ICMSTot.VFCP);
+                    nfe.nf_nfeXmlProcRes = autorizacao.NfeProcResults[autorizacao.EnviNFe.NFe[0].InfNFe[0].Chave].GerarXML().OuterXml;
+                    nfe.nf_nfeSerie = Convert.ToInt16(serie);
+
+                    if (VariaveisGlobais.FilialLogada.at_nfeTipoAmb == 1)
+                    {
+                        pdv.pdv_nfeProdNum = numeroNota;
+                    }
+                    else
+                    {
+                        pdv.pdv_nfeHomNum = numeroNota;
+                    }
+
+                    if (autorizacao.Result.ProtNFe.InfProt.CStat == 100)
+                    {
+                        nfe.nf_nfe1ResProtNFeInfProt0ChNFe = autorizacao.Result.ProtNFe?.InfProt?.ChNFe;
+                    }
+
+                    _movimentacao.mv_conc = 1;
+
+                    uow.Save(pdv);
+                    uow.Save(_movimentacao);
+                    uow.Save(nfe);
+                    uow.CommitChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                MensagensDoSistema.MensagemErroOk($"Erro ao alterar dados da movimentação após finalização da venda: {ex.Message}");
             }
         }
 
@@ -681,62 +592,64 @@ namespace DXApplicationPDV
         {
             try
             {
-                Dest dest = new Dest();
+                //Dest dest = new Dest();
 
-                tb_ator cliente = null;
+                //tb_ator cliente = null;
 
-                if (!string.IsNullOrWhiteSpace(txtCPF.Text))
-                {
-                    string cpf = Regex.Replace(txtCPF.Text, @"[^\d]", "");
+                //if (!string.IsNullOrWhiteSpace(txtCPF.Text))
+                //{
+                //    string cpf = Regex.Replace(txtCPF.Text, @"[^\d]", "");
 
-                    using (UnitOfWork uow = new UnitOfWork())
-                    {
-                        cliente = uow.Query<tb_ator>().FirstOrDefault(x => x.at_cpf == cpf);
-                    }
+                //    using (UnitOfWork uow = new UnitOfWork())
+                //    {
+                //        cliente = uow.Query<tb_ator>().FirstOrDefault(x => x.at_cpf == cpf);
+                //    }
 
-                    dest.CPF = cpf;
-                    dest.IndIEDest = IndicadorIEDestinatario.NaoContribuinte;
+                //    dest.CPF = cpf;
+                //    dest.IndIEDest = IndicadorIEDestinatario.NaoContribuinte;
 
-                    // Preencher o nome do destinatário para ambiente de homologação
-                    if (VariaveisGlobais.FilialLogada.at_nfeTipoAmb == (int)SEnNfeTipoAmb.Hom2)
-                    {
-                        dest.XNome = "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL";
-                    }
+                //    // Preencher o nome do destinatário para ambiente de homologação
+                //    if (VariaveisGlobais.FilialLogada.at_nfeTipoAmb == (int)SEnNfeTipoAmb.Hom2)
+                //    {
+                //        dest.XNome = "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL";
+                //    }
 
-                    if (cliente != null)
-                    {
-                        dest.XNome = cliente.at_razSoc;
+                //    if (cliente != null)
+                //    {
+                //        dest.XNome = cliente.at_razSoc;
 
-                        // Nome do destinatário
-                        //// Caso contrário, verifica se é pessoa jurídica com CNPJ
-                        //else if (!string.IsNullOrWhiteSpace(txtCNPJ.Text))
-                        //{
-                        //    string cnpj = Regex.Replace(txtCNPJ.Text, @"[^\d]", "");
-                        //    dest.CNPJ = cnpj;
-                        //    dest.IndIEDest = IndicadorIEDestinatario.ContribuinteICMS; // Define o indicador do destinatário
-                        //    dest.XNome = txtRazaoSocial.Text; // Razão social da empresa
-                        //    dest.IE = txtIE.Text; // Inscrição Estadual
-                        //}
+                //        // Nome do destinatário
+                //        //// Caso contrário, verifica se é pessoa jurídica com CNPJ
+                //        //else if (!string.IsNullOrWhiteSpace(txtCNPJ.Text))
+                //        //{
+                //        //    string cnpj = Regex.Replace(txtCNPJ.Text, @"[^\d]", "");
+                //        //    dest.CNPJ = cnpj;
+                //        //    dest.IndIEDest = IndicadorIEDestinatario.ContribuinteICMS; // Define o indicador do destinatário
+                //        //    dest.XNome = txtRazaoSocial.Text; // Razão social da empresa
+                //        //    dest.IE = txtIE.Text; // Inscrição Estadual
+                //        //}
 
-                        // Preencher o endereço completo do destinatário
-                        dest.EnderDest = new EnderDest
-                        {
-                            XLgr = cliente.at_end_Logr,
-                            Nro = cliente.at_end_Num,
-                            XBairro = cliente.at_end_Bairro,
-                            CMun = Convert.ToInt16(cliente.fk_tb_municipio.mu_id),
-                            XMun = cliente.fk_tb_municipio.mu_nome,
-                            UF = (Unimake.Business.DFe.Servicos.UFBrasil)Enum.Parse(typeof(Unimake.Business.DFe.Servicos.UFBrasil),
-                                cliente.fk_tb_estados_br.eb_sigla),
+                //        // Preencher o endereço completo do destinatário
+                //        dest.EnderDest = new EnderDest
+                //        {
+                //            XLgr = cliente.at_end_Logr,
+                //            Nro = cliente.at_end_Num,
+                //            XBairro = cliente.at_end_Bairro,
+                //            CMun = Convert.ToInt16(cliente.fk_tb_municipio.mu_id),
+                //            XMun = cliente.fk_tb_municipio.mu_nome,
+                //            UF = (Unimake.Business.DFe.Servicos.UFBrasil)Enum.Parse(typeof(Unimake.Business.DFe.Servicos.UFBrasil),
+                //                cliente.fk_tb_estados_br.eb_sigla),
 
-                            CEP = Regex.Replace(cliente.at_end_Cep, @"[^\d]", ""),
-                            CPais = 1058,
-                            XPais = "BRASIL",
-                            Fone = Regex.Replace(cliente.at_telFixo, @"[^\d]", "")
-                        };
-                    }
-                }
-                return dest;
+                //            CEP = Regex.Replace(cliente.at_end_Cep, @"[^\d]", ""),
+                //            CPais = 1058,
+                //            XPais = "BRASIL",
+                //            Fone = Regex.Replace(cliente.at_telFixo, @"[^\d]", "")
+                //        };
+                //    }
+                //}
+                //return dest;
+
+                return null;
             }
             catch (Exception ex)
             {
@@ -1325,357 +1238,192 @@ namespace DXApplicationPDV
 
         #endregion CamposXML
 
-        private void btnFinalizarVenda_Click(object sender, EventArgs e)
+        private string ConverterUnidadeMedia(int _tipoUnMedia)
         {
-            if (listaPagamentosRealizados.Count == 0)
+            switch (_tipoUnMedia)
             {
-                MensagensDoSistema.MensagemAtencaoOk("Por favor, realize o pagamento para continuar.");
+                case 0: return "nd";
+                case 1: return "UN";
+                case 2: return "PC";
+                case 3: return "PT";
+                case 4: return "RL";
+                case 5: return "BN";
+                case 6: return "BL";
+                case 7: return "CO";
+                case 10: return "KG";
+                case 11: return "KT";
+                case 20: return "MT";
+                case 21: return "M2";
+                case 22: return "M3";
+                case 30: return "LT";
+                case 31: return "ML";
+                case 32: return "FL";
+                case 42: return "MW";
+                case 50: return "PR";
+                case 51: return "DZ";
+                case 52: return "CJ";
+                case 53: return "CX";
+                case 54: return "FD";
+                case 55: return "SC";
+                case 56: return "JG";
+                case 57: return "FR";
+                case 58: return "TB";
+                case 59: return "BD";
+                case 60: return "FC";
+                case 61: return "TU";
+                case 62: return "GL";
+                case 63: return "LA";
+                case 64: return "MI";
+                default:
 
-                return;
+                    return "";
             }
+        }
 
-            SalvarMovimentacao();
-
-            SalvarMovimentacaoPagamento();
-
-            SalvarMovimentacaoProduto();
-
-            //AlterarEstoqueProduto();
-
-            PegarNumeroNota();
-
-            if (IsSefazEstavel())
+        private void btnReimprimirCupomFiscal_Click(object sender, EventArgs e)
+        {
+            if (IsNfeExiste())
             {
-                GerarNFCe();
+                ReemprimirCupomFiscal();
             }
             else
             {
-                MensagensDoSistema.MensagemAtencaoOk("Estamos enfrentando uma instabilidade momentânea na conexão com a SEFAZ.");
-            }
+                PegarNumeroNota();
 
-            _frmTelaInicial.TelaVendasPDV();
-
-            this.Close();
-        }
-
-        private void AlterarDadosMovimentacaoConcluida(ServicoNFCe.Autorizacao autorizacao)
-        {
-            try
-            {
-                using (UnitOfWork uow = new UnitOfWork())
+                if (IsSefazEstavel())
                 {
-                    tb_movimentacao _movimentacao = uow.GetObjectByKey<tb_movimentacao>(Convert.ToInt64(movimentacao.id_movimentacao));
+                    PegandoMovimentacao();
 
-                    _movimentacao.mv_conc = 1;
-                    _movimentacao.mv_quit = 1;
-                    _movimentacao.mv_nfeChave = autorizacao.EnviNFe.NFe[0].InfNFe[0].Chave;
-                    _movimentacao.mv_nfeXmlProcRes = autorizacao.NfeProcResults[autorizacao.EnviNFe.NFe[0].InfNFe[0].Chave].GerarXML().OuterXml;
+                    PegandoMovimentacaoProduto();
 
-                    uow.Save(_movimentacao);
-                    uow.CommitChanges();
-                }
-            }
-            catch (Exception ex)
-            {
-                MensagensDoSistema.MensagemErroOk($"Erro ao alterar dados da movimentação após finalização da venda: {ex.Message}");
-            }
-        }
+                    PegandoMovimentacaoPagamento();
 
-        private bool IsSefazEstavel()
-        {
-            try
-            {
-                var xml = new ConsStatServ
-                {
-                    Versao = "4.00",
-                    CUF = UFBrasil.SP,
-                    TpAmb = VariaveisGlobais.FilialLogada.at_nfeTipoAmb == 1 ? TipoAmbiente.Producao : TipoAmbiente.Homologacao,
-                };
-
-                var CertificadoSelecionado = CarregarCertificaDigitaldoDoBanco();
-
-                var configuracao = new Configuracao
-                {
-                    TipoDFe = TipoDFe.NFe,
-                    TipoEmissao = TipoEmissao.Normal,
-                    CertificadoDigital = CertificadoSelecionado,
-                };
-
-                var statusServico = new ServicoNFCe.StatusServico(xml, configuracao);
-                statusServico.Executar();
-
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-        }
-
-        private int GerarNFCe()
-        {
-            try
-            {
-                var xml = new XmlNFe.EnviNFe
-
-                {
-                    Versao = "4.00",
-                    IdLote = "000000000000001",
-                    IndSinc = SimNao.Sim,
-                    NFe = new List<XmlNFe.NFe>
-                    {
-                    new XmlNFe.NFe
-                        {
-                        InfNFe = new List<XmlNFe.InfNFe>
-                        {
-                            new XmlNFe.InfNFe
-                            {
-                                Versao = "4.00",
-
-                                Ide =  CampoIdeXml(),
-
-                                Emit =  CampoEmitXml(),
-
-                                Dest = CampoDestXml(),
-
-                                Det = CampoDetXml(),
-
-                                Total = CampoTotalXml(),
-
-                                Transp = CampoTranspXml(),
-
-                                Pag = CampoPagXml(),
-
-                                InfAdic =CampoInfAdicXml(),
-
-                                InfRespTec = CampoInfRespTecXml(),
-                            }
-                        }
-                        }
-                    }
-                };
-
-                var CertificadoSelecionado = CarregarCertificaDigitaldoDoBanco();
-
-                var configuracao = new Configuracao
-                {
-                    TipoDFe = TipoDFe.NFCe,
-                    CertificadoDigital = CertificadoSelecionado,
-
-                    CSC = VariaveisGlobais.UsuarioLogado.at_nfeTipoAmb == 1 ? dadosEmitente.at_nfeCscTokenProd : dadosEmitente.at_nfeCscTokenHom,
-                    CSCIDToken = VariaveisGlobais.UsuarioLogado.at_nfeTipoAmb == 1 ? Convert.ToInt32(dadosEmitente.at_nfeCscIdProd) : Convert.ToInt32(dadosEmitente.at_nfeCscIdHom)
-                };
-
-                var autorizacao = new ServicoNFCe.Autorizacao(xml, configuracao);
-                autorizacao.Executar();
-
-                //caso a nota seja rejeitada por duplicidade, incrementa o número da nota ate que seja autorizada
-                if (autorizacao.Result.ProtNFe.InfProt.CStat != null && (autorizacao.Result.ProtNFe.InfProt.CStat == 204 || autorizacao.Result.ProtNFe.InfProt.CStat == 539)) // 204: Rejeição por duplicação de nnf (Já foi emitido por outro PDV)
-                {
-                    serie = ++serie;
-                    numeroNota = ++numeroNota;
-
-                    return GerarNFCe();
-                }
-
-                if (autorizacao.Result.ProtNFe != null)
-                {
-                    switch (autorizacao.Result.ProtNFe.InfProt.CStat)
-                    {
-                        case 100: //Autorizado o uso da NFe
-                        case 110: //Uso Denegado
-                        case 150: //Autorizado o uso da NF-e, autorização fora de prazo
-                        case 205: //NF-e está denegada na base de dados da SEFAZ [nRec:999999999999999]
-                        case 301: //Uso Denegado: Irregularidade fiscal do emitente
-                        case 302: //Uso Denegado: Irregularidade fiscal do destinatário
-                        case 303: //Uso Denegado: Destinatário não habilitado a operar na UF
-                            autorizacao.GravarXmlDistribuicao(@"C:\Users\israe\Desktop\XML - teste");
-                            //var docProcNFe = autorizacao.NfeProcResult.GerarXML(); //Gerar o Objeto para pegar a string e gravar em banco de dados
-
-                            //Como é assíncrono, tenho que prever a possibilidade de ter mais de uma NFe no lote, então teremos vários XMLs com protocolos.
-                            //Se no seu caso vc enviar sempre uma única nota, só vai passar uma única vez no foreach
-                            foreach (var item in autorizacao.NfeProcResults.Values)
-                            {
-                                var docProcNFe = item.GerarXML();
-                                var stringXml = docProcNFe.OuterXml;
-                            }
-
-                            break;
-
-                        default:
-                            //NF Rejeitada
-                            break;
-                    }
-                }
-
-                ImprimirCupomFiscal(autorizacao);
-
-                if (autorizacao.Result.ProtNFe.InfProt.CStat == 100)
-                {
-                    AlterarDadosMovimentacaoConcluida(autorizacao);
+                    GerarNFCe();
                 }
                 else
                 {
-                    MensagensDoSistema.MensagemAtencaoOk($"Não foi possível gerar a NFC-e. Motivo: {autorizacao.Result.ProtNFe.InfProt.XMotivo}");
+                    MensagensDoSistema.MensagemAtencaoOk("Estamos enfrentando uma instabilidade momentânea na conexão com a SEFAZ.");
                 }
-
-                SalvaNfe(autorizacao);
-            }
-            catch (Exception ex)
-            {
-                MensagensDoSistema.MensagemErroOk($"Erro ao gerar NFC-e: {ex.Message}");
-            }
-
-            return 0;
-        }
-
-        private void ImprimirCupomFiscal(ServicoNFCe.Autorizacao autorizacao)
-        {
-            try
-            {
-                bool visualizar = false;
-
-                var config = new DANFe.Configurations.UnidanfeConfiguration
-                {
-                    Arquivo = autorizacao.NfeProcResults[autorizacao.EnviNFe.NFe[0].InfNFe[0].Chave].GerarXML().OuterXml,
-                    Visualizar = !visualizar,
-                    Imprimir = !visualizar,
-                    EnviaEmail = false,
-                    Configuracao = "PAISAGEM"
-                };
-
-                DANFe.UnidanfeServices.Execute(config);
-            }
-            catch (Exception ex)
-            {
             }
         }
 
-        private void txtCPF_Validating(object sender, CancelEventArgs e)
-        {
-            if (txtCPF.Text == "___.___.___-__")
-            {
-                txtCPF.ErrorText = string.Empty;
-                e.Cancel = false;
-                return;
-            }
-
-            if (!Validacoes.IsCpfValido(txtCPF.Text) && txtCPF.Text != "___.___.___-__")
-            {
-                txtCPF.ErrorText = "C.P.F. informado invalido!";
-                e.Cancel = true;
-            }
-            else
-            {
-                txtCPF.ErrorText = string.Empty;
-            }
-        }
-
-        /// <summary>
-        /// Esta funcao contem esta inserindo dados em 3 tabelas:
-        /// tb_nfe = inserindo os dados.
-        /// tb_movimentacao = indicando que foi concluida a venda.
-        /// tb_pdv = alterando o numero da seguencia da nf.
-        /// </summary>
-        private void SalvaNfe(ServicoNFCe.Autorizacao autorizacao)
+        private void ReemprimirCupomFiscal()
         {
             try
             {
                 using (UnitOfWork uow = new UnitOfWork())
                 {
-                    tb_movimentacao _movimentacao = uow.GetObjectByKey<tb_movimentacao>(Convert.ToInt64(movimentacao.id_movimentacao));
+                    var _movimentacao = uow.GetObjectByKey<tb_movimentacao>(Convert.ToInt64(idMovimentacaoSelecionado));
 
-                    tb_pdv pdv = uow.GetObjectByKey<tb_pdv>(Convert.ToInt64(VariaveisGlobais.PDVLogado.id_pdv));
+                    var nfe = uow.Query<tb_nfe>()
+                        .Where(x => x.fk_tb_movimentacao == _movimentacao)
+                        .Select(x => new { x.nf_nfeXmlProcRes, x.fk_tb_movimentacao })
+                        .FirstOrDefault();
 
-                    tb_nfe nfe = new tb_nfe(uow);
-
-                    nfe.nf_desat = 0;
-                    nfe.nf_dtCri = DateTime.Now;
-                    nfe.nf_dtAlt = DateTime.Now;
-                    nfe.fk_tb_movimentacao = _movimentacao;
-                    nfe.nf_nfeServico = 0;
-                    nfe.nf_prontoEnviar = 0;
-                    nfe.nf_nfeTipoAmb = Convert.ToByte(VariaveisGlobais.UsuarioLogado.at_nfeTipoAmb == 1 ? TipoAmbiente.Producao : TipoAmbiente.Homologacao);
-                    nfe.nf_nfeXmlProcRes = autorizacao.NfeProcResults[autorizacao.EnviNFe.NFe[0].InfNFe[0].Chave].GerarXML().OuterXml;
-                    nfe.nf_nfeTipoDfe_ImpXml = Convert.ToByte(SEnNfeTipoDfe.nd255);
-                    nfe.nf_nfeVlrTotNF_ImpXml = Convert.ToDecimal(autorizacao.EnviNFe.NFe[0].InfNFe[0].Total.ICMSTot.VNF);
-                    nfe.nf_nfe1CStat = autorizacao.Result.CStat;
-                    nfe.nf_nfe1XMotivo = autorizacao.Result.XMotivo;
-                    nfe.nf_nfe1RetornoWSString = autorizacao.RetornoWSString;
-                    nfe.nf_nfe1WSXMLInnerText = autorizacao.RetornoWSXML.InnerText;
-                    nfe.nf_nfe1ConteudoXMLOriginalOuterXml = autorizacao.ConteudoXMLOriginal.OuterXml;
-                    nfe.nf_nfe1ResProtNFeInfProt0CStat = Convert.ToInt64(autorizacao.Result.ProtNFe?.InfProt?.CStat);
-                    nfe.nf_nfe1ResProtNFeInfProt0ChNFe = autorizacao.Result.ProtNFe?.InfProt?.ChNFe;
-                    nfe.nf_nfe1ResProtNFeInfProt0NProt = autorizacao.Result.ProtNFe?.InfProt?.NProt;
-                    nfe.nf_nfe1ResProtNFeInfProt0XMotivo = autorizacao.Result.ProtNFe?.InfProt?.XMotivo;
-                    nfe.nf_nfe1ResProtNFeInfProt0DhRecbto = Convert.ToDateTime(autorizacao.Result.ProtNFe?.InfProt?.DhRecbto.DateTime);
-                    nfe.nf_nfeXmlProcRes = autorizacao.NfeProcResults[autorizacao.EnviNFe.NFe[0].InfNFe[0].Chave].GerarXML().OuterXml;
-                    nfe.nf_nfeVlrTotTrib_ImpXml = 0;
-                    nfe.nf_nfe1DhRecbto = autorizacao.Result.DhRecbto.DateTime;
-                    nfe.nf_nfe1CStat = Convert.ToInt32(autorizacao.Result?.CStat);
-                    nfe.nf_nfe1XMotivo = autorizacao.Result?.XMotivo;
-                    nfe.nf_nfe1RetornoWSString = autorizacao.RetornoWSString;
-                    nfe.nf_nfe1WSXMLInnerText = autorizacao.RetornoWSXML.InnerText;
-                    nfe.nf_nfe1ConteudoXMLOriginalOuterXml = autorizacao.ConteudoXMLOriginal.OuterXml;
-                    nfe.nf_nfe1ResProtNFeInfProt0CStat = autorizacao.Result.ProtNFe.InfProt.CStat;
-                    nfe.nf_nfe1ResProtNFeInfProt0NProt = autorizacao.Result.ProtNFe?.InfProt?.NProt;
-                    nfe.nf_nfe1ResProtNFeInfProt0XMotivo = autorizacao.Result.ProtNFe?.InfProt?.XMotivo;
-                    nfe.nf_nfe1ResProtNFeInfProt0DhRecbto = autorizacao.Result.ProtNFe.InfProt.DhRecbto.DateTime;
-                    nfe.nf_nfe2ConteudoXMLOuterXml = autorizacao.ConteudoXMLOriginal.OuterXml;
-                    nfe.nf_nfe2RetornoWSString = autorizacao.RetornoWSString;
-                    nfe.nf_nfe2RetornoWSXMLInnerText = autorizacao.RetornoWSXML.InnerText;
-                    nfe.nf_nfe2ResCStat = autorizacao.Result.CStat;
-                    nfe.nf_nfe2ResDhRecbto = autorizacao.Result.DhRecbto.DateTime;
-                    nfe.nf_nfe1ResProtNFeInfProt0CStat = autorizacao.Result.ProtNFe.InfProt.CStat;
-                    nfe.nf_nfe1ResProtNFeInfProt0NProt = autorizacao.Result.ProtNFe.InfProt.NProt;
-                    nfe.nf_nfe1ResProtNFeInfProt0XMotivo = autorizacao.Result.ProtNFe.InfProt.XMotivo;
-                    nfe.nf_nfe1ResProtNFeInfProt0DhRecbto = autorizacao.Result.ProtNFe.InfProt.DhRecbto.DateTime;
-                    nfe.nf_nfeChave = autorizacao.EnviNFe.NFe[0].InfNFe[0].Chave;
-                    nfe.nf_nfeDtEmis = autorizacao.EnviNFe.NFe[0].InfNFe[0].Ide.DhEmi.DateTime;
-                    nfe.nf_nfeVlrTotProd = Convert.ToDecimal(autorizacao.EnviNFe.NFe[0].InfNFe[0].Total.ICMSTot.VProd);
-                    nfe.nf_nfeVlrTotNF = Convert.ToDecimal(autorizacao.EnviNFe.NFe[0].InfNFe[0].Total.ICMSTot.VNF);
-                    nfe.nf_nfeVlrTotDesc = Convert.ToDecimal(autorizacao.EnviNFe.NFe[0].InfNFe[0].Total.ICMSTot.VDesc);
-                    nfe.nf_nfeVlrTotFrete = Convert.ToDecimal(autorizacao.EnviNFe.NFe[0].InfNFe[0].Total.ICMSTot.VFrete);
-                    nfe.nf_nfeVlrTotSeg = Convert.ToDecimal(autorizacao.EnviNFe.NFe[0].InfNFe[0].Total.ICMSTot.VSeg);
-                    nfe.nf_nfeVlrTotOutro = Convert.ToDecimal(autorizacao.EnviNFe.NFe[0].InfNFe[0].Total.ICMSTot.VOutro);
-                    nfe.nf_nfeVlrTotIpi = Convert.ToDecimal(autorizacao.EnviNFe.NFe[0].InfNFe[0].Total.ICMSTot.VIPI);
-                    nfe.nf_nfeVlrTotIpiDevol = Convert.ToDecimal(autorizacao.EnviNFe.NFe[0].InfNFe[0].Total.ICMSTot.VIPIDevol);
-                    nfe.nf_vlrTotPag = Convert.ToDecimal(autorizacao.EnviNFe.NFe[0].InfNFe[0].Total.ICMSTot.VNF);
-                    nfe.nf_nfeVlrTotPis = Convert.ToDecimal(autorizacao.EnviNFe.NFe[0].InfNFe[0].Total.ICMSTot.VPIS);
-                    nfe.nf_nfeVlrTotCofins = Convert.ToDecimal(autorizacao.EnviNFe.NFe[0].InfNFe[0].Total.ICMSTot.VCOFINS);
-                    nfe.nf_nfeVlrTotTrib = Convert.ToDecimal(autorizacao.EnviNFe.NFe[0].InfNFe[0].Total.ICMSTot.VTotTrib);
-                    nfe.nf_nfeVlrTotIcms = Convert.ToDecimal(autorizacao.EnviNFe.NFe[0].InfNFe[0].Total.ICMSTot.VICMS);
-                    nfe.nf_nfeVlrTotIcmsSt = Convert.ToDecimal(autorizacao.EnviNFe.NFe[0].InfNFe[0].Total.ICMSTot.VST);
-                    nfe.nf_nfeVlrTotIcmsFcp = Convert.ToDecimal(autorizacao.EnviNFe.NFe[0].InfNFe[0].Total.ICMSTot.VFCP);
-                    nfe.nf_nfeXmlProcRes = autorizacao.NfeProcResults[autorizacao.EnviNFe.NFe[0].InfNFe[0].Chave].GerarXML().OuterXml;
-                    nfe.nf_nfeSerie = Convert.ToInt16(serie);
-
-                    if (VariaveisGlobais.FilialLogada.at_nfeTipoAmb == 1)
+                    if (nfe != null)
                     {
-                        pdv.pdv_nfeProdNum = numeroNota;
+                        SxDanfe(nfe.nf_nfeXmlProcRes);
                     }
-                    else
-                    {
-                        pdv.pdv_nfeHomNum = numeroNota;
-                    }
-
-                    if (autorizacao.Result.ProtNFe.InfProt.CStat == 100)
-                    {
-                        nfe.nf_nfe1ResProtNFeInfProt0ChNFe = autorizacao.Result.ProtNFe?.InfProt?.ChNFe;
-                    }
-
-                    _movimentacao.mv_conc = 1;
-
-                    uow.Save(pdv);
-                    uow.Save(_movimentacao);
-                    uow.Save(nfe);
-                    uow.CommitChanges();
                 }
             }
             catch (Exception ex)
             {
-                MensagensDoSistema.MensagemErroOk($"Erro ao alterar dados da movimentação após finalização da venda: {ex.Message}");
+                MensagensDoSistema.MensagemErroOk($"Erro ao buscar dados da NFC-e: {ex.Message}");
             }
+        }
+
+        private bool IsNfeExiste()
+        {
+            try
+            {
+                using (UnitOfWork uow = new UnitOfWork())
+                {
+                    var nfe = uow.Query<tb_nfe>()
+                        .Any(x => x.fk_tb_movimentacao.id_movimentacao == Convert.ToInt64(idMovimentacaoSelecionado));
+
+                    return nfe;
+                }
+            }
+            catch (Exception ex)
+            {
+                MensagensDoSistema.MensagemErroOk($"Erro ao verificar se a venda já existe cupom fiscal gerado: {ex.Message}");
+
+                return false;
+            }
+
+            return false;
+        }
+
+        private void PegandoMovimentacaoProduto()
+        {
+            try
+            {
+                using (UnitOfWork uow = new UnitOfWork())
+                {
+                    var movimentacaoProdutos = uow.Query<tb_movimentacao_produto>()
+                        .Where(x => x.fk_tb_movimentacao.id_movimentacao == Convert.ToInt64(idMovimentacaoSelecionado))
+                        .Select(x => new { x.id_movimentacao_produto });
+
+                    foreach (var item in movimentacaoProdutos)
+                    {
+                        idMovimentacaoProdutos.Add(Convert.ToInt64(item.id_movimentacao_produto));
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MensagensDoSistema.MensagemErroOk($"Erro ao busca movimentação de produtos que foram selecionados nesta venda: {ex.Message}");
+            }
+        }
+
+        private void PegandoMovimentacao()
+        {
+            try
+            {
+                using (UnitOfWork uow = new UnitOfWork())
+                {
+                    var movimentacaoProdutos = uow.Query<tb_movimentacao>()
+                        .FirstOrDefault(x => x.id_movimentacao == Convert.ToInt64(idMovimentacaoSelecionado));
+
+                    movimentacao = movimentacaoProdutos;
+                }
+            }
+            catch (Exception ex)
+            {
+                MensagensDoSistema.MensagemErroOk($"Erro ao busca a movimentação que realizada nesta venda: {ex.Message}");
+            }
+        }
+
+        private void PegandoMovimentacaoPagamento()
+        {
+            try
+            {
+                using (UnitOfWork uow = new UnitOfWork())
+                {
+                    var movimentacaoPagamentoRealizados = uow.Query<tb_movimentacao_pagamento>()
+                        .Where(x => x.fk_tb_movimentacao.id_movimentacao == Convert.ToInt64(idMovimentacaoSelecionado))
+                        .Select(x => new { x.id_movimentacao_pagamento });
+
+                    foreach (var item in movimentacaoPagamentoRealizados)
+                    {
+                        idMovimentoPagamento.Add(Convert.ToInt64(item.id_movimentacao_pagamento));
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MensagensDoSistema.MensagemErroOk($"Erro ao busca movimentação de produtos que foram selecionados nesta venda: {ex.Message}");
+            }
+        }
+
+        private void uc_VisualizarVenda_Load(object sender, EventArgs e)
+        {
+            TelaDeCarregamento.EsconderCarregamento();
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            _frmTelaInicial.TelaVendasPDV(); ;
         }
     }
 }

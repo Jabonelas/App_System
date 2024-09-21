@@ -208,6 +208,7 @@
     <Compile Include="Classes\LogErros.cs" />
     <Compile Include="Classes\MensagensDoSistema.cs" />
     <Compile Include="Classes\TelaDeCarregamento.cs" />
+    <Compile Include="Classes\Validacoes.cs" />
     <Compile Include="Classes\VariaveisGlobais.cs" />
     <Compile Include="Classes\VerificarComponentesPC.cs" />
     <Compile Include="frmLogin.cs">
@@ -400,6 +401,12 @@
     <EmbeddedResource Include="PDV\uc_PDV.resx">
       <DependentUpon>uc_PDV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="uc_VendasPDV.resx">
+      <DependentUpon>uc_VendasPDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_VisualizarVenda.resx">
+      <DependentUpon>uc_VisualizarVenda.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="ORMDataModel.xpo" />
     <None Include="ORMDataModel.xpo.diagram">
@@ -422,6 +429,18 @@
     <EmbeddedResource Include="Assets\Toolbox\PasswordBox.bmp" />
     <EmbeddedResource Include="Assets\HTML\PasswordBox.html" />
     <EmbeddedResource Include="Assets\CSS\PasswordBox.css" />
+    <Compile Include="uc_VendasPDV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_VendasPDV.Designer.cs">
+      <DependentUpon>uc_VendasPDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_VisualizarVenda.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_VisualizarVenda.Designer.cs">
+      <DependentUpon>uc_VisualizarVenda.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utilities\Password.cs" />
     <Compile Include="Utilities\HtmlCssAsset.cs" />
     <Compile Include="Images\DataEntry.cs" />

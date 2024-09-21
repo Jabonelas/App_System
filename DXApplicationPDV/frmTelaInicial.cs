@@ -36,20 +36,20 @@ namespace DXApplicationPDV
             InitializeComponent();
         }
 
-        public void TelaProduto()
+        public void TelaVendasPDV()
         {
             TelaDeCarregamento.ExibirCarregamentoForm(this);
 
             pnlTelaPrincipal.Controls.Clear();
-            uc_PDV ucProdutos = new uc_PDV();
-            pnlTelaPrincipal.Controls.Add(ucProdutos);
-            pnlTelaPrincipal.Tag = ucProdutos;
-            ucProdutos.Show();
+            uc_VendasPDV ucVendasPDV = new uc_VendasPDV(this);
+            pnlTelaPrincipal.Controls.Add(ucVendasPDV);
+            pnlTelaPrincipal.Tag = ucVendasPDV;
+            ucVendasPDV.Show();
         }
 
         private void btnVenda_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            TelaProduto();
+            TelaVendasPDV();
         }
 
         private void btnEntrada_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

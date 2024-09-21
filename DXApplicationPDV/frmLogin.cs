@@ -92,9 +92,6 @@ namespace DXApplicationPDV
                 TelaDeCarregamento.ExibirCarregamentoForm(this);
 
                 VerificandoMaquina();
-
-                frmTelaInicial frmPrincipal = new frmTelaInicial();
-                frmPrincipal.Show();
             }
             else
             {

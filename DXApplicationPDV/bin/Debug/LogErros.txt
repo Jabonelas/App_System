@@ -77,3 +77,126 @@ Mensagem: Erro ao salvar movimentação pagamento: Não é possível acessar um 
 Nome do objeto: 'DXApplicationPDV.bancoSQLite.tb_movimentacao(1017)'.
 -------------------------------------------
 
+Data: 20/09/2024 13:14:11
+Mensagem: Erro ao alterar dados da movimentação após finalização da venda: Não foi possível localizar uma parte do caminho 'C:\Users\israe\Desktop\XML - GerarNFCe\35240950795588001590650010000600081424497132-procnfe.xml'.
+-------------------------------------------
+
+Data: 20/09/2024 13:15:37
+Mensagem: Erro ao buscar dados da movimentao para preenchimentos dos campos: Não é possível converter um objeto do tipo 'DevExpress.XtraGrid.Columns.GridColumn' no tipo 'System.IConvertible'.
+-------------------------------------------
+
+Data: 20/09/2024 13:16:32
+Mensagem: Erro ao buscar dados da movimentao para preenchimentos dos campos: Não é possível converter um objeto do tipo 'DevExpress.XtraGrid.Columns.GridColumn' no tipo 'System.IConvertible'.
+-------------------------------------------
+
+Data: 20/09/2024 13:17:13
+Mensagem: Erro ao buscar dados da movimentao para preenchimentos dos campos: Não é possível converter um objeto do tipo 'DevExpress.XtraGrid.Columns.GridColumn' no tipo 'System.IConvertible'.
+-------------------------------------------
+
+Data: 20/09/2024 13:18:31
+Mensagem: Erro ao buscar dados da movimentao para preenchimentos dos campos: Não é possível converter um objeto do tipo 'DevExpress.XtraGrid.Columns.GridColumn' no tipo 'System.IConvertible'.
+-------------------------------------------
+
+Data: 20/09/2024 13:22:08
+Mensagem: Erro ao alterar dados da movimentação após finalização da venda: Não foi possível localizar uma parte do caminho 'C:\Users\israe\Desktop\XML - GerarNFCe\35240950795588001590650010000600101469347766-procnfe.xml'.
+-------------------------------------------
+
+Data: 20/09/2024 13:31:02
+Mensagem: Erro ao gerar NFC-e: Não foi possível localizar uma parte do caminho 'C:\Users\israe\Desktop\XML - GerarNFCe\35240950795588001590650010000600111991773060-procnfe.xml'.
+-------------------------------------------
+
+Data: 20/09/2024 13:33:35
+Mensagem: Erro ao gerar NFC-e: Não foi possível localizar uma parte do caminho 'C:\Users\israe\Desktop\XML - GerarNFCe\35240950795588001590650010000600131036623718-procnfe.xml'.
+-------------------------------------------
+
+Data: 20/09/2024 15:10:21
+Mensagem: Erro ao preencher tabela com produto que foram vendidos: System.NotSupportedException: LinqToXpo does not support more than two nested joins. It does not impact to the common count of joins in the query.
+   em DevExpress.Xpo.Helpers.FreeQuerySet..ctor(Type joinType, CriteriaOperator upLevelOperand, CriteriaOperator operand, CriteriaOperator condition)
+   em DevExpress.Xpo.XPQueryBase.Join(MethodCallExpression call, Boolean groupJoin)
+   em DevExpress.Xpo.XPQueryBase.Call(MethodCallExpression call)
+   em DevExpress.Xpo.XPQuery`1.System.Linq.IQueryProvider.CreateQuery[S](Expression expression)
+   em System.Linq.Queryable.Join[TOuter,TInner,TKey,TResult](IQueryable`1 outer, IEnumerable`1 inner, Expression`1 outerKeySelector, Expression`1 innerKeySelector, Expression`1 resultSelector)
+   em DXApplicationPDV.uc_VisualizarVenda.linqBuscarDadosMovimentacaoCadastradosAtivos(Object sender, GetQueryableEventArgs e) na C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\uc_VisualizarVenda.cs:linha 64
+-------------------------------------------
+
+Data: 20/09/2024 15:10:44
+Mensagem: Erro ao preencher tabela com produto que foram vendidos: System.NotSupportedException: LinqToXpo does not support more than two nested joins. It does not impact to the common count of joins in the query.
+   em DevExpress.Xpo.Helpers.FreeQuerySet..ctor(Type joinType, CriteriaOperator upLevelOperand, CriteriaOperator operand, CriteriaOperator condition)
+   em DevExpress.Xpo.XPQueryBase.Join(MethodCallExpression call, Boolean groupJoin)
+   em DevExpress.Xpo.XPQueryBase.Call(MethodCallExpression call)
+   em DevExpress.Xpo.XPQuery`1.System.Linq.IQueryProvider.CreateQuery[S](Expression expression)
+   em System.Linq.Queryable.Join[TOuter,TInner,TKey,TResult](IQueryable`1 outer, IEnumerable`1 inner, Expression`1 outerKeySelector, Expression`1 innerKeySelector, Expression`1 resultSelector)
+   em DXApplicationPDV.uc_VisualizarVenda.linqBuscarDadosMovimentacaoCadastradosAtivos(Object sender, GetQueryableEventArgs e) na C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\uc_VisualizarVenda.cs:linha 64
+-------------------------------------------
+
+Data: 20/09/2024 15:11:30
+Mensagem: Erro ao preencher tabela com produto que foram vendidos: System.NotSupportedException: LinqToXpo does not support more than two nested joins. It does not impact to the common count of joins in the query.
+   em DevExpress.Xpo.Helpers.FreeQuerySet..ctor(Type joinType, CriteriaOperator upLevelOperand, CriteriaOperator operand, CriteriaOperator condition)
+   em DevExpress.Xpo.XPQueryBase.Join(MethodCallExpression call, Boolean groupJoin)
+   em DevExpress.Xpo.XPQueryBase.Call(MethodCallExpression call)
+   em DevExpress.Xpo.XPQuery`1.System.Linq.IQueryProvider.CreateQuery[S](Expression expression)
+   em System.Linq.Queryable.Join[TOuter,TInner,TKey,TResult](IQueryable`1 outer, IEnumerable`1 inner, Expression`1 outerKeySelector, Expression`1 innerKeySelector, Expression`1 resultSelector)
+   em DXApplicationPDV.uc_VisualizarVenda.linqBuscarDadosMovimentacaoCadastradosAtivos(Object sender, GetQueryableEventArgs e) na C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\uc_VisualizarVenda.cs:linha 64
+-------------------------------------------
+
+Data: 20/09/2024 15:12:17
+Mensagem: Erro ao preencher tabela com produto que foram vendidos: System.NotSupportedException: LinqToXpo does not support more than two nested joins. It does not impact to the common count of joins in the query.
+   em DevExpress.Xpo.Helpers.FreeQuerySet..ctor(Type joinType, CriteriaOperator upLevelOperand, CriteriaOperator operand, CriteriaOperator condition)
+   em DevExpress.Xpo.XPQueryBase.Join(MethodCallExpression call, Boolean groupJoin)
+   em DevExpress.Xpo.XPQueryBase.Call(MethodCallExpression call)
+   em DevExpress.Xpo.XPQuery`1.System.Linq.IQueryProvider.CreateQuery[S](Expression expression)
+   em System.Linq.Queryable.Join[TOuter,TInner,TKey,TResult](IQueryable`1 outer, IEnumerable`1 inner, Expression`1 outerKeySelector, Expression`1 innerKeySelector, Expression`1 resultSelector)
+   em DXApplicationPDV.uc_VisualizarVenda.linqBuscarDadosMovimentacaoCadastradosAtivos(Object sender, GetQueryableEventArgs e) na C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\uc_VisualizarVenda.cs:linha 64
+-------------------------------------------
+
+Data: 20/09/2024 15:12:56
+Mensagem: Erro ao preencher tabela com produto que foram vendidos: System.NotSupportedException: LinqToXpo does not support more than two nested joins. It does not impact to the common count of joins in the query.
+   em DevExpress.Xpo.Helpers.FreeQuerySet..ctor(Type joinType, CriteriaOperator upLevelOperand, CriteriaOperator operand, CriteriaOperator condition)
+   em DevExpress.Xpo.XPQueryBase.Join(MethodCallExpression call, Boolean groupJoin)
+   em DevExpress.Xpo.XPQueryBase.Call(MethodCallExpression call)
+   em DevExpress.Xpo.XPQuery`1.System.Linq.IQueryProvider.CreateQuery[S](Expression expression)
+   em System.Linq.Queryable.Join[TOuter,TInner,TKey,TResult](IQueryable`1 outer, IEnumerable`1 inner, Expression`1 outerKeySelector, Expression`1 innerKeySelector, Expression`1 resultSelector)
+   em DXApplicationPDV.uc_VisualizarVenda.linqBuscarDadosMovimentacaoCadastradosAtivos(Object sender, GetQueryableEventArgs e) na C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\uc_VisualizarVenda.cs:linha 64
+-------------------------------------------
+
+Data: 20/09/2024 15:44:13
+Mensagem: Erro ao preencher tabela com produto que foram vendidos: System.NullReferenceException: Referência de objeto não definida para uma instância de um objeto.
+   em DXApplicationPDV.uc_VisualizarVenda.<>c.<linqBuscarDadosMovimentacaoCadastradosAtivos>b__4_14(<>f__AnonymousType14`2 <>h__TransparentIdentifier0) na C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\uc_VisualizarVenda.cs:linha 84
+   em System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   em System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   em System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   em DXApplicationPDV.uc_VisualizarVenda.linqBuscarDadosMovimentacaoCadastradosAtivos(Object sender, GetQueryableEventArgs e) na C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\uc_VisualizarVenda.cs:linha 80
+-------------------------------------------
+
+Data: 20/09/2024 16:50:02
+Mensagem: Erro ao gerar NFC-e: Início da validação...
+
+Linha: 1 Coluna: 2219 Erro: O elemento 'http://www.portalfiscal.inf.br/nfe:vNF' é inválido - O valor '-1.00' é inválido dependendo do tipo de dados 'http://www.portalfiscal.inf.br/nfe:TDec_1302' - Falha na restrição Pattern.
+
+...Final da validação
+-------------------------------------------
+
+Data: 20/09/2024 16:53:43
+Mensagem: Erro ao gerar NFC-e: Início da validação...
+
+Linha: 1 Coluna: 2219 Erro: O elemento 'http://www.portalfiscal.inf.br/nfe:vNF' é inválido - O valor '-1.00' é inválido dependendo do tipo de dados 'http://www.portalfiscal.inf.br/nfe:TDec_1302' - Falha na restrição Pattern.
+
+...Final da validação
+-------------------------------------------
+
+Data: 20/09/2024 16:56:54
+Mensagem: Erro ao buscar dados da NFC-e: Não é possível converter um objeto do tipo 'DevExpress.XtraGrid.Columns.GridColumn' no tipo 'System.IConvertible'.
+-------------------------------------------
+
+Data: 20/09/2024 17:18:45
+Mensagem: Erro ao buscar dados da NFC-e: Não é possível converter um objeto do tipo 'DevExpress.XtraGrid.Columns.GridColumn' no tipo 'System.IConvertible'.
+-------------------------------------------
+
+Data: 20/09/2024 18:08:26
+Mensagem: Erro ao buscar dados da NFC-e: Não é possível converter um objeto do tipo 'DevExpress.XtraGrid.Columns.GridColumn' no tipo 'System.IConvertible'.
+-------------------------------------------
+
+Data: 20/09/2024 20:43:51
+Mensagem: Erro ao busca movimentação de produtos que foram selecionados nesta venda: Não é possível converter um objeto do tipo '<>f__AnonymousType13`1[System.Int64]' no tipo 'System.IConvertible'.
+-------------------------------------------
+
