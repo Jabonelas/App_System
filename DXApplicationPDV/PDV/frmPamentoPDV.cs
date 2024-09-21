@@ -36,6 +36,7 @@ namespace DXApplicationPDV
 
         private tb_movimentacao movimentacao;
         private tb_ator dadosEmitente;
+        private tb_ator dadosDestinatario;
         private tb_pdv dadosPDV;
 
         public List<PamentosRealizados> listaPagamentosRealizados = new List<PamentosRealizados>();
@@ -252,6 +253,11 @@ namespace DXApplicationPDV
 
         private void btnConfirmarPagamento_Click(object sender, EventArgs e)
         {
+            ConfirmarPagamento();
+        }
+
+        private void ConfirmarPagamento()
+        {
             if (cmbVendedor.Text == "Selecione o vendedor")
             {
                 MensagensDoSistema.MensagemAtencaoOk("Selecione o vendedor.");
@@ -304,8 +310,12 @@ namespace DXApplicationPDV
 
             txtValorPago.Text = valorTotalPago.ToString("C2");
 
-            txtTroco.Text = Math.Abs(decimal.Parse(lblTotalGeral.Text.Replace("R$", "")) - valorTotalPago)
+            decimal valorTotal = decimal.Parse(lblTotalGeral.Text.Replace("R$", ""));
+
+            txtTroco.Text = Math.Abs(valorTotal - valorTotalPago)
                 .ToString("C2");
+
+            CampoTroco.Text = valorTotalPago < valorTotal ? "RESTANTE A PAGAR" : "TROCO";
 
             cmbFormaPagamento.Clear();
 
@@ -324,6 +334,8 @@ namespace DXApplicationPDV
 
                     tb_ator filialLogada = uow.GetObjectByKey<tb_ator>(VariaveisGlobais.FilialLogada.id_ator);
 
+                    tb_ator destinatario = uow.GetObjectByKey<tb_ator>(dadosDestinatario.id_ator);
+
                     decimal vlrTroco = Convert.ToDecimal(txtTroco.Text.Replace("R$", ""));
 
                     movimentacao = new tb_movimentacao(uow);
@@ -332,8 +344,6 @@ namespace DXApplicationPDV
                     movimentacao.mv_dtCri = DateTime.Now;
                     movimentacao.mv_dtAlt = DateTime.Now;
                     movimentacao.mv_qtdItens = listaProdutoSelecionado.Sum(x => x.quantidade);
-                    movimentacao.fk_tb_ator_atend = usuarioLogado;
-                    movimentacao.fk_tb_ator_emit = filialLogada;
                     movimentacao.mv_movTipo = Convert.ToByte(SEnMovTipo.VendaNfce150);
                     movimentacao.mv_nfeNatOp = "VENDA DE MERCADORIA ADQUIRIDA OU RECEBIDA DE TERCEIROS";
                     movimentacao.mv_nfeVlrTotProd = listaProdutoSelecionado.Sum(x => (x.vlrUnCom * x.quantidade));
@@ -358,6 +368,9 @@ namespace DXApplicationPDV
                     movimentacao.mv_nfeVerProcEmis = "Unimake.DFe";
                     movimentacao.mv_nfeDtEmis = DateTime.Now;
                     movimentacao.mv_vlrTotPag = listaPagamentosRealizados.Sum(x => x._vlrPagamento);
+                    movimentacao.fk_tb_ator_atend = usuarioLogado;
+                    movimentacao.fk_tb_ator_emit = filialLogada;
+                    movimentacao.fk_tb_ator_dest = destinatario;
 
                     uow.Save(movimentacao);
                     uow.CommitChanges();
@@ -609,7 +622,8 @@ namespace DXApplicationPDV
             {
                 Ide ide = new Ide();
 
-                ide.CUF = (Unimake.Business.DFe.Servicos.UFBrasil)Enum.Parse(typeof(Unimake.Business.DFe.Servicos.UFBrasil),
+                ide.CUF = (Unimake.Business.DFe.Servicos.UFBrasil)Enum.Parse(
+                    typeof(Unimake.Business.DFe.Servicos.UFBrasil),
                     dadosEmitente.fk_tb_estados_br.eb_id.ToString());
                 ide.NatOp = "VENDA DE MERCADORIA ADQUIRIDA OU RECEBIDA DE TERCEIROS";
                 ide.Mod = ModeloDFe.NFCe;
@@ -657,7 +671,8 @@ namespace DXApplicationPDV
                     XBairro = dadosEmitente.at_end_Bairro,
                     CMun = Convert.ToInt32(dadosEmitente.fk_tb_municipio.mu_id),
                     XMun = dadosEmitente.fk_tb_estados_br.eb_nome,
-                    UF = (Unimake.Business.DFe.Servicos.UFBrasil)Enum.Parse(typeof(Unimake.Business.DFe.Servicos.UFBrasil),
+                    UF = (Unimake.Business.DFe.Servicos.UFBrasil)Enum.Parse(
+                        typeof(Unimake.Business.DFe.Servicos.UFBrasil),
                         dadosEmitente.fk_tb_estados_br.eb_id.ToString()),
                     CEP = dadosEmitente.at_end_Cep.Replace("-", ""),
                     Fone = dadosEmitente.at_telFixo
@@ -683,18 +698,9 @@ namespace DXApplicationPDV
             {
                 Dest dest = new Dest();
 
-                tb_ator cliente = null;
-
-                if (!string.IsNullOrWhiteSpace(txtCPF.Text))
+                if (dadosDestinatario != null)
                 {
-                    string cpf = Regex.Replace(txtCPF.Text, @"[^\d]", "");
-
-                    using (UnitOfWork uow = new UnitOfWork())
-                    {
-                        cliente = uow.Query<tb_ator>().FirstOrDefault(x => x.at_cpf == cpf);
-                    }
-
-                    dest.CPF = cpf;
+                    dest.CPF = Regex.Replace(dadosDestinatario.at_cpf, @"\D", "");
                     dest.IndIEDest = IndicadorIEDestinatario.NaoContribuinte;
 
                     // Preencher o nome do destinatário para ambiente de homologação
@@ -702,41 +708,41 @@ namespace DXApplicationPDV
                     {
                         dest.XNome = "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL";
                     }
-
-                    if (cliente != null)
+                    else
                     {
-                        dest.XNome = cliente.at_razSoc;
-
-                        // Nome do destinatário
-                        //// Caso contrário, verifica se é pessoa jurídica com CNPJ
-                        //else if (!string.IsNullOrWhiteSpace(txtCNPJ.Text))
-                        //{
-                        //    string cnpj = Regex.Replace(txtCNPJ.Text, @"[^\d]", "");
-                        //    dest.CNPJ = cnpj;
-                        //    dest.IndIEDest = IndicadorIEDestinatario.ContribuinteICMS; // Define o indicador do destinatário
-                        //    dest.XNome = txtRazaoSocial.Text; // Razão social da empresa
-                        //    dest.IE = txtIE.Text; // Inscrição Estadual
-                        //}
-
-                        // Preencher o endereço completo do destinatário
-                        dest.EnderDest = new EnderDest
-                        {
-                            XLgr = cliente.at_end_Logr,
-                            Nro = cliente.at_end_Num,
-                            XBairro = cliente.at_end_Bairro,
-                            CMun = Convert.ToInt16(cliente.fk_tb_municipio.mu_id),
-                            XMun = cliente.fk_tb_municipio.mu_nome,
-                            UF = (Unimake.Business.DFe.Servicos.UFBrasil)Enum.Parse(typeof(Unimake.Business.DFe.Servicos.UFBrasil),
-                                cliente.fk_tb_estados_br.eb_sigla),
-
-                            CEP = Regex.Replace(cliente.at_end_Cep, @"[^\d]", ""),
-                            CPais = 1058,
-                            XPais = "BRASIL",
-                            Fone = Regex.Replace(cliente.at_telFixo, @"[^\d]", "")
-                        };
+                        dest.XNome = dadosDestinatario.at_razSoc;
                     }
+
+                    // Nome do destinatário
+                    //// Caso contrário, verifica se é pessoa jurídica com CNPJ
+                    //else if (!string.IsNullOrWhiteSpace(txtCNPJ.Text))
+                    //{
+                    //    string cnpj = Regex.Replace(txtCNPJ.Text, @"[^\d]", "");
+                    //    dest.CNPJ = cnpj;
+                    //    dest.IndIEDest = IndicadorIEDestinatario.ContribuinteICMS; // Define o indicador do destinatário
+                    //    dest.XNome = txtRazaoSocial.Text; // Razão social da empresa
+                    //    dest.IE = txtIE.Text; // Inscrição Estadual
+                    //}
+
+                    // Preencher o endereço completo do destinatário
+                    dest.EnderDest = new EnderDest
+                    {
+                        XLgr = dadosDestinatario.at_end_Logr,
+                        Nro = dadosDestinatario.at_end_Num,
+                        XBairro = dadosDestinatario.at_end_Bairro,
+                        CMun = Convert.ToInt32(dadosDestinatario.fk_tb_municipio.mu_id),
+                        XMun = dadosDestinatario.fk_tb_municipio.mu_nome,
+                        UF = (Unimake.Business.DFe.Servicos.UFBrasil)Enum.Parse(typeof(Unimake.Business.DFe.Servicos.UFBrasil), dadosDestinatario.fk_tb_estados_br.eb_sigla),
+
+                        CEP = Regex.Replace(dadosDestinatario.at_end_Cep, @"[^\d]", ""),
+                        CPais = 1058,
+                        XPais = "BRASIL",
+                        Fone = Regex.Replace(dadosDestinatario.at_telFixo, @"[^\d]", "")
+                    };
+                    return dest;
                 }
-                return dest;
+
+                return null;
             }
             catch (Exception ex)
             {
@@ -775,7 +781,7 @@ namespace DXApplicationPDV
                             : p.fk_tb_produto.pd_barras; //Codigo EAN de barras
                     d.Prod.XProd = string.IsNullOrWhiteSpace(p.mp_desc) ? p.mp_descCurta : p.mp_desc;
                     d.Prod.NCM = "39269090"; // p.SNcm != null ? p.SNcm?.SNcmFull : p.SNfeNcm;
-                                             //d.Prod.CFOP = ((short)p.SNfeCfop).ToString();
+                    //d.Prod.CFOP = ((short)p.SNfeCfop).ToString();
                     d.Prod.CFOP = Convert.ToInt32(p.mp_nfeCfop).ToString("0000");
                     d.Prod.UCom = ConverterUnidadeMedia(p.mp_unMedCom);
                     //d.Prod.UCom = Regex.Replace(Convert.ToString(p.mp_unMedCom), @"[^[A-Z]", string.Empty);
@@ -794,7 +800,8 @@ namespace DXApplicationPDV
                     //d.Prod.NItemPed = Convert.ToInt32(p.StProdCod);
                     d.Prod.VDesc = Convert.ToDouble(p.mp_vlrDesc);
                     //d.Prod.CEST = p.SCest;
-                    if (VariaveisGlobais.FilialLogada.at_nfeTipoAmb == Convert.ToByte(SEnNfeTipoAmb.Hom2) && numItem == 1)
+                    if (VariaveisGlobais.FilialLogada.at_nfeTipoAmb == Convert.ToByte(SEnNfeTipoAmb.Hom2) &&
+                        numItem == 1)
                         d.Prod.XProd = "NOTA FISCAL EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL";
 
                     #endregion Prod
@@ -846,7 +853,8 @@ namespace DXApplicationPDV
 
                     d.Imposto.ICMS = new ICMS();
                     //d.Imposto.ICMS.Add(new());
-                    if (VariaveisGlobais.FilialLogada.at_nfeCodRegTrib == Convert.ToByte(SEnNfeCodRegTrib.SimplesNacional1))
+                    if (VariaveisGlobais.FilialLogada.at_nfeCodRegTrib ==
+                        Convert.ToByte(SEnNfeCodRegTrib.SimplesNacional1))
                     {
                         //if (p.SNfeCsosn == SEnNfeCsosn.nd0)
                         {
@@ -1255,12 +1263,15 @@ namespace DXApplicationPDV
                         tb_movimentacao_pagamento movimentacaoPagamento =
                             uow.GetObjectByKey<tb_movimentacao_pagamento>(Convert.ToInt64(item));
 
-                        tb_movimentacao movimentacao = uow.GetObjectByKey<tb_movimentacao>(Convert.ToInt64(movimentacaoPagamento.fk_tb_movimentacao.id_movimentacao));
+                        tb_movimentacao movimentacao =
+                            uow.GetObjectByKey<tb_movimentacao>(
+                                Convert.ToInt64(movimentacaoPagamento.fk_tb_movimentacao.id_movimentacao));
 
                         DetPag detPag = new DetPag();
 
                         detPag.IndPag = IndicadorPagamento.PagamentoVista;
-                        detPag.TPag = (MeioPagamento)(int)movimentacaoPagamento.fk_tb_sub_forma_pagamento.fk_tb_forma_pagamento.fp_nfeTipoPag;
+                        detPag.TPag = (MeioPagamento)(int)movimentacaoPagamento.fk_tb_sub_forma_pagamento
+                            .fk_tb_forma_pagamento.fp_nfeTipoPag;
                         detPag.VPag = Convert.ToDouble(movimentacaoPagamento.mpg_nfeVlrPag);
 
                         pag.VTroco = Convert.ToDouble(movimentacao.mv_nfeVlrTroco);
@@ -1334,6 +1345,8 @@ namespace DXApplicationPDV
                 return;
             }
 
+            BuscarDestinatario();
+
             SalvarMovimentacao();
 
             SalvarMovimentacaoPagamento();
@@ -1350,12 +1363,30 @@ namespace DXApplicationPDV
             }
             else
             {
-                MensagensDoSistema.MensagemAtencaoOk("Estamos enfrentando uma instabilidade momentânea na conexão com a SEFAZ.");
+                MensagensDoSistema.MensagemAtencaoOk(
+                    "Estamos enfrentando uma instabilidade momentânea na conexão com a SEFAZ.");
             }
 
             _frmTelaInicial.TelaVendasPDV();
 
             this.Close();
+        }
+
+        private void BuscarDestinatario()
+        {
+            try
+            {
+                using (UnitOfWork uow = new UnitOfWork())
+                {
+                    string cpf = txtCPF.Text;
+
+                    dadosDestinatario = uow.Query<tb_ator>().FirstOrDefault(x => x.at_cpf == cpf && x.at_atorTipo == 1 && x.at_desat == 0);
+                }
+            }
+            catch (Exception ex)
+            {
+                MensagensDoSistema.MensagemErroOk($"Erro ao buscar dados do destinatário: {ex.Message}");
+            }
         }
 
         private void AlterarDadosMovimentacaoConcluida(ServicoNFCe.Autorizacao autorizacao)
@@ -1675,6 +1706,14 @@ namespace DXApplicationPDV
             catch (Exception ex)
             {
                 MensagensDoSistema.MensagemErroOk($"Erro ao alterar dados da movimentação após finalização da venda: {ex.Message}");
+            }
+        }
+
+        private void txtValorPagamento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                ConfirmarPagamento();
             }
         }
     }

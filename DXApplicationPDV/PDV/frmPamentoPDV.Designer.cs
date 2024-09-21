@@ -57,7 +57,7 @@
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.CampoTroco = new DevExpress.XtraLayout.LayoutControlItem();
             this.lblTotalGeral = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.btnFinalizarVenda = new DevExpress.XtraEditors.SimpleButton();
@@ -89,7 +89,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CampoTroco)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCPF.Properties)).BeginInit();
             this.SuspendLayout();
             // 
@@ -208,6 +208,7 @@
             this.txtValorPagamento.Size = new System.Drawing.Size(321, 20);
             this.txtValorPagamento.StyleController = this.layoutControl2;
             this.txtValorPagamento.TabIndex = 8;
+            this.txtValorPagamento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValorPagamento_KeyPress);
             // 
             // layoutControlGroup2
             // 
@@ -363,7 +364,7 @@
             this.layoutControlItem4,
             this.layoutControlItem3,
             this.layoutControlItem5,
-            this.layoutControlItem6});
+            this.CampoTroco});
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(345, 148);
             this.layoutControlGroup1.TextVisible = false;
@@ -414,17 +415,17 @@
             this.layoutControlItem5.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem5.TextSize = new System.Drawing.Size(114, 13);
             // 
-            // layoutControlItem6
+            // CampoTroco
             // 
-            this.layoutControlItem6.Control = this.txtTroco;
-            this.layoutControlItem6.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem6.CustomizationFormText = "TOTAL DO DESCONTO";
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 80);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(325, 48);
-            this.layoutControlItem6.Text = "TROCO";
-            this.layoutControlItem6.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(114, 13);
+            this.CampoTroco.Control = this.txtTroco;
+            this.CampoTroco.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.CampoTroco.CustomizationFormText = "TOTAL DO DESCONTO";
+            this.CampoTroco.Location = new System.Drawing.Point(0, 80);
+            this.CampoTroco.Name = "CampoTroco";
+            this.CampoTroco.Size = new System.Drawing.Size(325, 48);
+            this.CampoTroco.Text = "TROCO";
+            this.CampoTroco.TextLocation = DevExpress.Utils.Locations.Top;
+            this.CampoTroco.TextSize = new System.Drawing.Size(114, 13);
             // 
             // lblTotalGeral
             // 
@@ -543,7 +544,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CampoTroco)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCPF.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -574,7 +575,7 @@
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraLayout.LayoutControlItem CampoTroco;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraEditors.LabelControl lblTotalGeral;

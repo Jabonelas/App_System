@@ -8,7 +8,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
+using System.Net;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -16,6 +18,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using Unimake.Business.DFe.Servicos;
+using Unimake.Business.DFe.Utility;
 using Unimake.Business.DFe.Xml.NFe;
 using static DXApplicationPDV.Classes.DadosGeralNfe;
 using static DXApplicationPDV.frmPamentoPDV;
@@ -24,6 +27,11 @@ using DANFe = Unimake.Unidanfe;
 using ServicoNFCe = Unimake.Business.DFe.Servicos.NFCe;
 
 using XmlNFe = Unimake.Business.DFe.Xml.NFe;
+using Unimake.Business.DFe.Servicos;
+
+using Unimake.Business.DFe.Servicos.NFe;
+
+using Unimake.Business.DFe.Xml.NFe;
 
 namespace DXApplicationPDV
 {
@@ -134,26 +142,20 @@ namespace DXApplicationPDV
 
         private void SxDanfe(string SNfeXmlProcRes)
         {
-            try
-            {
-                bool visualizar = false;
+            bool visualizar = false;
 
-                var config = new DANFe.Configurations.UnidanfeConfiguration
-                {
-                    Arquivo = SNfeXmlProcRes,
-                    Visualizar = !visualizar,
-                    Imprimir = !visualizar,
-                    EnviaEmail = false,
-                    Configuracao = "PAISAGEM",
-                    //Impressora = nomeImpressora,
-                    //Copias = 1,
-                };
-
-                DANFe.UnidanfeServices.Execute(config);
-            }
-            catch (Exception ex)
+            var config = new DANFe.Configurations.UnidanfeConfiguration
             {
-            }
+                Arquivo = SNfeXmlProcRes,
+                Visualizar = !visualizar,
+                Imprimir = !visualizar,
+                EnviaEmail = false,
+                Configuracao = "PAISAGEM",
+                //Impressora = nomeImpressora,
+                //Copias = 1,
+            };
+
+            DANFe.UnidanfeServices.Execute(config);
         }
 
         private void PegarNumeroNota()
@@ -1322,7 +1324,11 @@ namespace DXApplicationPDV
 
                     if (nfe != null)
                     {
-                        SxDanfe(nfe.nf_nfeXmlProcRes);
+                        //SxDanfe(nfe.nf_nfeXmlProcRes);
+
+                        //EnviarPorEmail(nfe.nf_nfeXmlProcRes);
+
+                        EnviarDANFePorEmail("", "");
                     }
                 }
             }
@@ -1331,6 +1337,83 @@ namespace DXApplicationPDV
                 MensagensDoSistema.MensagemErroOk($"Erro ao buscar dados da NFC-e: {ex.Message}");
             }
         }
+
+        public void EnviarDANFePorEmail(string caminhoXML, string emailDestinatario)
+        {
+            emailDestinatario = "israelcoringa@hotmail.com";
+
+            caminhoXML = "C:\\Users\\israe\\Desktop\\35240950795588001590650010000579901170213100-procnfe.xml";
+
+            try
+            {
+                // Carrega o arquivo XML da NFe/NFC-e gerada
+                var nfeProc = new Unimake.Business.DFe.Xml.NFe.NFeProc();
+                nfeProc = XMLUtility.Deserializar<NFeProc>(caminhoXML);
+
+                // Configurações do e-mail
+                var configEmail = new DANFe.Configurations.UnidanfeConfiguration
+                {
+                    Arquivo = caminhoXML,  // Arquivo XML da NFe/NFC-e
+                    Visualizar = false,  // Não visualizar a DANFe antes do envio
+                    EnviaEmail = true,  // Habilita o envio por e-mail
+                    Destinatarios = emailDestinatario,  // E-mail do cliente
+                    Texto = "Segue em anexo a NFC-e/DANFe gerada.",
+                    Assunto = "NFC-e/DANFe gerada com sucesso",
+                    AnexarDFe = true  // Anexa o XML e o PDF ao e-mail
+                };
+
+                // Gera a DANFe em PDF
+                DANFe.UnidanfeServices.Execute(configEmail);
+
+                // Envia o e-mail com o DANFe/NFC-e
+                DANFe.UnidanfeServices.EnviarEmail(configEmail);
+
+                Console.WriteLine("DANFe/NFC-e enviada com sucesso para: " + emailDestinatario);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao enviar a DANFe/NFC-e: " + ex.Message);
+            }
+        }
+
+        //private void EnviarPorEmail(string SNfeXmlProcRes)
+        //{
+        //    string emailCliente = "israelcoringa@hotmail.com";
+
+        //    bool visualizar = false;
+
+        //    var config = new DANFe.Configurations.UnidanfeConfiguration
+        //    {
+        //        Arquivo = SNfeXmlProcRes,
+        //        Visualizar = !visualizar,
+        //        Imprimir = !visualizar,
+        //        EnviaEmail = true,
+        //        Configuracao = "PAISAGEM",
+        //        Destinatarios = emailCliente,
+        //        EmailRemetente = "israel094@hotmail.com",
+        //        Texto = "Segue em anexo a NFC-e gerada.",
+        //        Assunto = "NFC-e gerada com sucesso",
+        //        AnexarDFe = true,
+        //    };
+
+        //    try
+        //    {
+        //        // Gera o PDF
+        //        DANFe.UnidanfeServices.Execute(config);
+
+        //        // Remova a linha que dispara o e-mail com PDF externo, se não for necessário
+        //        // DANFe.UnidanfeServices.DisparaEmail("C:\\Users\\israe\\Downloads\\Documents\\Israel de Oliveira Santos - CV.pdf");
+
+        //        // Envia o e-mail com a NFC-e
+        //        DANFe.UnidanfeServices.EnviarEmail(config);
+
+        //        MensagensDoSistema.MensagemAtencaoOk("NFC-e enviada com sucesso para " + emailCliente);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MensagensDoSistema.MensagemErroOk("Erro ao enviar a NFC-e: " + ex.Message);
+        //    }
+        //}
 
         private bool IsNfeExiste()
         {
@@ -1425,5 +1508,82 @@ namespace DXApplicationPDV
         {
             _frmTelaInicial.TelaVendasPDV(); ;
         }
+
+        private void btnEnvioEmail_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (UnitOfWork uow = new UnitOfWork())
+                {
+                    tb_movimentacao movimentacao = uow.GetObjectByKey<tb_movimentacao>(Convert.ToInt64(idMovimentacaoSelecionado));
+
+                    tb_ator dadosClienteCadastrado = uow.Query<tb_ator>()
+                        .FirstOrDefault(x => x.id_ator == movimentacao.fk_tb_ator_dest.id_ator);
+
+                    string email = dadosClienteCadastrado.at_email;
+
+                    //if (string.IsNullOrEmpty(email))
+                    //{
+                    //    MensagensDoSistema.MensagemAtencaoOk("O cliente não possui e-mail cadastrado.");
+                    //}
+                    //else
+                    //{
+                    //    if (IsNfeExiste())
+                    //    {
+                    //        EnviarEmail(email);
+                    //    }
+                    //    else
+                    //    {
+                    //        PegarNumeroNota();
+
+                    //        if (IsSefazEstavel())
+                    //        {
+                    //            PegandoMovimentacao();
+
+                    //            PegandoMovimentacaoProduto();
+
+                    //            PegandoMovimentacaoPagamento();
+
+                    //            GerarNFCe();
+
+                    //            EnviarEmail(email);
+                    //        }
+                    //        else
+                    //        {
+                    //            MensagensDoSistema.MensagemAtencaoOk("Estamos enfrentando uma instabilidade momentânea na conexão com a SEFAZ.");
+                    //        }
+                    //    }
+                    //}
+                }
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception);
+                throw;
+            }
+        }
+
+        //private void EnviarEmail(string email)
+        //{
+        //    try
+        //    {
+        //        using (UnitOfWork uow = new UnitOfWork())
+        //        {
+        //            var nfe = uow.Query<tb_nfe>()
+        //                .Where(x => x.fk_tb_movimentacao.id_movimentacao == Convert.ToInt64(idMovimentacaoSelecionado))
+        //                .Select(x => new { x.nf_nfeXmlProcRes, x.fk_tb_movimentacao })
+        //                .FirstOrDefault();
+
+        //            if (nfe != null)
+        //            {
+        //                string xml = nfe.nf_nfeXmlProcRes;
+
+        //                string assunto = $"Cupom Fiscal Eletrônico - {nfe.fk_tb_movimentacao.mv_nfeChaveAcesso}";
+
+        //                string corpoEmail = $"Segue em anexo o Cupom Fiscal Eletrônico da sua compra realizada em nossa loja.";
+        //            }
+        //        }
+        //    }
+        //}
     }
 }

@@ -200,3 +200,27 @@ Data: 20/09/2024 20:43:51
 Mensagem: Erro ao busca movimentação de produtos que foram selecionados nesta venda: Não é possível converter um objeto do tipo '<>f__AnonymousType13`1[System.Int64]' no tipo 'System.IConvertible'.
 -------------------------------------------
 
+Data: 21/09/2024 10:44:24
+Mensagem: Erro ao preencher campos Dest XML: Valor era muito grande ou muito pequeno para Int16.
+-------------------------------------------
+
+Data: 21/09/2024 10:50:44
+Mensagem: Erro ao preencher campos Dest XML: Valor era muito grande ou muito pequeno para Int16.
+-------------------------------------------
+
+Data: 21/09/2024 10:52:03
+Mensagem: Erro ao gerar NFC-e: Início da validação...
+
+Linha: 1 Coluna: 1181 Erro: O elemento 'http://www.portalfiscal.inf.br/nfe:CPF' é inválido - O valor '835.227.192-04' é inválido dependendo do tipo de dados 'http://www.portalfiscal.inf.br/nfe:TCpf' - Falha na restrição Pattern.
+
+...Final da validação
+-------------------------------------------
+
+Data: 21/09/2024 10:52:33
+Mensagem: Erro ao gerar NFC-e: Início da validação...
+
+Linha: 1 Coluna: 1181 Erro: O elemento 'http://www.portalfiscal.inf.br/nfe:CPF' é inválido - O valor '835.227.192-04' é inválido dependendo do tipo de dados 'http://www.portalfiscal.inf.br/nfe:TCpf' - Falha na restrição Pattern.
+
+...Final da validação
+-------------------------------------------
+

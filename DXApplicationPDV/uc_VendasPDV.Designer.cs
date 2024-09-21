@@ -54,7 +54,7 @@
             this.btnVoltar.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
             this.btnVoltar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnVoltar.ImageOptions.SvgImage")));
             this.btnVoltar.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
-            this.btnVoltar.Location = new System.Drawing.Point(15, 11);
+            this.btnVoltar.Location = new System.Drawing.Point(6, 11);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(83, 68);
             this.btnVoltar.TabIndex = 16;
@@ -71,7 +71,7 @@
             this.btnExcluir.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
             this.btnExcluir.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnExcluir.ImageOptions.SvgImage")));
             this.btnExcluir.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
-            this.btnExcluir.Location = new System.Drawing.Point(104, 461);
+            this.btnExcluir.Location = new System.Drawing.Point(95, 445);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(83, 68);
             this.btnExcluir.TabIndex = 32;
@@ -87,7 +87,7 @@
             this.btnAlterar.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
             this.btnAlterar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAlterar.ImageOptions.SvgImage")));
             this.btnAlterar.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
-            this.btnAlterar.Location = new System.Drawing.Point(15, 461);
+            this.btnAlterar.Location = new System.Drawing.Point(6, 445);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(83, 68);
             this.btnAlterar.TabIndex = 31;
@@ -99,10 +99,10 @@
             // 
             // grdListaVendas
             // 
-            this.grdListaVendas.Location = new System.Drawing.Point(16, 112);
+            this.grdListaVendas.Location = new System.Drawing.Point(7, 112);
             this.grdListaVendas.MainView = this.gridView1;
             this.grdListaVendas.Name = "grdListaVendas";
-            this.grdListaVendas.Size = new System.Drawing.Size(1246, 336);
+            this.grdListaVendas.Size = new System.Drawing.Size(1246, 323);
             this.grdListaVendas.TabIndex = 33;
             this.grdListaVendas.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -190,7 +190,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(16, 93);
+            this.labelControl2.Location = new System.Drawing.Point(7, 93);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(75, 13);
             this.labelControl2.TabIndex = 34;
@@ -203,7 +203,7 @@
             this.btnNovoRegistro.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
             this.btnNovoRegistro.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnNovoRegistro.ImageOptions.SvgImage")));
             this.btnNovoRegistro.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
-            this.btnNovoRegistro.Location = new System.Drawing.Point(104, 11);
+            this.btnNovoRegistro.Location = new System.Drawing.Point(95, 11);
             this.btnNovoRegistro.Name = "btnNovoRegistro";
             this.btnNovoRegistro.Size = new System.Drawing.Size(83, 68);
             this.btnNovoRegistro.TabIndex = 35;
@@ -224,7 +224,7 @@
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnVoltar);
             this.Name = "uc_VendasPDV";
-            this.Size = new System.Drawing.Size(1278, 561);
+            this.Size = new System.Drawing.Size(1258, 515);
             this.Load += new System.EventHandler(this.uc_VendasPDV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdListaVendas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

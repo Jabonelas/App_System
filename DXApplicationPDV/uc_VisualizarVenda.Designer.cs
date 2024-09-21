@@ -57,7 +57,7 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lblTotalGeral = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnEnvioEmail = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.grdListaProdutosVendidos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -82,7 +82,7 @@
             this.btnReimprimirCupomFiscal.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
             this.btnReimprimirCupomFiscal.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnReimprimirCupomFiscal.ImageOptions.SvgImage")));
             this.btnReimprimirCupomFiscal.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
-            this.btnReimprimirCupomFiscal.Location = new System.Drawing.Point(15, 461);
+            this.btnReimprimirCupomFiscal.Location = new System.Drawing.Point(6, 445);
             this.btnReimprimirCupomFiscal.Name = "btnReimprimirCupomFiscal";
             this.btnReimprimirCupomFiscal.Size = new System.Drawing.Size(83, 68);
             this.btnReimprimirCupomFiscal.TabIndex = 17;
@@ -99,7 +99,7 @@
             this.btnVoltar.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
             this.btnVoltar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnVoltar.ImageOptions.SvgImage")));
             this.btnVoltar.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
-            this.btnVoltar.Location = new System.Drawing.Point(15, 11);
+            this.btnVoltar.Location = new System.Drawing.Point(6, 11);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(83, 68);
             this.btnVoltar.TabIndex = 18;
@@ -111,10 +111,10 @@
             // 
             // grdListaProdutosVendidos
             // 
-            this.grdListaProdutosVendidos.Location = new System.Drawing.Point(16, 115);
+            this.grdListaProdutosVendidos.Location = new System.Drawing.Point(6, 115);
             this.grdListaProdutosVendidos.MainView = this.gridView1;
             this.grdListaProdutosVendidos.Name = "grdListaProdutosVendidos";
-            this.grdListaProdutosVendidos.Size = new System.Drawing.Size(1246, 278);
+            this.grdListaProdutosVendidos.Size = new System.Drawing.Size(1246, 263);
             this.grdListaProdutosVendidos.TabIndex = 34;
             this.grdListaProdutosVendidos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -224,7 +224,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(15, 96);
+            this.labelControl2.Location = new System.Drawing.Point(6, 96);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(75, 13);
             this.labelControl2.TabIndex = 35;
@@ -237,7 +237,7 @@
             this.layoutControl1.Controls.Add(this.txtTroco);
             this.layoutControl1.Controls.Add(this.txtQuantlProduto);
             this.layoutControl1.Controls.Add(this.txtTotalProduto);
-            this.layoutControl1.Location = new System.Drawing.Point(228, 399);
+            this.layoutControl1.Location = new System.Drawing.Point(228, 378);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(916, 272, 650, 400);
             this.layoutControl1.Root = this.layoutControlGroup1;
@@ -381,41 +381,42 @@
             // 
             this.lblTotalGeral.Appearance.Font = new System.Drawing.Font("Tahoma", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalGeral.Appearance.Options.UseFont = true;
-            this.lblTotalGeral.Location = new System.Drawing.Point(949, 461);
+            this.lblTotalGeral.Location = new System.Drawing.Point(933, 455);
             this.lblTotalGeral.Name = "lblTotalGeral";
-            this.lblTotalGeral.Size = new System.Drawing.Size(164, 58);
+            this.lblTotalGeral.Size = new System.Drawing.Size(309, 58);
             this.lblTotalGeral.TabIndex = 38;
-            this.lblTotalGeral.Text = "R$ 0,00";
+            this.lblTotalGeral.Text = "R$ 000.000,00";
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(949, 444);
+            this.labelControl1.Location = new System.Drawing.Point(933, 442);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(63, 13);
             this.labelControl1.TabIndex = 37;
             this.labelControl1.Text = "TOTAL PAGO";
             // 
-            // simpleButton1
+            // btnEnvioEmail
             // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
-            this.simpleButton1.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
-            this.simpleButton1.Location = new System.Drawing.Point(104, 461);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(83, 68);
-            this.simpleButton1.TabIndex = 39;
-            this.simpleButton1.Text = "Imprimir";
-            this.simpleButton1.ToolTip = "Clique para reimprimir o cupom fiscal.";
-            this.simpleButton1.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.simpleButton1.ToolTipTitle = "Imprimir:";
+            this.btnEnvioEmail.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnvioEmail.Appearance.Options.UseFont = true;
+            this.btnEnvioEmail.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.btnEnvioEmail.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
+            this.btnEnvioEmail.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
+            this.btnEnvioEmail.Location = new System.Drawing.Point(95, 445);
+            this.btnEnvioEmail.Name = "btnEnvioEmail";
+            this.btnEnvioEmail.Size = new System.Drawing.Size(83, 68);
+            this.btnEnvioEmail.TabIndex = 39;
+            this.btnEnvioEmail.Text = "Enviar E-mail";
+            this.btnEnvioEmail.ToolTip = "Clique para enviar o cupom fiscal por e-mail.";
+            this.btnEnvioEmail.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.btnEnvioEmail.ToolTipTitle = "Enviar por E-mail:";
+            this.btnEnvioEmail.Click += new System.EventHandler(this.btnEnvioEmail_Click);
             // 
             // uc_VisualizarVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.btnEnvioEmail);
             this.Controls.Add(this.lblTotalGeral);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.layoutControl1);
@@ -424,7 +425,7 @@
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnReimprimirCupomFiscal);
             this.Name = "uc_VisualizarVenda";
-            this.Size = new System.Drawing.Size(1278, 561);
+            this.Size = new System.Drawing.Size(1258, 515);
             this.Load += new System.EventHandler(this.uc_VisualizarVenda_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdListaProdutosVendidos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -476,6 +477,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraGrid.Columns.GridColumn VlrProd;
         private DevExpress.XtraGrid.Columns.GridColumn Marca;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnEnvioEmail;
     }
 }

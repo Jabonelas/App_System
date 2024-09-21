@@ -34,6 +34,9 @@ namespace DXApplicationPDV
         public frmTelaInicial()
         {
             InitializeComponent();
+
+            // Deixar o Ribbon fixo, sem a opção de minimizar
+            ribbonControl1.AllowMinimizeRibbon = false;
         }
 
         public void TelaVendasPDV()

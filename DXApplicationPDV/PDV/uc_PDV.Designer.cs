@@ -87,7 +87,7 @@
             // dataLayoutControl1
             // 
             this.dataLayoutControl1.Controls.Add(this.cmbProdutos);
-            this.dataLayoutControl1.Location = new System.Drawing.Point(3, 81);
+            this.dataLayoutControl1.Location = new System.Drawing.Point(-5, 81);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
             this.dataLayoutControl1.Root = this.Root;
             this.dataLayoutControl1.Size = new System.Drawing.Size(1110, 75);
@@ -125,7 +125,7 @@
             // 
             // btnSelecionarProduto
             // 
-            this.btnSelecionarProduto.Location = new System.Drawing.Point(1120, 107);
+            this.btnSelecionarProduto.Location = new System.Drawing.Point(1111, 108);
             this.btnSelecionarProduto.Name = "btnSelecionarProduto";
             this.btnSelecionarProduto.Size = new System.Drawing.Size(141, 22);
             this.btnSelecionarProduto.TabIndex = 1;
@@ -134,10 +134,10 @@
             // 
             // grdListaProdutos
             // 
-            this.grdListaProdutos.Location = new System.Drawing.Point(15, 164);
+            this.grdListaProdutos.Location = new System.Drawing.Point(6, 164);
             this.grdListaProdutos.MainView = this.gridView1;
             this.grdListaProdutos.Name = "grdListaProdutos";
-            this.grdListaProdutos.Size = new System.Drawing.Size(1246, 283);
+            this.grdListaProdutos.Size = new System.Drawing.Size(1246, 272);
             this.grdListaProdutos.TabIndex = 3;
             this.grdListaProdutos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -238,7 +238,7 @@
             this.btnExcluir.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
             this.btnExcluir.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnExcluir.ImageOptions.SvgImage")));
             this.btnExcluir.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
-            this.btnExcluir.Location = new System.Drawing.Point(104, 461);
+            this.btnExcluir.Location = new System.Drawing.Point(95, 445);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(83, 68);
             this.btnExcluir.TabIndex = 10;
@@ -255,7 +255,7 @@
             this.btnPagamento.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
             this.btnPagamento.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPagamento.ImageOptions.SvgImage")));
             this.btnPagamento.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
-            this.btnPagamento.Location = new System.Drawing.Point(15, 461);
+            this.btnPagamento.Location = new System.Drawing.Point(6, 445);
             this.btnPagamento.Name = "btnPagamento";
             this.btnPagamento.Size = new System.Drawing.Size(83, 68);
             this.btnPagamento.TabIndex = 11;
@@ -267,7 +267,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(961, 461);
+            this.labelControl1.Location = new System.Drawing.Point(933, 442);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(67, 13);
             this.labelControl1.TabIndex = 12;
@@ -277,11 +277,11 @@
             // 
             this.lblTotalGeral.Appearance.Font = new System.Drawing.Font("Tahoma", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalGeral.Appearance.Options.UseFont = true;
-            this.lblTotalGeral.Location = new System.Drawing.Point(961, 474);
+            this.lblTotalGeral.Location = new System.Drawing.Point(933, 455);
             this.lblTotalGeral.Name = "lblTotalGeral";
-            this.lblTotalGeral.Size = new System.Drawing.Size(164, 58);
+            this.lblTotalGeral.Size = new System.Drawing.Size(309, 58);
             this.lblTotalGeral.TabIndex = 13;
-            this.lblTotalGeral.Text = "R$ 0,00";
+            this.lblTotalGeral.Text = "R$ 000.000,00";
             // 
             // btnVoltar
             // 
@@ -290,7 +290,7 @@
             this.btnVoltar.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
             this.btnVoltar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnVoltar.ImageOptions.SvgImage")));
             this.btnVoltar.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
-            this.btnVoltar.Location = new System.Drawing.Point(15, 11);
+            this.btnVoltar.Location = new System.Drawing.Point(6, 11);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(83, 68);
             this.btnVoltar.TabIndex = 15;
@@ -332,7 +332,7 @@
             this.Controls.Add(this.dataLayoutControl1);
             this.Controls.Add(this.btnSelecionarProduto);
             this.Name = "uc_PDV";
-            this.Size = new System.Drawing.Size(1278, 561);
+            this.Size = new System.Drawing.Size(1258, 515);
             this.Load += new System.EventHandler(this.uc_PDV_Load);
             this.Leave += new System.EventHandler(this.uc_PDV_Leave);
             ((System.ComponentModel.ISupportInitialize)(this.cmbProdutos.Properties)).EndInit();
