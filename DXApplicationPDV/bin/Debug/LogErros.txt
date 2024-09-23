@@ -224,3 +224,48 @@ Linha: 1 Coluna: 1181 Erro: O elemento 'http://www.portalfiscal.inf.br/nfe:CPF' 
 ...Final da validação
 -------------------------------------------
 
+Data: 21/09/2024 17:02:49
+Mensagem: Erro ao enviar a DANFe/NFC-e: StartIndex não pode ser menor que zero.
+Nome do parâmetro: startIndex
+-------------------------------------------
+
+Data: 21/09/2024 17:02:57
+Mensagem: Erro ao enviar a DANFe/NFC-e: StartIndex não pode ser menor que zero.
+Nome do parâmetro: startIndex
+-------------------------------------------
+
+Data: 21/09/2024 17:04:32
+Mensagem: Erro ao enviar a DANFe/NFC-e: StartIndex não pode ser menor que zero.
+Nome do parâmetro: startIndex
+-------------------------------------------
+
+Data: 21/09/2024 17:08:46
+Mensagem: Erro de argumento: Caminho do arquivo XML não pode ser nulo ou vazio, ou o arquivo não foi encontrado.
+Nome do parâmetro: caminhoXML
+-------------------------------------------
+
+Data: 21/09/2024 17:09:12
+Mensagem: Erro de argumento: Caminho do arquivo XML não pode ser nulo ou vazio, ou o arquivo não foi encontrado.
+Nome do parâmetro: caminhoXML
+-------------------------------------------
+
+Data: 21/09/2024 17:12:16
+Mensagem: DANFe/NFC-e enviada com sucesso para: israelcoringa@hotmail.com
+-------------------------------------------
+
+Data: 21/09/2024 18:05:47
+Mensagem: DANFe/NFC-e enviada com sucesso para: israelcoringa@hotmail.com
+-------------------------------------------
+
+Data: 21/09/2024 18:08:20
+Mensagem: DANFe/NFC-e enviada com sucesso para: israelcoringa@hotmail.com
+-------------------------------------------
+
+Data: 21/09/2024 18:08:32
+Mensagem: DANFe/NFC-e enviada com sucesso para: israelcoringa@hotmail.com
+-------------------------------------------
+
+Data: 21/09/2024 18:12:18
+Mensagem: DANFe/NFC-e enviada com sucesso para: israelcoringa@hotmail.com
+-------------------------------------------
+

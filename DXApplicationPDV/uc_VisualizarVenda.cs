@@ -33,6 +33,8 @@ using Unimake.Business.DFe.Servicos.NFe;
 
 using Unimake.Business.DFe.Xml.NFe;
 
+using Unimake.Business.DFe.Xml.GNRE;
+
 namespace DXApplicationPDV
 {
     public partial class uc_VisualizarVenda : DevExpress.XtraEditors.XtraUserControl
@@ -1341,16 +1343,22 @@ namespace DXApplicationPDV
         public void EnviarDANFePorEmail(string caminhoXML, string emailDestinatario)
         {
             emailDestinatario = "israelcoringa@hotmail.com";
-
-            caminhoXML = "C:\\Users\\israe\\Desktop\\35240950795588001590650010000579901170213100-procnfe.xml";
-
+            caminhoXML = @"C:\Users\israe\Desktop\XML - teste\35240950795588001590650010000579901170213100-procnfe.xml";
             try
             {
-                // Carrega o arquivo XML da NFe/NFC-e gerada
-                var nfeProc = new Unimake.Business.DFe.Xml.NFe.NFeProc();
-                nfeProc = XMLUtility.Deserializar<NFeProc>(caminhoXML);
+                // Certifique-se de que o caminho do arquivo XML existe
+                if (string.IsNullOrEmpty(caminhoXML) || !System.IO.File.Exists(caminhoXML))
+                {
+                    throw new ArgumentException("Caminho do arquivo XML não pode ser nulo ou vazio, ou o arquivo não foi encontrado.", nameof(caminhoXML));
+                }
 
-                // Configurações do e-mail
+                // Verifique o e-mail destinatário
+                if (string.IsNullOrEmpty(emailDestinatario) || !emailDestinatario.Contains("@"))
+                {
+                    throw new ArgumentException("E-mail destinatário inválido", nameof(emailDestinatario));
+                }
+
+                // Configurações do e-mail com SMTP
                 var configEmail = new DANFe.Configurations.UnidanfeConfiguration
                 {
                     Arquivo = caminhoXML,  // Arquivo XML da NFe/NFC-e
@@ -1359,7 +1367,12 @@ namespace DXApplicationPDV
                     Destinatarios = emailDestinatario,  // E-mail do cliente
                     Texto = "Segue em anexo a NFC-e/DANFe gerada.",
                     Assunto = "NFC-e/DANFe gerada com sucesso",
-                    AnexarDFe = true  // Anexa o XML e o PDF ao e-mail
+                    AnexarDFe = true,  // Anexa o XML e o PDF ao e-mail
+                    SmtpServidor = "smtp-mail.outlook.com",
+                    SmtpPorta = 587,
+                    SmtpConta = emailDestinatario,
+                    SmtpSenha = "eL@12374123",
+                    SmtpSSL = true,  // Habilitar SSL
                 };
 
                 // Gera a DANFe em PDF
@@ -1368,11 +1381,15 @@ namespace DXApplicationPDV
                 // Envia o e-mail com o DANFe/NFC-e
                 DANFe.UnidanfeServices.EnviarEmail(configEmail);
 
-                Console.WriteLine("DANFe/NFC-e enviada com sucesso para: " + emailDestinatario);
+                MensagensDoSistema.MensagemErroOk("DANFe/NFC-e enviada com sucesso para: " + emailDestinatario);
+            }
+            catch (ArgumentException argEx)
+            {
+                MensagensDoSistema.MensagemErroOk("Erro de argumento: " + argEx.Message);
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Erro ao enviar a DANFe/NFC-e: " + ex.Message);
+                MensagensDoSistema.MensagemErroOk("Erro ao enviar a DANFe/NFC-e: " + ex.Message);
             }
         }
 

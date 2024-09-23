@@ -181,8 +181,8 @@
     <Reference Include="DevExpress.Drawing.v23.2" />
     <Reference Include="DevExpress.Mvvm.v23.2" />
     <Reference Include="DevExpress.Printing.v23.2.Core" />
-    <Reference Include="Unimake.Business.DFe, Version=2024.9.12.1032, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Unimake.DFe.20240912.1032.26\lib\net472\Unimake.Business.DFe.dll</HintPath>
+    <Reference Include="Unimake.Business.DFe, Version=2024.9.20.1002, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unimake.DFe.20240920.1002.27\lib\net472\Unimake.Business.DFe.dll</HintPath>
     </Reference>
     <Reference Include="Unimake.Cryptography, Version=2024.9.5.1544, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Unimake.Cryptography.20240905.1544.35\lib\netstandard2.0\Unimake.Cryptography.dll</HintPath>
