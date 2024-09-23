@@ -23,6 +23,9 @@ using DANFe = Unimake.Unidanfe;
 
 using XmlNFe = Unimake.Business.DFe.Xml.NFe;
 
+using System.IO;
+using Unimake.Business.DFe.Xml.SNCM;
+
 namespace DXApplicationPDV
 {
     public partial class frmPamentoPDV : DevExpress.XtraEditors.XtraForm
@@ -334,7 +337,12 @@ namespace DXApplicationPDV
 
                     tb_ator filialLogada = uow.GetObjectByKey<tb_ator>(VariaveisGlobais.FilialLogada.id_ator);
 
-                    tb_ator destinatario = uow.GetObjectByKey<tb_ator>(dadosDestinatario.id_ator);
+                    tb_ator destinatario = null;
+
+                    if (dadosDestinatario != null)
+                    {
+                        destinatario = uow.GetObjectByKey<tb_ator>(dadosDestinatario.id_ator);
+                    }
 
                     decimal vlrTroco = Convert.ToDecimal(txtTroco.Text.Replace("R$", ""));
 
@@ -370,7 +378,7 @@ namespace DXApplicationPDV
                     movimentacao.mv_vlrTotPag = listaPagamentosRealizados.Sum(x => x._vlrPagamento);
                     movimentacao.fk_tb_ator_atend = usuarioLogado;
                     movimentacao.fk_tb_ator_emit = filialLogada;
-                    movimentacao.fk_tb_ator_dest = destinatario;
+                    movimentacao.fk_tb_ator_dest = dadosDestinatario == null ? null : destinatario;
 
                     uow.Save(movimentacao);
                     uow.CommitChanges();
@@ -1357,6 +1365,8 @@ namespace DXApplicationPDV
 
             PegarNumeroNota();
 
+            TelaDeCarregamento.ExibirCarregamentoForm(this);
+
             if (IsSefazEstavel())
             {
                 GerarNFCe();
@@ -1366,6 +1376,8 @@ namespace DXApplicationPDV
                 MensagensDoSistema.MensagemAtencaoOk(
                     "Estamos enfrentando uma instabilidade momentânea na conexão com a SEFAZ.");
             }
+
+            TelaDeCarregamento.EsconderCarregamento();
 
             _frmTelaInicial.TelaVendasPDV();
 
@@ -1381,6 +1393,15 @@ namespace DXApplicationPDV
                     string cpf = txtCPF.Text;
 
                     dadosDestinatario = uow.Query<tb_ator>().FirstOrDefault(x => x.at_cpf == cpf && x.at_atorTipo == 1 && x.at_desat == 0);
+
+                    if (dadosDestinatario != null)
+                    {
+                        txtNomeCliente.Text = dadosDestinatario.at_razSoc;
+                    }
+                    else
+                    {
+                        txtNomeCliente.Text = "Cliente não cadastrado!";
+                    }
                 }
             }
             catch (Exception ex)
@@ -1539,6 +1560,8 @@ namespace DXApplicationPDV
                     }
                 }
 
+                SalvarXMLPasta(autorizacao);
+
                 ImprimirCupomFiscal(autorizacao);
 
                 if (autorizacao.Result.ProtNFe.InfProt.CStat == 100)
@@ -1547,7 +1570,7 @@ namespace DXApplicationPDV
                 }
                 else
                 {
-                    MensagensDoSistema.MensagemAtencaoOk($"Não foi possível gerar a NFC-e. Motivo: {autorizacao.Result.ProtNFe.InfProt.XMotivo}");
+                    MensagensDoSistema.MensagemAtencaoOk($"Não foi possível gerar a NFC-e./n Cód.: {autorizacao.Result.ProtNFe.InfProt.CStat} /n Motivo: {autorizacao.Result.ProtNFe.InfProt.XMotivo} ");
                 }
 
                 SalvaNfe(autorizacao);
@@ -1559,6 +1582,37 @@ namespace DXApplicationPDV
 
             return 0;
         }
+
+        private void SalvarXMLPasta(ServicoNFCe.Autorizacao autorizacao)
+        {
+            try
+            {
+                var destinoArqXml =
+                    $@"C:\Users\israe\Desktop\XML - teste\{Regex.Replace(movimentacao.fk_tb_ator_emit.at_cnpj, @"[.\-/]", "")}\{(int)movimentacao.mv_nfeTipoAmb}\{serie:000}\";
+
+                var SNfeXmlProcRes = autorizacao.NfeProcResults[autorizacao.Result.ProtNFe?.InfProt?.ChNFe]?.GerarXML()
+                    ?.OuterXml;
+                string NArquivo = "";
+
+                if (autorizacao.EnviNFe.NFe[0].InfNFe[0].Ide.TpImp.ToString() == "NFCe")
+                {
+                    NArquivo = $"NFCe - {autorizacao.Result.ProtNFe?.InfProt?.ChNFe}.xml";
+                }
+                else
+                {
+                    NArquivo = $"NFe - {autorizacao.Result.ProtNFe?.InfProt?.ChNFe}.xml";
+                }
+
+                var dir = PegandoDiretorio(destinoArqXml);
+
+                File.WriteAllText(Path.Combine(dir.FullName, NArquivo), SNfeXmlProcRes);
+            }
+            catch (Exception ex)
+            {
+            }
+        }
+
+        public static DirectoryInfo PegandoDiretorio(string dir) => !Directory.Exists(dir) ? Directory.CreateDirectory(dir) : new DirectoryInfo(dir);
 
         private void ImprimirCupomFiscal(ServicoNFCe.Autorizacao autorizacao)
         {
@@ -1599,6 +1653,8 @@ namespace DXApplicationPDV
             else
             {
                 txtCPF.ErrorText = string.Empty;
+
+                BuscarDestinatario();
             }
         }
 
@@ -1714,6 +1770,17 @@ namespace DXApplicationPDV
             if (e.KeyChar == (char)Keys.Enter)
             {
                 ConfirmarPagamento();
+            }
+        }
+
+        private void txtCPF_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (txtCPF.Text != null)
+            {
+                if (e.KeyChar == (char)Keys.Enter)
+                {
+                    BuscarDestinatario();
+                }
             }
         }
     }

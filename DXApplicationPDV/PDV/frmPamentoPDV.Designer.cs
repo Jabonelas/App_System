@@ -64,6 +64,8 @@
             this.btnConfirmarPagamento = new DevExpress.XtraEditors.SimpleButton();
             this.txtCPF = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.txtNomeCliente = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.grdPagamentos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
@@ -91,11 +93,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CampoTroco)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCPF.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNomeCliente.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(357, 151);
+            this.labelControl1.Location = new System.Drawing.Point(357, 189);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(59, 13);
             this.labelControl1.TabIndex = 15;
@@ -103,10 +106,10 @@
             // 
             // grdPagamentos
             // 
-            this.grdPagamentos.Location = new System.Drawing.Point(357, 168);
+            this.grdPagamentos.Location = new System.Drawing.Point(357, 208);
             this.grdPagamentos.MainView = this.gridView2;
             this.grdPagamentos.Name = "grdPagamentos";
-            this.grdPagamentos.Size = new System.Drawing.Size(313, 236);
+            this.grdPagamentos.Size = new System.Drawing.Size(313, 196);
             this.grdPagamentos.TabIndex = 14;
             this.grdPagamentos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -433,9 +436,9 @@
             this.lblTotalGeral.Appearance.Options.UseFont = true;
             this.lblTotalGeral.Location = new System.Drawing.Point(406, 449);
             this.lblTotalGeral.Name = "lblTotalGeral";
-            this.lblTotalGeral.Size = new System.Drawing.Size(217, 45);
+            this.lblTotalGeral.Size = new System.Drawing.Size(126, 45);
             this.lblTotalGeral.TabIndex = 20;
-            this.lblTotalGeral.Text = "R$ 00.000,00";
+            this.lblTotalGeral.Text = "R$ 0,00";
             // 
             // labelControl2
             // 
@@ -488,6 +491,7 @@
             this.txtCPF.Properties.MaskSettings.Set("mask", "000\\.000\\.000\\-00");
             this.txtCPF.Size = new System.Drawing.Size(313, 20);
             this.txtCPF.TabIndex = 23;
+            this.txtCPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCPF_KeyPress);
             this.txtCPF.Validating += new System.ComponentModel.CancelEventHandler(this.txtCPF_Validating);
             // 
             // labelControl3
@@ -498,11 +502,33 @@
             this.labelControl3.TabIndex = 24;
             this.labelControl3.Text = "C.P.F.";
             // 
+            // txtNomeCliente
+            // 
+            this.txtNomeCliente.EditValue = "Cliente não informado.";
+            this.txtNomeCliente.Enabled = false;
+            this.txtNomeCliente.Location = new System.Drawing.Point(357, 165);
+            this.txtNomeCliente.Name = "txtNomeCliente";
+            this.txtNomeCliente.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
+            this.txtNomeCliente.Properties.MaskSettings.Set("MaskManagerSignature", "ignoreMaskBlank=True");
+            this.txtNomeCliente.Properties.MaskSettings.Set("mask", "000\\.000\\.000\\-00");
+            this.txtNomeCliente.Size = new System.Drawing.Size(313, 20);
+            this.txtNomeCliente.TabIndex = 25;
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Location = new System.Drawing.Point(357, 151);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(63, 13);
+            this.labelControl4.TabIndex = 26;
+            this.labelControl4.Text = "Nome Cliente";
+            // 
             // frmPamentoPDV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(682, 526);
+            this.Controls.Add(this.labelControl4);
+            this.Controls.Add(this.txtNomeCliente);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.txtCPF);
             this.Controls.Add(this.btnConfirmarPagamento);
@@ -546,6 +572,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CampoTroco)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCPF.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNomeCliente.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -587,5 +614,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn VlrPagamento;
         private DevExpress.XtraEditors.TextEdit txtCPF;
         private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.TextEdit txtNomeCliente;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
     }
 }

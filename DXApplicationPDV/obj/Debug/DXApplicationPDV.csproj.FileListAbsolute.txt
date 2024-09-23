@@ -100,3 +100,5 @@ C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\obj\Debug\DXApplic
 C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\obj\Debug\DXApplicationPDV.pdb
 C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\obj\Debug\DXApplicationPDV.uc_VendasPDV.resources
 C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\obj\Debug\DXApplicationPDV.uc_VisualizarVenda.resources
+C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\obj\Debug\DXApplicationPDV.AberturaCaixa.uc_AberturaCaixa.resources
+C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\obj\Debug\DXApplicationPDV.FechamentoCaixa.uc_FechamentoCaixa.resources

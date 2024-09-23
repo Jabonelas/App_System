@@ -26,6 +26,8 @@ using XmlNFe = Unimake.Business.DFe.Xml.NFe;
 
 using Unimake.Business.DFe.Xml.SNCM;
 using System.Text.RegularExpressions;
+using DXApplicationPDV.AberturaCaixa;
+using DXApplicationPDV.FechamentoCaixa;
 
 namespace DXApplicationPDV
 {
@@ -57,6 +59,38 @@ namespace DXApplicationPDV
 
         private void btnEntrada_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+        }
+
+        public void TelaAberturaCaixa()
+        {
+            TelaDeCarregamento.ExibirCarregamentoForm(this);
+
+            pnlTelaPrincipal.Controls.Clear();
+            uc_AberturaCaixa ucAberturaCaixa = new uc_AberturaCaixa(this);
+            pnlTelaPrincipal.Controls.Add(ucAberturaCaixa);
+            pnlTelaPrincipal.Tag = ucAberturaCaixa;
+            ucAberturaCaixa.Show();
+        }
+
+        private void btnAberturaCaixa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            TelaAberturaCaixa();
+        }
+
+        public void TelaFechamentoCaixa()
+        {
+            TelaDeCarregamento.ExibirCarregamentoForm(this);
+
+            pnlTelaPrincipal.Controls.Clear();
+            uc_FechamentoCaixa ucFechamentoCaixa = new uc_FechamentoCaixa(this);
+            pnlTelaPrincipal.Controls.Add(ucFechamentoCaixa);
+            pnlTelaPrincipal.Tag = ucFechamentoCaixa;
+            ucFechamentoCaixa.Show();
+        }
+
+        private void btnFechamentoCaixa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            TelaFechamentoCaixa();
         }
     }
 }

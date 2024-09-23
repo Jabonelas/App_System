@@ -246,6 +246,7 @@
             this.btnExcluir.ToolTip = "Clique para remover o registro selecionado.";
             this.btnExcluir.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.btnExcluir.ToolTipTitle = "Excluir:";
+            this.btnExcluir.Visible = false;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnPagamento
@@ -260,9 +261,9 @@
             this.btnPagamento.Size = new System.Drawing.Size(83, 68);
             this.btnPagamento.TabIndex = 11;
             this.btnPagamento.Text = "Pagamento";
-            this.btnPagamento.ToolTip = "Clique para remover o registro selecionado.";
+            this.btnPagamento.ToolTip = "Clique para realizar o pagamento.";
             this.btnPagamento.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.btnPagamento.ToolTipTitle = "Excluir:";
+            this.btnPagamento.ToolTipTitle = "Pagamento:";
             this.btnPagamento.Click += new System.EventHandler(this.btnPagamento_Click);
             // 
             // labelControl1
@@ -279,9 +280,9 @@
             this.lblTotalGeral.Appearance.Options.UseFont = true;
             this.lblTotalGeral.Location = new System.Drawing.Point(933, 455);
             this.lblTotalGeral.Name = "lblTotalGeral";
-            this.lblTotalGeral.Size = new System.Drawing.Size(309, 58);
+            this.lblTotalGeral.Size = new System.Drawing.Size(164, 58);
             this.lblTotalGeral.TabIndex = 13;
-            this.lblTotalGeral.Text = "R$ 000.000,00";
+            this.lblTotalGeral.Text = "R$ 0,00";
             // 
             // btnVoltar
             // 

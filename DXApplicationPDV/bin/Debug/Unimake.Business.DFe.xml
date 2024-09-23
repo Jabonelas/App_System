@@ -611,6 +611,20 @@
             Envio individual
             </summary>
         </member>
+        <!-- Badly formed XML comment ignored for member "P:Unimake.Business.DFe.Xml.DARE.DARE.NumeroControleDarePrincipal" -->
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DARE.GerarPDF">
+            <summary>
+            Indica se um PDF do DARE deve ser gerado. 
+            Pode ser um valor "sim" ou "não" que determina se o documento deve ser criado em formato PDF.
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DARE.CodigoBarra44">
+            <summary>
+             Código de barras com 44 posições associado ao DARE. 
+            Este código é utilizado para a leitura e processamento automático do documento.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Unimake.Business.DFe.Xml.DARE.DARE.CodigoBarra48" -->
         <member name="P:Unimake.Business.DFe.Xml.DARE.DARE.Cnpj">
             <summary>
             O CNPJ da entidade a quem o DARE se refere.
@@ -623,22 +637,16 @@
             Este é um identificador único para pessoas físicas no Brasil.
             </summary>
         </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DARE.Cpr">
+            <summary>
+            Código de Receita Federal relacionado ao DARE. 
+            Este código é utilizado para identificar o tipo de receita tributária.
+            </summary>
+        </member>
         <member name="P:Unimake.Business.DFe.Xml.DARE.DARE.Cidade">
             <summary>
             Nome da cidade onde a entidade está localizada. 
             Este campo descreve a localidade do endereço da entidade.
-            </summary>
-        </member>
-        <member name="P:Unimake.Business.DFe.Xml.DARE.DARE.CodigoBarra44">
-            <summary>
-             Código de barras com 44 posições associado ao DARE. 
-            Este código é utilizado para a leitura e processamento automático do documento.
-            </summary>
-        </member>
-        <member name="P:Unimake.Business.DFe.Xml.DARE.DARE.CodigoBarra48">
-            <summary>
-            Código de barras com 48 posições associado ao DARE. 
-            Este código é utilizado para a leitura e processamento automático do documento.
             </summary>
         </member>
         <member name="P:Unimake.Business.DFe.Xml.DARE.DARE.DataVencimento">
@@ -659,34 +667,28 @@
             Este campo inclui informações como rua, número, complemento e bairro.
             </summary>
         </member>
-        <member name="P:Unimake.Business.DFe.Xml.DARE.DARE.Erro">
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DARE.FuncionalidadeOrigem">
             <summary>
-            Informações sobre erros relacionados à solicitação do DARE. 
-            Este campo fornece detalhes sobre problemas ou falhas encontradas durante o processamento.
+             Identificador da funcionalidade ou sistema de origem do DARE. 
+            Este campo pode indicar qual sistema ou módulo gerou o documento.
             </summary>
         </member>
-        <member name="P:Unimake.Business.DFe.Xml.DARE.DARE.GerarPDF">
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DARE.InscricaoEstadual">
             <summary>
-            Indica se um PDF do DARE deve ser gerado. 
-            Pode ser um valor "sim" ou "não" que determina se o documento deve ser criado em formato PDF.
-            </summary>
-        </member>
-        <member name="P:Unimake.Business.DFe.Xml.DARE.DARE.NumeroControleDarePrincipal">
-            <summary>
-            Número de controle do DARE principal. 
-            Este é um identificador único para o DARE, usado para rastreamento e referência.
-            </summary>
-        </member>
-        <member name="P:Unimake.Business.DFe.Xml.DARE.DARE.Observacao">
-            <summary>
-            Observações adicionais relacionadas ao pagamento do DARE. 
-            Pode incluir comentários ou informações específicas que devem ser consideradas.
+            Inscrição Estadual da entidade. 
+            Este número identifica a empresa ou entidade em nível estadual para fins de tributação.
             </summary>
         </member>
         <member name="P:Unimake.Business.DFe.Xml.DARE.DARE.PixCopiaCola">
             <summary>
             Código PIX que pode ser usado para pagamento via cópia e cola. 
             Este código é utilizado para facilitar pagamentos utilizando o sistema PIX.
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DARE.PossiveisReceitas">
+            <summary>
+            Informações sobre receitas tributárias possíveis associadas ao DARE. 
+            Este campo pode incluir códigos ou descrições das receitas que o DARE abrange.
             </summary>
         </member>
         <member name="P:Unimake.Business.DFe.Xml.DARE.DARE.RazaoSocial">
@@ -699,6 +701,18 @@
             <summary>
             Informações detalhadas sobre a receita tributária associada ao DARE. 
             Pode incluir descrições, códigos e outros dados relevantes sobre a receita.
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DARE.Erro">
+            <summary>
+            Informações sobre erros relacionados à solicitação do DARE. 
+            Este campo fornece detalhes sobre problemas ou falhas encontradas durante o processamento.
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DARE.Observacao">
+            <summary>
+            Observações adicionais relacionadas ao pagamento do DARE. 
+            Pode incluir comentários ou informações específicas que devem ser consideradas.
             </summary>
         </member>
         <member name="P:Unimake.Business.DFe.Xml.DARE.DARE.Referencia">
@@ -755,6 +769,12 @@
             Este campo pode incluir dados ou instruções específicas localizadas nesta linha do documento.
             </summary>
         </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DARE.NumeroGuia">
+            <summary>
+            Número da guia do DARE. 
+            Este é um identificador único que pode ser utilizado para localizar ou referenciar o documento.
+            </summary>
+        </member>
         <member name="T:Unimake.Business.DFe.Xml.DARE.DARELote">
             <summary>
             DARE - SP - Documento de Arrecadação de Receitas Estaduais
@@ -779,21 +799,174 @@
             Este campo define como os subelementos ou documentos são agrupados no lote.
             </summary>
         </member>
-        <member name="P:Unimake.Business.DFe.Xml.DARE.DARELote.ZipDownload">
-            <summary>
-            Indica o arquivo compactado contendo os documentos gerados em um processamento de lote de DAREs
-            </summary>
-        </member>
         <member name="P:Unimake.Business.DFe.Xml.DARE.DARELote.ItensParaGeracao">
             <summary>
             Lista de itens para geração no lote DARE. 
             Contém os diferentes elementos que compõem o lote para processamento.
             </summary>
         </member>
-        <member name="P:Unimake.Business.DFe.Xml.DARE.Erro.EstaOk">
+        <!-- Badly formed XML comment ignored for member "P:Unimake.Business.DFe.Xml.DARE.DadosContribuinteNaoCadastrado.NumeroControleDarePrincipal" -->
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DadosContribuinteNaoCadastrado.GerarPDF">
             <summary>
-            Indica se o processamento do DARE está OK ou não. 
-            Um valor que indica o status geral do processamento.
+            Indica se um PDF do DARE deve ser gerado. 
+            Pode ser um valor "sim" ou "não" que determina se o documento deve ser criado em formato PDF.
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DadosContribuinteNaoCadastrado.CodigoBarra44">
+            <summary>
+             Código de barras com 44 posições associado ao DARE. 
+            Este código é utilizado para a leitura e processamento automático do documento.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Unimake.Business.DFe.Xml.DARE.DadosContribuinteNaoCadastrado.CodigoBarra48" -->
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DadosContribuinteNaoCadastrado.Cnpj">
+            <summary>
+            O CNPJ da entidade a quem o DARE se refere.
+            Este é um identificador único para pessoas jurídicas no Brasil.
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DadosContribuinteNaoCadastrado.Cpf">
+            <summary>
+            O CPF do responsável pelo DARE, se aplicável. 
+            Este é um identificador único para pessoas físicas no Brasil.
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DadosContribuinteNaoCadastrado.Cpr">
+            <summary>
+            Código de Receita Federal relacionado ao DARE. 
+            Este código é utilizado para identificar o tipo de receita tributária.
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DadosContribuinteNaoCadastrado.Cidade">
+            <summary>
+            Nome da cidade onde a entidade está localizada. 
+            Este campo descreve a localidade do endereço da entidade.
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DadosContribuinteNaoCadastrado.DataVencimento">
+            <summary>
+             Data de vencimento do DARE, informando quando o pagamento deve ser realizado.
+            Este campo deve estar no formato apropriado para datas.
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DadosContribuinteNaoCadastrado.DocumentoImpressao">
+            <summary>
+            Informações adicionais sobre o documento para impressão, se aplicável. 
+            Pode incluir instruções ou dados específicos necessários para a impressão do DARE
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DadosContribuinteNaoCadastrado.Endereco">
+            <summary>
+            Endereço completo da entidade que emitiu o DARE. 
+            Este campo inclui informações como rua, número, complemento e bairro.
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DadosContribuinteNaoCadastrado.FuncionalidadeOrigem">
+            <summary>
+             Identificador da funcionalidade ou sistema de origem do DARE. 
+            Este campo pode indicar qual sistema ou módulo gerou o documento.
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DadosContribuinteNaoCadastrado.InscricaoEstadual">
+            <summary>
+            Inscrição Estadual da entidade. 
+            Este número identifica a empresa ou entidade em nível estadual para fins de tributação.
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DadosContribuinteNaoCadastrado.PixCopiaCola">
+            <summary>
+            Código PIX que pode ser usado para pagamento via cópia e cola. 
+            Este código é utilizado para facilitar pagamentos utilizando o sistema PIX.
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DadosContribuinteNaoCadastrado.PossiveisReceitas">
+            <summary>
+            Informações sobre receitas tributárias possíveis associadas ao DARE. 
+            Este campo pode incluir códigos ou descrições das receitas que o DARE abrange.
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DadosContribuinteNaoCadastrado.RazaoSocial">
+            <summary>
+            Razão social da entidade que emitiu o DARE. 
+            Este é o nome legal da entidade, geralmente uma empresa ou organização.
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DadosContribuinteNaoCadastrado.Receita">
+            <summary>
+            Informações detalhadas sobre a receita tributária associada ao DARE. 
+            Pode incluir descrições, códigos e outros dados relevantes sobre a receita.
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DadosContribuinteNaoCadastrado.Erro">
+            <summary>
+            Informações sobre erros relacionados à solicitação do DARE. 
+            Este campo fornece detalhes sobre problemas ou falhas encontradas durante o processamento.
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DadosContribuinteNaoCadastrado.Observacao">
+            <summary>
+            Observações adicionais relacionadas ao pagamento do DARE. 
+            Pode incluir comentários ou informações específicas que devem ser consideradas.
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DadosContribuinteNaoCadastrado.Referencia">
+            <summary>
+            Referência adicional para o DARE. 
+            Este campo pode incluir um número ou descrição que ajuda a identificar o documento de forma única.
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DadosContribuinteNaoCadastrado.Telefone">
+            <summary>
+             Número de telefone para contato relacionado ao DARE. 
+            Este é o número pelo qual a entidade pode ser contatada para questões relacionadas ao documento.
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DadosContribuinteNaoCadastrado.Uf">
+            <summary>
+            Unidade Federativa (UF) onde a entidade está localizada. 
+            Este campo indica o estado brasileiro em que a entidade está registrada.
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DadosContribuinteNaoCadastrado.Valor">
+            <summary>
+            Valor principal do DARE. 
+            Este é o valor base a ser pago, antes da adição de juros e multas.
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DadosContribuinteNaoCadastrado.ValorJuros">
+            <summary>
+             Valor dos juros aplicados ao DARE. 
+            Este é o valor adicional cobrado como juros sobre o valor principal.
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DadosContribuinteNaoCadastrado.ValorMulta">
+            <summary>
+            Valor da multa aplicada ao DARE. 
+            Este é o valor adicional cobrado como multa sobre o valor principal.
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DadosContribuinteNaoCadastrado.ValorTotal">
+            <summary>
+            Valor total a ser pago, incluindo juros e multa. 
+            Este é o valor final que deve ser pago, somando o valor principal, juros e multas.
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DadosContribuinteNaoCadastrado.Linha06">
+            <summary>
+             Informações adicionais na linha 06 do DARE, se aplicável. 
+            Este campo pode incluir dados ou instruções específicas localizadas nesta linha do documento.
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DadosContribuinteNaoCadastrado.Linha08">
+            <summary>
+             Informações adicionais na linha 08 do DARE, se aplicável. 
+            Este campo pode incluir dados ou instruções específicas localizadas nesta linha do documento.
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DadosContribuinteNaoCadastrado.NumeroGuia">
+            <summary>
+            Número da guia do DARE. 
+            Este é um identificador único que pode ser utilizado para localizar ou referenciar o documento.
             </summary>
         </member>
         <member name="P:Unimake.Business.DFe.Xml.DARE.Erro.Mensagens">
@@ -802,10 +975,63 @@
             Pode incluir uma ou mais mensagens explicando os problemas encontrados.
             </summary>
         </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.Erro.EstaOk">
+            <summary>
+            Indica se o processamento do DARE está OK ou não. 
+            Um valor que indica o status geral do processamento.
+            </summary>
+        </member>
         <member name="P:Unimake.Business.DFe.Xml.DARE.ItensParaGeracao.DARE">
             <summary>
             Lista de objetos DARE para geração. 
             Cada item nesta lista representa um DARE individual que compõe o lote.
+            </summary>
+        </member>
+        <member name="T:Unimake.Business.DFe.Xml.DARE.DARERetorno">
+            <summary>
+            Retorno DARE Unico e Lote
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DARERetorno.Telefone">
+            <summary>
+             Número de telefone para contato relacionado ao DARE. 
+            Este é o número pelo qual a entidade pode ser contatada para questões relacionadas ao documento.
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DARERetorno.Uf">
+            <summary>
+            Unidade Federativa (UF) onde a entidade está localizada. 
+            Este campo indica o estado brasileiro em que a entidade está registrada.
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DARERetorno.Valor">
+            <summary>
+            Valor principal do DARE. 
+            Este é o valor base a ser pago, antes da adição de juros e multas.
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.DARERetorno.TipoAgrupamentoFilhotes">
+            <summary>
+            Tipo de agrupamento dos "filhotes" no lote DARE. 
+            Este campo define como os subelementos ou documentos são agrupados no lote.
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.ItensParaGeracaoRetorno.Item">
+            <summary>
+            Lista de itens para geração no lote DARE. 
+            Contém os diferentes elementos que compõem o lote para processamento.
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.ItensDARERetorno.Telefone">
+            <summary>
+             Número de telefone para contato relacionado ao DARE. 
+            Este é o número pelo qual a entidade pode ser contatada para questões relacionadas ao documento.
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Xml.DARE.ItensDARERetorno.Valor">
+            <summary>
+            Valor principal do DARE. 
+            Este é o valor base a ser pago, antes da adição de juros e multas.
             </summary>
         </member>
         <member name="T:Unimake.Business.DFe.Xml.DARE.Receitas">
@@ -880,6 +1106,20 @@
             <summary>
             Configurações Cultura para o REINF
             </summary>
+        </member>
+        <member name="M:Unimake.Business.DFe.Xml.EFDReinf.ReinfEnvioLoteEventos.LoadFromFile(System.String)">
+            <summary>
+            Desserializar o XML de Lote de Eventos do EFDReinf no objeto ReinfEnvioLoteEventos
+            </summary>
+            <param name="filename">Localização do arquivo XML de lote de eventos do EFDReinf</param>
+            <returns>Objeto do ReinfEnvioLoteEventos</returns>
+        </member>
+        <member name="M:Unimake.Business.DFe.Xml.EFDReinf.ReinfEnvioLoteEventos.LoadFromXML(System.String)">
+            <summary>
+            Desserializar o XML de Lote de Eventos do EFDReinf no objeto ReinfEnvioLoteEventos
+            </summary>
+            <param name="xml">string do XML de lote de eventos do EFDReinf</param>
+            <returns>Objeto do ReinfEnvioLoteEventos</returns>
         </member>
         <member name="T:Unimake.Business.DFe.Xml.EFDReinf.ReinfEventoBase">
             <summary>
@@ -6927,6 +7167,20 @@
             trabalhador, que não esteja consignada em outros campos
             </summary>
         </member>
+        <member name="M:Unimake.Business.DFe.Xml.ESocial.ESocialEnvioLoteEventos.LoadFromFile(System.String)">
+            <summary>
+            Desserializar o XML de Lote de Eventos do eSocial no objeto ESocialEnvioLoteEventos
+            </summary>
+            <param name="filename">Localização do arquivo XML de lote de eventos do eSocial</param>
+            <returns>Objeto do ESocialEnvioLoteEventos</returns>
+        </member>
+        <member name="M:Unimake.Business.DFe.Xml.ESocial.ESocialEnvioLoteEventos.LoadFromXML(System.String)">
+            <summary>
+            Desserializar o XML de Lote de Eventos do eSocial no objeto ESocialEnvioLoteEventos
+            </summary>
+            <param name="xml">string do XML de lote de eventos do eSocial</param>
+            <returns>Objeto do ESocialEnvioLoteEventos</returns>
+        </member>
         <member name="P:Unimake.Business.DFe.Xml.ESocial.ESocialProc.NomeArquivoDistribuicao">
             <summary>
             Nome do arquivo XML de distribuição do evento
@@ -9473,6 +9727,16 @@
             Classe para definição de parâmetros da API
             </summary>
         </member>
+        <member name="P:Unimake.Business.DFe.APIConfig.ApiKey">
+            <summary>
+            Host - Header API
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.APIConfig.Host">
+            <summary>
+            Host - Header API
+            </summary>
+        </member>
         <member name="P:Unimake.Business.DFe.APIConfig.UsaCertificadoDigital">
             <summary>
             Utiliza ou não o certificado digital
@@ -9580,6 +9844,16 @@
             <param name="xml">XML a ser enviado para o webservice</param>
             <param name="apiConfig">Parâmetros para execução do serviço (parâmetros da API)</param>
             <param name="certificado">Certificado digital a ser utilizado na conexão com os serviços</param>
+        </member>
+        <member name="M:Unimake.Business.DFe.ConsumirAPI.CriarRequest(System.Security.Cryptography.X509Certificates.X509Certificate2,Unimake.Business.DFe.APIConfig)">
+            <summary>
+            Configurar a comunicação - Certificado - Headers - Ajuste do Link de comunicação
+            </summary>
+        </member>
+        <member name="M:Unimake.Business.DFe.ConsumirAPI.AjustarLink(Unimake.Business.DFe.APIConfig,System.Xml.XmlDocument)">
+            <summary>
+            Ajuste de links dinâmicos (com variáveis)  
+            </summary>
         </member>
         <member name="M:Unimake.Business.DFe.ConsumirAPI.EnveloparXML(Unimake.Business.DFe.APIConfig,System.Xml.XmlDocument)">
             <summary>
@@ -10203,6 +10477,21 @@
         <member name="P:Unimake.Business.DFe.Servicos.Configuracao.HasProxy">
             <summary>
             Tem servidor de proxy?
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Servicos.Configuracao.HostHomologacao">
+            <summary>
+            Host - Header API
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Servicos.Configuracao.HostProducao">
+            <summary>
+            Host - Header API
+            </summary>
+        </member>
+        <member name="P:Unimake.Business.DFe.Servicos.Configuracao.ApiKey">
+            <summary>
+            ApiKey - Header API
             </summary>
         </member>
         <member name="P:Unimake.Business.DFe.Servicos.Configuracao.Modelo">
@@ -11147,6 +11436,109 @@
             <param name="nomeArquivo">Nome para o arquivo XML</param>
             <param name="conteudoXML">Conteúdo do XML</param>
         </member>
+        <member name="T:Unimake.Business.DFe.Servicos.DARE.EnvioDARE">
+            <summary>
+            Enviar o xml para o webservice
+            </summary>
+        </member>
+        <member name="M:Unimake.Business.DFe.Servicos.DARE.EnvioDARE.#ctor(Unimake.Business.DFe.Xml.DARE.DARE,Unimake.Business.DFe.Servicos.Configuracao)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Unimake.Business.DFe.Servicos.DARE.EnvioDARE.GravarXmlDistribuicao(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="pasta"></param>
+            <param name="nomeArquivo"></param>
+            <param name="conteudoXML"></param>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Unimake.Business.DFe.Servicos.DARE.EnvioDARE.DefinirConfiguracao">
+            <summary>
+            
+            </summary>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:Unimake.Business.DFe.Servicos.DARE.EnvioDARELote">
+            <summary>
+            Enviar o xml para o webservice
+            </summary>
+        </member>
+        <member name="M:Unimake.Business.DFe.Servicos.DARE.EnvioDARELote.#ctor(Unimake.Business.DFe.Xml.DARE.DARELote,Unimake.Business.DFe.Servicos.Configuracao)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Unimake.Business.DFe.Servicos.DARE.EnvioDARELote.GravarXmlDistribuicao(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="pasta"></param>
+            <param name="nomeArquivo"></param>
+            <param name="conteudoXML"></param>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Unimake.Business.DFe.Servicos.DARE.EnvioDARELote.DefinirConfiguracao">
+            <summary>
+            
+            </summary>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:Unimake.Business.DFe.Servicos.DARE.ServicoBase">
+            <summary>
+            Classe base para os serviços da DARE
+            </summary>
+        </member>
+        <member name="M:Unimake.Business.DFe.Servicos.DARE.ServicoBase.#ctor">
+            <summary>
+            Construtor
+            </summary>
+        </member>
+        <member name="M:Unimake.Business.DFe.Servicos.DARE.ServicoBase.DefinirConfiguracao">
+            <summary>
+            Definir configurações
+            </summary>
+        </member>
+        <member name="M:Unimake.Business.DFe.Servicos.DARE.ServicoBase.XmlValidar">
+            <summary>
+            Validar o XML
+            </summary>
+        </member>
+        <member name="M:Unimake.Business.DFe.Servicos.DARE.ServicoBase.XmlValidarConteudo">
+            <summary>
+            Validar, o conteúdo das tags do XML, alguns validações manuais que o schema não faz. Vamos implementando novas regras na medida da necessidade de cada serviço.
+            </summary>
+        </member>
+        <member name="M:Unimake.Business.DFe.Servicos.DARE.ServicoBase.VerificarAssinarXML(System.String,System.String)">
+            <summary>
+            Verifica se o XML está assinado, se não estiver assina. Só faz isso para XMLs que tem tag de assinatura, demais ele mantem como está, sem assinar.
+            </summary>
+            <param name="tagAssinatura">Tag de assinatura</param>
+            <param name="tagAtributoID">Tag que detêm o atributo ID</param>
+        </member>
+        <member name="M:Unimake.Business.DFe.Servicos.DARE.ServicoBase.Executar">
+            <summary>
+            Executar o serviço
+            </summary>       
+        </member>
+        <member name="M:Unimake.Business.DFe.Servicos.DARE.ServicoBase.GravarXmlDistribuicao(System.String,System.String,System.String)">
+            <summary>
+            Gravar o XML de distribuição em uma pasta no HD
+            </summary>
+            <param name="pasta">Pasta onde deve ser gravado o XML no HD</param>
+            <param name="nomeArquivo">Nome do arquivo a ser gravado no HD</param>
+            <param name="conteudoXML">String contendo o conteúdo do XML a ser gravado no HD</param>
+        </member>
+        <member name="M:Unimake.Business.DFe.Servicos.DARE.ServicoBase.GravarXmlDistribuicao(System.IO.Stream,System.String,System.Text.Encoding)">
+            <summary>
+            Gravar o XML de distribuição em um stream
+            </summary>
+            <param name="value">Conteúdo a ser gravado no stream</param>
+            <param name="stream">Stream que vai receber o conteúdo do XML</param>
+            <param name="encoding">Define o encoding do stream, caso não informado ,será usado o UTF8</param>
+        </member>
         <member name="T:Unimake.Business.DFe.Servicos.EFDReinf.ConsultaLoteAssincrono">
             <summary>
             Enviar o XML de consulta recibo Evento EFDReinf para o web-service
@@ -11674,6 +12066,11 @@
             Download dos eventos do eSocial
             </summary>
         </member>
+        <member name="F:Unimake.Business.DFe.Servicos.Servico.DAREEnvio">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="F:Unimake.Business.DFe.Servicos.Servico.Nulo">
             <summary>
             9999 - Serviço não definido
@@ -11752,6 +12149,11 @@
         <member name="F:Unimake.Business.DFe.Servicos.TipoDFe.ESocial">
             <summary>
             12 - eSocial - Escrituração Digital das Obrigações Fiscais, Previdenciárias e Trabalhistas
+            </summary>
+        </member>
+        <member name="F:Unimake.Business.DFe.Servicos.TipoDFe.DARE">
+            <summary>
+            13 - DARE SP - Documento de Arrecadação de Receitas Estaduais
             </summary>
         </member>
         <member name="T:Unimake.Business.DFe.Servicos.UFBrasil">
@@ -22189,17 +22591,32 @@
             Desserializar nesta propriedade o XML do lote de eventos já assinado que foi enviado.
             </summary>
         </member>
-        <member name="M:Unimake.Business.DFe.Servicos.ESocial.ConsultaLoteAssincrono.GravarXmlDistribuicao(System.String,System.String,System.String)">
-            <inheritdoc />
+        <member name="M:Unimake.Business.DFe.Servicos.ESocial.ConsultaLoteAssincrono.GravarXML(Unimake.Business.DFe.Xml.ESocial.ESocialProc,System.String,System.String)">
+            <summary>
+            Gravar o XML de distribuição
+            </summary>
+            <param name="esocialProc">Objeto da estrutura do XML de distribuição contendo o evento e ID</param>
+            <param name="pasta">Pasta onde será gravado os XMLs de distribuição dos eventos autorizados</param>
+            <param name="idEvento">Id do evento a ser gravado. Em branco ou nulo vai gravar o XML de distribuição de todos os eventos do lote enviado</param>
         </member>
-        <member name="M:Unimake.Business.DFe.Servicos.ESocial.ConsultaLoteAssincrono.GravarXmlDistribuicao(System.IO.Stream,System.String,System.Text.Encoding)">
-            <inheritdoc />
+        <member name="M:Unimake.Business.DFe.Servicos.ESocial.ConsultaLoteAssincrono.GravarXmlDistribuicao(System.String,System.String)">
+            <summary>
+            Gravar XML de distribuição dos eventos enviados/autorizados em uma pasta específica
+            </summary>
+            <param name="pasta">Pasta onde será gravado os XMLs de distribuição dos eventos autorizados</param>
+            <param name="idEvento">Id do evento a ser gravado. Em branco ou nulo vai gravar o XML de distribuição de todos os eventos do lote enviado</param>
         </member>
         <member name="M:Unimake.Business.DFe.Servicos.ESocial.ConsultaLoteAssincrono.GravarXmlDistribuicao(System.String)">
             <summary>
             Gravar XML de distribuição dos eventos enviados/autorizados em uma pasta específica
             </summary>
             <param name="pasta">Pasta onde será gravado os XMLs de distribuição dos eventos autorizados</param>
+        </member>
+        <member name="M:Unimake.Business.DFe.Servicos.ESocial.ConsultaLoteAssincrono.GravarXmlDistribuicao(System.String,System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Unimake.Business.DFe.Servicos.ESocial.ConsultaLoteAssincrono.GravarXmlDistribuicao(System.IO.Stream,System.String,System.Text.Encoding)">
+            <inheritdoc />
         </member>
         <member name="M:Unimake.Business.DFe.Servicos.ESocial.ConsultaLoteAssincrono.DefinirConfiguracao">
             <summary>
