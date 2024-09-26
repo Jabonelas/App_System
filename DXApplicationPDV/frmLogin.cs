@@ -23,6 +23,9 @@ namespace DXApplicationPDV
         {
             InitializeComponent();
 
+            // Desabilitar a opção de maximizar a tela
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+
             txtUsuario.EditValue = PlaceholderText;
             txtUsuario.ForeColor = Color.Gray;
             txtUsuario.Text = "geral";

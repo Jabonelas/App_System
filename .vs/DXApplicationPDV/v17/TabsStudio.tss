@@ -6,32 +6,12 @@
       <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\frmTelaInicial.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\AberturaCaixa\uc_AberturaCaixa.cs</string>
-      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\AberturaCaixa\uc_AberturaCaixa.cs</string>
+      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\Caixa\Relatorios\uc_RelatorioFluxoSaida.cs</string>
+      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\Caixa\Relatorios\uc_RelatorioFluxoSaida.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\PDV\uc_PDV.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\FechamentoCaixa\uc_FechamentoCaixa.cs</string>
-      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\FechamentoCaixa\uc_FechamentoCaixa.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\PDV\uc_VendasPDV.cs</string>
-      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\PDV\uc_VendasPDV.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\PDV\uc_VisualizarVenda.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\PDV\frmPamentoPDV.cs</string>
-      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\PDV\frmPamentoPDV.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\Classes\MensagensDoSistema.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\Users\israe\AppData\Local\JetBrains\Shared\vAny\DecompilerCache\decompiler\bb93580b829e4f7d9c8d742286f27f7d5b8648\34\b84f3f9a\MessageBoxIcon.cs</string>
+      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\Caixa\Fluxo de Caixa\Fechamento Caixa\uc_FechamentoCaixa.cs</string>
+      <string>C:\Users\israe\source\repos\DXApplicationPDV\DXApplicationPDV\Caixa\Fluxo de Caixa\Fechamento Caixa\uc_FechamentoCaixa.cs</string>
     </ArrayOfString>
   </ArrayOfArrayOfString>
 </ArrayOfArrayOfArrayOfString>

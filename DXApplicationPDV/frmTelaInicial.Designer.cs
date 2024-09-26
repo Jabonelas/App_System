@@ -52,19 +52,36 @@
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnVenda = new DevExpress.XtraBars.BarButtonItem();
             this.btnEntrada = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnSaida = new DevExpress.XtraBars.BarButtonItem();
             this.btnAberturaCaixa = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.btnFechamentoCaixa = new DevExpress.XtraBars.BarButtonItem();
             this.skinDropDownButtonItem1 = new DevExpress.XtraBars.SkinDropDownButtonItem();
+            this.barStatusFilail = new DevExpress.XtraBars.BarButtonItem();
+            this.barStatusUsuario = new DevExpress.XtraBars.BarButtonItem();
+            this.barStatusVendedor = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnRelatorioFluxoSaida = new DevExpress.XtraBars.BarButtonItem();
+            this.btnProdutos = new DevExpress.XtraBars.BarButtonItem();
+            this.btnEmpresas = new DevExpress.XtraBars.BarButtonItem();
+            this.btnConsumidores = new DevExpress.XtraBars.BarButtonItem();
+            this.btnDeslogar = new DevExpress.XtraBars.BarButtonItem();
+            this.barStatusPDV = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.repositoryItemCalcEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit();
-            this.pnlTelaPrincipal = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
+            this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.repositoryItemRibbonSearchEdit1 = new DevExpress.XtraBars.Ribbon.Internal.RepositoryItemRibbonSearchEdit();
             this.repositoryItemRibbonSearchEdit2 = new DevExpress.XtraBars.Ribbon.Internal.RepositoryItemRibbonSearchEdit();
+            this.pnlTelaPrincipal = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCalcEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRibbonSearchEdit1)).BeginInit();
@@ -78,21 +95,34 @@
             this.ribbonControl1.ExpandCollapseItem,
             this.btnVenda,
             this.btnEntrada,
-            this.barButtonItem3,
+            this.btnSaida,
             this.btnAberturaCaixa,
             this.barButtonItem5,
             this.btnFechamentoCaixa,
-            this.skinDropDownButtonItem1});
+            this.skinDropDownButtonItem1,
+            this.barStatusFilail,
+            this.barStatusUsuario,
+            this.barStatusVendedor,
+            this.barButtonItem1,
+            this.btnRelatorioFluxoSaida,
+            this.btnProdutos,
+            this.btnEmpresas,
+            this.btnConsumidores,
+            this.btnDeslogar,
+            this.barStatusPDV});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 9;
+            this.ribbonControl1.MaxItemId = 21;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPage1});
+            this.ribbonPage1,
+            this.ribbonPage2,
+            this.ribbonPage3});
             this.ribbonControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCalcEdit1});
             this.ribbonControl1.ShowQatLocationSelector = false;
             this.ribbonControl1.ShowToolbarCustomizeItem = false;
-            this.ribbonControl1.Size = new System.Drawing.Size(1278, 158);
+            this.ribbonControl1.Size = new System.Drawing.Size(1278, 169);
+            this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl1.Toolbar.ShowCustomizeItem = false;
             // 
             // btnVenda
@@ -111,12 +141,13 @@
             this.btnEntrada.Name = "btnEntrada";
             this.btnEntrada.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEntrada_ItemClick);
             // 
-            // barButtonItem3
+            // btnSaida
             // 
-            this.barButtonItem3.Caption = "Saida";
-            this.barButtonItem3.Id = 3;
-            this.barButtonItem3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem3.ImageOptions.SvgImage")));
-            this.barButtonItem3.Name = "barButtonItem3";
+            this.btnSaida.Caption = "Saida";
+            this.btnSaida.Id = 3;
+            this.btnSaida.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSaida.ImageOptions.SvgImage")));
+            this.btnSaida.Name = "btnSaida";
+            this.btnSaida.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSaida_ItemClick);
             // 
             // btnAberturaCaixa
             // 
@@ -136,7 +167,7 @@
             // 
             this.btnFechamentoCaixa.Caption = "Fechamento";
             this.btnFechamentoCaixa.Id = 6;
-            this.btnFechamentoCaixa.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem6.ImageOptions.SvgImage")));
+            this.btnFechamentoCaixa.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnFechamentoCaixa.ImageOptions.SvgImage")));
             this.btnFechamentoCaixa.Name = "btnFechamentoCaixa";
             this.btnFechamentoCaixa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnFechamentoCaixa_ItemClick);
             // 
@@ -145,12 +176,89 @@
             this.skinDropDownButtonItem1.Id = 8;
             this.skinDropDownButtonItem1.Name = "skinDropDownButtonItem1";
             // 
+            // barStatusFilail
+            // 
+            this.barStatusFilail.Caption = "Filial";
+            this.barStatusFilail.Id = 11;
+            this.barStatusFilail.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStatusFilail.ImageOptions.SvgImage")));
+            this.barStatusFilail.Name = "barStatusFilail";
+            // 
+            // barStatusUsuario
+            // 
+            this.barStatusUsuario.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.barStatusUsuario.Caption = "usuario";
+            this.barStatusUsuario.Id = 12;
+            this.barStatusUsuario.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStatusUsuario.ImageOptions.SvgImage")));
+            this.barStatusUsuario.Name = "barStatusUsuario";
+            // 
+            // barStatusVendedor
+            // 
+            this.barStatusVendedor.Caption = "vendedor";
+            this.barStatusVendedor.Id = 13;
+            this.barStatusVendedor.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStatusVendedor.ImageOptions.SvgImage")));
+            this.barStatusVendedor.Name = "barStatusVendedor";
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.barButtonItem1.Caption = "barButtonItem1";
+            this.barButtonItem1.Id = 14;
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
+            // btnRelatorioFluxoSaida
+            // 
+            this.btnRelatorioFluxoSaida.Caption = "Fluxo de Saída";
+            this.btnRelatorioFluxoSaida.Id = 15;
+            this.btnRelatorioFluxoSaida.Name = "btnRelatorioFluxoSaida";
+            this.btnRelatorioFluxoSaida.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnRelatorioFluxoSaida_ItemClick);
+            // 
+            // btnProdutos
+            // 
+            this.btnProdutos.Caption = "Produtos";
+            this.btnProdutos.Id = 16;
+            this.btnProdutos.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnProdutos.ImageOptions.SvgImage")));
+            this.btnProdutos.Name = "btnProdutos";
+            this.btnProdutos.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnProdutos_ItemClick);
+            // 
+            // btnEmpresas
+            // 
+            this.btnEmpresas.Caption = "Empresas";
+            this.btnEmpresas.Id = 17;
+            this.btnEmpresas.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEmpresas.ImageOptions.SvgImage")));
+            this.btnEmpresas.Name = "btnEmpresas";
+            this.btnEmpresas.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEmpresas_ItemClick);
+            // 
+            // btnConsumidores
+            // 
+            this.btnConsumidores.Caption = "Consumidores";
+            this.btnConsumidores.Id = 18;
+            this.btnConsumidores.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnConsumidores.ImageOptions.SvgImage")));
+            this.btnConsumidores.Name = "btnConsumidores";
+            this.btnConsumidores.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnConsumidores_ItemClick);
+            // 
+            // btnDeslogar
+            // 
+            this.btnDeslogar.Caption = "Deslogar";
+            this.btnDeslogar.Id = 19;
+            this.btnDeslogar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDeslogar.ImageOptions.SvgImage")));
+            this.btnDeslogar.Name = "btnDeslogar";
+            this.btnDeslogar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDeslogar_ItemClick);
+            // 
+            // barStatusPDV
+            // 
+            this.barStatusPDV.Caption = "PDV";
+            this.barStatusPDV.Id = 20;
+            this.barStatusPDV.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStatusPDV.ImageOptions.SvgImage")));
+            this.barStatusPDV.Name = "barStatusPDV";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1,
             this.ribbonPageGroup2,
-            this.ribbonPageGroup3});
+            this.ribbonPageGroup4});
+            this.ribbonPage1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ribbonPage1.ImageOptions.SvgImage")));
+            this.ribbonPage1.ImageOptions.SvgImageSize = new System.Drawing.Size(24, 24);
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "Caixa";
             // 
@@ -163,11 +271,56 @@
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.btnEntrada);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem3);
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnSaida);
             this.ribbonPageGroup2.ItemLinks.Add(this.btnAberturaCaixa);
             this.ribbonPageGroup2.ItemLinks.Add(this.btnFechamentoCaixa);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "Fluxo de caixa";
+            // 
+            // ribbonPageGroup4
+            // 
+            this.ribbonPageGroup4.ItemLinks.Add(this.btnRelatorioFluxoSaida);
+            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
+            this.ribbonPageGroup4.Text = "Relatórios";
+            // 
+            // ribbonPage2
+            // 
+            this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup5,
+            this.ribbonPageGroup6});
+            this.ribbonPage2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ribbonPage2.ImageOptions.SvgImage")));
+            this.ribbonPage2.ImageOptions.SvgImageSize = new System.Drawing.Size(24, 24);
+            this.ribbonPage2.Name = "ribbonPage2";
+            this.ribbonPage2.Text = "Consultas";
+            // 
+            // ribbonPageGroup5
+            // 
+            this.ribbonPageGroup5.ItemLinks.Add(this.btnProdutos);
+            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
+            this.ribbonPageGroup5.Text = "Itens";
+            // 
+            // ribbonPageGroup6
+            // 
+            this.ribbonPageGroup6.ItemLinks.Add(this.btnConsumidores);
+            this.ribbonPageGroup6.ItemLinks.Add(this.btnEmpresas);
+            this.ribbonPageGroup6.Name = "ribbonPageGroup6";
+            this.ribbonPageGroup6.Text = "Clientes";
+            // 
+            // ribbonPage3
+            // 
+            this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup7,
+            this.ribbonPageGroup3});
+            this.ribbonPage3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ribbonPage3.ImageOptions.SvgImage")));
+            this.ribbonPage3.ImageOptions.SvgImageSize = new System.Drawing.Size(24, 24);
+            this.ribbonPage3.Name = "ribbonPage3";
+            this.ribbonPage3.Text = "Sistema";
+            // 
+            // ribbonPageGroup7
+            // 
+            this.ribbonPageGroup7.ItemLinks.Add(this.btnDeslogar);
+            this.ribbonPageGroup7.Name = "ribbonPageGroup7";
+            this.ribbonPageGroup7.Text = "Sistema";
             // 
             // ribbonPageGroup3
             // 
@@ -182,13 +335,16 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemCalcEdit1.Name = "repositoryItemCalcEdit1";
             // 
-            // pnlTelaPrincipal
+            // ribbonStatusBar1
             // 
-            this.pnlTelaPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlTelaPrincipal.Location = new System.Drawing.Point(0, 158);
-            this.pnlTelaPrincipal.Name = "pnlTelaPrincipal";
-            this.pnlTelaPrincipal.Size = new System.Drawing.Size(1278, 521);
-            this.pnlTelaPrincipal.TabIndex = 1;
+            this.ribbonStatusBar1.ItemLinks.Add(this.barStatusPDV);
+            this.ribbonStatusBar1.ItemLinks.Add(this.barStatusFilail);
+            this.ribbonStatusBar1.ItemLinks.Add(this.barStatusUsuario);
+            this.ribbonStatusBar1.ItemLinks.Add(this.barStatusVendedor);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 655);
+            this.ribbonStatusBar1.Name = "ribbonStatusBar1";
+            this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1278, 24);
             // 
             // repositoryItemRibbonSearchEdit1
             // 
@@ -216,11 +372,20 @@
             this.repositoryItemRibbonSearchEdit2.Name = "repositoryItemRibbonSearchEdit2";
             this.repositoryItemRibbonSearchEdit2.NullText = "Search";
             // 
+            // pnlTelaPrincipal
+            // 
+            this.pnlTelaPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlTelaPrincipal.Location = new System.Drawing.Point(0, 169);
+            this.pnlTelaPrincipal.Name = "pnlTelaPrincipal";
+            this.pnlTelaPrincipal.Size = new System.Drawing.Size(1278, 510);
+            this.pnlTelaPrincipal.TabIndex = 1;
+            // 
             // frmTelaInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1278, 679);
+            this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.pnlTelaPrincipal);
             this.Controls.Add(this.ribbonControl1);
             this.MaximizeBox = false;
@@ -228,6 +393,7 @@
             this.Ribbon = this.ribbonControl1;
             this.RibbonAlwaysAtBack = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StatusBar = this.ribbonStatusBar1;
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCalcEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRibbonSearchEdit1)).EndInit();
@@ -238,23 +404,39 @@
         }
 
         #endregion
-
-        private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.BarButtonItem btnVenda;
         private DevExpress.XtraBars.BarButtonItem btnEntrada;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraBars.BarButtonItem btnSaida;
         private DevExpress.XtraBars.BarButtonItem btnAberturaCaixa;
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;
         private DevExpress.XtraBars.BarButtonItem btnFechamentoCaixa;
         private DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit repositoryItemCalcEdit1;
-        public DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer pnlTelaPrincipal;
         private DevExpress.XtraBars.SkinDropDownButtonItem skinDropDownButtonItem1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.Ribbon.Internal.RepositoryItemRibbonSearchEdit repositoryItemRibbonSearchEdit1;
         private DevExpress.XtraBars.Ribbon.Internal.RepositoryItemRibbonSearchEdit repositoryItemRibbonSearchEdit2;
+        public DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer pnlTelaPrincipal;
+        public DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
+        private DevExpress.XtraBars.BarButtonItem barStatusFilail;
+        private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
+        private DevExpress.XtraBars.BarButtonItem barStatusUsuario;
+        private DevExpress.XtraBars.BarButtonItem barStatusVendedor;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem btnRelatorioFluxoSaida;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
+        private DevExpress.XtraBars.BarButtonItem btnProdutos;
+        private DevExpress.XtraBars.BarButtonItem btnEmpresas;
+        private DevExpress.XtraBars.BarButtonItem btnConsumidores;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
+        private DevExpress.XtraBars.BarButtonItem btnDeslogar;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
+        private DevExpress.XtraBars.BarButtonItem barStatusPDV;
     }
 }
 

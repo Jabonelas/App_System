@@ -40,21 +40,30 @@
     <Reference Include="DevExpress.BonusSkins.v23.1" />
     <Reference Include="DevExpress.Data.Desktop.v23.1" />
     <Reference Include="DevExpress.Data.v23.1" />
+    <Reference Include="DevExpress.Dialogs.v23.1.Core, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v23.1.Core" />
     <Reference Include="DevExpress.Utils.v23.1" />
     <Reference Include="DevExpress.Xpo.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v23.1" />
     <Reference Include="DevExpress.Sparkline.v23.1.Core" />
+    <Reference Include="DevExpress.XtraDialogs.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v23.1" />
     <Reference Include="DevExpress.Drawing.v23.1" />
     <Reference Include="DevExpress.XtraGrid.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v23.1.Core, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v23.1.Core.Desktop, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ExCSS, Version=4.2.3.0, Culture=neutral, PublicKeyToken=bdbe16be9b936b9a, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExCSS.4.2.3\lib\netstandard2.0\ExCSS.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
@@ -76,6 +85,12 @@
     </Reference>
     <Reference Include="Microsoft.Extensions.Primitives, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.Primitives.8.0.0\lib\net462\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Svg, Version=3.4.0.0, Culture=neutral, PublicKeyToken=12a0bac221edeae2, processorArchitecture=MSIL">
+      <HintPath>..\packages\Svg.3.4.7\lib\net472\Svg.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -160,6 +175,7 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -181,8 +197,8 @@
     <Reference Include="DevExpress.Drawing.v23.2" />
     <Reference Include="DevExpress.Mvvm.v23.2" />
     <Reference Include="DevExpress.Printing.v23.2.Core" />
-    <Reference Include="Unimake.Business.DFe, Version=2024.9.20.1002, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Unimake.DFe.20240920.1002.27\lib\net472\Unimake.Business.DFe.dll</HintPath>
+    <Reference Include="Unimake.Business.DFe, Version=2024.9.24.1131, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unimake.DFe.20240924.1131.28\lib\net472\Unimake.Business.DFe.dll</HintPath>
     </Reference>
     <Reference Include="Unimake.Cryptography, Version=2024.9.5.1544, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Unimake.Cryptography.20240905.1544.35\lib\netstandard2.0\Unimake.Cryptography.dll</HintPath>
@@ -197,19 +213,28 @@
       <HintPath>..\packages\Unimake.Security.Platform.20230706.1027.33\lib\net\Unimake.Security.Platform.dll</HintPath>
     </Reference>
     <Reference Include="Unimake.Unidanfe, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Unimake.Unidanfe.20240625.1624.45\lib\net472\Unimake.Unidanfe.dll</HintPath>
+      <HintPath>..\packages\Unimake.Unidanfe.20240918.1715.50\lib\net472\Unimake.Unidanfe.dll</HintPath>
     </Reference>
     <Reference Include="Unimake.Utils, Version=2024.9.5.1544, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Unimake.Utils.20240905.1544.35\lib\netstandard2.0\Unimake.Utils.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AberturaCaixa\uc_AberturaCaixa.cs">
+    <Compile Include="Caixa\Relatorios\uc_RelatorioFluxoSaida.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AberturaCaixa\uc_AberturaCaixa.Designer.cs">
+    <Compile Include="Caixa\Relatorios\uc_RelatorioFluxoSaida.Designer.cs">
+      <DependentUpon>uc_RelatorioFluxoSaida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\API.cs" />
+    <Compile Include="Classes\ConfigBotoes.cs" />
+    <Compile Include="Caixa\Fluxo de Caixa\Abertura Caixa\uc_AberturaCaixa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Caixa\Fluxo de Caixa\Abertura Caixa\uc_AberturaCaixa.Designer.cs">
       <DependentUpon>uc_AberturaCaixa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\DadosCep.cs" />
     <Compile Include="Classes\DadosGeralNfe.cs" />
     <Compile Include="Classes\LogErros.cs" />
     <Compile Include="Classes\MensagensDoSistema.cs" />
@@ -217,11 +242,59 @@
     <Compile Include="Classes\Validacoes.cs" />
     <Compile Include="Classes\VariaveisGlobais.cs" />
     <Compile Include="Classes\VerificarComponentesPC.cs" />
-    <Compile Include="FechamentoCaixa\uc_FechamentoCaixa.cs">
+    <Compile Include="Caixa\Fluxo de Caixa\Entrada Caixa\uc_EntradaCaixa.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="FechamentoCaixa\uc_FechamentoCaixa.Designer.cs">
+    <Compile Include="Caixa\Fluxo de Caixa\Entrada Caixa\uc_EntradaCaixa.Designer.cs">
+      <DependentUpon>uc_EntradaCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Caixa\Fluxo de Caixa\Entrada Caixa\uc_VisualizarEntradasCaixa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Caixa\Fluxo de Caixa\Entrada Caixa\uc_VisualizarEntradasCaixa.Designer.cs">
+      <DependentUpon>uc_VisualizarEntradasCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Caixa\Fluxo de Caixa\Fechamento Caixa\uc_FechamentoCaixa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Caixa\Fluxo de Caixa\Fechamento Caixa\uc_FechamentoCaixa.Designer.cs">
       <DependentUpon>uc_FechamentoCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Caixa\Fluxo de Caixa\Saida Caixa\uc_SaidaCaixa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Caixa\Fluxo de Caixa\Saida Caixa\uc_SaidaCaixa.Designer.cs">
+      <DependentUpon>uc_SaidaCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Caixa\Fluxo de Caixa\Saida Caixa\uc_VisualizarSaidaCaixa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Caixa\Fluxo de Caixa\Saida Caixa\uc_VisualizarSaidaCaixa.Designer.cs">
+      <DependentUpon>uc_VisualizarSaidaCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\Clientes\Consumidores-Empresas\uc_Ator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Consultas\Clientes\Consumidores-Empresas\uc_Ator.Designer.cs">
+      <DependentUpon>uc_Ator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\Clientes\Consumidores-Empresas\uc_CadAtor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Consultas\Clientes\Consumidores-Empresas\uc_CadAtor.Designer.cs">
+      <DependentUpon>uc_CadAtor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\Itens\Produtos\uc_CadProduto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Consultas\Itens\Produtos\uc_CadProduto.Designer.cs">
+      <DependentUpon>uc_CadProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\Itens\Produtos\uc_Produto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Consultas\Itens\Produtos\uc_Produto.Designer.cs">
+      <DependentUpon>uc_Produto.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -362,16 +435,16 @@
     <Compile Include="ORMDataModelCode\tb_unidade_monetaria.Designer.cs">
       <DependentUpon>tb_unidade_monetaria.cs</DependentUpon>
     </Compile>
-    <Compile Include="PDV\frmPamentoPDV.cs">
+    <Compile Include="Caixa\Atendimento\Venda\frmPagamentoPDV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PDV\frmPamentoPDV.Designer.cs">
-      <DependentUpon>frmPamentoPDV.cs</DependentUpon>
+    <Compile Include="Caixa\Atendimento\Venda\frmPagamentoPDV.Designer.cs">
+      <DependentUpon>frmPagamentoPDV.cs</DependentUpon>
     </Compile>
-    <Compile Include="PDV\frmSelecionarPDV.cs">
+    <Compile Include="frmSelecionarPDV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PDV\frmSelecionarPDV.Designer.cs">
+    <Compile Include="frmSelecionarPDV.Designer.cs">
       <DependentUpon>frmSelecionarPDV.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTelaInicial.cs">
@@ -382,28 +455,55 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PDV\uc_PDV.cs">
+    <Compile Include="Caixa\Atendimento\Venda\uc_PDV.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PDV\uc_PDV.Designer.cs">
+    <Compile Include="Caixa\Atendimento\Venda\uc_PDV.Designer.cs">
       <DependentUpon>uc_PDV.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AberturaCaixa\uc_AberturaCaixa.resx">
+    <EmbeddedResource Include="Caixa\Fluxo de Caixa\Abertura Caixa\uc_AberturaCaixa.resx">
       <DependentUpon>uc_AberturaCaixa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FechamentoCaixa\uc_FechamentoCaixa.resx">
+    <EmbeddedResource Include="Caixa\Fluxo de Caixa\Entrada Caixa\uc_EntradaCaixa.resx">
+      <DependentUpon>uc_EntradaCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Caixa\Fluxo de Caixa\Entrada Caixa\uc_VisualizarEntradasCaixa.resx">
+      <DependentUpon>uc_VisualizarEntradasCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Caixa\Fluxo de Caixa\Fechamento Caixa\uc_FechamentoCaixa.resx">
       <DependentUpon>uc_FechamentoCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Caixa\Fluxo de Caixa\Saida Caixa\uc_SaidaCaixa.resx">
+      <DependentUpon>uc_SaidaCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Caixa\Fluxo de Caixa\Saida Caixa\uc_VisualizarSaidaCaixa.resx">
+      <DependentUpon>uc_VisualizarSaidaCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Caixa\Relatorios\uc_RelatorioFluxoSaida.resx">
+      <DependentUpon>uc_RelatorioFluxoSaida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\Clientes\Consumidores-Empresas\uc_Ator.resx">
+      <DependentUpon>uc_Ator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\Clientes\Consumidores-Empresas\uc_CadAtor.resx">
+      <DependentUpon>uc_CadAtor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\Itens\Produtos\uc_CadProduto.resx">
+      <DependentUpon>uc_CadProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\Itens\Produtos\uc_Produto.resx">
+      <DependentUpon>uc_Produto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PDV\frmPamentoPDV.resx">
-      <DependentUpon>frmPamentoPDV.cs</DependentUpon>
+    <EmbeddedResource Include="Caixa\Atendimento\Venda\frmPagamentoPDV.resx">
+      <DependentUpon>frmPagamentoPDV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTelaInicial.resx">
       <DependentUpon>frmTelaInicial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PDV\frmSelecionarPDV.resx">
+    <EmbeddedResource Include="frmSelecionarPDV.resx">
       <DependentUpon>frmSelecionarPDV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
@@ -416,14 +516,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="PDV\uc_PDV.resx">
+    <EmbeddedResource Include="Caixa\Atendimento\Venda\uc_PDV.resx">
       <DependentUpon>uc_PDV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PDV\uc_VendasPDV.resx">
+    <EmbeddedResource Include="Caixa\Atendimento\Venda\uc_VendasPDV.resx">
       <DependentUpon>uc_VendasPDV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PDV\uc_VisualizarVenda.resx">
+    <EmbeddedResource Include="Caixa\Atendimento\Venda\uc_VisualizarVenda.resx">
       <DependentUpon>uc_VisualizarVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_SubTituloTelas.resx">
+      <DependentUpon>uc_SubTituloTelas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_TituloTelas.resx">
+      <DependentUpon>uc_TituloTelas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="ORMDataModel.xpo" />
@@ -447,17 +553,29 @@
     <EmbeddedResource Include="Assets\Toolbox\PasswordBox.bmp" />
     <EmbeddedResource Include="Assets\HTML\PasswordBox.html" />
     <EmbeddedResource Include="Assets\CSS\PasswordBox.css" />
-    <Compile Include="PDV\uc_VendasPDV.cs">
+    <Compile Include="Caixa\Atendimento\Venda\uc_VendasPDV.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PDV\uc_VendasPDV.Designer.cs">
+    <Compile Include="Caixa\Atendimento\Venda\uc_VendasPDV.Designer.cs">
       <DependentUpon>uc_VendasPDV.cs</DependentUpon>
     </Compile>
-    <Compile Include="PDV\uc_VisualizarVenda.cs">
+    <Compile Include="Caixa\Atendimento\Venda\uc_VisualizarVenda.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PDV\uc_VisualizarVenda.Designer.cs">
+    <Compile Include="Caixa\Atendimento\Venda\uc_VisualizarVenda.Designer.cs">
       <DependentUpon>uc_VisualizarVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_SubTituloTelas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_SubTituloTelas.Designer.cs">
+      <DependentUpon>uc_SubTituloTelas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_TituloTelas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_TituloTelas.Designer.cs">
+      <DependentUpon>uc_TituloTelas.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilities\Password.cs" />
     <Compile Include="Utilities\HtmlCssAsset.cs" />

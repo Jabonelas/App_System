@@ -313,3 +313,12 @@ Data: 23/09/2024 20:11:02
 Mensagem: Erro ao fechar jornada no fechamento de caixa: Referência de objeto não definida para uma instância de um objeto.
 -------------------------------------------
 
+Data: 23/09/2024 23:42:55
+Mensagem: Erro ao salvar movimentação: database is locked
+database is locked
+-------------------------------------------
+
+Data: 25/09/2024 12:42:29
+Mensagem: Erro ao buscar dados da movimentao para preenchimentos dos campos: Não é possível converter um objeto do tipo 'DXApplicationPDV.bancoSQLite.tb_ator' no tipo 'System.IConvertible'.
+-------------------------------------------
+

@@ -28,6 +28,12 @@ using Unimake.Business.DFe.Xml.SNCM;
 using System.Text.RegularExpressions;
 using DXApplicationPDV.AberturaCaixa;
 using DXApplicationPDV.FechamentoCaixa;
+using DXApplicationPDV.Fluxo_de_Caixa.Entrada_Caixa;
+using DXApplicationPDV.Fluxo_de_Caixa.Saida_Caixa;
+using DevExpress.XtraBars.FluentDesignSystem;
+using DXApplicationPDV.Caixa.Relatorios;
+using DXApplicationPDV.Consultas.Itens.Consumidores;
+using DXApplicationPDV.Consultas.Itens.Produtos;
 
 namespace DXApplicationPDV
 {
@@ -38,7 +44,36 @@ namespace DXApplicationPDV
             InitializeComponent();
 
             // Deixar o Ribbon fixo, sem a opção de minimizar
-            ribbonControl1.AllowMinimizeRibbon = false;
+            //ribbonControl1.AllowMinimizeRibbon = false;
+
+            // Expandir o RibbonControl
+            ribbonControl1.Minimized = false;
+
+            // Desabilitar a opção de maximizar a tela
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+
+            barStatusFilail.Caption = $"C.N.P.J: {VariaveisGlobais.FilialLogada.at_cnpj} - Filial: {VariaveisGlobais.FilialLogada.at_nomeFant}";
+            barStatusPDV.Caption = $"PDV: {VariaveisGlobais.PDVLogado.pdv_pdvNum}";
+            barStatusVendedor.Caption = $"Vendedor: {VariaveisGlobais.UsuarioLogado.at_razSoc}";
+            barStatusUsuario.Caption = $"Usuário: {VariaveisGlobais.UsuarioLogado.at_nomeUsuario}";
+        }
+
+        #region Caixa
+
+        private void RedirecionamentoPainel()
+        {
+            // Minimizar o RibbonControl
+            ribbonControl1.Minimized = true;
+
+            pnlTelaPrincipal.SuspendLayout(); // Desabilitar layout automático
+
+            pnlTelaPrincipal.Size = new Size(1278, 622);
+
+            pnlTelaPrincipal.BringToFront();
+            pnlTelaPrincipal.Visible = true;
+            pnlTelaPrincipal.Location = new Point(0, 28);
+
+            pnlTelaPrincipal.ResumeLayout(false); // Reabilitar layout sem forçar realocação
         }
 
         public void TelaVendasPDV()
@@ -52,13 +87,64 @@ namespace DXApplicationPDV
             ucVendasPDV.Show();
         }
 
+        private bool IsCaixaAberto()
+        {
+            try
+            {
+                using (UnitOfWork uow = new UnitOfWork())
+                {
+                    //mv_movTipo = 1 é abertura de caixa e mv_cxAberto = 1 é caixa aberto
+
+                    var isCaixaAberto = uow.Query<tb_movimentacao>().Any(x => x.mv_movTipo == 1 && x.mv_cxAberto == 1);
+
+                    return isCaixaAberto;
+                }
+            }
+            catch (Exception ex)
+            {
+                MensagensDoSistema.MensagemErroOk($"Erro ao buscar caixa aberto: {ex.Message}");
+
+                return false;
+            }
+        }
+
         private void btnVenda_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            TelaVendasPDV();
+            if (IsCaixaAberto())
+            {
+                RedirecionamentoPainel();
+
+                TelaVendasPDV();
+            }
+            else
+            {
+                MensagensDoSistema.MensagemAtencaoOk("Por favor, proceda com a abertura do caixa.");
+            }
+        }
+
+        public void TelaVisualizarEntradaCaixa()
+        {
+            TelaDeCarregamento.ExibirCarregamentoForm(this);
+
+            pnlTelaPrincipal.Controls.Clear();
+            uc_VisualizarEntradasCaixa ucVisualizarEntradasCaixaEntradaCaixa = new uc_VisualizarEntradasCaixa(this);
+            pnlTelaPrincipal.Controls.Add(ucVisualizarEntradasCaixaEntradaCaixa);
+            pnlTelaPrincipal.Tag = ucVisualizarEntradasCaixaEntradaCaixa;
+            ucVisualizarEntradasCaixaEntradaCaixa.Show();
         }
 
         private void btnEntrada_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if (IsCaixaAberto())
+            {
+                RedirecionamentoPainel();
+
+                TelaVisualizarEntradaCaixa();
+            }
+            else
+            {
+                MensagensDoSistema.MensagemAtencaoOk("Por favor, proceda com a abertura do caixa.");
+            }
         }
 
         public void TelaAberturaCaixa()
@@ -74,6 +160,8 @@ namespace DXApplicationPDV
 
         private void btnAberturaCaixa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            RedirecionamentoPainel();
+
             TelaAberturaCaixa();
         }
 
@@ -90,7 +178,132 @@ namespace DXApplicationPDV
 
         private void btnFechamentoCaixa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            TelaFechamentoCaixa();
+            if (IsCaixaAberto())
+            {
+                RedirecionamentoPainel();
+
+                TelaFechamentoCaixa();
+            }
+            else
+            {
+                MensagensDoSistema.MensagemAtencaoOk("Por favor, proceda com a abertura do caixa.");
+            }
+        }
+
+        public void TelaVisualizarSaidaCaixa()
+        {
+            TelaDeCarregamento.ExibirCarregamentoForm(this);
+
+            pnlTelaPrincipal.Controls.Clear();
+            uc_VisualizarSaidaCaixa ucVisualizarSaidaCaixa = new uc_VisualizarSaidaCaixa(this);
+            pnlTelaPrincipal.Controls.Add(ucVisualizarSaidaCaixa);
+            pnlTelaPrincipal.Tag = ucVisualizarSaidaCaixa;
+            ucVisualizarSaidaCaixa.Show();
+        }
+
+        private void btnSaida_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (IsCaixaAberto())
+            {
+                RedirecionamentoPainel();
+
+                TelaVisualizarSaidaCaixa();
+            }
+            else
+            {
+                MensagensDoSistema.MensagemAtencaoOk("Por favor, proceda com a abertura do caixa.");
+            }
+        }
+
+        public void TelaRelatorioFluxoSaida()
+        {
+            TelaDeCarregamento.ExibirCarregamentoForm(this);
+
+            pnlTelaPrincipal.Controls.Clear();
+            uc_RelatorioFluxoSaida ucRelatorioFluxoSaida = new uc_RelatorioFluxoSaida(this);
+            pnlTelaPrincipal.Controls.Add(ucRelatorioFluxoSaida);
+            pnlTelaPrincipal.Tag = ucRelatorioFluxoSaida;
+            ucRelatorioFluxoSaida.Show();
+        }
+
+        private void btnRelatorioFluxoSaida_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            RedirecionamentoPainel();
+
+            TelaRelatorioFluxoSaida();
+        }
+
+        #endregion Caixa
+
+        #region Sistema
+
+        private void btnDeslogar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var dialog = MensagensDoSistema.MensagemAtencaoYesNo("Você realmente deseja trocar de usuário?");
+
+            if (dialog == DialogResult.Yes)
+            {
+                this.Hide();
+                frmLogin _frmLogin = new frmLogin();
+                _frmLogin.Show();
+            }
+        }
+
+        #endregion Sistema
+
+        public void TelaProduto()
+        {
+            TelaDeCarregamento.ExibirCarregamentoForm(this);
+
+            pnlTelaPrincipal.Controls.Clear();
+            uc_Produto ucProduto = new uc_Produto(this);
+            pnlTelaPrincipal.Controls.Add(ucProduto);
+            pnlTelaPrincipal.Tag = ucProduto;
+            ucProduto.Show();
+        }
+
+        private void btnProdutos_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            RedirecionamentoPainel();
+
+            TelaProduto();
+        }
+
+        //Tipos Ator
+
+        //(1, 'Consumidor'),
+        //(10, 'Empresa'),
+        //(11, 'Filial'),
+        //(20, 'Fornecedor'),
+        //(30, 'Transporte'),
+        //(40, 'Intermediador'),
+        //(100, 'Funcionário'),
+        //(101, 'Vendedor'),
+        //(102, 'Gerente');
+
+        public void TelaAtor(int _tipoAtor)
+        {
+            TelaDeCarregamento.ExibirCarregamentoForm(this);
+
+            pnlTelaPrincipal.Controls.Clear();
+            uc_Ator ucAtor = new uc_Ator(this, _tipoAtor);
+            pnlTelaPrincipal.Controls.Add(ucAtor);
+            pnlTelaPrincipal.Tag = ucAtor;
+            ucAtor.Show();
+        }
+
+        private void btnConsumidores_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            RedirecionamentoPainel();
+
+            TelaAtor(1);
+        }
+
+        private void btnEmpresas_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            RedirecionamentoPainel();
+
+            TelaAtor(10);
         }
     }
 }
