@@ -209,6 +209,7 @@
             // 
             this.btnRelatorioFluxoSaida.Caption = "Fluxo de Saída";
             this.btnRelatorioFluxoSaida.Id = 15;
+            this.btnRelatorioFluxoSaida.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnRelatorioFluxoSaida.ImageOptions.SvgImage")));
             this.btnRelatorioFluxoSaida.Name = "btnRelatorioFluxoSaida";
             this.btnRelatorioFluxoSaida.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnRelatorioFluxoSaida_ItemClick);
             // 

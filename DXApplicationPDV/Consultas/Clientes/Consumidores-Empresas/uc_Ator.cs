@@ -204,11 +204,22 @@ namespace DXApplicationPDV.Consultas.Itens.Consumidores
             }
         }
 
+        //Niveis de acesso
+        //"100 Funcionario"
+        //"101 Vendedor"
+        //"102 Gerente"
+
         private void btnVisualizar_Click(object sender, EventArgs e)
         {
-            PegaIdCategoriaSelecionadaGrid();
+            if (VariaveisGlobais.UsuarioLogado.at_atorTipo == 102)
+            {
+                PegaIdCategoriaSelecionadaGrid();
 
-            TelaCadastrarAtor("Alterar", idAtor);
+                TelaCadastrarAtor("Alterar", idAtor);
+            }
+            else
+            {
+            }
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)

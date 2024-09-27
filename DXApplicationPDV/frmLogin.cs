@@ -88,6 +88,11 @@ namespace DXApplicationPDV
             return areSame;
         }
 
+        //Niveis de acesso
+        //"100 Funcionario"
+        //"101 Vendedor"
+        //"102 Gerente"
+
         private void btnLogar_Click(object sender, EventArgs e)
         {
             if (IsSenhaUsuarioValido(txtSenha.Text, txtUsuario.Text))

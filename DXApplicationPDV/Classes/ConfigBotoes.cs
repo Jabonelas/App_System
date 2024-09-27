@@ -225,5 +225,43 @@ namespace DXApplicationPDV.Classes
             button.ToolTipTitle = "Alterar:";
             button.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
         }
+
+        public void BotaoBuscar(SimpleButton button)
+        {
+            string nomeImagem = "Actions_Zoom.svg";
+
+            // Usar o SvgImage do DevExpress
+            DevExpress.Utils.Svg.SvgImage svgImage = DevExpress.Utils.Svg.SvgImage.FromFile(localImagem + nomeImagem);
+
+            // Converter para Image (não precisa ser Bitmap, pode ser Image)
+            Image image = svgImage.Render(null);
+
+            button.ImageOptions.Image = image;
+            button.ImageOptions.ImageToTextAlignment = ImageAlignToText.BottomCenter;
+            button.ImageOptions.SvgImageSize = new Size(40, 40);
+            button.Text = "";
+            button.ToolTip = "Clique para realizar a pesquisa.";
+            button.ToolTipTitle = "Buscar:";
+            button.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+        }
+
+        public void BotaoExcel(SimpleButton button)
+        {
+            string nomeImagem = "Action_Export_ToXls.svg";
+
+            // Usar o SvgImage do DevExpress
+            DevExpress.Utils.Svg.SvgImage svgImage = DevExpress.Utils.Svg.SvgImage.FromFile(localImagem + nomeImagem);
+
+            // Converter para Image (não precisa ser Bitmap, pode ser Image)
+            Image image = svgImage.Render(null);
+
+            button.ImageOptions.Image = image;
+            button.ImageOptions.ImageToTextAlignment = ImageAlignToText.BottomCenter;
+            button.ImageOptions.SvgImageSize = new Size(40, 40);
+            button.Text = "";
+            button.ToolTip = "Clique para exportar para Excel.";
+            button.ToolTipTitle = "Expotar Excel:";
+            button.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+        }
     }
 }

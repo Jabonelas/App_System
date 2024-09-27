@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.cmbVendedor = new DevExpress.XtraEditors.LookUpEdit();
             this.txtDesconto = new DevExpress.XtraEditors.TextEdit();
@@ -56,19 +55,24 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.btnFinalizarVenda = new DevExpress.XtraEditors.SimpleButton();
             this.txtCPF = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txtNomeCliente = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.grdPagamentos = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.idPagamento = new DevExpress.XtraGrid.Columns.GridColumn();
             this.DescricaoPagamento = new DevExpress.XtraGrid.Columns.GridColumn();
             this.VlrPagamento = new DevExpress.XtraGrid.Columns.GridColumn();
             this.uc_TituloTelas1 = new DXApplicationPDV.uc_TituloTelas();
-            this.uc_SubTituloTelas1 = new DXApplicationPDV.uc_SubTituloTelas();
-            this.uc_SubTituloTelas2 = new DXApplicationPDV.uc_SubTituloTelas();
-            this.uc_SubTituloTelas3 = new DXApplicationPDV.uc_SubTituloTelas();
-            this.uc_SubTituloTelas4 = new DXApplicationPDV.uc_SubTituloTelas();
+            this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControl3 = new DevExpress.XtraLayout.LayoutControl();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlGroup5 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControl4 = new DevExpress.XtraLayout.LayoutControl();
+            this.layoutControlGroup6 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlGroup7 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbVendedor.Properties)).BeginInit();
@@ -97,15 +101,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtNomeCliente.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdPagamentos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).BeginInit();
+            this.layoutControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl4)).BeginInit();
+            this.layoutControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             this.SuspendLayout();
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Location = new System.Drawing.Point(357, 262);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(59, 13);
-            this.labelControl1.TabIndex = 15;
-            this.labelControl1.Text = "Pagamentos";
             // 
             // layoutControl2
             // 
@@ -113,23 +122,23 @@
             this.layoutControl2.Controls.Add(this.txtDesconto);
             this.layoutControl2.Controls.Add(this.cmbFormaPagamento);
             this.layoutControl2.Controls.Add(this.txtValorPagamento);
-            this.layoutControl2.Location = new System.Drawing.Point(-1, 127);
+            this.layoutControl2.Location = new System.Drawing.Point(-3, 95);
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.Root = this.layoutControlGroup2;
-            this.layoutControl2.Size = new System.Drawing.Size(345, 184);
+            this.layoutControl2.Size = new System.Drawing.Size(345, 227);
             this.layoutControl2.TabIndex = 16;
             this.layoutControl2.Text = "layoutControl2";
             // 
             // cmbVendedor
             // 
-            this.cmbVendedor.Location = new System.Drawing.Point(12, 28);
+            this.cmbVendedor.Location = new System.Drawing.Point(24, 61);
             this.cmbVendedor.Name = "cmbVendedor";
             this.cmbVendedor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbVendedor.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("at_razSoc", "Nome Vendedor"),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("at_nomeUsuario", "Usuário")});
-            this.cmbVendedor.Size = new System.Drawing.Size(321, 20);
+            this.cmbVendedor.Size = new System.Drawing.Size(297, 20);
             this.cmbVendedor.StyleController = this.layoutControl2;
             this.cmbVendedor.TabIndex = 0;
             this.cmbVendedor.ToolTip = "Selecione o nome do vendedor responsável.";
@@ -138,10 +147,10 @@
             // 
             // txtDesconto
             // 
-            this.txtDesconto.Location = new System.Drawing.Point(12, 68);
+            this.txtDesconto.Location = new System.Drawing.Point(24, 101);
             this.txtDesconto.Name = "txtDesconto";
             this.txtDesconto.Properties.MaxLength = 9;
-            this.txtDesconto.Size = new System.Drawing.Size(321, 20);
+            this.txtDesconto.Size = new System.Drawing.Size(297, 20);
             this.txtDesconto.StyleController = this.layoutControl2;
             this.txtDesconto.TabIndex = 2;
             this.txtDesconto.ToolTip = "Informe o desconto: digite um valor normal para considerar o desconto exato ou us" +
@@ -153,14 +162,14 @@
             // 
             // cmbFormaPagamento
             // 
-            this.cmbFormaPagamento.Location = new System.Drawing.Point(12, 108);
+            this.cmbFormaPagamento.Location = new System.Drawing.Point(24, 141);
             this.cmbFormaPagamento.Name = "cmbFormaPagamento";
             this.cmbFormaPagamento.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbFormaPagamento.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("id_sub_forma_pagamento", "idFormaPagamento", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("sfp_desc", "Forma Pagamento")});
-            this.cmbFormaPagamento.Size = new System.Drawing.Size(321, 20);
+            this.cmbFormaPagamento.Size = new System.Drawing.Size(297, 20);
             this.cmbFormaPagamento.StyleController = this.layoutControl2;
             this.cmbFormaPagamento.TabIndex = 3;
             this.cmbFormaPagamento.ToolTip = "Eescolha o método que o cliente utilizará para pagar.";
@@ -169,12 +178,12 @@
             // 
             // txtValorPagamento
             // 
-            this.txtValorPagamento.Location = new System.Drawing.Point(12, 148);
+            this.txtValorPagamento.Location = new System.Drawing.Point(24, 181);
             this.txtValorPagamento.Name = "txtValorPagamento";
             this.txtValorPagamento.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtValorPagamento.Properties.MaskSettings.Set("mask", "c");
             this.txtValorPagamento.Properties.MaxLength = 8;
-            this.txtValorPagamento.Size = new System.Drawing.Size(321, 20);
+            this.txtValorPagamento.Size = new System.Drawing.Size(297, 20);
             this.txtValorPagamento.StyleController = this.layoutControl2;
             this.txtValorPagamento.TabIndex = 4;
             this.txtValorPagamento.ToolTip = "Digite o valor que será considerado na transação.";
@@ -188,12 +197,9 @@
             this.layoutControlGroup2.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup2.GroupBordersVisible = false;
             this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem7,
-            this.layoutControlItem9,
-            this.layoutControlItem8,
-            this.layoutControlItem10});
+            this.layoutControlGroup3});
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(345, 184);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(345, 227);
             this.layoutControlGroup2.TextVisible = false;
             // 
             // layoutControlItem7
@@ -201,7 +207,7 @@
             this.layoutControlItem7.Control = this.cmbVendedor;
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(325, 40);
+            this.layoutControlItem7.Size = new System.Drawing.Size(301, 40);
             this.layoutControlItem7.Text = "Vendedor";
             this.layoutControlItem7.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem7.TextSize = new System.Drawing.Size(102, 13);
@@ -211,7 +217,7 @@
             this.layoutControlItem9.Control = this.txtDesconto;
             this.layoutControlItem9.Location = new System.Drawing.Point(0, 40);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(325, 40);
+            this.layoutControlItem9.Size = new System.Drawing.Size(301, 40);
             this.layoutControlItem9.Text = "Desconto (% / R$)";
             this.layoutControlItem9.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem9.TextSize = new System.Drawing.Size(102, 13);
@@ -221,7 +227,7 @@
             this.layoutControlItem8.Control = this.cmbFormaPagamento;
             this.layoutControlItem8.Location = new System.Drawing.Point(0, 80);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(325, 40);
+            this.layoutControlItem8.Size = new System.Drawing.Size(301, 40);
             this.layoutControlItem8.Text = "Forma de pagamento";
             this.layoutControlItem8.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem8.TextSize = new System.Drawing.Size(102, 13);
@@ -231,7 +237,7 @@
             this.layoutControlItem10.Control = this.txtValorPagamento;
             this.layoutControlItem10.Location = new System.Drawing.Point(0, 120);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(325, 44);
+            this.layoutControlItem10.Size = new System.Drawing.Size(301, 42);
             this.layoutControlItem10.Text = "Valor do pagamento";
             this.layoutControlItem10.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem10.TextSize = new System.Drawing.Size(102, 13);
@@ -242,7 +248,7 @@
             this.btnVoltar.Appearance.Options.UseFont = true;
             this.btnVoltar.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
             this.btnVoltar.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
-            this.btnVoltar.Location = new System.Drawing.Point(9, 52);
+            this.btnVoltar.Location = new System.Drawing.Point(7, 39);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(58, 54);
             this.btnVoltar.TabIndex = 17;
@@ -259,11 +265,11 @@
             this.layoutControl1.Controls.Add(this.txtTroco);
             this.layoutControl1.Controls.Add(this.txtQuantlProduto);
             this.layoutControl1.Controls.Add(this.txtTotalProduto);
-            this.layoutControl1.Location = new System.Drawing.Point(-3, 335);
+            this.layoutControl1.Location = new System.Drawing.Point(341, 285);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(916, 272, 650, 400);
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(345, 148);
+            this.layoutControl1.Size = new System.Drawing.Size(345, 193);
             this.layoutControl1.TabIndex = 18;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -271,11 +277,11 @@
             // 
             this.txtTotalDesconto.EditValue = "R$ 0,00";
             this.txtTotalDesconto.Enabled = false;
-            this.txtTotalDesconto.Location = new System.Drawing.Point(12, 68);
+            this.txtTotalDesconto.Location = new System.Drawing.Point(24, 101);
             this.txtTotalDesconto.Name = "txtTotalDesconto";
             this.txtTotalDesconto.Properties.Appearance.Options.UseTextOptions = true;
             this.txtTotalDesconto.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtTotalDesconto.Size = new System.Drawing.Size(156, 20);
+            this.txtTotalDesconto.Size = new System.Drawing.Size(144, 20);
             this.txtTotalDesconto.StyleController = this.layoutControl1;
             this.txtTotalDesconto.TabIndex = 4;
             // 
@@ -283,11 +289,11 @@
             // 
             this.txtValorPago.EditValue = "R$ 0,00";
             this.txtValorPago.Enabled = false;
-            this.txtValorPago.Location = new System.Drawing.Point(172, 68);
+            this.txtValorPago.Location = new System.Drawing.Point(172, 101);
             this.txtValorPago.Name = "txtValorPago";
             this.txtValorPago.Properties.Appearance.Options.UseTextOptions = true;
             this.txtValorPago.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtValorPago.Size = new System.Drawing.Size(161, 20);
+            this.txtValorPago.Size = new System.Drawing.Size(149, 20);
             this.txtValorPago.StyleController = this.layoutControl1;
             this.txtValorPago.TabIndex = 4;
             // 
@@ -295,11 +301,11 @@
             // 
             this.txtTroco.EditValue = "R$ 0,00";
             this.txtTroco.Enabled = false;
-            this.txtTroco.Location = new System.Drawing.Point(12, 108);
+            this.txtTroco.Location = new System.Drawing.Point(24, 141);
             this.txtTroco.Name = "txtTroco";
             this.txtTroco.Properties.Appearance.Options.UseTextOptions = true;
             this.txtTroco.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtTroco.Size = new System.Drawing.Size(321, 20);
+            this.txtTroco.Size = new System.Drawing.Size(297, 20);
             this.txtTroco.StyleController = this.layoutControl1;
             this.txtTroco.TabIndex = 4;
             // 
@@ -307,11 +313,11 @@
             // 
             this.txtQuantlProduto.EditValue = "0";
             this.txtQuantlProduto.Enabled = false;
-            this.txtQuantlProduto.Location = new System.Drawing.Point(12, 28);
+            this.txtQuantlProduto.Location = new System.Drawing.Point(24, 61);
             this.txtQuantlProduto.Name = "txtQuantlProduto";
             this.txtQuantlProduto.Properties.Appearance.Options.UseTextOptions = true;
             this.txtQuantlProduto.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtQuantlProduto.Size = new System.Drawing.Size(156, 20);
+            this.txtQuantlProduto.Size = new System.Drawing.Size(144, 20);
             this.txtQuantlProduto.StyleController = this.layoutControl1;
             this.txtQuantlProduto.TabIndex = 5;
             // 
@@ -319,11 +325,11 @@
             // 
             this.txtTotalProduto.EditValue = "R$ 0,00";
             this.txtTotalProduto.Enabled = false;
-            this.txtTotalProduto.Location = new System.Drawing.Point(172, 28);
+            this.txtTotalProduto.Location = new System.Drawing.Point(172, 61);
             this.txtTotalProduto.Name = "txtTotalProduto";
             this.txtTotalProduto.Properties.Appearance.Options.UseTextOptions = true;
             this.txtTotalProduto.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtTotalProduto.Size = new System.Drawing.Size(161, 20);
+            this.txtTotalProduto.Size = new System.Drawing.Size(149, 20);
             this.txtTotalProduto.StyleController = this.layoutControl1;
             this.txtTotalProduto.TabIndex = 4;
             // 
@@ -332,13 +338,9 @@
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem2,
-            this.layoutControlItem4,
-            this.layoutControlItem3,
-            this.layoutControlItem5,
-            this.CampoTroco});
+            this.layoutControlGroup4});
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(345, 148);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(345, 193);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem2
@@ -346,7 +348,7 @@
             this.layoutControlItem2.Control = this.txtTotalDesconto;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 40);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(160, 40);
+            this.layoutControlItem2.Size = new System.Drawing.Size(148, 40);
             this.layoutControlItem2.Text = "TOTAL DO DESCONTO";
             this.layoutControlItem2.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem2.TextSize = new System.Drawing.Size(114, 13);
@@ -358,7 +360,7 @@
             this.layoutControlItem4.CustomizationFormText = "TOTAL DOS PRODUTOS";
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(160, 40);
+            this.layoutControlItem4.Size = new System.Drawing.Size(148, 40);
             this.layoutControlItem4.Text = "QUANT. PRODUTOS";
             this.layoutControlItem4.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem4.TextSize = new System.Drawing.Size(114, 13);
@@ -368,9 +370,9 @@
             this.layoutControlItem3.Control = this.txtTotalProduto;
             this.layoutControlItem3.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem3.CustomizationFormText = "TOTAL DO DESCONTO";
-            this.layoutControlItem3.Location = new System.Drawing.Point(160, 0);
+            this.layoutControlItem3.Location = new System.Drawing.Point(148, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(165, 40);
+            this.layoutControlItem3.Size = new System.Drawing.Size(153, 40);
             this.layoutControlItem3.Text = "TOTAL DOS PRODUTOS";
             this.layoutControlItem3.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem3.TextSize = new System.Drawing.Size(114, 13);
@@ -380,9 +382,9 @@
             this.layoutControlItem5.Control = this.txtValorPago;
             this.layoutControlItem5.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem5.CustomizationFormText = "TOTAL DO DESCONTO";
-            this.layoutControlItem5.Location = new System.Drawing.Point(160, 40);
+            this.layoutControlItem5.Location = new System.Drawing.Point(148, 40);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(165, 40);
+            this.layoutControlItem5.Size = new System.Drawing.Size(153, 40);
             this.layoutControlItem5.Text = "VALOR PAGO";
             this.layoutControlItem5.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem5.TextSize = new System.Drawing.Size(114, 13);
@@ -394,7 +396,7 @@
             this.CampoTroco.CustomizationFormText = "TOTAL DO DESCONTO";
             this.CampoTroco.Location = new System.Drawing.Point(0, 80);
             this.CampoTroco.Name = "CampoTroco";
-            this.CampoTroco.Size = new System.Drawing.Size(325, 48);
+            this.CampoTroco.Size = new System.Drawing.Size(301, 48);
             this.CampoTroco.Text = "TROCO";
             this.CampoTroco.TextLocation = DevExpress.Utils.Locations.Top;
             this.CampoTroco.TextSize = new System.Drawing.Size(114, 13);
@@ -403,7 +405,7 @@
             // 
             this.lblTotalGeral.Appearance.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalGeral.Appearance.Options.UseFont = true;
-            this.lblTotalGeral.Location = new System.Drawing.Point(397, 495);
+            this.lblTotalGeral.Location = new System.Drawing.Point(372, 496);
             this.lblTotalGeral.Name = "lblTotalGeral";
             this.lblTotalGeral.Size = new System.Drawing.Size(126, 45);
             this.lblTotalGeral.TabIndex = 20;
@@ -411,7 +413,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(397, 476);
+            this.labelControl2.Location = new System.Drawing.Point(372, 481);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(67, 13);
             this.labelControl2.TabIndex = 19;
@@ -423,7 +425,7 @@
             this.btnFinalizarVenda.Appearance.Options.UseFont = true;
             this.btnFinalizarVenda.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
             this.btnFinalizarVenda.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
-            this.btnFinalizarVenda.Location = new System.Drawing.Point(9, 477);
+            this.btnFinalizarVenda.Location = new System.Drawing.Point(7, 481);
             this.btnFinalizarVenda.Name = "btnFinalizarVenda";
             this.btnFinalizarVenda.Size = new System.Drawing.Size(58, 54);
             this.btnFinalizarVenda.TabIndex = 21;
@@ -435,12 +437,13 @@
             // 
             // txtCPF
             // 
-            this.txtCPF.Location = new System.Drawing.Point(357, 154);
+            this.txtCPF.Location = new System.Drawing.Point(24, 61);
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
             this.txtCPF.Properties.MaskSettings.Set("MaskManagerSignature", "ignoreMaskBlank=True");
             this.txtCPF.Properties.MaskSettings.Set("mask", "000\\.000\\.000\\-00");
-            this.txtCPF.Size = new System.Drawing.Size(313, 20);
+            this.txtCPF.Size = new System.Drawing.Size(297, 20);
+            this.txtCPF.StyleController = this.layoutControl3;
             this.txtCPF.TabIndex = 23;
             this.txtCPF.ToolTip = "Insira o número para associar à transação.";
             this.txtCPF.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
@@ -448,43 +451,28 @@
             this.txtCPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCPF_KeyPress);
             this.txtCPF.Validating += new System.ComponentModel.CancelEventHandler(this.txtCPF_Validating);
             // 
-            // labelControl3
-            // 
-            this.labelControl3.Location = new System.Drawing.Point(357, 138);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(31, 13);
-            this.labelControl3.TabIndex = 24;
-            this.labelControl3.Text = "C.P.F.";
-            // 
             // txtNomeCliente
             // 
             this.txtNomeCliente.EditValue = "Cliente não informado.";
             this.txtNomeCliente.Enabled = false;
-            this.txtNomeCliente.Location = new System.Drawing.Point(357, 194);
+            this.txtNomeCliente.Location = new System.Drawing.Point(24, 101);
             this.txtNomeCliente.Name = "txtNomeCliente";
             this.txtNomeCliente.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
             this.txtNomeCliente.Properties.MaskSettings.Set("MaskManagerSignature", "ignoreMaskBlank=True");
             this.txtNomeCliente.Properties.MaskSettings.Set("mask", "000\\.000\\.000\\-00");
-            this.txtNomeCliente.Size = new System.Drawing.Size(313, 20);
+            this.txtNomeCliente.Size = new System.Drawing.Size(297, 20);
+            this.txtNomeCliente.StyleController = this.layoutControl3;
             this.txtNomeCliente.TabIndex = 25;
             this.txtNomeCliente.ToolTip = "Campo de nome do cliente: será preenchido automaticamente com base no CPF.";
             this.txtNomeCliente.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.txtNomeCliente.ToolTipTitle = "Nome Cliente:";
             // 
-            // labelControl4
-            // 
-            this.labelControl4.Location = new System.Drawing.Point(357, 180);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(63, 13);
-            this.labelControl4.TabIndex = 26;
-            this.labelControl4.Text = "Nome Cliente";
-            // 
             // grdPagamentos
             // 
-            this.grdPagamentos.Location = new System.Drawing.Point(357, 281);
+            this.grdPagamentos.Location = new System.Drawing.Point(24, 45);
             this.grdPagamentos.MainView = this.gridView1;
             this.grdPagamentos.Name = "grdPagamentos";
-            this.grdPagamentos.Size = new System.Drawing.Size(313, 182);
+            this.grdPagamentos.Size = new System.Drawing.Size(297, 125);
             this.grdPagamentos.TabIndex = 27;
             this.grdPagamentos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -533,59 +521,137 @@
             this.uc_TituloTelas1.Size = new System.Drawing.Size(963, 34);
             this.uc_TituloTelas1.TabIndex = 28;
             // 
-            // uc_SubTituloTelas1
+            // layoutControlGroup3
             // 
-            this.uc_SubTituloTelas1.Location = new System.Drawing.Point(7, 112);
-            this.uc_SubTituloTelas1.Name = "uc_SubTituloTelas1";
-            this.uc_SubTituloTelas1.Size = new System.Drawing.Size(323, 28);
-            this.uc_SubTituloTelas1.TabIndex = 29;
+            this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem7,
+            this.layoutControlItem9,
+            this.layoutControlItem8,
+            this.layoutControlItem10});
+            this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup3.Name = "layoutControlGroup3";
+            this.layoutControlGroup3.Size = new System.Drawing.Size(325, 207);
+            this.layoutControlGroup3.Text = "Forma do pagamento";
             // 
-            // uc_SubTituloTelas2
+            // layoutControlGroup4
             // 
-            this.uc_SubTituloTelas2.Location = new System.Drawing.Point(355, 113);
-            this.uc_SubTituloTelas2.Name = "uc_SubTituloTelas2";
-            this.uc_SubTituloTelas2.Size = new System.Drawing.Size(323, 28);
-            this.uc_SubTituloTelas2.TabIndex = 30;
+            this.layoutControlGroup4.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem4,
+            this.layoutControlItem3,
+            this.layoutControlItem5,
+            this.layoutControlItem2,
+            this.CampoTroco});
+            this.layoutControlGroup4.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup4.Name = "layoutControlGroup4";
+            this.layoutControlGroup4.Size = new System.Drawing.Size(325, 173);
+            this.layoutControlGroup4.Text = "Resumo da venda";
             // 
-            // uc_SubTituloTelas3
+            // layoutControl3
             // 
-            this.uc_SubTituloTelas3.Location = new System.Drawing.Point(5, 317);
-            this.uc_SubTituloTelas3.Name = "uc_SubTituloTelas3";
-            this.uc_SubTituloTelas3.Size = new System.Drawing.Size(323, 28);
-            this.uc_SubTituloTelas3.TabIndex = 31;
+            this.layoutControl3.Controls.Add(this.txtCPF);
+            this.layoutControl3.Controls.Add(this.txtNomeCliente);
+            this.layoutControl3.Location = new System.Drawing.Point(-3, 324);
+            this.layoutControl3.Name = "layoutControl3";
+            this.layoutControl3.Root = this.Root;
+            this.layoutControl3.Size = new System.Drawing.Size(345, 154);
+            this.layoutControl3.TabIndex = 33;
+            this.layoutControl3.Text = "layoutControl3";
             // 
-            // uc_SubTituloTelas4
+            // Root
             // 
-            this.uc_SubTituloTelas4.Location = new System.Drawing.Point(356, 235);
-            this.uc_SubTituloTelas4.Name = "uc_SubTituloTelas4";
-            this.uc_SubTituloTelas4.Size = new System.Drawing.Size(323, 28);
-            this.uc_SubTituloTelas4.TabIndex = 32;
+            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.Root.GroupBordersVisible = false;
+            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlGroup5});
+            this.Root.Name = "Root";
+            this.Root.Size = new System.Drawing.Size(345, 154);
+            this.Root.TextVisible = false;
             // 
-            // frmPamentoPDV
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.txtCPF;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(301, 40);
+            this.layoutControlItem1.Text = "C.P.F.";
+            this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(63, 13);
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.txtNomeCliente;
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 40);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(301, 49);
+            this.layoutControlItem6.Text = "Nome Cliente";
+            this.layoutControlItem6.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(63, 13);
+            // 
+            // layoutControlGroup5
+            // 
+            this.layoutControlGroup5.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem6,
+            this.layoutControlItem1});
+            this.layoutControlGroup5.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup5.Name = "layoutControlGroup5";
+            this.layoutControlGroup5.Size = new System.Drawing.Size(325, 134);
+            this.layoutControlGroup5.Text = "Dados do cliente";
+            // 
+            // layoutControl4
+            // 
+            this.layoutControl4.Controls.Add(this.grdPagamentos);
+            this.layoutControl4.Location = new System.Drawing.Point(341, 95);
+            this.layoutControl4.Name = "layoutControl4";
+            this.layoutControl4.Root = this.layoutControlGroup6;
+            this.layoutControl4.Size = new System.Drawing.Size(345, 194);
+            this.layoutControl4.TabIndex = 34;
+            this.layoutControl4.Text = "layoutControl4";
+            // 
+            // layoutControlGroup6
+            // 
+            this.layoutControlGroup6.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup6.GroupBordersVisible = false;
+            this.layoutControlGroup6.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlGroup7});
+            this.layoutControlGroup6.Name = "layoutControlGroup6";
+            this.layoutControlGroup6.Size = new System.Drawing.Size(345, 194);
+            this.layoutControlGroup6.TextVisible = false;
+            // 
+            // layoutControlGroup7
+            // 
+            this.layoutControlGroup7.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem12});
+            this.layoutControlGroup7.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup7.Name = "layoutControlGroup7";
+            this.layoutControlGroup7.Size = new System.Drawing.Size(325, 174);
+            this.layoutControlGroup7.Text = "Dados de pagamentos";
+            // 
+            // layoutControlItem12
+            // 
+            this.layoutControlItem12.Control = this.grdPagamentos;
+            this.layoutControlItem12.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem12.Name = "layoutControlItem12";
+            this.layoutControlItem12.Size = new System.Drawing.Size(301, 129);
+            this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem12.TextVisible = false;
+            // 
+            // frmPagamentoPDV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(682, 549);
-            this.Controls.Add(this.uc_SubTituloTelas4);
-            this.Controls.Add(this.uc_SubTituloTelas3);
-            this.Controls.Add(this.uc_SubTituloTelas1);
+            this.ClientSize = new System.Drawing.Size(682, 550);
+            this.Controls.Add(this.layoutControl4);
+            this.Controls.Add(this.layoutControl3);
             this.Controls.Add(this.uc_TituloTelas1);
-            this.Controls.Add(this.grdPagamentos);
-            this.Controls.Add(this.labelControl4);
-            this.Controls.Add(this.txtNomeCliente);
-            this.Controls.Add(this.labelControl3);
-            this.Controls.Add(this.txtCPF);
             this.Controls.Add(this.btnFinalizarVenda);
             this.Controls.Add(this.lblTotalGeral);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.layoutControl2);
-            this.Controls.Add(this.labelControl1);
-            this.Controls.Add(this.uc_SubTituloTelas2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmPamentoPDV";
+            this.Name = "frmPagamentoPDV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmPamentoPDV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
@@ -616,13 +682,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtNomeCliente.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdPagamentos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).EndInit();
+            this.layoutControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl4)).EndInit();
+            this.layoutControl4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraLayout.LayoutControl layoutControl2;
         private DevExpress.XtraEditors.LookUpEdit cmbVendedor;
         private DevExpress.XtraEditors.TextEdit txtDesconto;
@@ -650,18 +728,23 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.SimpleButton btnFinalizarVenda;
         private DevExpress.XtraEditors.TextEdit txtCPF;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.TextEdit txtNomeCliente;
-        private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraGrid.GridControl grdPagamentos;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn idPagamento;
         private DevExpress.XtraGrid.Columns.GridColumn DescricaoPagamento;
         private DevExpress.XtraGrid.Columns.GridColumn VlrPagamento;
         private uc_TituloTelas uc_TituloTelas1;
-        private uc_SubTituloTelas uc_SubTituloTelas1;
-        private uc_SubTituloTelas uc_SubTituloTelas2;
-        private uc_SubTituloTelas uc_SubTituloTelas3;
-        private uc_SubTituloTelas uc_SubTituloTelas4;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup3;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup4;
+        private DevExpress.XtraLayout.LayoutControl layoutControl3;
+        private DevExpress.XtraLayout.LayoutControlGroup Root;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup5;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraLayout.LayoutControl layoutControl4;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup6;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup7;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
     }
 }

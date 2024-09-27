@@ -99,7 +99,7 @@ namespace DXApplicationPDV
                     {
                         movimentacao.id_movimentacao,
                         movimentacao.mv_dtCri,
-                        movimentacao.fk_tb_ator_atend.at_nomeFant,
+                        movimentacao.fk_tb_ator_atend.at_razSoc,
                         nfe.nf_nfe1ResProtNFeInfProt0ChNFe,
                         movimentacao.mv_qtdItens,
                         movimentacao.mv_nfeVlrTotNF,

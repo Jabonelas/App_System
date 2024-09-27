@@ -86,8 +86,6 @@ namespace DXApplicationPDV
 
             uc_TituloTelas1.lblTituloTela.Text = "Visualizar Venda";
             uc_SubTituloTelas1.lblSubTituloTela.Text = "Aqui você pode visualizar todos os produtos vendidos na venda selecionada.";
-            uc_SubTituloTelas2.lblSubTituloTela.Text = "Dados da Venda";
-            uc_SubTituloTelas3.lblSubTituloTela.Text = "Dados Cliente";
         }
 
         private void CarregarGridProdutosVendaRealizada()

@@ -140,7 +140,7 @@
             // Vendedor
             // 
             this.Vendedor.Caption = "Nome Vendedor";
-            this.Vendedor.FieldName = "at_nomeFant";
+            this.Vendedor.FieldName = "at_razSoc";
             this.Vendedor.Name = "Vendedor";
             this.Vendedor.OptionsColumn.ReadOnly = true;
             this.Vendedor.Visible = true;

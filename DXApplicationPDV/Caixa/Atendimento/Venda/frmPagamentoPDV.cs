@@ -89,10 +89,6 @@ namespace DXApplicationPDV
             configBotoes.BotaoFinalizarVenda(btnFinalizarVenda);
 
             uc_TituloTelas1.lblTituloTela.Text = "Pagamento";
-            uc_SubTituloTelas1.lblSubTituloTela.Text = "Forma do pagamento.";
-            uc_SubTituloTelas2.lblSubTituloTela.Text = "Dados do cliente.";
-            uc_SubTituloTelas3.lblSubTituloTela.Text = "Resumo da venda.";
-            uc_SubTituloTelas4.lblSubTituloTela.Text = "Dados de pagamentos.";
 
             // Desabilitar a opção de maximizar a tela
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -363,7 +359,7 @@ namespace DXApplicationPDV
             {
                 using (UnitOfWork uow = new UnitOfWork())
                 {
-                    tb_ator usuarioLogado = uow.GetObjectByKey<tb_ator>(VariaveisGlobais.UsuarioLogado.id_ator);
+                    tb_ator usuarioLogado = uow.GetObjectByKey<tb_ator>(cmbVendedor.EditValue);
 
                     tb_ator filialLogada = uow.GetObjectByKey<tb_ator>(VariaveisGlobais.FilialLogada.id_ator);
 

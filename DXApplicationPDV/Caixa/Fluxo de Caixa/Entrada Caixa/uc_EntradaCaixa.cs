@@ -112,6 +112,8 @@ namespace DXApplicationPDV.Fluxo_de_Caixa.Entrada_Caixa
 
                     tb_jornada _jornada = uow.GetObjectByKey<tb_jornada>(Convert.ToInt64(jornada.id_jornada));
 
+                    tb_ator usuairoLogado = uow.GetObjectByKey<tb_ator>(Convert.ToInt64(VariaveisGlobais.UsuarioLogado.id_ator));
+
                     string valorPagamento = txtValorPagamento.Text.Replace("R$", "").Replace(".", ",");
 
                     tb_movimentacao _caixaAberto = new tb_movimentacao(uow)
@@ -120,6 +122,7 @@ namespace DXApplicationPDV.Fluxo_de_Caixa.Entrada_Caixa
                         mv_nfeVlrTotNF = Convert.ToDecimal(valorPagamento, new CultureInfo("pt-BR")),
                         mv_dtCri = DateTime.Now,
                         mv_dtAlt = DateTime.Now,
+                        fk_tb_ator_atend = usuairoLogado,
                         fk_tb_jornada = _jornada
                     };
 
