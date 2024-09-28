@@ -31,7 +31,6 @@
             this.uc_TituloTelas1 = new DXApplicationPDV.uc_TituloTelas();
             this.btnSalvar = new DevExpress.XtraEditors.SimpleButton();
             this.btnVoltar = new DevExpress.XtraEditors.SimpleButton();
-            this.uc_SubTituloTelas1 = new DXApplicationPDV.uc_SubTituloTelas();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.txtCodProd = new DevExpress.XtraEditors.TextEdit();
             this.txtDesc = new DevExpress.XtraEditors.TextEdit();
@@ -48,6 +47,7 @@
             this.txtEstoqMinimo = new DevExpress.XtraEditors.ButtonEdit();
             this.txtEstoqInicial = new DevExpress.XtraEditors.ButtonEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
             this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -65,17 +65,6 @@
             this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.uc_SubTituloTelas2 = new DXApplicationPDV.uc_SubTituloTelas();
-            this.grdCadastrarProdutos = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.id_produto = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.CNPJ = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.NomeFanta = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.CodRef = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.DescricaoCurta = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Descricao = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.VlrUnProd = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.EstTotal = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodProd.Properties)).BeginInit();
@@ -93,6 +82,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtEstoqMinimo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEstoqInicial.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
@@ -110,8 +100,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdCadastrarProdutos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // uc_TituloTelas1
@@ -151,13 +139,6 @@
             this.btnVoltar.ToolTipTitle = "Voltar:";
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
-            // uc_SubTituloTelas1
-            // 
-            this.uc_SubTituloTelas1.Location = new System.Drawing.Point(5, 319);
-            this.uc_SubTituloTelas1.Name = "uc_SubTituloTelas1";
-            this.uc_SubTituloTelas1.Size = new System.Drawing.Size(1261, 33);
-            this.uc_SubTituloTelas1.TabIndex = 42;
-            // 
             // layoutControl2
             // 
             this.layoutControl2.Controls.Add(this.txtCodProd);
@@ -174,20 +155,20 @@
             this.layoutControl2.Controls.Add(this.txtEstoqMaximo);
             this.layoutControl2.Controls.Add(this.txtEstoqMinimo);
             this.layoutControl2.Controls.Add(this.txtEstoqInicial);
-            this.layoutControl2.Location = new System.Drawing.Point(-2, 120);
+            this.layoutControl2.Location = new System.Drawing.Point(-3, 96);
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.Root = this.layoutControlGroup1;
-            this.layoutControl2.Size = new System.Drawing.Size(1264, 196);
+            this.layoutControl2.Size = new System.Drawing.Size(1264, 240);
             this.layoutControl2.TabIndex = 44;
             this.layoutControl2.Text = "layoutControl2";
             // 
             // txtCodProd
             // 
-            this.txtCodProd.Enabled = false;
-            this.txtCodProd.Location = new System.Drawing.Point(24, 63);
+            this.txtCodProd.Location = new System.Drawing.Point(36, 96);
             this.txtCodProd.Name = "txtCodProd";
             this.txtCodProd.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodProd.Properties.Appearance.Options.UseFont = true;
+            this.txtCodProd.Properties.ReadOnly = true;
             this.txtCodProd.Size = new System.Drawing.Size(157, 20);
             this.txtCodProd.StyleController = this.layoutControl2;
             this.txtCodProd.TabIndex = 4;
@@ -195,12 +176,12 @@
             // 
             // txtDesc
             // 
-            this.txtDesc.Location = new System.Drawing.Point(410, 63);
+            this.txtDesc.Location = new System.Drawing.Point(417, 96);
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDesc.Properties.Appearance.Options.UseFont = true;
             this.txtDesc.Properties.MaxLength = 200;
-            this.txtDesc.Size = new System.Drawing.Size(494, 20);
+            this.txtDesc.Size = new System.Drawing.Size(483, 20);
             this.txtDesc.StyleController = this.layoutControl2;
             this.txtDesc.TabIndex = 6;
             this.txtDesc.ToolTip = "Forneça uma descrição detalhada deste item.";
@@ -209,7 +190,7 @@
             // 
             // txtBarras
             // 
-            this.txtBarras.Location = new System.Drawing.Point(24, 103);
+            this.txtBarras.Location = new System.Drawing.Point(36, 136);
             this.txtBarras.Name = "txtBarras";
             this.txtBarras.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBarras.Properties.Appearance.Options.UseFont = true;
@@ -228,7 +209,7 @@
             // 
             // txtPrecoCusto
             // 
-            this.txtPrecoCusto.Location = new System.Drawing.Point(600, 103);
+            this.txtPrecoCusto.Location = new System.Drawing.Point(588, 136);
             this.txtPrecoCusto.Name = "txtPrecoCusto";
             this.txtPrecoCusto.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrecoCusto.Properties.Appearance.Options.UseFont = true;
@@ -246,7 +227,7 @@
             // 
             // txtPrecoUn
             // 
-            this.txtPrecoUn.Location = new System.Drawing.Point(922, 103);
+            this.txtPrecoUn.Location = new System.Drawing.Point(910, 136);
             this.txtPrecoUn.Name = "txtPrecoUn";
             this.txtPrecoUn.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrecoUn.Properties.Appearance.Options.UseFont = true;
@@ -264,7 +245,7 @@
             // 
             // cmbUn
             // 
-            this.cmbUn.Location = new System.Drawing.Point(761, 103);
+            this.cmbUn.Location = new System.Drawing.Point(749, 136);
             this.cmbUn.Name = "cmbUn";
             this.cmbUn.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbUn.Properties.Appearance.Options.UseFont = true;
@@ -281,7 +262,7 @@
             // 
             // txtAjustGeralPreco
             // 
-            this.txtAjustGeralPreco.Location = new System.Drawing.Point(1083, 103);
+            this.txtAjustGeralPreco.Location = new System.Drawing.Point(1071, 136);
             this.txtAjustGeralPreco.Name = "txtAjustGeralPreco";
             this.txtAjustGeralPreco.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAjustGeralPreco.Properties.Appearance.Options.UseFont = true;
@@ -298,12 +279,12 @@
             // 
             // txtDescCurta
             // 
-            this.txtDescCurta.Location = new System.Drawing.Point(185, 63);
+            this.txtDescCurta.Location = new System.Drawing.Point(197, 96);
             this.txtDescCurta.Name = "txtDescCurta";
             this.txtDescCurta.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescCurta.Properties.Appearance.Options.UseFont = true;
             this.txtDescCurta.Properties.MaxLength = 100;
-            this.txtDescCurta.Size = new System.Drawing.Size(221, 20);
+            this.txtDescCurta.Size = new System.Drawing.Size(216, 20);
             this.txtDescCurta.StyleController = this.layoutControl2;
             this.txtDescCurta.TabIndex = 5;
             this.txtDescCurta.ToolTip = "Forneça uma breve descrição deste item. Use palavras-chave que representem o esse" +
@@ -313,13 +294,13 @@
             // 
             // cmbCategoria
             // 
-            this.cmbCategoria.Location = new System.Drawing.Point(185, 103);
+            this.cmbCategoria.Location = new System.Drawing.Point(197, 136);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbCategoria.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("cp_desc", "Descrição da Categoria")});
-            this.cmbCategoria.Size = new System.Drawing.Size(220, 20);
+            this.cmbCategoria.Size = new System.Drawing.Size(215, 20);
             this.cmbCategoria.StyleController = this.layoutControl2;
             this.cmbCategoria.TabIndex = 9;
             this.cmbCategoria.ToolTip = "Selecione a categoria deste item.";
@@ -328,13 +309,13 @@
             // 
             // cmbSubcategoria
             // 
-            this.cmbSubcategoria.Location = new System.Drawing.Point(409, 103);
+            this.cmbSubcategoria.Location = new System.Drawing.Point(416, 136);
             this.cmbSubcategoria.Name = "cmbSubcategoria";
             this.cmbSubcategoria.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbSubcategoria.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("scp_desc", "Descrição da Subcategoria")});
-            this.cmbSubcategoria.Size = new System.Drawing.Size(187, 20);
+            this.cmbSubcategoria.Size = new System.Drawing.Size(168, 20);
             this.cmbSubcategoria.StyleController = this.layoutControl2;
             this.cmbSubcategoria.TabIndex = 10;
             this.cmbSubcategoria.ToolTip = "Selecione a subcategoria deste item.";
@@ -343,12 +324,12 @@
             // 
             // cmbMarca
             // 
-            this.cmbMarca.Location = new System.Drawing.Point(908, 63);
+            this.cmbMarca.Location = new System.Drawing.Point(904, 96);
             this.cmbMarca.Name = "cmbMarca";
             this.cmbMarca.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbMarca.Properties.NullText = "Informe / Selecione a Marca";
-            this.cmbMarca.Size = new System.Drawing.Size(332, 20);
+            this.cmbMarca.Size = new System.Drawing.Size(324, 20);
             this.cmbMarca.StyleController = this.layoutControl2;
             this.cmbMarca.TabIndex = 11;
             this.cmbMarca.ToolTip = "Informe a marca do produto para auxiliar na organização e classificação dos itens" +
@@ -358,7 +339,7 @@
             // 
             // txtEstoqMaximo
             // 
-            this.txtEstoqMaximo.Location = new System.Drawing.Point(905, 143);
+            this.txtEstoqMaximo.Location = new System.Drawing.Point(900, 176);
             this.txtEstoqMaximo.Name = "txtEstoqMaximo";
             this.txtEstoqMaximo.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEstoqMaximo.Properties.Appearance.Options.UseFont = true;
@@ -367,7 +348,7 @@
             this.txtEstoqMaximo.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtEstoqMaximo.Properties.MaskSettings.Set("mask", "d");
             this.txtEstoqMaximo.Properties.MaxLength = 6;
-            this.txtEstoqMaximo.Size = new System.Drawing.Size(335, 20);
+            this.txtEstoqMaximo.Size = new System.Drawing.Size(328, 20);
             this.txtEstoqMaximo.StyleController = this.layoutControl2;
             this.txtEstoqMaximo.TabIndex = 9;
             this.txtEstoqMaximo.ToolTip = "Defina a quantidade máximo de estoque para este item.";
@@ -377,7 +358,7 @@
             // 
             // txtEstoqMinimo
             // 
-            this.txtEstoqMinimo.Location = new System.Drawing.Point(401, 143);
+            this.txtEstoqMinimo.Location = new System.Drawing.Point(406, 176);
             this.txtEstoqMinimo.Name = "txtEstoqMinimo";
             this.txtEstoqMinimo.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEstoqMinimo.Properties.Appearance.Options.UseFont = true;
@@ -386,7 +367,7 @@
             this.txtEstoqMinimo.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtEstoqMinimo.Properties.MaskSettings.Set("mask", "d");
             this.txtEstoqMinimo.Properties.MaxLength = 6;
-            this.txtEstoqMinimo.Size = new System.Drawing.Size(500, 20);
+            this.txtEstoqMinimo.Size = new System.Drawing.Size(490, 20);
             this.txtEstoqMinimo.StyleController = this.layoutControl2;
             this.txtEstoqMinimo.TabIndex = 9;
             this.txtEstoqMinimo.ToolTip = "Defina a quantidade mínima de estoque para este item.";
@@ -396,7 +377,7 @@
             // 
             // txtEstoqInicial
             // 
-            this.txtEstoqInicial.Location = new System.Drawing.Point(24, 143);
+            this.txtEstoqInicial.Location = new System.Drawing.Point(36, 176);
             this.txtEstoqInicial.Name = "txtEstoqInicial";
             this.txtEstoqInicial.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEstoqInicial.Properties.Appearance.Options.UseFont = true;
@@ -405,7 +386,7 @@
             this.txtEstoqInicial.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtEstoqInicial.Properties.MaskSettings.Set("mask", "d");
             this.txtEstoqInicial.Properties.MaxLength = 6;
-            this.txtEstoqInicial.Size = new System.Drawing.Size(373, 20);
+            this.txtEstoqInicial.Size = new System.Drawing.Size(366, 20);
             this.txtEstoqInicial.StyleController = this.layoutControl2;
             this.txtEstoqInicial.TabIndex = 9;
             this.txtEstoqInicial.ToolTip = "Informe a quantidade inicial do produto em estoque no momento do cadastro para qu" +
@@ -418,17 +399,26 @@
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.tabbedControlGroup1});
+            this.layoutControlGroup2});
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1264, 196);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1264, 240);
             this.layoutControlGroup1.TextVisible = false;
+            // 
+            // layoutControlGroup2
+            // 
+            this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.tabbedControlGroup1});
+            this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup2.Name = "layoutControlGroup2";
+            this.layoutControlGroup2.Size = new System.Drawing.Size(1244, 220);
+            this.layoutControlGroup2.Text = "Aqui você pode cadastrar ou alterar produtos na filial.";
             // 
             // tabbedControlGroup1
             // 
             this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.tabbedControlGroup1.Name = "tabbedControlGroup1";
             this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup4;
-            this.tabbedControlGroup1.Size = new System.Drawing.Size(1244, 176);
+            this.tabbedControlGroup1.Size = new System.Drawing.Size(1220, 175);
             this.tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup4,
             this.layoutControlGroup3});
@@ -452,7 +442,7 @@
             this.layoutControlItem20});
             this.layoutControlGroup4.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup4.Name = "layoutControlGroup4";
-            this.layoutControlGroup4.Size = new System.Drawing.Size(1220, 129);
+            this.layoutControlGroup4.Size = new System.Drawing.Size(1196, 128);
             this.layoutControlGroup4.Text = "Dados";
             // 
             // layoutControlItem13
@@ -474,7 +464,7 @@
             this.layoutControlItem21.CustomizationFormText = "Descrição Curta";
             this.layoutControlItem21.Location = new System.Drawing.Point(161, 0);
             this.layoutControlItem21.Name = "layoutControlItem21";
-            this.layoutControlItem21.Size = new System.Drawing.Size(225, 40);
+            this.layoutControlItem21.Size = new System.Drawing.Size(220, 40);
             this.layoutControlItem21.Text = "Descrição Curta";
             this.layoutControlItem21.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem21.TextSize = new System.Drawing.Size(157, 13);
@@ -484,9 +474,9 @@
             this.layoutControlItem14.Control = this.txtDesc;
             this.layoutControlItem14.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem14.CustomizationFormText = "Descrição";
-            this.layoutControlItem14.Location = new System.Drawing.Point(386, 0);
+            this.layoutControlItem14.Location = new System.Drawing.Point(381, 0);
             this.layoutControlItem14.Name = "layoutControlItem14";
-            this.layoutControlItem14.Size = new System.Drawing.Size(498, 40);
+            this.layoutControlItem14.Size = new System.Drawing.Size(487, 40);
             this.layoutControlItem14.Text = "Descrição";
             this.layoutControlItem14.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem14.TextSize = new System.Drawing.Size(157, 13);
@@ -496,9 +486,9 @@
             this.layoutControlItem24.Control = this.cmbMarca;
             this.layoutControlItem24.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem24.CustomizationFormText = "Marca";
-            this.layoutControlItem24.Location = new System.Drawing.Point(884, 0);
+            this.layoutControlItem24.Location = new System.Drawing.Point(868, 0);
             this.layoutControlItem24.Name = "layoutControlItem24";
-            this.layoutControlItem24.Size = new System.Drawing.Size(336, 40);
+            this.layoutControlItem24.Size = new System.Drawing.Size(328, 40);
             this.layoutControlItem24.Text = "Marca";
             this.layoutControlItem24.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem24.TextSize = new System.Drawing.Size(157, 13);
@@ -522,7 +512,7 @@
             this.layoutControlItem22.CustomizationFormText = "Categoria";
             this.layoutControlItem22.Location = new System.Drawing.Point(161, 40);
             this.layoutControlItem22.Name = "layoutControlItem22";
-            this.layoutControlItem22.Size = new System.Drawing.Size(224, 40);
+            this.layoutControlItem22.Size = new System.Drawing.Size(219, 40);
             this.layoutControlItem22.Text = "Categoria";
             this.layoutControlItem22.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem22.TextSize = new System.Drawing.Size(157, 13);
@@ -532,9 +522,9 @@
             this.layoutControlItem23.Control = this.cmbSubcategoria;
             this.layoutControlItem23.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem23.CustomizationFormText = "SubCategoria";
-            this.layoutControlItem23.Location = new System.Drawing.Point(385, 40);
+            this.layoutControlItem23.Location = new System.Drawing.Point(380, 40);
             this.layoutControlItem23.Name = "layoutControlItem23";
-            this.layoutControlItem23.Size = new System.Drawing.Size(191, 40);
+            this.layoutControlItem23.Size = new System.Drawing.Size(172, 40);
             this.layoutControlItem23.Text = "SubCategoria";
             this.layoutControlItem23.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem23.TextSize = new System.Drawing.Size(157, 13);
@@ -544,7 +534,7 @@
             this.layoutControlItem16.Control = this.txtPrecoCusto;
             this.layoutControlItem16.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem16.CustomizationFormText = "Prç. Custo";
-            this.layoutControlItem16.Location = new System.Drawing.Point(576, 40);
+            this.layoutControlItem16.Location = new System.Drawing.Point(552, 40);
             this.layoutControlItem16.Name = "layoutControlItem16";
             this.layoutControlItem16.Size = new System.Drawing.Size(161, 40);
             this.layoutControlItem16.Text = "Prç. Custo";
@@ -556,7 +546,7 @@
             this.layoutControlItem18.Control = this.cmbUn;
             this.layoutControlItem18.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem18.CustomizationFormText = "Un.";
-            this.layoutControlItem18.Location = new System.Drawing.Point(737, 40);
+            this.layoutControlItem18.Location = new System.Drawing.Point(713, 40);
             this.layoutControlItem18.Name = "layoutControlItem18";
             this.layoutControlItem18.Size = new System.Drawing.Size(161, 40);
             this.layoutControlItem18.Text = "Un.";
@@ -568,7 +558,7 @@
             this.layoutControlItem17.Control = this.txtPrecoUn;
             this.layoutControlItem17.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem17.CustomizationFormText = "Prç. Custo";
-            this.layoutControlItem17.Location = new System.Drawing.Point(898, 40);
+            this.layoutControlItem17.Location = new System.Drawing.Point(874, 40);
             this.layoutControlItem17.Name = "layoutControlItem17";
             this.layoutControlItem17.Size = new System.Drawing.Size(161, 40);
             this.layoutControlItem17.Text = "Prç. un.";
@@ -580,7 +570,7 @@
             this.layoutControlItem19.Control = this.txtAjustGeralPreco;
             this.layoutControlItem19.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem19.CustomizationFormText = "Sub-Categoria";
-            this.layoutControlItem19.Location = new System.Drawing.Point(1059, 40);
+            this.layoutControlItem19.Location = new System.Drawing.Point(1035, 40);
             this.layoutControlItem19.Name = "layoutControlItem19";
             this.layoutControlItem19.Size = new System.Drawing.Size(161, 40);
             this.layoutControlItem19.Text = "Ajuste Geral de Preço (% ou R$)";
@@ -594,7 +584,7 @@
             this.layoutControlItem26.CustomizationFormText = "Prç. Custo";
             this.layoutControlItem26.Location = new System.Drawing.Point(0, 80);
             this.layoutControlItem26.Name = "layoutControlItem26";
-            this.layoutControlItem26.Size = new System.Drawing.Size(377, 49);
+            this.layoutControlItem26.Size = new System.Drawing.Size(370, 48);
             this.layoutControlItem26.Text = "Estoque Inicial";
             this.layoutControlItem26.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem26.TextSize = new System.Drawing.Size(157, 13);
@@ -604,9 +594,9 @@
             this.layoutControlItem25.Control = this.txtEstoqMinimo;
             this.layoutControlItem25.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem25.CustomizationFormText = "Prç. Custo";
-            this.layoutControlItem25.Location = new System.Drawing.Point(377, 80);
+            this.layoutControlItem25.Location = new System.Drawing.Point(370, 80);
             this.layoutControlItem25.Name = "layoutControlItem25";
-            this.layoutControlItem25.Size = new System.Drawing.Size(504, 49);
+            this.layoutControlItem25.Size = new System.Drawing.Size(494, 48);
             this.layoutControlItem25.Text = "Estoque Mínimo";
             this.layoutControlItem25.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem25.TextSize = new System.Drawing.Size(157, 13);
@@ -616,9 +606,9 @@
             this.layoutControlItem20.Control = this.txtEstoqMaximo;
             this.layoutControlItem20.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem20.CustomizationFormText = "Prç. Custo";
-            this.layoutControlItem20.Location = new System.Drawing.Point(881, 80);
+            this.layoutControlItem20.Location = new System.Drawing.Point(864, 80);
             this.layoutControlItem20.Name = "layoutControlItem20";
-            this.layoutControlItem20.Size = new System.Drawing.Size(339, 49);
+            this.layoutControlItem20.Size = new System.Drawing.Size(332, 48);
             this.layoutControlItem20.Text = "Estoque Máximo";
             this.layoutControlItem20.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem20.TextSize = new System.Drawing.Size(157, 13);
@@ -627,122 +617,17 @@
             // 
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "layoutControlGroup3";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(1220, 129);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(1196, 128);
             this.layoutControlGroup3.Text = "Fiscal";
-            // 
-            // uc_SubTituloTelas2
-            // 
-            this.uc_SubTituloTelas2.Location = new System.Drawing.Point(7, 100);
-            this.uc_SubTituloTelas2.Name = "uc_SubTituloTelas2";
-            this.uc_SubTituloTelas2.Size = new System.Drawing.Size(1261, 29);
-            this.uc_SubTituloTelas2.TabIndex = 45;
-            // 
-            // grdCadastrarProdutos
-            // 
-            this.grdCadastrarProdutos.Location = new System.Drawing.Point(7, 347);
-            this.grdCadastrarProdutos.MainView = this.gridView1;
-            this.grdCadastrarProdutos.Name = "grdCadastrarProdutos";
-            this.grdCadastrarProdutos.Size = new System.Drawing.Size(1244, 225);
-            this.grdCadastrarProdutos.TabIndex = 46;
-            this.grdCadastrarProdutos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            // 
-            // gridView1
-            // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.id_produto,
-            this.CNPJ,
-            this.NomeFanta,
-            this.CodRef,
-            this.DescricaoCurta,
-            this.Descricao,
-            this.VlrUnProd,
-            this.EstTotal});
-            this.gridView1.GridControl = this.grdCadastrarProdutos;
-            this.gridView1.GroupPanelText = "Buscar...";
-            this.gridView1.Name = "gridView1";
-            // 
-            // id_produto
-            // 
-            this.id_produto.Caption = "id_produto";
-            this.id_produto.FieldName = "id_produto_filial";
-            this.id_produto.Name = "id_produto";
-            // 
-            // CNPJ
-            // 
-            this.CNPJ.Caption = "C.N.P.J.";
-            this.CNPJ.FieldName = "at_cnpj";
-            this.CNPJ.Name = "CNPJ";
-            this.CNPJ.Visible = true;
-            this.CNPJ.VisibleIndex = 0;
-            this.CNPJ.Width = 128;
-            // 
-            // NomeFanta
-            // 
-            this.NomeFanta.Caption = "Filial";
-            this.NomeFanta.FieldName = "at_nomeFant";
-            this.NomeFanta.Name = "NomeFanta";
-            this.NomeFanta.Visible = true;
-            this.NomeFanta.VisibleIndex = 1;
-            this.NomeFanta.Width = 280;
-            // 
-            // CodRef
-            // 
-            this.CodRef.Caption = "Cód. Ref. Pod.";
-            this.CodRef.FieldName = "pf_codRef";
-            this.CodRef.Name = "CodRef";
-            this.CodRef.Visible = true;
-            this.CodRef.VisibleIndex = 2;
-            this.CodRef.Width = 94;
-            // 
-            // DescricaoCurta
-            // 
-            this.DescricaoCurta.Caption = "Descrição Curta";
-            this.DescricaoCurta.FieldName = "pf_descCurta";
-            this.DescricaoCurta.Name = "DescricaoCurta";
-            this.DescricaoCurta.Width = 282;
-            // 
-            // Descricao
-            // 
-            this.Descricao.Caption = "Descrição";
-            this.Descricao.FieldName = "pf_desc";
-            this.Descricao.Name = "Descricao";
-            this.Descricao.Visible = true;
-            this.Descricao.VisibleIndex = 3;
-            this.Descricao.Width = 506;
-            // 
-            // VlrUnProd
-            // 
-            this.VlrUnProd.Caption = "Vlr. un. Prod.";
-            this.VlrUnProd.DisplayFormat.FormatString = "c2";
-            this.VlrUnProd.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.VlrUnProd.FieldName = "pf_vlrUnCom";
-            this.VlrUnProd.GroupFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.VlrUnProd.Name = "VlrUnProd";
-            this.VlrUnProd.Visible = true;
-            this.VlrUnProd.VisibleIndex = 4;
-            this.VlrUnProd.Width = 97;
-            // 
-            // EstTotal
-            // 
-            this.EstTotal.Caption = "Est. Total";
-            this.EstTotal.FieldName = "pf_est";
-            this.EstTotal.Name = "EstTotal";
-            this.EstTotal.Visible = true;
-            this.EstTotal.VisibleIndex = 5;
-            this.EstTotal.Width = 80;
             // 
             // uc_CadProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.grdCadastrarProdutos);
             this.Controls.Add(this.layoutControl2);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.uc_TituloTelas1);
-            this.Controls.Add(this.uc_SubTituloTelas2);
-            this.Controls.Add(this.uc_SubTituloTelas1);
             this.Name = "uc_CadProduto";
             this.Size = new System.Drawing.Size(1259, 579);
             this.Load += new System.EventHandler(this.uc_CadProduto_Load);
@@ -763,6 +648,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtEstoqMinimo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEstoqInicial.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
@@ -780,8 +666,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdCadastrarProdutos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -791,7 +675,6 @@
         private uc_TituloTelas uc_TituloTelas1;
         private DevExpress.XtraEditors.SimpleButton btnSalvar;
         private DevExpress.XtraEditors.SimpleButton btnVoltar;
-        private uc_SubTituloTelas uc_SubTituloTelas1;
         private DevExpress.XtraLayout.LayoutControl layoutControl2;
         private DevExpress.XtraEditors.TextEdit txtCodProd;
         private DevExpress.XtraEditors.TextEdit txtDesc;
@@ -825,16 +708,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem25;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem20;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup3;
-        private uc_SubTituloTelas uc_SubTituloTelas2;
-        private DevExpress.XtraGrid.GridControl grdCadastrarProdutos;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn id_produto;
-        private DevExpress.XtraGrid.Columns.GridColumn CNPJ;
-        private DevExpress.XtraGrid.Columns.GridColumn NomeFanta;
-        private DevExpress.XtraGrid.Columns.GridColumn CodRef;
-        private DevExpress.XtraGrid.Columns.GridColumn DescricaoCurta;
-        private DevExpress.XtraGrid.Columns.GridColumn Descricao;
-        private DevExpress.XtraGrid.Columns.GridColumn VlrUnProd;
-        private DevExpress.XtraGrid.Columns.GridColumn EstTotal;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
     }
 }

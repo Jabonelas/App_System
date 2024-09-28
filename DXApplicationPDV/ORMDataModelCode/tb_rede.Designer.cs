@@ -68,6 +68,8 @@ namespace DXApplicationPDV.bancoSQLite
             get { return fre_PersTim; }
             set { SetPropertyValue<byte>(nameof(re_PersTim), ref fre_PersTim, value); }
         }
+        [Association(@"tb_clasCont1Referencestb_rede")]
+        public XPCollection<tb_clasCont1> tb_clasCont1s { get { return GetCollection<tb_clasCont1>(nameof(tb_clasCont1s)); } }
         [Association(@"tb_forma_pagamentoReferencestb_rede")]
         public XPCollection<tb_forma_pagamento> tb_forma_pagamentos { get { return GetCollection<tb_forma_pagamento>(nameof(tb_forma_pagamentos)); } }
         [Association(@"tb_marca_produtoReferencestb_rede")]

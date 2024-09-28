@@ -36,8 +36,8 @@
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.uc_SubTituloTelas1 = new DXApplicationPDV.uc_SubTituloTelas();
             this.uc_TituloTelas1 = new DXApplicationPDV.uc_TituloTelas();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtFormaPagamento.Properties)).BeginInit();
@@ -45,6 +45,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnVoltar
@@ -83,31 +84,31 @@
             // 
             this.layoutControl1.Controls.Add(this.txtFormaPagamento);
             this.layoutControl1.Controls.Add(this.txtValorPagamento);
-            this.layoutControl1.Location = new System.Drawing.Point(-3, 127);
+            this.layoutControl1.Location = new System.Drawing.Point(-3, 96);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(1269, 202);
+            this.layoutControl1.Size = new System.Drawing.Size(1266, 124);
             this.layoutControl1.TabIndex = 38;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // txtFormaPagamento
             // 
             this.txtFormaPagamento.EditValue = "DINHEIRO";
-            this.txtFormaPagamento.Enabled = false;
-            this.txtFormaPagamento.Location = new System.Drawing.Point(12, 28);
+            this.txtFormaPagamento.Location = new System.Drawing.Point(24, 61);
             this.txtFormaPagamento.Name = "txtFormaPagamento";
-            this.txtFormaPagamento.Size = new System.Drawing.Size(620, 20);
+            this.txtFormaPagamento.Properties.ReadOnly = true;
+            this.txtFormaPagamento.Size = new System.Drawing.Size(607, 20);
             this.txtFormaPagamento.StyleController = this.layoutControl1;
             this.txtFormaPagamento.TabIndex = 6;
             // 
             // txtValorPagamento
             // 
             this.txtValorPagamento.EditValue = "";
-            this.txtValorPagamento.Location = new System.Drawing.Point(636, 28);
+            this.txtValorPagamento.Location = new System.Drawing.Point(635, 61);
             this.txtValorPagamento.Name = "txtValorPagamento";
             this.txtValorPagamento.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtValorPagamento.Properties.MaskSettings.Set("mask", "c");
-            this.txtValorPagamento.Size = new System.Drawing.Size(621, 20);
+            this.txtValorPagamento.Size = new System.Drawing.Size(607, 20);
             this.txtValorPagamento.StyleController = this.layoutControl1;
             this.txtValorPagamento.TabIndex = 7;
             this.txtValorPagamento.ToolTip = "digite o montante para a abertura do caixa.";
@@ -119,10 +120,9 @@
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.Root.GroupBordersVisible = false;
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem3,
-            this.layoutControlItem4});
+            this.layoutControlGroup1});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(1269, 202);
+            this.Root.Size = new System.Drawing.Size(1266, 124);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem3
@@ -130,7 +130,7 @@
             this.layoutControlItem3.Control = this.txtFormaPagamento;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(624, 182);
+            this.layoutControlItem3.Size = new System.Drawing.Size(611, 59);
             this.layoutControlItem3.Text = "Forma de pagamento";
             this.layoutControlItem3.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem3.TextSize = new System.Drawing.Size(102, 13);
@@ -138,19 +138,12 @@
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.txtValorPagamento;
-            this.layoutControlItem4.Location = new System.Drawing.Point(624, 0);
+            this.layoutControlItem4.Location = new System.Drawing.Point(611, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(625, 182);
+            this.layoutControlItem4.Size = new System.Drawing.Size(611, 59);
             this.layoutControlItem4.Text = "Valor do pagamento";
             this.layoutControlItem4.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem4.TextSize = new System.Drawing.Size(102, 13);
-            // 
-            // uc_SubTituloTelas1
-            // 
-            this.uc_SubTituloTelas1.Location = new System.Drawing.Point(5, 111);
-            this.uc_SubTituloTelas1.Name = "uc_SubTituloTelas1";
-            this.uc_SubTituloTelas1.Size = new System.Drawing.Size(1268, 28);
-            this.uc_SubTituloTelas1.TabIndex = 40;
             // 
             // uc_TituloTelas1
             // 
@@ -160,11 +153,20 @@
             this.uc_TituloTelas1.Size = new System.Drawing.Size(1259, 31);
             this.uc_TituloTelas1.TabIndex = 39;
             // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem3,
+            this.layoutControlItem4});
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1246, 104);
+            this.layoutControlGroup1.Text = "Aqui você pode abrir o caixa para iniciar as vendas.";
+            // 
             // uc_AberturaCaixa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.uc_SubTituloTelas1);
             this.Controls.Add(this.uc_TituloTelas1);
             this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.btnSalvar);
@@ -179,6 +181,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -194,6 +197,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private uc_TituloTelas uc_TituloTelas1;
-        private uc_SubTituloTelas uc_SubTituloTelas1;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
     }
 }

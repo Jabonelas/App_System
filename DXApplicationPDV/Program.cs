@@ -28,7 +28,7 @@ namespace DXApplicationPDV
             BonusSkins.Register();
 
             // Define o tema padrão"
-            UserLookAndFeel.Default.SetSkinStyle("Basic");
+            UserLookAndFeel.Default.SetSkinStyle("The Asphalt World");
 
             // Registrar apenas os temas permitidos
             var allowedSkins = new string[]
@@ -36,6 +36,7 @@ namespace DXApplicationPDV
                 "Basic",
                 //"High Contrast",
                 "McSkin",
+                "The Asphalt World",
                 "Office 2019 Colorful",
                 "Seven Classic",
                 "Sharp Plus"
@@ -54,7 +55,7 @@ namespace DXApplicationPDV
 
             #region Definicao de fonte
 
-            // Defina a fonte padrão para todos os controles DevExpress
+            //// Defina a fonte padrão para todos os controles DevExpress
             Font minhaFonte = new Font("Exo 2", 8);
             DevExpress.Utils.AppearanceObject.DefaultFont = minhaFonte;
 

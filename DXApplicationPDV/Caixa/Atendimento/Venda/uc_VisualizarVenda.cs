@@ -85,7 +85,7 @@ namespace DXApplicationPDV
             configBotoes.BotaoEnviarEmail(btnEnvioEmail);
 
             uc_TituloTelas1.lblTituloTela.Text = "Visualizar Venda";
-            uc_SubTituloTelas1.lblSubTituloTela.Text = "Aqui você pode visualizar todos os produtos vendidos na venda selecionada.";
+            
         }
 
         private void CarregarGridProdutosVendaRealizada()
@@ -1487,7 +1487,7 @@ namespace DXApplicationPDV
 
         private void uc_VisualizarVenda_Load(object sender, EventArgs e)
         {
-            TelaDeCarregamento.EsconderCarregamento();
+            TelaCarregamento.EsconderCarregamento();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)

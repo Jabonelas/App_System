@@ -31,8 +31,9 @@
             this.cmbProdutos = new DevExpress.XtraEditors.LookUpEdit();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.btnSelecionarProduto = new DevExpress.XtraEditors.SimpleButton();
             this.grdListaProdutos = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -51,23 +52,31 @@
             this.buttonEdit1 = new DevExpress.XtraEditors.ButtonEdit();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.uc_TituloTelas1 = new DXApplicationPDV.uc_TituloTelas();
-            this.uc_SubTituloTelas1 = new DXApplicationPDV.uc_SubTituloTelas();
-            this.uc_SubTituloTelas2 = new DXApplicationPDV.uc_SubTituloTelas();
+            this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.cmbProdutos.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdListaProdutos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
+            this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbProdutos
             // 
-            this.cmbProdutos.Location = new System.Drawing.Point(12, 28);
+            this.cmbProdutos.Location = new System.Drawing.Point(24, 61);
             this.cmbProdutos.Name = "cmbProdutos";
             this.cmbProdutos.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -80,7 +89,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("pf_vlrUnCom", "Vlr. un. Prod.", 10, DevExpress.Utils.FormatType.Custom, "c2", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("pf_est", "Est. Total", 10, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.cmbProdutos.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.cmbProdutos.Size = new System.Drawing.Size(1240, 20);
+            this.cmbProdutos.Size = new System.Drawing.Size(1216, 20);
             this.cmbProdutos.StyleController = this.dataLayoutControl1;
             this.cmbProdutos.TabIndex = 0;
             this.cmbProdutos.ToolTip = "Escolha o produto que será incluído na venda.";
@@ -91,11 +100,11 @@
             // dataLayoutControl1
             // 
             this.dataLayoutControl1.Controls.Add(this.cmbProdutos);
-            this.dataLayoutControl1.Location = new System.Drawing.Point(-3, 106);
+            this.dataLayoutControl1.Location = new System.Drawing.Point(-3, 96);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
             this.dataLayoutControl1.OptionsView.RightToLeftMirroringApplied = true;
             this.dataLayoutControl1.Root = this.Root;
-            this.dataLayoutControl1.Size = new System.Drawing.Size(1264, 75);
+            this.dataLayoutControl1.Size = new System.Drawing.Size(1264, 121);
             this.dataLayoutControl1.TabIndex = 2;
             this.dataLayoutControl1.Text = "dataLayoutControl1";
             // 
@@ -104,28 +113,38 @@
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.Root.GroupBordersVisible = false;
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1,
-            this.emptySpaceItem1});
+            this.emptySpaceItem1,
+            this.layoutControlGroup1});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(1264, 75);
+            this.Root.Size = new System.Drawing.Size(1264, 121);
             this.Root.TextVisible = false;
+            // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 85);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(1244, 16);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1});
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1244, 85);
+            this.layoutControlGroup1.Text = "Selecione o produto e clique em adicionar.";
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.cmbProdutos;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(1244, 40);
+            this.layoutControlItem1.Size = new System.Drawing.Size(1220, 40);
+            this.layoutControlItem1.Text = "Lista produtos";
             this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(93, 13);
-            // 
-            // emptySpaceItem1
-            // 
-            this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 40);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(1244, 15);
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(68, 13);
             // 
             // btnSelecionarProduto
             // 
@@ -143,10 +162,10 @@
             // 
             // grdListaProdutos
             // 
-            this.grdListaProdutos.Location = new System.Drawing.Point(7, 204);
+            this.grdListaProdutos.Location = new System.Drawing.Point(24, 45);
             this.grdListaProdutos.MainView = this.gridView1;
             this.grdListaProdutos.Name = "grdListaProdutos";
-            this.grdListaProdutos.Size = new System.Drawing.Size(1244, 298);
+            this.grdListaProdutos.Size = new System.Drawing.Size(1219, 243);
             this.grdListaProdutos.TabIndex = 3;
             this.grdListaProdutos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -187,8 +206,6 @@
             this.DescCurta.FieldName = "descCurta";
             this.DescCurta.Name = "DescCurta";
             this.DescCurta.OptionsColumn.ReadOnly = true;
-            this.DescCurta.Visible = true;
-            this.DescCurta.VisibleIndex = 1;
             this.DescCurta.Width = 355;
             // 
             // Descricao
@@ -198,7 +215,7 @@
             this.Descricao.Name = "Descricao";
             this.Descricao.OptionsColumn.ReadOnly = true;
             this.Descricao.Visible = true;
-            this.Descricao.VisibleIndex = 2;
+            this.Descricao.VisibleIndex = 1;
             this.Descricao.Width = 429;
             // 
             // Marca
@@ -208,7 +225,7 @@
             this.Marca.Name = "Marca";
             this.Marca.OptionsColumn.ReadOnly = true;
             this.Marca.Visible = true;
-            this.Marca.VisibleIndex = 3;
+            this.Marca.VisibleIndex = 2;
             this.Marca.Width = 143;
             // 
             // qtd
@@ -217,7 +234,7 @@
             this.qtd.FieldName = "quantidade";
             this.qtd.Name = "qtd";
             this.qtd.Visible = true;
-            this.qtd.VisibleIndex = 4;
+            this.qtd.VisibleIndex = 3;
             this.qtd.Width = 72;
             // 
             // vlrTotal
@@ -229,7 +246,7 @@
             this.vlrTotal.Name = "vlrTotal";
             this.vlrTotal.OptionsColumn.ReadOnly = true;
             this.vlrTotal.Visible = true;
-            this.vlrTotal.VisibleIndex = 5;
+            this.vlrTotal.VisibleIndex = 4;
             this.vlrTotal.Width = 93;
             // 
             // btnExcluir
@@ -267,7 +284,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(918, 510);
+            this.labelControl1.Location = new System.Drawing.Point(918, 511);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(67, 13);
             this.labelControl1.TabIndex = 12;
@@ -323,19 +340,43 @@
             this.uc_TituloTelas1.Size = new System.Drawing.Size(1259, 33);
             this.uc_TituloTelas1.TabIndex = 16;
             // 
-            // uc_SubTituloTelas1
+            // layoutControl1
             // 
-            this.uc_SubTituloTelas1.Location = new System.Drawing.Point(7, 106);
-            this.uc_SubTituloTelas1.Name = "uc_SubTituloTelas1";
-            this.uc_SubTituloTelas1.Size = new System.Drawing.Size(1088, 28);
-            this.uc_SubTituloTelas1.TabIndex = 17;
+            this.layoutControl1.Controls.Add(this.grdListaProdutos);
+            this.layoutControl1.Location = new System.Drawing.Point(-3, 203);
+            this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.Root = this.layoutControlGroup2;
+            this.layoutControl1.Size = new System.Drawing.Size(1267, 312);
+            this.layoutControl1.TabIndex = 17;
+            this.layoutControl1.Text = "layoutControl1";
             // 
-            // uc_SubTituloTelas2
+            // layoutControlGroup2
             // 
-            this.uc_SubTituloTelas2.Location = new System.Drawing.Point(5, 177);
-            this.uc_SubTituloTelas2.Name = "uc_SubTituloTelas2";
-            this.uc_SubTituloTelas2.Size = new System.Drawing.Size(541, 28);
-            this.uc_SubTituloTelas2.TabIndex = 18;
+            this.layoutControlGroup2.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup2.GroupBordersVisible = false;
+            this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlGroup3});
+            this.layoutControlGroup2.Name = "layoutControlGroup2";
+            this.layoutControlGroup2.Size = new System.Drawing.Size(1267, 312);
+            this.layoutControlGroup2.TextVisible = false;
+            // 
+            // layoutControlGroup3
+            // 
+            this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem2});
+            this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup3.Name = "layoutControlGroup3";
+            this.layoutControlGroup3.Size = new System.Drawing.Size(1247, 292);
+            this.layoutControlGroup3.Text = "Lista de produtos adicionados";
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.grdListaProdutos;
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(1223, 247);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem2.TextVisible = false;
             // 
             // uc_PDV
             // 
@@ -343,17 +384,15 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.uc_SubTituloTelas1);
+            this.Controls.Add(this.labelControl1);
+            this.Controls.Add(this.lblTotalGeral);
+            this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.uc_TituloTelas1);
             this.Controls.Add(this.btnVoltar);
-            this.Controls.Add(this.lblTotalGeral);
-            this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.btnPagamento);
             this.Controls.Add(this.btnExcluir);
-            this.Controls.Add(this.grdListaProdutos);
             this.Controls.Add(this.dataLayoutControl1);
             this.Controls.Add(this.btnSelecionarProduto);
-            this.Controls.Add(this.uc_SubTituloTelas2);
             this.Name = "uc_PDV";
             this.Size = new System.Drawing.Size(1259, 579);
             this.Load += new System.EventHandler(this.uc_PDV_Load);
@@ -362,12 +401,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdListaProdutos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
+            this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -398,7 +443,10 @@
         private DevExpress.XtraEditors.ButtonEdit buttonEdit1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private uc_TituloTelas uc_TituloTelas1;
-        private uc_SubTituloTelas uc_SubTituloTelas1;
-        private uc_SubTituloTelas uc_SubTituloTelas2;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraLayout.LayoutControl layoutControl1;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup3;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
     }
 }

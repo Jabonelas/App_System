@@ -45,7 +45,7 @@ namespace DXApplicationPDV.Fluxo_de_Caixa.Entrada_Caixa
 
             txtValorPagamento.Text = "R$ 0,00";
             uc_TituloTelas1.lblTituloTela.Text = "Entrada de Caixa";
-            uc_SubTituloTelas1.lblSubTituloTela.Text = "Aqui você pode realizar a entrada de dinheiro no caixa.";
+            
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -61,7 +61,7 @@ namespace DXApplicationPDV.Fluxo_de_Caixa.Entrada_Caixa
 
         private void uc_EntradaCaixa_Load(object sender, EventArgs e)
         {
-            TelaDeCarregamento.EsconderCarregamento();
+            TelaCarregamento.EsconderCarregamento();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)

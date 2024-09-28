@@ -47,7 +47,7 @@ namespace DXApplicationPDV.Consultas.Itens.Consumidores
 
             configBotoes.BotaoVoltar(btnVoltar);
             configBotoes.BotaoNovoRegistro(btnNovoRegistro);
-            configBotoes.BotaoVisualizar(btnVisualizar);
+            configBotoes.BotaoAlterar(btnAlterar);
             configBotoes.BotaoExcluir(btnExcluir);
         }
 
@@ -70,20 +70,20 @@ namespace DXApplicationPDV.Consultas.Itens.Consumidores
                 case 1:
 
                     uc_TituloTelas1.lblTituloTela.Text = "Consumidor";
-                    uc_SubTituloTelas1.lblSubTituloTela.Text = "Aqui você pode visualizar todos os consumidores cadastrados";
+                    layoutControlGroup1.Text = "Aqui você pode visualizar todos os consumidores cadastrados";
                     break;
 
                 case 10:
 
                     uc_TituloTelas1.lblTituloTela.Text = "Empresa";
-                    uc_SubTituloTelas1.lblSubTituloTela.Text = "Aqui você pode visualizar todas as empresas cadastradas";
+                    layoutControlGroup1.Text = "Aqui você pode visualizar todas as empresas cadastradas";
                     break;
             }
         }
 
         private void uc_Consumidor_Load(object sender, EventArgs e)
         {
-            TelaDeCarregamento.EsconderCarregamento();
+            TelaCarregamento.EsconderCarregamento();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -174,13 +174,13 @@ namespace DXApplicationPDV.Consultas.Itens.Consumidores
 
         private void TelaCadastrarAtor(string _operacao, long _idAtor)
         {
-            TelaDeCarregamento.ExibirCarregamentoUserControl(this);
+            TelaCarregamento.ExibirCarregamentoUserControl(this);
 
             _frmTelaInicial.pnlTelaPrincipal.Controls.Clear();
             uc_CadAtor ucCadAtor = new uc_CadAtor(_frmTelaInicial, _operacao, _idAtor, tipoAtor);
             _frmTelaInicial.pnlTelaPrincipal.Controls.Add(ucCadAtor);
             _frmTelaInicial.pnlTelaPrincipal.Tag = ucCadAtor;
-            this.Invoke(new Action(() => TelaDeCarregamento.EsconderCarregamento()));
+
             ucCadAtor.Show();
         }
 
@@ -204,22 +204,12 @@ namespace DXApplicationPDV.Consultas.Itens.Consumidores
             }
         }
 
-        //Niveis de acesso
-        //"100 Funcionario"
-        //"101 Vendedor"
-        //"102 Gerente"
-
-        private void btnVisualizar_Click(object sender, EventArgs e)
+        private void TelaAutenticacaoUsuario()
         {
-            if (VariaveisGlobais.UsuarioLogado.at_atorTipo == 102)
-            {
-                PegaIdCategoriaSelecionadaGrid();
+            TelaCarregamento.ExibirCarregamentoUserControl(this);
 
-                TelaCadastrarAtor("Alterar", idAtor);
-            }
-            else
-            {
-            }
+            frmAutenticacaoUsuario frmAutenticacaoUsuario = new frmAutenticacaoUsuario();
+            frmAutenticacaoUsuario.ShowDialog();
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -255,6 +245,27 @@ namespace DXApplicationPDV.Consultas.Itens.Consumidores
             catch (Exception ex)
             {
                 MensagensDoSistema.MensagemErroOk($"Erro ao excluir ator: {ex.Message}");
+            }
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            //Gerente 102
+            bool podeAlterarAtor = VariaveisGlobais.UsuarioLogado.at_atorTipo == 102 || VariaveisGlobais.IsUsuarioComPermissao;
+
+            if (!podeAlterarAtor)
+            {
+                TelaAutenticacaoUsuario();
+
+                podeAlterarAtor = VariaveisGlobais.IsUsuarioComPermissao;
+            }
+
+            if (podeAlterarAtor)
+            {
+                VariaveisGlobais.IsUsuarioComPermissao = false;
+
+                PegaIdCategoriaSelecionadaGrid();
+                TelaCadastrarAtor("Alterar", idAtor);
             }
         }
     }

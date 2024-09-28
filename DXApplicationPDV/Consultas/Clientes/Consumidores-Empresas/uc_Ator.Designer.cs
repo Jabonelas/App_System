@@ -31,9 +31,8 @@
             this.uc_TituloTelas1 = new DXApplicationPDV.uc_TituloTelas();
             this.btnNovoRegistro = new DevExpress.XtraEditors.SimpleButton();
             this.btnExcluir = new DevExpress.XtraEditors.SimpleButton();
-            this.btnVisualizar = new DevExpress.XtraEditors.SimpleButton();
+            this.btnAlterar = new DevExpress.XtraEditors.SimpleButton();
             this.btnVoltar = new DevExpress.XtraEditors.SimpleButton();
-            this.uc_SubTituloTelas1 = new DXApplicationPDV.uc_SubTituloTelas();
             this.grdAtor = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -41,8 +40,17 @@
             this.RazaoSocialNome = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CPF = new DevExpress.XtraGrid.Columns.GridColumn();
             this.NomeFantasia = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.grdAtor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
+            this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             this.SuspendLayout();
             // 
             // uc_TituloTelas1
@@ -86,21 +94,21 @@
             this.btnExcluir.Visible = false;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
-            // btnVisualizar
+            // btnAlterar
             // 
-            this.btnVisualizar.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVisualizar.Appearance.Options.UseFont = true;
-            this.btnVisualizar.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnVisualizar.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
-            this.btnVisualizar.Location = new System.Drawing.Point(7, 518);
-            this.btnVisualizar.Name = "btnVisualizar";
-            this.btnVisualizar.Size = new System.Drawing.Size(58, 54);
-            this.btnVisualizar.TabIndex = 39;
-            this.btnVisualizar.Text = "alterar";
-            this.btnVisualizar.ToolTip = "Visualizar informações do registro selecionado.";
-            this.btnVisualizar.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.btnVisualizar.ToolTipTitle = "Visualizar Venda:";
-            this.btnVisualizar.Click += new System.EventHandler(this.btnVisualizar_Click);
+            this.btnAlterar.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlterar.Appearance.Options.UseFont = true;
+            this.btnAlterar.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.btnAlterar.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
+            this.btnAlterar.Location = new System.Drawing.Point(7, 518);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(58, 54);
+            this.btnAlterar.TabIndex = 39;
+            this.btnAlterar.Text = "alterar";
+            this.btnAlterar.ToolTip = "Visualizar informações do registro selecionado.";
+            this.btnAlterar.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.btnAlterar.ToolTipTitle = "Visualizar Venda:";
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnVoltar
             // 
@@ -118,19 +126,12 @@
             this.btnVoltar.ToolTipTitle = "Voltar:";
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
-            // uc_SubTituloTelas1
-            // 
-            this.uc_SubTituloTelas1.Location = new System.Drawing.Point(4, 102);
-            this.uc_SubTituloTelas1.Name = "uc_SubTituloTelas1";
-            this.uc_SubTituloTelas1.Size = new System.Drawing.Size(1261, 33);
-            this.uc_SubTituloTelas1.TabIndex = 42;
-            // 
             // grdAtor
             // 
-            this.grdAtor.Location = new System.Drawing.Point(7, 133);
+            this.grdAtor.Location = new System.Drawing.Point(24, 45);
             this.grdAtor.MainView = this.gridView1;
             this.grdAtor.Name = "grdAtor";
-            this.grdAtor.Size = new System.Drawing.Size(1244, 373);
+            this.grdAtor.Size = new System.Drawing.Size(1218, 349);
             this.grdAtor.TabIndex = 43;
             this.grdAtor.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -185,22 +186,64 @@
             this.NomeFantasia.Visible = true;
             this.NomeFantasia.VisibleIndex = 3;
             // 
-            // uc_Consumidor
+            // layoutControl1
+            // 
+            this.layoutControl1.Controls.Add(this.grdAtor);
+            this.layoutControl1.Location = new System.Drawing.Point(-3, 95);
+            this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.Root = this.Root;
+            this.layoutControl1.Size = new System.Drawing.Size(1266, 418);
+            this.layoutControl1.TabIndex = 44;
+            this.layoutControl1.Text = "layoutControl1";
+            // 
+            // Root
+            // 
+            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.Root.GroupBordersVisible = false;
+            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlGroup1});
+            this.Root.Name = "Root";
+            this.Root.Size = new System.Drawing.Size(1266, 418);
+            this.Root.TextVisible = false;
+            // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem2});
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1246, 398);
+            this.layoutControlGroup1.Text = "SubTitulo";
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.grdAtor;
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(1222, 353);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem2.TextVisible = false;
+            // 
+            // uc_Ator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.grdAtor);
+            this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.btnNovoRegistro);
             this.Controls.Add(this.btnExcluir);
-            this.Controls.Add(this.btnVisualizar);
+            this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnVoltar);
-            this.Controls.Add(this.uc_SubTituloTelas1);
             this.Controls.Add(this.uc_TituloTelas1);
-            this.Name = "uc_Consumidor";
+            this.Name = "uc_Ator";
             this.Size = new System.Drawing.Size(1259, 579);
             this.Load += new System.EventHandler(this.uc_Consumidor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdAtor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
+            this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -210,9 +253,8 @@
         private uc_TituloTelas uc_TituloTelas1;
         private DevExpress.XtraEditors.SimpleButton btnNovoRegistro;
         private DevExpress.XtraEditors.SimpleButton btnExcluir;
-        private DevExpress.XtraEditors.SimpleButton btnVisualizar;
+        private DevExpress.XtraEditors.SimpleButton btnAlterar;
         private DevExpress.XtraEditors.SimpleButton btnVoltar;
-        private uc_SubTituloTelas uc_SubTituloTelas1;
         private DevExpress.XtraGrid.GridControl grdAtor;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
@@ -220,5 +262,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn RazaoSocialNome;
         private DevExpress.XtraGrid.Columns.GridColumn CPF;
         private DevExpress.XtraGrid.Columns.GridColumn NomeFantasia;
+        private DevExpress.XtraLayout.LayoutControl layoutControl1;
+        private DevExpress.XtraLayout.LayoutControlGroup Root;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
     }
 }

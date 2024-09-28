@@ -46,7 +46,6 @@ namespace DXApplicationPDV.Fluxo_de_Caixa.Saida_Caixa
             configBotoes.BotaoSalvar(btnSalvar);
 
             uc_TituloTelas1.lblTituloTela.Text = "Vendas Realizadas";
-            uc_SubTituloTelas1.lblSubTituloTela.Text = "Aqui você pode visualizar todas as vendas realizadas na filial.";
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -67,7 +66,7 @@ namespace DXApplicationPDV.Fluxo_de_Caixa.Saida_Caixa
 
         private void uc_SaidaCaixa_Load(object sender, EventArgs e)
         {
-            TelaDeCarregamento.EsconderCarregamento();
+            TelaCarregamento.EsconderCarregamento();
         }
 
         private void PegarDadosCaixaAberto()

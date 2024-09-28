@@ -51,12 +51,11 @@ namespace DXApplicationPDV
             configBotoes.BotaoExcluir(btnExcluir);
 
             uc_TituloTelas1.lblTituloTela.Text = "Vendas Realizadas";
-            uc_SubTituloTelas1.lblSubTituloTela.Text = "Aqui você pode visualizar todas as vendas realizadas na filial.";
         }
 
         private void uc_VendasPDV_Load(object sender, EventArgs e)
         {
-            TelaDeCarregamento.EsconderCarregamento();
+            TelaCarregamento.EsconderCarregamento();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -121,7 +120,7 @@ namespace DXApplicationPDV
 
         public void TelaPDV()
         {
-            TelaDeCarregamento.ExibirCarregamentoUserControl(this);
+            TelaCarregamento.ExibirCarregamentoUserControl(this);
 
             _frmTelaInicial.pnlTelaPrincipal.Controls.Clear();
             uc_PDV ucProdutos = new uc_PDV(_frmTelaInicial);
@@ -137,7 +136,7 @@ namespace DXApplicationPDV
 
         public void TelaVisualizarVenda()
         {
-            TelaDeCarregamento.ExibirCarregamentoUserControl(this);
+            TelaCarregamento.ExibirCarregamentoUserControl(this);
 
             _frmTelaInicial.pnlTelaPrincipal.Controls.Clear();
             uc_VisualizarVenda ucVisualizarVenda = new uc_VisualizarVenda(_frmTelaInicial, idMovimentacaoSelecionada);

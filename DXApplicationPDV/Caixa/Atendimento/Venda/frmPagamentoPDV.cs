@@ -26,6 +26,7 @@ using XmlNFe = Unimake.Business.DFe.Xml.NFe;
 using System.IO;
 using Unimake.Business.DFe.Xml.SNCM;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraGrid;
 
 namespace DXApplicationPDV
 {
@@ -90,8 +91,20 @@ namespace DXApplicationPDV
 
             uc_TituloTelas1.lblTituloTela.Text = "Pagamento";
 
-            // Desabilitar a opção de maximizar a tela
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            // Obtenha o GridView do GridControl
+            GridView gridView = grdPagamentos.MainView as GridView;
+
+            //if (gridView != null)
+            //{
+            // Desabilitar a linha de filtro
+            gridView.OptionsView.ShowAutoFilterRow = false;
+
+            // Desabilitar o painel de busca global
+            gridView.OptionsFind.AlwaysVisible = false;
+
+            // Desabilitar filtros nas colunas
+            gridView.OptionsCustomization.AllowFilter = false;
+            //}
         }
 
         private void ValidarDigitos(KeyPressEventArgs e)
@@ -244,7 +257,7 @@ namespace DXApplicationPDV
 
         private void frmPamentoPDV_Load(object sender, EventArgs e)
         {
-            TelaDeCarregamento.EsconderCarregamento();
+            TelaCarregamento.EsconderCarregamento();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -1434,7 +1447,7 @@ namespace DXApplicationPDV
 
             PegarNumeroNota();
 
-            TelaDeCarregamento.ExibirCarregamentoForm(this);
+            TelaCarregamento.ExibirCarregamentoForm(this);
 
             if (IsSefazEstavel())
             {
@@ -1446,7 +1459,7 @@ namespace DXApplicationPDV
                     "Estamos enfrentando uma instabilidade momentânea na conexão com a SEFAZ.");
             }
 
-            TelaDeCarregamento.EsconderCarregamento();
+            TelaCarregamento.EsconderCarregamento();
 
             _frmTelaInicial.TelaVendasPDV();
 

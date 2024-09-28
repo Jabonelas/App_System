@@ -52,12 +52,11 @@ namespace DXApplicationPDV.AberturaCaixa
 
             txtValorPagamento.Text = "R$ 0,00";
             uc_TituloTelas1.lblTituloTela.Text = "Abertura de Caixa";
-            uc_SubTituloTelas1.lblSubTituloTela.Text = "Aqui você pode abrir o caixa para iniciar as vendas.";
         }
 
         private void uc_AberturaCaixa_Load(object sender, EventArgs e)
         {
-            TelaDeCarregamento.EsconderCarregamento();
+            TelaCarregamento.EsconderCarregamento();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)

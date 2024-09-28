@@ -81,7 +81,7 @@ namespace DXApplicationPDV
 
         public void TelaVendasPDV()
         {
-            TelaDeCarregamento.ExibirCarregamentoForm(this);
+            TelaCarregamento.ExibirCarregamentoForm(this);
 
             pnlTelaPrincipal.Controls.Clear();
             uc_VendasPDV ucVendasPDV = new uc_VendasPDV(this);
@@ -127,7 +127,7 @@ namespace DXApplicationPDV
 
         public void TelaVisualizarEntradaCaixa()
         {
-            TelaDeCarregamento.ExibirCarregamentoForm(this);
+            TelaCarregamento.ExibirCarregamentoForm(this);
 
             pnlTelaPrincipal.Controls.Clear();
             uc_VisualizarEntradasCaixa ucVisualizarEntradasCaixaEntradaCaixa = new uc_VisualizarEntradasCaixa(this);
@@ -152,7 +152,7 @@ namespace DXApplicationPDV
 
         public void TelaAberturaCaixa()
         {
-            TelaDeCarregamento.ExibirCarregamentoForm(this);
+            TelaCarregamento.ExibirCarregamentoForm(this);
 
             pnlTelaPrincipal.Controls.Clear();
             uc_AberturaCaixa ucAberturaCaixa = new uc_AberturaCaixa(this);
@@ -170,7 +170,7 @@ namespace DXApplicationPDV
 
         public void TelaFechamentoCaixa()
         {
-            TelaDeCarregamento.ExibirCarregamentoForm(this);
+            TelaCarregamento.ExibirCarregamentoForm(this);
 
             pnlTelaPrincipal.Controls.Clear();
             uc_FechamentoCaixa ucFechamentoCaixa = new uc_FechamentoCaixa(this);
@@ -195,7 +195,7 @@ namespace DXApplicationPDV
 
         public void TelaVisualizarSaidaCaixa()
         {
-            TelaDeCarregamento.ExibirCarregamentoForm(this);
+            TelaCarregamento.ExibirCarregamentoForm(this);
 
             pnlTelaPrincipal.Controls.Clear();
             uc_VisualizarSaidaCaixa ucVisualizarSaidaCaixa = new uc_VisualizarSaidaCaixa(this);
@@ -220,7 +220,7 @@ namespace DXApplicationPDV
 
         public void TelaRelatorioFluxoSaida()
         {
-            TelaDeCarregamento.ExibirCarregamentoForm(this);
+            TelaCarregamento.ExibirCarregamentoForm(this);
 
             pnlTelaPrincipal.Controls.Clear();
             uc_RelatorioFluxoSaida ucRelatorioFluxoSaida = new uc_RelatorioFluxoSaida(this);
@@ -256,7 +256,7 @@ namespace DXApplicationPDV
 
         public void TelaProduto()
         {
-            TelaDeCarregamento.ExibirCarregamentoForm(this);
+            TelaCarregamento.ExibirCarregamentoForm(this);
 
             pnlTelaPrincipal.Controls.Clear();
             uc_Produto ucProduto = new uc_Produto(this);
@@ -286,7 +286,7 @@ namespace DXApplicationPDV
 
         public void TelaAtor(int _tipoAtor)
         {
-            TelaDeCarregamento.ExibirCarregamentoForm(this);
+            TelaCarregamento.ExibirCarregamentoForm(this);
 
             pnlTelaPrincipal.Controls.Clear();
             uc_Ator ucAtor = new uc_Ator(this, _tipoAtor);

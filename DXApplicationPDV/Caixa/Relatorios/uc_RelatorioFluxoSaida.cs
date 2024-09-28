@@ -32,9 +32,6 @@ namespace DXApplicationPDV.Caixa.Relatorios
             Layout();
 
             _frmTelaInicial = _form;
-
-            dtFinal.DateTime = DateTime.Today;
-            dtInicio.DateTime = DateTime.Today.AddDays(-4);
         }
 
         private void Layout()
@@ -47,8 +44,6 @@ namespace DXApplicationPDV.Caixa.Relatorios
             configBotoes.BotaoExcel(btnExcel);
 
             uc_TituloTelas1.lblTituloTela.Text = "Relatório de Fluxo de Saída";
-            uc_SubTituloTelas1.lblSubTituloTela.Text = "Selecione o periodo";
-            uc_SubTituloTelas2.lblSubTituloTela.Text = "Aqui você pode visualizar o fluxo de saída de produtos";
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -59,7 +54,7 @@ namespace DXApplicationPDV.Caixa.Relatorios
 
         private void uc_RelatorioFluxoSaida_Load(object sender, EventArgs e)
         {
-            TelaDeCarregamento.EsconderCarregamento();
+            TelaCarregamento.EsconderCarregamento();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -67,13 +62,16 @@ namespace DXApplicationPDV.Caixa.Relatorios
             DateTime dataInicio = Convert.ToDateTime(dtInicio.EditValue);
             DateTime dataFinal = Convert.ToDateTime(dtFinal.EditValue);
 
-            if (dataInicio <= dataFinal)
+            if (IscamposPreenchidos())
             {
-                CarregarGridMovimentacaoAtivas();
-            }
-            else
-            {
-                MensagensDoSistema.MensagemAtencaoOk("A data de início não pode ser posterior à data final!");
+                if (dataInicio <= dataFinal)
+                {
+                    CarregarGridMovimentacaoAtivas();
+                }
+                else
+                {
+                    MensagensDoSistema.MensagemAtencaoOk("A data de início não pode ser posterior à data final!");
+                }
             }
         }
 
@@ -84,7 +82,8 @@ namespace DXApplicationPDV.Caixa.Relatorios
             linqInstantFeedbackSource.KeyExpression = "CodProduto"; //Coluna Primary Key
             linqInstantFeedbackSource.DefaultSorting = "CodProduto ASC"; //Coluna de ordenação padrão na ordem escolhida
 
-            linqInstantFeedbackSource.GetQueryable += linqBuscarDadosMovimentacaoCadastradosAtivos; //Buscar os dados que vao preencher o grid.
+            linqInstantFeedbackSource.GetQueryable +=
+                linqBuscarDadosMovimentacaoCadastradosAtivos; //Buscar os dados que vao preencher o grid.
 
             linqInstantFeedbackSource.DismissQueryable += linq_DismissQueryable; //Basta deixar vazio dentro do metodo.
             grdFluxoSaida.DataSource = linqInstantFeedbackSource;
@@ -106,7 +105,8 @@ namespace DXApplicationPDV.Caixa.Relatorios
                     where movimentacao.mv_dtCri.Date >= dataInicio.Date
                           && movimentacao.mv_dtCri.Date <= dataFinal.Date
                           && movimentacao.mv_movTipo == 150
-                    group produto by new { produto.mp_desc, produto.fk_tb_produto.pd_codRef } into grupoAtendente
+                    group produto by new { produto.mp_desc, produto.fk_tb_produto.pd_codRef }
+                    into grupoAtendente
                     select new
                     {
                         CodProduto = grupoAtendente.Key.pd_codRef,
@@ -121,7 +121,8 @@ namespace DXApplicationPDV.Caixa.Relatorios
             }
             catch (Exception exception)
             {
-                MensagensDoSistema.MensagemErroOk($"Erro ao preencher tabela com lista de produtos foram realizadas as vendas: {exception}");
+                MensagensDoSistema.MensagemErroOk(
+                    $"Erro ao preencher tabela com lista de produtos foram realizadas as vendas: {exception}");
             }
         }
 
@@ -135,15 +136,31 @@ namespace DXApplicationPDV.Caixa.Relatorios
             DateTime dataInicio = Convert.ToDateTime(dtInicio.EditValue);
             DateTime dataFinal = Convert.ToDateTime(dtFinal.EditValue);
 
-            if (dataInicio <= dataFinal)
+            if (IscamposPreenchidos())
             {
-                rp_ImpressaoRelatorioFluxoSaida relatorio = new rp_ImpressaoRelatorioFluxoSaida(dataInicio, dataFinal);
-                relatorio.ShowPreview();
+                if (dataInicio <= dataFinal)
+                {
+                    rp_ImpressaoRelatorioFluxoSaida relatorio =
+                        new rp_ImpressaoRelatorioFluxoSaida(dataInicio, dataFinal);
+                    relatorio.ShowPreview();
+                }
+                else
+                {
+                    MensagensDoSistema.MensagemAtencaoOk("A data de início não pode ser posterior à data final!");
+                }
             }
-            else
+        }
+
+        private bool IscamposPreenchidos()
+        {
+            if (string.IsNullOrEmpty(dtInicio.Text) || string.IsNullOrEmpty(dtFinal.Text))
             {
-                MensagensDoSistema.MensagemAtencaoOk("A data de início não pode ser posterior à data final!");
+                MensagensDoSistema.MensagemAtencaoOk("Por favor, informe a data de início e à data final!");
+
+                return false;
             }
+
+            return true;
         }
 
         private void btnExcel_Click(object sender, EventArgs e)
@@ -163,6 +180,10 @@ namespace DXApplicationPDV.Caixa.Relatorios
                 {
                     grdFluxoSaida.ExportToXlsx(saveFileDialog.FileName);
                 }
+            }
+            else
+            {
+                MensagensDoSistema.MensagemAtencaoOk("Por favor, primeiro inicie a busca.");
             }
         }
     }

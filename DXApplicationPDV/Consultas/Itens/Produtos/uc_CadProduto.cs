@@ -14,6 +14,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraLayout.Utils;
 using static DevExpress.Utils.Drawing.Helpers.NativeMethods;
 
 namespace DXApplicationPDV.Consultas.Itens.Produtos
@@ -59,8 +60,6 @@ namespace DXApplicationPDV.Consultas.Itens.Produtos
             {
                 PreencherCampoProdutoSelecionado();
             }
-
-            CarregarGridProdutosFilialAtivos();
         }
 
         private void Layout()
@@ -71,8 +70,6 @@ namespace DXApplicationPDV.Consultas.Itens.Produtos
             configBotoes.BotaoSalvar(btnSalvar);
 
             uc_TituloTelas1.lblTituloTela.Text = "Cadastro de Produtos";
-            uc_SubTituloTelas1.lblSubTituloTela.Text = "Aqui você pode cadastrar ou alterar produtos na filial.";
-            uc_SubTituloTelas2.lblSubTituloTela.Text = "Aqui você pode visualizar o estoque geral em todas as filiais.";
         }
 
         private void CadastrarMarca()
@@ -598,59 +595,6 @@ namespace DXApplicationPDV.Consultas.Itens.Produtos
             _frmTelaInicial.TelaProduto();
         }
 
-        private void CarregarGridProdutosFilialAtivos()
-        {
-            LinqInstantFeedbackSource linqInstantFeedbackSource = new LinqInstantFeedbackSource();
-
-            linqInstantFeedbackSource.KeyExpression = "id_produto_filial"; //Coluna Primary Key
-            linqInstantFeedbackSource.DefaultSorting = "pf_codRef DESC"; //Coluna de ordenação padrão na ordem escolhida
-
-            linqInstantFeedbackSource.GetQueryable += linqBuscarDadosProdutosCadastradosAtivos; //Buscar os dados que vao preencher o grid.
-            linqInstantFeedbackSource.DismissQueryable += linq_DismissQueryable; //Basta deixar vazio dentro do metodo.
-            grdCadastrarProdutos.DataSource = linqInstantFeedbackSource;
-        }
-
-        private void linqBuscarDadosProdutosCadastradosAtivos(object sender, GetQueryableEventArgs e)
-        {
-            try
-            {
-                Session session = new Session();
-
-                var queryProdutoCadastradosAtivos =
-                    from produtoFilial in session.Query<tb_produto_filial>()
-                    join produto in session.Query<tb_produto>()
-                        on produtoFilial.fk_tb_produto.id_produto equals produto.id_produto
-                    join filial in session.Query<tb_ator>()
-                        on produtoFilial.fk_tb_ator.id_ator equals filial.id_ator
-                    where produto.pd_desat == 0 && produto.id_produto == idProduto
-                    orderby produtoFilial.pf_desc
-                    //orderby produtoFilial.fk_tb_ator
-                    select new
-                    {
-                        produtoFilial.id_produto_filial,
-                        produtoFilial.pf_codRef,
-                        produtoFilial.pf_descCurta,
-                        produtoFilial.pf_desc,
-                        produtoFilial.pf_vlrUnCom,
-                        produtoFilial.pf_desat,
-                        produtoFilial.pf_est,
-                        filial.at_cnpj,
-                        filial.at_nomeFant,
-                    };
-
-                e.QueryableSource = queryProdutoCadastradosAtivos;
-            }
-            catch (Exception exception)
-            {
-                MensagensDoSistema.MensagemErroOk($"Erro ao preencher tabela com produtos das filiais: {exception}");
-            }
-        }
-
-        private void linq_DismissQueryable(object sender, GetQueryableEventArgs e)
-        {
-            //Vazio mesmo
-        }
-
         private void ValidarDigitos(object sender, KeyPressEventArgs e)
         {
             // Verificar se o sender é um TextBox
@@ -712,7 +656,7 @@ namespace DXApplicationPDV.Consultas.Itens.Produtos
 
         private void uc_CadProduto_Load(object sender, EventArgs e)
         {
-            TelaDeCarregamento.EsconderCarregamento();
+            TelaCarregamento.EsconderCarregamento();
 
             txtDescCurta.Focus();
         }

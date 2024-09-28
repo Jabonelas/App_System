@@ -95,9 +95,9 @@ namespace DXApplicationPDV
 
         private void btnLogar_Click(object sender, EventArgs e)
         {
-            if (IsSenhaUsuarioValido(txtSenha.Text, txtUsuario.Text))
+            if (IsSenhaUsuarioValido(txtSenha.Text, txtUsuario.Text.ToLower()))
             {
-                TelaDeCarregamento.ExibirCarregamentoForm(this);
+                TelaCarregamento.ExibirCarregamentoForm(this);
 
                 VerificandoMaquina();
             }
@@ -121,7 +121,7 @@ namespace DXApplicationPDV
 
                     if (cadastroMaquina == null)
                     {
-                        TelaDeCarregamento.EsconderCarregamento();
+                        TelaCarregamento.EsconderCarregamento();
 
                         this.Hide();
 
@@ -137,7 +137,7 @@ namespace DXApplicationPDV
 
                         VariaveisGlobais.FilialLogada = cadastroMaquina.fk_tb_ator;
 
-                        TelaDeCarregamento.EsconderCarregamento();
+                        TelaCarregamento.EsconderCarregamento();
 
                         this.Hide();
 
@@ -167,6 +167,16 @@ namespace DXApplicationPDV
             {
                 txtUsuario.EditValue = PlaceholderText;
                 txtUsuario.ForeColor = Color.Gray;
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            var dialog = MensagensDoSistema.MensagemAtencaoYesNo("Tem serteza que deseja finalizar a abplicação?");
+
+            if (dialog == DialogResult.Yes)
+            {
+                Application.Exit();
             }
         }
     }

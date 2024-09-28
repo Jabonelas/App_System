@@ -309,6 +309,12 @@
     <Compile Include="Consultas\Itens\Produtos\uc_CadProduto.Designer.cs">
       <DependentUpon>uc_CadProduto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consultas\Itens\Produtos\uc_EstoqueProduto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Consultas\Itens\Produtos\uc_EstoqueProduto.Designer.cs">
+      <DependentUpon>uc_EstoqueProduto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\Itens\Produtos\uc_Produto.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -327,6 +333,24 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Caixa\Atendimento\Venda\frmPagamentoPDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Caixa\Atendimento\Venda\frmPagamentoPDV.Designer.cs">
+      <DependentUpon>frmPagamentoPDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelecionarPDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelecionarPDV.Designer.cs">
+      <DependentUpon>frmSelecionarPDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTelaInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTelaInicial.Designer.cs">
+      <DependentUpon>frmTelaInicial.cs</DependentUpon>
+    </Compile>
     <Compile Include="ORMDataModelCode\ConnectionHelper.cs" />
     <Compile Include="ORMDataModelCode\tb_ator.cs" />
     <Compile Include="ORMDataModelCode\tb_ator.Designer.cs">
@@ -340,6 +364,10 @@
     <Compile Include="ORMDataModelCode\tb_certificado_digital.Designer.cs">
       <DependentUpon>tb_certificado_digital.cs</DependentUpon>
     </Compile>
+    <Compile Include="ORMDataModelCode\tb_clasCont1.cs" />
+    <Compile Include="ORMDataModelCode\tb_clasCont1.Designer.cs">
+      <DependentUpon>tb_clasCont1.cs</DependentUpon>
+    </Compile>
     <Compile Include="ORMDataModelCode\tb_clasCont2.cs" />
     <Compile Include="ORMDataModelCode\tb_clasCont2.Designer.cs">
       <DependentUpon>tb_clasCont2.cs</DependentUpon>
@@ -347,6 +375,38 @@
     <Compile Include="ORMDataModelCode\tb_codigo_produto.cs" />
     <Compile Include="ORMDataModelCode\tb_codigo_produto.Designer.cs">
       <DependentUpon>tb_codigo_produto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_cont.cs" />
+    <Compile Include="ORMDataModelCode\tb_cont.Designer.cs">
+      <DependentUpon>tb_cont.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_contExt.cs" />
+    <Compile Include="ORMDataModelCode\tb_contExt.Designer.cs">
+      <DependentUpon>tb_contExt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_contExtGru.cs" />
+    <Compile Include="ORMDataModelCode\tb_contExtGru.Designer.cs">
+      <DependentUpon>tb_contExtGru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_contExtSec.cs" />
+    <Compile Include="ORMDataModelCode\tb_contExtSec.Designer.cs">
+      <DependentUpon>tb_contExtSec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_contExtSubGru.cs" />
+    <Compile Include="ORMDataModelCode\tb_contExtSubGru.Designer.cs">
+      <DependentUpon>tb_contExtSubGru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_contGru.cs" />
+    <Compile Include="ORMDataModelCode\tb_contGru.Designer.cs">
+      <DependentUpon>tb_contGru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_contSec.cs" />
+    <Compile Include="ORMDataModelCode\tb_contSec.Designer.cs">
+      <DependentUpon>tb_contSec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_contSubGru.cs" />
+    <Compile Include="ORMDataModelCode\tb_contSubGru.Designer.cs">
+      <DependentUpon>tb_contSubGru.cs</DependentUpon>
     </Compile>
     <Compile Include="ORMDataModelCode\tb_est.cs" />
     <Compile Include="ORMDataModelCode\tb_est.Designer.cs">
@@ -404,6 +464,10 @@
     <Compile Include="ORMDataModelCode\tb_municipio.Designer.cs">
       <DependentUpon>tb_municipio.cs</DependentUpon>
     </Compile>
+    <Compile Include="ORMDataModelCode\tb_ncm.cs" />
+    <Compile Include="ORMDataModelCode\tb_ncm.Designer.cs">
+      <DependentUpon>tb_ncm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ORMDataModelCode\tb_nfe.cs" />
     <Compile Include="ORMDataModelCode\tb_nfe.Designer.cs">
       <DependentUpon>tb_nfe.cs</DependentUpon>
@@ -419,6 +483,10 @@
     <Compile Include="ORMDataModelCode\tb_pdv.cs" />
     <Compile Include="ORMDataModelCode\tb_pdv.Designer.cs">
       <DependentUpon>tb_pdv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\tb_planCont.cs" />
+    <Compile Include="ORMDataModelCode\tb_planCont.Designer.cs">
+      <DependentUpon>tb_planCont.cs</DependentUpon>
     </Compile>
     <Compile Include="ORMDataModelCode\tb_produto.cs" />
     <Compile Include="ORMDataModelCode\tb_produto.Designer.cs">
@@ -440,6 +508,10 @@
     <Compile Include="ORMDataModelCode\tb_relacao_produto_cadastro_XML.Designer.cs">
       <DependentUpon>tb_relacao_produto_cadastro_XML.cs</DependentUpon>
     </Compile>
+    <Compile Include="ORMDataModelCode\tb_resEventoNFe.cs" />
+    <Compile Include="ORMDataModelCode\tb_resEventoNFe.Designer.cs">
+      <DependentUpon>tb_resEventoNFe.cs</DependentUpon>
+    </Compile>
     <Compile Include="ORMDataModelCode\tb_resposta_NFe.cs" />
     <Compile Include="ORMDataModelCode\tb_resposta_NFe.Designer.cs">
       <DependentUpon>tb_resposta_NFe.cs</DependentUpon>
@@ -459,24 +531,6 @@
     <Compile Include="ORMDataModelCode\tb_unidade_monetaria.cs" />
     <Compile Include="ORMDataModelCode\tb_unidade_monetaria.Designer.cs">
       <DependentUpon>tb_unidade_monetaria.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Caixa\Atendimento\Venda\frmPagamentoPDV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Caixa\Atendimento\Venda\frmPagamentoPDV.Designer.cs">
-      <DependentUpon>frmPagamentoPDV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmSelecionarPDV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmSelecionarPDV.Designer.cs">
-      <DependentUpon>frmSelecionarPDV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmTelaInicial.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmTelaInicial.Designer.cs">
-      <DependentUpon>frmTelaInicial.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -519,6 +573,9 @@
     <EmbeddedResource Include="Consultas\Itens\Produtos\uc_CadProduto.resx">
       <DependentUpon>uc_CadProduto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\Itens\Produtos\uc_EstoqueProduto.resx">
+      <DependentUpon>uc_EstoqueProduto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consultas\Itens\Produtos\uc_Produto.resx">
       <DependentUpon>uc_Produto.cs</DependentUpon>
     </EmbeddedResource>
@@ -556,9 +613,6 @@
     <EmbeddedResource Include="Caixa\Atendimento\Venda\uc_VisualizarVenda.resx">
       <DependentUpon>uc_VisualizarVenda.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="uc_SubTituloTelas.resx">
-      <DependentUpon>uc_SubTituloTelas.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="uc_TituloTelas.resx">
       <DependentUpon>uc_TituloTelas.cs</DependentUpon>
     </EmbeddedResource>
@@ -595,12 +649,6 @@
     </Compile>
     <Compile Include="Caixa\Atendimento\Venda\uc_VisualizarVenda.Designer.cs">
       <DependentUpon>uc_VisualizarVenda.cs</DependentUpon>
-    </Compile>
-    <Compile Include="uc_SubTituloTelas.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="uc_SubTituloTelas.Designer.cs">
-      <DependentUpon>uc_SubTituloTelas.cs</DependentUpon>
     </Compile>
     <Compile Include="uc_TituloTelas.cs">
       <SubType>UserControl</SubType>

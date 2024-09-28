@@ -42,9 +42,17 @@
             this.VlrDesconto = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnNovoRegistro = new DevExpress.XtraEditors.SimpleButton();
             this.uc_TituloTelas1 = new DXApplicationPDV.uc_TituloTelas();
-            this.uc_SubTituloTelas1 = new DXApplicationPDV.uc_SubTituloTelas();
+            this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.grdListaVendas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
+            this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnVoltar
@@ -98,10 +106,10 @@
             // grdListaVendas
             // 
             this.grdListaVendas.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.grdListaVendas.Location = new System.Drawing.Point(7, 133);
+            this.grdListaVendas.Location = new System.Drawing.Point(24, 45);
             this.grdListaVendas.MainView = this.gridView1;
             this.grdListaVendas.Name = "grdListaVendas";
-            this.grdListaVendas.Size = new System.Drawing.Size(1244, 373);
+            this.grdListaVendas.Size = new System.Drawing.Size(1219, 353);
             this.grdListaVendas.TabIndex = 33;
             this.grdListaVendas.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -213,29 +221,64 @@
             this.uc_TituloTelas1.Size = new System.Drawing.Size(1259, 32);
             this.uc_TituloTelas1.TabIndex = 36;
             // 
-            // uc_SubTituloTelas1
+            // layoutControl1
             // 
-            this.uc_SubTituloTelas1.Location = new System.Drawing.Point(4, 102);
-            this.uc_SubTituloTelas1.Name = "uc_SubTituloTelas1";
-            this.uc_SubTituloTelas1.Size = new System.Drawing.Size(1261, 33);
-            this.uc_SubTituloTelas1.TabIndex = 37;
+            this.layoutControl1.Controls.Add(this.grdListaVendas);
+            this.layoutControl1.Location = new System.Drawing.Point(-3, 95);
+            this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.Root = this.Root;
+            this.layoutControl1.Size = new System.Drawing.Size(1267, 422);
+            this.layoutControl1.TabIndex = 38;
+            this.layoutControl1.Text = "layoutControl1";
+            // 
+            // Root
+            // 
+            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.Root.GroupBordersVisible = false;
+            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlGroup1});
+            this.Root.Name = "Root";
+            this.Root.Size = new System.Drawing.Size(1267, 422);
+            this.Root.TextVisible = false;
+            // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1});
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1247, 402);
+            this.layoutControlGroup1.Text = "Aqui você pode visualizar todas as vendas realizadas na filial.";
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.grdListaVendas;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(1223, 357);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextVisible = false;
             // 
             // uc_VendasPDV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.btnNovoRegistro);
-            this.Controls.Add(this.grdListaVendas);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnVisualizar);
             this.Controls.Add(this.btnVoltar);
-            this.Controls.Add(this.uc_SubTituloTelas1);
             this.Controls.Add(this.uc_TituloTelas1);
             this.Name = "uc_VendasPDV";
             this.Size = new System.Drawing.Size(1259, 579);
             this.Load += new System.EventHandler(this.uc_VendasPDV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdListaVendas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
+            this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -256,6 +299,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn NumNFe;
         private DevExpress.XtraEditors.SimpleButton btnNovoRegistro;
         private uc_TituloTelas uc_TituloTelas1;
-        private uc_SubTituloTelas uc_SubTituloTelas1;
+        private DevExpress.XtraLayout.LayoutControl layoutControl1;
+        private DevExpress.XtraLayout.LayoutControlGroup Root;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
     }
 }

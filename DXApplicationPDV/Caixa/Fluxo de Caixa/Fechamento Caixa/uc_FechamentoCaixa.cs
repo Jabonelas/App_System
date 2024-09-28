@@ -52,7 +52,6 @@ namespace DXApplicationPDV.FechamentoCaixa
             configBotoes.BotaoSalvar(btnSalvar);
 
             uc_TituloTelas1.lblTituloTela.Text = "Fechamento de Caixa";
-            uc_SubTituloTelas1.lblSubTituloTela.Text = "Aqui você pode realizar o fechamento do caixa.";
         }
 
         private void RodaPeGridValorTotal()
@@ -133,7 +132,7 @@ namespace DXApplicationPDV.FechamentoCaixa
 
         private void uc_FechamentoCaixa_Load(object sender, EventArgs e)
         {
-            TelaDeCarregamento.EsconderCarregamento();
+            TelaCarregamento.EsconderCarregamento();
         }
 
         private void PegarDadosCaixaAberto()

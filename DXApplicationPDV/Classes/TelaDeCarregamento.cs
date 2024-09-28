@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace DXApplicationPDV.Classes
 {
-    public static class TelaDeCarregamento
+    public static class TelaCarregamento
     {
         private static IOverlaySplashScreenHandle _overlayHandle;
 

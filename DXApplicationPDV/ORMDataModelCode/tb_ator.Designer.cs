@@ -438,6 +438,8 @@ namespace DXApplicationPDV.bancoSQLite
         }
         [Association(@"tb_certificado_digitalReferencestb_ator")]
         public XPCollection<tb_certificado_digital> tb_certificado_digitals { get { return GetCollection<tb_certificado_digital>(nameof(tb_certificado_digitals)); } }
+        [Association(@"tb_contReferencestb_ator")]
+        public XPCollection<tb_cont> tb_conts { get { return GetCollection<tb_cont>(nameof(tb_conts)); } }
         [Association(@"tb_historicoReferencestb_ator")]
         public XPCollection<tb_historico> tb_historicos { get { return GetCollection<tb_historico>(nameof(tb_historicos)); } }
         [Association(@"tb_movimentacaoReferencestb_ator")]
@@ -456,6 +458,8 @@ namespace DXApplicationPDV.bancoSQLite
         public XPCollection<tb_produto_filial> tb_produto_filials { get { return GetCollection<tb_produto_filial>(nameof(tb_produto_filials)); } }
         [Association(@"tb_relacao_produto_cadastro_XMLReferencestb_ator")]
         public XPCollection<tb_relacao_produto_cadastro_XML> tb_relacao_produto_cadastro_XMLs { get { return GetCollection<tb_relacao_produto_cadastro_XML>(nameof(tb_relacao_produto_cadastro_XMLs)); } }
+        [Association(@"tb_resEventoNFeReferencestb_ator")]
+        public XPCollection<tb_resEventoNFe> tb_resEventoNFes { get { return GetCollection<tb_resEventoNFe>(nameof(tb_resEventoNFes)); } }
         [Association(@"tb_resposta_NFeReferencestb_ator")]
         public XPCollection<tb_resposta_NFe> tb_resposta_NFes { get { return GetCollection<tb_resposta_NFe>(nameof(tb_resposta_NFes)); } }
     }

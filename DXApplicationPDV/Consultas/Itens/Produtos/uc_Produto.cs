@@ -13,6 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraGrid;
 
 namespace DXApplicationPDV.Consultas.Itens.Produtos
 {
@@ -31,6 +32,10 @@ namespace DXApplicationPDV.Consultas.Itens.Produtos
             _frmTelaInicial = _form;
 
             CarregarGridProdutosAtivos();
+
+            //GridView gridView = grdProdutos.MainView as GridView;
+
+            //gridView.OptionsFind.FindFilterColumns = "NomeProduto;DescricaoProduto"; // Defina as colunas que aceita texto
         }
 
         private void Layout()
@@ -39,16 +44,16 @@ namespace DXApplicationPDV.Consultas.Itens.Produtos
 
             configBotoes.BotaoVoltar(btnVoltar);
             configBotoes.BotaoNovoRegistro(btnNovoRegistro);
-            configBotoes.BotaoVisualizar(btnAlterar);
+            configBotoes.BotaoAlterar(btnAlterar);
             configBotoes.BotaoExcluir(btnExcluir);
+            configBotoes.BotaoBuscar(btnBuscar);
 
             uc_TituloTelas1.lblTituloTela.Text = "Produtos";
-            uc_SubTituloTelas1.lblSubTituloTela.Text = "Aqui você pode visualizar todos os produtos cadastrados na filial.";
         }
 
         private void uc_Produto_Load(object sender, EventArgs e)
         {
-            TelaDeCarregamento.EsconderCarregamento();
+            TelaCarregamento.EsconderCarregamento();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -114,13 +119,13 @@ namespace DXApplicationPDV.Consultas.Itens.Produtos
 
         private void TelaCadastrarProduto(string _operacao, long _idProduto)
         {
-            TelaDeCarregamento.ExibirCarregamentoUserControl(this);
+            TelaCarregamento.ExibirCarregamentoUserControl(this);
 
             _frmTelaInicial.pnlTelaPrincipal.Controls.Clear();
             uc_CadProduto ucCadProd = new uc_CadProduto(_frmTelaInicial, _operacao, _idProduto);
             _frmTelaInicial.pnlTelaPrincipal.Controls.Add(ucCadProd);
             _frmTelaInicial.pnlTelaPrincipal.Tag = ucCadProd;
-            this.Invoke(new Action(() => TelaDeCarregamento.EsconderCarregamento()));
+
             ucCadProd.Show();
         }
 
@@ -144,11 +149,34 @@ namespace DXApplicationPDV.Consultas.Itens.Produtos
             }
         }
 
+        private void TelaAutenticacaoUsuario()
+        {
+            TelaCarregamento.ExibirCarregamentoUserControl(this);
+
+            frmAutenticacaoUsuario frmAutenticacaoUsuario = new frmAutenticacaoUsuario();
+            frmAutenticacaoUsuario.ShowDialog();
+        }
+
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            PegaIdProdutoSelecionadoGrid();
+            //Gerente 102
+            bool podeAlterarAtor = VariaveisGlobais.UsuarioLogado.at_atorTipo == 102 || VariaveisGlobais.IsUsuarioComPermissao;
 
-            TelaCadastrarProduto("alterar", Convert.ToInt16(idProduto));
+            if (!podeAlterarAtor)
+            {
+                TelaAutenticacaoUsuario();
+
+                podeAlterarAtor = VariaveisGlobais.IsUsuarioComPermissao;
+            }
+
+            if (podeAlterarAtor)
+            {
+                VariaveisGlobais.IsUsuarioComPermissao = false;
+
+                PegaIdProdutoSelecionadoGrid();
+
+                TelaCadastrarProduto("alterar", Convert.ToInt16(idProduto));
+            }
         }
 
         private void DesativarDadosProduto()
@@ -221,27 +249,61 @@ namespace DXApplicationPDV.Consultas.Itens.Produtos
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
+            //Gerente 102
+            bool podeAlterarAtor = VariaveisGlobais.UsuarioLogado.at_atorTipo == 102 || VariaveisGlobais.IsUsuarioComPermissao;
+
+            if (!podeAlterarAtor)
+            {
+                TelaAutenticacaoUsuario();
+
+                podeAlterarAtor = VariaveisGlobais.IsUsuarioComPermissao;
+            }
+
+            if (podeAlterarAtor)
+            {
+                VariaveisGlobais.IsUsuarioComPermissao = false;
+
+                PegaIdProdutoSelecionadoGrid();
+
+                if (!IsEstoqueZerado())
+                {
+                    MensagensDoSistema.MensagemAtencaoOk("Não é possível excluir este cadastro de um produto que possui estoque.");
+
+                    idProduto = 0;
+
+                    return;
+                }
+
+                var dialogResult = MensagensDoSistema.MensagemAtencaoYesNo("Você tem certeza de que deseja excluir este produto?");
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    DesativarDadosProduto();
+
+                    DesativarDadosProdutoFilial();
+
+                    CarregarGridProdutosAtivos();
+                }
+            }
+        }
+
+        private void TelaEstoqueProduto()
+        {
+            TelaCarregamento.ExibirCarregamentoUserControl(this);
+
+            _frmTelaInicial.pnlTelaPrincipal.Controls.Clear();
+            uc_EstoqueProduto ucEstoqueProduto = new uc_EstoqueProduto(_frmTelaInicial, idProduto);
+            _frmTelaInicial.pnlTelaPrincipal.Controls.Add(ucEstoqueProduto);
+            _frmTelaInicial.pnlTelaPrincipal.Tag = ucEstoqueProduto;
+
+            ucEstoqueProduto.Show();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
             PegaIdProdutoSelecionadoGrid();
 
-            if (!IsEstoqueZerado())
-            {
-                MensagensDoSistema.MensagemAtencaoOk("Não é possível excluir este cadastro de um produto que possui estoque.");
-
-                idProduto = 0;
-
-                return;
-            }
-
-            var dialogResult = MensagensDoSistema.MensagemAtencaoYesNo("Você tem certeza de que deseja excluir este produto?");
-
-            if (dialogResult == DialogResult.Yes)
-            {
-                DesativarDadosProduto();
-
-                DesativarDadosProdutoFilial();
-
-                CarregarGridProdutosAtivos();
-            }
+            TelaEstoqueProduto();
         }
     }
 }

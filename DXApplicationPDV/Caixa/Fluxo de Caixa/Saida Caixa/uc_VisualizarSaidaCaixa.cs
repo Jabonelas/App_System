@@ -46,7 +46,6 @@ namespace DXApplicationPDV.Fluxo_de_Caixa.Saida_Caixa
             configBotoes.BotaoNovoRegistro(btnNovoRegistro);
 
             uc_TituloTelas1.lblTituloTela.Text = "Retiradas de Caixa";
-            uc_SubTituloTelas1.lblSubTituloTela.Text = "Aqui você pode visualizar todas as retiradas de caixa realizadas na jornada atual.";
         }
 
         private void CarregarGridEntradasCaixaAtivas()
@@ -145,7 +144,7 @@ namespace DXApplicationPDV.Fluxo_de_Caixa.Saida_Caixa
 
         public void TelaSaidaCaixa()
         {
-            TelaDeCarregamento.ExibirCarregamentoUserControl(this);
+            TelaCarregamento.ExibirCarregamentoUserControl(this);
 
             _frmTelaInicial.pnlTelaPrincipal.Controls.Clear();
             uc_SaidaCaixa ucSaidaCaixa = new uc_SaidaCaixa(_frmTelaInicial);
@@ -161,7 +160,7 @@ namespace DXApplicationPDV.Fluxo_de_Caixa.Saida_Caixa
 
         private void uc_VisualizarSaidaCaixa_Load(object sender, EventArgs e)
         {
-            TelaDeCarregamento.EsconderCarregamento();
+            TelaCarregamento.EsconderCarregamento();
         }
     }
 }

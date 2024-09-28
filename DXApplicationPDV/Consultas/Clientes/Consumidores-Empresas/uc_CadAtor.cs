@@ -85,8 +85,6 @@ namespace DXApplicationPDV.Consultas.Clientes.Consumidores_Empresas
 
             configBotoes.BotaoVoltar(btnVoltar);
             configBotoes.BotaoSalvar(btnSalvar);
-            configBotoes.BotaoVisualizar(btnVisualizar);
-            configBotoes.BotaoExcluir(btnExcluir);
         }
 
         private void PreencherMatriz()
@@ -276,13 +274,13 @@ namespace DXApplicationPDV.Consultas.Clientes.Consumidores_Empresas
                 case 1:
 
                     uc_TituloTelas1.lblTituloTela.Text = "Cadastro de Consumidor";
-                    uc_SubTituloTelas1.lblSubTituloTela.Text = "Aqui você pode inserir os dados do consumidor para realizar o cadastrado";
+                    layoutControlGroup1.Text = "Aqui você pode inserir os dados do consumidor para realizar o cadastrado";
                     break;
 
                 case 10:
 
                     uc_TituloTelas1.lblTituloTela.Text = "Cadastro de Empresa";
-                    uc_SubTituloTelas1.lblSubTituloTela.Text = "Aqui você pode inserir os dados da empresa para realizar o cadastrado";
+                    layoutControlGroup1.Text = "Aqui você pode inserir os dados da empresa para realizar o cadastrado";
                     break;
             }
         }
@@ -298,7 +296,7 @@ namespace DXApplicationPDV.Consultas.Clientes.Consumidores_Empresas
 
         private void btnArquivoCertDig_Properties_ButtonPressed(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            TelaDeCarregamento.ExibirCarregamentoUserControl(this);
+            TelaCarregamento.ExibirCarregamentoUserControl(this);
 
             // Usando XtraOpenFileDialog da DevExpress
             DevExpress.XtraEditors.XtraOpenFileDialog xtraOpenFileDialog = new DevExpress.XtraEditors.XtraOpenFileDialog();
@@ -338,7 +336,7 @@ namespace DXApplicationPDV.Consultas.Clientes.Consumidores_Empresas
                 CButtonEditFileBinaryCertDig_SxEvLoadFile(sender, e, xtraOpenFileDialog.FileName, rawData);
             }
 
-            TelaDeCarregamento.EsconderCarregamento();
+            TelaCarregamento.EsconderCarregamento();
         }
 
         private void CButtonEditFileBinaryCertDig_SxEvLoadFile(object sender, EventArgs eventArgs, string fullName, byte[] rawData)
@@ -382,7 +380,7 @@ namespace DXApplicationPDV.Consultas.Clientes.Consumidores_Empresas
 
         private void uc_CadAtor_Load(object sender, EventArgs e)
         {
-            TelaDeCarregamento.EsconderCarregamento();
+            TelaCarregamento.EsconderCarregamento();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)

@@ -88,11 +88,12 @@ namespace DXApplicationPDV.bancoSQLite
             get { return ffk_tb_categoria_produto; }
             set { SetPropertyValue<tb_categoria_produto>(nameof(fk_tb_categoria_produto), ref ffk_tb_categoria_produto, value); }
         }
-        long ffk_tb_Ncm;
-        public long fk_tb_Ncm
+        tb_ncm ffk_tb_Ncm;
+        [Association(@"tb_subcategoria_produtoReferencestb_ncm")]
+        public tb_ncm fk_tb_Ncm
         {
             get { return ffk_tb_Ncm; }
-            set { SetPropertyValue<long>(nameof(fk_tb_Ncm), ref ffk_tb_Ncm, value); }
+            set { SetPropertyValue<tb_ncm>(nameof(fk_tb_Ncm), ref ffk_tb_Ncm, value); }
         }
         [Association(@"tb_produtoReferencestb_subcategoria_produto")]
         public XPCollection<tb_produto> tb_produtos { get { return GetCollection<tb_produto>(nameof(tb_produtos)); } }

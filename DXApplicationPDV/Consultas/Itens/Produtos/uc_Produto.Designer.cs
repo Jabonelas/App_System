@@ -31,7 +31,6 @@
             this.uc_TituloTelas1 = new DXApplicationPDV.uc_TituloTelas();
             this.btnVoltar = new DevExpress.XtraEditors.SimpleButton();
             this.btnNovoRegistro = new DevExpress.XtraEditors.SimpleButton();
-            this.uc_SubTituloTelas1 = new DXApplicationPDV.uc_SubTituloTelas();
             this.btnExcluir = new DevExpress.XtraEditors.SimpleButton();
             this.btnAlterar = new DevExpress.XtraEditors.SimpleButton();
             this.grdProdutos = new DevExpress.XtraGrid.GridControl();
@@ -45,8 +44,18 @@
             this.Sucategoria = new DevExpress.XtraGrid.Columns.GridColumn();
             this.VlrUnProd = new DevExpress.XtraGrid.Columns.GridColumn();
             this.EstTotal = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.btnBuscar = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.grdProdutos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
+            this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             this.SuspendLayout();
             // 
             // uc_TituloTelas1
@@ -89,13 +98,6 @@
             this.btnNovoRegistro.ToolTipTitle = "Novo Registro:";
             this.btnNovoRegistro.Click += new System.EventHandler(this.btnNovoRegistro_Click);
             // 
-            // uc_SubTituloTelas1
-            // 
-            this.uc_SubTituloTelas1.Location = new System.Drawing.Point(4, 102);
-            this.uc_SubTituloTelas1.Name = "uc_SubTituloTelas1";
-            this.uc_SubTituloTelas1.Size = new System.Drawing.Size(1261, 33);
-            this.uc_SubTituloTelas1.TabIndex = 40;
-            // 
             // btnExcluir
             // 
             this.btnExcluir.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -129,10 +131,10 @@
             // 
             this.grdProdutos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grdProdutos.Location = new System.Drawing.Point(7, 133);
+            this.grdProdutos.Location = new System.Drawing.Point(24, 45);
             this.grdProdutos.MainView = this.gridView1;
             this.grdProdutos.Name = "grdProdutos";
-            this.grdProdutos.Size = new System.Drawing.Size(1244, 373);
+            this.grdProdutos.Size = new System.Drawing.Size(1217, 352);
             this.grdProdutos.TabIndex = 44;
             this.grdProdutos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -234,14 +236,65 @@
             this.EstTotal.VisibleIndex = 7;
             this.EstTotal.Width = 94;
             // 
+            // layoutControl1
+            // 
+            this.layoutControl1.Controls.Add(this.grdProdutos);
+            this.layoutControl1.Location = new System.Drawing.Point(-3, 96);
+            this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.Root = this.Root;
+            this.layoutControl1.Size = new System.Drawing.Size(1265, 421);
+            this.layoutControl1.TabIndex = 45;
+            this.layoutControl1.Text = "layoutControl1";
+            // 
+            // Root
+            // 
+            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.Root.GroupBordersVisible = false;
+            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlGroup1});
+            this.Root.Name = "Root";
+            this.Root.Size = new System.Drawing.Size(1265, 421);
+            this.Root.TextVisible = false;
+            // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem2});
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1245, 401);
+            this.layoutControlGroup1.Text = "Aqui você pode visualizar todos os produtos cadastrados na filial.";
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.grdProdutos;
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(1221, 356);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem2.TextVisible = false;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Appearance.Options.UseFont = true;
+            this.btnBuscar.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.btnBuscar.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
+            this.btnBuscar.Location = new System.Drawing.Point(135, 39);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(58, 54);
+            this.btnBuscar.TabIndex = 46;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // uc_Produto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.grdProdutos);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnAlterar);
-            this.Controls.Add(this.uc_SubTituloTelas1);
             this.Controls.Add(this.btnNovoRegistro);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.uc_TituloTelas1);
@@ -250,6 +303,11 @@
             this.Load += new System.EventHandler(this.uc_Produto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdProdutos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
+            this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -259,7 +317,6 @@
         private uc_TituloTelas uc_TituloTelas1;
         private DevExpress.XtraEditors.SimpleButton btnVoltar;
         private DevExpress.XtraEditors.SimpleButton btnNovoRegistro;
-        private uc_SubTituloTelas uc_SubTituloTelas1;
         private DevExpress.XtraEditors.SimpleButton btnExcluir;
         private DevExpress.XtraEditors.SimpleButton btnAlterar;
         private DevExpress.XtraGrid.GridControl grdProdutos;
@@ -273,5 +330,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn Sucategoria;
         private DevExpress.XtraGrid.Columns.GridColumn VlrUnProd;
         private DevExpress.XtraGrid.Columns.GridColumn EstTotal;
+        private DevExpress.XtraLayout.LayoutControl layoutControl1;
+        private DevExpress.XtraLayout.LayoutControlGroup Root;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraEditors.SimpleButton btnBuscar;
     }
 }

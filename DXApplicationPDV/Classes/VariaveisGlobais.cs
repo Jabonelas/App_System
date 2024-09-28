@@ -18,5 +18,7 @@ namespace DXApplicationPDV.Classes
         public static tb_pdv PDVLogado { get; set; }
 
         public static tb_ator FilialLogada { get; set; }
+
+        public static bool IsUsuarioComPermissao { get; set; }
     }
 }

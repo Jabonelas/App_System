@@ -194,11 +194,12 @@ namespace DXApplicationPDV.bancoSQLite
             get { return ffk_tb_rede; }
             set { SetPropertyValue<tb_rede>(nameof(fk_tb_rede), ref ffk_tb_rede, value); }
         }
-        long ffk_tb_ncm;
-        public long fk_tb_ncm
+        tb_ncm ffk_tb_ncm;
+        [Association(@"tb_produtoReferencestb_ncm")]
+        public tb_ncm fk_tb_ncm
         {
             get { return ffk_tb_ncm; }
-            set { SetPropertyValue<long>(nameof(fk_tb_ncm), ref ffk_tb_ncm, value); }
+            set { SetPropertyValue<tb_ncm>(nameof(fk_tb_ncm), ref ffk_tb_ncm, value); }
         }
         tb_ator ffk_tb_ator;
         [Association(@"tb_produtoReferencestb_ator")]

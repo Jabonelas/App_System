@@ -52,8 +52,6 @@ namespace DXApplicationPDV
             configBotoes.BotaoExcluir(btnExcluir);
 
             uc_TituloTelas1.lblTituloTela.Text = "Ponto de Venda";
-            uc_SubTituloTelas1.lblSubTituloTela.Text = "Selecione o produto e clique em adicionar.";
-            uc_SubTituloTelas2.lblSubTituloTela.Text = "Lista de produtos adicionados";
         }
 
         private void PreencherProduto()
@@ -93,7 +91,7 @@ namespace DXApplicationPDV
 
         private void uc_PDV_Load(object sender, EventArgs e)
         {
-            TelaDeCarregamento.EsconderCarregamento();
+            TelaCarregamento.EsconderCarregamento();
         }
 
         public class produtosSelecionados : INotifyPropertyChanged
@@ -348,7 +346,7 @@ namespace DXApplicationPDV
 
         private void TelaPagementoPDV()
         {
-            TelaDeCarregamento.ExibirCarregamentoUserControl(this);
+            TelaCarregamento.ExibirCarregamentoUserControl(this);
 
             frmPagamentoPDV frmPamentoPDV = new frmPagamentoPDV(_frmTelaInicial);
             frmPamentoPDV.ShowDialog();
