@@ -1,0 +1,1089 @@
+Data: 30/08/2024 16:50:36
+Mensagem: Erro ao excluir subcategoria: Passed id type 'System.Int16' incompatible with type 'System.Int64' of key 'DXApplicationERP.bancoSQLite.tb_subcategoria_produto.id_subcategoria_produto'.
+-------------------------------------------
+
+Data: 30/08/2024 16:51:16
+Mensagem: Erro ao excluir subcategoria: Passed id type 'System.Int32' incompatible with type 'System.Int64' of key 'DXApplicationERP.bancoSQLite.tb_subcategoria_produto.id_subcategoria_produto'.
+-------------------------------------------
+
+Data: 30/08/2024 16:59:04
+Mensagem: Erro ao cadastrar produto: Passed id type 'System.Int16' incompatible with type 'System.Int64' of key 'DXApplicationERP.bancoSQLite.tb_subcategoria_produto.id_subcategoria_produto'.
+-------------------------------------------
+
+Data: 30/08/2024 16:59:50
+Mensagem: Erro ao cadastrar produto filial: Referência de objeto não definida para uma instância de um objeto.
+-------------------------------------------
+
+Data: 30/08/2024 17:00:39
+Mensagem: Erro ao cadastrar produto: Passed id type 'System.Int16' incompatible with type 'System.Int64' of key 'DXApplicationERP.bancoSQLite.tb_subcategoria_produto.id_subcategoria_produto'.
+-------------------------------------------
+
+Data: 30/08/2024 17:00:45
+Mensagem: Erro ao cadastrar produto filial: Referência de objeto não definida para uma instância de um objeto.
+-------------------------------------------
+
+Data: 30/08/2024 17:03:50
+Mensagem: Erro ao alterar cadastro produto: A cadeia de caracteres de entrada não estava em um formato correto.
+-------------------------------------------
+
+Data: 30/08/2024 18:55:25
+Mensagem: Erro ao cadastrar matriz: Passed id type 'System.Int16' incompatible with type 'System.Int64' of key 'DXApplicationERP.bancoSQLite.tb_rede.id_rede'.
+-------------------------------------------
+
+Data: 31/08/2024 11:41:51
+Mensagem: Erro ao cadastrar produto filial: Não é possível acessar um objeto descartado.
+Nome do objeto: 'DXApplicationERP.bancoSQLite.tb_produto(3)'.
+-------------------------------------------
+
+Data: 31/08/2024 11:45:42
+Mensagem: Erro ao cadastrar produto filial: Não é possível acessar um objeto descartado.
+Nome do objeto: 'DXApplicationERP.bancoSQLite.tb_produto(5)'.
+-------------------------------------------
+
+Data: 31/08/2024 11:46:30
+Mensagem: Erro ao alterar cadastro produto filial: Referência de objeto não definida para uma instância de um objeto.
+-------------------------------------------
+
+Data: 31/08/2024 11:49:24
+Mensagem: Erro ao cadastrar produto filial: Não é possível acessar um objeto descartado.
+Nome do objeto: 'DXApplicationERP.bancoSQLite.tb_produto(6)'.
+-------------------------------------------
+
+Data: 31/08/2024 12:02:23
+Mensagem: Erro ao cadastrar produto filial no cadastro da filial: Não é possível acessar um objeto descartado.
+Nome do objeto: 'DXApplicationERP.bancoSQLite.tb_ator(5)'.
+-------------------------------------------
+
+Data: 31/08/2024 12:03:41
+Mensagem: Erro ao cadastrar produto filial no cadastro da filial: Não é possível acessar um objeto descartado.
+Nome do objeto: 'DXApplicationERP.bancoSQLite.tb_ator(6)'.
+-------------------------------------------
+
+Data: 31/08/2024 12:08:55
+Mensagem: Erro ao preencher campos com o produto selecionado: Referência de objeto não definida para uma instância de um objeto.
+-------------------------------------------
+
+Data: 31/08/2024 12:48:56
+Mensagem: Erro ao alterar matriz: Passed id type 'System.Int16' incompatible with type 'System.Int64' of key 'DXApplicationERP.bancoSQLite.tb_rede.id_rede'.
+-------------------------------------------
+
+Data: 01/09/2024 14:27:53
+Mensagem: Erro ao cadastrar secao: Executing Sql 'insert into [tb_secao_produto]([id_secao_produto],[sp_dtCri],[sp_dtAlt],[sp_dtAcs],[sp_desat],[sp_desc],[fk_tb_rede])values(@p0,@p1,@p2,@p3,@p4,@p5,@p6)' with parameters '{0},{01/09/2024 14:27:53},{01/09/2024 14:27:53},{},{0},{produto},{}' exception 'code = Constraint (19), message = System.Data.SQLite.SQLiteException (0x87AF202F): constraint failed
+UNIQUE constraint failed: tb_secao_produto.id_secao_produto
+   em System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   em System.Data.SQLite.SQLiteDataReader.NextResult()
+   em System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   em System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   em System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   em System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   em DevExpress.Xpo.DB.ConnectionProviderSql.<>c__DisplayClass138_0.<InternalExecSql>b__0()
+   em DevExpress.Xpo.Logger.LogManager.Log[T](String category, LogHandler`1 handler, MessageHandler`1 createMessageHandler)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.InternalExecSql(IDbCommand command)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.ExecSql(Query query)'
+-------------------------------------------
+
+Data: 01/09/2024 14:29:22
+Mensagem: Erro ao cadastrar secao: Executing Sql 'insert into [tb_secao_produto]([id_secao_produto],[sp_dtCri],[sp_dtAlt],[sp_dtAcs],[sp_desat],[sp_desc],[fk_tb_rede])values(@p0,@p1,@p2,@p3,@p4,@p5,@p6)' with parameters '{0},{01/09/2024 14:29:22},{01/09/2024 14:29:22},{},{0},{produto},{}' exception 'code = Constraint (19), message = System.Data.SQLite.SQLiteException (0x87AF202F): constraint failed
+UNIQUE constraint failed: tb_secao_produto.id_secao_produto
+   em System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   em System.Data.SQLite.SQLiteDataReader.NextResult()
+   em System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   em System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   em System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   em System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   em DevExpress.Xpo.DB.ConnectionProviderSql.<>c__DisplayClass138_0.<InternalExecSql>b__0()
+   em DevExpress.Xpo.Logger.LogManager.Log[T](String category, LogHandler`1 handler, MessageHandler`1 createMessageHandler)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.InternalExecSql(IDbCommand command)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.ExecSql(Query query)'
+-------------------------------------------
+
+Data: 01/09/2024 14:29:25
+Mensagem: Erro ao cadastrar categoria: Executing Sql 'insert into [tb_categoria_produto]([id_categoria_produto],[cp_dtCri],[cp_dtAlt],[cp_dtAcs],[cp_desat],[cp_desc],[fk_tb_secao_produto])values(@p0,@p1,@p2,@p3,@p4,@p5,@p6)' with parameters '{0},{01/09/2024 14:29:25},{01/09/2024 14:29:25},{},{0},{eletrica},{0}' exception 'code = Constraint (19), message = System.Data.SQLite.SQLiteException (0x87AF202F): constraint failed
+UNIQUE constraint failed: tb_categoria_produto.id_categoria_produto
+   em System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   em System.Data.SQLite.SQLiteDataReader.NextResult()
+   em System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   em System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   em System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   em System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   em DevExpress.Xpo.DB.ConnectionProviderSql.<>c__DisplayClass138_0.<InternalExecSql>b__0()
+   em DevExpress.Xpo.Logger.LogManager.Log[T](String category, LogHandler`1 handler, MessageHandler`1 createMessageHandler)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.InternalExecSql(IDbCommand command)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.ExecSql(Query query)'
+-------------------------------------------
+
+Data: 01/09/2024 22:15:21
+Mensagem: Erro ao cadastrar secao: Executing Sql 'insert into [tb_secao_produto]([id_secao_produto],[sp_dtCri],[sp_dtAlt],[sp_dtAcs],[sp_desat],[sp_desc],[fk_tb_rede])values(@p0,@p1,@p2,@p3,@p4,@p5,@p6)' with parameters '{0},{01/09/2024 22:15:21},{01/09/2024 22:15:21},{},{0},{produto},{}' exception 'code = Constraint (19), message = System.Data.SQLite.SQLiteException (0x87AF202F): constraint failed
+UNIQUE constraint failed: tb_secao_produto.id_secao_produto
+   em System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   em System.Data.SQLite.SQLiteDataReader.NextResult()
+   em System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   em System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   em System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   em System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   em DevExpress.Xpo.DB.ConnectionProviderSql.<>c__DisplayClass138_0.<InternalExecSql>b__0()
+   em DevExpress.Xpo.Logger.LogManager.Log[T](String category, LogHandler`1 handler, MessageHandler`1 createMessageHandler)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.InternalExecSql(IDbCommand command)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.ExecSql(Query query)'
+-------------------------------------------
+
+Data: 03/09/2024 19:17:35
+Mensagem: Erro ao cadastrar Nfe na entrada de XML: Executing Sql 'insert into [tb_nfe]([id_nfe],[nf_nfeServico],[nf_dtCri],[nf_dtAlt],[nf_dtAcs],[nf_desat],[nf_prontoEnviar],[nf_nfeNatOp],[nf_nfeTipoAmb],[nf_nfeDtEmis],[nf_nfeDtAut],[nf_nfeCfop],[nf_nfeCst],[nf_nfeCsosn],[nf_nfeNumProtAut],[nf_nfeUf],[nf_nfeCod],[nf_nfeChave],[nf_nfeVersao],[nf_nfeMod],[nf_nSNfeTipoEmis],[nf_nfeTipo],[nf_nfeSit],[nf_nfeIdentLocDestOp],[nf_nfeCodMunFg],[nf_nfeTipoImpDanfe],[nf_nfeChaveDv],[nf_nfeTipoDfe],[nf_nfeFinEmis],[nf_nfeIndOpConsumFin],[nf_nfeIndPresCompEstMomOp],[nf_nfeXmlArqAutPath],[nf_nfeXmlAutBkp],[nf_nfeIndInterm],[nf_nfeProcEmis],[nf_nfeVerProcEmis],[nf_nfeInfoCompl],[nf_nfeBcIcms],[nf_nfeVlrTotIcms],[nf_nfeVlrIcmsDeson],[nf_nfeVlrTotIcmsFcp],[nf_nfeVlrTotIcmsInterUfDest],[nf_nfeVlrTotIcmsInterUfRem],[nf_nfeVlrTotFcp],[nf_nfeVlrBcIcmsSt],[nf_nfeVlrTotIcmsSt],[nf_nfeVlrTotFcpSt],[nf_nfeVlrTotFcpRetSt],[nf_nfeVlrTotProd],[nf_vlrTotPag],[nf_nfeVlrTotFrete],[nf_nfeVlrTotSeg],[nf_nfeVlrTotDesc],[nf_nfeVlrTotImpImp],[nf_nfeVlrTotIpi],[nf_nfeVlrTotIpiDevol],[nf_nfeVlrTotPis],[nf_nfeVlrTotCofins],[nf_nfeVlrTotOutro],[nf_nfeVlrTotNF],[nf_nfeVlrTotTrib],[nf_nfeModFrete],[nf_nfeCstat],[nf_nfeSerieProd],[nf_nfeSerieHom],[nf_nfeNumProd],[nf_nfeNumHom],[nf_nfeNum],[nf_nfeSerie],[nf_nfeSolTransm],[nf_nfeSolTransmDt],[nf_nfeTransmStatus],[nf_nfeXmlAutErro],[nf_nfeXmlCancErro],[nf_nfeEnvSfz],[nf_nfeTransmCorrigir],[nf_nfeTransmLog],[nf_nfeDhRecbto],[nf_nfeProcAutExHRes],[nf_nfeProcAutExMsg],[nf_nfeHaProtSfz],[nf_nfeRejSfz],[nf_nfeXmlEnv],[nf_nfeXmlCorrigir],[nf_nfeArqProcAutDist],[nf_nfeCamArqProcAutDist],[nf_nfeNomeArqProcAutDist],[nf_nfeXmlOrig],[nf_nfeXmlAss],[nf_nfeXmlRetWs],[nf_nfeXmlProcRes],[nf_nfeXmlProcAutDist],[nf_nfeXmlEvtCancDist],[nf_nfeDtEmis_ImpXml],[nf_nfeDtAut_ImpXml],[nf_nfeCfop_ImpXml],[nf_nfeCst_ImpXml],[nf_nfeCsosn_ImpXml],[nf_nfeNumProtAut_ImpXml],[nf_nfeUf_],[nf_nfeUf_ImpXml],[nf_nfeCod_ImpXml],[nf_nfeChave_ImpXml],[nf_nfeVersao_ImpXml],[nf_nfeMod_ImpXml],[nf_nfeTipoEmis_ImpXml],[nf_nfeTipo_ImpXml],[nf_nfeSit_ImpXml],[nf_nfeIdentLocDestOp_ImpXml],[nf_nfeCodMunFg_],[nf_nfeCodMunFg_ImpXml],[nf_nfeTipoImpDanfe_ImpXml],[nf_nfeChaveDv_ImpXml],[nf_nfeTipoDfe_ImpXml],[nf_nfeFinEmis_ImpXml],[nf_nfeIndOpConsumFin_ImpXml],[nf_nfeIndPresCompEstMomOp_ImpXml],[nf_nfeXmlArqAutPath_ImpXml],[nf_nfeXmlAutBkp_ImpXml],[nf_nfeIndInterm_ImpXml],[nf_nfeProcEmis_ImpXml],[nf_nfeVerProcEmis_ImpXml],[nf_nfeInfoCompl_ImpXml],[nf_nfeBcIcms_ImpXml],[nf_nfeVlrTotIcms_ImpXml],[nf_nfeVlrIcmsDeson_ImpXml],[nf_nfeVlrTotIcmsFcp_ImpXml],[nf_nfeVlrTotIcmsInterUfDest_ImpXml],[nf_nfeVlrTotIcmsInterUfRem_ImpXml],[nf_nfeVlrTotFcp_ImpXml],[nf_nfeVlrBcIcmsSt_ImpXml],[nf_nfeVlrTotIcmsSt_ImpXml],[nf_nfeVlrTotFcpSt_ImpXml],[nf_nfeVlrTotFcpRetSt_ImpXml],[nf_nfeVlrTotProd_ImpXml],[nf_vlrTotPag_ImpXml],[nf_nfeVlrTotFrete_ImpXml],[nf_nfeVlrTotSeg_ImpXml],[nf_nfeVlrTotDesc_ImpXml],[nf_nfeVlrTotImpImp_ImpXml],[nf_nfeVlrTotIpi_ImpXml],[nf_nfeVlrTotIpiDevol_ImpXml],[nf_nfeVlrTotPis_ImpXml],[nf_nfeVlrTotCofins_ImpXml],[nf_nfeVlrTotOutro_ImpXml],[nf_nfeVlrTotNF_ImpXml],[nf_nfeVlrTotTrib_ImpXml],[nf_nfeModFrete_ImpXml],[nf_nfeCstat_ImpXml],[nf_nfeSerieProd_ImpXml],[nf_nfeSerieHom_ImpXml],[nf_nfeNumProd_ImpXml],[nf_nfeNumHom_ImpXml],[nf_nfeNum_ImpXml],[nf_nfeSerie_ImpXml],[nf_nfeSolTransm_ImpXml],[nf_nfeSolTransmDt_ImpXml],[nf_nfeTransmStatus_ImpXml],[nf_nfeXmlAutErro_ImpXml],[nf_nfeXmlCancErro_ImpXml],[nf_nfeEnvSfz_ImpXml],[nf_nfeTransmCorrigir_ImpXml],[nf_nfeTransmLog_ImpXml],[nf_nfeDhRecbto_ImpXml],[nf_nfeProcAutExHRes_ImpXml],[nf_nfeProcAutExMsg_ImpXml],[nf_nfeHaProtSfz_ImpXml],[nf_nfeRejSfz_ImpXml],[nf_nfeXmlEnv_ImpXml],[nf_nfeXmlCorrigir_ImpXml],[nf_nfeArqProcAutDist_ImpXml],[nf_nfeCamArqProcAutDist_ImpXml],[nf_nfeNomeArqProcAutDist_ImpXml],[nf_nfeXmlOrig_ImpXml],[nf_nfeXmlAss_ImpXml],[nf_nfeXmlRetWs_ImpXml],[nf_nfeXmlProcRes_ImpXml],[nf_nfeXmlProcAutDist_ImpXml],[nf_nfeXmlEvtCancDist_ImpXml],[nf_nfeVlrTroco_ImpXml],[nf_nfe1DhRecbto],[nf_nfe1CStat],[nf_nfe1XMotivo],[nf_nfe1RetornoWSString],[nf_nfe1WSXMLInnerText],[nf_nfe1ConteudoXMLOriginalOuterXml],[nf_nfe1ResProtNFeInfProt0CStat],[nf_nfe1ResProtNFeInfProt0ChNFe],[nf_nfe1ResProtNFeInfProt0XMotivo],[nf_nfe1ResProtNFeInfProt0NProt],[nf_nfe1ResProtNFeInfProt0DhRecbto],[nf_nfe2ConteudoXMLOuterXml],[nf_nfe2RetornoWSString],[nf_nfe2RetornoWSXMLInnerText],[nf_nfe2ResCStat],[nf_nfe2ResDhRecbto],[nf_nfe2Renf_nRec],[nf_nfe2ResProtNFeInfProt0CStat],[nf_nfe2ResProtNFeInfProt0ChNFe],[nf_nfe2ResProtNFeInfProt0XMotivo],[nf_nfe2ResProtNFeInfProt0DhRecbto],[nf_nfeProcResultsXMLDist],[nf_nfeProdNumPulo],[fk_tb_movimentacao])values(@p0,@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11,@p12,@p13,@p14,@p15,@p16,@p17,@p18,@p19,@p20,@p21,@p22,@p23,@p24,@p25,@p26,@p27,@p28,@p29,@p30,@p31,@p32,@p33,@p34,@p35,@p36,@p37,@p38,@p39,@p40,@p41,@p42,@p43,@p44,@p45,@p46,@p47,@p48,@p49,@p50,@p51,@p52,@p53,@p54,@p55,@p56,@p57,@p58,@p59,@p60,@p61,@p62,@p63,@p64,@p65,@p66,@p67,@p68,@p69,@p70,@p71,@p72,@p73,@p74,@p75,@p76,@p77,@p78,@p79,@p80,@p81,@p82,@p83,@p84,@p85,@p86,@p87,@p88,@p89,@p90,@p91,@p92,@p93,@p94,@p95,@p96,@p97,@p98,@p99,@p100,@p101,@p102,@p103,@p104,@p105,@p106,@p107,@p108,@p109,@p110,@p111,@p112,@p113,@p114,@p115,@p116,@p117,@p118,@p119,@p120,@p121,@p122,@p123,@p124,@p125,@p126,@p127,@p128,@p129,@p130,@p131,@p132,@p133,@p134,@p135,@p136,@p137,@p138,@p139,@p140,@p141,@p142,@p143,@p144,@p145,@p146,@p147,@p148,@p149,@p150,@p151,@p152,@p153,@p154,@p155,@p156,@p157,@p158,@p159,@p160,@p161,@p162,@p163,@p164,@p165,@p166,@p167,@p168,@p169,@p170,@p171,@p172,@p173,@p174,@p175,@p176,@p177,@p178,@p179,@p180,@p181,@p182,@p183,@p184,@p185,@p186,@p187,@p188,@p189,@p190,@p191,@p192,@p193,@p194,@p195,@p196,@p197,@p198,@p199,@p200,@p201,@p202,@p203)' with parameters '{0},{2},{03/09/2024 19:17:35},{03/09/2024 19:17:35},{03/09/2024 19:17:35},{0},{0},{VENDA DE MERCADORIA ADQUIRIDA OU RECEBIDA DE TERCEIROS},{2},{05/02/2024 13:34:53 -03:00},{},{0},{0},{0},{},{0},{0},{},{0},{55},{1},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{},{},{0},{0},{},{},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{139},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{139},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{},{0},{0},{0},{0},{},{},{},{0},{},{0},{0},{},{},{},{},{},{},{},{},{},{},{},{},{},{0},{0},{0},{},{},{0},{0},{},{0},{0},{0},{0},{0},{0},{},{0},{0},{0},{0},{0},{0},{0},{},{},{0},{0},{},{},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{139},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{139},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{},{0},{0},{0},{0},{},{},{},{0},{},{0},{0},{},{},{},{},{},{},{},{},{},{},{},{0},{},{0},{},{},{},{},{0},{},{},{},{},{},{},{},{0},{},{},{0},{},{},{},{},{0},{0}' exception 'code = Constraint (19), message = System.Data.SQLite.SQLiteException (0x87AF202F): constraint failed
+NOT NULL constraint failed: tb_nfe.nf_nfeXmlEvtCancDist
+   em System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   em System.Data.SQLite.SQLiteDataReader.NextResult()
+   em System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   em System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   em System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   em System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   em DevExpress.Xpo.DB.ConnectionProviderSql.<>c__DisplayClass138_0.<InternalExecSql>b__0()
+   em DevExpress.Xpo.Logger.LogManager.Log[T](String category, LogHandler`1 handler, MessageHandler`1 createMessageHandler)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.InternalExecSql(IDbCommand command)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.ExecSql(Query query)'
+-------------------------------------------
+
+Data: 03/09/2024 20:44:35
+Mensagem: Erro ao cadastrar Nfe na entrada de XML: Executing Sql 'insert into [tb_nfe]([nf_nfeServico],[nf_dtCri],[nf_dtAlt],[nf_dtAcs],[nf_desat],[nf_prontoEnviar],[nf_nfeNatOp],[nf_nfeTipoAmb],[nf_nfeDtEmis],[nf_nfeDtAut],[nf_nfeCfop],[nf_nfeCst],[nf_nfeCsosn],[nf_nfeNumProtAut],[nf_nfeUf],[nf_nfeCod],[nf_nfeChave],[nf_nfeVersao],[nf_nfeMod],[nf_nSNfeTipoEmis],[nf_nfeTipo],[nf_nfeSit],[nf_nfeIdentLocDestOp],[nf_nfeCodMunFg],[nf_nfeTipoImpDanfe],[nf_nfeChaveDv],[nf_nfeTipoDfe],[nf_nfeFinEmis],[nf_nfeIndOpConsumFin],[nf_nfeIndPresCompEstMomOp],[nf_nfeXmlArqAutPath],[nf_nfeXmlAutBkp],[nf_nfeIndInterm],[nf_nfeProcEmis],[nf_nfeVerProcEmis],[nf_nfeInfoCompl],[nf_nfeBcIcms],[nf_nfeVlrTotIcms],[nf_nfeVlrIcmsDeson],[nf_nfeVlrTotIcmsFcp],[nf_nfeVlrTotIcmsInterUfDest],[nf_nfeVlrTotIcmsInterUfRem],[nf_nfeVlrTotFcp],[nf_nfeVlrBcIcmsSt],[nf_nfeVlrTotIcmsSt],[nf_nfeVlrTotFcpSt],[nf_nfeVlrTotFcpRetSt],[nf_nfeVlrTotProd],[nf_vlrTotPag],[nf_nfeVlrTotFrete],[nf_nfeVlrTotSeg],[nf_nfeVlrTotDesc],[nf_nfeVlrTotImpImp],[nf_nfeVlrTotIpi],[nf_nfeVlrTotIpiDevol],[nf_nfeVlrTotPis],[nf_nfeVlrTotCofins],[nf_nfeVlrTotOutro],[nf_nfeVlrTotNF],[nf_nfeVlrTotTrib],[nf_nfeModFrete],[nf_nfeCstat],[nf_nfeSerieProd],[nf_nfeSerieHom],[nf_nfeNumProd],[nf_nfeNumHom],[nf_nfeNum],[nf_nfeSerie],[nf_nfeSolTransm],[nf_nfeSolTransmDt],[nf_nfeTransmStatus],[nf_nfeXmlAutErro],[nf_nfeXmlCancErro],[nf_nfeEnvSfz],[nf_nfeTransmCorrigir],[nf_nfeTransmLog],[nf_nfeDhRecbto],[nf_nfeProcAutExHRes],[nf_nfeProcAutExMsg],[nf_nfeHaProtSfz],[nf_nfeRejSfz],[nf_nfeXmlEnv],[nf_nfeXmlCorrigir],[nf_nfeArqProcAutDist],[nf_nfeCamArqProcAutDist],[nf_nfeNomeArqProcAutDist],[nf_nfeXmlOrig],[nf_nfeXmlAss],[nf_nfeXmlRetWs],[nf_nfeXmlProcRes],[nf_nfeXmlProcAutDist],[nf_nfeXmlEvtCancDist],[nf_nfeDtEmis_ImpXml],[nf_nfeDtAut_ImpXml],[nf_nfeCfop_ImpXml],[nf_nfeCst_ImpXml],[nf_nfeCsosn_ImpXml],[nf_nfeNumProtAut_ImpXml],[nf_nfeUf_],[nf_nfeUf_ImpXml],[nf_nfeCod_ImpXml],[nf_nfeChave_ImpXml],[nf_nfeVersao_ImpXml],[nf_nfeMod_ImpXml],[nf_nfeTipoEmis_ImpXml],[nf_nfeTipo_ImpXml],[nf_nfeSit_ImpXml],[nf_nfeIdentLocDestOp_ImpXml],[nf_nfeCodMunFg_],[nf_nfeCodMunFg_ImpXml],[nf_nfeTipoImpDanfe_ImpXml],[nf_nfeChaveDv_ImpXml],[nf_nfeTipoDfe_ImpXml],[nf_nfeFinEmis_ImpXml],[nf_nfeIndOpConsumFin_ImpXml],[nf_nfeIndPresCompEstMomOp_ImpXml],[nf_nfeXmlArqAutPath_ImpXml],[nf_nfeXmlAutBkp_ImpXml],[nf_nfeIndInterm_ImpXml],[nf_nfeProcEmis_ImpXml],[nf_nfeVerProcEmis_ImpXml],[nf_nfeInfoCompl_ImpXml],[nf_nfeBcIcms_ImpXml],[nf_nfeVlrTotIcms_ImpXml],[nf_nfeVlrIcmsDeson_ImpXml],[nf_nfeVlrTotIcmsFcp_ImpXml],[nf_nfeVlrTotIcmsInterUfDest_ImpXml],[nf_nfeVlrTotIcmsInterUfRem_ImpXml],[nf_nfeVlrTotFcp_ImpXml],[nf_nfeVlrBcIcmsSt_ImpXml],[nf_nfeVlrTotIcmsSt_ImpXml],[nf_nfeVlrTotFcpSt_ImpXml],[nf_nfeVlrTotFcpRetSt_ImpXml],[nf_nfeVlrTotProd_ImpXml],[nf_vlrTotPag_ImpXml],[nf_nfeVlrTotFrete_ImpXml],[nf_nfeVlrTotSeg_ImpXml],[nf_nfeVlrTotDesc_ImpXml],[nf_nfeVlrTotImpImp_ImpXml],[nf_nfeVlrTotIpi_ImpXml],[nf_nfeVlrTotIpiDevol_ImpXml],[nf_nfeVlrTotPis_ImpXml],[nf_nfeVlrTotCofins_ImpXml],[nf_nfeVlrTotOutro_ImpXml],[nf_nfeVlrTotNF_ImpXml],[nf_nfeVlrTotTrib_ImpXml],[nf_nfeModFrete_ImpXml],[nf_nfeCstat_ImpXml],[nf_nfeSerieProd_ImpXml],[nf_nfeSerieHom_ImpXml],[nf_nfeNumProd_ImpXml],[nf_nfeNumHom_ImpXml],[nf_nfeNum_ImpXml],[nf_nfeSerie_ImpXml],[nf_nfeSolTransm_ImpXml],[nf_nfeSolTransmDt_ImpXml],[nf_nfeTransmStatus_ImpXml],[nf_nfeXmlAutErro_ImpXml],[nf_nfeXmlCancErro_ImpXml],[nf_nfeEnvSfz_ImpXml],[nf_nfeTransmCorrigir_ImpXml],[nf_nfeTransmLog_ImpXml],[nf_nfeDhRecbto_ImpXml],[nf_nfeProcAutExHRes_ImpXml],[nf_nfeProcAutExMsg_ImpXml],[nf_nfeHaProtSfz_ImpXml],[nf_nfeRejSfz_ImpXml],[nf_nfeXmlEnv_ImpXml],[nf_nfeXmlCorrigir_ImpXml],[nf_nfeArqProcAutDist_ImpXml],[nf_nfeCamArqProcAutDist_ImpXml],[nf_nfeNomeArqProcAutDist_ImpXml],[nf_nfeXmlOrig_ImpXml],[nf_nfeXmlAss_ImpXml],[nf_nfeXmlRetWs_ImpXml],[nf_nfeXmlProcRes_ImpXml],[nf_nfeXmlProcAutDist_ImpXml],[nf_nfeXmlEvtCancDist_ImpXml],[nf_nfeVlrTroco_ImpXml],[nf_nfe1DhRecbto],[nf_nfe1CStat],[nf_nfe1XMotivo],[nf_nfe1RetornoWSString],[nf_nfe1WSXMLInnerText],[nf_nfe1ConteudoXMLOriginalOuterXml],[nf_nfe1ResProtNFeInfProt0CStat],[nf_nfe1ResProtNFeInfProt0ChNFe],[nf_nfe1ResProtNFeInfProt0XMotivo],[nf_nfe1ResProtNFeInfProt0NProt],[nf_nfe1ResProtNFeInfProt0DhRecbto],[nf_nfe2ConteudoXMLOuterXml],[nf_nfe2RetornoWSString],[nf_nfe2RetornoWSXMLInnerText],[nf_nfe2ResCStat],[nf_nfe2ResDhRecbto],[nf_nfe2Renf_nRec],[nf_nfe2ResProtNFeInfProt0CStat],[nf_nfe2ResProtNFeInfProt0ChNFe],[nf_nfe2ResProtNFeInfProt0XMotivo],[nf_nfe2ResProtNFeInfProt0DhRecbto],[nf_nfeProcResultsXMLDist],[nf_nfeProdNumPulo],[fk_tb_movimentacao])values(@p0,@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11,@p12,@p13,@p14,@p15,@p16,@p17,@p18,@p19,@p20,@p21,@p22,@p23,@p24,@p25,@p26,@p27,@p28,@p29,@p30,@p31,@p32,@p33,@p34,@p35,@p36,@p37,@p38,@p39,@p40,@p41,@p42,@p43,@p44,@p45,@p46,@p47,@p48,@p49,@p50,@p51,@p52,@p53,@p54,@p55,@p56,@p57,@p58,@p59,@p60,@p61,@p62,@p63,@p64,@p65,@p66,@p67,@p68,@p69,@p70,@p71,@p72,@p73,@p74,@p75,@p76,@p77,@p78,@p79,@p80,@p81,@p82,@p83,@p84,@p85,@p86,@p87,@p88,@p89,@p90,@p91,@p92,@p93,@p94,@p95,@p96,@p97,@p98,@p99,@p100,@p101,@p102,@p103,@p104,@p105,@p106,@p107,@p108,@p109,@p110,@p111,@p112,@p113,@p114,@p115,@p116,@p117,@p118,@p119,@p120,@p121,@p122,@p123,@p124,@p125,@p126,@p127,@p128,@p129,@p130,@p131,@p132,@p133,@p134,@p135,@p136,@p137,@p138,@p139,@p140,@p141,@p142,@p143,@p144,@p145,@p146,@p147,@p148,@p149,@p150,@p151,@p152,@p153,@p154,@p155,@p156,@p157,@p158,@p159,@p160,@p161,@p162,@p163,@p164,@p165,@p166,@p167,@p168,@p169,@p170,@p171,@p172,@p173,@p174,@p175,@p176,@p177,@p178,@p179,@p180,@p181,@p182,@p183,@p184,@p185,@p186,@p187,@p188,@p189,@p190,@p191,@p192,@p193,@p194,@p195,@p196,@p197,@p198,@p199,@p200,@p201,@p202)' with parameters '{2},{03/09/2024 20:44:35},{03/09/2024 20:44:35},{03/09/2024 20:44:35},{0},{0},{VENDA DE MERCADORIA ADQUIRIDA OU RECEBIDA DE TERCEIROS},{2},{05/02/2024 13:34:53 -03:00},{},{0},{0},{0},{},{0},{0},{},{0},{55},{1},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{},{},{0},{0},{},{},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{139},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{139},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{},{0},{0},{0},{0},{},{},{},{0},{},{0},{0},{},{},{},{},{},{},{},{},{},{},{},{},{},{0},{0},{0},{},{},{0},{0},{},{0},{0},{0},{0},{0},{0},{},{0},{0},{0},{0},{0},{0},{0},{},{},{0},{0},{},{},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{139},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{139},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{},{0},{0},{0},{0},{},{},{},{0},{},{0},{0},{},{},{},{},{},{},{},{},{},{},{},{0},{},{0},{},{},{},{},{0},{},{},{},{},{},{},{},{0},{},{},{0},{},{},{},{},{0},{2}' exception 'code = Constraint (19), message = System.Data.SQLite.SQLiteException (0x87AF202F): constraint failed
+NOT NULL constraint failed: tb_nfe.nf_nfeXmlEvtCancDist
+   em System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   em System.Data.SQLite.SQLiteDataReader.NextResult()
+   em System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   em System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   em System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   em System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   em DevExpress.Xpo.DB.ConnectionProviderSql.<>c__DisplayClass138_0.<InternalExecSql>b__0()
+   em DevExpress.Xpo.Logger.LogManager.Log[T](String category, LogHandler`1 handler, MessageHandler`1 createMessageHandler)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.InternalExecSql(IDbCommand command)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.ExecSql(Query query)'
+-------------------------------------------
+
+Data: 03/09/2024 20:46:40
+Mensagem: Erro ao cadastrar Nfe na entrada de XML: Executing Sql 'insert into [tb_nfe]([nf_nfeServico],[nf_dtCri],[nf_dtAlt],[nf_dtAcs],[nf_desat],[nf_prontoEnviar],[nf_nfeNatOp],[nf_nfeTipoAmb],[nf_nfeDtEmis],[nf_nfeDtAut],[nf_nfeCfop],[nf_nfeCst],[nf_nfeCsosn],[nf_nfeNumProtAut],[nf_nfeUf],[nf_nfeCod],[nf_nfeChave],[nf_nfeVersao],[nf_nfeMod],[nf_nSNfeTipoEmis],[nf_nfeTipo],[nf_nfeSit],[nf_nfeIdentLocDestOp],[nf_nfeCodMunFg],[nf_nfeTipoImpDanfe],[nf_nfeChaveDv],[nf_nfeTipoDfe],[nf_nfeFinEmis],[nf_nfeIndOpConsumFin],[nf_nfeIndPresCompEstMomOp],[nf_nfeXmlArqAutPath],[nf_nfeXmlAutBkp],[nf_nfeIndInterm],[nf_nfeProcEmis],[nf_nfeVerProcEmis],[nf_nfeInfoCompl],[nf_nfeBcIcms],[nf_nfeVlrTotIcms],[nf_nfeVlrIcmsDeson],[nf_nfeVlrTotIcmsFcp],[nf_nfeVlrTotIcmsInterUfDest],[nf_nfeVlrTotIcmsInterUfRem],[nf_nfeVlrTotFcp],[nf_nfeVlrBcIcmsSt],[nf_nfeVlrTotIcmsSt],[nf_nfeVlrTotFcpSt],[nf_nfeVlrTotFcpRetSt],[nf_nfeVlrTotProd],[nf_vlrTotPag],[nf_nfeVlrTotFrete],[nf_nfeVlrTotSeg],[nf_nfeVlrTotDesc],[nf_nfeVlrTotImpImp],[nf_nfeVlrTotIpi],[nf_nfeVlrTotIpiDevol],[nf_nfeVlrTotPis],[nf_nfeVlrTotCofins],[nf_nfeVlrTotOutro],[nf_nfeVlrTotNF],[nf_nfeVlrTotTrib],[nf_nfeModFrete],[nf_nfeCstat],[nf_nfeSerieProd],[nf_nfeSerieHom],[nf_nfeNumProd],[nf_nfeNumHom],[nf_nfeNum],[nf_nfeSerie],[nf_nfeSolTransm],[nf_nfeSolTransmDt],[nf_nfeTransmStatus],[nf_nfeXmlAutErro],[nf_nfeXmlCancErro],[nf_nfeEnvSfz],[nf_nfeTransmCorrigir],[nf_nfeTransmLog],[nf_nfeDhRecbto],[nf_nfeProcAutExHRes],[nf_nfeProcAutExMsg],[nf_nfeHaProtSfz],[nf_nfeRejSfz],[nf_nfeXmlEnv],[nf_nfeXmlCorrigir],[nf_nfeArqProcAutDist],[nf_nfeCamArqProcAutDist],[nf_nfeNomeArqProcAutDist],[nf_nfeXmlOrig],[nf_nfeXmlAss],[nf_nfeXmlRetWs],[nf_nfeXmlProcRes],[nf_nfeXmlProcAutDist],[nf_nfeXmlEvtCancDist],[nf_nfeDtEmis_ImpXml],[nf_nfeDtAut_ImpXml],[nf_nfeCfop_ImpXml],[nf_nfeCst_ImpXml],[nf_nfeCsosn_ImpXml],[nf_nfeNumProtAut_ImpXml],[nf_nfeUf_],[nf_nfeUf_ImpXml],[nf_nfeCod_ImpXml],[nf_nfeChave_ImpXml],[nf_nfeVersao_ImpXml],[nf_nfeMod_ImpXml],[nf_nfeTipoEmis_ImpXml],[nf_nfeTipo_ImpXml],[nf_nfeSit_ImpXml],[nf_nfeIdentLocDestOp_ImpXml],[nf_nfeCodMunFg_],[nf_nfeCodMunFg_ImpXml],[nf_nfeTipoImpDanfe_ImpXml],[nf_nfeChaveDv_ImpXml],[nf_nfeTipoDfe_ImpXml],[nf_nfeFinEmis_ImpXml],[nf_nfeIndOpConsumFin_ImpXml],[nf_nfeIndPresCompEstMomOp_ImpXml],[nf_nfeXmlArqAutPath_ImpXml],[nf_nfeXmlAutBkp_ImpXml],[nf_nfeIndInterm_ImpXml],[nf_nfeProcEmis_ImpXml],[nf_nfeVerProcEmis_ImpXml],[nf_nfeInfoCompl_ImpXml],[nf_nfeBcIcms_ImpXml],[nf_nfeVlrTotIcms_ImpXml],[nf_nfeVlrIcmsDeson_ImpXml],[nf_nfeVlrTotIcmsFcp_ImpXml],[nf_nfeVlrTotIcmsInterUfDest_ImpXml],[nf_nfeVlrTotIcmsInterUfRem_ImpXml],[nf_nfeVlrTotFcp_ImpXml],[nf_nfeVlrBcIcmsSt_ImpXml],[nf_nfeVlrTotIcmsSt_ImpXml],[nf_nfeVlrTotFcpSt_ImpXml],[nf_nfeVlrTotFcpRetSt_ImpXml],[nf_nfeVlrTotProd_ImpXml],[nf_vlrTotPag_ImpXml],[nf_nfeVlrTotFrete_ImpXml],[nf_nfeVlrTotSeg_ImpXml],[nf_nfeVlrTotDesc_ImpXml],[nf_nfeVlrTotImpImp_ImpXml],[nf_nfeVlrTotIpi_ImpXml],[nf_nfeVlrTotIpiDevol_ImpXml],[nf_nfeVlrTotPis_ImpXml],[nf_nfeVlrTotCofins_ImpXml],[nf_nfeVlrTotOutro_ImpXml],[nf_nfeVlrTotNF_ImpXml],[nf_nfeVlrTotTrib_ImpXml],[nf_nfeModFrete_ImpXml],[nf_nfeCstat_ImpXml],[nf_nfeSerieProd_ImpXml],[nf_nfeSerieHom_ImpXml],[nf_nfeNumProd_ImpXml],[nf_nfeNumHom_ImpXml],[nf_nfeNum_ImpXml],[nf_nfeSerie_ImpXml],[nf_nfeSolTransm_ImpXml],[nf_nfeSolTransmDt_ImpXml],[nf_nfeTransmStatus_ImpXml],[nf_nfeXmlAutErro_ImpXml],[nf_nfeXmlCancErro_ImpXml],[nf_nfeEnvSfz_ImpXml],[nf_nfeTransmCorrigir_ImpXml],[nf_nfeTransmLog_ImpXml],[nf_nfeDhRecbto_ImpXml],[nf_nfeProcAutExHRes_ImpXml],[nf_nfeProcAutExMsg_ImpXml],[nf_nfeHaProtSfz_ImpXml],[nf_nfeRejSfz_ImpXml],[nf_nfeXmlEnv_ImpXml],[nf_nfeXmlCorrigir_ImpXml],[nf_nfeArqProcAutDist_ImpXml],[nf_nfeCamArqProcAutDist_ImpXml],[nf_nfeNomeArqProcAutDist_ImpXml],[nf_nfeXmlOrig_ImpXml],[nf_nfeXmlAss_ImpXml],[nf_nfeXmlRetWs_ImpXml],[nf_nfeXmlProcRes_ImpXml],[nf_nfeXmlProcAutDist_ImpXml],[nf_nfeXmlEvtCancDist_ImpXml],[nf_nfeVlrTroco_ImpXml],[nf_nfe1DhRecbto],[nf_nfe1CStat],[nf_nfe1XMotivo],[nf_nfe1RetornoWSString],[nf_nfe1WSXMLInnerText],[nf_nfe1ConteudoXMLOriginalOuterXml],[nf_nfe1ResProtNFeInfProt0CStat],[nf_nfe1ResProtNFeInfProt0ChNFe],[nf_nfe1ResProtNFeInfProt0XMotivo],[nf_nfe1ResProtNFeInfProt0NProt],[nf_nfe1ResProtNFeInfProt0DhRecbto],[nf_nfe2ConteudoXMLOuterXml],[nf_nfe2RetornoWSString],[nf_nfe2RetornoWSXMLInnerText],[nf_nfe2ResCStat],[nf_nfe2ResDhRecbto],[nf_nfe2Renf_nRec],[nf_nfe2ResProtNFeInfProt0CStat],[nf_nfe2ResProtNFeInfProt0ChNFe],[nf_nfe2ResProtNFeInfProt0XMotivo],[nf_nfe2ResProtNFeInfProt0DhRecbto],[nf_nfeProcResultsXMLDist],[nf_nfeProdNumPulo],[fk_tb_movimentacao])values(@p0,@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11,@p12,@p13,@p14,@p15,@p16,@p17,@p18,@p19,@p20,@p21,@p22,@p23,@p24,@p25,@p26,@p27,@p28,@p29,@p30,@p31,@p32,@p33,@p34,@p35,@p36,@p37,@p38,@p39,@p40,@p41,@p42,@p43,@p44,@p45,@p46,@p47,@p48,@p49,@p50,@p51,@p52,@p53,@p54,@p55,@p56,@p57,@p58,@p59,@p60,@p61,@p62,@p63,@p64,@p65,@p66,@p67,@p68,@p69,@p70,@p71,@p72,@p73,@p74,@p75,@p76,@p77,@p78,@p79,@p80,@p81,@p82,@p83,@p84,@p85,@p86,@p87,@p88,@p89,@p90,@p91,@p92,@p93,@p94,@p95,@p96,@p97,@p98,@p99,@p100,@p101,@p102,@p103,@p104,@p105,@p106,@p107,@p108,@p109,@p110,@p111,@p112,@p113,@p114,@p115,@p116,@p117,@p118,@p119,@p120,@p121,@p122,@p123,@p124,@p125,@p126,@p127,@p128,@p129,@p130,@p131,@p132,@p133,@p134,@p135,@p136,@p137,@p138,@p139,@p140,@p141,@p142,@p143,@p144,@p145,@p146,@p147,@p148,@p149,@p150,@p151,@p152,@p153,@p154,@p155,@p156,@p157,@p158,@p159,@p160,@p161,@p162,@p163,@p164,@p165,@p166,@p167,@p168,@p169,@p170,@p171,@p172,@p173,@p174,@p175,@p176,@p177,@p178,@p179,@p180,@p181,@p182,@p183,@p184,@p185,@p186,@p187,@p188,@p189,@p190,@p191,@p192,@p193,@p194,@p195,@p196,@p197,@p198,@p199,@p200,@p201,@p202)' with parameters '{2},{03/09/2024 20:45:00},{03/09/2024 20:45:00},{03/09/2024 20:45:00},{0},{0},{VENDA DE MERCADORIA ADQUIRIDA OU RECEBIDA DE TERCEIROS},{2},{05/02/2024 13:34:53 -03:00},{},{0},{0},{0},{},{0},{0},{},{0},{55},{1},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{},{},{0},{0},{},{},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{139},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{139},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{},{0},{0},{0},{0},{},{},{},{0},{},{0},{0},{},{},{},{},{},{},{},{},{},{},{},{},{},{0},{0},{0},{},{},{0},{0},{},{0},{0},{0},{0},{0},{0},{},{0},{0},{0},{0},{0},{0},{0},{},{},{0},{0},{},{},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{139},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{139},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{},{0},{0},{0},{0},{},{},{},{0},{},{0},{0},{},{},{},{},{},{},{},{},{},{},{},{0},{},{0},{},{},{},{},{0},{},{},{},{},{},{},{},{0},{},{},{0},{},{},{},{},{0},{3}' exception 'code = Constraint (19), message = System.Data.SQLite.SQLiteException (0x87AF202F): constraint failed
+NOT NULL constraint failed: tb_nfe.nf_nfeXmlEvtCancDist
+   em System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   em System.Data.SQLite.SQLiteDataReader.NextResult()
+   em System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   em System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   em System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   em System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   em DevExpress.Xpo.DB.ConnectionProviderSql.<>c__DisplayClass138_0.<InternalExecSql>b__0()
+   em DevExpress.Xpo.Logger.LogManager.Log[T](String category, LogHandler`1 handler, MessageHandler`1 createMessageHandler)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.InternalExecSql(IDbCommand command)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.ExecSql(Query query)'
+-------------------------------------------
+
+Data: 03/09/2024 20:51:30
+Mensagem: Erro ao cadastrar Nfe na entrada de XML: Executing Sql 'insert into [tb_nfe]([nf_nfeServico],[nf_dtCri],[nf_dtAlt],[nf_dtAcs],[nf_desat],[nf_prontoEnviar],[nf_nfeNatOp],[nf_nfeTipoAmb],[nf_nfeDtEmis],[nf_nfeDtAut],[nf_nfeCfop],[nf_nfeCst],[nf_nfeCsosn],[nf_nfeNumProtAut],[nf_nfeUf],[nf_nfeCod],[nf_nfeChave],[nf_nfeVersao],[nf_nfeMod],[nf_nSNfeTipoEmis],[nf_nfeTipo],[nf_nfeSit],[nf_nfeIdentLocDestOp],[nf_nfeCodMunFg],[nf_nfeTipoImpDanfe],[nf_nfeChaveDv],[nf_nfeTipoDfe],[nf_nfeFinEmis],[nf_nfeIndOpConsumFin],[nf_nfeIndPresCompEstMomOp],[nf_nfeXmlArqAutPath],[nf_nfeXmlAutBkp],[nf_nfeIndInterm],[nf_nfeProcEmis],[nf_nfeVerProcEmis],[nf_nfeInfoCompl],[nf_nfeBcIcms],[nf_nfeVlrTotIcms],[nf_nfeVlrIcmsDeson],[nf_nfeVlrTotIcmsFcp],[nf_nfeVlrTotIcmsInterUfDest],[nf_nfeVlrTotIcmsInterUfRem],[nf_nfeVlrTotFcp],[nf_nfeVlrBcIcmsSt],[nf_nfeVlrTotIcmsSt],[nf_nfeVlrTotFcpSt],[nf_nfeVlrTotFcpRetSt],[nf_nfeVlrTotProd],[nf_vlrTotPag],[nf_nfeVlrTotFrete],[nf_nfeVlrTotSeg],[nf_nfeVlrTotDesc],[nf_nfeVlrTotImpImp],[nf_nfeVlrTotIpi],[nf_nfeVlrTotIpiDevol],[nf_nfeVlrTotPis],[nf_nfeVlrTotCofins],[nf_nfeVlrTotOutro],[nf_nfeVlrTotNF],[nf_nfeVlrTotTrib],[nf_nfeModFrete],[nf_nfeCstat],[nf_nfeSerieProd],[nf_nfeSerieHom],[nf_nfeNumProd],[nf_nfeNumHom],[nf_nfeNum],[nf_nfeSerie],[nf_nfeSolTransm],[nf_nfeSolTransmDt],[nf_nfeTransmStatus],[nf_nfeXmlAutErro],[nf_nfeXmlCancErro],[nf_nfeEnvSfz],[nf_nfeTransmCorrigir],[nf_nfeTransmLog],[nf_nfeDhRecbto],[nf_nfeProcAutExHRes],[nf_nfeProcAutExMsg],[nf_nfeHaProtSfz],[nf_nfeRejSfz],[nf_nfeXmlEnv],[nf_nfeXmlCorrigir],[nf_nfeArqProcAutDist],[nf_nfeCamArqProcAutDist],[nf_nfeNomeArqProcAutDist],[nf_nfeXmlOrig],[nf_nfeXmlAss],[nf_nfeXmlRetWs],[nf_nfeXmlProcRes],[nf_nfeXmlProcAutDist],[nf_nfeXmlEvtCancDist],[nf_nfeDtEmis_ImpXml],[nf_nfeDtAut_ImpXml],[nf_nfeCfop_ImpXml],[nf_nfeCst_ImpXml],[nf_nfeCsosn_ImpXml],[nf_nfeNumProtAut_ImpXml],[nf_nfeUf_],[nf_nfeUf_ImpXml],[nf_nfeCod_ImpXml],[nf_nfeChave_ImpXml],[nf_nfeVersao_ImpXml],[nf_nfeMod_ImpXml],[nf_nfeTipoEmis_ImpXml],[nf_nfeTipo_ImpXml],[nf_nfeSit_ImpXml],[nf_nfeIdentLocDestOp_ImpXml],[nf_nfeCodMunFg_],[nf_nfeCodMunFg_ImpXml],[nf_nfeTipoImpDanfe_ImpXml],[nf_nfeChaveDv_ImpXml],[nf_nfeTipoDfe_ImpXml],[nf_nfeFinEmis_ImpXml],[nf_nfeIndOpConsumFin_ImpXml],[nf_nfeIndPresCompEstMomOp_ImpXml],[nf_nfeXmlArqAutPath_ImpXml],[nf_nfeXmlAutBkp_ImpXml],[nf_nfeIndInterm_ImpXml],[nf_nfeProcEmis_ImpXml],[nf_nfeVerProcEmis_ImpXml],[nf_nfeInfoCompl_ImpXml],[nf_nfeBcIcms_ImpXml],[nf_nfeVlrTotIcms_ImpXml],[nf_nfeVlrIcmsDeson_ImpXml],[nf_nfeVlrTotIcmsFcp_ImpXml],[nf_nfeVlrTotIcmsInterUfDest_ImpXml],[nf_nfeVlrTotIcmsInterUfRem_ImpXml],[nf_nfeVlrTotFcp_ImpXml],[nf_nfeVlrBcIcmsSt_ImpXml],[nf_nfeVlrTotIcmsSt_ImpXml],[nf_nfeVlrTotFcpSt_ImpXml],[nf_nfeVlrTotFcpRetSt_ImpXml],[nf_nfeVlrTotProd_ImpXml],[nf_vlrTotPag_ImpXml],[nf_nfeVlrTotFrete_ImpXml],[nf_nfeVlrTotSeg_ImpXml],[nf_nfeVlrTotDesc_ImpXml],[nf_nfeVlrTotImpImp_ImpXml],[nf_nfeVlrTotIpi_ImpXml],[nf_nfeVlrTotIpiDevol_ImpXml],[nf_nfeVlrTotPis_ImpXml],[nf_nfeVlrTotCofins_ImpXml],[nf_nfeVlrTotOutro_ImpXml],[nf_nfeVlrTotNF_ImpXml],[nf_nfeVlrTotTrib_ImpXml],[nf_nfeModFrete_ImpXml],[nf_nfeCstat_ImpXml],[nf_nfeSerieProd_ImpXml],[nf_nfeSerieHom_ImpXml],[nf_nfeNumProd_ImpXml],[nf_nfeNumHom_ImpXml],[nf_nfeNum_ImpXml],[nf_nfeSerie_ImpXml],[nf_nfeSolTransm_ImpXml],[nf_nfeSolTransmDt_ImpXml],[nf_nfeTransmStatus_ImpXml],[nf_nfeXmlAutErro_ImpXml],[nf_nfeXmlCancErro_ImpXml],[nf_nfeEnvSfz_ImpXml],[nf_nfeTransmCorrigir_ImpXml],[nf_nfeTransmLog_ImpXml],[nf_nfeDhRecbto_ImpXml],[nf_nfeProcAutExHRes_ImpXml],[nf_nfeProcAutExMsg_ImpXml],[nf_nfeHaProtSfz_ImpXml],[nf_nfeRejSfz_ImpXml],[nf_nfeXmlEnv_ImpXml],[nf_nfeXmlCorrigir_ImpXml],[nf_nfeArqProcAutDist_ImpXml],[nf_nfeCamArqProcAutDist_ImpXml],[nf_nfeNomeArqProcAutDist_ImpXml],[nf_nfeXmlOrig_ImpXml],[nf_nfeXmlAss_ImpXml],[nf_nfeXmlRetWs_ImpXml],[nf_nfeXmlProcRes_ImpXml],[nf_nfeXmlProcAutDist_ImpXml],[nf_nfeXmlEvtCancDist_ImpXml],[nf_nfeVlrTroco_ImpXml],[nf_nfe1DhRecbto],[nf_nfe1CStat],[nf_nfe1XMotivo],[nf_nfe1RetornoWSString],[nf_nfe1WSXMLInnerText],[nf_nfe1ConteudoXMLOriginalOuterXml],[nf_nfe1ResProtNFeInfProt0CStat],[nf_nfe1ResProtNFeInfProt0ChNFe],[nf_nfe1ResProtNFeInfProt0XMotivo],[nf_nfe1ResProtNFeInfProt0NProt],[nf_nfe1ResProtNFeInfProt0DhRecbto],[nf_nfe2ConteudoXMLOuterXml],[nf_nfe2RetornoWSString],[nf_nfe2RetornoWSXMLInnerText],[nf_nfe2ResCStat],[nf_nfe2ResDhRecbto],[nf_nfe2Renf_nRec],[nf_nfe2ResProtNFeInfProt0CStat],[nf_nfe2ResProtNFeInfProt0ChNFe],[nf_nfe2ResProtNFeInfProt0XMotivo],[nf_nfe2ResProtNFeInfProt0DhRecbto],[nf_nfeProcResultsXMLDist],[nf_nfeProdNumPulo],[fk_tb_movimentacao])values(@p0,@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11,@p12,@p13,@p14,@p15,@p16,@p17,@p18,@p19,@p20,@p21,@p22,@p23,@p24,@p25,@p26,@p27,@p28,@p29,@p30,@p31,@p32,@p33,@p34,@p35,@p36,@p37,@p38,@p39,@p40,@p41,@p42,@p43,@p44,@p45,@p46,@p47,@p48,@p49,@p50,@p51,@p52,@p53,@p54,@p55,@p56,@p57,@p58,@p59,@p60,@p61,@p62,@p63,@p64,@p65,@p66,@p67,@p68,@p69,@p70,@p71,@p72,@p73,@p74,@p75,@p76,@p77,@p78,@p79,@p80,@p81,@p82,@p83,@p84,@p85,@p86,@p87,@p88,@p89,@p90,@p91,@p92,@p93,@p94,@p95,@p96,@p97,@p98,@p99,@p100,@p101,@p102,@p103,@p104,@p105,@p106,@p107,@p108,@p109,@p110,@p111,@p112,@p113,@p114,@p115,@p116,@p117,@p118,@p119,@p120,@p121,@p122,@p123,@p124,@p125,@p126,@p127,@p128,@p129,@p130,@p131,@p132,@p133,@p134,@p135,@p136,@p137,@p138,@p139,@p140,@p141,@p142,@p143,@p144,@p145,@p146,@p147,@p148,@p149,@p150,@p151,@p152,@p153,@p154,@p155,@p156,@p157,@p158,@p159,@p160,@p161,@p162,@p163,@p164,@p165,@p166,@p167,@p168,@p169,@p170,@p171,@p172,@p173,@p174,@p175,@p176,@p177,@p178,@p179,@p180,@p181,@p182,@p183,@p184,@p185,@p186,@p187,@p188,@p189,@p190,@p191,@p192,@p193,@p194,@p195,@p196,@p197,@p198,@p199,@p200,@p201,@p202)' with parameters '{2},{03/09/2024 20:51:30},{03/09/2024 20:51:30},{03/09/2024 20:51:30},{0},{0},{VENDA DE MERCADORIA ADQUIRIDA OU RECEBIDA DE TERCEIROS},{2},{05/02/2024 13:34:53 -03:00},{},{0},{0},{0},{},{0},{0},{},{0},{55},{1},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{},{},{0},{0},{},{},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{139},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{139},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{},{0},{0},{0},{0},{},{},{},{0},{},{0},{0},{},{},{},{},{},{},{},{},{},{},{},{},{},{0},{0},{0},{},{},{0},{0},{},{0},{0},{0},{0},{0},{0},{},{0},{0},{0},{0},{0},{0},{0},{},{},{0},{0},{},{},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{139},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{139},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{},{0},{0},{0},{0},{},{},{},{0},{},{0},{0},{},{},{},{},{},{},{},{},{},{},{},{0},{},{0},{},{},{},{},{0},{},{},{},{},{},{},{},{0},{},{},{0},{},{},{},{},{0},{}' exception 'code = Constraint (19), message = System.Data.SQLite.SQLiteException (0x87AF202F): constraint failed
+NOT NULL constraint failed: tb_nfe.nf_nfeXmlEvtCancDist
+   em System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   em System.Data.SQLite.SQLiteDataReader.NextResult()
+   em System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   em System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   em System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   em System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   em DevExpress.Xpo.DB.ConnectionProviderSql.<>c__DisplayClass138_0.<InternalExecSql>b__0()
+   em DevExpress.Xpo.Logger.LogManager.Log[T](String category, LogHandler`1 handler, MessageHandler`1 createMessageHandler)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.InternalExecSql(IDbCommand command)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.ExecSql(Query query)'
+-------------------------------------------
+
+Data: 14/09/2024 22:13:30
+Mensagem: Erro ao alterar cadastro produto: Executing Sql 'select N0.[id_subcategoria_produto],N0.[scp_nfePisCofinsReg],N0.[scp_dtCri],N0.[scp_dtAlt],N0.[scp_dtAcs],N0.[scp_desc],N0.[scp_desat],N0.[scp_ncmNum],N0.[scp_nfeCsosn],N0.[scp_descMax],N0.[fk_tb_categoria_produto],N0.[fk_tb_Ncm] from [tb_subcategoria_produto] N0
+where (N0.[id_subcategoria_produto] = @p0)' with parameters '{6}' exception 'System.FormatException: Cadeia de caracteres não foi reconhecida como DateTime válido.
+   em System.DateTimeParse.ParseExactMultiple(String s, String[] formats, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   em System.DateTime.ParseExact(String s, String[] formats, IFormatProvider provider, DateTimeStyles style)
+   em System.Data.SQLite.SQLiteConvert.ToDateTime(String dateText, SQLiteDateFormats format, DateTimeKind kind, String formatString)
+   em System.Data.SQLite.SQLite3.GetDateTime(SQLiteStatement stmt, Int32 index)
+   em System.Data.SQLite.SQLite3.GetValue(SQLiteStatement stmt, SQLiteConnectionFlags flags, Int32 index, SQLiteType typ)
+   em System.Data.SQLite.SQLiteDataReader.GetValue(Int32 i)
+   em System.Data.SQLite.SQLiteDataReader.GetValues(Object[] values)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.GetValues(IDataReader reader, Type[] fieldTypes, Object[] values)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.<>c__DisplayClass147_0.<InternalGetData>b__0()
+   em DevExpress.Xpo.Logger.LogManager.Log[T](String category, LogHandler`1 handler, MessageHandler`1 createMessageHandler)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.InternalGetData(IDbCommand command, CriteriaOperatorCollection targets, Int32 skipClause, Int32 topClause, Boolean includeMetadata)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.SelectDataSimple(Query query, CriteriaOperatorCollection targets, Boolean includeMetadata)'
+-------------------------------------------
+
+Data: 14/09/2024 22:13:51
+Mensagem: Erro ao alterar cadastro produto filial: Executing Sql 'select N0.[id_produto_filial],N0.[pf_codRef],N0.[pf_desc],N0.[pf_descCurta],N0.[pf_proTipo],N0.[pf_unMedCom],N0.[pf_dtCri],N0.[pf_dtAlt],N0.[pf_dtAcs],N0.[pf_atorFil],N0.[pf_vlrUnCom],N0.[pf_cstUnCom],N0.[pf_estMin],N0.[pf_est],N0.[pf_desat],N0.[pf_canc],N0.[fk_tb_produto],N0.[fk_tb_ator] from [tb_produto_filial] N0
+where (N0.[id_produto_filial] = @p0)' with parameters '{26}' exception 'System.FormatException: Cadeia de caracteres não foi reconhecida como DateTime válido.
+   em System.DateTimeParse.ParseExactMultiple(String s, String[] formats, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   em System.DateTime.ParseExact(String s, String[] formats, IFormatProvider provider, DateTimeStyles style)
+   em System.Data.SQLite.SQLiteConvert.ToDateTime(String dateText, SQLiteDateFormats format, DateTimeKind kind, String formatString)
+   em System.Data.SQLite.SQLite3.GetDateTime(SQLiteStatement stmt, Int32 index)
+   em System.Data.SQLite.SQLite3.GetValue(SQLiteStatement stmt, SQLiteConnectionFlags flags, Int32 index, SQLiteType typ)
+   em System.Data.SQLite.SQLiteDataReader.GetValue(Int32 i)
+   em System.Data.SQLite.SQLiteDataReader.GetValues(Object[] values)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.GetValues(IDataReader reader, Type[] fieldTypes, Object[] values)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.<>c__DisplayClass147_0.<InternalGetData>b__0()
+   em DevExpress.Xpo.Logger.LogManager.Log[T](String category, LogHandler`1 handler, MessageHandler`1 createMessageHandler)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.InternalGetData(IDbCommand command, CriteriaOperatorCollection targets, Int32 skipClause, Int32 topClause, Boolean includeMetadata)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.SelectDataSimple(Query query, CriteriaOperatorCollection targets, Boolean includeMetadata)'
+-------------------------------------------
+
+Data: 14/09/2024 22:14:20
+Mensagem: Erro ao cadastrar marca: Executing Sql 'insert into [tb_marca_produto]([id_marca_produto],[mp_dtCri],[mp_dtAlt],[mp_dtAcs],[mp_desat],[mp_desc],[fk_tb_rede])values(@p0,@p1,@p2,@p3,@p4,@p5,@p6)' with parameters '{0},{14/09/2024 22:14:20},{14/09/2024 22:14:20},{},{0},{},{}' exception 'code = Constraint (19), message = System.Data.SQLite.SQLiteException (0x87AF202F): constraint failed
+UNIQUE constraint failed: tb_marca_produto.id_marca_produto
+   em System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   em System.Data.SQLite.SQLiteDataReader.NextResult()
+   em System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   em System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   em System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   em System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   em DevExpress.Xpo.DB.ConnectionProviderSql.<>c__DisplayClass138_0.<InternalExecSql>b__0()
+   em DevExpress.Xpo.Logger.LogManager.Log[T](String category, LogHandler`1 handler, MessageHandler`1 createMessageHandler)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.InternalExecSql(IDbCommand command)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.ExecSql(Query query)'
+-------------------------------------------
+
+Data: 14/09/2024 22:14:21
+Mensagem: Erro ao alterar cadastro produto: Executing Sql 'select N0.[id_subcategoria_produto],N0.[scp_nfePisCofinsReg],N0.[scp_dtCri],N0.[scp_dtAlt],N0.[scp_dtAcs],N0.[scp_desc],N0.[scp_desat],N0.[scp_ncmNum],N0.[scp_nfeCsosn],N0.[scp_descMax],N0.[fk_tb_categoria_produto],N0.[fk_tb_Ncm] from [tb_subcategoria_produto] N0
+where (N0.[id_subcategoria_produto] = @p0)' with parameters '{6}' exception 'System.FormatException: Cadeia de caracteres não foi reconhecida como DateTime válido.
+   em System.DateTimeParse.ParseExactMultiple(String s, String[] formats, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   em System.DateTime.ParseExact(String s, String[] formats, IFormatProvider provider, DateTimeStyles style)
+   em System.Data.SQLite.SQLiteConvert.ToDateTime(String dateText, SQLiteDateFormats format, DateTimeKind kind, String formatString)
+   em System.Data.SQLite.SQLite3.GetDateTime(SQLiteStatement stmt, Int32 index)
+   em System.Data.SQLite.SQLite3.GetValue(SQLiteStatement stmt, SQLiteConnectionFlags flags, Int32 index, SQLiteType typ)
+   em System.Data.SQLite.SQLiteDataReader.GetValue(Int32 i)
+   em System.Data.SQLite.SQLiteDataReader.GetValues(Object[] values)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.GetValues(IDataReader reader, Type[] fieldTypes, Object[] values)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.<>c__DisplayClass147_0.<InternalGetData>b__0()
+   em DevExpress.Xpo.Logger.LogManager.Log[T](String category, LogHandler`1 handler, MessageHandler`1 createMessageHandler)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.InternalGetData(IDbCommand command, CriteriaOperatorCollection targets, Int32 skipClause, Int32 topClause, Boolean includeMetadata)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.SelectDataSimple(Query query, CriteriaOperatorCollection targets, Boolean includeMetadata)'
+-------------------------------------------
+
+Data: 14/09/2024 22:14:23
+Mensagem: Erro ao alterar cadastro produto filial: Executing Sql 'select N0.[id_produto_filial],N0.[pf_codRef],N0.[pf_desc],N0.[pf_descCurta],N0.[pf_proTipo],N0.[pf_unMedCom],N0.[pf_dtCri],N0.[pf_dtAlt],N0.[pf_dtAcs],N0.[pf_atorFil],N0.[pf_vlrUnCom],N0.[pf_cstUnCom],N0.[pf_estMin],N0.[pf_est],N0.[pf_desat],N0.[pf_canc],N0.[fk_tb_produto],N0.[fk_tb_ator] from [tb_produto_filial] N0
+where (N0.[id_produto_filial] = @p0)' with parameters '{26}' exception 'System.FormatException: Cadeia de caracteres não foi reconhecida como DateTime válido.
+   em System.DateTimeParse.ParseExactMultiple(String s, String[] formats, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   em System.DateTime.ParseExact(String s, String[] formats, IFormatProvider provider, DateTimeStyles style)
+   em System.Data.SQLite.SQLiteConvert.ToDateTime(String dateText, SQLiteDateFormats format, DateTimeKind kind, String formatString)
+   em System.Data.SQLite.SQLite3.GetDateTime(SQLiteStatement stmt, Int32 index)
+   em System.Data.SQLite.SQLite3.GetValue(SQLiteStatement stmt, SQLiteConnectionFlags flags, Int32 index, SQLiteType typ)
+   em System.Data.SQLite.SQLiteDataReader.GetValue(Int32 i)
+   em System.Data.SQLite.SQLiteDataReader.GetValues(Object[] values)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.GetValues(IDataReader reader, Type[] fieldTypes, Object[] values)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.<>c__DisplayClass147_0.<InternalGetData>b__0()
+   em DevExpress.Xpo.Logger.LogManager.Log[T](String category, LogHandler`1 handler, MessageHandler`1 createMessageHandler)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.InternalGetData(IDbCommand command, CriteriaOperatorCollection targets, Int32 skipClause, Int32 topClause, Boolean includeMetadata)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.SelectDataSimple(Query query, CriteriaOperatorCollection targets, Boolean includeMetadata)'
+-------------------------------------------
+
+Data: 14/09/2024 22:23:54
+Mensagem: Erro ao alterar cadastro produto: Executing Sql 'select N0.[id_subcategoria_produto],N0.[scp_nfePisCofinsReg],N0.[scp_dtCri],N0.[scp_dtAlt],N0.[scp_dtAcs],N0.[scp_desc],N0.[scp_desat],N0.[scp_ncmNum],N0.[scp_nfeCsosn],N0.[scp_descMax],N0.[fk_tb_categoria_produto],N0.[fk_tb_Ncm] from [tb_subcategoria_produto] N0
+where (N0.[id_subcategoria_produto] = @p0)' with parameters '{6}' exception 'System.FormatException: Cadeia de caracteres não foi reconhecida como DateTime válido.
+   em System.DateTimeParse.ParseExactMultiple(String s, String[] formats, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   em System.DateTime.ParseExact(String s, String[] formats, IFormatProvider provider, DateTimeStyles style)
+   em System.Data.SQLite.SQLiteConvert.ToDateTime(String dateText, SQLiteDateFormats format, DateTimeKind kind, String formatString)
+   em System.Data.SQLite.SQLite3.GetDateTime(SQLiteStatement stmt, Int32 index)
+   em System.Data.SQLite.SQLite3.GetValue(SQLiteStatement stmt, SQLiteConnectionFlags flags, Int32 index, SQLiteType typ)
+   em System.Data.SQLite.SQLiteDataReader.GetValue(Int32 i)
+   em System.Data.SQLite.SQLiteDataReader.GetValues(Object[] values)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.GetValues(IDataReader reader, Type[] fieldTypes, Object[] values)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.<>c__DisplayClass147_0.<InternalGetData>b__0()
+   em DevExpress.Xpo.Logger.LogManager.Log[T](String category, LogHandler`1 handler, MessageHandler`1 createMessageHandler)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.InternalGetData(IDbCommand command, CriteriaOperatorCollection targets, Int32 skipClause, Int32 topClause, Boolean includeMetadata)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.SelectDataSimple(Query query, CriteriaOperatorCollection targets, Boolean includeMetadata)'
+-------------------------------------------
+
+Data: 14/09/2024 22:24:14
+Mensagem: Erro ao alterar cadastro produto filial: Executing Sql 'select N0.[id_produto_filial],N0.[pf_codRef],N0.[pf_desc],N0.[pf_descCurta],N0.[pf_proTipo],N0.[pf_unMedCom],N0.[pf_dtCri],N0.[pf_dtAlt],N0.[pf_dtAcs],N0.[pf_atorFil],N0.[pf_vlrUnCom],N0.[pf_cstUnCom],N0.[pf_estMin],N0.[pf_est],N0.[pf_desat],N0.[pf_canc],N0.[fk_tb_produto],N0.[fk_tb_ator] from [tb_produto_filial] N0
+where (N0.[id_produto_filial] = @p0)' with parameters '{26}' exception 'System.FormatException: Cadeia de caracteres não foi reconhecida como DateTime válido.
+   em System.DateTimeParse.ParseExactMultiple(String s, String[] formats, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   em System.DateTime.ParseExact(String s, String[] formats, IFormatProvider provider, DateTimeStyles style)
+   em System.Data.SQLite.SQLiteConvert.ToDateTime(String dateText, SQLiteDateFormats format, DateTimeKind kind, String formatString)
+   em System.Data.SQLite.SQLite3.GetDateTime(SQLiteStatement stmt, Int32 index)
+   em System.Data.SQLite.SQLite3.GetValue(SQLiteStatement stmt, SQLiteConnectionFlags flags, Int32 index, SQLiteType typ)
+   em System.Data.SQLite.SQLiteDataReader.GetValue(Int32 i)
+   em System.Data.SQLite.SQLiteDataReader.GetValues(Object[] values)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.GetValues(IDataReader reader, Type[] fieldTypes, Object[] values)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.<>c__DisplayClass147_0.<InternalGetData>b__0()
+   em DevExpress.Xpo.Logger.LogManager.Log[T](String category, LogHandler`1 handler, MessageHandler`1 createMessageHandler)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.InternalGetData(IDbCommand command, CriteriaOperatorCollection targets, Int32 skipClause, Int32 topClause, Boolean includeMetadata)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.SelectDataSimple(Query query, CriteriaOperatorCollection targets, Boolean includeMetadata)'
+-------------------------------------------
+
+Data: 14/09/2024 22:37:46
+Mensagem: Erro ao alterar cadastro produto: Requested objects cannot be loaded, because they are absent in the data store. These objects can  already be deleted/purged. If you see this exception once again with the same objects in the list, note that the referential integrity of your data store may be broken. In this instance, contact your system administrator. Requested objects: DXApplicationERP.bancoSQLite.tb_categoria_produto(0).
+-------------------------------------------
+
+Data: 14/09/2024 22:37:52
+Mensagem: Erro ao alterar cadastro produto filial: Executing Sql 'select N0.[id_produto_filial],N0.[pf_codRef],N0.[pf_desc],N0.[pf_descCurta],N0.[pf_proTipo],N0.[pf_unMedCom],N0.[pf_dtCri],N0.[pf_dtAlt],N0.[pf_dtAcs],N0.[pf_atorFil],N0.[pf_vlrUnCom],N0.[pf_cstUnCom],N0.[pf_estMin],N0.[pf_est],N0.[pf_desat],N0.[pf_canc],N0.[fk_tb_produto],N0.[fk_tb_ator] from [tb_produto_filial] N0
+where (N0.[id_produto_filial] = @p0)' with parameters '{26}' exception 'System.FormatException: Cadeia de caracteres não foi reconhecida como DateTime válido.
+   em System.DateTimeParse.ParseExactMultiple(String s, String[] formats, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   em System.DateTime.ParseExact(String s, String[] formats, IFormatProvider provider, DateTimeStyles style)
+   em System.Data.SQLite.SQLiteConvert.ToDateTime(String dateText, SQLiteDateFormats format, DateTimeKind kind, String formatString)
+   em System.Data.SQLite.SQLite3.GetDateTime(SQLiteStatement stmt, Int32 index)
+   em System.Data.SQLite.SQLite3.GetValue(SQLiteStatement stmt, SQLiteConnectionFlags flags, Int32 index, SQLiteType typ)
+   em System.Data.SQLite.SQLiteDataReader.GetValue(Int32 i)
+   em System.Data.SQLite.SQLiteDataReader.GetValues(Object[] values)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.GetValues(IDataReader reader, Type[] fieldTypes, Object[] values)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.<>c__DisplayClass147_0.<InternalGetData>b__0()
+   em DevExpress.Xpo.Logger.LogManager.Log[T](String category, LogHandler`1 handler, MessageHandler`1 createMessageHandler)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.InternalGetData(IDbCommand command, CriteriaOperatorCollection targets, Int32 skipClause, Int32 topClause, Boolean includeMetadata)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.SelectDataSimple(Query query, CriteriaOperatorCollection targets, Boolean includeMetadata)'
+-------------------------------------------
+
+Data: 14/09/2024 22:54:36
+Mensagem: Erro ao alterar cadastro produto: Requested objects cannot be loaded, because they are absent in the data store. These objects can  already be deleted/purged. If you see this exception once again with the same objects in the list, note that the referential integrity of your data store may be broken. In this instance, contact your system administrator. Requested objects: DXApplicationERP.bancoSQLite.tb_categoria_produto(90).
+-------------------------------------------
+
+Data: 14/09/2024 22:56:52
+Mensagem: Erro ao preencher subcategoria: Requested objects cannot be loaded, because they are absent in the data store. These objects can  already be deleted/purged. If you see this exception once again with the same objects in the list, note that the referential integrity of your data store may be broken. In this instance, contact your system administrator. Requested objects: DXApplicationERP.bancoSQLite.tb_categoria_produto(0), DXApplicationERP.bancoSQLite.tb_categoria_produto(90), DXApplicationERP.bancoSQLite.tb_categoria_produto(83), DXApplicationERP.bancoSQLite.tb_categoria_produto(2868), DXApplicationERP.bancoSQLite.tb_categoria_produto(311).
+-------------------------------------------
+
+Data: 14/09/2024 23:03:09
+Mensagem: Erro ao preencher subcategoria: Requested objects cannot be loaded, because they are absent in the data store. These objects can  already be deleted/purged. If you see this exception once again with the same objects in the list, note that the referential integrity of your data store may be broken. In this instance, contact your system administrator. Requested objects: DXApplicationERP.bancoSQLite.tb_categoria_produto(0), DXApplicationERP.bancoSQLite.tb_categoria_produto(90), DXApplicationERP.bancoSQLite.tb_categoria_produto(83), DXApplicationERP.bancoSQLite.tb_categoria_produto(2868), DXApplicationERP.bancoSQLite.tb_categoria_produto(311).
+-------------------------------------------
+
+Data: 15/09/2024 12:20:35
+Mensagem: Erro ao alterar cadastro produto: Executing Sql 'select N0.[id_produto],N0.[pd_dtCri],N0.[pd_dtAlt],N0.[pd_desat],N0.[pd_genero],N0.[pd_unMedCom],N0.[pd_codRef],N0.[pd_codRefStr],N0.[pd_barras],N0.[pd_impRef],N0.[pd_proTipo],N0.[pd_especie],N0.[pd_estTot],N0.[pd_invend],N0.[pd_descCurta],N0.[pd_desc],N0.[pd_fxEta],N0.[pd_vlrUnComBase],N0.[pd_cstUnComBase],N0.[pd_estMinBase],N0.[pd_estMaxBase],N0.[pd_nfeProdOrigem],N0.[pd_nfeCsosn],N0.[pd_vend],N0.[pd_tmpStr],N0.[pd_ativo],N0.[fk_tb_est],N0.[fk_tb_rede],N0.[fk_tb_ncm],N0.[fk_tb_ator],N0.[fk_tb_relacao_produto_cadastro_XML],N0.[fk_tb_marca_produto],N0.[fk_tb_subcategoria_produto],N0.[fk_tb_categoria_produto] from [tb_produto] N0
+where (N0.[id_produto] = @p0)' with parameters '{26}' exception 'System.FormatException: Cadeia de caracteres não foi reconhecida como DateTime válido.
+   em System.DateTimeParse.ParseExactMultiple(String s, String[] formats, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   em System.DateTime.ParseExact(String s, String[] formats, IFormatProvider provider, DateTimeStyles style)
+   em System.Data.SQLite.SQLiteConvert.ToDateTime(String dateText, SQLiteDateFormats format, DateTimeKind kind, String formatString)
+   em System.Data.SQLite.SQLite3.GetDateTime(SQLiteStatement stmt, Int32 index)
+   em System.Data.SQLite.SQLite3.GetValue(SQLiteStatement stmt, SQLiteConnectionFlags flags, Int32 index, SQLiteType typ)
+   em System.Data.SQLite.SQLiteDataReader.GetValue(Int32 i)
+   em System.Data.SQLite.SQLiteDataReader.GetValues(Object[] values)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.GetValues(IDataReader reader, Type[] fieldTypes, Object[] values)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.<>c__DisplayClass147_0.<InternalGetData>b__0()
+   em DevExpress.Xpo.Logger.LogManager.Log[T](String category, LogHandler`1 handler, MessageHandler`1 createMessageHandler)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.InternalGetData(IDbCommand command, CriteriaOperatorCollection targets, Int32 skipClause, Int32 topClause, Boolean includeMetadata)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.SelectDataSimple(Query query, CriteriaOperatorCollection targets, Boolean includeMetadata)'
+-------------------------------------------
+
+Data: 15/09/2024 12:20:41
+Mensagem: Erro ao alterar cadastro produto filial: Executing Sql 'select N0.[id_produto_filial],N0.[pf_codRef],N0.[pf_desc],N0.[pf_descCurta],N0.[pf_proTipo],N0.[pf_unMedCom],N0.[pf_dtCri],N0.[pf_dtAlt],N0.[pf_dtAcs],N0.[pf_atorFil],N0.[pf_vlrUnCom],N0.[pf_cstUnCom],N0.[pf_estMin],N0.[pf_est],N0.[pf_desat],N0.[pf_canc],N0.[fk_tb_produto],N0.[fk_tb_ator] from [tb_produto_filial] N0
+where (N0.[id_produto_filial] = @p0)' with parameters '{26}' exception 'System.FormatException: Cadeia de caracteres não foi reconhecida como DateTime válido.
+   em System.DateTimeParse.ParseExactMultiple(String s, String[] formats, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   em System.DateTime.ParseExact(String s, String[] formats, IFormatProvider provider, DateTimeStyles style)
+   em System.Data.SQLite.SQLiteConvert.ToDateTime(String dateText, SQLiteDateFormats format, DateTimeKind kind, String formatString)
+   em System.Data.SQLite.SQLite3.GetDateTime(SQLiteStatement stmt, Int32 index)
+   em System.Data.SQLite.SQLite3.GetValue(SQLiteStatement stmt, SQLiteConnectionFlags flags, Int32 index, SQLiteType typ)
+   em System.Data.SQLite.SQLiteDataReader.GetValue(Int32 i)
+   em System.Data.SQLite.SQLiteDataReader.GetValues(Object[] values)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.GetValues(IDataReader reader, Type[] fieldTypes, Object[] values)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.<>c__DisplayClass147_0.<InternalGetData>b__0()
+   em DevExpress.Xpo.Logger.LogManager.Log[T](String category, LogHandler`1 handler, MessageHandler`1 createMessageHandler)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.InternalGetData(IDbCommand command, CriteriaOperatorCollection targets, Int32 skipClause, Int32 topClause, Boolean includeMetadata)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.SelectDataSimple(Query query, CriteriaOperatorCollection targets, Boolean includeMetadata)'
+-------------------------------------------
+
+Data: 15/09/2024 22:31:06
+Mensagem: Erro ao alterar categoria: Executing Sql 'select N0.[id_secao_produto],N0.[sp_dtCri],N0.[sp_dtAlt],N0.[sp_dtAcs],N0.[sp_desat],N0.[sp_desc],N0.[fk_tb_rede] from [tb_secao_produto] N0
+where (N0.[id_secao_produto] = @p0)' with parameters '{2}' exception 'System.FormatException: Cadeia de caracteres não foi reconhecida como DateTime válido.
+   em System.DateTimeParse.ParseExactMultiple(String s, String[] formats, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   em System.DateTime.ParseExact(String s, String[] formats, IFormatProvider provider, DateTimeStyles style)
+   em System.Data.SQLite.SQLiteConvert.ToDateTime(String dateText, SQLiteDateFormats format, DateTimeKind kind, String formatString)
+   em System.Data.SQLite.SQLite3.GetDateTime(SQLiteStatement stmt, Int32 index)
+   em System.Data.SQLite.SQLite3.GetValue(SQLiteStatement stmt, SQLiteConnectionFlags flags, Int32 index, SQLiteType typ)
+   em System.Data.SQLite.SQLiteDataReader.GetValue(Int32 i)
+   em System.Data.SQLite.SQLiteDataReader.GetValues(Object[] values)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.GetValues(IDataReader reader, Type[] fieldTypes, Object[] values)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.<>c__DisplayClass147_0.<InternalGetData>b__0()
+   em DevExpress.Xpo.Logger.LogManager.Log[T](String category, LogHandler`1 handler, MessageHandler`1 createMessageHandler)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.InternalGetData(IDbCommand command, CriteriaOperatorCollection targets, Int32 skipClause, Int32 topClause, Boolean includeMetadata)
+   em DevExpress.Xpo.DB.ConnectionProviderSql.SelectDataSimple(Query query, CriteriaOperatorCollection targets, Boolean includeMetadata)'
+-------------------------------------------
+
+Data: 27/09/2024 18:19:39
+Mensagem: Erro ao preencher tabela com produtos ativos: System.InvalidOperationException: The entity type 'SClasCont1' requires a primary key to be defined. If you intended to use a keyless entity type call 'HasNoKey()'.
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelValidator.ValidateNonNullPrimaryKeys(IModel model, IDiagnosticsLogger`1 logger)
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   em Microsoft.EntityFrameworkCore.Infrastructure.RelationalModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   em Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.ValidatingConvention.ProcessModelFinalized(IConventionModelBuilder modelBuilder, IConventionContext`1 context)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ImmediateConventionScope.OnModelFinalized(IConventionModelBuilder modelBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.OnModelFinalized(IConventionModelBuilder modelBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Internal.Model.FinalizeModel()
+   em Microsoft.EntityFrameworkCore.ModelBuilder.FinalizeModel()
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.CreateModel(DbContext context, IConventionSetBuilder conventionSetBuilder)
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.GetModel(DbContext context, IConventionSetBuilder conventionSetBuilder)
+   em Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel()
+   em Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   em Microsoft.EntityFrameworkCore.Infrastructure.EntityFrameworkServicesBuilder.<>c.<TryAddCoreServices>b__7_3(IServiceProvider p)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass1_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   em Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   em Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   em Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   em Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   em Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   em Microsoft.EntityFrameworkCore.DbContext.get_Model()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   em System.Linq.Queryable.Join[TOuter,TInner,TKey,TResult](IQueryable`1 outer, IEnumerable`1 inner, Expression`1 outerKeySelector, Expression`1 innerKeySelector, Expression`1 resultSelector)
+   em DXApplicationERP.uc_Prod.linqBuscarDadosProdutosCadastradosAtivos(Object sender, GetQueryableEventArgs e) na C:\Users\israe\source\repos\DXApplicationERP\DXApplicationERP\Cadastro\Produto\uc_ Produto.cs:linha 82
+-------------------------------------------
+
+Data: 27/09/2024 18:20:43
+Mensagem: Erro ao preencher tabela com produtos ativos: System.InvalidOperationException: The entity type 'SCont' requires a primary key to be defined. If you intended to use a keyless entity type call 'HasNoKey()'.
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelValidator.ValidateNonNullPrimaryKeys(IModel model, IDiagnosticsLogger`1 logger)
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   em Microsoft.EntityFrameworkCore.Infrastructure.RelationalModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   em Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.ValidatingConvention.ProcessModelFinalized(IConventionModelBuilder modelBuilder, IConventionContext`1 context)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ImmediateConventionScope.OnModelFinalized(IConventionModelBuilder modelBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.OnModelFinalized(IConventionModelBuilder modelBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Internal.Model.FinalizeModel()
+   em Microsoft.EntityFrameworkCore.ModelBuilder.FinalizeModel()
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.CreateModel(DbContext context, IConventionSetBuilder conventionSetBuilder)
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.GetModel(DbContext context, IConventionSetBuilder conventionSetBuilder)
+   em Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel()
+   em Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   em Microsoft.EntityFrameworkCore.Infrastructure.EntityFrameworkServicesBuilder.<>c.<TryAddCoreServices>b__7_3(IServiceProvider p)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass1_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   em Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   em Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   em Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   em Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   em Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   em Microsoft.EntityFrameworkCore.DbContext.get_Model()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   em System.Linq.Queryable.Join[TOuter,TInner,TKey,TResult](IQueryable`1 outer, IEnumerable`1 inner, Expression`1 outerKeySelector, Expression`1 innerKeySelector, Expression`1 resultSelector)
+   em DXApplicationERP.uc_Prod.linqBuscarDadosProdutosCadastradosAtivos(Object sender, GetQueryableEventArgs e) na C:\Users\israe\source\repos\DXApplicationERP\DXApplicationERP\Cadastro\Produto\uc_ Produto.cs:linha 82
+-------------------------------------------
+
+Data: 27/09/2024 18:21:16
+Mensagem: Erro ao preencher tabela com produtos ativos: System.InvalidOperationException: The entity type 'SContExt' requires a primary key to be defined. If you intended to use a keyless entity type call 'HasNoKey()'.
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelValidator.ValidateNonNullPrimaryKeys(IModel model, IDiagnosticsLogger`1 logger)
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   em Microsoft.EntityFrameworkCore.Infrastructure.RelationalModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   em Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.ValidatingConvention.ProcessModelFinalized(IConventionModelBuilder modelBuilder, IConventionContext`1 context)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ImmediateConventionScope.OnModelFinalized(IConventionModelBuilder modelBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.OnModelFinalized(IConventionModelBuilder modelBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Internal.Model.FinalizeModel()
+   em Microsoft.EntityFrameworkCore.ModelBuilder.FinalizeModel()
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.CreateModel(DbContext context, IConventionSetBuilder conventionSetBuilder)
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.GetModel(DbContext context, IConventionSetBuilder conventionSetBuilder)
+   em Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel()
+   em Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   em Microsoft.EntityFrameworkCore.Infrastructure.EntityFrameworkServicesBuilder.<>c.<TryAddCoreServices>b__7_3(IServiceProvider p)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass1_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   em Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   em Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   em Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   em Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   em Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   em Microsoft.EntityFrameworkCore.DbContext.get_Model()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   em System.Linq.Queryable.Join[TOuter,TInner,TKey,TResult](IQueryable`1 outer, IEnumerable`1 inner, Expression`1 outerKeySelector, Expression`1 innerKeySelector, Expression`1 resultSelector)
+   em DXApplicationERP.uc_Prod.linqBuscarDadosProdutosCadastradosAtivos(Object sender, GetQueryableEventArgs e) na C:\Users\israe\source\repos\DXApplicationERP\DXApplicationERP\Cadastro\Produto\uc_ Produto.cs:linha 82
+-------------------------------------------
+
+Data: 27/09/2024 18:21:43
+Mensagem: Erro ao preencher tabela com produtos ativos: System.InvalidOperationException: The entity type 'SContExtGru' requires a primary key to be defined. If you intended to use a keyless entity type call 'HasNoKey()'.
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelValidator.ValidateNonNullPrimaryKeys(IModel model, IDiagnosticsLogger`1 logger)
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   em Microsoft.EntityFrameworkCore.Infrastructure.RelationalModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   em Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.ValidatingConvention.ProcessModelFinalized(IConventionModelBuilder modelBuilder, IConventionContext`1 context)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ImmediateConventionScope.OnModelFinalized(IConventionModelBuilder modelBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.OnModelFinalized(IConventionModelBuilder modelBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Internal.Model.FinalizeModel()
+   em Microsoft.EntityFrameworkCore.ModelBuilder.FinalizeModel()
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.CreateModel(DbContext context, IConventionSetBuilder conventionSetBuilder)
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.GetModel(DbContext context, IConventionSetBuilder conventionSetBuilder)
+   em Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel()
+   em Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   em Microsoft.EntityFrameworkCore.Infrastructure.EntityFrameworkServicesBuilder.<>c.<TryAddCoreServices>b__7_3(IServiceProvider p)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass1_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   em Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   em Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   em Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   em Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   em Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   em Microsoft.EntityFrameworkCore.DbContext.get_Model()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   em System.Linq.Queryable.Join[TOuter,TInner,TKey,TResult](IQueryable`1 outer, IEnumerable`1 inner, Expression`1 outerKeySelector, Expression`1 innerKeySelector, Expression`1 resultSelector)
+   em DXApplicationERP.uc_Prod.linqBuscarDadosProdutosCadastradosAtivos(Object sender, GetQueryableEventArgs e) na C:\Users\israe\source\repos\DXApplicationERP\DXApplicationERP\Cadastro\Produto\uc_ Produto.cs:linha 82
+-------------------------------------------
+
+Data: 27/09/2024 18:23:15
+Mensagem: Erro ao preencher tabela com produtos ativos: System.InvalidOperationException: Unable to determine the relationship represented by navigation property 'tb_produto.fk_tb_ncmNavigation' of type 'SNcm'. Either manually configure the relationship, or ignore this property using the '[NotMapped]' attribute or by using 'EntityTypeBuilder.Ignore' in 'OnModelCreating'.
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelValidator.ValidatePropertyMapping(IModel model, IDiagnosticsLogger`1 logger)
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   em Microsoft.EntityFrameworkCore.Infrastructure.RelationalModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   em Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.ValidatingConvention.ProcessModelFinalized(IConventionModelBuilder modelBuilder, IConventionContext`1 context)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ImmediateConventionScope.OnModelFinalized(IConventionModelBuilder modelBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.OnModelFinalized(IConventionModelBuilder modelBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Internal.Model.FinalizeModel()
+   em Microsoft.EntityFrameworkCore.ModelBuilder.FinalizeModel()
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.CreateModel(DbContext context, IConventionSetBuilder conventionSetBuilder)
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.GetModel(DbContext context, IConventionSetBuilder conventionSetBuilder)
+   em Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel()
+   em Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   em Microsoft.EntityFrameworkCore.Infrastructure.EntityFrameworkServicesBuilder.<>c.<TryAddCoreServices>b__7_3(IServiceProvider p)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass1_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   em Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   em Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   em Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   em Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   em Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   em Microsoft.EntityFrameworkCore.DbContext.get_Model()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   em System.Linq.Queryable.Join[TOuter,TInner,TKey,TResult](IQueryable`1 outer, IEnumerable`1 inner, Expression`1 outerKeySelector, Expression`1 innerKeySelector, Expression`1 resultSelector)
+   em DXApplicationERP.uc_Prod.linqBuscarDadosProdutosCadastradosAtivos(Object sender, GetQueryableEventArgs e) na C:\Users\israe\source\repos\DXApplicationERP\DXApplicationERP\Cadastro\Produto\uc_ Produto.cs:linha 82
+-------------------------------------------
+
+Data: 27/09/2024 18:35:11
+Mensagem: Erro ao preencher tabela com produtos ativos: System.InvalidOperationException: Unable to determine the relationship represented by navigation property 'tb_produto.fk_tb_ncmNavigation' of type 'SNcm'. Either manually configure the relationship, or ignore this property using the '[NotMapped]' attribute or by using 'EntityTypeBuilder.Ignore' in 'OnModelCreating'.
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelValidator.ValidatePropertyMapping(IModel model, IDiagnosticsLogger`1 logger)
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   em Microsoft.EntityFrameworkCore.Infrastructure.RelationalModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   em Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.ValidatingConvention.ProcessModelFinalized(IConventionModelBuilder modelBuilder, IConventionContext`1 context)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ImmediateConventionScope.OnModelFinalized(IConventionModelBuilder modelBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.OnModelFinalized(IConventionModelBuilder modelBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Internal.Model.FinalizeModel()
+   em Microsoft.EntityFrameworkCore.ModelBuilder.FinalizeModel()
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.CreateModel(DbContext context, IConventionSetBuilder conventionSetBuilder)
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.GetModel(DbContext context, IConventionSetBuilder conventionSetBuilder)
+   em Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel()
+   em Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   em Microsoft.EntityFrameworkCore.Infrastructure.EntityFrameworkServicesBuilder.<>c.<TryAddCoreServices>b__7_3(IServiceProvider p)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass1_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   em Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   em Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   em Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   em Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   em Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   em Microsoft.EntityFrameworkCore.DbContext.get_Model()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   em System.Linq.Queryable.Join[TOuter,TInner,TKey,TResult](IQueryable`1 outer, IEnumerable`1 inner, Expression`1 outerKeySelector, Expression`1 innerKeySelector, Expression`1 resultSelector)
+   em DXApplicationERP.uc_Prod.linqBuscarDadosProdutosCadastradosAtivos(Object sender, GetQueryableEventArgs e) na C:\Users\israe\source\repos\DXApplicationERP\DXApplicationERP\Cadastro\Produto\uc_ Produto.cs:linha 82
+-------------------------------------------
+
+Data: 27/09/2024 18:35:59
+Mensagem: Erro ao preencher tabela com produtos ativos: System.InvalidOperationException: The InversePropertyAttribute on property 'tb_produto' on type 'SNcm' is not valid. The property 'fk_tb_ncmNavigation' is not a valid navigation property on the related type 'tb_produto'. Ensure that the property exists and is a valid reference or collection navigation property.
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.InversePropertyAttributeConvention.ConfigureInverseNavigation(IConventionEntityTypeBuilder entityTypeBuilder, MemberInfo navigationMemberInfo, IConventionEntityTypeBuilder targetEntityTypeBuilder, InversePropertyAttribute attribute)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.InversePropertyAttributeConvention.Process(IConventionEntityTypeBuilder entityTypeBuilder, MemberInfo navigationMemberInfo, Type targetClrType, InversePropertyAttribute attribute)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.InversePropertyAttributeConvention.ProcessEntityTypeAdded(IConventionEntityTypeBuilder entityTypeBuilder, MemberInfo navigationMemberInfo, Type targetClrType, InversePropertyAttribute attribute, IConventionContext`1 context)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.NavigationAttributeConventionBase`1.ProcessEntityTypeAdded(IConventionEntityTypeBuilder entityTypeBuilder, IConventionContext`1 context)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ImmediateConventionScope.OnEntityTypeAdded(IConventionEntityTypeBuilder entityTypeBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.RunVisitor.VisitOnEntityTypeAdded(OnEntityTypeAddedNode node)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.OnEntityTypeAddedNode.Accept(ConventionVisitor visitor)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ConventionVisitor.Visit(ConventionNode node)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ConventionVisitor.VisitConventionScope(ConventionScope node)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ConventionBatch.Run()
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ConventionBatch.Dispose()
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ImmediateConventionScope.OnModelInitialized(IConventionModelBuilder modelBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.OnModelInitialized(IConventionModelBuilder modelBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Internal.Model..ctor(ConventionSet conventions)
+   em Microsoft.EntityFrameworkCore.ModelBuilder..ctor(ConventionSet conventions)
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.CreateModel(DbContext context, IConventionSetBuilder conventionSetBuilder)
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.GetModel(DbContext context, IConventionSetBuilder conventionSetBuilder)
+   em Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel()
+   em Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   em Microsoft.EntityFrameworkCore.Infrastructure.EntityFrameworkServicesBuilder.<>c.<TryAddCoreServices>b__7_3(IServiceProvider p)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass1_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   em Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   em Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   em Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   em Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   em Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   em Microsoft.EntityFrameworkCore.DbContext.get_Model()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   em System.Linq.Queryable.Join[TOuter,TInner,TKey,TResult](IQueryable`1 outer, IEnumerable`1 inner, Expression`1 outerKeySelector, Expression`1 innerKeySelector, Expression`1 resultSelector)
+   em DXApplicationERP.uc_Prod.linqBuscarDadosProdutosCadastradosAtivos(Object sender, GetQueryableEventArgs e) na C:\Users\israe\source\repos\DXApplicationERP\DXApplicationERP\Cadastro\Produto\uc_ Produto.cs:linha 82
+-------------------------------------------
+
+Data: 27/09/2024 18:38:18
+Mensagem: Erro ao preencher tabela com produtos ativos: System.InvalidOperationException: The InversePropertyAttribute on property 'tb_produto' on type 'SNcm' is not valid. The property 'fk_tb_ncmNavigation' is not a valid navigation property on the related type 'tb_produto'. Ensure that the property exists and is a valid reference or collection navigation property.
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.InversePropertyAttributeConvention.ConfigureInverseNavigation(IConventionEntityTypeBuilder entityTypeBuilder, MemberInfo navigationMemberInfo, IConventionEntityTypeBuilder targetEntityTypeBuilder, InversePropertyAttribute attribute)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.InversePropertyAttributeConvention.Process(IConventionEntityTypeBuilder entityTypeBuilder, MemberInfo navigationMemberInfo, Type targetClrType, InversePropertyAttribute attribute)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.InversePropertyAttributeConvention.ProcessEntityTypeAdded(IConventionEntityTypeBuilder entityTypeBuilder, MemberInfo navigationMemberInfo, Type targetClrType, InversePropertyAttribute attribute, IConventionContext`1 context)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.NavigationAttributeConventionBase`1.ProcessEntityTypeAdded(IConventionEntityTypeBuilder entityTypeBuilder, IConventionContext`1 context)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ImmediateConventionScope.OnEntityTypeAdded(IConventionEntityTypeBuilder entityTypeBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.RunVisitor.VisitOnEntityTypeAdded(OnEntityTypeAddedNode node)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.OnEntityTypeAddedNode.Accept(ConventionVisitor visitor)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ConventionVisitor.Visit(ConventionNode node)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ConventionVisitor.VisitConventionScope(ConventionScope node)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ConventionBatch.Run()
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ConventionBatch.Dispose()
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ImmediateConventionScope.OnModelInitialized(IConventionModelBuilder modelBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.OnModelInitialized(IConventionModelBuilder modelBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Internal.Model..ctor(ConventionSet conventions)
+   em Microsoft.EntityFrameworkCore.ModelBuilder..ctor(ConventionSet conventions)
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.CreateModel(DbContext context, IConventionSetBuilder conventionSetBuilder)
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.GetModel(DbContext context, IConventionSetBuilder conventionSetBuilder)
+   em Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel()
+   em Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   em Microsoft.EntityFrameworkCore.Infrastructure.EntityFrameworkServicesBuilder.<>c.<TryAddCoreServices>b__7_3(IServiceProvider p)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass1_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   em Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   em Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   em Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   em Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   em Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   em Microsoft.EntityFrameworkCore.DbContext.get_Model()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   em System.Linq.Queryable.Join[TOuter,TInner,TKey,TResult](IQueryable`1 outer, IEnumerable`1 inner, Expression`1 outerKeySelector, Expression`1 innerKeySelector, Expression`1 resultSelector)
+   em DXApplicationERP.uc_Prod.linqBuscarDadosProdutosCadastradosAtivos(Object sender, GetQueryableEventArgs e) na C:\Users\israe\source\repos\DXApplicationERP\DXApplicationERP\Cadastro\Produto\uc_ Produto.cs:linha 82
+-------------------------------------------
+
+Data: 27/09/2024 18:39:03
+Mensagem: Erro ao preencher tabela com produtos ativos: System.InvalidOperationException: The InversePropertyAttribute on property 'tb_produto' on type 'SNcm' is not valid. The property 'fk_tb_ncmNavigation' is not a valid navigation property on the related type 'tb_produto'. Ensure that the property exists and is a valid reference or collection navigation property.
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.InversePropertyAttributeConvention.ConfigureInverseNavigation(IConventionEntityTypeBuilder entityTypeBuilder, MemberInfo navigationMemberInfo, IConventionEntityTypeBuilder targetEntityTypeBuilder, InversePropertyAttribute attribute)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.InversePropertyAttributeConvention.Process(IConventionEntityTypeBuilder entityTypeBuilder, MemberInfo navigationMemberInfo, Type targetClrType, InversePropertyAttribute attribute)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.InversePropertyAttributeConvention.ProcessEntityTypeAdded(IConventionEntityTypeBuilder entityTypeBuilder, MemberInfo navigationMemberInfo, Type targetClrType, InversePropertyAttribute attribute, IConventionContext`1 context)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.NavigationAttributeConventionBase`1.ProcessEntityTypeAdded(IConventionEntityTypeBuilder entityTypeBuilder, IConventionContext`1 context)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ImmediateConventionScope.OnEntityTypeAdded(IConventionEntityTypeBuilder entityTypeBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.RunVisitor.VisitOnEntityTypeAdded(OnEntityTypeAddedNode node)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.OnEntityTypeAddedNode.Accept(ConventionVisitor visitor)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ConventionVisitor.Visit(ConventionNode node)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ConventionVisitor.VisitConventionScope(ConventionScope node)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ConventionBatch.Run()
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ConventionBatch.Dispose()
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ImmediateConventionScope.OnModelInitialized(IConventionModelBuilder modelBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.OnModelInitialized(IConventionModelBuilder modelBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Internal.Model..ctor(ConventionSet conventions)
+   em Microsoft.EntityFrameworkCore.ModelBuilder..ctor(ConventionSet conventions)
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.CreateModel(DbContext context, IConventionSetBuilder conventionSetBuilder)
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.GetModel(DbContext context, IConventionSetBuilder conventionSetBuilder)
+   em Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel()
+   em Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   em Microsoft.EntityFrameworkCore.Infrastructure.EntityFrameworkServicesBuilder.<>c.<TryAddCoreServices>b__7_3(IServiceProvider p)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass1_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   em Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   em Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   em Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   em Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   em Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   em Microsoft.EntityFrameworkCore.DbContext.get_Model()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   em System.Linq.Queryable.Join[TOuter,TInner,TKey,TResult](IQueryable`1 outer, IEnumerable`1 inner, Expression`1 outerKeySelector, Expression`1 innerKeySelector, Expression`1 resultSelector)
+   em DXApplicationERP.uc_Prod.linqBuscarDadosProdutosCadastradosAtivos(Object sender, GetQueryableEventArgs e) na C:\Users\israe\source\repos\DXApplicationERP\DXApplicationERP\Cadastro\Produto\uc_ Produto.cs:linha 82
+-------------------------------------------
+
+Data: 28/09/2024 11:21:51
+Mensagem: Erro ao preencher tabela com produtos ativos: System.InvalidOperationException: The InversePropertyAttribute on property 'tb_produto' on type 'SNcm' is not valid. The property 'fk_tb_ncmNavigation' is not a valid navigation property on the related type 'tb_produto'. Ensure that the property exists and is a valid reference or collection navigation property.
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.InversePropertyAttributeConvention.ConfigureInverseNavigation(IConventionEntityTypeBuilder entityTypeBuilder, MemberInfo navigationMemberInfo, IConventionEntityTypeBuilder targetEntityTypeBuilder, InversePropertyAttribute attribute)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.InversePropertyAttributeConvention.Process(IConventionEntityTypeBuilder entityTypeBuilder, MemberInfo navigationMemberInfo, Type targetClrType, InversePropertyAttribute attribute)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.InversePropertyAttributeConvention.ProcessEntityTypeAdded(IConventionEntityTypeBuilder entityTypeBuilder, MemberInfo navigationMemberInfo, Type targetClrType, InversePropertyAttribute attribute, IConventionContext`1 context)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.NavigationAttributeConventionBase`1.ProcessEntityTypeAdded(IConventionEntityTypeBuilder entityTypeBuilder, IConventionContext`1 context)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ImmediateConventionScope.OnEntityTypeAdded(IConventionEntityTypeBuilder entityTypeBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.RunVisitor.VisitOnEntityTypeAdded(OnEntityTypeAddedNode node)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.OnEntityTypeAddedNode.Accept(ConventionVisitor visitor)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ConventionVisitor.Visit(ConventionNode node)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ConventionVisitor.VisitConventionScope(ConventionScope node)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ConventionBatch.Run()
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ConventionBatch.Dispose()
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ImmediateConventionScope.OnModelInitialized(IConventionModelBuilder modelBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.OnModelInitialized(IConventionModelBuilder modelBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Internal.Model..ctor(ConventionSet conventions)
+   em Microsoft.EntityFrameworkCore.ModelBuilder..ctor(ConventionSet conventions)
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.CreateModel(DbContext context, IConventionSetBuilder conventionSetBuilder)
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.GetModel(DbContext context, IConventionSetBuilder conventionSetBuilder)
+   em Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel()
+   em Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   em Microsoft.EntityFrameworkCore.Infrastructure.EntityFrameworkServicesBuilder.<>c.<TryAddCoreServices>b__7_3(IServiceProvider p)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass1_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   em Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   em Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   em Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   em Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   em Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   em Microsoft.EntityFrameworkCore.DbContext.get_Model()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   em System.Linq.Queryable.Join[TOuter,TInner,TKey,TResult](IQueryable`1 outer, IEnumerable`1 inner, Expression`1 outerKeySelector, Expression`1 innerKeySelector, Expression`1 resultSelector)
+   em DXApplicationERP.uc_Prod.linqBuscarDadosProdutosCadastradosAtivos(Object sender, GetQueryableEventArgs e) na C:\Users\israe\source\repos\DXApplicationERP\DXApplicationERP\Cadastro\Produto\uc_ Produto.cs:linha 82
+-------------------------------------------
+
+Data: 28/09/2024 18:41:57
+Mensagem: Erro ao preencher tabela com produtos ativos: System.InvalidOperationException: The InversePropertyAttribute on property 'tb_produto' on type 'SNcm' is not valid. The property 'fk_tb_ncmNavigation' is not a valid navigation property on the related type 'tb_produto'. Ensure that the property exists and is a valid reference or collection navigation property.
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.InversePropertyAttributeConvention.ConfigureInverseNavigation(IConventionEntityTypeBuilder entityTypeBuilder, MemberInfo navigationMemberInfo, IConventionEntityTypeBuilder targetEntityTypeBuilder, InversePropertyAttribute attribute)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.InversePropertyAttributeConvention.Process(IConventionEntityTypeBuilder entityTypeBuilder, MemberInfo navigationMemberInfo, Type targetClrType, InversePropertyAttribute attribute)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.InversePropertyAttributeConvention.ProcessEntityTypeAdded(IConventionEntityTypeBuilder entityTypeBuilder, MemberInfo navigationMemberInfo, Type targetClrType, InversePropertyAttribute attribute, IConventionContext`1 context)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.NavigationAttributeConventionBase`1.ProcessEntityTypeAdded(IConventionEntityTypeBuilder entityTypeBuilder, IConventionContext`1 context)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ImmediateConventionScope.OnEntityTypeAdded(IConventionEntityTypeBuilder entityTypeBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.RunVisitor.VisitOnEntityTypeAdded(OnEntityTypeAddedNode node)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.OnEntityTypeAddedNode.Accept(ConventionVisitor visitor)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ConventionVisitor.Visit(ConventionNode node)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ConventionVisitor.VisitConventionScope(ConventionScope node)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ConventionBatch.Run()
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ConventionBatch.Dispose()
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ImmediateConventionScope.OnModelInitialized(IConventionModelBuilder modelBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.OnModelInitialized(IConventionModelBuilder modelBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Internal.Model..ctor(ConventionSet conventions)
+   em Microsoft.EntityFrameworkCore.ModelBuilder..ctor(ConventionSet conventions)
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.CreateModel(DbContext context, IConventionSetBuilder conventionSetBuilder)
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.GetModel(DbContext context, IConventionSetBuilder conventionSetBuilder)
+   em Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel()
+   em Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   em Microsoft.EntityFrameworkCore.Infrastructure.EntityFrameworkServicesBuilder.<>c.<TryAddCoreServices>b__7_3(IServiceProvider p)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass1_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   em Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   em Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   em Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   em Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   em Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   em Microsoft.EntityFrameworkCore.DbContext.get_Model()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   em System.Linq.Queryable.Join[TOuter,TInner,TKey,TResult](IQueryable`1 outer, IEnumerable`1 inner, Expression`1 outerKeySelector, Expression`1 innerKeySelector, Expression`1 resultSelector)
+   em DXApplicationERP.uc_Prod.linqBuscarDadosProdutosCadastradosAtivos(Object sender, GetQueryableEventArgs e) na C:\Users\israe\source\repos\DXApplicationERP\DXApplicationERP\Cadastro\Produto\uc_ Produto.cs:linha 82
+-------------------------------------------
+
+Data: 28/09/2024 18:43:23
+Mensagem: Erro ao preencher tabela com produtos ativos: System.InvalidOperationException: The InversePropertyAttribute on property 'tb_produto' on type 'SNcm' is not valid. The property 'fk_tb_ncmNavigation' is not a valid navigation property on the related type 'tb_produto'. Ensure that the property exists and is a valid reference or collection navigation property.
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.InversePropertyAttributeConvention.ConfigureInverseNavigation(IConventionEntityTypeBuilder entityTypeBuilder, MemberInfo navigationMemberInfo, IConventionEntityTypeBuilder targetEntityTypeBuilder, InversePropertyAttribute attribute)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.InversePropertyAttributeConvention.Process(IConventionEntityTypeBuilder entityTypeBuilder, MemberInfo navigationMemberInfo, Type targetClrType, InversePropertyAttribute attribute)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.InversePropertyAttributeConvention.ProcessEntityTypeAdded(IConventionEntityTypeBuilder entityTypeBuilder, MemberInfo navigationMemberInfo, Type targetClrType, InversePropertyAttribute attribute, IConventionContext`1 context)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.NavigationAttributeConventionBase`1.ProcessEntityTypeAdded(IConventionEntityTypeBuilder entityTypeBuilder, IConventionContext`1 context)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ImmediateConventionScope.OnEntityTypeAdded(IConventionEntityTypeBuilder entityTypeBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.RunVisitor.VisitOnEntityTypeAdded(OnEntityTypeAddedNode node)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.OnEntityTypeAddedNode.Accept(ConventionVisitor visitor)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ConventionVisitor.Visit(ConventionNode node)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ConventionVisitor.VisitConventionScope(ConventionScope node)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ConventionBatch.Run()
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ConventionBatch.Dispose()
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ImmediateConventionScope.OnModelInitialized(IConventionModelBuilder modelBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.OnModelInitialized(IConventionModelBuilder modelBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Internal.Model..ctor(ConventionSet conventions)
+   em Microsoft.EntityFrameworkCore.ModelBuilder..ctor(ConventionSet conventions)
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.CreateModel(DbContext context, IConventionSetBuilder conventionSetBuilder)
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.GetModel(DbContext context, IConventionSetBuilder conventionSetBuilder)
+   em Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel()
+   em Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   em Microsoft.EntityFrameworkCore.Infrastructure.EntityFrameworkServicesBuilder.<>c.<TryAddCoreServices>b__7_3(IServiceProvider p)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass1_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   em Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   em Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   em Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   em Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   em Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   em Microsoft.EntityFrameworkCore.DbContext.get_Model()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   em System.Linq.Queryable.Join[TOuter,TInner,TKey,TResult](IQueryable`1 outer, IEnumerable`1 inner, Expression`1 outerKeySelector, Expression`1 innerKeySelector, Expression`1 resultSelector)
+   em DXApplicationERP.uc_Prod.linqBuscarDadosProdutosCadastradosAtivos(Object sender, GetQueryableEventArgs e) na C:\Users\israe\source\repos\DXApplicationERP\DXApplicationERP\Cadastro\Produto\uc_ Produto.cs:linha 82
+-------------------------------------------
+
+Data: 28/09/2024 18:56:43
+Mensagem: Erro ao preencher tabela com produtos ativos: System.InvalidOperationException: The InversePropertyAttribute on property 'tb_produto' on type 'SNcm' is not valid. The property 'fk_tb_ncmNavigation' is not a valid navigation property on the related type 'tb_produto'. Ensure that the property exists and is a valid reference or collection navigation property.
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.InversePropertyAttributeConvention.ConfigureInverseNavigation(IConventionEntityTypeBuilder entityTypeBuilder, MemberInfo navigationMemberInfo, IConventionEntityTypeBuilder targetEntityTypeBuilder, InversePropertyAttribute attribute)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.InversePropertyAttributeConvention.Process(IConventionEntityTypeBuilder entityTypeBuilder, MemberInfo navigationMemberInfo, Type targetClrType, InversePropertyAttribute attribute)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.InversePropertyAttributeConvention.ProcessEntityTypeAdded(IConventionEntityTypeBuilder entityTypeBuilder, MemberInfo navigationMemberInfo, Type targetClrType, InversePropertyAttribute attribute, IConventionContext`1 context)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.NavigationAttributeConventionBase`1.ProcessEntityTypeAdded(IConventionEntityTypeBuilder entityTypeBuilder, IConventionContext`1 context)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ImmediateConventionScope.OnEntityTypeAdded(IConventionEntityTypeBuilder entityTypeBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.RunVisitor.VisitOnEntityTypeAdded(OnEntityTypeAddedNode node)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.OnEntityTypeAddedNode.Accept(ConventionVisitor visitor)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ConventionVisitor.Visit(ConventionNode node)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ConventionVisitor.VisitConventionScope(ConventionScope node)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ConventionBatch.Run()
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ConventionBatch.Dispose()
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ImmediateConventionScope.OnModelInitialized(IConventionModelBuilder modelBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.OnModelInitialized(IConventionModelBuilder modelBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Internal.Model..ctor(ConventionSet conventions)
+   em Microsoft.EntityFrameworkCore.ModelBuilder..ctor(ConventionSet conventions)
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.CreateModel(DbContext context, IConventionSetBuilder conventionSetBuilder)
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.GetModel(DbContext context, IConventionSetBuilder conventionSetBuilder)
+   em Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel()
+   em Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   em Microsoft.EntityFrameworkCore.Infrastructure.EntityFrameworkServicesBuilder.<>c.<TryAddCoreServices>b__7_3(IServiceProvider p)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass1_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   em Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   em Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   em Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   em Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   em Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   em Microsoft.EntityFrameworkCore.DbContext.get_Model()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   em System.Linq.Queryable.Join[TOuter,TInner,TKey,TResult](IQueryable`1 outer, IEnumerable`1 inner, Expression`1 outerKeySelector, Expression`1 innerKeySelector, Expression`1 resultSelector)
+   em DXApplicationERP.uc_Prod.linqBuscarDadosProdutosCadastradosAtivos(Object sender, GetQueryableEventArgs e) na C:\Users\israe\source\repos\DXApplicationERP\DXApplicationERP\Cadastro\Produto\uc_ Produto.cs:linha 82
+-------------------------------------------
+
+Data: 28/09/2024 18:57:11
+Mensagem: Erro ao preencher tabela com produtos ativos: System.InvalidOperationException: The InversePropertyAttribute on property 'tb_produto' on type 'SNcm' is not valid. The property 'fk_tb_ncmNavigation' is not a valid navigation property on the related type 'tb_produto'. Ensure that the property exists and is a valid reference or collection navigation property.
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.InversePropertyAttributeConvention.ConfigureInverseNavigation(IConventionEntityTypeBuilder entityTypeBuilder, MemberInfo navigationMemberInfo, IConventionEntityTypeBuilder targetEntityTypeBuilder, InversePropertyAttribute attribute)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.InversePropertyAttributeConvention.Process(IConventionEntityTypeBuilder entityTypeBuilder, MemberInfo navigationMemberInfo, Type targetClrType, InversePropertyAttribute attribute)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.InversePropertyAttributeConvention.ProcessEntityTypeAdded(IConventionEntityTypeBuilder entityTypeBuilder, MemberInfo navigationMemberInfo, Type targetClrType, InversePropertyAttribute attribute, IConventionContext`1 context)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.NavigationAttributeConventionBase`1.ProcessEntityTypeAdded(IConventionEntityTypeBuilder entityTypeBuilder, IConventionContext`1 context)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ImmediateConventionScope.OnEntityTypeAdded(IConventionEntityTypeBuilder entityTypeBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.RunVisitor.VisitOnEntityTypeAdded(OnEntityTypeAddedNode node)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.OnEntityTypeAddedNode.Accept(ConventionVisitor visitor)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ConventionVisitor.Visit(ConventionNode node)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ConventionVisitor.VisitConventionScope(ConventionScope node)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ConventionBatch.Run()
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ConventionBatch.Dispose()
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ImmediateConventionScope.OnModelInitialized(IConventionModelBuilder modelBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.OnModelInitialized(IConventionModelBuilder modelBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Internal.Model..ctor(ConventionSet conventions)
+   em Microsoft.EntityFrameworkCore.ModelBuilder..ctor(ConventionSet conventions)
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.CreateModel(DbContext context, IConventionSetBuilder conventionSetBuilder)
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.GetModel(DbContext context, IConventionSetBuilder conventionSetBuilder)
+   em Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel()
+   em Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   em Microsoft.EntityFrameworkCore.Infrastructure.EntityFrameworkServicesBuilder.<>c.<TryAddCoreServices>b__7_3(IServiceProvider p)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass1_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   em Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   em Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   em Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   em Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   em Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   em Microsoft.EntityFrameworkCore.DbContext.get_Model()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   em System.Linq.Queryable.Join[TOuter,TInner,TKey,TResult](IQueryable`1 outer, IEnumerable`1 inner, Expression`1 outerKeySelector, Expression`1 innerKeySelector, Expression`1 resultSelector)
+   em DXApplicationERP.uc_Prod.linqBuscarDadosProdutosCadastradosAtivos(Object sender, GetQueryableEventArgs e) na C:\Users\israe\source\repos\DXApplicationERP\DXApplicationERP\Cadastro\Produto\uc_ Produto.cs:linha 82
+-------------------------------------------
+
+Data: 29/09/2024 17:11:04
+Mensagem: Erro ao preencher tabela com produtos ativos: System.InvalidOperationException: The InversePropertyAttribute on property 'tb_produto' on type 'SNcm' is not valid. The property 'fk_tb_ncmNavigation' is not a valid navigation property on the related type 'tb_produto'. Ensure that the property exists and is a valid reference or collection navigation property.
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.InversePropertyAttributeConvention.ConfigureInverseNavigation(IConventionEntityTypeBuilder entityTypeBuilder, MemberInfo navigationMemberInfo, IConventionEntityTypeBuilder targetEntityTypeBuilder, InversePropertyAttribute attribute)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.InversePropertyAttributeConvention.Process(IConventionEntityTypeBuilder entityTypeBuilder, MemberInfo navigationMemberInfo, Type targetClrType, InversePropertyAttribute attribute)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.InversePropertyAttributeConvention.ProcessEntityTypeAdded(IConventionEntityTypeBuilder entityTypeBuilder, MemberInfo navigationMemberInfo, Type targetClrType, InversePropertyAttribute attribute, IConventionContext`1 context)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.NavigationAttributeConventionBase`1.ProcessEntityTypeAdded(IConventionEntityTypeBuilder entityTypeBuilder, IConventionContext`1 context)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ImmediateConventionScope.OnEntityTypeAdded(IConventionEntityTypeBuilder entityTypeBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.RunVisitor.VisitOnEntityTypeAdded(OnEntityTypeAddedNode node)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.OnEntityTypeAddedNode.Accept(ConventionVisitor visitor)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ConventionVisitor.Visit(ConventionNode node)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ConventionVisitor.VisitConventionScope(ConventionScope node)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ConventionBatch.Run()
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ConventionBatch.Dispose()
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ImmediateConventionScope.OnModelInitialized(IConventionModelBuilder modelBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.OnModelInitialized(IConventionModelBuilder modelBuilder)
+   em Microsoft.EntityFrameworkCore.Metadata.Internal.Model..ctor(ConventionSet conventions)
+   em Microsoft.EntityFrameworkCore.ModelBuilder..ctor(ConventionSet conventions)
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.CreateModel(DbContext context, IConventionSetBuilder conventionSetBuilder)
+   em Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.GetModel(DbContext context, IConventionSetBuilder conventionSetBuilder)
+   em Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel()
+   em Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   em Microsoft.EntityFrameworkCore.Infrastructure.EntityFrameworkServicesBuilder.<>c.<TryAddCoreServices>b__7_3(IServiceProvider p)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass1_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   em Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   em Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   em Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   em Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   em Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   em Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   em Microsoft.EntityFrameworkCore.DbContext.get_Model()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   em Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   em System.Linq.Queryable.Join[TOuter,TInner,TKey,TResult](IQueryable`1 outer, IEnumerable`1 inner, Expression`1 outerKeySelector, Expression`1 innerKeySelector, Expression`1 resultSelector)
+   em DXApplicationERP.uc_Prod.linqBuscarDadosProdutosCadastradosAtivos(Object sender, GetQueryableEventArgs e) na C:\Users\israe\source\repos\DXApplicationERP\DXApplicationERP\Cadastro\Produto\uc_ Produto.cs:linha 82
+-------------------------------------------
+
