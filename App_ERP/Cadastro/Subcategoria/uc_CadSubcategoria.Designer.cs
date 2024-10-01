@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_CadSubcategoria));
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btnSalvar = new DevExpress.XtraEditors.SimpleButton();
             this.btnVoltar = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
@@ -53,6 +51,8 @@
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.simpleSeparator1 = new DevExpress.XtraLayout.SimpleSeparator();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.uc_TituloTelas1 = new App_TelasCompartilhadas.uc_TituloTelas();
+            this.layoutControlGroup6 = new DevExpress.XtraLayout.LayoutControlGroup();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbCategoria.Properties)).BeginInit();
@@ -75,28 +75,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).BeginInit();
             this.SuspendLayout();
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(27, 19);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(229, 25);
-            this.labelControl1.TabIndex = 7;
-            this.labelControl1.Text = "Cadastro de Subcategoria";
             // 
             // btnSalvar
             // 
             this.btnSalvar.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.Appearance.Options.UseFont = true;
             this.btnSalvar.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnSalvar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSalvar.ImageOptions.SvgImage")));
             this.btnSalvar.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
-            this.btnSalvar.Location = new System.Drawing.Point(139, 65);
+            this.btnSalvar.Location = new System.Drawing.Point(71, 39);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(106, 68);
+            this.btnSalvar.Size = new System.Drawing.Size(58, 54);
             this.btnSalvar.TabIndex = 10;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.ToolTip = "Clique para salvar as alterações.";
@@ -109,11 +99,10 @@
             this.btnVoltar.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVoltar.Appearance.Options.UseFont = true;
             this.btnVoltar.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnVoltar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnVoltar.ImageOptions.SvgImage")));
             this.btnVoltar.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
-            this.btnVoltar.Location = new System.Drawing.Point(27, 65);
+            this.btnVoltar.Location = new System.Drawing.Point(7, 39);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(106, 68);
+            this.btnVoltar.Size = new System.Drawing.Size(58, 54);
             this.btnVoltar.TabIndex = 9;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.ToolTip = "Clique para retornar à tela anterior.";
@@ -129,23 +118,23 @@
             this.layoutControl1.Controls.Add(this.cmbCSOSN);
             this.layoutControl1.Controls.Add(this.cmbICMS);
             this.layoutControl1.Controls.Add(this.imageComboBoxEdit1);
-            this.layoutControl1.Location = new System.Drawing.Point(16, 150);
+            this.layoutControl1.Location = new System.Drawing.Point(-3, 96);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(1624, 712);
+            this.layoutControl1.Size = new System.Drawing.Size(1266, 408);
             this.layoutControl1.TabIndex = 11;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // cmbCategoria
             // 
-            this.cmbCategoria.Location = new System.Drawing.Point(12, 28);
+            this.cmbCategoria.Location = new System.Drawing.Point(24, 61);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbCategoria.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("cp_desc", "Descrição da Categoria")});
             this.cmbCategoria.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.cmbCategoria.Size = new System.Drawing.Size(762, 20);
+            this.cmbCategoria.Size = new System.Drawing.Size(611, 20);
             this.cmbCategoria.StyleController = this.layoutControl1;
             this.cmbCategoria.TabIndex = 12;
             this.cmbCategoria.ToolTip = "Defina a categoria para a subcategoria. A Categoria ajuda a classificar e agrupar" +
@@ -155,10 +144,10 @@
             // 
             // txtDescrcricaoSubcategoria
             // 
-            this.txtDescrcricaoSubcategoria.Location = new System.Drawing.Point(778, 28);
+            this.txtDescrcricaoSubcategoria.Location = new System.Drawing.Point(639, 61);
             this.txtDescrcricaoSubcategoria.Name = "txtDescrcricaoSubcategoria";
             this.txtDescrcricaoSubcategoria.Properties.MaxLength = 50;
-            this.txtDescrcricaoSubcategoria.Size = new System.Drawing.Size(834, 20);
+            this.txtDescrcricaoSubcategoria.Size = new System.Drawing.Size(603, 20);
             this.txtDescrcricaoSubcategoria.StyleController = this.layoutControl1;
             this.txtDescrcricaoSubcategoria.TabIndex = 5;
             this.txtDescrcricaoSubcategoria.ToolTip = "A Subcategoria ajuda a segmentar os itens.";
@@ -167,42 +156,42 @@
             // 
             // textEdit1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(24, 102);
+            this.textEdit1.Location = new System.Drawing.Point(24, 147);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.textEdit1.Properties.MaskSettings.Set("mask", "d");
             this.textEdit1.Properties.MaxLength = 8;
-            this.textEdit1.Size = new System.Drawing.Size(738, 20);
+            this.textEdit1.Size = new System.Drawing.Size(1218, 20);
             this.textEdit1.StyleController = this.layoutControl1;
             this.textEdit1.TabIndex = 6;
             // 
             // cmbCSOSN
             // 
-            this.cmbCSOSN.Location = new System.Drawing.Point(24, 142);
+            this.cmbCSOSN.Location = new System.Drawing.Point(24, 187);
             this.cmbCSOSN.Name = "cmbCSOSN";
             this.cmbCSOSN.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbCSOSN.Size = new System.Drawing.Size(738, 20);
+            this.cmbCSOSN.Size = new System.Drawing.Size(1218, 20);
             this.cmbCSOSN.StyleController = this.layoutControl1;
             this.cmbCSOSN.TabIndex = 9;
             // 
             // cmbICMS
             // 
-            this.cmbICMS.Location = new System.Drawing.Point(36, 217);
+            this.cmbICMS.Location = new System.Drawing.Point(36, 262);
             this.cmbICMS.Name = "cmbICMS";
             this.cmbICMS.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbICMS.Size = new System.Drawing.Size(714, 20);
+            this.cmbICMS.Size = new System.Drawing.Size(1194, 20);
             this.cmbICMS.StyleController = this.layoutControl1;
             this.cmbICMS.TabIndex = 10;
             // 
             // imageComboBoxEdit1
             // 
-            this.imageComboBoxEdit1.Location = new System.Drawing.Point(36, 217);
+            this.imageComboBoxEdit1.Location = new System.Drawing.Point(36, 262);
             this.imageComboBoxEdit1.Name = "imageComboBoxEdit1";
             this.imageComboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.imageComboBoxEdit1.Size = new System.Drawing.Size(714, 20);
+            this.imageComboBoxEdit1.Size = new System.Drawing.Size(1194, 20);
             this.imageComboBoxEdit1.StyleController = this.layoutControl1;
             this.imageComboBoxEdit1.TabIndex = 11;
             // 
@@ -211,20 +200,19 @@
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.Root.GroupBordersVisible = false;
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem2,
             this.layoutControlGroup1,
             this.simpleSeparator1,
-            this.layoutControlItem7});
+            this.layoutControlGroup6});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(1624, 712);
+            this.Root.Size = new System.Drawing.Size(1266, 408);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.txtDescrcricaoSubcategoria;
-            this.layoutControlItem2.Location = new System.Drawing.Point(766, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(615, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(838, 692);
+            this.layoutControlItem2.Size = new System.Drawing.Size(607, 40);
             this.layoutControlItem2.Text = "Descrição da subcategoria";
             this.layoutControlItem2.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem2.TextSize = new System.Drawing.Size(126, 13);
@@ -235,9 +223,9 @@
             this.layoutControlItem3,
             this.tabbedControlGroup2,
             this.layoutControlItem6});
-            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 41);
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 86);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(766, 651);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1246, 302);
             this.layoutControlGroup1.Text = "Impostos";
             // 
             // layoutControlItem3
@@ -245,7 +233,7 @@
             this.layoutControlItem3.Control = this.textEdit1;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(742, 40);
+            this.layoutControlItem3.Size = new System.Drawing.Size(1222, 40);
             this.layoutControlItem3.Text = "NCN";
             this.layoutControlItem3.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem3.TextSize = new System.Drawing.Size(126, 13);
@@ -255,7 +243,7 @@
             this.tabbedControlGroup2.Location = new System.Drawing.Point(0, 80);
             this.tabbedControlGroup2.Name = "tabbedControlGroup2";
             this.tabbedControlGroup2.SelectedTabPage = this.layoutControlGroup2;
-            this.tabbedControlGroup2.Size = new System.Drawing.Size(742, 526);
+            this.tabbedControlGroup2.Size = new System.Drawing.Size(1222, 177);
             this.tabbedControlGroup2.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup2,
             this.layoutControlGroup3,
@@ -269,7 +257,7 @@
             this.layoutControlItem4});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(718, 479);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(1198, 130);
             this.layoutControlGroup2.Text = "ICMS";
             // 
             // layoutControlItem4
@@ -277,7 +265,7 @@
             this.layoutControlItem4.Control = this.cmbICMS;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(718, 479);
+            this.layoutControlItem4.Size = new System.Drawing.Size(1198, 130);
             this.layoutControlItem4.Text = "ICMS";
             this.layoutControlItem4.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem4.TextSize = new System.Drawing.Size(126, 13);
@@ -288,7 +276,7 @@
             this.layoutControlItem5});
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "layoutControlGroup3";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(718, 479);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(1198, 130);
             this.layoutControlGroup3.Text = "PIS";
             // 
             // layoutControlItem5
@@ -296,7 +284,7 @@
             this.layoutControlItem5.Control = this.imageComboBoxEdit1;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(718, 479);
+            this.layoutControlItem5.Size = new System.Drawing.Size(1198, 130);
             this.layoutControlItem5.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem5.TextSize = new System.Drawing.Size(126, 13);
             // 
@@ -304,14 +292,14 @@
             // 
             this.layoutControlGroup4.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup4.Name = "layoutControlGroup4";
-            this.layoutControlGroup4.Size = new System.Drawing.Size(718, 479);
+            this.layoutControlGroup4.Size = new System.Drawing.Size(1198, 130);
             this.layoutControlGroup4.Text = "COFINS";
             // 
             // layoutControlGroup5
             // 
             this.layoutControlGroup5.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup5.Name = "layoutControlGroup5";
-            this.layoutControlGroup5.Size = new System.Drawing.Size(718, 479);
+            this.layoutControlGroup5.Size = new System.Drawing.Size(1198, 130);
             this.layoutControlGroup5.Text = "IPI";
             // 
             // layoutControlItem6
@@ -319,7 +307,7 @@
             this.layoutControlItem6.Control = this.cmbCSOSN;
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 40);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(742, 40);
+            this.layoutControlItem6.Size = new System.Drawing.Size(1222, 40);
             this.layoutControlItem6.Text = "CSOSN";
             this.layoutControlItem6.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem6.TextSize = new System.Drawing.Size(126, 13);
@@ -327,30 +315,48 @@
             // simpleSeparator1
             // 
             this.simpleSeparator1.AllowHotTrack = false;
-            this.simpleSeparator1.Location = new System.Drawing.Point(0, 40);
+            this.simpleSeparator1.Location = new System.Drawing.Point(0, 85);
             this.simpleSeparator1.Name = "simpleSeparator1";
-            this.simpleSeparator1.Size = new System.Drawing.Size(766, 1);
+            this.simpleSeparator1.Size = new System.Drawing.Size(1246, 1);
             // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.cmbCategoria;
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(766, 40);
+            this.layoutControlItem7.Size = new System.Drawing.Size(615, 40);
             this.layoutControlItem7.Text = "Categoria";
             this.layoutControlItem7.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem7.TextSize = new System.Drawing.Size(126, 13);
+            // 
+            // uc_TituloTelas1
+            // 
+            this.uc_TituloTelas1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.uc_TituloTelas1.Location = new System.Drawing.Point(0, 0);
+            this.uc_TituloTelas1.Name = "uc_TituloTelas1";
+            this.uc_TituloTelas1.Size = new System.Drawing.Size(1259, 31);
+            this.uc_TituloTelas1.TabIndex = 42;
+            // 
+            // layoutControlGroup6
+            // 
+            this.layoutControlGroup6.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem7,
+            this.layoutControlItem2});
+            this.layoutControlGroup6.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup6.Name = "layoutControlGroup6";
+            this.layoutControlGroup6.Size = new System.Drawing.Size(1246, 85);
+            this.layoutControlGroup6.Text = "Aqui você pode realizar a o cadastro da subcategoria.";
             // 
             // uc_CadSubcategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.uc_TituloTelas1);
             this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnVoltar);
-            this.Controls.Add(this.labelControl1);
             this.Name = "uc_CadSubcategoria";
-            this.Size = new System.Drawing.Size(1658, 1048);
+            this.Size = new System.Drawing.Size(1259, 579);
             this.Load += new System.EventHandler(this.uc_CadSubcategoria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
@@ -374,14 +380,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.SimpleButton btnSalvar;
         private DevExpress.XtraEditors.SimpleButton btnVoltar;
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
@@ -405,5 +409,7 @@
         private DevExpress.XtraLayout.SimpleSeparator simpleSeparator1;
         private DevExpress.XtraEditors.LookUpEdit cmbCategoria;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+        private App_TelasCompartilhadas.uc_TituloTelas uc_TituloTelas1;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup6;
     }
 }

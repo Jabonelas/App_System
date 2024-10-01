@@ -283,36 +283,6 @@
     <Compile Include="Caixa\Fluxo de Caixa\Saida Caixa\uc_VisualizarSaidaCaixa.Designer.cs">
       <DependentUpon>uc_VisualizarSaidaCaixa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Consultas\Clientes\Consumidores-Empresas\uc_Ator.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Consultas\Clientes\Consumidores-Empresas\uc_Ator.Designer.cs">
-      <DependentUpon>uc_Ator.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Consultas\Clientes\Consumidores-Empresas\uc_CadAtor.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Consultas\Clientes\Consumidores-Empresas\uc_CadAtor.Designer.cs">
-      <DependentUpon>uc_CadAtor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Consultas\Itens\Produtos\uc_CadProduto.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Consultas\Itens\Produtos\uc_CadProduto.Designer.cs">
-      <DependentUpon>uc_CadProduto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Consultas\Itens\Produtos\uc_EstoqueProduto.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Consultas\Itens\Produtos\uc_EstoqueProduto.Designer.cs">
-      <DependentUpon>uc_EstoqueProduto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Consultas\Itens\Produtos\uc_Produto.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Consultas\Itens\Produtos\uc_Produto.Designer.cs">
-      <DependentUpon>uc_Produto.cs</DependentUpon>
-    </Compile>
     <Compile Include="Caixa\Atendimento\Venda\frmPagamentoPDV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -357,21 +327,6 @@
     <EmbeddedResource Include="Caixa\Relatorios\uc_RelatorioFluxoSaida.resx">
       <DependentUpon>uc_RelatorioFluxoSaida.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Consultas\Clientes\Consumidores-Empresas\uc_Ator.resx">
-      <DependentUpon>uc_Ator.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Consultas\Clientes\Consumidores-Empresas\uc_CadAtor.resx">
-      <DependentUpon>uc_CadAtor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Consultas\Itens\Produtos\uc_CadProduto.resx">
-      <DependentUpon>uc_CadProduto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Consultas\Itens\Produtos\uc_EstoqueProduto.resx">
-      <DependentUpon>uc_EstoqueProduto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Consultas\Itens\Produtos\uc_Produto.resx">
-      <DependentUpon>uc_Produto.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Caixa\Atendimento\Venda\frmPagamentoPDV.resx">
       <DependentUpon>frmPagamentoPDV.cs</DependentUpon>
     </EmbeddedResource>
@@ -400,9 +355,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tela Inicial\uc_TelaInicialPDV.resx">
       <DependentUpon>uc_TelaInicialPDV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="uc_TituloTelas.resx">
-      <DependentUpon>uc_TituloTelas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />
@@ -439,12 +391,6 @@
     </Compile>
     <Compile Include="Tela Inicial\uc_TelaInicialPDV.Designer.cs">
       <DependentUpon>uc_TelaInicialPDV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="uc_TituloTelas.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="uc_TituloTelas.Designer.cs">
-      <DependentUpon>uc_TituloTelas.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilities\Password.cs" />
     <Compile Include="Utilities\HtmlCssAsset.cs" />

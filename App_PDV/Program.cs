@@ -66,7 +66,7 @@ namespace App_PDV
             App_TelasCompartilhadas.frmLogin frmTelaInicial = new App_TelasCompartilhadas.frmLogin();
             frmTelaInicial.ShowDialog();
 
-            if (App_TelasCompartilhadas.Classes.VariaveisGlobais.IsInicializarSistema)
+            if (App_TelasCompartilhadas.Classes.VariaveisGlobais.isInicializarSistema)
             {
                 Application.Run(new frmTelaInicialPDV());
             }

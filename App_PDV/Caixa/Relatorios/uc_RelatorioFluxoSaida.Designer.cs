@@ -1,4 +1,6 @@
-﻿namespace App_PDV.Caixa.Relatorios
+﻿using App_TelasCompartilhadas;
+
+namespace App_PDV.Caixa.Relatorios
 {
     partial class uc_RelatorioFluxoSaida
     {
@@ -37,7 +39,7 @@
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.uc_TituloTelas1 = new App_PDV.uc_TituloTelas();
+            this.uc_TituloTelas1 = new App_TelasCompartilhadas.uc_TituloTelas();
             this.btnExcel = new DevExpress.XtraEditors.SimpleButton();
             this.btnBuscar = new DevExpress.XtraEditors.SimpleButton();
             this.grdFluxoSaida = new DevExpress.XtraGrid.GridControl();

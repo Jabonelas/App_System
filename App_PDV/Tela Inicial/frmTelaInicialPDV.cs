@@ -9,13 +9,11 @@ using App_PDV.FechamentoCaixa;
 using App_PDV.Fluxo_de_Caixa.Entrada_Caixa;
 using App_PDV.Fluxo_de_Caixa.Saida_Caixa;
 using App_PDV.Caixa.Relatorios;
-using App_PDV.Consultas.Itens.Consumidores;
-using App_PDV.Consultas.Itens.Produtos;
 using App_TelasCompartilhadas;
-
-using App_TelasCompartilhadas.Classes;
-
+using App_TelasCompartilhadas.Produtos;
+using DevExpress.XtraBars.FluentDesignSystem;
 using UserControl = System.Windows.Forms.UserControl;
+using Unimake.Business.DFe.Servicos;
 
 namespace App_PDV
 {
@@ -238,7 +236,7 @@ namespace App_PDV
             TelaCarregamento.ExibirCarregamentoForm(this);
 
             pnlTelaPrincipal.Controls.Clear();
-            uc_Produto ucProduto = new uc_Produto(this);
+            uc_Produto ucProduto = new uc_Produto(pnlTelaPrincipal);
             pnlTelaPrincipal.Controls.Add(ucProduto);
             pnlTelaPrincipal.Tag = ucProduto;
             ucProduto.Show();
@@ -266,9 +264,10 @@ namespace App_PDV
             TelaCarregamento.ExibirCarregamentoForm(this);
 
             pnlTelaPrincipal.Controls.Clear();
-            uc_Ator ucAtor = new uc_Ator(this, _tipoAtor);
+            App_TelasCompartilhadas.Ator.uc_Ator ucAtor = new App_TelasCompartilhadas.Ator.uc_Ator(pnlTelaPrincipal, _tipoAtor);
             pnlTelaPrincipal.Controls.Add(ucAtor);
             pnlTelaPrincipal.Tag = ucAtor;
+
             ucAtor.Show();
         }
 

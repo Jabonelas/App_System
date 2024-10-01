@@ -34,7 +34,7 @@ namespace App_ERP
 
         private void buttonEdit2_Properties_ButtonPressed_1(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            TelaDeCarregamento.ExibirCarregamentoForm(this);
+            TelaCarregamento.ExibirCarregamentoForm(this);
 
             // Usando XtraOpenFileDialog da DevExpress
             DevExpress.XtraEditors.XtraOpenFileDialog xtraOpenFileDialog = new DevExpress.XtraEditors.XtraOpenFileDialog();
@@ -56,7 +56,7 @@ namespace App_ERP
                 {
                     MensagensDoSistema.MensagemErroOk($"Erro ao carregar o arquivo XML. Verifique se o arquivo está no formato correto: {exception}");
 
-                    TelaDeCarregamento.EsconderCarregamento();
+                    TelaCarregamento.EsconderCarregamento();
 
                     return;
                 }
@@ -71,7 +71,7 @@ namespace App_ERP
                 {
                     MensagensDoSistema.MensagemErroOk($"Erro ao deserializar o XML. Verifique se o arquivo está no formato correto: {exception}");
 
-                    TelaDeCarregamento.EsconderCarregamento();
+                    TelaCarregamento.EsconderCarregamento();
 
                     return;
                 }
@@ -84,7 +84,7 @@ namespace App_ERP
 
                 if (n == null)
                 {
-                    TelaDeCarregamento.EsconderCarregamento();
+                    TelaCarregamento.EsconderCarregamento();
 
                     return;
                 }
@@ -96,7 +96,7 @@ namespace App_ERP
                     {
                         MensagensDoSistema.MensagemAtencaoOk("Este XML não corresponde a uma versão 4.00 da Nota Fiscal Eletrônica (NFe).");
 
-                        TelaDeCarregamento.EsconderCarregamento();
+                        TelaCarregamento.EsconderCarregamento();
 
                         return;
                     }
@@ -107,7 +107,7 @@ namespace App_ERP
                 {
                     MensagensDoSistema.MensagemAtencaoOk("Este XML ainda não está sendo utilizado em ambiente de produção.");
 
-                    TelaDeCarregamento.EsconderCarregamento();
+                    TelaCarregamento.EsconderCarregamento();
 
                     return;
                 }
@@ -116,7 +116,7 @@ namespace App_ERP
                 {
                     MensagensDoSistema.MensagemAtencaoOk("Este XML não corresponde a uma Nota Fiscal Eletrônica (NFe).");
 
-                    TelaDeCarregamento.EsconderCarregamento();
+                    TelaCarregamento.EsconderCarregamento();
 
                     return;
                 }
@@ -141,7 +141,7 @@ namespace App_ERP
                 }
             }
 
-            TelaDeCarregamento.EsconderCarregamento();
+            TelaCarregamento.EsconderCarregamento();
         }
 
         public void PreencherTabelaComXml(NfeProc nfeproc, long _idMovimentacao)
@@ -815,7 +815,7 @@ namespace App_ERP
 
         private void frmEntradaXML_Load(object sender, EventArgs e)
         {
-            TelaDeCarregamento.EsconderCarregamento();
+            TelaCarregamento.EsconderCarregamento();
         }
 
         private void LimparCampos()

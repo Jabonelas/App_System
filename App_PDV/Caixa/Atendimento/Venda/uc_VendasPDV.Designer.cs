@@ -1,4 +1,6 @@
-﻿namespace App_PDV
+﻿using App_TelasCompartilhadas;
+
+namespace App_PDV
 {
     partial class uc_VendasPDV
     {
@@ -41,7 +43,7 @@
             this.VlrTot = new DevExpress.XtraGrid.Columns.GridColumn();
             this.VlrDesconto = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnNovoRegistro = new DevExpress.XtraEditors.SimpleButton();
-            this.uc_TituloTelas1 = new App_PDV.uc_TituloTelas();
+            this.uc_TituloTelas1 = new App_TelasCompartilhadas.uc_TituloTelas();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();

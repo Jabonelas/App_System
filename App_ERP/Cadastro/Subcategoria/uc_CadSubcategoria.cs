@@ -26,6 +26,8 @@ namespace App_ERP.Subcategoria
 
             PreencherCategoria();
 
+            Layout();
+
             _frmTelaInicial = frmtelaInical;
 
             operacao = _operacao;
@@ -40,6 +42,16 @@ namespace App_ERP.Subcategoria
             {
                 PreencherCampos();
             }
+        }
+
+        private void Layout()
+        {
+            ConfigBotoes configBotoes = new ConfigBotoes();
+
+            configBotoes.BotaoVoltar(btnVoltar);
+            configBotoes.BotaoSalvar(btnSalvar);
+
+            uc_TituloTelas1.lblTituloTela.Text = "Cadastro de Subcategoria";
         }
 
         private void PreencherCategoria()
@@ -94,7 +106,7 @@ namespace App_ERP.Subcategoria
 
         private void uc_CadSubcategoria_Load(object sender, EventArgs e)
         {
-            TelaDeCarregamento.EsconderCarregamento();
+            TelaCarregamento.EsconderCarregamento();
         }
 
         private bool IsCamposPreenchidos()

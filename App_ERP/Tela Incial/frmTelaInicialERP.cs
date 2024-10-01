@@ -1,5 +1,4 @@
 ﻿using DevExpress.XtraBars;
-using App_ERP.Cadastro.Consumidor;
 using App_ERP.Cadastro.Marca;
 using App_ERP.Cadastro.Matriz;
 using App_ERP.Cadastro.PDV;
@@ -9,6 +8,7 @@ using App_TelasCompartilhadas.Classes;
 using App_ERP.Subcategoria;
 using System.Windows.Forms;
 using App_TelasCompartilhadas;
+using App_TelasCompartilhadas.Produtos;
 
 namespace App_ERP
 {
@@ -51,10 +51,10 @@ namespace App_ERP
 
         public void TelaProduto()
         {
-            TelaDeCarregamento.ExibirCarregamentoForm(this);
+            TelaCarregamento.ExibirCarregamentoForm(this);
 
             pnlTelaPrincipal.Controls.Clear();
-            uc_Prod ucProdutos = new uc_Prod(this);
+            uc_Produto ucProdutos = new uc_Produto(pnlTelaPrincipal);
             pnlTelaPrincipal.Controls.Add(ucProdutos);
             pnlTelaPrincipal.Tag = ucProdutos;
             ucProdutos.Show();
@@ -67,7 +67,7 @@ namespace App_ERP
 
         public void TelaCategoria()
         {
-            TelaDeCarregamento.ExibirCarregamentoForm(this);
+            TelaCarregamento.ExibirCarregamentoForm(this);
 
             pnlTelaPrincipal.Controls.Clear();
             uc_Categoria ucCategoria = new uc_Categoria(this);
@@ -83,7 +83,7 @@ namespace App_ERP
 
         public void TelaSubcategoria()
         {
-            TelaDeCarregamento.ExibirCarregamentoForm(this);
+            TelaCarregamento.ExibirCarregamentoForm(this);
 
             pnlTelaPrincipal.Controls.Clear();
             uc_SubCategoria ucSubCategoria = new uc_SubCategoria(this);
@@ -99,7 +99,7 @@ namespace App_ERP
 
         public void TelaSecao()
         {
-            TelaDeCarregamento.ExibirCarregamentoForm(this);
+            TelaCarregamento.ExibirCarregamentoForm(this);
 
             pnlTelaPrincipal.Controls.Clear();
             uc_Secao ucSecao = new uc_Secao(this);
@@ -115,7 +115,7 @@ namespace App_ERP
 
         public void TelaMarca()
         {
-            TelaDeCarregamento.ExibirCarregamentoForm(this);
+            TelaCarregamento.ExibirCarregamentoForm(this);
 
             pnlTelaPrincipal.Controls.Clear();
             uc_Marca ucMarca = new uc_Marca(this);
@@ -143,13 +143,13 @@ namespace App_ERP
 
         public void TelaAtor(int _tipoAtor)
         {
-            TelaDeCarregamento.ExibirCarregamentoForm(this);
+            TelaCarregamento.ExibirCarregamentoForm(this);
 
             pnlTelaPrincipal.Controls.Clear();
-            uc_Ator ucCadastroAtor = new uc_Ator(this, _tipoAtor);
-            pnlTelaPrincipal.Controls.Add(ucCadastroAtor);
-            pnlTelaPrincipal.Tag = ucCadastroAtor;
-            ucCadastroAtor.Show();
+            App_TelasCompartilhadas.Ator.uc_Ator ucAtor = new App_TelasCompartilhadas.Ator.uc_Ator(pnlTelaPrincipal, _tipoAtor);
+            pnlTelaPrincipal.Controls.Add(ucAtor);
+            pnlTelaPrincipal.Tag = ucAtor;
+            ucAtor.Show();
         }
 
         private void btnCadastrarConsumidor_ItemClick(object sender, ItemClickEventArgs e)
@@ -184,7 +184,7 @@ namespace App_ERP
 
         public void TelaMatriz()
         {
-            TelaDeCarregamento.ExibirCarregamentoForm(this);
+            TelaCarregamento.ExibirCarregamentoForm(this);
 
             pnlTelaPrincipal.Controls.Clear();
             uc_Matriz ucMatriz = new uc_Matriz(this);
@@ -200,7 +200,7 @@ namespace App_ERP
 
         public void TelaRede()
         {
-            TelaDeCarregamento.ExibirCarregamentoForm(this);
+            TelaCarregamento.ExibirCarregamentoForm(this);
 
             pnlTelaPrincipal.Controls.Clear();
             uc_Rede ucRede = new uc_Rede(this);
@@ -216,7 +216,7 @@ namespace App_ERP
 
         public void TelaPDV()
         {
-            TelaDeCarregamento.ExibirCarregamentoForm(this);
+            TelaCarregamento.ExibirCarregamentoForm(this);
 
             pnlTelaPrincipal.Controls.Clear();
             uc_PDV ucPDV = new uc_PDV(this);
@@ -232,7 +232,7 @@ namespace App_ERP
 
         private void btnCompra_ItemClick(object sender, ItemClickEventArgs e)
         {
-            TelaDeCarregamento.ExibirCarregamentoForm(this);
+            TelaCarregamento.ExibirCarregamentoForm(this);
 
             frmEntradaXML ucEntradaXml = new frmEntradaXML();
             ucEntradaXml.ShowDialog();

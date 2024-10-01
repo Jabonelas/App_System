@@ -53,7 +53,7 @@ namespace App_ERP.Cadastro.Secao
 
         private void uc_CadSecao_Load(object sender, EventArgs e)
         {
-            TelaDeCarregamento.EsconderCarregamento();
+            TelaCarregamento.EsconderCarregamento();
         }
 
         private bool IsCamposPreenchidos()

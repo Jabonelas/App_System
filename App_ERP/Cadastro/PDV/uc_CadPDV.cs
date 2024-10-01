@@ -91,7 +91,7 @@ namespace App_ERP.Cadastro.PDV
 
         private void uc_CadPDV_Load(object sender, EventArgs e)
         {
-            TelaDeCarregamento.EsconderCarregamento();
+            TelaCarregamento.EsconderCarregamento();
         }
 
         private bool IsCamposPreenchidos()

@@ -19,9 +19,23 @@ namespace App_ERP
         {
             InitializeComponent();
 
+            Layout();
+
             CarregarGridCategoriassAtivas();
 
             _frmTelaInicial = _form;
+        }
+
+        private void Layout()
+        {
+            ConfigBotoes configBotoes = new ConfigBotoes();
+
+            configBotoes.BotaoVoltar(btnVoltar);
+            configBotoes.BotaoNovoRegistro(btnNovo);
+            configBotoes.BotaoAlterar(btnAlterar);
+            configBotoes.BotaoExcluir(btnExcluir);
+
+            uc_TituloTelas1.lblTituloTela.Text = "Categoria";
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -31,7 +45,7 @@ namespace App_ERP
 
         private void TelaCadastrarCategoria(string _operacao, int _idCategoria)
         {
-            TelaDeCarregamento.ExibirCarregamentoUserControl(this);
+            TelaCarregamento.ExibirCarregamentoUserControl(this);
 
             _frmTelaInicial.pnlTelaPrincipal.Controls.Clear();
             uc_CadCategoria ucCadCategoria = new uc_CadCategoria(_frmTelaInicial, _operacao, _idCategoria);
@@ -42,7 +56,7 @@ namespace App_ERP
 
         private void uc_Categoria_Load(object sender, EventArgs e)
         {
-            TelaDeCarregamento.EsconderCarregamento();
+            TelaCarregamento.EsconderCarregamento();
         }
 
         private void CarregarGridCategoriassAtivas()

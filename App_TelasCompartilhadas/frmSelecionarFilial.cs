@@ -123,7 +123,7 @@ namespace App_TelasCompartilhadas
 
                         this.Close();
 
-                        VariaveisGlobais.IsInicializarSistema = true;
+                        VariaveisGlobais.isInicializarSistema = true;
                     }
                     else
                     {

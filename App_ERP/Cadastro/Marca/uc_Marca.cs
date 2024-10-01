@@ -18,9 +18,23 @@ namespace App_ERP.Cadastro.Marca
         {
             InitializeComponent();
 
+            Layout();
+
             _frmTelaInicial = frm;
 
             CarregarGridMarcasAtivas();
+        }
+
+        private void Layout()
+        {
+            ConfigBotoes configBotoes = new ConfigBotoes();
+
+            configBotoes.BotaoVoltar(btnVoltar);
+            configBotoes.BotaoNovoRegistro(btnNovo);
+            configBotoes.BotaoAlterar(btnAlterar);
+            configBotoes.BotaoExcluir(btnExcluir);
+
+            uc_TituloTelas1.lblTituloTela.Text = "Marca";
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -30,13 +44,13 @@ namespace App_ERP.Cadastro.Marca
 
         private void TelaCadastrarMarca(string _operacao, long _idMarca)
         {
-            TelaDeCarregamento.ExibirCarregamentoUserControl(this);
+            TelaCarregamento.ExibirCarregamentoUserControl(this);
 
             _frmTelaInicial.pnlTelaPrincipal.Controls.Clear();
             uc_CadMarca ucCadMarca = new uc_CadMarca(_frmTelaInicial, _operacao, _idMarca);
             _frmTelaInicial.pnlTelaPrincipal.Controls.Add(ucCadMarca);
             _frmTelaInicial.pnlTelaPrincipal.Tag = ucCadMarca;
-            this.Invoke(new Action(() => TelaDeCarregamento.EsconderCarregamento()));
+            this.Invoke(new Action(() => TelaCarregamento.EsconderCarregamento()));
             ucCadMarca.Show();
         }
 
@@ -47,7 +61,7 @@ namespace App_ERP.Cadastro.Marca
 
         private void uc_Marca_Load(object sender, EventArgs e)
         {
-            TelaDeCarregamento.EsconderCarregamento();
+            TelaCarregamento.EsconderCarregamento();
         }
 
         private void PegaIdMarcaSelecionadaGrid()

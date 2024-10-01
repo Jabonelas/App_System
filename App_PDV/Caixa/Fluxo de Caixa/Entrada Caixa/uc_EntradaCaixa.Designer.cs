@@ -1,4 +1,6 @@
-﻿namespace App_PDV.Fluxo_de_Caixa.Entrada_Caixa
+﻿using App_TelasCompartilhadas;
+
+namespace App_PDV.Fluxo_de_Caixa.Entrada_Caixa
 {
     partial class uc_EntradaCaixa
     {
@@ -36,7 +38,7 @@
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.uc_TituloTelas1 = new App_PDV.uc_TituloTelas();
+            this.uc_TituloTelas1 = new App_TelasCompartilhadas.uc_TituloTelas();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();

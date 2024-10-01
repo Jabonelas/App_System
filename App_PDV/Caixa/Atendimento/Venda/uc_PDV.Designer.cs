@@ -1,4 +1,6 @@
-﻿namespace App_PDV
+﻿using App_TelasCompartilhadas;
+
+namespace App_PDV
 {
     partial class uc_PDV
     {
@@ -51,7 +53,7 @@
             this.btnVoltar = new DevExpress.XtraEditors.SimpleButton();
             this.buttonEdit1 = new DevExpress.XtraEditors.ButtonEdit();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.uc_TituloTelas1 = new App_PDV.uc_TituloTelas();
+            this.uc_TituloTelas1 = new App_TelasCompartilhadas.uc_TituloTelas();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();

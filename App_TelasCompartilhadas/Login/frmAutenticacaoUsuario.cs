@@ -18,11 +18,11 @@ namespace App_TelasCompartilhadas.Login
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            var dialog = MensagensDoSistema.MensagemAtencaoYesNo("Tem serteza que deseja finalizar a abplicação?");
+            var dialog = MensagensDoSistema.MensagemAtencaoYesNo("Tem serteza que deseja finalizar a aplicação?");
 
             if (dialog == DialogResult.Yes)
             {
-                Application.Exit();
+                this.Dispose();
             }
         }
 
@@ -30,9 +30,7 @@ namespace App_TelasCompartilhadas.Login
         {
             if (IsSenhaUsuarioValido(txtSenha.Text, txtUsuario.Text.ToLower()))
             {
-                VariaveisGlobais.IsUsuarioComPermissao = true;
-
-                this.Dispose();
+                //this.Dispose();
             }
             else
             {
@@ -40,7 +38,7 @@ namespace App_TelasCompartilhadas.Login
             }
         }
 
-        private static bool IsSenhaUsuarioValido(string _senha, string _usuario)
+        private bool IsSenhaUsuarioValido(string _senha, string _usuario)
         {
             // Gerar o hash da senha digitada
             byte[] senhaDigitadaHashCode = ComputeSHA256Hash(_senha);
@@ -57,6 +55,18 @@ namespace App_TelasCompartilhadas.Login
 
                     // Comparar os hashes de maneira segura
                     var isSenhaIgual = CompareHashes(senhaDigitadaHashCode, senhaByteArray);
+
+                    //se for usuário com permissão de administrador
+                    if (dadosUsuario.at_atorTipo == 102)
+                    {
+                        VariaveisGlobais.isUsuarioComPermissao = true;
+
+                        this.Dispose();
+                    }
+                    else
+                    {
+                        MensagensDoSistema.MensagemAtencaoOk("Usuário sem permissão de acesso.");
+                    }
 
                     return isSenhaIgual;
                 }

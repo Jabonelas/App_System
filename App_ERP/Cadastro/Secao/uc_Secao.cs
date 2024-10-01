@@ -31,13 +31,13 @@ namespace App_ERP.Cadastro.Secao
 
         private void TelaCadastrarSecao(string _operacao, long _idSecao)
         {
-            TelaDeCarregamento.ExibirCarregamentoUserControl(this);
+            TelaCarregamento.ExibirCarregamentoUserControl(this);
 
             _frmTelaInicial.pnlTelaPrincipal.Controls.Clear();
             uc_CadSecao ucCadSecao = new uc_CadSecao(_frmTelaInicial, _operacao, _idSecao);
             _frmTelaInicial.pnlTelaPrincipal.Controls.Add(ucCadSecao);
             _frmTelaInicial.pnlTelaPrincipal.Tag = ucCadSecao;
-            this.Invoke(new Action(() => TelaDeCarregamento.EsconderCarregamento()));
+            this.Invoke(new Action(() => TelaCarregamento.EsconderCarregamento()));
             ucCadSecao.Show();
         }
 
@@ -89,7 +89,7 @@ namespace App_ERP.Cadastro.Secao
 
         private void uc_Secao_Load(object sender, EventArgs e)
         {
-            TelaDeCarregamento.EsconderCarregamento();
+            TelaCarregamento.EsconderCarregamento();
         }
 
         private void PegaIdSecaoSelecionadaGrid()

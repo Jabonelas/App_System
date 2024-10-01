@@ -1,4 +1,6 @@
-﻿namespace App_PDV
+﻿using App_TelasCompartilhadas;
+
+namespace App_PDV
 {
     partial class frmPagamentoPDV
     {
@@ -68,7 +70,7 @@
             this.idPagamento = new DevExpress.XtraGrid.Columns.GridColumn();
             this.DescricaoPagamento = new DevExpress.XtraGrid.Columns.GridColumn();
             this.VlrPagamento = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.uc_TituloTelas1 = new App_PDV.uc_TituloTelas();
+            this.uc_TituloTelas1 = new App_TelasCompartilhadas.uc_TituloTelas();
             this.layoutControl4 = new DevExpress.XtraLayout.LayoutControl();
             this.layoutControlGroup6 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup7 = new DevExpress.XtraLayout.LayoutControlGroup();

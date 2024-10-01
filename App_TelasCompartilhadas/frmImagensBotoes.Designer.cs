@@ -50,12 +50,12 @@
             this.colecaoImagens.Add("salvar", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("colecaoImagens.salvar"))));
             this.colecaoImagens.Add("novo", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("colecaoImagens.novo"))));
             // 
-            // XtraForm2
+            // frmImagensBotoes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(596, 268);
-            this.Name = "XtraForm2";
+            this.ClientSize = new System.Drawing.Size(315, 104);
+            this.Name = "frmImagensBotoes";
             this.Text = "XtraForm2";
             ((System.ComponentModel.ISupportInitialize)(this.colecaoImagens)).EndInit();
             this.ResumeLayout(false);

@@ -239,24 +239,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cadastro\Ator\uc_Ator.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Cadastro\Ator\uc_Ator.Designer.cs">
-      <DependentUpon>uc_Ator.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Cadastro\Ator\uc_CadAtor.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Cadastro\Ator\uc_CadAtor.Designer.cs">
-      <DependentUpon>uc_CadAtor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Cadastro\Funcionario\uc_CadFuncionario.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Cadastro\Funcionario\uc_CadFuncionario.Designer.cs">
-      <DependentUpon>uc_CadFuncionario.cs</DependentUpon>
-    </Compile>
     <Compile Include="Cadastro\Marca\uc_CadMarca.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -323,18 +305,6 @@
     <Compile Include="EntradaXML\frmRelacionarProdEntradaXML.Designer.cs">
       <DependentUpon>frmRelacionarProdEntradaXML.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cadastro\Produto\uc_CadProduto.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Cadastro\Produto\uc_CadProduto.Designer.cs">
-      <DependentUpon>uc_CadProduto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Cadastro\Produto\uc_ Produto.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Cadastro\Produto\uc_ Produto.Designer.cs">
-      <DependentUpon>uc_ Produto.cs</DependentUpon>
-    </Compile>
     <Compile Include="Tela Incial\frmTelaInicialERP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -374,16 +344,6 @@
     <Compile Include="Cadastro\Matriz\uc_CadMatriz.Designer.cs">
       <DependentUpon>uc_CadMatriz.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Cadastro\Ator\uc_Ator.resx">
-      <DependentUpon>uc_Ator.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Cadastro\Ator\uc_CadAtor.resx">
-      <DependentUpon>uc_CadAtor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Cadastro\Funcionario\uc_CadFuncionario.resx">
-      <DependentUpon>uc_CadFuncionario.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="Cadastro\Marca\uc_CadMarca.resx">
       <DependentUpon>uc_CadMarca.cs</DependentUpon>
     </EmbeddedResource>
@@ -416,12 +376,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EntradaXML\frmRelacionarProdEntradaXML.resx">
       <DependentUpon>frmRelacionarProdEntradaXML.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Cadastro\Produto\uc_ Produto.resx">
-      <DependentUpon>uc_ Produto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Cadastro\Produto\uc_CadProduto.resx">
-      <DependentUpon>uc_CadProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tela Incial\frmTelaInicialERP.resx">
       <DependentUpon>frmTelaInicialERP.cs</DependentUpon>

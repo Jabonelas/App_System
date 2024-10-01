@@ -19,20 +19,34 @@ namespace App_ERP.Cadastro.Matriz
         {
             InitializeComponent();
 
+            Layout();
+
             _frmTelaInicial = frm;
 
             CarregarGridMatrizAtivas();
         }
 
+        private void Layout()
+        {
+            ConfigBotoes configBotoes = new ConfigBotoes();
+
+            configBotoes.BotaoVoltar(btnVoltar);
+            configBotoes.BotaoNovoRegistro(btnNovo);
+            configBotoes.BotaoAlterar(btnAlterar);
+            configBotoes.BotaoExcluir(btnExcluir);
+
+            uc_TituloTelas1.lblTituloTela.Text = "Matriz";
+        }
+
         private void TelaCadastrarMatriz(string _operacao, long _idMatriz)
         {
-            TelaDeCarregamento.ExibirCarregamentoUserControl(this);
+            TelaCarregamento.ExibirCarregamentoUserControl(this);
 
             _frmTelaInicial.pnlTelaPrincipal.Controls.Clear();
             uc_CadMatriz ucCadMarca = new uc_CadMatriz(_frmTelaInicial, _operacao, _idMatriz);
             _frmTelaInicial.pnlTelaPrincipal.Controls.Add(ucCadMarca);
             _frmTelaInicial.pnlTelaPrincipal.Tag = ucCadMarca;
-            this.Invoke(new Action(() => TelaDeCarregamento.EsconderCarregamento()));
+            this.Invoke(new Action(() => TelaCarregamento.EsconderCarregamento()));
             ucCadMarca.Show();
         }
 
@@ -43,7 +57,7 @@ namespace App_ERP.Cadastro.Matriz
 
         private void Matriz_Load(object sender, EventArgs e)
         {
-            TelaDeCarregamento.EsconderCarregamento();
+            TelaCarregamento.EsconderCarregamento();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)

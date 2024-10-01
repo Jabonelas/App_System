@@ -125,7 +125,7 @@ namespace App_TelasCompartilhadas
                         frmSelecionarFilial selecionarPdv = new frmSelecionarFilial();
                         selecionarPdv.ShowDialog();
 
-                        VariaveisGlobais.IsInicializarSistema = true;
+                        VariaveisGlobais.isInicializarSistema = true;
                     }
                     else
                     {
@@ -137,7 +137,7 @@ namespace App_TelasCompartilhadas
 
                         this.Hide();
 
-                        VariaveisGlobais.IsInicializarSistema = true;
+                        VariaveisGlobais.isInicializarSistema = true;
                     }
                 }
             }
@@ -172,7 +172,7 @@ namespace App_TelasCompartilhadas
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            var dialog = MensagensDoSistema.MensagemAtencaoYesNo("Tem serteza que deseja finalizar a abplicação?");
+            var dialog = MensagensDoSistema.MensagemAtencaoYesNo("Tem serteza que deseja finalizar a aplicação?");
 
             if (dialog == DialogResult.Yes)
             {

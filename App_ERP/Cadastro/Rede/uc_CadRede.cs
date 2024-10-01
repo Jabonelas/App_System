@@ -50,7 +50,7 @@ namespace App_ERP.Cadastro.Rede
 
         private void uc_CadRede_Load(object sender, EventArgs e)
         {
-            TelaDeCarregamento.EsconderCarregamento();
+            TelaCarregamento.EsconderCarregamento();
         }
 
         private bool IsCamposPreenchidos()

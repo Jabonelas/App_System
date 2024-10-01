@@ -23,6 +23,8 @@ namespace App_ERP
         {
             InitializeComponent();
 
+            Layout();
+
             PreencherSecoes();
 
             _frmTelaInicial = _form;
@@ -37,6 +39,16 @@ namespace App_ERP
             }
         }
 
+        private void Layout()
+        {
+            ConfigBotoes configBotoes = new ConfigBotoes();
+
+            configBotoes.BotaoVoltar(btnVoltar);
+            configBotoes.BotaoSalvar(btnSalvar);
+
+            uc_TituloTelas1.lblTituloTela.Text = " Cadastro de Categorias";
+        }
+
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             _frmTelaInicial.TelaCategoria();
@@ -44,7 +56,7 @@ namespace App_ERP
 
         private void uc_CadCategoria_Load(object sender, EventArgs e)
         {
-            TelaDeCarregamento.EsconderCarregamento();
+            TelaCarregamento.EsconderCarregamento();
         }
 
         private void PreencherCampos()

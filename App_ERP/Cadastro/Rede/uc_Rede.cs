@@ -26,18 +26,18 @@ namespace App_ERP.Cadastro.Rede
 
         private void uc_Rede_Load(object sender, EventArgs e)
         {
-            TelaDeCarregamento.EsconderCarregamento();
+            TelaCarregamento.EsconderCarregamento();
         }
 
         private void TelaCadastrarRede(string _operacao, long _idRede)
         {
-            TelaDeCarregamento.ExibirCarregamentoUserControl(this);
+            TelaCarregamento.ExibirCarregamentoUserControl(this);
 
             _frmTelaInicial.pnlTelaPrincipal.Controls.Clear();
             uc_CadRede ucCadRede = new uc_CadRede(_frmTelaInicial, _operacao, _idRede);
             _frmTelaInicial.pnlTelaPrincipal.Controls.Add(ucCadRede);
             _frmTelaInicial.pnlTelaPrincipal.Tag = ucCadRede;
-            this.Invoke(new Action(() => TelaDeCarregamento.EsconderCarregamento()));
+            this.Invoke(new Action(() => TelaCarregamento.EsconderCarregamento()));
             ucCadRede.Show();
         }
 

@@ -1,4 +1,6 @@
-﻿namespace App_PDV.Fluxo_de_Caixa.Entrada_Caixa
+﻿using App_TelasCompartilhadas;
+
+namespace App_PDV.Fluxo_de_Caixa.Entrada_Caixa
 {
     partial class uc_VisualizarEntradasCaixa
     {
@@ -36,7 +38,7 @@
             this.VlrDesconto = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnVoltar = new DevExpress.XtraEditors.SimpleButton();
             this.btnNovoRegistro = new DevExpress.XtraEditors.SimpleButton();
-            this.uc_TituloTelas1 = new App_PDV.uc_TituloTelas();
+            this.uc_TituloTelas1 = new App_TelasCompartilhadas.uc_TituloTelas();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();

@@ -19,6 +19,8 @@ namespace App_ERP.Cadastro.Marca
         {
             InitializeComponent();
 
+            Layout();
+
             _frmTelaInicial = frm;
 
             operacao = _operacao;
@@ -29,6 +31,16 @@ namespace App_ERP.Cadastro.Marca
             {
                 PreencherCampos();
             }
+        }
+
+        private void Layout()
+        {
+            ConfigBotoes configBotoes = new ConfigBotoes();
+
+            configBotoes.BotaoVoltar(btnVoltar);
+            configBotoes.BotaoSalvar(btnSalvar);
+
+            uc_TituloTelas1.lblTituloTela.Text = "Cadastrar Marca";
         }
 
         private void PreencherCampos()
@@ -55,7 +67,7 @@ namespace App_ERP.Cadastro.Marca
 
         private void uc_CadMarca_Load(object sender, EventArgs e)
         {
-            TelaDeCarregamento.EsconderCarregamento();
+            TelaCarregamento.EsconderCarregamento();
         }
 
         private void AlterarMarca()

@@ -21,6 +21,8 @@ namespace App_ERP
         {
             InitializeComponent();
 
+            Layout();
+
             _frmTelaInicial = frm;
 
             operacao = _operacao;
@@ -33,6 +35,16 @@ namespace App_ERP
             {
                 PreencherCampos();
             }
+        }
+
+        private void Layout()
+        {
+            ConfigBotoes configBotoes = new ConfigBotoes();
+
+            configBotoes.BotaoVoltar(btnVoltar);
+            configBotoes.BotaoSalvar(btnSalvar);
+
+            uc_TituloTelas1.lblTituloTela.Text = "Cadastrar Matriz";
         }
 
         private void PreencherCampos()
@@ -93,7 +105,7 @@ namespace App_ERP
 
         private void uc_CadMatriz_Load(object sender, EventArgs e)
         {
-            TelaDeCarregamento.EsconderCarregamento();
+            TelaCarregamento.EsconderCarregamento();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)

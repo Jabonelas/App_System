@@ -19,25 +19,39 @@ namespace App_ERP.Subcategoria
         {
             InitializeComponent();
 
+            Layout();
+
             _frmTelaInicial = frmtelaInical;
 
             CarregarGridSubcategoriasAtivas();
         }
 
+        private void Layout()
+        {
+            ConfigBotoes configBotoes = new ConfigBotoes();
+
+            configBotoes.BotaoVoltar(btnVoltar);
+            configBotoes.BotaoNovoRegistro(btnNovo);
+            configBotoes.BotaoAlterar(btnAlterar);
+            configBotoes.BotaoExcluir(btnExcluir);
+
+            uc_TituloTelas1.lblTituloTela.Text = "Subcategoria";
+        }
+
         private void uc_SubCategoria_Load(object sender, EventArgs e)
         {
-            TelaDeCarregamento.EsconderCarregamento();
+            TelaCarregamento.EsconderCarregamento();
         }
 
         private void TelaCadastrarSubcategoria(string _operacao, long _idSubCategoria)
         {
-            TelaDeCarregamento.ExibirCarregamentoUserControl(this);
+            TelaCarregamento.ExibirCarregamentoUserControl(this);
 
             _frmTelaInicial.pnlTelaPrincipal.Controls.Clear();
             uc_CadSubcategoria ucCadSubCategoria = new uc_CadSubcategoria(_frmTelaInicial, _operacao, _idSubCategoria);
             _frmTelaInicial.pnlTelaPrincipal.Controls.Add(ucCadSubCategoria);
             _frmTelaInicial.pnlTelaPrincipal.Tag = ucCadSubCategoria;
-            this.Invoke(new Action(() => TelaDeCarregamento.EsconderCarregamento()));
+            this.Invoke(new Action(() => TelaCarregamento.EsconderCarregamento()));
             ucCadSubCategoria.Show();
         }
 

@@ -28,11 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_Matriz));
-            this.btnCadastrar = new DevExpress.XtraEditors.SimpleButton();
+            this.btnNovo = new DevExpress.XtraEditors.SimpleButton();
             this.btnVoltar = new DevExpress.XtraEditors.SimpleButton();
-            this.lblTitulo = new DevExpress.XtraEditors.LabelControl();
-            this.lblSubTitulo = new DevExpress.XtraEditors.LabelControl();
             this.grdMatriz = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -42,37 +39,45 @@
             this.NomeFantasia = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnExcluir = new DevExpress.XtraEditors.SimpleButton();
             this.btnAlterar = new DevExpress.XtraEditors.SimpleButton();
+            this.uc_TituloTelas1 = new App_TelasCompartilhadas.uc_TituloTelas();
+            this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             ((System.ComponentModel.ISupportInitialize)(this.grdMatriz)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
+            this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnCadastrar
+            // btnNovo
             // 
-            this.btnCadastrar.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.Appearance.Options.UseFont = true;
-            this.btnCadastrar.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnCadastrar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCadastrar.ImageOptions.SvgImage")));
-            this.btnCadastrar.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
-            this.btnCadastrar.Location = new System.Drawing.Point(141, 72);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(106, 68);
-            this.btnCadastrar.TabIndex = 38;
-            this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.ToolTip = "Clique aqui para adicionar um novo registro.";
-            this.btnCadastrar.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.btnCadastrar.ToolTipTitle = "Cadastrar:";
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            this.btnNovo.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNovo.Appearance.Options.UseFont = true;
+            this.btnNovo.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.btnNovo.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
+            this.btnNovo.Location = new System.Drawing.Point(71, 39);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(58, 54);
+            this.btnNovo.TabIndex = 38;
+            this.btnNovo.Text = "Novo";
+            this.btnNovo.ToolTip = "Clique aqui para adicionar um novo registro.";
+            this.btnNovo.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.btnNovo.ToolTipTitle = "Cadastrar:";
+            this.btnNovo.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnVoltar
             // 
             this.btnVoltar.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVoltar.Appearance.Options.UseFont = true;
             this.btnVoltar.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnVoltar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnVoltar.ImageOptions.SvgImage")));
             this.btnVoltar.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
-            this.btnVoltar.Location = new System.Drawing.Point(29, 72);
+            this.btnVoltar.Location = new System.Drawing.Point(7, 39);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(106, 68);
+            this.btnVoltar.Size = new System.Drawing.Size(58, 54);
             this.btnVoltar.TabIndex = 37;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.ToolTip = "Clique para retornar à tela anterior.";
@@ -80,30 +85,12 @@
             this.btnVoltar.ToolTipTitle = "Voltar:";
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
-            // lblTitulo
-            // 
-            this.lblTitulo.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Appearance.Options.UseFont = true;
-            this.lblTitulo.Location = new System.Drawing.Point(29, 26);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(57, 25);
-            this.lblTitulo.TabIndex = 36;
-            this.lblTitulo.Text = "Matriz";
-            // 
-            // lblSubTitulo
-            // 
-            this.lblSubTitulo.Location = new System.Drawing.Point(28, 169);
-            this.lblSubTitulo.Name = "lblSubTitulo";
-            this.lblSubTitulo.Size = new System.Drawing.Size(91, 13);
-            this.lblSubTitulo.TabIndex = 43;
-            this.lblSubTitulo.Text = "Matriz cadastradas";
-            // 
             // grdMatriz
             // 
-            this.grdMatriz.Location = new System.Drawing.Point(28, 188);
+            this.grdMatriz.Location = new System.Drawing.Point(24, 45);
             this.grdMatriz.MainView = this.gridView1;
             this.grdMatriz.Name = "grdMatriz";
-            this.grdMatriz.Size = new System.Drawing.Size(1603, 726);
+            this.grdMatriz.Size = new System.Drawing.Size(1217, 352);
             this.grdMatriz.TabIndex = 42;
             this.grdMatriz.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -163,11 +150,10 @@
             this.btnExcluir.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.Appearance.Options.UseFont = true;
             this.btnExcluir.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnExcluir.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnExcluir.ImageOptions.SvgImage")));
             this.btnExcluir.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
-            this.btnExcluir.Location = new System.Drawing.Point(141, 954);
+            this.btnExcluir.Location = new System.Drawing.Point(71, 518);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(106, 68);
+            this.btnExcluir.Size = new System.Drawing.Size(58, 54);
             this.btnExcluir.TabIndex = 41;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.ToolTip = "Clique para remover o registro selecionado.";
@@ -180,11 +166,10 @@
             this.btnAlterar.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterar.Appearance.Options.UseFont = true;
             this.btnAlterar.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnAlterar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAlterar.ImageOptions.SvgImage")));
             this.btnAlterar.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
-            this.btnAlterar.Location = new System.Drawing.Point(29, 954);
+            this.btnAlterar.Location = new System.Drawing.Point(7, 518);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(106, 68);
+            this.btnAlterar.Size = new System.Drawing.Size(58, 54);
             this.btnAlterar.TabIndex = 40;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.ToolTip = "Clique para modificar o registro selecionado.";
@@ -192,33 +177,80 @@
             this.btnAlterar.ToolTipTitle = "Alterar:";
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
+            // uc_TituloTelas1
+            // 
+            this.uc_TituloTelas1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.uc_TituloTelas1.Location = new System.Drawing.Point(0, 0);
+            this.uc_TituloTelas1.Name = "uc_TituloTelas1";
+            this.uc_TituloTelas1.Size = new System.Drawing.Size(1259, 31);
+            this.uc_TituloTelas1.TabIndex = 44;
+            // 
+            // layoutControl1
+            // 
+            this.layoutControl1.Controls.Add(this.grdMatriz);
+            this.layoutControl1.Location = new System.Drawing.Point(-4, 95);
+            this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.Root = this.Root;
+            this.layoutControl1.Size = new System.Drawing.Size(1265, 421);
+            this.layoutControl1.TabIndex = 45;
+            this.layoutControl1.Text = "layoutControl1";
+            // 
+            // Root
+            // 
+            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.Root.GroupBordersVisible = false;
+            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlGroup1});
+            this.Root.Name = "Root";
+            this.Root.Size = new System.Drawing.Size(1265, 421);
+            this.Root.TextVisible = false;
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.grdMatriz;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(1221, 356);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextVisible = false;
+            // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1});
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1245, 401);
+            this.layoutControlGroup1.Text = "Aqui você pode visualizar todas as matrizes cadastradas.";
+            // 
             // uc_Matriz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.lblSubTitulo);
-            this.Controls.Add(this.grdMatriz);
+            this.Controls.Add(this.layoutControl1);
+            this.Controls.Add(this.uc_TituloTelas1);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnAlterar);
-            this.Controls.Add(this.btnCadastrar);
+            this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.btnVoltar);
-            this.Controls.Add(this.lblTitulo);
             this.Name = "uc_Matriz";
-            this.Size = new System.Drawing.Size(1658, 1048);
+            this.Size = new System.Drawing.Size(1259, 579);
             this.Load += new System.EventHandler(this.Matriz_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdMatriz)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
+            this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private DevExpress.XtraEditors.SimpleButton btnCadastrar;
+        private DevExpress.XtraEditors.SimpleButton btnNovo;
         private DevExpress.XtraEditors.SimpleButton btnVoltar;
-        private DevExpress.XtraEditors.LabelControl lblTitulo;
-        private DevExpress.XtraEditors.LabelControl lblSubTitulo;
         private DevExpress.XtraGrid.GridControl grdMatriz;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
@@ -228,5 +260,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn CNPJ;
         private DevExpress.XtraGrid.Columns.GridColumn RazaoSocial;
         private DevExpress.XtraGrid.Columns.GridColumn NomeFantasia;
+        private App_TelasCompartilhadas.uc_TituloTelas uc_TituloTelas1;
+        private DevExpress.XtraLayout.LayoutControl layoutControl1;
+        private DevExpress.XtraLayout.LayoutControlGroup Root;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
     }
 }

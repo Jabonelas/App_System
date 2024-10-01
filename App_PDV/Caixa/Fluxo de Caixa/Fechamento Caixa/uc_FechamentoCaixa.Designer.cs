@@ -1,4 +1,6 @@
-﻿namespace App_PDV.FechamentoCaixa
+﻿using App_TelasCompartilhadas;
+
+namespace App_PDV.FechamentoCaixa
 {
     partial class uc_FechamentoCaixa
     {
@@ -36,7 +38,7 @@
             this.Data = new DevExpress.XtraGrid.Columns.GridColumn();
             this.frmPagamento = new DevExpress.XtraGrid.Columns.GridColumn();
             this.VlrDesconto = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.uc_TituloTelas1 = new App_PDV.uc_TituloTelas();
+            this.uc_TituloTelas1 = new App_TelasCompartilhadas.uc_TituloTelas();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();

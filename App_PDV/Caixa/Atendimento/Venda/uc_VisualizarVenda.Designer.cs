@@ -1,4 +1,6 @@
-﻿namespace App_PDV
+﻿using App_TelasCompartilhadas;
+
+namespace App_PDV
 {
     partial class uc_VisualizarVenda
     {
@@ -57,7 +59,7 @@
             this.lblTotalGeral = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btnEnvioEmail = new DevExpress.XtraEditors.SimpleButton();
-            this.uc_TituloTelas1 = new App_PDV.uc_TituloTelas();
+            this.uc_TituloTelas1 = new App_TelasCompartilhadas.uc_TituloTelas();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.txtCPFCliente = new DevExpress.XtraEditors.TextEdit();
             this.txtNomeCliente = new DevExpress.XtraEditors.TextEdit();

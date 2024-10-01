@@ -76,7 +76,7 @@ namespace App_ERP.Cadastro.PDV
 
         private void TelaCadastrarPDV(string _operacao, int _idPDV)
         {
-            TelaDeCarregamento.ExibirCarregamentoUserControl(this);
+            TelaCarregamento.ExibirCarregamentoUserControl(this);
 
             _frmTelaInicial.pnlTelaPrincipal.Controls.Clear();
             uc_CadPDV ucCadPdv = new uc_CadPDV(_frmTelaInicial, _operacao, _idPDV);
@@ -179,7 +179,7 @@ namespace App_ERP.Cadastro.PDV
 
         private void uc_PDV_Load(object sender, EventArgs e)
         {
-            TelaDeCarregamento.EsconderCarregamento();
+            TelaCarregamento.EsconderCarregamento();
         }
     }
 }
