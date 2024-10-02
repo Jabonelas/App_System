@@ -50,6 +50,10 @@
             this.btnCadastrarPDV = new DevExpress.XtraBars.BarButtonItem();
             this.btnDeslogar = new DevExpress.XtraBars.BarButtonItem();
             this.btnCompra = new DevExpress.XtraBars.BarButtonItem();
+            this.skinDropDownButtonItem1 = new DevExpress.XtraBars.SkinDropDownButtonItem();
+            this.btnRelatorioFluxoSaida = new DevExpress.XtraBars.BarButtonItem();
+            this.btnRelatorioVendaVendedor = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -61,12 +65,11 @@
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.pnlTelaPrincipal = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.skinDropDownButtonItem1 = new DevExpress.XtraBars.SkinDropDownButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,16 +98,19 @@
             this.btnCadastrarPDV,
             this.btnDeslogar,
             this.btnCompra,
-            this.skinDropDownButtonItem1});
+            this.skinDropDownButtonItem1,
+            this.btnRelatorioFluxoSaida,
+            this.btnRelatorioVendaVendedor,
+            this.barButtonItem1});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 24;
+            this.ribbon.MaxItemId = 27;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribbonPage2,
             this.ribbonPage3,
             this.ribbonPage4});
-            this.ribbon.Size = new System.Drawing.Size(1278, 158);
+            this.ribbon.Size = new System.Drawing.Size(1278, 169);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // barStatusPDV
@@ -264,6 +270,35 @@
             this.btnCompra.Name = "btnCompra";
             this.btnCompra.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCompra_ItemClick);
             // 
+            // skinDropDownButtonItem1
+            // 
+            this.skinDropDownButtonItem1.Id = 23;
+            this.skinDropDownButtonItem1.Name = "skinDropDownButtonItem1";
+            // 
+            // btnRelatorioFluxoSaida
+            // 
+            this.btnRelatorioFluxoSaida.Caption = "Fluxo Saida";
+            this.btnRelatorioFluxoSaida.Id = 24;
+            this.btnRelatorioFluxoSaida.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnRelatorioFluxoSaida.ImageOptions.SvgImage")));
+            this.btnRelatorioFluxoSaida.Name = "btnRelatorioFluxoSaida";
+            this.btnRelatorioFluxoSaida.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnRelatorioFluxoSaida_ItemClick);
+            // 
+            // btnRelatorioVendaVendedor
+            // 
+            this.btnRelatorioVendaVendedor.Caption = "Vendas por vendedor";
+            this.btnRelatorioVendaVendedor.Id = 25;
+            this.btnRelatorioVendaVendedor.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnRelatorioVendaVendedor.ImageOptions.SvgImage")));
+            this.btnRelatorioVendaVendedor.Name = "btnRelatorioVendaVendedor";
+            this.btnRelatorioVendaVendedor.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnRelatorioVendaVendedor_ItemClick);
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "Vendas Canceladas";
+            this.barButtonItem1.Id = 26;
+            this.barButtonItem1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1.ImageOptions.SvgImage")));
+            this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -271,6 +306,8 @@
             this.ribbonPageGroup2,
             this.ribbonPageGroup3,
             this.ribbonPageGroup4});
+            this.ribbonPage1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ribbonPage1.ImageOptions.SvgImage")));
+            this.ribbonPage1.ImageOptions.SvgImageSize = new System.Drawing.Size(24, 24);
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "Cadastros";
             // 
@@ -312,6 +349,8 @@
             // 
             this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup5});
+            this.ribbonPage2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ribbonPage2.ImageOptions.SvgImage")));
+            this.ribbonPage2.ImageOptions.SvgImageSize = new System.Drawing.Size(24, 24);
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "Movimentações";
             // 
@@ -325,19 +364,26 @@
             // 
             this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup6});
+            this.ribbonPage3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ribbonPage3.ImageOptions.SvgImage")));
+            this.ribbonPage3.ImageOptions.SvgImageSize = new System.Drawing.Size(24, 24);
             this.ribbonPage3.Name = "ribbonPage3";
             this.ribbonPage3.Text = "Relatórios";
             // 
             // ribbonPageGroup6
             // 
+            this.ribbonPageGroup6.ItemLinks.Add(this.btnRelatorioFluxoSaida);
+            this.ribbonPageGroup6.ItemLinks.Add(this.btnRelatorioVendaVendedor);
+            this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem1);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
-            this.ribbonPageGroup6.Text = "ribbonPageGroup6";
+            this.ribbonPageGroup6.Text = "Relatórios";
             // 
             // ribbonPage4
             // 
             this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup7,
             this.ribbonPageGroup8});
+            this.ribbonPage4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ribbonPage4.ImageOptions.SvgImage")));
+            this.ribbonPage4.ImageOptions.SvgImageSize = new System.Drawing.Size(24, 24);
             this.ribbonPage4.Name = "ribbonPage4";
             this.ribbonPage4.Text = "Sistemas";
             // 
@@ -346,6 +392,12 @@
             this.ribbonPageGroup7.ItemLinks.Add(this.btnDeslogar);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
             this.ribbonPageGroup7.Text = "Sistema";
+            // 
+            // ribbonPageGroup8
+            // 
+            this.ribbonPageGroup8.ItemLinks.Add(this.skinDropDownButtonItem1);
+            this.ribbonPageGroup8.Name = "ribbonPageGroup8";
+            this.ribbonPageGroup8.Text = "Temas";
             // 
             // ribbonStatusBar
             // 
@@ -361,9 +413,9 @@
             // pnlTelaPrincipal
             // 
             this.pnlTelaPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlTelaPrincipal.Location = new System.Drawing.Point(0, 158);
+            this.pnlTelaPrincipal.Location = new System.Drawing.Point(0, 169);
             this.pnlTelaPrincipal.Name = "pnlTelaPrincipal";
-            this.pnlTelaPrincipal.Size = new System.Drawing.Size(1278, 521);
+            this.pnlTelaPrincipal.Size = new System.Drawing.Size(1278, 510);
             this.pnlTelaPrincipal.TabIndex = 2;
             // 
             // barButtonItem9
@@ -381,17 +433,6 @@
             this.barButtonItem2.Id = 21;
             this.barButtonItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
             this.barButtonItem2.Name = "barButtonItem2";
-            // 
-            // ribbonPageGroup8
-            // 
-            this.ribbonPageGroup8.ItemLinks.Add(this.skinDropDownButtonItem1);
-            this.ribbonPageGroup8.Name = "ribbonPageGroup8";
-            this.ribbonPageGroup8.Text = "Temas";
-            // 
-            // skinDropDownButtonItem1
-            // 
-            this.skinDropDownButtonItem1.Id = 23;
-            this.skinDropDownButtonItem1.Name = "skinDropDownButtonItem1";
             // 
             // frmTelaInicialERP
             // 
@@ -453,5 +494,8 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.SkinDropDownButtonItem skinDropDownButtonItem1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
+        private DevExpress.XtraBars.BarButtonItem btnRelatorioFluxoSaida;
+        private DevExpress.XtraBars.BarButtonItem btnRelatorioVendaVendedor;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
     }
 }

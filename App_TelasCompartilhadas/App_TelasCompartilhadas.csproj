@@ -35,8 +35,13 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files\DevExpress 23.1\Components\Bin\Framework\DevExpress.Charts.v23.1.Core.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.CodeParser.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.Desktop.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\DevExpress 23.1\Components\Bin\Framework\DevExpress.DataAccess.v23.1.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.Dialogs.v23.1.Core, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Drawing.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -49,17 +54,31 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files\DevExpress 23.1\Components\Bin\Framework\DevExpress.XtraBars.v23.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraCharts.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\DevExpress 23.1\Components\Bin\Framework\DevExpress.XtraCharts.v23.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v23.1.Extensions, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\DevExpress 23.1\Components\Bin\Framework\DevExpress.XtraCharts.v23.1.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.XtraCharts.v23.1.UI, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files\DevExpress 23.1\Components\Bin\Framework\DevExpress.XtraCharts.v23.1.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v23.1.Web, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\DevExpress 23.1\Components\Bin\Framework\DevExpress.XtraCharts.v23.1.Web.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraCharts.v23.1.Wizard, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files\DevExpress 23.1\Components\Bin\Framework\DevExpress.XtraCharts.v23.1.Wizard.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraDialogs.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraEditors.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\DevExpress 23.1\Components\Bin\Framework\DevExpress.XtraEditors.v23.1.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.XtraGrid.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files\DevExpress 23.1\Components\Bin\Framework\DevExpress.XtraGrid.v23.1.dll</HintPath>
@@ -67,6 +86,22 @@
     <Reference Include="DevExpress.XtraLayout.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files\DevExpress 23.1\Components\Bin\Framework\DevExpress.XtraLayout.v23.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\DevExpress 23.1\Components\Bin\Framework\DevExpress.XtraPrinting.v23.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\DevExpress 23.1\Components\Bin\Framework\DevExpress.XtraReports.v23.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v23.1.Extensions, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\DevExpress 23.1\Components\Bin\Framework\DevExpress.XtraReports.v23.1.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraWizard.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\DevExpress 23.1\Components\Bin\Framework\DevExpress.XtraWizard.v23.1.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
     <Reference Include="System" />
@@ -95,10 +130,10 @@
     <Reference Include="DevExpress.Printing.v23.2.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ator\Funcionario\uc_CadFuncionario.cs">
+    <Compile Include="Cadastro\Funcionario\uc_CadFuncionario.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Ator\Funcionario\uc_CadFuncionario.Designer.cs">
+    <Compile Include="Cadastro\Funcionario\uc_CadFuncionario.Designer.cs">
       <DependentUpon>uc_CadFuncionario.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\API.cs" />
@@ -111,16 +146,16 @@
     <Compile Include="Classes\Validacoes.cs" />
     <Compile Include="Classes\VariaveisGlobais.cs" />
     <Compile Include="Classes\VerificarComponentesPC.cs" />
-    <Compile Include="Ator\uc_Ator.cs">
+    <Compile Include="Cadastro\Ator\uc_Ator.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Ator\uc_Ator.Designer.cs">
+    <Compile Include="Cadastro\Ator\uc_Ator.Designer.cs">
       <DependentUpon>uc_Ator.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ator\uc_CadAtor.cs">
+    <Compile Include="Cadastro\Ator\uc_CadAtor.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Ator\uc_CadAtor.Designer.cs">
+    <Compile Include="Cadastro\Ator\uc_CadAtor.Designer.cs">
       <DependentUpon>uc_CadAtor.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSelecionarFilial.cs">
@@ -322,22 +357,22 @@
     <Compile Include="ORMDataModelCode\tb_unidade_monetaria.Designer.cs">
       <DependentUpon>tb_unidade_monetaria.cs</DependentUpon>
     </Compile>
-    <Compile Include="Produtos\uc_CadProduto.cs">
+    <Compile Include="Cadastro\Produtos\uc_CadProduto.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Produtos\uc_CadProduto.Designer.cs">
+    <Compile Include="Cadastro\Produtos\uc_CadProduto.Designer.cs">
       <DependentUpon>uc_CadProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Produtos\uc_EstoqueProduto.cs">
+    <Compile Include="Cadastro\Produtos\uc_EstoqueProduto.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Produtos\uc_EstoqueProduto.Designer.cs">
+    <Compile Include="Cadastro\Produtos\uc_EstoqueProduto.Designer.cs">
       <DependentUpon>uc_EstoqueProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Produtos\uc_Produto.cs">
+    <Compile Include="Cadastro\Produtos\uc_Produto.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Produtos\uc_Produto.Designer.cs">
+    <Compile Include="Cadastro\Produtos\uc_Produto.Designer.cs">
       <DependentUpon>uc_Produto.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -359,6 +394,18 @@
     <EmbeddedResource Include="Assets\Toolbox\PasswordBox.bmp" />
     <EmbeddedResource Include="Assets\HTML\PasswordBox.html" />
     <EmbeddedResource Include="Assets\CSS\PasswordBox.css" />
+    <Compile Include="Relatorios\rp_ImpressaoRelatorioFluxoSaida.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\rp_ImpressaoRelatorioFluxoSaida.Designer.cs">
+      <DependentUpon>rp_ImpressaoRelatorioFluxoSaida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\uc_RelatorioFluxoSaida.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Relatorios\uc_RelatorioFluxoSaida.Designer.cs">
+      <DependentUpon>uc_RelatorioFluxoSaida.cs</DependentUpon>
+    </Compile>
     <Compile Include="uc_TelaInicial.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -396,23 +443,23 @@
     <EmbeddedResource Include="Assets\SVG\UIElements\Show.svg" />
     <Compile Include="Components\StrengthIndicator.cs" />
     <Compile Include="Components\Base\ProgressIndicatorBase.cs" />
-    <EmbeddedResource Include="Ator\Funcionario\uc_CadFuncionario.resx">
+    <EmbeddedResource Include="Cadastro\Funcionario\uc_CadFuncionario.resx">
       <DependentUpon>uc_CadFuncionario.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ator\uc_Ator.resx">
+    <EmbeddedResource Include="Cadastro\Ator\uc_Ator.resx">
       <DependentUpon>uc_Ator.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ator\uc_CadAtor.resx">
+    <EmbeddedResource Include="Cadastro\Ator\uc_CadAtor.resx">
       <DependentUpon>uc_CadAtor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Produtos\uc_CadProduto.resx">
+    <EmbeddedResource Include="Cadastro\Produtos\uc_CadProduto.resx">
       <DependentUpon>uc_CadProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Produtos\uc_EstoqueProduto.resx">
+    <EmbeddedResource Include="Cadastro\Produtos\uc_EstoqueProduto.resx">
       <DependentUpon>uc_EstoqueProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Produtos\uc_Produto.resx">
+    <EmbeddedResource Include="Cadastro\Produtos\uc_Produto.resx">
       <DependentUpon>uc_Produto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -421,6 +468,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmImagensBotoes.resx">
       <DependentUpon>frmImagensBotoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\rp_ImpressaoRelatorioFluxoSaida.resx">
+      <DependentUpon>rp_ImpressaoRelatorioFluxoSaida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\uc_RelatorioFluxoSaida.resx">
+      <DependentUpon>uc_RelatorioFluxoSaida.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uc_TelaInicial.resx">
       <DependentUpon>uc_TelaInicial.cs</DependentUpon>
@@ -448,5 +501,6 @@
       <DependentUpon>ORMDataModel.xpo</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

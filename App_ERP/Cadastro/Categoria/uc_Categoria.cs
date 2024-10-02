@@ -40,7 +40,7 @@ namespace App_ERP
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            _frmTelaInicial.ExibirTelaInicial(this);
         }
 
         private void TelaCadastrarCategoria(string _operacao, int _idCategoria)

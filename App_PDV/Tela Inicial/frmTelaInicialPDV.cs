@@ -8,9 +8,9 @@ using App_PDV.AberturaCaixa;
 using App_PDV.FechamentoCaixa;
 using App_PDV.Fluxo_de_Caixa.Entrada_Caixa;
 using App_PDV.Fluxo_de_Caixa.Saida_Caixa;
-using App_PDV.Caixa.Relatorios;
 using App_TelasCompartilhadas;
 using App_TelasCompartilhadas.Produtos;
+using App_TelasCompartilhadas.Relatorios;
 using DevExpress.XtraBars.FluentDesignSystem;
 using UserControl = System.Windows.Forms.UserControl;
 using Unimake.Business.DFe.Servicos;
@@ -202,7 +202,7 @@ namespace App_PDV
             TelaCarregamento.ExibirCarregamentoForm(this);
 
             pnlTelaPrincipal.Controls.Clear();
-            uc_RelatorioFluxoSaida ucRelatorioFluxoSaida = new uc_RelatorioFluxoSaida(this);
+            uc_RelatorioFluxoSaida ucRelatorioFluxoSaida = new uc_RelatorioFluxoSaida(pnlTelaPrincipal, "PDV");
             pnlTelaPrincipal.Controls.Add(ucRelatorioFluxoSaida);
             pnlTelaPrincipal.Tag = ucRelatorioFluxoSaida;
             ucRelatorioFluxoSaida.Show();
@@ -223,9 +223,7 @@ namespace App_PDV
 
             if (dialog == DialogResult.Yes)
             {
-                this.Hide();
-                frmLogin _frmLogin = new frmLogin();
-                _frmLogin.Show();
+                Application.Restart();
             }
         }
 

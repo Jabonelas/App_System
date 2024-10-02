@@ -41,15 +41,17 @@ namespace App_PDV.FechamentoCaixa
             this.uc_TituloTelas1 = new App_TelasCompartilhadas.uc_TituloTelas();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.btnImprimir = new DevExpress.XtraEditors.SimpleButton();
+            this.btnExcel = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.grdListaVendas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalvar
@@ -172,15 +174,6 @@ namespace App_PDV.FechamentoCaixa
             this.Root.Size = new System.Drawing.Size(1267, 422);
             this.Root.TextVisible = false;
             // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.grdListaVendas;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(1223, 357);
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem1.TextVisible = false;
-            // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
@@ -190,10 +183,45 @@ namespace App_PDV.FechamentoCaixa
             this.layoutControlGroup1.Size = new System.Drawing.Size(1247, 402);
             this.layoutControlGroup1.Text = "Aqui você pode realizar o fechamento do caixa.";
             // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.grdListaVendas;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(1223, 357);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextVisible = false;
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimir.Appearance.Options.UseFont = true;
+            this.btnImprimir.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.btnImprimir.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
+            this.btnImprimir.Location = new System.Drawing.Point(7, 518);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(58, 54);
+            this.btnImprimir.TabIndex = 51;
+            this.btnImprimir.Text = "Imprimir";
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcel.Appearance.Options.UseFont = true;
+            this.btnExcel.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.btnExcel.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
+            this.btnExcel.Location = new System.Drawing.Point(71, 518);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(58, 54);
+            this.btnExcel.TabIndex = 52;
+            this.btnExcel.Text = "Excel";
+            // 
             // uc_FechamentoCaixa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnExcel);
+            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.uc_TituloTelas1);
             this.Controls.Add(this.btnSalvar);
@@ -206,8 +234,8 @@ namespace App_PDV.FechamentoCaixa
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -227,5 +255,7 @@ namespace App_PDV.FechamentoCaixa
         private DevExpress.XtraLayout.LayoutControlGroup Root;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraEditors.SimpleButton btnImprimir;
+        private DevExpress.XtraEditors.SimpleButton btnExcel;
     }
 }

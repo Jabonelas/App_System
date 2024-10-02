@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_CadSecao));
             this.btnSalvar = new DevExpress.XtraEditors.SimpleButton();
             this.btnVoltar = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.cmbSecao = new DevExpress.XtraEditors.ComboBoxEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -40,6 +38,8 @@
             this.txtDescrcricaoSecao = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.uc_TituloTelas1 = new App_TelasCompartilhadas.uc_TituloTelas();
+            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             ((System.ComponentModel.ISupportInitialize)(this.cmbSecao.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
@@ -49,6 +49,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDescrcricaoSecao.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalvar
@@ -56,11 +57,10 @@
             this.btnSalvar.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.Appearance.Options.UseFont = true;
             this.btnSalvar.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnSalvar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSalvar.ImageOptions.SvgImage")));
             this.btnSalvar.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
-            this.btnSalvar.Location = new System.Drawing.Point(139, 65);
+            this.btnSalvar.Location = new System.Drawing.Point(71, 39);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(106, 68);
+            this.btnSalvar.Size = new System.Drawing.Size(58, 54);
             this.btnSalvar.TabIndex = 11;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.ToolTip = "Clique para salvar as alterações.";
@@ -73,27 +73,16 @@
             this.btnVoltar.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVoltar.Appearance.Options.UseFont = true;
             this.btnVoltar.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnVoltar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnVoltar.ImageOptions.SvgImage")));
             this.btnVoltar.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
-            this.btnVoltar.Location = new System.Drawing.Point(27, 65);
+            this.btnVoltar.Location = new System.Drawing.Point(7, 39);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(106, 68);
+            this.btnVoltar.Size = new System.Drawing.Size(58, 54);
             this.btnVoltar.TabIndex = 10;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.ToolTip = "Clique para retornar à tela anterior.";
             this.btnVoltar.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.btnVoltar.ToolTipTitle = "Voltar:";
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(27, 19);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(163, 25);
-            this.labelControl1.TabIndex = 9;
-            this.labelControl1.Text = "Cadastro de Seção";
             // 
             // cmbSecao
             // 
@@ -141,19 +130,19 @@
             // layoutControl1
             // 
             this.layoutControl1.Controls.Add(this.txtDescrcricaoSecao);
-            this.layoutControl1.Location = new System.Drawing.Point(16, 150);
+            this.layoutControl1.Location = new System.Drawing.Point(-3, 96);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(1624, 119);
+            this.layoutControl1.Size = new System.Drawing.Size(1266, 124);
             this.layoutControl1.TabIndex = 12;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // txtDescrcricaoSecao
             // 
-            this.txtDescrcricaoSecao.Location = new System.Drawing.Point(12, 28);
+            this.txtDescrcricaoSecao.Location = new System.Drawing.Point(24, 61);
             this.txtDescrcricaoSecao.Name = "txtDescrcricaoSecao";
             this.txtDescrcricaoSecao.Properties.MaxLength = 50;
-            this.txtDescrcricaoSecao.Size = new System.Drawing.Size(1600, 20);
+            this.txtDescrcricaoSecao.Size = new System.Drawing.Size(1218, 20);
             this.txtDescrcricaoSecao.StyleController = this.layoutControl1;
             this.txtDescrcricaoSecao.TabIndex = 5;
             this.txtDescrcricaoSecao.ToolTip = "A Seção define a classificação geral dos itens, auxiliando na organiz ação e gest" +
@@ -166,9 +155,9 @@
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem4});
+            this.layoutControlGroup2});
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1624, 119);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1266, 124);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem4
@@ -176,21 +165,38 @@
             this.layoutControlItem4.Control = this.txtDescrcricaoSecao;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem4.Name = "layoutControlItem2";
-            this.layoutControlItem4.Size = new System.Drawing.Size(1604, 99);
+            this.layoutControlItem4.Size = new System.Drawing.Size(1222, 59);
             this.layoutControlItem4.Text = "Descrição da seção";
             this.layoutControlItem4.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem4.TextSize = new System.Drawing.Size(92, 13);
+            // 
+            // uc_TituloTelas1
+            // 
+            this.uc_TituloTelas1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.uc_TituloTelas1.Location = new System.Drawing.Point(0, 0);
+            this.uc_TituloTelas1.Name = "uc_TituloTelas1";
+            this.uc_TituloTelas1.Size = new System.Drawing.Size(1259, 31);
+            this.uc_TituloTelas1.TabIndex = 43;
+            // 
+            // layoutControlGroup2
+            // 
+            this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem4});
+            this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup2.Name = "layoutControlGroup2";
+            this.layoutControlGroup2.Size = new System.Drawing.Size(1246, 104);
+            this.layoutControlGroup2.Text = "Aqui você pode realizar cadastro da seção.";
             // 
             // uc_CadSecao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.uc_TituloTelas1);
             this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnVoltar);
-            this.Controls.Add(this.labelControl1);
             this.Name = "uc_CadSecao";
-            this.Size = new System.Drawing.Size(1658, 1048);
+            this.Size = new System.Drawing.Size(1259, 579);
             this.Load += new System.EventHandler(this.uc_CadSecao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cmbSecao.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
@@ -201,8 +207,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDescrcricaoSecao.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -210,7 +216,6 @@
 
         private DevExpress.XtraEditors.SimpleButton btnSalvar;
         private DevExpress.XtraEditors.SimpleButton btnVoltar;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.ComboBoxEdit cmbSecao;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
@@ -219,5 +224,7 @@
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraEditors.TextEdit txtDescrcricaoSecao;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private App_TelasCompartilhadas.uc_TituloTelas uc_TituloTelas1;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
     }
 }

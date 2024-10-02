@@ -19,9 +19,23 @@ namespace App_ERP.Cadastro.Rede
         {
             InitializeComponent();
 
+            Layout();
+
             _frmTelaInicial = frm;
 
             CarregarGridRedeAtivas();
+        }
+
+        private void Layout()
+        {
+            ConfigBotoes configBotoes = new ConfigBotoes();
+
+            configBotoes.BotaoVoltar(btnVoltar);
+            configBotoes.BotaoNovoRegistro(btnNovo);
+            configBotoes.BotaoAlterar(btnAlterar);
+            configBotoes.BotaoExcluir(btnExcluir);
+
+            uc_TituloTelas1.lblTituloTela.Text = "Rede";
         }
 
         private void uc_Rede_Load(object sender, EventArgs e)
@@ -176,7 +190,7 @@ namespace App_ERP.Cadastro.Rede
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            _frmTelaInicial.ExibirTelaInicial(this);
         }
     }
 }

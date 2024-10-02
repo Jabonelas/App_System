@@ -144,135 +144,135 @@
             // 
             // txtCaminhoArquivo
             // 
-            this.txtCaminhoArquivo.Enabled = false;
             this.txtCaminhoArquivo.Location = new System.Drawing.Point(24, 85);
             this.txtCaminhoArquivo.Name = "txtCaminhoArquivo";
+            this.txtCaminhoArquivo.Properties.ReadOnly = true;
             this.txtCaminhoArquivo.Size = new System.Drawing.Size(608, 20);
             this.txtCaminhoArquivo.StyleController = this.layoutControl1;
             this.txtCaminhoArquivo.TabIndex = 4;
             // 
             // txtNomeEmitente
             // 
-            this.txtNomeEmitente.Enabled = false;
             this.txtNomeEmitente.Location = new System.Drawing.Point(24, 165);
             this.txtNomeEmitente.Name = "txtNomeEmitente";
+            this.txtNomeEmitente.Properties.ReadOnly = true;
             this.txtNomeEmitente.Size = new System.Drawing.Size(318, 20);
             this.txtNomeEmitente.StyleController = this.layoutControl1;
             this.txtNomeEmitente.TabIndex = 4;
             // 
             // txtCNPJEmitente
             // 
-            this.txtCNPJEmitente.Enabled = false;
             this.txtCNPJEmitente.Location = new System.Drawing.Point(346, 165);
             this.txtCNPJEmitente.Name = "txtCNPJEmitente";
+            this.txtCNPJEmitente.Properties.ReadOnly = true;
             this.txtCNPJEmitente.Size = new System.Drawing.Size(206, 20);
             this.txtCNPJEmitente.StyleController = this.layoutControl1;
             this.txtCNPJEmitente.TabIndex = 4;
             // 
             // txtUF
             // 
-            this.txtUF.Enabled = false;
             this.txtUF.Location = new System.Drawing.Point(556, 165);
             this.txtUF.Name = "txtUF";
+            this.txtUF.Properties.ReadOnly = true;
             this.txtUF.Size = new System.Drawing.Size(76, 20);
             this.txtUF.StyleController = this.layoutControl1;
             this.txtUF.TabIndex = 4;
             // 
             // txtNomeDestinatario
             // 
-            this.txtNomeDestinatario.Enabled = false;
             this.txtNomeDestinatario.Location = new System.Drawing.Point(24, 205);
             this.txtNomeDestinatario.Name = "txtNomeDestinatario";
+            this.txtNomeDestinatario.Properties.ReadOnly = true;
             this.txtNomeDestinatario.Size = new System.Drawing.Size(318, 20);
             this.txtNomeDestinatario.StyleController = this.layoutControl1;
             this.txtNomeDestinatario.TabIndex = 4;
             // 
             // txtCNPJDestinatario
             // 
-            this.txtCNPJDestinatario.Enabled = false;
             this.txtCNPJDestinatario.Location = new System.Drawing.Point(346, 205);
             this.txtCNPJDestinatario.Name = "txtCNPJDestinatario";
+            this.txtCNPJDestinatario.Properties.ReadOnly = true;
             this.txtCNPJDestinatario.Size = new System.Drawing.Size(286, 20);
             this.txtCNPJDestinatario.StyleController = this.layoutControl1;
             this.txtCNPJDestinatario.TabIndex = 4;
             // 
             // txtNaturezaOperacao
             // 
-            this.txtNaturezaOperacao.Enabled = false;
             this.txtNaturezaOperacao.Location = new System.Drawing.Point(24, 245);
             this.txtNaturezaOperacao.Name = "txtNaturezaOperacao";
+            this.txtNaturezaOperacao.Properties.ReadOnly = true;
             this.txtNaturezaOperacao.Size = new System.Drawing.Size(375, 20);
             this.txtNaturezaOperacao.StyleController = this.layoutControl1;
             this.txtNaturezaOperacao.TabIndex = 4;
             // 
             // txtValorTotal
             // 
-            this.txtValorTotal.Enabled = false;
             this.txtValorTotal.Location = new System.Drawing.Point(403, 245);
             this.txtValorTotal.Name = "txtValorTotal";
+            this.txtValorTotal.Properties.ReadOnly = true;
             this.txtValorTotal.Size = new System.Drawing.Size(229, 20);
             this.txtValorTotal.StyleController = this.layoutControl1;
             this.txtValorTotal.TabIndex = 4;
             // 
             // txtTipoNota
             // 
-            this.txtTipoNota.Enabled = false;
             this.txtTipoNota.Location = new System.Drawing.Point(24, 285);
             this.txtTipoNota.Name = "txtTipoNota";
+            this.txtTipoNota.Properties.ReadOnly = true;
             this.txtTipoNota.Size = new System.Drawing.Size(149, 20);
             this.txtTipoNota.StyleController = this.layoutControl1;
             this.txtTipoNota.TabIndex = 4;
             // 
             // txtModeloNota
             // 
-            this.txtModeloNota.Enabled = false;
             this.txtModeloNota.Location = new System.Drawing.Point(177, 285);
             this.txtModeloNota.Name = "txtModeloNota";
+            this.txtModeloNota.Properties.ReadOnly = true;
             this.txtModeloNota.Size = new System.Drawing.Size(149, 20);
             this.txtModeloNota.StyleController = this.layoutControl1;
             this.txtModeloNota.TabIndex = 4;
             // 
             // txtSerieNota
             // 
-            this.txtSerieNota.Enabled = false;
             this.txtSerieNota.Location = new System.Drawing.Point(330, 285);
             this.txtSerieNota.Name = "txtSerieNota";
+            this.txtSerieNota.Properties.ReadOnly = true;
             this.txtSerieNota.Size = new System.Drawing.Size(149, 20);
             this.txtSerieNota.StyleController = this.layoutControl1;
             this.txtSerieNota.TabIndex = 4;
             // 
             // txtDataEmissao
             // 
-            this.txtDataEmissao.Enabled = false;
             this.txtDataEmissao.Location = new System.Drawing.Point(24, 325);
             this.txtDataEmissao.Name = "txtDataEmissao";
+            this.txtDataEmissao.Properties.ReadOnly = true;
             this.txtDataEmissao.Size = new System.Drawing.Size(302, 20);
             this.txtDataEmissao.StyleController = this.layoutControl1;
             this.txtDataEmissao.TabIndex = 4;
             // 
             // txtDataEntrada
             // 
-            this.txtDataEntrada.Enabled = false;
             this.txtDataEntrada.Location = new System.Drawing.Point(330, 325);
             this.txtDataEntrada.Name = "txtDataEntrada";
+            this.txtDataEntrada.Properties.ReadOnly = true;
             this.txtDataEntrada.Size = new System.Drawing.Size(302, 20);
             this.txtDataEntrada.StyleController = this.layoutControl1;
             this.txtDataEntrada.TabIndex = 4;
             // 
             // txtNumeroNota
             // 
-            this.txtNumeroNota.Enabled = false;
             this.txtNumeroNota.Location = new System.Drawing.Point(483, 285);
             this.txtNumeroNota.Name = "txtNumeroNota";
+            this.txtNumeroNota.Properties.ReadOnly = true;
             this.txtNumeroNota.Size = new System.Drawing.Size(149, 20);
             this.txtNumeroNota.StyleController = this.layoutControl1;
             this.txtNumeroNota.TabIndex = 4;
             // 
             // txtInfoCompl
             // 
-            this.txtInfoCompl.Enabled = false;
             this.txtInfoCompl.Location = new System.Drawing.Point(24, 365);
             this.txtInfoCompl.Name = "txtInfoCompl";
+            this.txtInfoCompl.Properties.ReadOnly = true;
             this.txtInfoCompl.Size = new System.Drawing.Size(608, 121);
             this.txtInfoCompl.StyleController = this.layoutControl1;
             this.txtInfoCompl.TabIndex = 5;
@@ -293,9 +293,9 @@
             // 
             // txtNumNfe
             // 
-            this.txtNumNfe.Enabled = false;
             this.txtNumNfe.Location = new System.Drawing.Point(24, 125);
             this.txtNumNfe.Name = "txtNumNfe";
+            this.txtNumNfe.Properties.ReadOnly = true;
             this.txtNumNfe.Size = new System.Drawing.Size(608, 20);
             this.txtNumNfe.StyleController = this.layoutControl1;
             this.txtNumNfe.TabIndex = 4;

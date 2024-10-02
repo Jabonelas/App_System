@@ -40,6 +40,8 @@ namespace App_PDV.FechamentoCaixa
 
             configBotoes.BotaoVoltar(btnVoltar);
             configBotoes.BotaoSalvar(btnSalvar);
+            configBotoes.BotaoImprimir(btnImprimir);
+            configBotoes.BotaoExcel(btnExcel);
 
             uc_TituloTelas1.lblTituloTela.Text = "Fechamento de Caixa";
         }

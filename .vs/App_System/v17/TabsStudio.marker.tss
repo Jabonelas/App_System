@@ -1,2 +1,19 @@
 <?xml version="1.0"?>
-<ArrayOfTabHighlightState xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+<ArrayOfTabHighlightState xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <TabHighlightState>
+    <extensions>
+      <string>App_TelasCompartilhadas\Relatorios\rp_ImpressaoRelatorioFluxoSaida.cs</string>
+      <string>App_TelasCompartilhadas\Relatorios\rp_ImpressaoRelatorioFluxoSaida.cs</string>
+      <string>App_TelasCompartilhadas\Relatorios\rp_ImpressaoRelatorioFluxoSaida.Designer.cs</string>
+    </extensions>
+    <highlightIndex>1</highlightIndex>
+  </TabHighlightState>
+  <TabHighlightState>
+    <extensions>
+      <string>App_TelasCompartilhadas\Relatorios\uc_RelatorioFluxoSaida.Designer.cs</string>
+      <string>App_TelasCompartilhadas\Relatorios\uc_RelatorioFluxoSaida.cs</string>
+      <string>App_TelasCompartilhadas\Relatorios\uc_RelatorioFluxoSaida.cs</string>
+    </extensions>
+    <highlightIndex>1</highlightIndex>
+  </TabHighlightState>
+</ArrayOfTabHighlightState>

@@ -235,18 +235,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Caixa\Relatorios\rp_ImpressaoRelatorioFluxoSaida.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Caixa\Relatorios\rp_ImpressaoRelatorioFluxoSaida.Designer.cs">
-      <DependentUpon>rp_ImpressaoRelatorioFluxoSaida.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Caixa\Relatorios\uc_RelatorioFluxoSaida.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Caixa\Relatorios\uc_RelatorioFluxoSaida.Designer.cs">
-      <DependentUpon>uc_RelatorioFluxoSaida.cs</DependentUpon>
-    </Compile>
     <Compile Include="Caixa\Fluxo de Caixa\Abertura Caixa\uc_AberturaCaixa.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -320,12 +308,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Caixa\Fluxo de Caixa\Saida Caixa\uc_VisualizarSaidaCaixa.resx">
       <DependentUpon>uc_VisualizarSaidaCaixa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Caixa\Relatorios\rp_ImpressaoRelatorioFluxoSaida.resx">
-      <DependentUpon>rp_ImpressaoRelatorioFluxoSaida.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Caixa\Relatorios\uc_RelatorioFluxoSaida.resx">
-      <DependentUpon>uc_RelatorioFluxoSaida.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Caixa\Atendimento\Venda\frmPagamentoPDV.resx">
       <DependentUpon>frmPagamentoPDV.cs</DependentUpon>

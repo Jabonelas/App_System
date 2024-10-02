@@ -96,7 +96,7 @@ namespace App_TelasCompartilhadas.Classes
             button.ImageOptions.SvgImageSize = new Size(40, 40);
             button.Text = "";
             button.ToolTip = "Visualizar informações do registro selecionado.";
-            button.ToolTipTitle = "Visualizar Venda:";
+            button.ToolTipTitle = "Visualizar:";
             button.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
         }
 

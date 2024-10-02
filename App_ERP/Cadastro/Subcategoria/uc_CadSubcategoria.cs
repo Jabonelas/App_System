@@ -51,7 +51,7 @@ namespace App_ERP.Subcategoria
             configBotoes.BotaoVoltar(btnVoltar);
             configBotoes.BotaoSalvar(btnSalvar);
 
-            uc_TituloTelas1.lblTituloTela.Text = "Cadastro de Subcategoria";
+            uc_TituloTelas1.lblTituloTela.Text = "Cadastrar Subcategoria";
         }
 
         private void PreencherCategoria()

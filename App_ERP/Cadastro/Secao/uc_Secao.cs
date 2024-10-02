@@ -19,14 +19,28 @@ namespace App_ERP.Cadastro.Secao
         {
             InitializeComponent();
 
+            Layout();
+
             CarregarGridSecaoAtivas();
 
             _frmTelaInicial = _frm;
         }
 
+        private void Layout()
+        {
+            ConfigBotoes configBotoes = new ConfigBotoes();
+
+            configBotoes.BotaoVoltar(btnVoltar);
+            configBotoes.BotaoNovoRegistro(btnNovo);
+            configBotoes.BotaoAlterar(btnAlterar);
+            configBotoes.BotaoExcluir(btnExcluir);
+
+            uc_TituloTelas1.lblTituloTela.Text = "Seção";
+        }
+
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            _frmTelaInicial.ExibirTelaInicial(this);
         }
 
         private void TelaCadastrarSecao(string _operacao, long _idSecao)

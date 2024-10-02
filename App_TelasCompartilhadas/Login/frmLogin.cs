@@ -15,9 +15,13 @@ namespace App_TelasCompartilhadas
     {
         private const string PlaceholderText = "Digite o usuário...";
 
-        public frmLogin()
+        private string telaAcesso;
+
+        public frmLogin(string _telaAcesso)
         {
             InitializeComponent();
+
+            telaAcesso = _telaAcesso;
 
             // Desabilitar a opção de maximizar a tela
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -94,6 +98,14 @@ namespace App_TelasCompartilhadas
         {
             if (IsSenhaUsuarioValido(txtSenha.Text, txtUsuario.Text.ToLower()))
             {
+                //Acesso ao ERP apenas para usuario com nivel de acesso 102 - Gerente
+                if (telaAcesso == "ERP" && VariaveisGlobais.UsuarioLogado.at_atorTipo != 102)
+                {
+                    MensagensDoSistema.MensagemAtencaoOk("Usuário sem permissão de acesso.");
+
+                    return;
+                }
+
                 TelaCarregamento.ExibirCarregamentoForm(this);
 
                 VerificandoMaquina();

@@ -19,9 +19,23 @@ namespace App_ERP.Cadastro.PDV
         {
             InitializeComponent();
 
+            Layout();
+
             _frmTelaInicial = frm;
 
             CarregarGridPDVAtivas();
+        }
+
+        private void Layout()
+        {
+            ConfigBotoes configBotoes = new ConfigBotoes();
+
+            configBotoes.BotaoVoltar(btnVoltar);
+            configBotoes.BotaoNovoRegistro(btnNovo);
+            configBotoes.BotaoAlterar(btnAlterar);
+            configBotoes.BotaoExcluir(btnExcluir);
+
+            uc_TituloTelas1.lblTituloTela.Text = "Ponto de Vendas (PDV)";
         }
 
         private void CarregarGridPDVAtivas()
@@ -71,7 +85,7 @@ namespace App_ERP.Cadastro.PDV
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            _frmTelaInicial.ExibirTelaInicial(this);
         }
 
         private void TelaCadastrarPDV(string _operacao, int _idPDV)

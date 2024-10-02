@@ -19,6 +19,8 @@ namespace App_ERP.Cadastro.Rede
         {
             InitializeComponent();
 
+            Layout();
+
             _frmTelaInicial = frm;
 
             operacao = _operacao;
@@ -29,6 +31,16 @@ namespace App_ERP.Cadastro.Rede
             {
                 PreencherCampos();
             }
+        }
+
+        private void Layout()
+        {
+            ConfigBotoes configBotoes = new ConfigBotoes();
+
+            configBotoes.BotaoVoltar(btnVoltar);
+            configBotoes.BotaoSalvar(btnSalvar);
+
+            uc_TituloTelas1.lblTituloTela.Text = "Cadastrar Rede";
         }
 
         private void PreencherCampos()

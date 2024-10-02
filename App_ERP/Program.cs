@@ -26,13 +26,14 @@ namespace App_ERP
             BonusSkins.Register();
 
             // Define o tema padrão"
-            UserLookAndFeel.Default.SetSkinStyle("Basic");
+            UserLookAndFeel.Default.SetSkinStyle("Sharp Plus");
 
             // Registrar apenas os temas permitidos
             var allowedSkins = new string[]
             {
                 "Basic",
                 //"High Contrast",
+                "The Asphalt World",
                 "McSkin",
                 "Office 2019 Colorful",
                 "Seven Classic",
@@ -61,7 +62,7 @@ namespace App_ERP
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            App_TelasCompartilhadas.frmLogin frmTelaInicial = new App_TelasCompartilhadas.frmLogin();
+            App_TelasCompartilhadas.frmLogin frmTelaInicial = new App_TelasCompartilhadas.frmLogin("ERP");
             frmTelaInicial.ShowDialog();
 
             if (App_TelasCompartilhadas.Classes.VariaveisGlobais.isInicializarSistema)

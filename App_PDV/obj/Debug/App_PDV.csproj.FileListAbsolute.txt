@@ -351,8 +351,6 @@ C:\Users\israe\source\repos\App_System\App_PDV\obj\Debug\App_PDV.Fluxo_de_Caixa.
 C:\Users\israe\source\repos\App_System\App_PDV\obj\Debug\App_PDV.FechamentoCaixa.uc_FechamentoCaixa.resources
 C:\Users\israe\source\repos\App_System\App_PDV\obj\Debug\App_PDV.Fluxo_de_Caixa.Saida_Caixa.uc_SaidaCaixa.resources
 C:\Users\israe\source\repos\App_System\App_PDV\obj\Debug\App_PDV.Fluxo_de_Caixa.Saida_Caixa.uc_VisualizarSaidaCaixa.resources
-C:\Users\israe\source\repos\App_System\App_PDV\obj\Debug\App_PDV.Caixa.Relatorios.rp_ImpressaoRelatorioFluxoSaida.resources
-C:\Users\israe\source\repos\App_System\App_PDV\obj\Debug\App_PDV.Caixa.Relatorios.uc_RelatorioFluxoSaida.resources
 C:\Users\israe\source\repos\App_System\App_PDV\obj\Debug\App_PDV.frmPagamentoPDV.resources
 C:\Users\israe\source\repos\App_System\App_PDV\obj\Debug\App_PDV.frmTelaInicialPDV.resources
 C:\Users\israe\source\repos\App_System\App_PDV\obj\Debug\App_PDV.Properties.Resources.resources

@@ -9,6 +9,8 @@ using App_ERP.Subcategoria;
 using System.Windows.Forms;
 using App_TelasCompartilhadas;
 using App_TelasCompartilhadas.Produtos;
+using App_TelasCompartilhadas.Relatorios;
+using App_ERP.Relatorios;
 
 namespace App_ERP
 {
@@ -31,6 +33,17 @@ namespace App_ERP
 
         private void ExibirPainelCentral()
         {
+            this.pnlTelaPrincipal.Controls.Clear();
+            uc_TelaInicialERP ucTelaInicial = new uc_TelaInicialERP();
+            this.pnlTelaPrincipal.Controls.Add(ucTelaInicial);
+            this.pnlTelaPrincipal.Tag = ucTelaInicial;
+            ucTelaInicial.Show();
+        }
+
+        public void ExibirTelaInicial(UserControl userControl)
+        {
+            TelaCarregamento.ExibirCarregamentoUserControl(userControl);
+
             this.pnlTelaPrincipal.Controls.Clear();
             uc_TelaInicialERP ucTelaInicial = new uc_TelaInicialERP();
             this.pnlTelaPrincipal.Controls.Add(ucTelaInicial);
@@ -244,10 +257,40 @@ namespace App_ERP
 
             if (dialog == DialogResult.Yes)
             {
-                this.Hide();
-                frmLogin _frmLogin = new frmLogin();
-                _frmLogin.Show();
+                Application.Restart();
             }
+        }
+
+        public void TelaRelatorioFluxoSaida()
+        {
+            TelaCarregamento.ExibirCarregamentoForm(this);
+
+            pnlTelaPrincipal.Controls.Clear();
+            uc_RelatorioFluxoSaida ucRelatorioFluxoSaida = new uc_RelatorioFluxoSaida(pnlTelaPrincipal, "ERP");
+            pnlTelaPrincipal.Controls.Add(ucRelatorioFluxoSaida);
+            pnlTelaPrincipal.Tag = ucRelatorioFluxoSaida;
+            ucRelatorioFluxoSaida.Show();
+        }
+
+        private void btnRelatorioFluxoSaida_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            TelaRelatorioFluxoSaida();
+        }
+
+        public void TelaRelatorioVendaVendedor()
+        {
+            TelaCarregamento.ExibirCarregamentoForm(this);
+
+            pnlTelaPrincipal.Controls.Clear();
+            uc_RelatorioVendaVendedor ucRelatorioFluxoSaida = new uc_RelatorioVendaVendedor(this);
+            pnlTelaPrincipal.Controls.Add(ucRelatorioFluxoSaida);
+            pnlTelaPrincipal.Tag = ucRelatorioFluxoSaida;
+            ucRelatorioFluxoSaida.Show();
+        }
+
+        private void btnRelatorioVendaVendedor_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            TelaRelatorioVendaVendedor();
         }
     }
 }

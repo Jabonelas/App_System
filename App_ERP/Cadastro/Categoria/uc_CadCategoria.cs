@@ -46,7 +46,7 @@ namespace App_ERP
             configBotoes.BotaoVoltar(btnVoltar);
             configBotoes.BotaoSalvar(btnSalvar);
 
-            uc_TituloTelas1.lblTituloTela.Text = " Cadastro de Categorias";
+            uc_TituloTelas1.lblTituloTela.Text = " Cadastrar Categorias";
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)

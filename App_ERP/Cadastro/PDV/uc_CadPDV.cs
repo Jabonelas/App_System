@@ -19,6 +19,8 @@ namespace App_ERP.Cadastro.PDV
         {
             InitializeComponent();
 
+            Layout();
+
             _frmTelaInicial = _form;
 
             idPDV = _idPDV;
@@ -31,6 +33,16 @@ namespace App_ERP.Cadastro.PDV
             {
                 PreencherCampos();
             }
+        }
+
+        private void Layout()
+        {
+            ConfigBotoes configBotoes = new ConfigBotoes();
+
+            configBotoes.BotaoVoltar(btnVoltar);
+            configBotoes.BotaoSalvar(btnSalvar);
+
+            uc_TituloTelas1.lblTituloTela.Text = "Cadastrar PDV (Ponto de venda)";
         }
 
         private void PreencherFilial()

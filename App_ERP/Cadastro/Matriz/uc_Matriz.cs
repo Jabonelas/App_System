@@ -62,7 +62,7 @@ namespace App_ERP.Cadastro.Matriz
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            _frmTelaInicial.ExibirTelaInicial(this);
         }
 
         private void PegaIdMatrizSelecionadaGrid()

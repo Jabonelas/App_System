@@ -17,6 +17,8 @@ namespace App_ERP.Cadastro.Secao
         {
             InitializeComponent();
 
+            Layout();
+
             _frmTelaInicial = _frm;
 
             operacao = _operacao;
@@ -27,6 +29,16 @@ namespace App_ERP.Cadastro.Secao
             {
                 PreencherCampos();
             }
+        }
+
+        private void Layout()
+        {
+            ConfigBotoes configBotoes = new ConfigBotoes();
+
+            configBotoes.BotaoVoltar(btnVoltar);
+            configBotoes.BotaoSalvar(btnSalvar);
+
+            uc_TituloTelas1.lblTituloTela.Text = "Cadastrar Seção";
         }
 
         private void PreencherCampos()

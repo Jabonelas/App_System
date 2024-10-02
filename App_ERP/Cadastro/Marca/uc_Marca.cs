@@ -39,7 +39,7 @@ namespace App_ERP.Cadastro.Marca
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            _frmTelaInicial.ExibirTelaInicial(this);
         }
 
         private void TelaCadastrarMarca(string _operacao, long _idMarca)

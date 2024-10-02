@@ -196,7 +196,7 @@ namespace App_ERP.Subcategoria
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            _frmTelaInicial.ExibirTelaInicial(this);
         }
     }
 }

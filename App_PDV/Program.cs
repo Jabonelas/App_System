@@ -26,7 +26,7 @@ namespace App_PDV
             BonusSkins.Register();
 
             // Define o tema padrão"
-            UserLookAndFeel.Default.SetSkinStyle("Basic");
+            UserLookAndFeel.Default.SetSkinStyle("Sharp Plus");
 
             // Registrar apenas os temas permitidos
             var allowedSkins = new string[]
@@ -63,7 +63,7 @@ namespace App_PDV
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frmTelaInicial());
 
-            App_TelasCompartilhadas.frmLogin frmTelaInicial = new App_TelasCompartilhadas.frmLogin();
+            App_TelasCompartilhadas.frmLogin frmTelaInicial = new App_TelasCompartilhadas.frmLogin("PDV");
             frmTelaInicial.ShowDialog();
 
             if (App_TelasCompartilhadas.Classes.VariaveisGlobais.isInicializarSistema)
