@@ -19,7 +19,7 @@ namespace App_TelasCompartilhadas.bancoSQLite
     public partial class tb_ator : XPLiteObject
     {
         long fid_ator;
-        [Key]
+        [Key(AutoGenerate = true)]
         public long id_ator
         {
             get { return fid_ator; }

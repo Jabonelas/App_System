@@ -70,7 +70,8 @@ namespace App_PDV
             if (view != null)
             {
                 // Adicionando o evento CellValueChanged ao GridView
-                view.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(view_CellValueChanged);
+                view.CellValueChanged +=
+                    new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(view_CellValueChanged);
             }
         }
 
@@ -774,7 +775,9 @@ namespace App_PDV
                         XBairro = dadosDestinatario.at_end_Bairro,
                         CMun = Convert.ToInt32(dadosDestinatario.fk_tb_municipio.mu_id),
                         XMun = dadosDestinatario.fk_tb_municipio.mu_nome,
-                        UF = (Unimake.Business.DFe.Servicos.UFBrasil)Enum.Parse(typeof(Unimake.Business.DFe.Servicos.UFBrasil), dadosDestinatario.fk_tb_estados_br.eb_sigla),
+                        UF = (Unimake.Business.DFe.Servicos.UFBrasil)Enum.Parse(
+                            typeof(Unimake.Business.DFe.Servicos.UFBrasil),
+                            dadosDestinatario.fk_tb_estados_br.eb_sigla),
 
                         CEP = Regex.Replace(dadosDestinatario.at_end_Cep, @"[^\d]", ""),
                         CPais = 1058,
@@ -1388,7 +1391,8 @@ namespace App_PDV
                 {
                     //mv_movTipo = 1 é abertura de caixa e mv_cxAberto = 1 é caixa aberto
 
-                    caixaAberto = uow.Query<tb_movimentacao>().FirstOrDefault(x => x.mv_movTipo == 1 && x.mv_cxAberto == 1);
+                    caixaAberto = uow.Query<tb_movimentacao>()
+                        .FirstOrDefault(x => x.mv_movTipo == 1 && x.mv_cxAberto == 1);
                 }
             }
             catch (Exception ex)
@@ -1416,7 +1420,12 @@ namespace App_PDV
 
         private void btnFinalizarVenda_Click(object sender, EventArgs e)
         {
-            if (listaPagamentosRealizados.Count == 0)
+            var valorFinalVenda = listaProdutoSelecionado.Sum(x => (x.vlrUnCom * x.quantidade)) - valorDesconto;
+
+            var valorFinalPagamento = listaPagamentosRealizados.Sum(x => x._vlrPagamento);
+
+            if (listaPagamentosRealizados.Count == 0 || (valorFinalPagamento < valorFinalVenda))
+
             {
                 MensagensDoSistema.MensagemAtencaoOk("Por favor, realize o pagamento para continuar.");
 

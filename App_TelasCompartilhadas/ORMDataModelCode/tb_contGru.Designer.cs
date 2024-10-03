@@ -19,7 +19,7 @@ namespace App_TelasCompartilhadas.bancoSQLite
     public partial class tb_contGru : XPLiteObject
     {
         long fid_contGru;
-        [Key]
+        [Key(AutoGenerate = true)]
         public long id_contGru
         {
             get { return fid_contGru; }

@@ -22,52 +22,60 @@ namespace App_ERP.Relatorios
 
         private void PreencherCorpo(DateTime dataInicio, DateTime dataFinal)
         {
-            Session session = new Session();
-
-            var queryMovimentacoesAtivas = session.Query<tb_movimentacao>()
-                .Join(session.Query<tb_movimentacao_produto>(),
-                    movimentacao => movimentacao.id_movimentacao,
-                    produto => produto.fk_tb_movimentacao.id_movimentacao,
-                    (movimentacao, produto) => new { movimentacao, produto })
-                .Where(x => x.movimentacao.mv_dtCri.Date >= dataInicio.Date
-                            && x.movimentacao.mv_dtCri.Date <= dataFinal.Date
-                            && x.movimentacao.mv_movTipo == 150)
-                .GroupBy(x => new { x.movimentacao.fk_tb_ator_atend })
-                .Select(grupoAtendente => new
-                {
-                    VendedorCPF = grupoAtendente.Key.fk_tb_ator_atend.at_cpf,
-                    Vendedor = grupoAtendente.Key.fk_tb_ator_atend.at_razSoc,
-                    SomaQuantidadeItens = grupoAtendente.Sum(m => m.produto.fk_tb_movimentacao.mv_qtdItens),
-                    SomaValorTotalNF = grupoAtendente.Sum(m => m.produto.fk_tb_movimentacao.mv_nfeVlrTotNF),
-                    //SomaValorTotalProd = grupoAtendente.Sum(m => m.produto.fk_tb_movimentacao.mv_nfeVlrTotProd),
-                    //SomaValorTotalDesc = grupoAtendente.Sum(m => m.produto.fk_tb_movimentacao.mv_nfeVlrTotDesc)
-                })
-                // Ordenação pelo CPF do Vendedor
-                .OrderBy(grupoAtendente => grupoAtendente.Vendedor);
-
-            this.DataSource = queryMovimentacoesAtivas;
-
-            lblCPF.DataBindings.Clear();
-            lblCPF.DataBindings.Add("Text", null, "VendedorCPF");
-
-            lblNomeVendedor.DataBindings.Clear();
-            lblNomeVendedor.DataBindings.Add("Text", null, "Vendedor");
-
-            lblQtdTotal.DataBindings.Clear();
-            lblQtdTotal.DataBindings.Add("Text", null, "SomaQuantidadeItens");
-
-            lblVlrTotalVendido.DataBindings.Clear();
-            lblVlrTotalVendido.DataBindings.Add("Text", null, "SomaValorTotalNF");
-
-            decimal total = 0;
-
-            foreach (var item in queryMovimentacoesAtivas)
+            try
             {
-                total += item.SomaValorTotalNF;
-            }
+                using (Session session = new Session())
+                {
+                    var queryMovimentacoesAtivas = session.Query<tb_movimentacao>()
+                        .Join(session.Query<tb_movimentacao_produto>(),
+                            movimentacao => movimentacao.id_movimentacao,
+                            produto => produto.fk_tb_movimentacao.id_movimentacao,
+                            (movimentacao, produto) => new { movimentacao, produto })
+                        .Where(x => x.movimentacao.mv_dtCri.Date >= dataInicio.Date
+                                    && x.movimentacao.mv_dtCri.Date <= dataFinal.Date
+                                    && x.movimentacao.mv_movTipo == 150)
+                        .GroupBy(x => new { x.movimentacao.fk_tb_ator_atend })
+                        .Select(grupoAtendente => new
+                        {
+                            VendedorCPF = grupoAtendente.Key.fk_tb_ator_atend.at_cpf,
+                            Vendedor = grupoAtendente.Key.fk_tb_ator_atend.at_razSoc,
+                            SomaQuantidadeItens = grupoAtendente.Sum(m => m.produto.fk_tb_movimentacao.mv_qtdItens),
+                            SomaValorTotalNF = grupoAtendente.Sum(m => m.produto.fk_tb_movimentacao.mv_nfeVlrTotNF),
+                            //SomaValorTotalProd = grupoAtendente.Sum(m => m.produto.fk_tb_movimentacao.mv_nfeVlrTotProd),
+                            //SomaValorTotalDesc = grupoAtendente.Sum(m => m.produto.fk_tb_movimentacao.mv_nfeVlrTotDesc)
+                        })
+                        // Ordenação pelo CPF do Vendedor
+                        .OrderBy(grupoAtendente => grupoAtendente.Vendedor);
 
-            lblTotal.DataBindings.Clear();
-            lblTotal.Text = total.ToString("C2");
+                    this.DataSource = queryMovimentacoesAtivas;
+
+                    lblCPF.DataBindings.Clear();
+                    lblCPF.DataBindings.Add("Text", null, "VendedorCPF");
+
+                    lblNomeVendedor.DataBindings.Clear();
+                    lblNomeVendedor.DataBindings.Add("Text", null, "Vendedor");
+
+                    lblQtdTotal.DataBindings.Clear();
+                    lblQtdTotal.DataBindings.Add("Text", null, "SomaQuantidadeItens");
+
+                    lblVlrTotalVendido.DataBindings.Clear();
+                    lblVlrTotalVendido.DataBindings.Add("Text", null, "SomaValorTotalNF");
+
+                    decimal total = 0;
+
+                    foreach (var item in queryMovimentacoesAtivas)
+                    {
+                        total += item.SomaValorTotalNF;
+                    }
+
+                    lblTotal.DataBindings.Clear();
+                    lblTotal.Text = total.ToString("C2");
+                }
+            }
+            catch (Exception ex)
+            {
+                MensagensDoSistema.MensagemErroOk($"Erro ao preencher corpo do relatório de venda por vendedor: {ex.Message}");
+            }
         }
 
         private void PreencherCabecario()

@@ -31,6 +31,7 @@ namespace App_TelasCompartilhadas.Classes
         //pagar[10]
         //salvar[11]
         //novo[12]
+        //adicionar carrinho[13]
 
         public void BotaoSalvar(SimpleButton button)
         {
@@ -250,6 +251,23 @@ namespace App_TelasCompartilhadas.Classes
             button.Text = "";
             button.ToolTip = "Clique para exportar para Excel.";
             button.ToolTipTitle = "Expotar Excel:";
+            button.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+        }
+
+        public void BotaoAdicionarCarrinho(SimpleButton button)
+        {
+            var imagem = form.colecaoImagens[13];
+
+            DevExpress.Utils.Svg.SvgImage svgImage = imagem;
+
+            Image image = svgImage.Render(null);
+
+            button.ImageOptions.Image = image;
+            button.ImageOptions.ImageToTextAlignment = ImageAlignToText.BottomCenter;
+            button.ImageOptions.SvgImageSize = new Size(40, 40);
+            button.Text = "";
+            button.ToolTip = "Clique aqui para selecionar e adicionar ao seu carrinho.";
+            button.ToolTipTitle = "Adicionar:";
             button.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
         }
     }

@@ -7,6 +7,9 @@ using DevExpress.Xpo;
 using App_TelasCompartilhadas.bancoSQLite;
 using static App_TelasCompartilhadas.Classes.DadosGeralNfe;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraReports.UI;
+using DevExpress.XtraEditors;
+using Unimake.Business.DFe.Xml.SNCM;
 
 namespace App_PDV.FechamentoCaixa
 {
@@ -40,6 +43,7 @@ namespace App_PDV.FechamentoCaixa
 
             configBotoes.BotaoVoltar(btnVoltar);
             configBotoes.BotaoSalvar(btnSalvar);
+            configBotoes.BotaoVisualizar(btnVisualizar);
             configBotoes.BotaoImprimir(btnImprimir);
             configBotoes.BotaoExcel(btnExcel);
 
@@ -56,7 +60,7 @@ namespace App_PDV.FechamentoCaixa
 
             // Definir a soma total para a coluna específica
             view.Columns["mpg_nfeVlrMov"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            view.Columns["mpg_nfeVlrMov"].SummaryItem.DisplayFormat = "Total: {0:n2}"; // Formato de exibição
+            view.Columns["mpg_nfeVlrMov"].SummaryItem.DisplayFormat = "Total: {0:C2}"; // Formato de exibição
 
             // Desabilita a edição para todas as colunas
             if (view != null)
@@ -192,6 +196,8 @@ namespace App_PDV.FechamentoCaixa
 
             if (dialog == DialogResult.Yes)
             {
+                ImprimiRelatorioFechamentoCaixa();
+
                 FechamentoCaixa();
 
                 AlterarCaixaAberto();
@@ -213,6 +219,7 @@ namespace App_PDV.FechamentoCaixa
                     tb_jornada _jornada = uow.GetObjectByKey<tb_jornada>(Convert.ToInt64(caixaAberto.fk_tb_jornada.id_jornada));
 
                     _jornada.jo_aberta = 0; //jo_aberta = 0 é jornada fechada
+                    _jornada.jo_dtAlt = DateTime.Now;
 
                     uow.Save(_jornada);
                     uow.CommitChanges();
@@ -221,6 +228,56 @@ namespace App_PDV.FechamentoCaixa
             catch (Exception ex)
             {
                 MensagensDoSistema.MensagemErroOk($"Erro ao fechar jornada no fechamento de caixa: {ex.Message}");
+            }
+        }
+
+        private void ImprimiRelatorioFechamentoCaixa()
+        {
+            rp_ImpressaoFechamentoCaixa relatorio =
+                new rp_ImpressaoFechamentoCaixa();
+            relatorio.ShowPreview();
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            ImprimiRelatorioFechamentoCaixa();
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            if (grdListaVendas.DataSource != null)
+            {
+                using (Session session = new Session())
+                {
+                    tb_jornada _jornada = session.GetObjectByKey<tb_jornada>(caixaAberto.fk_tb_jornada.id_jornada);
+
+                    string dataAbertura = _jornada.jo_dtCri.ToString("dd/MM/yyyy HH:mm:ss");
+
+                    string dataFechamento = _jornada.jo_dtAlt.ToString("dd/MM/yyyy HH:mm:ss");
+
+                    if (dataFechamento == dataAbertura)
+                    {
+                        dataFechamento = DateTime.Now.ToString("dd/MM/yyyy");
+                    }
+
+                    XtraSaveFileDialog saveFileDialog = new XtraSaveFileDialog();
+
+                    saveFileDialog.Filter = "Excel Files|*.xlsx";
+
+                    string dataInicio = Convert.ToDateTime(dataAbertura).ToString("dd-MM-yyyy");
+                    string dataFinal = Convert.ToDateTime(dataFechamento).ToString("dd-MM-yyyy");
+
+                    saveFileDialog.FileName = $"FechamentoCaixa_{dataInicio}_a_{dataFinal}.xlsx";
+
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        grdListaVendas.ExportToXlsx(saveFileDialog.FileName);
+                    }
+                }
+            }
+            else
+            {
+                MensagensDoSistema.MensagemAtencaoOk("Por favor, primeiro inicie a busca.");
             }
         }
     }

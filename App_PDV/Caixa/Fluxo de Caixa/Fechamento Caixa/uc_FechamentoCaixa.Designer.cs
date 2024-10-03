@@ -203,6 +203,7 @@ namespace App_PDV.FechamentoCaixa
             this.btnImprimir.Size = new System.Drawing.Size(58, 54);
             this.btnImprimir.TabIndex = 51;
             this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // btnExcel
             // 
@@ -215,6 +216,7 @@ namespace App_PDV.FechamentoCaixa
             this.btnExcel.Size = new System.Drawing.Size(58, 54);
             this.btnExcel.TabIndex = 52;
             this.btnExcel.Text = "Excel";
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
             // uc_FechamentoCaixa
             // 

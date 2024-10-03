@@ -253,6 +253,12 @@
     <Compile Include="Caixa\Fluxo de Caixa\Entrada Caixa\uc_VisualizarEntradasCaixa.Designer.cs">
       <DependentUpon>uc_VisualizarEntradasCaixa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Caixa\Fluxo de Caixa\Fechamento Caixa\rp_ImpressaoFechamentoCaixa.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Caixa\Fluxo de Caixa\Fechamento Caixa\rp_ImpressaoFechamentoCaixa.Designer.cs">
+      <DependentUpon>rp_ImpressaoFechamentoCaixa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Caixa\Fluxo de Caixa\Fechamento Caixa\uc_FechamentoCaixa.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -299,6 +305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Caixa\Fluxo de Caixa\Entrada Caixa\uc_VisualizarEntradasCaixa.resx">
       <DependentUpon>uc_VisualizarEntradasCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Caixa\Fluxo de Caixa\Fechamento Caixa\rp_ImpressaoFechamentoCaixa.resx">
+      <DependentUpon>rp_ImpressaoFechamentoCaixa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Caixa\Fluxo de Caixa\Fechamento Caixa\uc_FechamentoCaixa.resx">
       <DependentUpon>uc_FechamentoCaixa.cs</DependentUpon>

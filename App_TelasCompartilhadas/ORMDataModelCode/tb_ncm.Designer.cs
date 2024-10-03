@@ -19,7 +19,7 @@ namespace App_TelasCompartilhadas.bancoSQLite
     public partial class tb_ncm : XPLiteObject
     {
         long fid_ncm;
-        [Key]
+        [Key(AutoGenerate = true)]
         public long id_ncm
         {
             get { return fid_ncm; }

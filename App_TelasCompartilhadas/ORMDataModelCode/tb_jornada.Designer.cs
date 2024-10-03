@@ -19,7 +19,7 @@ namespace App_TelasCompartilhadas.bancoSQLite
     public partial class tb_jornada : XPLiteObject
     {
         long fid_jornada;
-        [Key]
+        [Key(AutoGenerate = true)]
         public long id_jornada
         {
             get { return fid_jornada; }

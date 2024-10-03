@@ -19,7 +19,7 @@ namespace App_TelasCompartilhadas.bancoSQLite
     public partial class tb_municipio : XPLiteObject
     {
         long fid_municipio;
-        [Key]
+        [Key(AutoGenerate = true)]
         public long id_municipio
         {
             get { return fid_municipio; }

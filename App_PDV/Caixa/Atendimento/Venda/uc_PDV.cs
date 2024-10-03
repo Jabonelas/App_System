@@ -37,7 +37,8 @@ namespace App_PDV
             ConfigBotoes configBotoes = new ConfigBotoes();
 
             configBotoes.BotaoVoltar(btnVoltar);
-            configBotoes.BotaoSelecionarProduto(btnSelecionarProduto);
+            //configBotoes.BotaoSelecionarProduto(btnSelecionarProduto);
+            configBotoes.BotaoAdicionarCarrinho(btnSelecionarProduto);
             configBotoes.BotaoPagamento(btnPagamento);
             configBotoes.BotaoExcluir(btnExcluir);
 

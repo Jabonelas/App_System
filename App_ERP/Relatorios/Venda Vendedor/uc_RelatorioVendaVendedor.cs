@@ -136,7 +136,7 @@ namespace App_ERP.Relatorios
             catch (Exception exception)
             {
                 MensagensDoSistema.MensagemErroOk(
-                    $"Erro ao preencher tabela com lista dos venderos com a quantidade/valor que foram vendidos: {exception}");
+                    $"Erro ao preencher tabela com lista dos vendedores com a quantidade/valor que foram vendidos: {exception}");
             }
         }
 

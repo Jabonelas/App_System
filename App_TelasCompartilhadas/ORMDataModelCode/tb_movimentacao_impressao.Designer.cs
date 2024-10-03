@@ -19,7 +19,7 @@ namespace App_TelasCompartilhadas.bancoSQLite
     public partial class tb_movimentacao_impressao : XPLiteObject
     {
         long fid_movimentacao_impressao;
-        [Key]
+        [Key(AutoGenerate = true)]
         public long id_movimentacao_impressao
         {
             get { return fid_movimentacao_impressao; }

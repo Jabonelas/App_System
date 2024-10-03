@@ -49,6 +49,7 @@
             this.colecaoImagens.Add("pagar", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("colecaoImagens.pagar"))));
             this.colecaoImagens.Add("salvar", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("colecaoImagens.salvar"))));
             this.colecaoImagens.Add("novo", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("colecaoImagens.novo"))));
+            this.colecaoImagens.Add("adiconar_carrinho", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("colecaoImagens.adiconar_carrinho"))));
             // 
             // frmImagensBotoes
             // 

@@ -19,7 +19,7 @@ namespace App_TelasCompartilhadas.bancoSQLite
     public partial class tb_produto : XPLiteObject
     {
         long fid_produto;
-        [Key]
+        [Key(AutoGenerate = true)]
         public long id_produto
         {
             get { return fid_produto; }
