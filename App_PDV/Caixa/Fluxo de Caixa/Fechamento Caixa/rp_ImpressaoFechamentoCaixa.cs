@@ -15,9 +15,14 @@ namespace App_PDV.FechamentoCaixa
     {
         private tb_movimentacao caixaAberto;
 
-        public rp_ImpressaoFechamentoCaixa()
+        private long idCaixaAberto;
+
+        public rp_ImpressaoFechamentoCaixa(long _idCaixaAberto)
+
         {
             InitializeComponent();
+
+            idCaixaAberto = _idCaixaAberto;
 
             PreencherCabecario();
 
@@ -168,7 +173,9 @@ namespace App_PDV.FechamentoCaixa
                 {
                     //mv_movTipo = 1 é abertura de caixa e mv_cxAberto = 1 é caixa aberto
 
-                    caixaAberto = uow.Query<tb_movimentacao>().FirstOrDefault(x => x.mv_movTipo == 1 && x.mv_cxAberto == 1);
+                    //caixaAberto = uow.Query<tb_movimentacao>().FirstOrDefault(x => x.mv_movTipo == 1 && x.mv_cxAberto == 1);
+
+                    caixaAberto = uow.GetObjectByKey<tb_movimentacao>(idCaixaAberto);
 
                     lblAberturaResMov.Text = caixaAberto.mv_nfeVlrTotNF.ToString("C2");
                 }
@@ -263,10 +270,12 @@ namespace App_PDV.FechamentoCaixa
                     SEnd += $"{linha1}{Environment.NewLine}{linha2}{Environment.NewLine}{linha3}{Environment.NewLine}{linha4}".ToUpper();
 
                 lblDadosFilial.Text = SEnd;
+
+                lblSubTitulo.Text = $"PONTO DE VENDA (PDV): {VariaveisGlobais.PDVLogado.pdv_pdvNum}";
             }
             catch (Exception ex)
             {
-                MensagensDoSistema.MensagemErroOk($"Erro ao preencher cabeçalho no relatório de venda vendedor: {ex.Message}");
+                MensagensDoSistema.MensagemErroOk($"Erro ao preencher cabeçalho no relatório de fechamento de caixa: {ex.Message}");
             }
         }
 

@@ -7,9 +7,6 @@ using System.Drawing;
 using System.Linq;
 using App_TelasCompartilhadas.bancoSQLite;
 
-
-
-
 namespace App_TelasCompartilhadas
 {
     public partial class uc_TelaInicial : DevExpress.XtraEditors.XtraUserControl
@@ -54,28 +51,28 @@ namespace App_TelasCompartilhadas
                                            .ToList();
 
                 // Recupera os movimentos registrados dentro do intervalo do mês atual
-                var xpcAllMovs = new XPCollection<tb_movimentacao>(uow, CriteriaOperator.FromLambda<tb_movimentacao>(w => w.mv_dtCri >= dtFrom && w.mv_dtCri <= dtTo));
+                var movimentacao = new XPCollection<tb_movimentacao>(uow, CriteriaOperator.FromLambda<tb_movimentacao>(w => w.mv_dtCri >= dtFrom && w.mv_dtCri <= dtTo && w.mv_movTipo == 150));// movTipo 150 é venda
 
                 // Agrupa os valores por dia, garantindo que dias sem movimento sejam exibidos com valor 0
                 var valores = from data in datasDoMes
-                              join mov in xpcAllMovs on data.Date equals mov.mv_dtCri.Date into movGroup
+                              join mov in movimentacao on data.Date equals mov.mv_dtCri.Date into movGroup
                               from subMov in movGroup.DefaultIfEmpty() // Se não houver registro, subMov será null
                               select new
                               {
                                   SDtCri = data,
                                   SNfeVersao = movGroup.Sum(m => m?.mv_nfeVlrTotNF ?? 0),
-                                  Qtd = movGroup.Count()// Se não houver registro, considera 0
+                                  Qtd = movGroup.Count(),// Se não houver registro, considera 0
                               };
 
                 //Valor total vendido
-                decimal totalVendido = xpcAllMovs.Sum(s => s.mv_nfeVlrTotNF);
+                decimal totalVendido = movimentacao.Sum(m => m?.mv_nfeVlrTotNF ?? 0);
                 lblValorTotalVendidoMes.Text = totalVendido.ToString("C2");
-                int totalVendas = xpcAllMovs.Count;
+                int totalVendas = movimentacao.Count();
                 lblQdtVendasMes.Text = $"{totalVendas} vendas";
 
                 foreach (var item in valores)
                 {
-                    if (item.SDtCri == DateTime.Today)
+                    if (item.SDtCri == DateTime.Today && item.Qtd != 0)
                     {
                         lblValorTotalVendidoDia.Text = item.SNfeVersao.ToString("C2");
                         lblQdtVendasDia.Text = $"{item.Qtd} vendas";
@@ -161,7 +158,7 @@ namespace App_TelasCompartilhadas
 
                 if (metaDoMes > 0)
                 {
-                    decimal vendidoAteAgora = xpcAllMovs.Sum(s => s.mv_nfeVlrTotNF);
+                    decimal vendidoAteAgora = movimentacao.Sum(m => m?.mv_nfeVlrTotNF ?? 0);
                     int diasNoMes = DateTime.DaysInMonth(dtTo.Year, dtTo.Month);
                     decimal metaDiaria = metaDoMes / diasNoMes;
                     decimal realizadoPorc = vendidoAteAgora / metaDoMes * 100;

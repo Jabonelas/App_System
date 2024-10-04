@@ -235,6 +235,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Caixa\Fluxo de Caixa\Abertura Caixa\rp_ImpressaoAberturaCaixa.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Caixa\Fluxo de Caixa\Abertura Caixa\rp_ImpressaoAberturaCaixa.Designer.cs">
+      <DependentUpon>rp_ImpressaoAberturaCaixa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Caixa\Fluxo de Caixa\Abertura Caixa\uc_AberturaCaixa.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -297,6 +303,9 @@
     <Compile Include="Caixa\Atendimento\Venda\uc_PDV.Designer.cs">
       <DependentUpon>uc_PDV.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Caixa\Fluxo de Caixa\Abertura Caixa\rp_ImpressaoAberturaCaixa.resx">
+      <DependentUpon>rp_ImpressaoAberturaCaixa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Caixa\Fluxo de Caixa\Abertura Caixa\uc_AberturaCaixa.resx">
       <DependentUpon>uc_AberturaCaixa.cs</DependentUpon>
     </EmbeddedResource>

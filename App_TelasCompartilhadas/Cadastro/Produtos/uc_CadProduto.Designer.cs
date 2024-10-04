@@ -363,7 +363,7 @@ namespace App_TelasCompartilhadas.Produtos
             // 
             // txtEstoqMaximo
             // 
-            this.txtEstoqMaximo.Location = new System.Drawing.Point(900, 176);
+            this.txtEstoqMaximo.Location = new System.Drawing.Point(406, 176);
             this.txtEstoqMaximo.Name = "txtEstoqMaximo";
             this.txtEstoqMaximo.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEstoqMaximo.Properties.Appearance.Options.UseFont = true;
@@ -372,7 +372,7 @@ namespace App_TelasCompartilhadas.Produtos
             this.txtEstoqMaximo.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtEstoqMaximo.Properties.MaskSettings.Set("mask", "d");
             this.txtEstoqMaximo.Properties.MaxLength = 6;
-            this.txtEstoqMaximo.Size = new System.Drawing.Size(328, 20);
+            this.txtEstoqMaximo.Size = new System.Drawing.Size(409, 20);
             this.txtEstoqMaximo.StyleController = this.layoutControl2;
             this.txtEstoqMaximo.TabIndex = 9;
             this.txtEstoqMaximo.ToolTip = "Defina a quantidade máximo de estoque para este item.";
@@ -382,7 +382,7 @@ namespace App_TelasCompartilhadas.Produtos
             // 
             // txtEstoqMinimo
             // 
-            this.txtEstoqMinimo.Location = new System.Drawing.Point(406, 176);
+            this.txtEstoqMinimo.Location = new System.Drawing.Point(819, 176);
             this.txtEstoqMinimo.Name = "txtEstoqMinimo";
             this.txtEstoqMinimo.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEstoqMinimo.Properties.Appearance.Options.UseFont = true;
@@ -391,7 +391,7 @@ namespace App_TelasCompartilhadas.Produtos
             this.txtEstoqMinimo.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtEstoqMinimo.Properties.MaskSettings.Set("mask", "d");
             this.txtEstoqMinimo.Properties.MaxLength = 6;
-            this.txtEstoqMinimo.Size = new System.Drawing.Size(490, 20);
+            this.txtEstoqMinimo.Size = new System.Drawing.Size(409, 20);
             this.txtEstoqMinimo.StyleController = this.layoutControl2;
             this.txtEstoqMinimo.TabIndex = 9;
             this.txtEstoqMinimo.ToolTip = "Defina a quantidade mínima de estoque para este item.";
@@ -618,9 +618,9 @@ namespace App_TelasCompartilhadas.Produtos
             this.layoutControlItem25.Control = this.txtEstoqMinimo;
             this.layoutControlItem25.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem25.CustomizationFormText = "Prç. Custo";
-            this.layoutControlItem25.Location = new System.Drawing.Point(370, 80);
+            this.layoutControlItem25.Location = new System.Drawing.Point(783, 80);
             this.layoutControlItem25.Name = "layoutControlItem25";
-            this.layoutControlItem25.Size = new System.Drawing.Size(494, 48);
+            this.layoutControlItem25.Size = new System.Drawing.Size(413, 48);
             this.layoutControlItem25.Text = "Estoque Mínimo";
             this.layoutControlItem25.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem25.TextSize = new System.Drawing.Size(157, 13);
@@ -630,9 +630,9 @@ namespace App_TelasCompartilhadas.Produtos
             this.layoutControlItem20.Control = this.txtEstoqMaximo;
             this.layoutControlItem20.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem20.CustomizationFormText = "Prç. Custo";
-            this.layoutControlItem20.Location = new System.Drawing.Point(864, 80);
+            this.layoutControlItem20.Location = new System.Drawing.Point(370, 80);
             this.layoutControlItem20.Name = "layoutControlItem20";
-            this.layoutControlItem20.Size = new System.Drawing.Size(332, 48);
+            this.layoutControlItem20.Size = new System.Drawing.Size(413, 48);
             this.layoutControlItem20.Text = "Estoque Máximo";
             this.layoutControlItem20.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem20.TextSize = new System.Drawing.Size(157, 13);

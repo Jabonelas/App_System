@@ -51,23 +51,23 @@ namespace App_PDV
                                            .ToList();
 
                 // Recupera os movimentos registrados dentro do intervalo do mês atual
-                var xpcAllMovs = new XPCollection<tb_movimentacao>(uow, CriteriaOperator.FromLambda<tb_movimentacao>(w => w.mv_dtCri >= dtFrom && w.mv_dtCri <= dtTo));
+                var movimentacao = new XPCollection<tb_movimentacao>(uow, CriteriaOperator.FromLambda<tb_movimentacao>(w => w.mv_dtCri >= dtFrom && w.mv_dtCri <= dtTo && w.mv_movTipo == 150));// movTipo 150 é venda
 
                 // Agrupa os valores por dia, garantindo que dias sem movimento sejam exibidos com valor 0
                 var valores = from data in datasDoMes
-                              join mov in xpcAllMovs on data.Date equals mov.mv_dtCri.Date into movGroup
+                              join mov in movimentacao on data.Date equals mov.mv_dtCri.Date into movGroup
                               from subMov in movGroup.DefaultIfEmpty() // Se não houver registro, subMov será null
                               select new
                               {
                                   SDtCri = data,
                                   SNfeVersao = movGroup.Sum(m => m?.mv_nfeVlrTotNF ?? 0),
-                                  Qtd = movGroup.Count()// Se não houver registro, considera 0
+                                  Qtd = movGroup.Count() // Se não houver registro, considera 0
                               };
 
                 //Valor total vendido
-                decimal totalVendido = xpcAllMovs.Sum(s => s.mv_nfeVlrTotNF);
+                decimal totalVendido = movimentacao.Sum(m => m?.mv_nfeVlrTotNF ?? 0);
                 lblValorTotalVendidoMes.Text = totalVendido.ToString("C2");
-                int totalVendas = xpcAllMovs.Count;
+                int totalVendas = movimentacao.Count();//150 é o tipo de movimento de venda;
                 lblQdtVendasMes.Text = $"{totalVendas} vendas";
 
                 foreach (var item in valores)
@@ -111,54 +111,11 @@ namespace App_PDV
                 title.Text = "<b>Gráfico de acompanhamento da meta mensal</b>";
                 chartControl1.Titles.Add(title);
 
-                //----------------------------------------------------------------------------------------------------------
-
-                //DateTime dtFrom = DateTime.Now.FirstDayMonth();
-                //DateTime dtTo = DateTime.Now.Day > 1 ? DateTime.Now.AddDays(-1).Date.AddDays(1).AddTicks(-1) : DateTime.Now;
-
-                //// Recupera as movimentações no intervalo de datas
-                //var xpcAllMovs = new XPCollection<tb_movimentacao>(uow, CriteriaOperator.FromLambda<tb_movimentacao>(w => w.mv_dtCri >= dtFrom && w.mv_dtCri <= dtTo));
-
-                //// Agrupa as movimentações por dia
-                //var valores = from o in xpcAllMovs
-                //              group o by o.mv_dtCri.Date into g
-                //              select new
-                //              {
-                //                  Mes = g.First().mv_dtCri.ToString("MMMM", new System.Globalization.CultureInfo("pt-BR")),
-                //                  SDtCri = g.Key,
-                //                  SNfeVersao = g.Sum(S => S.mv_nfeVlrTotNF)
-                //              };
-
-                //// Verifica se a série existe, se não, cria uma nova
-                //if (chartControl1.Series.Count == 0)
-                //{
-                //    //Series series = new Series("Vendas", ViewType.Bar); // Exemplo com gráfico de barras, ajuste conforme necessário
-                //    Series series = new Series("Vendas", ViewType.Line);
-                //    chartControl1.Series.Add(series);
-                //}
-
-                //// Define a fonte de dados da série
-                //chartControl1.Series[0].DataSource = valores;
-                //chartControl1.Series[0].ArgumentDataMember = "SDtCri";
-                //chartControl1.Series[0].ValueDataMembers.AddRange(new string[] { "SNfeVersao" });
-
-                //// Configura o eixo Y para exibir valores como moeda (R$)
-                //XYDiagram diagram = (XYDiagram)chartControl1.Diagram;
-                //diagram.AxisY.Label.TextPattern = "{V:C}"; // Define o padrão como moeda
-
-                //// Limpa títulos antigos, se necessário
-                //chartControl1.Titles.Clear();
-
-                //// Adiciona o título principal do gráfico
-                //ChartTitle title = new ChartTitle();
-                //title.Text = "<b>Gráfico de acompanhamento da meta mensal</b>";
-                //chartControl1.Titles.Add(title);
-
                 decimal metaDoMes = (decimal)VariaveisGlobais.FilialLogada.at_metaMensal;
 
                 if (metaDoMes > 0)
                 {
-                    decimal vendidoAteAgora = xpcAllMovs.Sum(s => s.mv_nfeVlrTotNF);
+                    decimal vendidoAteAgora = movimentacao.Sum(m => m?.mv_nfeVlrTotNF ?? 0);
                     int diasNoMes = DateTime.DaysInMonth(dtTo.Year, dtTo.Month);
                     decimal metaDiaria = metaDoMes / diasNoMes;
                     decimal realizadoPorc = vendidoAteAgora / metaDoMes * 100;

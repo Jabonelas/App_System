@@ -181,11 +181,12 @@ namespace App_TelasCompartilhadas.bancoSQLite
             get { return fpd_ativo; }
             set { SetPropertyValue<decimal>(nameof(pd_ativo), ref fpd_ativo, value); }
         }
-        long ffk_tb_est;
-        public long fk_tb_est
+        tb_est ffk_tb_est;
+        [Association(@"tb_produtoReferencestb_est")]
+        public tb_est fk_tb_est
         {
             get { return ffk_tb_est; }
-            set { SetPropertyValue<long>(nameof(fk_tb_est), ref ffk_tb_est, value); }
+            set { SetPropertyValue<tb_est>(nameof(fk_tb_est), ref ffk_tb_est, value); }
         }
         tb_rede ffk_tb_rede;
         [Association(@"tb_produtoReferencestb_rede")]

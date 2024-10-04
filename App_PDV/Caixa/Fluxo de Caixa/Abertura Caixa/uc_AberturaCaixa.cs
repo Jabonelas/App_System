@@ -8,6 +8,9 @@ using System.Globalization;
 
 using App_TelasCompartilhadas.bancoSQLite;
 
+using App_PDV.FechamentoCaixa;
+using DevExpress.XtraReports.UI;
+
 namespace App_PDV.AberturaCaixa
 {
     public partial class uc_AberturaCaixa : DevExpress.XtraEditors.XtraUserControl
@@ -17,6 +20,8 @@ namespace App_PDV.AberturaCaixa
         private tb_jornada jornada;
 
         private frmTelaInicialPDV _frmTelaInicial;
+
+        private long idCaixaAberto;
 
         public uc_AberturaCaixa(frmTelaInicialPDV _form)
         {
@@ -137,6 +142,8 @@ namespace App_PDV.AberturaCaixa
                     uow.Save(_caixaAberto);
                     uow.Save(_movimentacaoPagamento);
                     uow.CommitChanges();
+
+                    idCaixaAberto = _caixaAberto.id_movimentacao;
                 }
             }
             catch (Exception ex)
@@ -155,7 +162,7 @@ namespace App_PDV.AberturaCaixa
 
                 MensagensDoSistema.MensagemInformacaoOk("Caixa aberto com sucesso!");
 
-                this.Dispose();
+                ImprimiRelatorioAberturaCaixa();
             }
             else
             {
@@ -170,6 +177,13 @@ namespace App_PDV.AberturaCaixa
 
                 MensagensDoSistema.MensagemAtencaoOk("A abertura do caixa já foi realizada!");
             }
+        }
+
+        private void ImprimiRelatorioAberturaCaixa()
+        {
+            rp_ImpressaoAberturaCaixa relatorio =
+                new rp_ImpressaoAberturaCaixa(idCaixaAberto);
+            relatorio.ShowPreview();
         }
 
         private void AberturaJornada()

@@ -23,6 +23,8 @@ namespace App_PDV
         {
             InitializeComponent();
 
+            HabilitarEventoAlteracaoDentroGrid();
+
             Layout();
 
             _frmTelaInicial = _form;
@@ -43,6 +45,26 @@ namespace App_PDV
             configBotoes.BotaoExcluir(btnExcluir);
 
             uc_TituloTelas1.lblTituloTela.Text = "Ponto de Venda";
+        }
+
+        private void HabilitarEventoAlteracaoDentroGrid()
+        {
+            GridView view = grdListaProdutos.MainView as GridView;
+
+            // Verifique se o view não é nulo antes de associar o evento
+            if (view != null)
+            {
+                // Adicionando o evento CellValueChanged ao GridView
+                view.CellValueChanged +=
+                    new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(view_CellValueChanged);
+            }
+        }
+
+        // Método que será chamado quando o valor de uma célula for alterado
+        private void view_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            grdListaProdutos.DataSource = null;
+            grdListaProdutos.DataSource = listaProdutoSelecionado;
         }
 
         private void PreencherProduto()
@@ -94,6 +116,7 @@ namespace App_PDV
             private string _marca;
             private int _quantidade;
             private decimal _vlrUnCom;
+            private decimal _vlrTotal;
 
             public int idProdutoFilial
             {
@@ -135,6 +158,12 @@ namespace App_PDV
             {
                 get { return _vlrUnCom; }
                 set { _vlrUnCom = value; OnPropertyChanged(nameof(vlrUnCom)); }
+            }
+
+            public decimal vlrTotal
+            {
+                get { return _vlrTotal; }
+                set { _vlrTotal = value; OnPropertyChanged(nameof(vlrTotal)); }
             }
 
             public event PropertyChangedEventHandler PropertyChanged;
@@ -194,7 +223,8 @@ namespace App_PDV
                         desc = produtoSelecionado.pf_desc,
                         marca = produtoSelecionado.mp_desc,
                         quantidade = 1,
-                        vlrUnCom = produtoSelecionado.pf_vlrUnCom
+                        vlrUnCom = produtoSelecionado.pf_vlrUnCom,
+                        vlrTotal = produtoSelecionado.pf_vlrUnCom,
                     });
 
                     grdListaProdutos.DataSource = listaProdutoSelecionado;
@@ -214,7 +244,9 @@ namespace App_PDV
 
             foreach (var item in listaProdutoSelecionado)
             {
-                valorTotal += (item.quantidade * item.vlrUnCom);
+                item.vlrTotal = item.quantidade * item.vlrUnCom;
+
+                valorTotal += item.vlrTotal;
 
                 quantidadeTotal += item.quantidade;
             }
@@ -276,7 +308,9 @@ namespace App_PDV
             {
                 using (UnitOfWork uow = new UnitOfWork())
                 {
-                    tb_produto_filial produtoSelecionado = uow.Query<tb_produto_filial>().FirstOrDefault(p => p.id_produto_filial == _idProduto);
+                    //tb_produto_filial produtoSelecionado = uow.Query<tb_produto_filial>().FirstOrDefault(p => p.id_produto_filial == _idProduto);
+
+                    tb_produto_filial produtoSelecionado = uow.GetObjectByKey<tb_produto_filial>(_idProduto);
 
                     var produtoQtdAlterada = listaProdutoSelecionado.FirstOrDefault(p => p.idProdutoFilial == _idProduto);
 

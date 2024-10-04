@@ -2,28 +2,33 @@
 <ArrayOfArrayOfArrayOfString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ArrayOfArrayOfString>
     <ArrayOfString>
-      <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Fluxo de Caixa\Fechamento Caixa\rp_ImpressaoFechamentoCaixa.cs</string>
-      <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Fluxo de Caixa\Fechamento Caixa\rp_ImpressaoFechamentoCaixa.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Fluxo de Caixa\Abertura Caixa\uc_AberturaCaixa.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Fluxo de Caixa\Abertura Caixa\uc_AberturaCaixa.cs</string>
     </ArrayOfString>
     <ArrayOfString>
       <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Fluxo de Caixa\Fechamento Caixa\uc_FechamentoCaixa.cs</string>
       <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Fluxo de Caixa\Fechamento Caixa\uc_FechamentoCaixa.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\Users\israe\source\repos\App_System\App_ERP\Relatorios\Venda Vendedor\uc_RelatorioVendaVendedor.cs</string>
-      <string>C:\Users\israe\source\repos\App_System\App_ERP\Relatorios\Venda Vendedor\uc_RelatorioVendaVendedor.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Fluxo de Caixa\Fechamento Caixa\rp_ImpressaoFechamentoCaixa.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Fluxo de Caixa\Fechamento Caixa\rp_ImpressaoFechamentoCaixa.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Fluxo de Caixa\Fechamento Caixa\rp_ImpressaoFechamentoCaixa.Designer.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Fluxo de Caixa\Abertura Caixa\uc_AberturaCaixa.cs</string>
-      <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Fluxo de Caixa\Abertura Caixa\uc_AberturaCaixa.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_PDV\Tela Inicial\uc_TelaInicialPDV.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_PDV\Tela Inicial\uc_TelaInicialPDV.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Relatorios\uc_RelatorioFluxoSaida.cs</string>
-      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Relatorios\uc_RelatorioFluxoSaida.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\uc_TelaInicial.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Atendimento\Venda\uc_PDV.cs</string>
-      <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Atendimento\Venda\uc_PDV.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_ERP\Tela Incial\uc_TelaInicialERP.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_ERP\Tela Incial\uc_TelaInicialERP.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Fluxo de Caixa\Abertura Caixa\rp_ImpressaoAberturaCaixa.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Fluxo de Caixa\Abertura Caixa\rp_ImpressaoAberturaCaixa.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Fluxo de Caixa\Abertura Caixa\rp_ImpressaoAberturaCaixa.Designer.cs</string>
     </ArrayOfString>
   </ArrayOfArrayOfString>
 </ArrayOfArrayOfArrayOfString>

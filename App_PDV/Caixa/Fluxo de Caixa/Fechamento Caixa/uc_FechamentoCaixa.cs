@@ -43,7 +43,6 @@ namespace App_PDV.FechamentoCaixa
 
             configBotoes.BotaoVoltar(btnVoltar);
             configBotoes.BotaoSalvar(btnSalvar);
-            configBotoes.BotaoVisualizar(btnVisualizar);
             configBotoes.BotaoImprimir(btnImprimir);
             configBotoes.BotaoExcel(btnExcel);
 
@@ -196,8 +195,6 @@ namespace App_PDV.FechamentoCaixa
 
             if (dialog == DialogResult.Yes)
             {
-                ImprimiRelatorioFechamentoCaixa();
-
                 FechamentoCaixa();
 
                 AlterarCaixaAberto();
@@ -205,9 +202,9 @@ namespace App_PDV.FechamentoCaixa
                 FecharJornada();
 
                 MensagensDoSistema.MensagemInformacaoOk("A fechamento realizado com sucesso!");
-            }
 
-            this.Dispose();
+                ImprimiRelatorioFechamentoCaixa();
+            }
         }
 
         private void FecharJornada()
@@ -234,7 +231,7 @@ namespace App_PDV.FechamentoCaixa
         private void ImprimiRelatorioFechamentoCaixa()
         {
             rp_ImpressaoFechamentoCaixa relatorio =
-                new rp_ImpressaoFechamentoCaixa();
+                new rp_ImpressaoFechamentoCaixa(caixaAberto.id_movimentacao);
             relatorio.ShowPreview();
         }
 

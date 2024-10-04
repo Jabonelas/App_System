@@ -389,6 +389,10 @@ namespace App_TelasCompartilhadas.Produtos
 
                     tb_categoria_produto categoria = uow.GetObjectByKey<tb_categoria_produto>(Convert.ToInt64(cmbCategoria.EditValue));
 
+                    tb_ator usuarioCadastrador = uow.GetObjectByKey<tb_ator>(VariaveisGlobais.UsuarioLogado.id_ator);
+
+                    tb_rede redeLogada = uow.GetObjectByKey<tb_rede>(VariaveisGlobais.RedeLogada.id_rede);
+
                     tb_produto produto = new tb_produto(uow);
                     produto.pd_dtCri = DateTime.Now;
                     produto.pd_dtAlt = DateTime.Now;
@@ -404,10 +408,11 @@ namespace App_TelasCompartilhadas.Produtos
                     produto.pd_vlrUnComBase = Convert.ToDecimal(txtPrecoUn.Text);
                     produto.pd_estMinBase = Convert.ToDecimal(txtEstoqMinimo.Text);
                     produto.pd_estMaxBase = Convert.ToInt64(txtEstoqMaximo.Text);
-                    produto.fk_tb_ator = VariaveisGlobais.UsuarioLogado;
+                    produto.fk_tb_ator = usuarioCadastrador;
                     produto.fk_tb_marca_produto = marca;
                     produto.fk_tb_subcategoria_produto = subcategoria;
                     produto.fk_tb_categoria_produto = categoria;
+                    produto.fk_tb_rede = redeLogada;
 
                     uow.Save(produto);
                     uow.CommitChanges();
@@ -591,11 +596,13 @@ namespace App_TelasCompartilhadas.Produtos
             }
 
             painelTelaInicial.Controls.Clear();
-            uc_TelaInicial ucTelaInicial = new uc_TelaInicial();
-            painelTelaInicial.Controls.Add(ucTelaInicial);
-            painelTelaInicial.Tag = ucTelaInicial;
+            uc_Produto ucProduto = new uc_Produto(painelTelaInicial);
+            painelTelaInicial.Controls.Add(ucProduto);
+            painelTelaInicial.Tag = ucProduto;
 
-            ucTelaInicial.Show();
+            MensagensDoSistema.MensagemInformacaoOk("O produto foi cadastrado com sucesso!");
+
+            ucProduto.Show();
         }
 
         private void ValidarDigitos(object sender, KeyPressEventArgs e)
@@ -666,13 +673,15 @@ namespace App_TelasCompartilhadas.Produtos
 
         private void txtEstoqMaximo_Validating(object sender, CancelEventArgs e)
         {
-            long estoqueMinimo = Convert.ToInt64(txtEstoqMinimo.Text);
-            long estoqueMaximo = Convert.ToInt64(txtEstoqMaximo.Text);
+            long estoqueMinimo = string.IsNullOrEmpty(txtEstoqMinimo.Text) ? 0 : Convert.ToInt64(txtEstoqMinimo.Text);
+            long estoqueMaximo = string.IsNullOrEmpty(txtEstoqMaximo.Text) ? 0 : Convert.ToInt64(txtEstoqMaximo.Text);
 
             if (estoqueMaximo < estoqueMinimo)
             {
                 txtEstoqMaximo.ErrorText = "Estoque Máximo não pode ser menor que Estoque Mínimo.";
                 e.Cancel = true;
+
+                txtEstoqMaximo.Text = string.Empty;
             }
             else
             {
@@ -683,13 +692,15 @@ namespace App_TelasCompartilhadas.Produtos
 
         private void txtEstoqMinimo_Validating(object sender, CancelEventArgs e)
         {
-            long estoqueMinimo = Convert.ToInt64(txtEstoqMinimo.Text);
-            long estoqueMaximo = Convert.ToInt64(txtEstoqMaximo.Text);
+            long estoqueMinimo = string.IsNullOrEmpty(txtEstoqMinimo.Text) ? 0 : Convert.ToInt64(txtEstoqMinimo.Text);
+            long estoqueMaximo = string.IsNullOrEmpty(txtEstoqMaximo.Text) ? 0 : Convert.ToInt64(txtEstoqMaximo.Text);
 
             if (estoqueMinimo > estoqueMaximo)
             {
                 txtEstoqMinimo.ErrorText = "Estoque Mínimo não pode ser maior que Estoque Máximo.";
                 e.Cancel = true;
+
+                txtEstoqMinimo.Text = string.Empty;
             }
             else
             {
@@ -720,7 +731,7 @@ namespace App_TelasCompartilhadas.Produtos
             }
             else
             {
-                txtPrecoUn.Text = vlrProdInicial.ToString();
+                //txtPrecoUn.Text = vlrProdInicial.ToString();
             }
         }
     }

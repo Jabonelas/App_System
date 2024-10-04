@@ -26,6 +26,7 @@ namespace App_PDV
             BonusSkins.Register();
 
             // Define o tema padrão"
+            //UserLookAndFeel.Default.SetSkinStyle("The Asphalt World");
             UserLookAndFeel.Default.SetSkinStyle("Sharp Plus");
 
             // Registrar apenas os temas permitidos

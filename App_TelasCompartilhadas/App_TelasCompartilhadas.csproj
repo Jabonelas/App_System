@@ -176,6 +176,24 @@
     <Compile Include="Login\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cadastro\Produtos\uc_CadProduto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cadastro\Produtos\uc_CadProduto.Designer.cs">
+      <DependentUpon>uc_CadProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro\Produtos\uc_EstoqueProduto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cadastro\Produtos\uc_EstoqueProduto.Designer.cs">
+      <DependentUpon>uc_EstoqueProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro\Produtos\uc_Produto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cadastro\Produtos\uc_Produto.Designer.cs">
+      <DependentUpon>uc_Produto.cs</DependentUpon>
+    </Compile>
     <Compile Include="ORMDataModelCode\ConnectionHelper.cs" />
     <Compile Include="ORMDataModelCode\tb_ator.cs" />
     <Compile Include="ORMDataModelCode\tb_ator.Designer.cs">
@@ -356,24 +374,6 @@
     <Compile Include="ORMDataModelCode\tb_unidade_monetaria.cs" />
     <Compile Include="ORMDataModelCode\tb_unidade_monetaria.Designer.cs">
       <DependentUpon>tb_unidade_monetaria.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Cadastro\Produtos\uc_CadProduto.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Cadastro\Produtos\uc_CadProduto.Designer.cs">
-      <DependentUpon>uc_CadProduto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Cadastro\Produtos\uc_EstoqueProduto.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Cadastro\Produtos\uc_EstoqueProduto.Designer.cs">
-      <DependentUpon>uc_EstoqueProduto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Cadastro\Produtos\uc_Produto.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Cadastro\Produtos\uc_Produto.Designer.cs">
-      <DependentUpon>uc_Produto.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">

@@ -45,7 +45,8 @@ namespace App_PDV
             this.Descricao = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Marca = new DevExpress.XtraGrid.Columns.GridColumn();
             this.qtd = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.vlrTotal = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.vlrUn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.VlrTot = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnExcluir = new DevExpress.XtraEditors.SimpleButton();
             this.btnPagamento = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -181,7 +182,8 @@ namespace App_PDV
             this.Descricao,
             this.Marca,
             this.qtd,
-            this.vlrTotal});
+            this.vlrUn,
+            this.VlrTot});
             this.gridView1.GridControl = this.grdListaProdutos;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditFormInplace;
@@ -239,17 +241,28 @@ namespace App_PDV
             this.qtd.VisibleIndex = 3;
             this.qtd.Width = 72;
             // 
-            // vlrTotal
+            // vlrUn
             // 
-            this.vlrTotal.Caption = "Vlr. Total";
-            this.vlrTotal.DisplayFormat.FormatString = "c2";
-            this.vlrTotal.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.vlrTotal.FieldName = "vlrUnCom";
-            this.vlrTotal.Name = "vlrTotal";
-            this.vlrTotal.OptionsColumn.ReadOnly = true;
-            this.vlrTotal.Visible = true;
-            this.vlrTotal.VisibleIndex = 4;
-            this.vlrTotal.Width = 93;
+            this.vlrUn.Caption = "Vlr. Un.";
+            this.vlrUn.DisplayFormat.FormatString = "c2";
+            this.vlrUn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.vlrUn.FieldName = "vlrUnCom";
+            this.vlrUn.Name = "vlrUn";
+            this.vlrUn.OptionsColumn.ReadOnly = true;
+            this.vlrUn.Visible = true;
+            this.vlrUn.VisibleIndex = 4;
+            this.vlrUn.Width = 93;
+            // 
+            // VlrTot
+            // 
+            this.VlrTot.Caption = "Vlr. Total";
+            this.VlrTot.DisplayFormat.FormatString = "C2";
+            this.VlrTot.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.VlrTot.FieldName = "vlrTotal";
+            this.VlrTot.Name = "VlrTot";
+            this.VlrTot.OptionsColumn.ReadOnly = true;
+            this.VlrTot.Visible = true;
+            this.VlrTot.VisibleIndex = 5;
             // 
             // btnExcluir
             // 
@@ -382,8 +395,6 @@ namespace App_PDV
             // 
             // uc_PDV
             // 
-            this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.labelControl1);
@@ -435,7 +446,7 @@ namespace App_PDV
         private DevExpress.XtraGrid.Columns.GridColumn DescCurta;
         private DevExpress.XtraGrid.Columns.GridColumn Descricao;
         private DevExpress.XtraGrid.Columns.GridColumn qtd;
-        private DevExpress.XtraGrid.Columns.GridColumn vlrTotal;
+        private DevExpress.XtraGrid.Columns.GridColumn vlrUn;
         private DevExpress.XtraGrid.Columns.GridColumn Marca;
         private DevExpress.XtraEditors.SimpleButton btnExcluir;
         private DevExpress.XtraEditors.SimpleButton btnPagamento;
@@ -450,5 +461,6 @@ namespace App_PDV
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraGrid.Columns.GridColumn VlrTot;
     }
 }
