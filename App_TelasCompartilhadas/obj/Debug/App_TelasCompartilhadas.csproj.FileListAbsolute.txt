@@ -141,7 +141,6 @@ C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_Tel
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.Produtos.uc_EstoqueProduto.resources
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.Produtos.uc_Produto.resources
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.Properties.Resources.resources
-C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.frmImagensBotoes.resources
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.Relatorios.rp_ImpressaoRelatorioFluxoSaida.resources
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.Relatorios.uc_RelatorioFluxoSaida.resources
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.uc_TelaInicial.resources
@@ -155,3 +154,4 @@ C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_Tel
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.csproj.CopyComplete
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.dll
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.pdb
+C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.frmImagensGeralSistema.resources

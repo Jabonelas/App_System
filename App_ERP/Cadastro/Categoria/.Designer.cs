@@ -28,24 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_CadCategoria));
             this.btnSalvar = new DevExpress.XtraEditors.SimpleButton();
             this.btnVoltar = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.txtDescrcricaoCategoria = new DevExpress.XtraEditors.TextEdit();
             this.cmbSecao = new DevExpress.XtraEditors.ComboBoxEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.uc_TituloTelas1 = new App_TelasCompartilhadas.uc_TituloTelas();
+            this.alcConfirmacao = new DevExpress.XtraBars.Alerter.AlertControl(this.components);
+            this.svgImageCollection1 = new DevExpress.Utils.SvgImageCollection(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescrcricaoCategoria.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbSecao.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.svgImageCollection1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalvar
@@ -127,15 +132,15 @@
             this.Root.Size = new System.Drawing.Size(1266, 124);
             this.Root.TextVisible = false;
             // 
-            // layoutControlItem2
+            // layoutControlGroup1
             // 
-            this.layoutControlItem2.Control = this.txtDescrcricaoCategoria;
-            this.layoutControlItem2.Location = new System.Drawing.Point(610, 0);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(612, 59);
-            this.layoutControlItem2.Text = "Descrição da categoria";
-            this.layoutControlItem2.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(109, 13);
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem3,
+            this.layoutControlItem2});
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1246, 104);
+            this.layoutControlGroup1.Text = "Aqui você pode realizar o cadatro da categoria.";
             // 
             // layoutControlItem3
             // 
@@ -147,15 +152,15 @@
             this.layoutControlItem3.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem3.TextSize = new System.Drawing.Size(109, 13);
             // 
-            // layoutControlGroup1
+            // layoutControlItem2
             // 
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem3,
-            this.layoutControlItem2});
-            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1246, 104);
-            this.layoutControlGroup1.Text = "Aqui você pode realizar o cadatro da categoria.";
+            this.layoutControlItem2.Control = this.txtDescrcricaoCategoria;
+            this.layoutControlItem2.Location = new System.Drawing.Point(610, 0);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(612, 59);
+            this.layoutControlItem2.Text = "Descrição da categoria";
+            this.layoutControlItem2.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(109, 13);
             // 
             // uc_TituloTelas1
             // 
@@ -164,6 +169,17 @@
             this.uc_TituloTelas1.Name = "uc_TituloTelas1";
             this.uc_TituloTelas1.Size = new System.Drawing.Size(1259, 33);
             this.uc_TituloTelas1.TabIndex = 17;
+            // 
+            // alcConfirmacao
+            // 
+            this.alcConfirmacao.HtmlTemplate.Styles = resources.GetString("alcConfirmacao.HtmlTemplate.Styles");
+            this.alcConfirmacao.HtmlTemplate.Template = resources.GetString("alcConfirmacao.HtmlTemplate.Template");
+            this.alcConfirmacao.HtmlElementMouseClick += new DevExpress.XtraBars.Alerter.AlertHtmlElementMouseClickEventHandler(this.alcConfirmacao_HtmlElementMouseClick);
+            // 
+            // svgImageCollection1
+            // 
+            this.svgImageCollection1.Add("State_Validation_Invalid", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollection1.State_Validation_Invalid"))));
+            this.svgImageCollection1.Add("State_Validation_Valid", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollection1.State_Validation_Valid"))));
             // 
             // uc_CadCategoria
             // 
@@ -181,9 +197,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDescrcricaoCategoria.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbSecao.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.svgImageCollection1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -199,5 +216,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private App_TelasCompartilhadas.uc_TituloTelas uc_TituloTelas1;
+        private DevExpress.XtraBars.Alerter.AlertControl alcConfirmacao;
+        private DevExpress.Utils.SvgImageCollection svgImageCollection1;
     }
 }

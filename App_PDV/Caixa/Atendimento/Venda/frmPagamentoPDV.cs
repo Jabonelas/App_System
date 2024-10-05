@@ -18,6 +18,7 @@ using DANFe = Unimake.Unidanfe;
 using XmlNFe = Unimake.Business.DFe.Xml.NFe;
 
 using System.IO;
+using DevExpress.XtraBars.Alerter;
 using DevExpress.XtraGrid.Views.Grid;
 
 namespace App_PDV
@@ -1728,7 +1729,7 @@ namespace App_PDV
                 return;
             }
 
-            if (!Validacoes.IsCpfValido(txtCPF.Text) && txtCPF.Text != "___.___.___-__")
+            if (!ValidacoesCampos.IsCpfValido(txtCPF.Text) && txtCPF.Text != "___.___.___-__")
             {
                 txtCPF.ErrorText = "C.P.F. informado invalido!";
                 e.Cancel = true;

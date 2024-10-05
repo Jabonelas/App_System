@@ -136,16 +136,16 @@
     <Compile Include="Cadastro\Funcionario\uc_CadFuncionario.Designer.cs">
       <DependentUpon>uc_CadFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\API.cs" />
-    <Compile Include="Classes\ConfigBotoes.cs" />
-    <Compile Include="Classes\DadosCep.cs" />
+    <Compile Include="Classes\API Correios\API.cs" />
+    <Compile Include="Classes\Configuracoes - Validacoes\ConfigBotoes.cs" />
+    <Compile Include="Classes\API Correios\DadosCep.cs" />
     <Compile Include="Classes\DadosGeralNfe.cs" />
-    <Compile Include="Classes\LogErros.cs" />
-    <Compile Include="Classes\MensagensDoSistema.cs" />
-    <Compile Include="Classes\TelaCarregamento.cs" />
-    <Compile Include="Classes\Validacoes.cs" />
+    <Compile Include="Classes\Mensagens de Erros\LogErros.cs" />
+    <Compile Include="Classes\Mensagens de Erros\MensagensDoSistema.cs" />
+    <Compile Include="Classes\Configuracoes - Validacoes\TelaCarregamento.cs" />
+    <Compile Include="Classes\Configuracoes - Validacoes\ValidacoesCampos.cs" />
     <Compile Include="Classes\VariaveisGlobais.cs" />
-    <Compile Include="Classes\VerificarComponentesPC.cs" />
+    <Compile Include="Classes\Configuracoes - Validacoes\VerificarComponentesPC.cs" />
     <Compile Include="Cadastro\Ator\uc_Ator.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -385,11 +385,11 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Assets\Toolbox\Root.cs" />
-    <Compile Include="frmImagensBotoes.cs">
+    <Compile Include="frmImagensGeralSistema.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmImagensBotoes.Designer.cs">
-      <DependentUpon>frmImagensBotoes.cs</DependentUpon>
+    <Compile Include="frmImagensGeralSistema.Designer.cs">
+      <DependentUpon>frmImagensGeralSistema.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Assets\Toolbox\PasswordBox.bmp" />
     <EmbeddedResource Include="Assets\HTML\PasswordBox.html" />
@@ -466,8 +466,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmImagensBotoes.resx">
-      <DependentUpon>frmImagensBotoes.cs</DependentUpon>
+    <EmbeddedResource Include="frmImagensGeralSistema.resx">
+      <DependentUpon>frmImagensGeralSistema.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Relatorios\rp_ImpressaoRelatorioFluxoSaida.resx">
       <DependentUpon>rp_ImpressaoRelatorioFluxoSaida.cs</DependentUpon>

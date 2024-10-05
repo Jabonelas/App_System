@@ -30,6 +30,7 @@ namespace App_TelasCompartilhadas.Produtos
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -60,6 +61,7 @@ namespace App_TelasCompartilhadas.Produtos
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject22 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject23 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject24 = new DevExpress.Utils.SerializableAppearanceObject();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_CadProduto));
             this.btnSalvar = new DevExpress.XtraEditors.SimpleButton();
             this.btnVoltar = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
@@ -96,6 +98,8 @@ namespace App_TelasCompartilhadas.Produtos
             this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.alcConfirmacao = new DevExpress.XtraBars.Alerter.AlertControl(this.components);
+            this.svgImageCollection1 = new DevExpress.Utils.SvgImageCollection(this.components);
             this.uc_TituloTelas1 = new App_TelasCompartilhadas.uc_TituloTelas();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
@@ -132,6 +136,7 @@ namespace App_TelasCompartilhadas.Produtos
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.svgImageCollection1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalvar
@@ -644,6 +649,18 @@ namespace App_TelasCompartilhadas.Produtos
             this.layoutControlGroup3.Size = new System.Drawing.Size(1196, 128);
             this.layoutControlGroup3.Text = "Fiscal";
             // 
+            // alcConfirmacao
+            // 
+            this.alcConfirmacao.HtmlImages = this.svgImageCollection1;
+            this.alcConfirmacao.HtmlTemplate.Styles = resources.GetString("alcConfirmacao.HtmlTemplate.Styles");
+            this.alcConfirmacao.HtmlTemplate.Template = resources.GetString("alcConfirmacao.HtmlTemplate.Template");
+            this.alcConfirmacao.HtmlElementMouseClick += new DevExpress.XtraBars.Alerter.AlertHtmlElementMouseClickEventHandler(this.alcConfimacao_HtmlElementMouseClick);
+            // 
+            // svgImageCollection1
+            // 
+            this.svgImageCollection1.Add("State_Validation_Invalid", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollection1.State_Validation_Invalid"))));
+            this.svgImageCollection1.Add("State_Validation_Valid", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollection1.State_Validation_Valid"))));
+            // 
             // uc_TituloTelas1
             // 
             this.uc_TituloTelas1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -698,6 +715,7 @@ namespace App_TelasCompartilhadas.Produtos
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.svgImageCollection1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -741,5 +759,7 @@ namespace App_TelasCompartilhadas.Produtos
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem20;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup3;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
+        private DevExpress.XtraBars.Alerter.AlertControl alcConfirmacao;
+        private DevExpress.Utils.SvgImageCollection svgImageCollection1;
     }
 }

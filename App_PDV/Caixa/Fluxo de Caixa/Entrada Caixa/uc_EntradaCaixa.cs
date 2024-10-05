@@ -5,6 +5,8 @@ using App_TelasCompartilhadas.bancoSQLite;
 using DevExpress.Xpo;
 using static App_TelasCompartilhadas.Classes.DadosGeralNfe;
 using System.Globalization;
+using DevExpress.XtraBars.Alerter;
+using System.Windows.Forms;
 
 namespace App_PDV.Fluxo_de_Caixa.Entrada_Caixa
 {
@@ -44,9 +46,23 @@ namespace App_PDV.Fluxo_de_Caixa.Entrada_Caixa
 
             EntradaCaixa();
 
-            MensagensDoSistema.MensagemInformacaoOk("Entrada no caixa realizada com sucesso!");
+            AlertaConfirmacaoCantoInferiorDireito();
 
             _frmTelaInicial.TelaVisualizarEntradaCaixa();
+        }
+
+        private void AlertaConfirmacaoCantoInferiorDireito()
+        {
+            // Obtém o FluentDesignForm ao qual o FluentDesignFormContainer pertence
+            Form parentForm = _frmTelaInicial.FindForm();
+
+            // Verifica se o parentForm não é nulo
+            if (parentForm != null)
+            {
+                // Cria a mensagem e exibe o AlertControl
+                AlertInfo info = new AlertInfo("", "");
+                alcConfirmacao.Show(parentForm, info);
+            }
         }
 
         private void uc_EntradaCaixa_Load(object sender, EventArgs e)
@@ -133,6 +149,19 @@ namespace App_PDV.Fluxo_de_Caixa.Entrada_Caixa
             catch (Exception ex)
             {
                 MensagensDoSistema.MensagemErroOk($"Erro ao realizar entrada no caixa: {ex.Message}");
+            }
+        }
+
+        private void alcConfirmacao_HtmlElementMouseClick(object sender, DevExpress.XtraBars.Alerter.AlertHtmlElementMouseEventArgs e)
+        {
+            // Verifica qual elemento foi clicado pelo 'id'
+            if (e.ElementId == "dialogresult-ok")
+            {
+                alcConfirmacao.Dispose();
+            }
+            else if (e.ElementId == "close")
+            {
+                alcConfirmacao.Dispose();
             }
         }
     }

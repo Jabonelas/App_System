@@ -9,12 +9,14 @@ using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using DevExpress.XtraBars.Alerter;
 
 namespace App_TelasCompartilhadas.Produtos
 {
     public partial class uc_CadProduto : DevExpress.XtraEditors.XtraUserControl
     {
-        private string operacao = string.Empty;
+        private string formaOrdenarGrid = "";
+        private string operacao = "";
         public static string vlrAjuste = "";
         private long idProduto = 0;
         private long idMarcaProduto = 0;
@@ -25,7 +27,7 @@ namespace App_TelasCompartilhadas.Produtos
 
         private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer painelTelaInicial;
 
-        public uc_CadProduto(DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer _painelTelaInicial, string _operacao, long _idProduto)
+        public uc_CadProduto(DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer _painelTelaInicial, string _operacao, long _idProduto, string _formaOrdenarGrid)
         {
             InitializeComponent();
 
@@ -34,6 +36,8 @@ namespace App_TelasCompartilhadas.Produtos
             operacao = _operacao;
 
             idProduto = _idProduto;
+
+            formaOrdenarGrid = _formaOrdenarGrid;
 
             CarregaUnMed();
 
@@ -191,11 +195,11 @@ namespace App_TelasCompartilhadas.Produtos
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             painelTelaInicial.Controls.Clear();
-            uc_TelaInicial ucTelaInicial = new uc_TelaInicial();
-            painelTelaInicial.Controls.Add(ucTelaInicial);
-            painelTelaInicial.Tag = ucTelaInicial;
+            uc_Produto ucProduto = new uc_Produto(painelTelaInicial, formaOrdenarGrid);
+            painelTelaInicial.Controls.Add(ucProduto);
+            painelTelaInicial.Tag = ucProduto;
 
-            ucTelaInicial.Show();
+            ucProduto.Show();
         }
 
         public void CarregaUnMed()
@@ -577,6 +581,8 @@ namespace App_TelasCompartilhadas.Produtos
                 long idProduto = CadastroProduto();
 
                 CadastroProdutoFilial(idProduto);
+
+                AlertaConfirmacaoCantoInferiorDireito();
             }
             else
             {
@@ -592,17 +598,31 @@ namespace App_TelasCompartilhadas.Produtos
                     AlterarDadosProduto();
 
                     AlterarDadosProdutoFilial();
+
+                    AlertaConfirmacaoCantoInferiorDireito();
                 }
             }
 
             painelTelaInicial.Controls.Clear();
-            uc_Produto ucProduto = new uc_Produto(painelTelaInicial);
+            uc_Produto ucProduto = new uc_Produto(painelTelaInicial, "CodigoRef");
             painelTelaInicial.Controls.Add(ucProduto);
             painelTelaInicial.Tag = ucProduto;
 
-            MensagensDoSistema.MensagemInformacaoOk("O produto foi cadastrado com sucesso!");
-
             ucProduto.Show();
+        }
+
+        private void AlertaConfirmacaoCantoInferiorDireito()
+        {
+            // Obtém o FluentDesignForm ao qual o FluentDesignFormContainer pertence
+            Form parentForm = painelTelaInicial.FindForm();
+
+            // Verifica se o parentForm não é nulo
+            if (parentForm != null)
+            {
+                // Cria a mensagem e exibe o AlertControl
+                AlertInfo info = new AlertInfo("", "");
+                alcConfirmacao.Show(parentForm, info);
+            }
         }
 
         private void ValidarDigitos(object sender, KeyPressEventArgs e)
@@ -732,6 +752,19 @@ namespace App_TelasCompartilhadas.Produtos
             else
             {
                 //txtPrecoUn.Text = vlrProdInicial.ToString();
+            }
+        }
+
+        private void alcConfimacao_HtmlElementMouseClick(object sender, AlertHtmlElementMouseEventArgs e)
+        {
+            // Verifica qual elemento foi clicado pelo 'id'
+            if (e.ElementId == "dialogresult-ok")
+            {
+                alcConfirmacao.Dispose();
+            }
+            else if (e.ElementId == "close")
+            {
+                alcConfirmacao.Dispose();
             }
         }
     }

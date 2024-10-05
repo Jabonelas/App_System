@@ -6,6 +6,7 @@ using System;
 using System.Linq;
 using System.Windows.Forms;
 using App_TelasCompartilhadas.Classes;
+using DevExpress.XtraBars.Alerter;
 
 namespace App_ERP.Cadastro.Matriz
 {
@@ -194,7 +195,36 @@ namespace App_ERP.Cadastro.Matriz
                 if (result == DialogResult.Yes)
                 {
                     ExcluirMatriz();
+
+                    AlertaExclusaoCantoInferiorDireito();
                 }
+            }
+        }
+
+        private void AlertaExclusaoCantoInferiorDireito()
+        {
+            // Obtém o FluentDesignForm ao qual o FluentDesignFormContainer pertence
+            Form parentForm = _frmTelaInicial.FindForm();
+
+            // Verifica se o parentForm não é nulo
+            if (parentForm != null)
+            {
+                // Cria a mensagem e exibe o AlertControl
+                AlertInfo info = new AlertInfo("", "");
+                alcExclusao.Show(parentForm, info);
+            }
+        }
+
+        private void alcExclusao_HtmlElementMouseClick(object sender, AlertHtmlElementMouseEventArgs e)
+        {
+            // Verifica qual elemento foi clicado pelo 'id'
+            if (e.ElementId == "dialogresult-ok")
+            {
+                alcExclusao.Dispose();
+            }
+            else if (e.ElementId == "close")
+            {
+                alcExclusao.Dispose();
             }
         }
     }

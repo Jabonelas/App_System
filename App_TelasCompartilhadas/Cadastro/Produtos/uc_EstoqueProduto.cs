@@ -13,13 +13,17 @@ namespace App_TelasCompartilhadas.Produtos
 
         private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer painelTelaInicial;
 
-        public uc_EstoqueProduto(DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer _painelTelaInicial, long _idProduto)
+        private string formaOrdenarGrid = "";
+
+        public uc_EstoqueProduto(DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer _painelTelaInicial, long _idProduto, string _formaOrdenarGrid)
         {
             InitializeComponent();
 
             painelTelaInicial = _painelTelaInicial;
 
             idProduto = _idProduto;
+
+            formaOrdenarGrid = _formaOrdenarGrid;
 
             Layout();
 
@@ -40,7 +44,15 @@ namespace App_TelasCompartilhadas.Produtos
             LinqInstantFeedbackSource linqInstantFeedbackSource = new LinqInstantFeedbackSource();
 
             linqInstantFeedbackSource.KeyExpression = "id_produto_filial"; //Coluna Primary Key
-            linqInstantFeedbackSource.DefaultSorting = "pf_codRef DESC"; //Coluna de ordenação padrão na ordem escolhida
+
+            if (formaOrdenarGrid == "Estoque")
+            {
+                linqInstantFeedbackSource.DefaultSorting = "pf_est ASC"; //Coluna de ordenação padrão na ordem escolhida
+            }
+            else
+            {
+                linqInstantFeedbackSource.DefaultSorting = "pf_est DESC"; //Coluna de ordenação padrão na ordem escolhida
+            }
 
             linqInstantFeedbackSource.GetQueryable += linqBuscarDadosProdutosCadastradosAtivos; //Buscar os dados que vao preencher o grid.
             linqInstantFeedbackSource.DismissQueryable += linq_DismissQueryable; //Basta deixar vazio dentro do metodo.
@@ -96,7 +108,7 @@ namespace App_TelasCompartilhadas.Produtos
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             painelTelaInicial.Controls.Clear();
-            uc_Produto ucProduto = new uc_Produto(painelTelaInicial);
+            uc_Produto ucProduto = new uc_Produto(painelTelaInicial, formaOrdenarGrid);
             painelTelaInicial.Controls.Add(ucProduto);
             painelTelaInicial.Tag = ucProduto;
 

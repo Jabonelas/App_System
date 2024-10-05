@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using DevExpress.XtraBars.Alerter;
 
 namespace App_TelasCompartilhadas.Ator
 {
@@ -443,7 +444,7 @@ namespace App_TelasCompartilhadas.Ator
                 return;
             }
 
-            if (!Validacoes.IsCpfValido(txtCPF.Text) && txtCPF.Text != "___.___.___-__")
+            if (!ValidacoesCampos.IsCpfValido(txtCPF.Text) && txtCPF.Text != "___.___.___-__")
             {
                 txtCPF.ErrorText = "C.P.F. informado invalido!";
                 e.Cancel = true;
@@ -465,7 +466,7 @@ namespace App_TelasCompartilhadas.Ator
                 return;
             }
 
-            if (!Validacoes.IsRGValido(txtRG.Text) && txtRG.Text != "___.___.___-_")
+            if (!ValidacoesCampos.IsRGValido(txtRG.Text) && txtRG.Text != "___.___.___-_")
             {
                 txtRG.ErrorText = "R.G. informado invalido!";
                 e.Cancel = true;
@@ -486,7 +487,7 @@ namespace App_TelasCompartilhadas.Ator
                 return;
             }
 
-            if (!Validacoes.IsCnpjValido(txtCNPJ.Text) && txtCNPJ.Text != "__.___.___/____-__")
+            if (!ValidacoesCampos.IsCnpjValido(txtCNPJ.Text) && txtCNPJ.Text != "__.___.___/____-__")
             {
                 txtCNPJ.ErrorText = "C.N.P.J. informado invalido!";
                 e.Cancel = true;
@@ -508,7 +509,7 @@ namespace App_TelasCompartilhadas.Ator
                 return;
             }
 
-            if (!Validacoes.IsEmailValido(txtEmailContabilidade.Text))
+            if (!ValidacoesCampos.IsEmailValido(txtEmailContabilidade.Text))
             {
                 txtEmailContabilidade.ErrorText = "E-mail informado invalido!";
                 e.Cancel = true;
@@ -528,7 +529,7 @@ namespace App_TelasCompartilhadas.Ator
                 return;
             }
 
-            if (!Validacoes.IsEmailValido(txtEmailContabilidade.Text))
+            if (!ValidacoesCampos.IsEmailValido(txtEmailContabilidade.Text))
             {
                 txtEmailContabilidade.ErrorText = "E-mail informado invalido!";
                 e.Cancel = true;
@@ -548,7 +549,7 @@ namespace App_TelasCompartilhadas.Ator
                 return;
             }
 
-            if (!Validacoes.IsCEPValido(txtCEP.Text) && txtCEP.Text != "_____-___")
+            if (!ValidacoesCampos.IsCEPValido(txtCEP.Text) && txtCEP.Text != "_____-___")
             {
                 txtCEP.ErrorText = "C.E.P informado invalido!";
                 e.Cancel = true;
@@ -844,6 +845,8 @@ namespace App_TelasCompartilhadas.Ator
                 {
                     CadastroProdutoFilial(idAtorCadastrado);
                 }
+
+                AlertaConfirmacaoCantoInferiorDireito();
             }
             else
             {
@@ -852,10 +855,26 @@ namespace App_TelasCompartilhadas.Ator
                 if (dialogResult == DialogResult.Yes)
                 {
                     AlterarDadosAtor();
+
+                    AlertaConfirmacaoCantoInferiorDireito();
                 }
             }
 
             ExibirTelaAnterior();
+        }
+
+        private void AlertaConfirmacaoCantoInferiorDireito()
+        {
+            // Obtém o FluentDesignForm ao qual o FluentDesignFormContainer pertence
+            Form parentForm = painelTelaInicial.FindForm();
+
+            // Verifica se o parentForm não é nulo
+            if (parentForm != null)
+            {
+                // Cria a mensagem e exibe o AlertControl
+                AlertInfo info = new AlertInfo("", "");
+                alcConfirmacao.Show(parentForm, info);
+            }
         }
 
         private void CadastroProdutoFilial(long _idAtorFilialCadastrada)
@@ -907,7 +926,7 @@ namespace App_TelasCompartilhadas.Ator
                 return;
             }
 
-            if (!Validacoes.IsCEPValido(txtCEP.Text) && txtCEP.Text != "_____-___")
+            if (!ValidacoesCampos.IsCEPValido(txtCEP.Text) && txtCEP.Text != "_____-___")
             {
                 txtCEP.ErrorText = "C.E.P informado invalido!";
             }
@@ -927,6 +946,19 @@ namespace App_TelasCompartilhadas.Ator
             if (e.KeyChar == (char)Keys.Enter)
             {
                 PreencherCEP();
+            }
+        }
+
+        private void alcConfirmacao_HtmlElementMouseClick(object sender, DevExpress.XtraBars.Alerter.AlertHtmlElementMouseEventArgs e)
+        {
+            // Verifica qual elemento foi clicado pelo 'id'
+            if (e.ElementId == "dialogresult-ok")
+            {
+                alcConfirmacao.Dispose();
+            }
+            else if (e.ElementId == "close")
+            {
+                alcConfirmacao.Dispose();
             }
         }
     }

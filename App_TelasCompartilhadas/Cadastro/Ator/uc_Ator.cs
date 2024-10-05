@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using App_TelasCompartilhadas.Cadastro.Funcionario;
 using DevExpress.XtraGrid.Views.Grid;
 using App_TelasCompartilhadas.Login;
+using DevExpress.XtraBars.Alerter;
 
 namespace App_TelasCompartilhadas.Ator
 {
@@ -277,8 +278,24 @@ namespace App_TelasCompartilhadas.Ator
                     if (result == DialogResult.Yes)
                     {
                         ExcluirCadastroAtor();
+
+                        AlertaExclusaoCantoInferiorDireito();
                     }
                 }
+            }
+        }
+
+        private void AlertaExclusaoCantoInferiorDireito()
+        {
+            // Obtém o FluentDesignForm ao qual o FluentDesignFormContainer pertence
+            Form parentForm = painelTelaInicial.FindForm();
+
+            // Verifica se o parentForm não é nulo
+            if (parentForm != null)
+            {
+                // Cria a mensagem e exibe o AlertControl
+                AlertInfo info = new AlertInfo("", "");
+                alcExclusao.Show(parentForm, info);
             }
         }
 
@@ -336,6 +353,19 @@ namespace App_TelasCompartilhadas.Ator
         private void uc_Ator_Load(object sender, EventArgs e)
         {
             TelaCarregamento.EsconderCarregamento();
+        }
+
+        private void alcExclusao_HtmlElementMouseClick(object sender, AlertHtmlElementMouseEventArgs e)
+        {
+            // Verifica qual elemento foi clicado pelo 'id'
+            if (e.ElementId == "dialogresult-ok")
+            {
+                alcExclusao.Dispose();
+            }
+            else if (e.ElementId == "close")
+            {
+                alcExclusao.Dispose();
+            }
         }
     }
 }

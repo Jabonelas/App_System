@@ -8,6 +8,7 @@ using System.Linq;
 using System.Windows.Forms;
 using App_TelasCompartilhadas.Login;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraBars.Alerter;
 
 namespace App_TelasCompartilhadas.Produtos
 {
@@ -17,12 +18,15 @@ namespace App_TelasCompartilhadas.Produtos
 
         private long idProduto = 0;
 
-        public uc_Produto(DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer _painelTelaInicial)
+        private string formaOrdenarGrid = "";
+
+        public uc_Produto(DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer _painelTelaInicial, string _formaOrdenarGrid)
         {
             InitializeComponent();
 
             Layout();
 
+            formaOrdenarGrid = _formaOrdenarGrid;
             painelTelaInicial = _painelTelaInicial;
 
             CarregarGridProdutosAtivos();
@@ -65,9 +69,18 @@ namespace App_TelasCompartilhadas.Produtos
             LinqInstantFeedbackSource linqInstantFeedbackSource = new LinqInstantFeedbackSource();
 
             linqInstantFeedbackSource.KeyExpression = "id_produto"; //Coluna Primary Key
-            linqInstantFeedbackSource.DefaultSorting = "pd_codRef DESC"; //Coluna de ordenação padrão na ordem escolhida
 
-            linqInstantFeedbackSource.GetQueryable += linqBuscarDadosProdutosCadastradosAtivos; //Buscar os dados que vao preencher o grid.
+            if (formaOrdenarGrid == "Estoque")
+            {
+                linqInstantFeedbackSource.DefaultSorting = "pd_estTot ASC"; //Coluna de ordenação padrão na ordem escolhida
+                linqInstantFeedbackSource.GetQueryable += linqBuscarDadosProdutosEstoqueBaixoAtivos; //Buscar os dados que vao preencher o grid com produtos com estoque baixo.
+            }
+            else
+            {
+                linqInstantFeedbackSource.DefaultSorting = "pd_codRef DESC"; //Coluna de ordenação padrão na ordem escolhida
+                linqInstantFeedbackSource.GetQueryable += linqBuscarDadosProdutosCadastradosAtivos; //Buscar os dados que vao preencher o grid.
+            }
+
             linqInstantFeedbackSource.DismissQueryable += linq_DismissQueryable; //Basta deixar vazio dentro do metodo.
             grdProdutos.DataSource = linqInstantFeedbackSource;
         }
@@ -109,6 +122,59 @@ namespace App_TelasCompartilhadas.Produtos
             }
         }
 
+        public class ProdutoEstoqueBaixoModel
+        {
+            public long id_produto { get; set; }
+            public string cp_desc { get; set; }
+            public string scp_desc { get; set; }
+            public long pd_codRef { get; set; }
+            public string pd_descCurta { get; set; }
+            public string pd_desc { get; set; }
+            public decimal pd_vlrUnComBase { get; set; }
+            public decimal pd_desat { get; set; }
+            public decimal pd_estTot { get; set; }
+            public string mp_desc { get; set; }
+        }
+
+        private void linqBuscarDadosProdutosEstoqueBaixoAtivos(object sender, GetQueryableEventArgs e)
+        {
+            try
+            {
+                Session session = new Session();
+
+                var queryProdutoCadastradosAtivos = from produto in session.Query<tb_produto>()
+                                                    join subcategoria in session.Query<tb_subcategoria_produto>()
+                                                        on produto.fk_tb_subcategoria_produto.id_subcategoria_produto equals subcategoria.id_subcategoria_produto
+                                                    join categoria in session.Query<tb_categoria_produto>()
+                                                        on subcategoria.fk_tb_categoria_produto.id_categoria_produto equals categoria.id_categoria_produto
+                                                    join marca in session.Query<tb_marca_produto>()
+                                                        on produto.fk_tb_marca_produto.id_marca_produto equals marca.id_marca_produto
+                                                    join produtoFilial in session.Query<tb_produto_filial>()
+                                                        on produto.id_produto equals produtoFilial.fk_tb_produto.id_produto
+                                                    where produto.pd_desat == 0 && produtoFilial.pf_est <= produtoFilial.pf_estMin
+                                                    group new { produto, produtoFilial } by produtoFilial.pf_codRef into g
+                                                    select new ProdutoEstoqueBaixoModel
+                                                    {
+                                                        id_produto = g.Max(p => p.produto.id_produto), // Usar Max ou Min para pegar um id válido
+                                                        cp_desc = g.Max(p => p.produto.fk_tb_subcategoria_produto.fk_tb_categoria_produto.cp_desc), // Pega o campo desejado
+                                                        scp_desc = g.Max(p => p.produto.fk_tb_subcategoria_produto.scp_desc),
+                                                        pd_codRef = g.Key, // Usa a chave do grupo
+                                                        pd_descCurta = g.Max(p => p.produto.pd_descCurta),
+                                                        pd_desc = g.Max(p => p.produto.pd_desc),
+                                                        pd_vlrUnComBase = g.Max(p => p.produto.pd_vlrUnComBase),
+                                                        pd_desat = g.Max(p => p.produto.pd_desat),
+                                                        pd_estTot = g.Max(p => p.produto.pd_estTot),
+                                                        mp_desc = g.Max(p => p.produto.fk_tb_marca_produto.mp_desc)
+                                                    };
+
+                e.QueryableSource = queryProdutoCadastradosAtivos;
+            }
+            catch (Exception exception)
+            {
+                MensagensDoSistema.MensagemErroOk($"Erro ao preencher tabela com produtos com estoque baixo e ativos: {exception}");
+            }
+        }
+
         private void linq_DismissQueryable(object sender, GetQueryableEventArgs e)
         {
             //Vazio mesmo
@@ -119,7 +185,7 @@ namespace App_TelasCompartilhadas.Produtos
             TelaCarregamento.ExibirCarregamentoUserControl(this);
 
             painelTelaInicial.Controls.Clear();
-            uc_CadProduto ucCadProd = new uc_CadProduto(painelTelaInicial, _operacao, _idProduto);
+            uc_CadProduto ucCadProd = new uc_CadProduto(painelTelaInicial, _operacao, _idProduto, formaOrdenarGrid);
             painelTelaInicial.Controls.Add(ucCadProd);
             painelTelaInicial.Tag = ucCadProd;
 
@@ -244,6 +310,20 @@ namespace App_TelasCompartilhadas.Produtos
             }
         }
 
+        private void AlertaExclusaoCantoInferiorDireito()
+        {
+            // Obtém o FluentDesignForm ao qual o FluentDesignFormContainer pertence
+            Form parentForm = painelTelaInicial.FindForm();
+
+            // Verifica se o parentForm não é nulo
+            if (parentForm != null)
+            {
+                // Cria a mensagem e exibe o AlertControl
+                AlertInfo info = new AlertInfo("", "");
+                alcExclusao.Show(parentForm, info);
+            }
+        }
+
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             //Gerente 102
@@ -280,16 +360,18 @@ namespace App_TelasCompartilhadas.Produtos
                     DesativarDadosProdutoFilial();
 
                     CarregarGridProdutosAtivos();
+
+                    AlertaExclusaoCantoInferiorDireito();
                 }
             }
         }
 
-        private void TelaEstoqueProduto()
+        private void TelaEstoqueProduto(string _formaOrdenarGrid)
         {
             TelaCarregamento.ExibirCarregamentoUserControl(this);
 
             painelTelaInicial.Controls.Clear();
-            uc_EstoqueProduto ucEstoqueProduto = new uc_EstoqueProduto(painelTelaInicial, idProduto);
+            uc_EstoqueProduto ucEstoqueProduto = new uc_EstoqueProduto(painelTelaInicial, idProduto, _formaOrdenarGrid);
             painelTelaInicial.Controls.Add(ucEstoqueProduto);
             painelTelaInicial.Tag = ucEstoqueProduto;
 
@@ -300,7 +382,20 @@ namespace App_TelasCompartilhadas.Produtos
         {
             PegaIdProdutoSelecionadoGrid();
 
-            TelaEstoqueProduto();
+            TelaEstoqueProduto(formaOrdenarGrid);
+        }
+
+        private void alcExclusao_HtmlElementMouseClick(object sender, AlertHtmlElementMouseEventArgs e)
+        {
+            // Verifica qual elemento foi clicado pelo 'id'
+            if (e.ElementId == "dialogresult-ok")
+            {
+                alcExclusao.Dispose();
+            }
+            else if (e.ElementId == "close")
+            {
+                alcExclusao.Dispose();
+            }
         }
     }
 }

@@ -10,6 +10,7 @@ using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraReports.UI;
 using DevExpress.XtraEditors;
 using Unimake.Business.DFe.Xml.SNCM;
+using DevExpress.XtraBars.Alerter;
 
 namespace App_PDV.FechamentoCaixa
 {
@@ -201,9 +202,23 @@ namespace App_PDV.FechamentoCaixa
 
                 FecharJornada();
 
-                MensagensDoSistema.MensagemInformacaoOk("A fechamento realizado com sucesso!");
+                AlertaConfirmacaoCantoInferiorDireito();
 
                 ImprimiRelatorioFechamentoCaixa();
+            }
+        }
+
+        private void AlertaConfirmacaoCantoInferiorDireito()
+        {
+            // Obtém o FluentDesignForm ao qual o FluentDesignFormContainer pertence
+            Form parentForm = _frmTelaInicial.FindForm();
+
+            // Verifica se o parentForm não é nulo
+            if (parentForm != null)
+            {
+                // Cria a mensagem e exibe o AlertControl
+                AlertInfo info = new AlertInfo("", "");
+                alcConfirmacao.Show(parentForm, info);
             }
         }
 
@@ -275,6 +290,19 @@ namespace App_PDV.FechamentoCaixa
             else
             {
                 MensagensDoSistema.MensagemAtencaoOk("Por favor, primeiro inicie a busca.");
+            }
+        }
+
+        private void alcConfirmacao_HtmlElementMouseClick(object sender, DevExpress.XtraBars.Alerter.AlertHtmlElementMouseEventArgs e)
+        {
+            // Verifica qual elemento foi clicado pelo 'id'
+            if (e.ElementId == "dialogresult-ok")
+            {
+                alcConfirmacao.Dispose();
+            }
+            else if (e.ElementId == "close")
+            {
+                alcConfirmacao.Dispose();
             }
         }
     }

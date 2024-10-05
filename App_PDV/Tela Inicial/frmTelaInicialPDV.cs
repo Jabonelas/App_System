@@ -229,12 +229,12 @@ namespace App_PDV
 
         #endregion Sistema
 
-        public void TelaProduto()
+        public void TelaProduto(string _formaOrdenarGrid)
         {
             TelaCarregamento.ExibirCarregamentoForm(this);
 
             pnlTelaPrincipal.Controls.Clear();
-            uc_Produto ucProduto = new uc_Produto(pnlTelaPrincipal);
+            uc_Produto ucProduto = new uc_Produto(pnlTelaPrincipal, _formaOrdenarGrid);
             pnlTelaPrincipal.Controls.Add(ucProduto);
             pnlTelaPrincipal.Tag = ucProduto;
             ucProduto.Show();
@@ -242,7 +242,7 @@ namespace App_PDV
 
         private void btnProdutos_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            TelaProduto();
+            TelaProduto("CodigoRef");
         }
 
         //Tipos Ator

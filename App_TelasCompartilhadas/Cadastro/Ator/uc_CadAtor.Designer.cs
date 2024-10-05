@@ -31,12 +31,12 @@ namespace App_TelasCompartilhadas.Ator
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_CadAtor));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.btnSalvar = new DevExpress.XtraEditors.SimpleButton();
             this.btnVoltar = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
@@ -75,20 +75,6 @@ namespace App_TelasCompartilhadas.Ator
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.tabbedControlGroup2 = new DevExpress.XtraLayout.TabbedControlGroup();
-            this.AbaFiscal = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem22 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem23 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem27 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem32 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup6 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.tabbedControlGroup4 = new DevExpress.XtraLayout.TabbedControlGroup();
             this.layoutControlGroup11 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -109,6 +95,20 @@ namespace App_TelasCompartilhadas.Ator
             this.layoutControlItem30 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem34 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.AbaFiscal = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem22 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem23 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem27 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem32 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.AbaRFB = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -117,6 +117,8 @@ namespace App_TelasCompartilhadas.Ator
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.xtraOpenFileDialog1 = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
             this.uc_TituloTelas1 = new App_TelasCompartilhadas.uc_TituloTelas();
+            this.alcConfirmacao = new DevExpress.XtraBars.Alerter.AlertControl(this.components);
+            this.svgImageCollection1 = new DevExpress.Utils.SvgImageCollection(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCEP.Properties)).BeginInit();
@@ -154,20 +156,6 @@ namespace App_TelasCompartilhadas.Ator
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AbaFiscal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem32)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup11)).BeginInit();
@@ -188,12 +176,27 @@ namespace App_TelasCompartilhadas.Ator
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem34)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AbaFiscal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem32)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AbaRFB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.svgImageCollection1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalvar
@@ -271,9 +274,9 @@ namespace App_TelasCompartilhadas.Ator
             // 
             this.txtCEP.Location = new System.Drawing.Point(36, 136);
             this.txtCEP.Name = "txtCEP";
-            editorButtonImageOptions1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions1.SvgImage")));
+            editorButtonImageOptions2.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions2.SvgImage")));
             this.txtCEP.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.txtCEP.Properties.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("txtCEP.Properties.ContextImageOptions.Image")));
             this.txtCEP.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
             this.txtCEP.Properties.MaskSettings.Set("MaskManagerSignature", "ignoreMaskBlank=True");
@@ -753,170 +756,6 @@ namespace App_TelasCompartilhadas.Ator
             this.AbaFiscal,
             this.AbaRFB});
             // 
-            // AbaFiscal
-            // 
-            this.AbaFiscal.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem15,
-            this.layoutControlItem17,
-            this.layoutControlItem21,
-            this.layoutControlItem22,
-            this.layoutControlItem23,
-            this.layoutControlItem24,
-            this.layoutControlItem27,
-            this.layoutControlItem32,
-            this.layoutControlItem12,
-            this.layoutControlItem20,
-            this.layoutControlItem16,
-            this.layoutControlItem18,
-            this.layoutControlItem4});
-            this.AbaFiscal.Location = new System.Drawing.Point(0, 0);
-            this.AbaFiscal.Name = "AbaFiscal";
-            this.AbaFiscal.Size = new System.Drawing.Size(1199, 270);
-            this.AbaFiscal.Text = "Fiscal";
-            this.AbaFiscal.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
-            // 
-            // layoutControlItem15
-            // 
-            this.layoutControlItem15.Control = this.txtInscEstad;
-            this.layoutControlItem15.Location = new System.Drawing.Point(198, 0);
-            this.layoutControlItem15.Name = "layoutControlItem15";
-            this.layoutControlItem15.Size = new System.Drawing.Size(233, 40);
-            this.layoutControlItem15.Text = "Inscrição estadual (I.E.)";
-            this.layoutControlItem15.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem15.TextSize = new System.Drawing.Size(182, 13);
-            // 
-            // layoutControlItem17
-            // 
-            this.layoutControlItem17.Control = this.txtInscrEstdSubs;
-            this.layoutControlItem17.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem17.CustomizationFormText = "layoutControlItem15";
-            this.layoutControlItem17.Location = new System.Drawing.Point(431, 0);
-            this.layoutControlItem17.Name = "layoutControlItem17";
-            this.layoutControlItem17.Size = new System.Drawing.Size(267, 40);
-            this.layoutControlItem17.Text = "Inscrição estadual do substituto (I.E.)";
-            this.layoutControlItem17.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem17.TextSize = new System.Drawing.Size(182, 13);
-            // 
-            // layoutControlItem21
-            // 
-            this.layoutControlItem21.Control = this.txtCodSegContHom;
-            this.layoutControlItem21.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem21.CustomizationFormText = "layoutControlItem15";
-            this.layoutControlItem21.Location = new System.Drawing.Point(698, 40);
-            this.layoutControlItem21.Name = "layoutControlItem21";
-            this.layoutControlItem21.Size = new System.Drawing.Size(251, 40);
-            this.layoutControlItem21.Text = "Cód. seg. do C.S.C. - Hom";
-            this.layoutControlItem21.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem21.TextSize = new System.Drawing.Size(182, 13);
-            // 
-            // layoutControlItem22
-            // 
-            this.layoutControlItem22.Control = this.txtCodSegContProd;
-            this.layoutControlItem22.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem22.CustomizationFormText = "layoutControlItem15";
-            this.layoutControlItem22.Location = new System.Drawing.Point(949, 40);
-            this.layoutControlItem22.Name = "layoutControlItem22";
-            this.layoutControlItem22.Size = new System.Drawing.Size(250, 40);
-            this.layoutControlItem22.Text = "Cód. seg. do C.S.C. - Prod";
-            this.layoutControlItem22.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem22.TextSize = new System.Drawing.Size(182, 13);
-            // 
-            // layoutControlItem23
-            // 
-            this.layoutControlItem23.Control = this.txtEmailContabilidade;
-            this.layoutControlItem23.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem23.CustomizationFormText = "layoutControlItem15";
-            this.layoutControlItem23.Location = new System.Drawing.Point(267, 80);
-            this.layoutControlItem23.Name = "layoutControlItem23";
-            this.layoutControlItem23.Size = new System.Drawing.Size(932, 40);
-            this.layoutControlItem23.Text = "E-mail da contabilidade";
-            this.layoutControlItem23.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem23.TextSize = new System.Drawing.Size(182, 13);
-            // 
-            // layoutControlItem24
-            // 
-            this.layoutControlItem24.Control = this.txtObserFisc;
-            this.layoutControlItem24.Location = new System.Drawing.Point(0, 120);
-            this.layoutControlItem24.Name = "layoutControlItem24";
-            this.layoutControlItem24.Size = new System.Drawing.Size(1199, 150);
-            this.layoutControlItem24.Text = "Observações fiscais";
-            this.layoutControlItem24.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem24.TextSize = new System.Drawing.Size(182, 13);
-            // 
-            // layoutControlItem27
-            // 
-            this.layoutControlItem27.Control = this.cmbIndicadorInscEstad;
-            this.layoutControlItem27.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem27.Name = "layoutControlItem27";
-            this.layoutControlItem27.Size = new System.Drawing.Size(198, 40);
-            this.layoutControlItem27.Text = "Indicador da incrição estadual";
-            this.layoutControlItem27.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem27.TextSize = new System.Drawing.Size(182, 13);
-            // 
-            // layoutControlItem32
-            // 
-            this.layoutControlItem32.Control = this.txtTokenCodSegContProd;
-            this.layoutControlItem32.Location = new System.Drawing.Point(431, 40);
-            this.layoutControlItem32.Name = "layoutControlItem32";
-            this.layoutControlItem32.Size = new System.Drawing.Size(267, 40);
-            this.layoutControlItem32.Text = "Token do C.S.C. - Prod";
-            this.layoutControlItem32.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem32.TextSize = new System.Drawing.Size(182, 13);
-            // 
-            // layoutControlItem12
-            // 
-            this.layoutControlItem12.Control = this.txtTokenCodSegContHom;
-            this.layoutControlItem12.Location = new System.Drawing.Point(198, 40);
-            this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(233, 40);
-            this.layoutControlItem12.Text = "Token do C.S.C. - Hom";
-            this.layoutControlItem12.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem12.TextSize = new System.Drawing.Size(182, 13);
-            // 
-            // layoutControlItem20
-            // 
-            this.layoutControlItem20.Control = this.txtInscMunic;
-            this.layoutControlItem20.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem20.CustomizationFormText = "layoutControlItem15";
-            this.layoutControlItem20.Location = new System.Drawing.Point(698, 0);
-            this.layoutControlItem20.Name = "layoutControlItem20";
-            this.layoutControlItem20.Size = new System.Drawing.Size(250, 40);
-            this.layoutControlItem20.Text = "Inscrição municipal (I.M.)";
-            this.layoutControlItem20.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem20.TextSize = new System.Drawing.Size(182, 13);
-            // 
-            // layoutControlItem16
-            // 
-            this.layoutControlItem16.Control = this.cnbRegimeTribu;
-            this.layoutControlItem16.Location = new System.Drawing.Point(0, 40);
-            this.layoutControlItem16.Name = "layoutControlItem16";
-            this.layoutControlItem16.Size = new System.Drawing.Size(198, 40);
-            this.layoutControlItem16.Text = "Regime tributário";
-            this.layoutControlItem16.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem16.TextSize = new System.Drawing.Size(182, 13);
-            // 
-            // layoutControlItem18
-            // 
-            this.layoutControlItem18.Control = this.txtInscSufra;
-            this.layoutControlItem18.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem18.CustomizationFormText = "layoutControlItem15";
-            this.layoutControlItem18.Location = new System.Drawing.Point(948, 0);
-            this.layoutControlItem18.Name = "layoutControlItem18";
-            this.layoutControlItem18.Size = new System.Drawing.Size(251, 40);
-            this.layoutControlItem18.Text = "Inscrição no suframa";
-            this.layoutControlItem18.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem18.TextSize = new System.Drawing.Size(182, 13);
-            // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.Control = this.txtMetaMensal;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 80);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(267, 40);
-            this.layoutControlItem4.Text = "Meta Mensal";
-            this.layoutControlItem4.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(182, 13);
-            // 
             // layoutControlGroup6
             // 
             this.layoutControlGroup6.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
@@ -1142,6 +981,170 @@ namespace App_TelasCompartilhadas.Ator
             this.layoutControlItem34.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem34.TextSize = new System.Drawing.Size(182, 13);
             // 
+            // AbaFiscal
+            // 
+            this.AbaFiscal.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem15,
+            this.layoutControlItem17,
+            this.layoutControlItem21,
+            this.layoutControlItem22,
+            this.layoutControlItem23,
+            this.layoutControlItem24,
+            this.layoutControlItem27,
+            this.layoutControlItem32,
+            this.layoutControlItem12,
+            this.layoutControlItem20,
+            this.layoutControlItem16,
+            this.layoutControlItem18,
+            this.layoutControlItem4});
+            this.AbaFiscal.Location = new System.Drawing.Point(0, 0);
+            this.AbaFiscal.Name = "AbaFiscal";
+            this.AbaFiscal.Size = new System.Drawing.Size(1199, 270);
+            this.AbaFiscal.Text = "Fiscal";
+            this.AbaFiscal.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            // 
+            // layoutControlItem15
+            // 
+            this.layoutControlItem15.Control = this.txtInscEstad;
+            this.layoutControlItem15.Location = new System.Drawing.Point(198, 0);
+            this.layoutControlItem15.Name = "layoutControlItem15";
+            this.layoutControlItem15.Size = new System.Drawing.Size(233, 40);
+            this.layoutControlItem15.Text = "Inscrição estadual (I.E.)";
+            this.layoutControlItem15.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem15.TextSize = new System.Drawing.Size(182, 13);
+            // 
+            // layoutControlItem17
+            // 
+            this.layoutControlItem17.Control = this.txtInscrEstdSubs;
+            this.layoutControlItem17.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem17.CustomizationFormText = "layoutControlItem15";
+            this.layoutControlItem17.Location = new System.Drawing.Point(431, 0);
+            this.layoutControlItem17.Name = "layoutControlItem17";
+            this.layoutControlItem17.Size = new System.Drawing.Size(267, 40);
+            this.layoutControlItem17.Text = "Inscrição estadual do substituto (I.E.)";
+            this.layoutControlItem17.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem17.TextSize = new System.Drawing.Size(182, 13);
+            // 
+            // layoutControlItem21
+            // 
+            this.layoutControlItem21.Control = this.txtCodSegContHom;
+            this.layoutControlItem21.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem21.CustomizationFormText = "layoutControlItem15";
+            this.layoutControlItem21.Location = new System.Drawing.Point(698, 40);
+            this.layoutControlItem21.Name = "layoutControlItem21";
+            this.layoutControlItem21.Size = new System.Drawing.Size(251, 40);
+            this.layoutControlItem21.Text = "Cód. seg. do C.S.C. - Hom";
+            this.layoutControlItem21.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem21.TextSize = new System.Drawing.Size(182, 13);
+            // 
+            // layoutControlItem22
+            // 
+            this.layoutControlItem22.Control = this.txtCodSegContProd;
+            this.layoutControlItem22.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem22.CustomizationFormText = "layoutControlItem15";
+            this.layoutControlItem22.Location = new System.Drawing.Point(949, 40);
+            this.layoutControlItem22.Name = "layoutControlItem22";
+            this.layoutControlItem22.Size = new System.Drawing.Size(250, 40);
+            this.layoutControlItem22.Text = "Cód. seg. do C.S.C. - Prod";
+            this.layoutControlItem22.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem22.TextSize = new System.Drawing.Size(182, 13);
+            // 
+            // layoutControlItem23
+            // 
+            this.layoutControlItem23.Control = this.txtEmailContabilidade;
+            this.layoutControlItem23.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem23.CustomizationFormText = "layoutControlItem15";
+            this.layoutControlItem23.Location = new System.Drawing.Point(267, 80);
+            this.layoutControlItem23.Name = "layoutControlItem23";
+            this.layoutControlItem23.Size = new System.Drawing.Size(932, 40);
+            this.layoutControlItem23.Text = "E-mail da contabilidade";
+            this.layoutControlItem23.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem23.TextSize = new System.Drawing.Size(182, 13);
+            // 
+            // layoutControlItem24
+            // 
+            this.layoutControlItem24.Control = this.txtObserFisc;
+            this.layoutControlItem24.Location = new System.Drawing.Point(0, 120);
+            this.layoutControlItem24.Name = "layoutControlItem24";
+            this.layoutControlItem24.Size = new System.Drawing.Size(1199, 150);
+            this.layoutControlItem24.Text = "Observações fiscais";
+            this.layoutControlItem24.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem24.TextSize = new System.Drawing.Size(182, 13);
+            // 
+            // layoutControlItem27
+            // 
+            this.layoutControlItem27.Control = this.cmbIndicadorInscEstad;
+            this.layoutControlItem27.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem27.Name = "layoutControlItem27";
+            this.layoutControlItem27.Size = new System.Drawing.Size(198, 40);
+            this.layoutControlItem27.Text = "Indicador da incrição estadual";
+            this.layoutControlItem27.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem27.TextSize = new System.Drawing.Size(182, 13);
+            // 
+            // layoutControlItem32
+            // 
+            this.layoutControlItem32.Control = this.txtTokenCodSegContProd;
+            this.layoutControlItem32.Location = new System.Drawing.Point(431, 40);
+            this.layoutControlItem32.Name = "layoutControlItem32";
+            this.layoutControlItem32.Size = new System.Drawing.Size(267, 40);
+            this.layoutControlItem32.Text = "Token do C.S.C. - Prod";
+            this.layoutControlItem32.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem32.TextSize = new System.Drawing.Size(182, 13);
+            // 
+            // layoutControlItem12
+            // 
+            this.layoutControlItem12.Control = this.txtTokenCodSegContHom;
+            this.layoutControlItem12.Location = new System.Drawing.Point(198, 40);
+            this.layoutControlItem12.Name = "layoutControlItem12";
+            this.layoutControlItem12.Size = new System.Drawing.Size(233, 40);
+            this.layoutControlItem12.Text = "Token do C.S.C. - Hom";
+            this.layoutControlItem12.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem12.TextSize = new System.Drawing.Size(182, 13);
+            // 
+            // layoutControlItem20
+            // 
+            this.layoutControlItem20.Control = this.txtInscMunic;
+            this.layoutControlItem20.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem20.CustomizationFormText = "layoutControlItem15";
+            this.layoutControlItem20.Location = new System.Drawing.Point(698, 0);
+            this.layoutControlItem20.Name = "layoutControlItem20";
+            this.layoutControlItem20.Size = new System.Drawing.Size(250, 40);
+            this.layoutControlItem20.Text = "Inscrição municipal (I.M.)";
+            this.layoutControlItem20.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem20.TextSize = new System.Drawing.Size(182, 13);
+            // 
+            // layoutControlItem16
+            // 
+            this.layoutControlItem16.Control = this.cnbRegimeTribu;
+            this.layoutControlItem16.Location = new System.Drawing.Point(0, 40);
+            this.layoutControlItem16.Name = "layoutControlItem16";
+            this.layoutControlItem16.Size = new System.Drawing.Size(198, 40);
+            this.layoutControlItem16.Text = "Regime tributário";
+            this.layoutControlItem16.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem16.TextSize = new System.Drawing.Size(182, 13);
+            // 
+            // layoutControlItem18
+            // 
+            this.layoutControlItem18.Control = this.txtInscSufra;
+            this.layoutControlItem18.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem18.CustomizationFormText = "layoutControlItem15";
+            this.layoutControlItem18.Location = new System.Drawing.Point(948, 0);
+            this.layoutControlItem18.Name = "layoutControlItem18";
+            this.layoutControlItem18.Size = new System.Drawing.Size(251, 40);
+            this.layoutControlItem18.Text = "Inscrição no suframa";
+            this.layoutControlItem18.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem18.TextSize = new System.Drawing.Size(182, 13);
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.txtMetaMensal;
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 80);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(267, 40);
+            this.layoutControlItem4.Text = "Meta Mensal";
+            this.layoutControlItem4.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(182, 13);
+            // 
             // AbaRFB
             // 
             this.AbaRFB.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
@@ -1215,6 +1218,18 @@ namespace App_TelasCompartilhadas.Ator
             this.uc_TituloTelas1.Size = new System.Drawing.Size(1259, 32);
             this.uc_TituloTelas1.TabIndex = 49;
             // 
+            // alcConfirmacao
+            // 
+            this.alcConfirmacao.HtmlImages = this.svgImageCollection1;
+            this.alcConfirmacao.HtmlTemplate.Styles = resources.GetString("alertControl1.HtmlTemplate.Styles");
+            this.alcConfirmacao.HtmlTemplate.Template = resources.GetString("alertControl1.HtmlTemplate.Template");
+            this.alcConfirmacao.HtmlElementMouseClick += new DevExpress.XtraBars.Alerter.AlertHtmlElementMouseClickEventHandler(this.alcConfirmacao_HtmlElementMouseClick);
+            // 
+            // svgImageCollection1
+            // 
+            this.svgImageCollection1.Add("State_Validation_Invalid", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollection1.State_Validation_Invalid"))));
+            this.svgImageCollection1.Add("State_Validation_Valid", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollection1.State_Validation_Valid"))));
+            // 
             // uc_CadAtor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1263,20 +1278,6 @@ namespace App_TelasCompartilhadas.Ator
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AbaFiscal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem32)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup11)).EndInit();
@@ -1297,12 +1298,27 @@ namespace App_TelasCompartilhadas.Ator
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem34)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AbaFiscal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem32)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AbaRFB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.svgImageCollection1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1389,5 +1405,7 @@ namespace App_TelasCompartilhadas.Ator
         private uc_TituloTelas uc_TituloTelas1;
         private DevExpress.XtraEditors.TextEdit txtMetaMensal;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.XtraBars.Alerter.AlertControl alcConfirmacao;
+        private DevExpress.Utils.SvgImageCollection svgImageCollection1;
     }
 }

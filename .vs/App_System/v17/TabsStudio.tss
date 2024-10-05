@@ -2,33 +2,24 @@
 <ArrayOfArrayOfArrayOfString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ArrayOfArrayOfString>
     <ArrayOfString>
-      <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Fluxo de Caixa\Abertura Caixa\uc_AberturaCaixa.cs</string>
-      <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Fluxo de Caixa\Abertura Caixa\uc_AberturaCaixa.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Cadastro\Produtos\uc_CadProduto.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Cadastro\Produtos\uc_CadProduto.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Fluxo de Caixa\Fechamento Caixa\uc_FechamentoCaixa.cs</string>
-      <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Fluxo de Caixa\Fechamento Caixa\uc_FechamentoCaixa.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_ERP\Cadastro\Rede\uc_Rede.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_ERP\Cadastro\Rede\uc_Rede.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Fluxo de Caixa\Fechamento Caixa\rp_ImpressaoFechamentoCaixa.cs</string>
-      <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Fluxo de Caixa\Fechamento Caixa\rp_ImpressaoFechamentoCaixa.cs</string>
-      <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Fluxo de Caixa\Fechamento Caixa\rp_ImpressaoFechamentoCaixa.Designer.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_ERP\Cadastro\Matriz\uc_Matriz.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_ERP\Cadastro\Matriz\uc_Matriz.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\Users\israe\source\repos\App_System\App_PDV\Tela Inicial\uc_TelaInicialPDV.cs</string>
-      <string>C:\Users\israe\source\repos\App_System\App_PDV\Tela Inicial\uc_TelaInicialPDV.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_ERP\Cadastro\Marca\uc_Marca.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_ERP\Cadastro\Marca\uc_Marca.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\uc_TelaInicial.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\Users\israe\source\repos\App_System\App_ERP\Tela Incial\uc_TelaInicialERP.cs</string>
-      <string>C:\Users\israe\source\repos\App_System\App_ERP\Tela Incial\uc_TelaInicialERP.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Fluxo de Caixa\Abertura Caixa\rp_ImpressaoAberturaCaixa.cs</string>
-      <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Fluxo de Caixa\Abertura Caixa\rp_ImpressaoAberturaCaixa.cs</string>
-      <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Fluxo de Caixa\Abertura Caixa\rp_ImpressaoAberturaCaixa.Designer.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_ERP\Cadastro\Categoria\uc_Categoria.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_ERP\Cadastro\Categoria\uc_Categoria.cs</string>
     </ArrayOfString>
   </ArrayOfArrayOfString>
 </ArrayOfArrayOfArrayOfString>

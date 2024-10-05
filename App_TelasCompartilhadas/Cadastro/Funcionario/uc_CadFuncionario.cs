@@ -9,6 +9,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Security.Cryptography;
 using App_TelasCompartilhadas.Ator;
+using DevExpress.XtraBars.Alerter;
 
 namespace App_TelasCompartilhadas.Cadastro.Funcionario
 {
@@ -344,7 +345,7 @@ namespace App_TelasCompartilhadas.Cadastro.Funcionario
                 return;
             }
 
-            if (!Validacoes.IsCEPValido(txtCEP.Text) && txtCEP.Text != "_____-___")
+            if (!ValidacoesCampos.IsCEPValido(txtCEP.Text) && txtCEP.Text != "_____-___")
             {
                 txtCEP.ErrorText = "C.E.P informado invalido!";
             }
@@ -375,7 +376,7 @@ namespace App_TelasCompartilhadas.Cadastro.Funcionario
                 return;
             }
 
-            if (!Validacoes.IsCEPValido(txtCEP.Text) && txtCEP.Text != "_____-___")
+            if (!ValidacoesCampos.IsCEPValido(txtCEP.Text) && txtCEP.Text != "_____-___")
             {
                 txtCEP.ErrorText = "C.E.P informado invalido!";
                 e.Cancel = true;
@@ -400,7 +401,7 @@ namespace App_TelasCompartilhadas.Cadastro.Funcionario
                 return;
             }
 
-            if (!Validacoes.IsCpfValido(txtCPF.Text) && txtCPF.Text != "___.___.___-__")
+            if (!ValidacoesCampos.IsCpfValido(txtCPF.Text) && txtCPF.Text != "___.___.___-__")
             {
                 txtCPF.ErrorText = "C.P.F. informado invalido!";
                 e.Cancel = true;
@@ -420,7 +421,7 @@ namespace App_TelasCompartilhadas.Cadastro.Funcionario
                 return;
             }
 
-            if (!Validacoes.IsRGValido(txtRG.Text) && txtRG.Text != "___.___.___-_")
+            if (!ValidacoesCampos.IsRGValido(txtRG.Text) && txtRG.Text != "___.___.___-_")
             {
                 txtRG.ErrorText = "R.G. informado invalido!";
                 e.Cancel = true;
@@ -440,7 +441,7 @@ namespace App_TelasCompartilhadas.Cadastro.Funcionario
                 return;
             }
 
-            if (!Validacoes.IsEmailValido(txtEmail.Text))
+            if (!ValidacoesCampos.IsEmailValido(txtEmail.Text))
             {
                 txtEmail.ErrorText = "E-mail informado invalido!";
                 e.Cancel = true;
@@ -676,6 +677,8 @@ namespace App_TelasCompartilhadas.Cadastro.Funcionario
                 CriptografarSenha();
 
                 CadastroFuncionario();
+
+                AlertaConfirmacaoCantoInferiorDireito();
             }
             else
             {
@@ -686,6 +689,8 @@ namespace App_TelasCompartilhadas.Cadastro.Funcionario
                     CriptografarSenha();
 
                     AlterarDadosFuncionario();
+
+                    AlertaConfirmacaoCantoInferiorDireito();
                 }
             }
 
@@ -715,6 +720,35 @@ namespace App_TelasCompartilhadas.Cadastro.Funcionario
                 MensagensDoSistema.MensagemErroOk($"Erro ao verificar nome usuário: {ex.Message}");
 
                 return false;
+            }
+        }
+
+        private void AlertaConfirmacaoCantoInferiorDireito()
+        {
+            var asd = painelTelaInicial;
+
+            // Obtém o FluentDesignForm ao qual o FluentDesignFormContainer pertence
+            Form parentForm = painelTelaInicial.FindForm();
+
+            // Verifica se o parentForm não é nulo
+            if (parentForm != null)
+            {
+                // Cria a mensagem e exibe o AlertControl
+                AlertInfo info = new AlertInfo("", "");
+                alcConfimacao.Show(parentForm, info);
+            }
+        }
+
+        private void alcConfimacao_HtmlElementMouseClick(object sender, DevExpress.XtraBars.Alerter.AlertHtmlElementMouseEventArgs e)
+        {
+            // Verifica qual elemento foi clicado pelo 'id'
+            if (e.ElementId == "dialogresult-ok")
+            {
+                alcConfimacao.Dispose();
+            }
+            else if (e.ElementId == "close")
+            {
+                alcConfimacao.Dispose();
             }
         }
     }

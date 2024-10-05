@@ -10,6 +10,8 @@ using App_TelasCompartilhadas.bancoSQLite;
 
 using App_PDV.FechamentoCaixa;
 using DevExpress.XtraReports.UI;
+using DevExpress.XtraBars.Alerter;
+using System.Windows.Forms;
 
 namespace App_PDV.AberturaCaixa
 {
@@ -160,7 +162,7 @@ namespace App_PDV.AberturaCaixa
 
                 AberturaCaixa();
 
-                MensagensDoSistema.MensagemInformacaoOk("Caixa aberto com sucesso!");
+                AlertaConfirmacaoCantoInferiorDireito();
 
                 ImprimiRelatorioAberturaCaixa();
             }
@@ -176,6 +178,20 @@ namespace App_PDV.AberturaCaixa
                 //}
 
                 MensagensDoSistema.MensagemAtencaoOk("A abertura do caixa já foi realizada!");
+            }
+        }
+
+        private void AlertaConfirmacaoCantoInferiorDireito()
+        {
+            // Obtém o FluentDesignForm ao qual o FluentDesignFormContainer pertence
+            Form parentForm = _frmTelaInicial.FindForm();
+
+            // Verifica se o parentForm não é nulo
+            if (parentForm != null)
+            {
+                // Cria a mensagem e exibe o AlertControl
+                AlertInfo info = new AlertInfo("", "");
+                alcConfirmacao.Show(parentForm, info);
             }
         }
 
@@ -211,6 +227,19 @@ namespace App_PDV.AberturaCaixa
             catch (Exception ex)
             {
                 MensagensDoSistema.MensagemErroOk($"Erro ao fechar jornada na abertura de caixa: {ex.Message}");
+            }
+        }
+
+        private void alcConfirmacao_HtmlElementMouseClick(object sender, AlertHtmlElementMouseEventArgs e)
+        {
+            // Verifica qual elemento foi clicado pelo 'id'
+            if (e.ElementId == "dialogresult-ok")
+            {
+                alcConfirmacao.Dispose();
+            }
+            else if (e.ElementId == "close")
+            {
+                alcConfirmacao.Dispose();
             }
         }
     }

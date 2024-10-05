@@ -5,6 +5,7 @@ using System.Linq;
 using System.Windows.Forms;
 using App_TelasCompartilhadas.Classes;
 using static App_TelasCompartilhadas.Classes.DadosGeralNfe;
+using DevExpress.XtraBars.Alerter;
 
 namespace App_ERP.Subcategoria
 {
@@ -216,6 +217,8 @@ namespace App_ERP.Subcategoria
             if (operacao == "cadastrar")
             {
                 CadastrarSubcategoria();
+
+                AlertaConfirmacaoCantoInferiorDireito();
             }
             else
             {
@@ -224,15 +227,35 @@ namespace App_ERP.Subcategoria
                 if (dialogResult == DialogResult.Yes)
                 {
                     AlterarSubcategoria();
+
+                    AlertaConfirmacaoCantoInferiorDireito();
                 }
             }
 
             _frmTelaInicial.TelaSubcategoria();
         }
 
+        private void AlertaConfirmacaoCantoInferiorDireito()
+        {
+            // Obtém o FluentDesignForm ao qual o FluentDesignFormContainer pertence
+            Form parentForm = _frmTelaInicial.FindForm();
+
+            // Verifica se o parentForm não é nulo
+            if (parentForm != null)
+            {
+                // Cria a mensagem e exibe o AlertControl
+                AlertInfo info = new AlertInfo("", "");
+                alcConfirmacao.Show(parentForm, info);
+            }
+        }
+
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             _frmTelaInicial.TelaSubcategoria();
+        }
+
+        private void alcConfirmacao_HtmlElementMouseClick(object sender, DevExpress.XtraBars.Alerter.AlertHtmlElementMouseEventArgs e)
+        {
         }
     }
 }

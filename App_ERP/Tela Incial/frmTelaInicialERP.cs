@@ -1,4 +1,7 @@
-﻿using DevExpress.XtraBars;
+﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+using DevExpress.XtraBars;
 using App_ERP.Cadastro.Marca;
 using App_ERP.Cadastro.Matriz;
 using App_ERP.Cadastro.PDV;
@@ -11,11 +14,21 @@ using App_TelasCompartilhadas;
 using App_TelasCompartilhadas.Produtos;
 using App_TelasCompartilhadas.Relatorios;
 using App_ERP.Relatorios;
+using DevExpress.XtraBars.Alerter;
+using DevExpress.Utils;
+using DevExpress.Utils.Svg;
+using System.IO;
+using App_TelasCompartilhadas.bancoSQLite;
+using DevExpress.Xpo;
+using Microsoft.EntityFrameworkCore.Internal;
+using System.Linq;
 
 namespace App_ERP
 {
     public partial class frmTelaInicialERP : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        private frmImagensGeralSistema form = new frmImagensGeralSistema();
+
         public frmTelaInicialERP()
         {
             InitializeComponent();
@@ -28,7 +41,37 @@ namespace App_ERP
 
             ExibirPainelCentral();
 
+            AlertaEstoqueBaixoCantoInferiorDireito();
+
             RotaPe();
+        }
+
+        private void AlertaEstoqueBaixoCantoInferiorDireito()
+        {
+            if (VerificarEstoqueBaixo())
+            {
+                AlertInfo info = new AlertInfo("", "");
+                alcEstoqueBaixo.Show(this, info);
+            }
+        }
+
+        private bool VerificarEstoqueBaixo()
+        {
+            try
+            {
+                using (UnitOfWork uow = new UnitOfWork())
+                {
+                    bool isEstoqueBaixa = uow.Query<tb_produto_filial>().Any(x => x.pf_est >= x.pf_estMin);
+
+                    return isEstoqueBaixa;
+                }
+            }
+            catch (Exception ex)
+            {
+                MensagensDoSistema.MensagemErroOk($"Erro ao verificar produtos com estoque baixo: {ex}");
+
+                return false;
+            }
         }
 
         private void ExibirPainelCentral()
@@ -62,12 +105,12 @@ namespace App_ERP
             barStatusUsuario.Caption = $"Usuário: {VariaveisGlobais.UsuarioLogado.at_nomeUsuario}";
         }
 
-        public void TelaProduto()
+        public void TelaProduto(string _formaOrdenarGrid)
         {
             TelaCarregamento.ExibirCarregamentoForm(this);
 
             pnlTelaPrincipal.Controls.Clear();
-            uc_Produto ucProdutos = new uc_Produto(pnlTelaPrincipal);
+            uc_Produto ucProdutos = new uc_Produto(pnlTelaPrincipal, _formaOrdenarGrid);
             pnlTelaPrincipal.Controls.Add(ucProdutos);
             pnlTelaPrincipal.Tag = ucProdutos;
             ucProdutos.Show();
@@ -75,7 +118,7 @@ namespace App_ERP
 
         private void btnCadastrarProduto_ItemClick(object sender, ItemClickEventArgs e)
         {
-            TelaProduto();
+            TelaProduto("CodigoRef");
         }
 
         public void TelaCategoria()
@@ -291,6 +334,22 @@ namespace App_ERP
         private void btnRelatorioVendaVendedor_ItemClick(object sender, ItemClickEventArgs e)
         {
             TelaRelatorioVendaVendedor();
+        }
+
+        private void alcEstoqueBaixo_HtmlElementMouseClick(object sender, AlertHtmlElementMouseEventArgs e)
+        {
+            if (e.ElementId == "dialogresult-verificar")
+            {
+                TelaProduto("Estoque");
+            }
+            else if (e.ElementId == "dialogresult-cancelar")
+            {
+                alcEstoqueBaixo.Dispose();
+            }
+            else if (e.ElementId == "close")
+            {
+                alcEstoqueBaixo.Dispose();
+            }
         }
     }
 }

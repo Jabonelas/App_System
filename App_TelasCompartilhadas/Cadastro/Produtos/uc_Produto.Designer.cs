@@ -30,6 +30,8 @@ namespace App_TelasCompartilhadas.Produtos
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_Produto));
             this.uc_TituloTelas1 = new App_TelasCompartilhadas.uc_TituloTelas();
             this.btnVoltar = new DevExpress.XtraEditors.SimpleButton();
             this.btnNovoRegistro = new DevExpress.XtraEditors.SimpleButton();
@@ -51,6 +53,8 @@ namespace App_TelasCompartilhadas.Produtos
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.btnVisualizar = new DevExpress.XtraEditors.SimpleButton();
+            this.alcExclusao = new DevExpress.XtraBars.Alerter.AlertControl(this.components);
+            this.svgImageCollection1 = new DevExpress.Utils.SvgImageCollection(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.grdProdutos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -58,6 +62,7 @@ namespace App_TelasCompartilhadas.Produtos
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.svgImageCollection1)).BeginInit();
             this.SuspendLayout();
             // 
             // uc_TituloTelas1
@@ -289,6 +294,18 @@ namespace App_TelasCompartilhadas.Produtos
             this.btnVisualizar.Text = "Visualizar";
             this.btnVisualizar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // alcExclusao
+            // 
+            this.alcExclusao.HtmlImages = this.svgImageCollection1;
+            this.alcExclusao.HtmlTemplate.Styles = resources.GetString("alcExclusao.HtmlTemplate.Styles");
+            this.alcExclusao.HtmlTemplate.Template = resources.GetString("alcExclusao.HtmlTemplate.Template");
+            this.alcExclusao.HtmlElementMouseClick += new DevExpress.XtraBars.Alerter.AlertHtmlElementMouseClickEventHandler(this.alcExclusao_HtmlElementMouseClick);
+            // 
+            // svgImageCollection1
+            // 
+            this.svgImageCollection1.Add("State_Validation_Warning", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollection1.State_Validation_Warning"))));
+            this.svgImageCollection1.Add("State_Validation_Invalid", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollection1.State_Validation_Invalid"))));
+            // 
             // uc_Produto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -310,6 +327,7 @@ namespace App_TelasCompartilhadas.Produtos
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.svgImageCollection1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -337,5 +355,7 @@ namespace App_TelasCompartilhadas.Produtos
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraEditors.SimpleButton btnVisualizar;
+        private DevExpress.XtraBars.Alerter.AlertControl alcExclusao;
+        private DevExpress.Utils.SvgImageCollection svgImageCollection1;
     }
 }
