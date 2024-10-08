@@ -61,7 +61,7 @@ namespace App_ERP
             {
                 using (UnitOfWork uow = new UnitOfWork())
                 {
-                    bool isEstoqueBaixa = uow.Query<tb_produto_filial>().Any(x => x.pf_est >= x.pf_estMin);
+                    bool isEstoqueBaixa = uow.Query<tb_produto_filial>().Any(x => x.pf_est > x.pf_estMin);
 
                     return isEstoqueBaixa;
                 }

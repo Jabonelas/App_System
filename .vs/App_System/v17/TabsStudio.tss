@@ -21,5 +21,47 @@
       <string>C:\Users\israe\source\repos\App_System\App_ERP\Cadastro\Categoria\uc_Categoria.cs</string>
       <string>C:\Users\israe\source\repos\App_System\App_ERP\Cadastro\Categoria\uc_Categoria.cs</string>
     </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Cadastro\Produtos\uc_EstoqueProduto.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Cadastro\Produtos\uc_Produto.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Cadastro\Produtos\uc_Produto.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\App_System\App_PDV\Tela Inicial\frmTelaInicialPDV.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_PDV\Tela Inicial\frmTelaInicialPDV.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Login\frmAutenticacaoUsuario.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Login\frmAutenticacaoUsuario.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Login\frmLogin.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Login\frmLogin.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Classes\VariaveisGlobais.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\AppData\Local\Temp\.vsdbgsrc\7f26405f56749af90dcc931d542fe17f01066f994705a9deeb140210c0df5c6c\Control.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\App_System\App_ERP\Tela Incial\frmTelaInicialERP.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_ERP\Tela Incial\frmTelaInicialERP.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Atendimento\Venda\uc_VendasPDV.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Atendimento\Venda\uc_VisualizarVenda.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Atendimento\Venda\uc_PDV.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Atendimento\Venda\uc_PDV.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Classes\DadosGeralNfe.cs</string>
+    </ArrayOfString>
   </ArrayOfArrayOfString>
 </ArrayOfArrayOfArrayOfString>

@@ -2,8 +2,8 @@
 <ArrayOfTabHighlightState xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <TabHighlightState>
     <extensions>
-      <string>App_TelasCompartilhadas\Cadastro\Produtos\uc_CadProduto.cs</string>
-      <string>App_TelasCompartilhadas\Cadastro\Produtos\uc_CadProduto.cs</string>
+      <string>App_TelasCompartilhadas\Cadastro\Produtos\uc_Produto.cs</string>
+      <string>App_TelasCompartilhadas\Cadastro\Produtos\uc_Produto.cs</string>
     </extensions>
     <highlightIndex>1</highlightIndex>
   </TabHighlightState>
@@ -11,6 +11,13 @@
     <extensions>
       <string>App_ERP\Cadastro\Rede\uc_Rede.cs</string>
       <string>App_ERP\Cadastro\Rede\uc_Rede.cs</string>
+    </extensions>
+    <highlightIndex>1</highlightIndex>
+  </TabHighlightState>
+  <TabHighlightState>
+    <extensions>
+      <string>App_TelasCompartilhadas\Cadastro\Produtos\uc_CadProduto.cs</string>
+      <string>App_TelasCompartilhadas\Cadastro\Produtos\uc_CadProduto.cs</string>
     </extensions>
     <highlightIndex>1</highlightIndex>
   </TabHighlightState>

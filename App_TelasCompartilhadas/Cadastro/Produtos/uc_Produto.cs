@@ -9,6 +9,12 @@ using System.Windows.Forms;
 using App_TelasCompartilhadas.Login;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraBars.Alerter;
+using DevExpress.XtraGrid.Columns;
+using DevExpress.XtraGrid;
+using DevExpress.XtraEditors.Repository;
+
+using DevExpress.XtraEditors.Repository;
+using DevExpress.XtraGrid.Columns;
 
 namespace App_TelasCompartilhadas.Produtos
 {

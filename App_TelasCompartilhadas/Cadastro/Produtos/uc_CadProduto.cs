@@ -57,6 +57,14 @@ namespace App_TelasCompartilhadas.Produtos
             {
                 PreencherCampoProdutoSelecionado();
             }
+
+            cmbCFOP.Properties.AddEnum<DadosGeralNfe.SEnNfeCfop>();
+
+            cmbCest.Properties.AddEnum<DadosGeralNfe.SEnNfeCst>();
+
+            cmbModalidade_ICMSST.Properties.AddEnum<DadosGeralNfe.SEnNfeModBcSt>();
+
+            cmbModalidade_ICMSEProprio.Properties.AddEnum<DadosGeralNfe.SEnNfeModBc>();
         }
 
         private void Layout()
@@ -298,17 +306,17 @@ namespace App_TelasCompartilhadas.Produtos
                 return false;
             }
 
-            if (string.IsNullOrEmpty(txtEstoqMinimo.Text))
-            {
-                MensagensDoSistema.MensagemInformacaoOk("Preencha o campo Estoque Mínimo.");
-                txtEstoqMinimo.Focus();
-                return false;
-            }
-
             if (string.IsNullOrEmpty(txtEstoqMaximo.Text))
             {
                 MensagensDoSistema.MensagemInformacaoOk("Preencha o campo Estoque Maximo.");
                 txtEstoqMaximo.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(txtEstoqMinimo.Text))
+            {
+                MensagensDoSistema.MensagemInformacaoOk("Preencha o campo Estoque Mínimo.");
+                txtEstoqMinimo.Focus();
                 return false;
             }
 
@@ -404,7 +412,7 @@ namespace App_TelasCompartilhadas.Produtos
                     produto.pd_codRefStr = txtCodProd.Text;
                     produto.pd_barras = txtBarras.Text;
                     produto.pd_proTipo = 1;
-                    produto.pd_estTot = Convert.ToDecimal(txtEstoqInicial.Text);
+                    produto.pd_estTot = string.IsNullOrEmpty(txtEstoqInicial.Text) ? 0 : Convert.ToDecimal(txtEstoqInicial.Text);
                     produto.pd_descCurta = txtDescCurta.Text;
                     produto.pd_desc = txtDesc.Text;
                     produto.pd_cstUnComBase = Convert.ToDecimal(txtPrecoCusto.Text);
@@ -449,6 +457,8 @@ namespace App_TelasCompartilhadas.Produtos
 
                     tb_categoria_produto categoria = uow.GetObjectByKey<tb_categoria_produto>(Convert.ToInt64(idCategoria));
 
+                    tb_rede redeLogada = uow.GetObjectByKey<tb_rede>(VariaveisGlobais.RedeLogada.id_rede);
+
                     tb_produto produto = uow.GetObjectByKey<tb_produto>(idProduto);
 
                     if (produto != null)
@@ -469,6 +479,7 @@ namespace App_TelasCompartilhadas.Produtos
                         produto.fk_tb_marca_produto = marca;
                         produto.fk_tb_subcategoria_produto = subcategoria;
                         produto.fk_tb_categoria_produto = categoria;
+                        produto.fk_tb_rede = redeLogada;
 
                         uow.CommitChanges();
                     }

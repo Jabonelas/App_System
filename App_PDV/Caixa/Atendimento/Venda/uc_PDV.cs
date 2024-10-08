@@ -6,6 +6,7 @@ using DevExpress.Xpo;
 using App_TelasCompartilhadas.bancoSQLite;
 using App_TelasCompartilhadas.Classes;
 using DevExpress.XtraGrid.Views.Grid;
+using static App_PDV.uc_PDV;
 
 namespace App_PDV
 {
@@ -174,13 +175,42 @@ namespace App_PDV
             }
         }
 
+        private void CalculandoTotalPorProduto()
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(cmbProdutos.EditValue?.ToString()))
+                {
+                    return;
+                }
+
+                long idProduto;
+
+                if (long.TryParse(cmbProdutos.EditValue.ToString(), out idProduto))
+                {
+                    using (UnitOfWork uow = new UnitOfWork())
+                    {
+                        tb_produto_filial produto = uow.GetObjectByKey<tb_produto_filial>(idProduto);
+
+                        decimal quantidade = string.IsNullOrEmpty(txtQuant.Text) ? 1 : Convert.ToInt32(txtQuant.Text);
+
+                        txtVlrTotal.Text = (produto.pf_vlrUnCom * quantidade).ToString("C2");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MensagensDoSistema.MensagemErroOk($"Erro ao preencher campo com o valor total do produtos selecionado: {ex.Message}");
+            }
+        }
+
         private void PreencherGridProdutoSelecionado()
         {
             try
             {
                 using (UnitOfWork uow = new UnitOfWork())
                 {
-                    if (cmbProdutos.EditValue == null || string.IsNullOrEmpty(cmbProdutos.EditValue.ToString()))
+                    if (string.IsNullOrEmpty(cmbProdutos.EditValue?.ToString()))
                     {
                         return;
                     }
@@ -222,9 +252,9 @@ namespace App_PDV
                         descCurta = produtoSelecionado.pf_descCurta,
                         desc = produtoSelecionado.pf_desc,
                         marca = produtoSelecionado.mp_desc,
-                        quantidade = 1,
+                        quantidade = string.IsNullOrEmpty(txtQuant.Text) ? 1 : Convert.ToInt32(txtQuant.Text),
                         vlrUnCom = produtoSelecionado.pf_vlrUnCom,
-                        vlrTotal = produtoSelecionado.pf_vlrUnCom,
+                        vlrTotal = produtoSelecionado.pf_vlrUnCom * (string.IsNullOrEmpty(txtQuant.Text) ? 1 : Convert.ToInt32(txtQuant.Text)),
                     });
 
                     grdListaProdutos.DataSource = listaProdutoSelecionado;
@@ -260,10 +290,12 @@ namespace App_PDV
 
             PreencherCamposComValores();
 
+            txtQuant.Text = "1";
+            txtVlrTotal.Text = "R$ 0,00";
             cmbProdutos.Clear();
         }
 
-        private void PegaIdCategoriaSelecionadaGrid()
+        private void PegaIdProdutoSelecionadaGrid()
         {
             GridView view = grdListaProdutos.FocusedView as GridView;
 
@@ -284,7 +316,7 @@ namespace App_PDV
 
         private void RemoverProduto()
         {
-            PegaIdCategoriaSelecionadaGrid();
+            PegaIdProdutoSelecionadaGrid();
 
             if (_idProduto == 0)
             {
@@ -308,17 +340,29 @@ namespace App_PDV
             {
                 using (UnitOfWork uow = new UnitOfWork())
                 {
-                    //tb_produto_filial produtoSelecionado = uow.Query<tb_produto_filial>().FirstOrDefault(p => p.id_produto_filial == _idProduto);
+                    long idProdutoFilial = Convert.ToInt64(cmbProdutos.EditValue);
 
-                    tb_produto_filial produtoSelecionado = uow.GetObjectByKey<tb_produto_filial>(_idProduto);
+                    tb_produto_filial produtoSelecionado = uow.GetObjectByKey<tb_produto_filial>(idProdutoFilial);
 
-                    var produtoQtdAlterada = listaProdutoSelecionado.FirstOrDefault(p => p.idProdutoFilial == _idProduto);
+                    //tb_produto_filial produtoSelecionado = uow.GetObjectByKey<tb_produto_filial>(_idProduto);
+
+                    //var produtoQtdAlterada = listaProdutoSelecionado.FirstOrDefault(p => p.idProdutoFilial == _idProduto);
+                    var produtoQtdAlterada = listaProdutoSelecionado.FirstOrDefault(p => p.idProdutoFilial == idProdutoFilial);
 
                     if (produtoQtdAlterada.quantidade > produtoSelecionado.pf_est)
                     {
                         MensagensDoSistema.MensagemAtencaoOk("A quantidade informada excede a quantidade disponível em estoque.");
 
-                        produtoQtdAlterada.quantidade = Convert.ToInt16(produtoSelecionado.pf_est);
+                        if (string.IsNullOrEmpty(cmbProdutos.EditValue?.ToString()))
+                        {
+                            //se nao tiver campo na selacao de produtos, indica que sera alterado o valor da quantidade apenas no grid
+                            produtoQtdAlterada.quantidade = Convert.ToInt16(produtoSelecionado.pf_est);
+                        }
+                        else
+                        {
+                            //se nao tiver campo na selacao de produtos, indica que sera alterado o valor da quantidade apenas no text edit
+                            txtQuant.Text = produtoSelecionado.pf_est.ToString();
+                        }
                     }
                 }
             }
@@ -330,7 +374,7 @@ namespace App_PDV
 
         private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
-            PegaIdCategoriaSelecionadaGrid();
+            PegaIdProdutoSelecionadaGrid();
 
             VerificarEstoqueProduto();
 
@@ -339,11 +383,18 @@ namespace App_PDV
 
         private void cmbProdutos_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (char)Keys.Enter)
+            if (!string.IsNullOrEmpty(cmbProdutos.EditValue?.ToString()))
             {
-                PreencherGridProdutoSelecionado();
+                if (e.KeyChar == (char)Keys.Enter)
+                {
+                    PreencherGridProdutoSelecionado();
 
-                PreencherCamposComValores();
+                    PreencherCamposComValores();
+
+                    txtQuant.Text = "1";
+                    txtVlrTotal.Text = "R$ 0,00";
+                    cmbProdutos.Clear();
+                }
             }
         }
 
@@ -354,7 +405,7 @@ namespace App_PDV
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            PegaIdCategoriaSelecionadaGrid();
+            PegaIdProdutoSelecionadaGrid();
 
             if (_idProduto != 0)
             {
@@ -388,6 +439,30 @@ namespace App_PDV
         private void uc_PDV_Leave(object sender, EventArgs e)
         {
             listaProdutoSelecionado.Clear();
+        }
+
+        private void txtQuant_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(cmbProdutos.EditValue?.ToString()))
+            {
+                if (e.KeyChar == (char)Keys.Enter)
+                {
+                    VerificarEstoqueProduto();
+
+                    PreencherGridProdutoSelecionado();
+
+                    PreencherCamposComValores();
+
+                    txtQuant.Text = "1";
+                    txtVlrTotal.Text = "R$ 0,00";
+                    cmbProdutos.Clear();
+                }
+            }
+        }
+
+        private void txtQuant_KeyUp(object sender, KeyEventArgs e)
+        {
+            CalculandoTotalPorProduto();
         }
     }
 }

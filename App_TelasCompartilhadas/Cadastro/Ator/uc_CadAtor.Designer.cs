@@ -747,7 +747,7 @@ namespace App_TelasCompartilhadas.Ator
             // 
             this.tabbedControlGroup2.Location = new System.Drawing.Point(0, 40);
             this.tabbedControlGroup2.Name = "tabbedControlGroup2";
-            this.tabbedControlGroup2.SelectedTabPage = this.layoutControlGroup6;
+            this.tabbedControlGroup2.SelectedTabPage = this.AbaFiscal;
             this.tabbedControlGroup2.Size = new System.Drawing.Size(1223, 317);
             this.tabbedControlGroup2.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup6,
@@ -1221,8 +1221,8 @@ namespace App_TelasCompartilhadas.Ator
             // alcConfirmacao
             // 
             this.alcConfirmacao.HtmlImages = this.svgImageCollection1;
-            this.alcConfirmacao.HtmlTemplate.Styles = resources.GetString("alertControl1.HtmlTemplate.Styles");
-            this.alcConfirmacao.HtmlTemplate.Template = resources.GetString("alertControl1.HtmlTemplate.Template");
+            this.alcConfirmacao.HtmlTemplate.Styles = resources.GetString("alcConfirmacao.HtmlTemplate.Styles");
+            this.alcConfirmacao.HtmlTemplate.Template = resources.GetString("alcConfirmacao.HtmlTemplate.Template");
             this.alcConfirmacao.HtmlElementMouseClick += new DevExpress.XtraBars.Alerter.AlertHtmlElementMouseClickEventHandler(this.alcConfirmacao_HtmlElementMouseClick);
             // 
             // svgImageCollection1

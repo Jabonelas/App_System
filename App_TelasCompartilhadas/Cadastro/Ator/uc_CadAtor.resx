@@ -243,7 +243,7 @@
         IGNsYXNzPSJHcmVlbiIgLz4NCjwvc3ZnPgs=
 </value>
   </data>
-  <data name="alertControl1.HtmlTemplate.Styles" xml:space="preserve">
+  <data name="alcConfirmacao.HtmlTemplate.Styles" xml:space="preserve">
     <value>body{	
 	padding: 20px;
 	font-size: 14px;
@@ -319,7 +319,7 @@
 	box-shadow: 0px 0px 10px @Success/0.5;
 }</value>
   </data>
-  <data name="alertControl1.HtmlTemplate.Template" xml:space="preserve">
+  <data name="alcConfirmacao.HtmlTemplate.Template" xml:space="preserve">
     <value>&lt;div class="frame" id="frame"&gt;
     &lt;div class="header"&gt;
         &lt;div class="caption"&gt;Confirmação!&lt;/div&gt;

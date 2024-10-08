@@ -9,6 +9,7 @@ using App_PDV.FechamentoCaixa;
 using App_PDV.Fluxo_de_Caixa.Entrada_Caixa;
 using App_PDV.Fluxo_de_Caixa.Saida_Caixa;
 using App_TelasCompartilhadas;
+using App_TelasCompartilhadas.Login;
 using App_TelasCompartilhadas.Produtos;
 using App_TelasCompartilhadas.Relatorios;
 using DevExpress.XtraBars.FluentDesignSystem;
@@ -125,14 +126,37 @@ namespace App_PDV
 
         private void btnEntrada_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (IsCaixaAberto())
+            //Gerente 102
+            bool podeAlterarAtor = VariaveisGlobais.UsuarioLogado.at_atorTipo == 102 || VariaveisGlobais.isUsuarioComPermissao;
+
+            if (!podeAlterarAtor)
             {
-                TelaVisualizarEntradaCaixa();
+                TelaAutenticacaoUsuario();
+
+                podeAlterarAtor = VariaveisGlobais.isUsuarioComPermissao;
             }
-            else
+
+            if (podeAlterarAtor)
             {
-                MensagensDoSistema.MensagemAtencaoOk("Por favor, proceda com a abertura do caixa.");
+                VariaveisGlobais.isUsuarioComPermissao = false;
+
+                if (IsCaixaAberto())
+                {
+                    TelaVisualizarEntradaCaixa();
+                }
+                else
+                {
+                    MensagensDoSistema.MensagemAtencaoOk("Por favor, proceda com a abertura do caixa.");
+                }
             }
+        }
+
+        private void TelaAutenticacaoUsuario()
+        {
+            TelaCarregamento.ExibirCarregamentoForm(this);
+
+            frmAutenticacaoUsuario frmAutenticacaoUsuario = new frmAutenticacaoUsuario();
+            frmAutenticacaoUsuario.ShowDialog();
         }
 
         public void TelaAberturaCaixa()
@@ -148,7 +172,22 @@ namespace App_PDV
 
         private void btnAberturaCaixa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            TelaAberturaCaixa();
+            //Gerente 102
+            bool podeAlterarAtor = VariaveisGlobais.UsuarioLogado.at_atorTipo == 102 || VariaveisGlobais.isUsuarioComPermissao;
+
+            if (!podeAlterarAtor)
+            {
+                TelaAutenticacaoUsuario();
+
+                podeAlterarAtor = VariaveisGlobais.isUsuarioComPermissao;
+            }
+
+            if (podeAlterarAtor)
+            {
+                VariaveisGlobais.isUsuarioComPermissao = false;
+
+                TelaAberturaCaixa();
+            }
         }
 
         public void TelaFechamentoCaixa()
@@ -164,13 +203,28 @@ namespace App_PDV
 
         private void btnFechamentoCaixa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (IsCaixaAberto())
+            //Gerente 102
+            bool podeAlterarAtor = VariaveisGlobais.UsuarioLogado.at_atorTipo == 102 || VariaveisGlobais.isUsuarioComPermissao;
+
+            if (!podeAlterarAtor)
             {
-                TelaFechamentoCaixa();
+                TelaAutenticacaoUsuario();
+
+                podeAlterarAtor = VariaveisGlobais.isUsuarioComPermissao;
             }
-            else
+
+            if (podeAlterarAtor)
             {
-                MensagensDoSistema.MensagemAtencaoOk("Por favor, proceda com a abertura do caixa.");
+                VariaveisGlobais.isUsuarioComPermissao = false;
+
+                if (IsCaixaAberto())
+                {
+                    TelaFechamentoCaixa();
+                }
+                else
+                {
+                    MensagensDoSistema.MensagemAtencaoOk("Por favor, proceda com a abertura do caixa.");
+                }
             }
         }
 
@@ -187,13 +241,28 @@ namespace App_PDV
 
         private void btnSaida_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (IsCaixaAberto())
+            //Gerente 102
+            bool podeAlterarAtor = VariaveisGlobais.UsuarioLogado.at_atorTipo == 102 || VariaveisGlobais.isUsuarioComPermissao;
+
+            if (!podeAlterarAtor)
             {
-                TelaVisualizarSaidaCaixa();
+                TelaAutenticacaoUsuario();
+
+                podeAlterarAtor = VariaveisGlobais.isUsuarioComPermissao;
             }
-            else
+
+            if (podeAlterarAtor)
             {
-                MensagensDoSistema.MensagemAtencaoOk("Por favor, proceda com a abertura do caixa.");
+                VariaveisGlobais.isUsuarioComPermissao = false;
+
+                if (IsCaixaAberto())
+                {
+                    TelaVisualizarSaidaCaixa();
+                }
+                else
+                {
+                    MensagensDoSistema.MensagemAtencaoOk("Por favor, proceda com a abertura do caixa.");
+                }
             }
         }
 

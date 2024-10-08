@@ -18,7 +18,7 @@ namespace App_TelasCompartilhadas.Login
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            var dialog = MensagensDoSistema.MensagemAtencaoYesNo("Tem serteza que deseja finalizar a aplicação?");
+            var dialog = MensagensDoSistema.MensagemAtencaoYesNo("Tem serteza que deseja cancelar a autenticação?");
 
             if (dialog == DialogResult.Yes)
             {
