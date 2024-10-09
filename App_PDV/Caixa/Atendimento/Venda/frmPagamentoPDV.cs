@@ -32,10 +32,10 @@ namespace App_PDV
         private int numeroNota = 0;
         private int serie = 0;
 
-        private tb_movimentacao movimentacao;
-        private tb_ator dadosEmitente;
-        private tb_ator dadosDestinatario;
-        private tb_pdv dadosPDV;
+        private tb_movimentacao movimentacao = null;
+        private tb_ator dadosEmitente = null;
+        private tb_ator dadosDestinatario = null;
+        private tb_pdv dadosPDV = null;
 
         public List<PamentosRealizados> listaPagamentosRealizados = new List<PamentosRealizados>();
         private List<long> idMovimentacaoProdutos = new List<long>();
@@ -82,6 +82,7 @@ namespace App_PDV
 
             configBotoes.BotaoVoltar(btnVoltar);
             configBotoes.BotaoFinalizarVenda(btnFinalizarVenda);
+            configBotoes.BotaoAdicionarPagamento(btnAddPagamento);
 
             uc_TituloTelas1.lblTituloTela.Text = "Pagamento";
 
@@ -1476,7 +1477,10 @@ namespace App_PDV
                 {
                     string cpf = txtCPF.Text;
 
-                    dadosDestinatario = uow.Query<tb_ator>().FirstOrDefault(x => x.at_cpf == cpf && x.at_atorTipo == 1 && x.at_desat == 0);
+                    if (!string.IsNullOrEmpty(cpf))
+                    {
+                        dadosDestinatario = uow.Query<tb_ator>().FirstOrDefault(x => x.at_cpf == cpf && x.at_atorTipo == 1 && x.at_desat == 0);
+                    }
 
                     if (dadosDestinatario != null)
                     {
@@ -1875,6 +1879,11 @@ namespace App_PDV
         }
 
         private void txtValorPagamento_Leave(object sender, EventArgs e)
+        {
+            ConfirmarPagamento();
+        }
+
+        private void btnAddPagamento_Click(object sender, EventArgs e)
         {
             ConfirmarPagamento();
         }

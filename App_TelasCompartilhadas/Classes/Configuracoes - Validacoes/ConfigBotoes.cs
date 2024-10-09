@@ -13,7 +13,7 @@ namespace App_TelasCompartilhadas.Classes
 {
     public class ConfigBotoes
     {
-        private frmImagensGeralSistema form = new frmImagensGeralSistema();
+        private frmImagensGeralSistema frmImagensGeralSistema = new frmImagensGeralSistema();
 
         //Posicao das imagens no vetor
         //alterar[0]
@@ -33,7 +33,7 @@ namespace App_TelasCompartilhadas.Classes
 
         public void BotaoSalvar(SimpleButton button)
         {
-            var imagem = form.colecaoImagensBotoesSVG[11];
+            var imagem = frmImagensGeralSistema.colecaoImagensBotoesSVG[11];
 
             DevExpress.Utils.Svg.SvgImage svgImage = imagem;
 
@@ -50,7 +50,7 @@ namespace App_TelasCompartilhadas.Classes
 
         public void BotaoVoltar(SimpleButton button)
         {
-            var imagem = form.colecaoImagensBotoesSVG[5];
+            var imagem = frmImagensGeralSistema.colecaoImagensBotoesSVG[5];
 
             DevExpress.Utils.Svg.SvgImage svgImage = imagem;
 
@@ -67,7 +67,7 @@ namespace App_TelasCompartilhadas.Classes
 
         public void BotaoNovoRegistro(SimpleButton button)
         {
-            var imagem = form.colecaoImagensBotoesSVG[12];
+            var imagem = frmImagensGeralSistema.colecaoImagensBotoesSVG[12];
 
             DevExpress.Utils.Svg.SvgImage svgImage = imagem;
 
@@ -84,7 +84,7 @@ namespace App_TelasCompartilhadas.Classes
 
         public void BotaoVisualizar(SimpleButton button)
         {
-            var imagem = form.colecaoImagensBotoesSVG[8];
+            var imagem = frmImagensGeralSistema.colecaoImagensBotoesSVG[8];
 
             DevExpress.Utils.Svg.SvgImage svgImage = imagem;
 
@@ -101,7 +101,7 @@ namespace App_TelasCompartilhadas.Classes
 
         public void BotaoExcluir(SimpleButton button)
         {
-            var imagem = form.colecaoImagensBotoesSVG[3];
+            var imagem = frmImagensGeralSistema.colecaoImagensBotoesSVG[3];
 
             DevExpress.Utils.Svg.SvgImage svgImage = imagem;
 
@@ -118,7 +118,7 @@ namespace App_TelasCompartilhadas.Classes
 
         public void BotaoFinalizarVenda(SimpleButton button)
         {
-            var imagem = form.colecaoImagensBotoesSVG[6];
+            var imagem = frmImagensGeralSistema.colecaoImagensBotoesSVG[6];
 
             DevExpress.Utils.Svg.SvgImage svgImage = imagem;
 
@@ -135,7 +135,7 @@ namespace App_TelasCompartilhadas.Classes
 
         public void BotaoPagamento(SimpleButton button)
         {
-            var imagem = form.colecaoImagensBotoesSVG[10];
+            var imagem = frmImagensGeralSistema.colecaoImagensBotoesSVG[10];
 
             DevExpress.Utils.Svg.SvgImage svgImage = imagem;
 
@@ -150,9 +150,9 @@ namespace App_TelasCompartilhadas.Classes
             button.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
         }
 
-        public void BotaoSelecionarProduto(SimpleButton button)
+        public void BotaoAdicionarPagamento(SimpleButton button)
         {
-            var imagem = form.colecaoImagensBotoesSVG[7];
+            var imagem = frmImagensGeralSistema.colecaoImagensBotoesSVG[7];
 
             DevExpress.Utils.Svg.SvgImage svgImage = imagem;
 
@@ -162,14 +162,14 @@ namespace App_TelasCompartilhadas.Classes
             button.ImageOptions.ImageToTextAlignment = ImageAlignToText.BottomCenter;
             button.ImageOptions.SvgImageSize = new Size(40, 40);
             button.Text = "";
-            button.ToolTip = "Clique aqui para selecionar o produto e adicionar à sua venda.";
-            button.ToolTipTitle = "Adicionar:";
+            button.ToolTip = "Clique aqui para adicionar o pagamento.";
+            button.ToolTipTitle = "Adicionar pagamento:";
             button.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
         }
 
         public void BotaoImprimir(SimpleButton button)
         {
-            var imagem = form.colecaoImagensBotoesSVG[9];
+            var imagem = frmImagensGeralSistema.colecaoImagensBotoesSVG[9];
 
             DevExpress.Utils.Svg.SvgImage svgImage = imagem;
 
@@ -186,7 +186,7 @@ namespace App_TelasCompartilhadas.Classes
 
         public void BotaoEnviarEmail(SimpleButton button)
         {
-            var imagem = form.colecaoImagensBotoesSVG[2];
+            var imagem = frmImagensGeralSistema.colecaoImagensBotoesSVG[2];
 
             DevExpress.Utils.Svg.SvgImage svgImage = imagem;
 
@@ -203,7 +203,7 @@ namespace App_TelasCompartilhadas.Classes
 
         public void BotaoAlterar(SimpleButton button)
         {
-            var imagem = form.colecaoImagensBotoesSVG[0];
+            var imagem = frmImagensGeralSistema.colecaoImagensBotoesSVG[0];
 
             DevExpress.Utils.Svg.SvgImage svgImage = imagem;
 
@@ -220,7 +220,7 @@ namespace App_TelasCompartilhadas.Classes
 
         public void BotaoBuscar(SimpleButton button)
         {
-            var imagem = form.colecaoImagensBotoesSVG[4];
+            var imagem = frmImagensGeralSistema.colecaoImagensBotoesSVG[4];
 
             DevExpress.Utils.Svg.SvgImage svgImage = imagem;
 
@@ -237,7 +237,7 @@ namespace App_TelasCompartilhadas.Classes
 
         public void BotaoExcel(SimpleButton button)
         {
-            var imagem = form.colecaoImagensBotoesSVG[1];
+            var imagem = frmImagensGeralSistema.colecaoImagensBotoesSVG[1];
 
             DevExpress.Utils.Svg.SvgImage svgImage = imagem;
 
@@ -254,7 +254,7 @@ namespace App_TelasCompartilhadas.Classes
 
         public void BotaoAdicionarCarrinho(SimpleButton button)
         {
-            var imagem = form.colecaoImagensBotoesSVG[13];
+            var imagem = frmImagensGeralSistema.colecaoImagensBotoesSVG[13];
 
             DevExpress.Utils.Svg.SvgImage svgImage = imagem;
 

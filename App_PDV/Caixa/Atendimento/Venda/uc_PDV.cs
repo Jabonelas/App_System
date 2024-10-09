@@ -40,7 +40,7 @@ namespace App_PDV
             ConfigBotoes configBotoes = new ConfigBotoes();
 
             configBotoes.BotaoVoltar(btnVoltar);
-            //configBotoes.BotaoSelecionarProduto(btnSelecionarProduto);
+            //configBotoes.BotaoAdicionarPagamento(btnSelecionarProduto);
             configBotoes.BotaoAdicionarCarrinho(btnSelecionarProduto);
             configBotoes.BotaoPagamento(btnPagamento);
             configBotoes.BotaoExcluir(btnExcluir);
@@ -286,6 +286,34 @@ namespace App_PDV
 
         private void btnSelecionarProduto_Click(object sender, EventArgs e)
         {
+            AdicionarProdutoVenda();
+        }
+
+        private bool IsExisteRepeticaoItemNaVenda()
+        {
+            long idProdutoFilial = Convert.ToInt64(cmbProdutos.EditValue) == 0 ? _idProduto : Convert.ToInt64(cmbProdutos.EditValue);
+
+            var isItemExiste = listaProdutoSelecionado.Any(x => x.idProdutoFilial == idProdutoFilial);
+
+            return isItemExiste;
+        }
+
+        private void AdicionarProdutoVenda()
+        {
+            if (IsExisteRepeticaoItemNaVenda())
+            {
+                MensagensDoSistema.MensagemAtencaoOk("Este produto já foi adicionado à venda. Altere a quantidade ou escolha outro item.");
+
+                return;
+            }
+
+            if (Convert.ToInt64(txtQuant.Text) <= 0)
+            {
+                txtQuant.Text = "1";
+            }
+
+            VerificarEstoqueProduto();
+
             PreencherGridProdutoSelecionado();
 
             PreencherCamposComValores();
@@ -340,18 +368,17 @@ namespace App_PDV
             {
                 using (UnitOfWork uow = new UnitOfWork())
                 {
-                    long idProdutoFilial = Convert.ToInt64(cmbProdutos.EditValue);
+                    long idProdutoFilial = Convert.ToInt64(cmbProdutos.EditValue) == 0 ? _idProduto : Convert.ToInt64(cmbProdutos.EditValue);
 
                     tb_produto_filial produtoSelecionado = uow.GetObjectByKey<tb_produto_filial>(idProdutoFilial);
 
-                    //tb_produto_filial produtoSelecionado = uow.GetObjectByKey<tb_produto_filial>(_idProduto);
-
-                    //var produtoQtdAlterada = listaProdutoSelecionado.FirstOrDefault(p => p.idProdutoFilial == _idProduto);
                     var produtoQtdAlterada = listaProdutoSelecionado.FirstOrDefault(p => p.idProdutoFilial == idProdutoFilial);
 
-                    if (produtoQtdAlterada.quantidade > produtoSelecionado.pf_est)
+                    var quantidadeSolicitada = produtoQtdAlterada == null ? Convert.ToInt64(txtQuant.Text) : produtoQtdAlterada.quantidade;
+
+                    if (quantidadeSolicitada > produtoSelecionado.pf_est)
                     {
-                        MensagensDoSistema.MensagemAtencaoOk("A quantidade informada excede a quantidade disponível em estoque.");
+                        MensagensDoSistema.MensagemAtencaoOk("A quantidade solicitada excede o estoque disponível. Será adicionada a quantidade máxima disponível.");
 
                         if (string.IsNullOrEmpty(cmbProdutos.EditValue?.ToString()))
                         {
@@ -387,13 +414,7 @@ namespace App_PDV
             {
                 if (e.KeyChar == (char)Keys.Enter)
                 {
-                    PreencherGridProdutoSelecionado();
-
-                    PreencherCamposComValores();
-
-                    txtQuant.Text = "1";
-                    txtVlrTotal.Text = "R$ 0,00";
-                    cmbProdutos.Clear();
+                    AdicionarProdutoVenda();
                 }
             }
         }
@@ -447,15 +468,7 @@ namespace App_PDV
             {
                 if (e.KeyChar == (char)Keys.Enter)
                 {
-                    VerificarEstoqueProduto();
-
-                    PreencherGridProdutoSelecionado();
-
-                    PreencherCamposComValores();
-
-                    txtQuant.Text = "1";
-                    txtVlrTotal.Text = "R$ 0,00";
-                    cmbProdutos.Clear();
+                    AdicionarProdutoVenda();
                 }
             }
         }

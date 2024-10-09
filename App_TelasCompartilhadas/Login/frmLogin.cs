@@ -122,11 +122,12 @@ namespace App_TelasCompartilhadas
             {
                 using (UnitOfWork uow = new UnitOfWork())
                 {
-                    string macAddress = new VerificarComponentesPC().GetMacAddress();
+                    //string macAddress = new VerificarComponentesPC().GetMacAddress();
                     string diskSerialNumber = new VerificarComponentesPC().GetDiskSerialNumber();
                     string motherboardSerialNumber = new VerificarComponentesPC().GetMotherboardSerialNumber();
 
-                    var cadastroMaquina = uow.Query<tb_pdv>().FirstOrDefault(x => x.pdv_nicMacAddress == macAddress && x.pdv_dskSerialNumber == diskSerialNumber && x.pdv_boardSerialNumber == motherboardSerialNumber);
+                    //var cadastroMaquina = uow.Query<tb_pdv>().FirstOrDefault(x => x.pdv_nicMacAddress == macAddress && x.pdv_dskSerialNumber == diskSerialNumber && x.pdv_boardSerialNumber == motherboardSerialNumber);
+                    var cadastroMaquina = uow.Query<tb_pdv>().FirstOrDefault(x => x.pdv_dskSerialNumber == diskSerialNumber && x.pdv_boardSerialNumber == motherboardSerialNumber);
 
                     if (cadastroMaquina == null)
                     {

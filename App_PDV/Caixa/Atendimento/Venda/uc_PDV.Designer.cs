@@ -32,10 +32,14 @@ namespace App_PDV
         {
             this.cmbProdutos = new DevExpress.XtraEditors.LookUpEdit();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
+            this.txtQuant = new DevExpress.XtraEditors.TextEdit();
+            this.txtVlrTotal = new DevExpress.XtraEditors.TextEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.btnSelecionarProduto = new DevExpress.XtraEditors.SimpleButton();
             this.grdListaProdutos = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -59,17 +63,17 @@ namespace App_PDV
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtQuant = new DevExpress.XtraEditors.TextEdit();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtVlrTotal = new DevExpress.XtraEditors.TextEdit();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.cmbProdutos.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtQuant.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtVlrTotal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdListaProdutos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).BeginInit();
@@ -79,10 +83,6 @@ namespace App_PDV
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtQuant.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtVlrTotal.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbProdutos
@@ -120,6 +120,37 @@ namespace App_PDV
             this.dataLayoutControl1.Size = new System.Drawing.Size(1264, 121);
             this.dataLayoutControl1.TabIndex = 2;
             this.dataLayoutControl1.Text = "dataLayoutControl1";
+            // 
+            // txtQuant
+            // 
+            this.txtQuant.EditValue = "1";
+            this.txtQuant.Location = new System.Drawing.Point(991, 61);
+            this.txtQuant.Name = "txtQuant";
+            this.txtQuant.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtQuant.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
+            this.txtQuant.Properties.MaskSettings.Set("mask", "d");
+            this.txtQuant.Properties.MaxLength = 3;
+            this.txtQuant.Size = new System.Drawing.Size(127, 20);
+            this.txtQuant.StyleController = this.dataLayoutControl1;
+            this.txtQuant.TabIndex = 4;
+            this.txtQuant.ToolTip = "Informe a quantidade de produtos desejada para esta venda.";
+            this.txtQuant.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.txtQuant.ToolTipTitle = "Quantidade de produto:";
+            this.txtQuant.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQuant_KeyPress);
+            this.txtQuant.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtQuant_KeyUp);
+            // 
+            // txtVlrTotal
+            // 
+            this.txtVlrTotal.EditValue = "R$ 0,00";
+            this.txtVlrTotal.Location = new System.Drawing.Point(1122, 61);
+            this.txtVlrTotal.Name = "txtVlrTotal";
+            this.txtVlrTotal.Properties.ReadOnly = true;
+            this.txtVlrTotal.Size = new System.Drawing.Size(118, 20);
+            this.txtVlrTotal.StyleController = this.dataLayoutControl1;
+            this.txtVlrTotal.TabIndex = 5;
+            this.txtVlrTotal.ToolTip = "Valor total do produto selecionado.";
+            this.txtVlrTotal.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.txtVlrTotal.ToolTipTitle = "Valor total:";
             // 
             // Root
             // 
@@ -160,6 +191,26 @@ namespace App_PDV
             this.layoutControlItem1.Text = "Lista produtos";
             this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem1.TextSize = new System.Drawing.Size(68, 13);
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.txtQuant;
+            this.layoutControlItem3.Location = new System.Drawing.Point(967, 0);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(131, 40);
+            this.layoutControlItem3.Text = "Quant.";
+            this.layoutControlItem3.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(68, 13);
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.txtVlrTotal;
+            this.layoutControlItem4.Location = new System.Drawing.Point(1098, 0);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(122, 40);
+            this.layoutControlItem4.Text = "Vlr. Total";
+            this.layoutControlItem4.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(68, 13);
             // 
             // btnSelecionarProduto
             // 
@@ -405,51 +456,6 @@ namespace App_PDV
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
-            // txtQuant
-            // 
-            this.txtQuant.EditValue = "1";
-            this.txtQuant.Location = new System.Drawing.Point(991, 61);
-            this.txtQuant.Name = "txtQuant";
-            this.txtQuant.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
-            this.txtQuant.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
-            this.txtQuant.Properties.MaskSettings.Set("mask", "d");
-            this.txtQuant.Properties.MaxLength = 3;
-            this.txtQuant.Size = new System.Drawing.Size(127, 20);
-            this.txtQuant.StyleController = this.dataLayoutControl1;
-            this.txtQuant.TabIndex = 4;
-            this.txtQuant.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQuant_KeyPress);
-            this.txtQuant.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtQuant_KeyUp);
-            // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.Control = this.txtQuant;
-            this.layoutControlItem3.Location = new System.Drawing.Point(967, 0);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(131, 40);
-            this.layoutControlItem3.Text = "Quant.";
-            this.layoutControlItem3.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(68, 13);
-            // 
-            // txtVlrTotal
-            // 
-            this.txtVlrTotal.EditValue = "R$ 0,00";
-            this.txtVlrTotal.Location = new System.Drawing.Point(1122, 61);
-            this.txtVlrTotal.Name = "txtVlrTotal";
-            this.txtVlrTotal.Properties.ReadOnly = true;
-            this.txtVlrTotal.Size = new System.Drawing.Size(118, 20);
-            this.txtVlrTotal.StyleController = this.dataLayoutControl1;
-            this.txtVlrTotal.TabIndex = 5;
-            // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.Control = this.txtVlrTotal;
-            this.layoutControlItem4.Location = new System.Drawing.Point(1098, 0);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(122, 40);
-            this.layoutControlItem4.Text = "Vlr. Total";
-            this.layoutControlItem4.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(68, 13);
-            // 
             // uc_PDV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -470,10 +476,14 @@ namespace App_PDV
             ((System.ComponentModel.ISupportInitialize)(this.cmbProdutos.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtQuant.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtVlrTotal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdListaProdutos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).EndInit();
@@ -483,10 +493,6 @@ namespace App_PDV
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtQuant.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtVlrTotal.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

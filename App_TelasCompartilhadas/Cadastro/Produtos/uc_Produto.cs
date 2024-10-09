@@ -40,6 +40,23 @@ namespace App_TelasCompartilhadas.Produtos
             //GridView gridView = grdProdutos.MainView as GridView;
 
             //gridView.OptionsFind.FindFilterColumns = "NomeProduto;DescricaoProduto"; // Defina as colunas que aceita texto
+
+            ConfigurarGridView();
+        }
+
+        private void ConfigurarGridView()
+        {
+            GridView view = grdProdutos.MainView as GridView;
+
+            if (view != null)
+            {
+                // Desativar a edição de células (opcional, se você quiser apenas selecionar e não editar)
+                view.OptionsBehavior.Editable = false;
+
+                // Marcar a linha inteira ao clicar
+                view.OptionsSelection.EnableAppearanceFocusedRow = true;
+                view.OptionsSelection.InvertSelection = false;
+            }
         }
 
         private void Layout()
@@ -350,7 +367,7 @@ namespace App_TelasCompartilhadas.Produtos
 
                 if (!IsEstoqueZerado())
                 {
-                    MensagensDoSistema.MensagemAtencaoOk("Não é possível excluir este cadastro de um produto que possui estoque.");
+                    MensagensDoSistema.MensagemAtencaoOk("Não é possível excluir o cadastro de um produto que ainda possui estoque.");
 
                     idProduto = 0;
 
@@ -402,6 +419,13 @@ namespace App_TelasCompartilhadas.Produtos
             {
                 alcExclusao.Dispose();
             }
+        }
+
+        private void gridView1_DoubleClick(object sender, EventArgs e)
+        {
+            PegaIdProdutoSelecionadoGrid();
+
+            TelaEstoqueProduto(formaOrdenarGrid);
         }
     }
 }

@@ -161,6 +161,8 @@ namespace App_TelasCompartilhadas.Produtos
             this.gridView1.GridControl = this.grdProdutos;
             this.gridView1.GroupPanelText = "Buscar...";
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.ReadOnly = true;
+            this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             // 
             // id_produto
             // 
@@ -173,6 +175,7 @@ namespace App_TelasCompartilhadas.Produtos
             this.CodRef.Caption = "Cód. Ref.";
             this.CodRef.FieldName = "pd_codRef";
             this.CodRef.Name = "CodRef";
+            this.CodRef.OptionsColumn.ReadOnly = true;
             this.CodRef.Visible = true;
             this.CodRef.VisibleIndex = 0;
             this.CodRef.Width = 57;
@@ -182,6 +185,7 @@ namespace App_TelasCompartilhadas.Produtos
             this.DescricaoCurta.Caption = "Descrição Curta";
             this.DescricaoCurta.FieldName = "pd_descCurta";
             this.DescricaoCurta.Name = "DescricaoCurta";
+            this.DescricaoCurta.OptionsColumn.ReadOnly = true;
             this.DescricaoCurta.Visible = true;
             this.DescricaoCurta.VisibleIndex = 1;
             this.DescricaoCurta.Width = 183;
@@ -191,6 +195,7 @@ namespace App_TelasCompartilhadas.Produtos
             this.Descricao.Caption = "Descrição";
             this.Descricao.FieldName = "pd_desc";
             this.Descricao.Name = "Descricao";
+            this.Descricao.OptionsColumn.ReadOnly = true;
             this.Descricao.Visible = true;
             this.Descricao.VisibleIndex = 2;
             this.Descricao.Width = 272;
@@ -200,6 +205,7 @@ namespace App_TelasCompartilhadas.Produtos
             this.Marca.Caption = "Marca";
             this.Marca.FieldName = "mp_desc";
             this.Marca.Name = "Marca";
+            this.Marca.OptionsColumn.ReadOnly = true;
             this.Marca.Visible = true;
             this.Marca.VisibleIndex = 3;
             this.Marca.Width = 73;
@@ -209,6 +215,7 @@ namespace App_TelasCompartilhadas.Produtos
             this.Categoria.Caption = "Categoria";
             this.Categoria.FieldName = "cp_desc";
             this.Categoria.Name = "Categoria";
+            this.Categoria.OptionsColumn.ReadOnly = true;
             this.Categoria.Visible = true;
             this.Categoria.VisibleIndex = 4;
             this.Categoria.Width = 78;
@@ -218,6 +225,7 @@ namespace App_TelasCompartilhadas.Produtos
             this.Sucategoria.Caption = "Sucategoria";
             this.Sucategoria.FieldName = "scp_desc";
             this.Sucategoria.Name = "Sucategoria";
+            this.Sucategoria.OptionsColumn.ReadOnly = true;
             this.Sucategoria.Visible = true;
             this.Sucategoria.VisibleIndex = 5;
             this.Sucategoria.Width = 72;
@@ -230,6 +238,7 @@ namespace App_TelasCompartilhadas.Produtos
             this.VlrUnProd.FieldName = "pd_vlrUnComBase";
             this.VlrUnProd.GroupFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.VlrUnProd.Name = "VlrUnProd";
+            this.VlrUnProd.OptionsColumn.ReadOnly = true;
             this.VlrUnProd.Visible = true;
             this.VlrUnProd.VisibleIndex = 6;
             this.VlrUnProd.Width = 62;
@@ -239,6 +248,7 @@ namespace App_TelasCompartilhadas.Produtos
             this.EstTotal.Caption = "Est. Total";
             this.EstTotal.FieldName = "pd_estTot";
             this.EstTotal.Name = "EstTotal";
+            this.EstTotal.OptionsColumn.ReadOnly = true;
             this.EstTotal.Visible = true;
             this.EstTotal.VisibleIndex = 7;
             this.EstTotal.Width = 94;

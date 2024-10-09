@@ -75,6 +75,7 @@ namespace App_PDV
             this.layoutControlGroup6 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup7 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.btnAddPagamento = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbVendedor.Properties)).BeginInit();
@@ -494,9 +495,6 @@ namespace App_PDV
             this.txtNomeCliente.EditValue = "Cliente não informado.";
             this.txtNomeCliente.Location = new System.Drawing.Point(24, 101);
             this.txtNomeCliente.Name = "txtNomeCliente";
-            this.txtNomeCliente.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
-            this.txtNomeCliente.Properties.MaskSettings.Set("MaskManagerSignature", "ignoreMaskBlank=True");
-            this.txtNomeCliente.Properties.MaskSettings.Set("mask", "000\\.000\\.000\\-00");
             this.txtNomeCliente.Properties.ReadOnly = true;
             this.txtNomeCliente.Size = new System.Drawing.Size(297, 20);
             this.txtNomeCliente.StyleController = this.layoutControl3;
@@ -639,11 +637,28 @@ namespace App_PDV
             this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem12.TextVisible = false;
             // 
+            // btnAddPagamento
+            // 
+            this.btnAddPagamento.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddPagamento.Appearance.Options.UseFont = true;
+            this.btnAddPagamento.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.btnAddPagamento.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
+            this.btnAddPagamento.Location = new System.Drawing.Point(71, 39);
+            this.btnAddPagamento.Name = "btnAddPagamento";
+            this.btnAddPagamento.Size = new System.Drawing.Size(58, 54);
+            this.btnAddPagamento.TabIndex = 35;
+            this.btnAddPagamento.Text = "Add Pag";
+            this.btnAddPagamento.ToolTip = "Clique para retornar à tela anterior.";
+            this.btnAddPagamento.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.btnAddPagamento.ToolTipTitle = "Voltar:";
+            this.btnAddPagamento.Click += new System.EventHandler(this.btnAddPagamento_Click);
+            // 
             // frmPagamentoPDV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(682, 550);
+            this.Controls.Add(this.btnAddPagamento);
             this.Controls.Add(this.layoutControl4);
             this.Controls.Add(this.layoutControl3);
             this.Controls.Add(this.uc_TituloTelas1);
@@ -750,5 +765,6 @@ namespace App_PDV
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup6;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup7;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
+        private DevExpress.XtraEditors.SimpleButton btnAddPagamento;
     }
 }
