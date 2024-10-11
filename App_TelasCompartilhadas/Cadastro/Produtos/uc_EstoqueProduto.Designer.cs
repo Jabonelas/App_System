@@ -30,8 +30,6 @@ namespace App_TelasCompartilhadas.Produtos
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_EstoqueProduto));
             this.uc_TituloTelas1 = new App_TelasCompartilhadas.uc_TituloTelas();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.grdListaProdutos = new DevExpress.XtraGrid.GridControl();
@@ -48,8 +46,6 @@ namespace App_TelasCompartilhadas.Produtos
             this.LayoutEstoqueFiliais = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.btnVoltar = new DevExpress.XtraEditors.SimpleButton();
-            this.alcConfirmacao = new DevExpress.XtraBars.Alerter.AlertControl(this.components);
-            this.svgImageCollection1 = new DevExpress.Utils.SvgImageCollection(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdListaProdutos)).BeginInit();
@@ -57,7 +53,6 @@ namespace App_TelasCompartilhadas.Produtos
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LayoutEstoqueFiliais)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.svgImageCollection1)).BeginInit();
             this.SuspendLayout();
             // 
             // uc_TituloTelas1
@@ -225,18 +220,6 @@ namespace App_TelasCompartilhadas.Produtos
             this.btnVoltar.ToolTipTitle = "Voltar:";
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
-            // alcConfirmacao
-            // 
-            this.alcConfirmacao.HtmlImages = this.svgImageCollection1;
-            this.alcConfirmacao.HtmlTemplate.Styles = resources.GetString("alcConfirmacao.HtmlTemplate.Styles");
-            this.alcConfirmacao.HtmlTemplate.Template = resources.GetString("alcConfirmacao.HtmlTemplate.Template");
-            this.alcConfirmacao.HtmlElementMouseClick += new DevExpress.XtraBars.Alerter.AlertHtmlElementMouseClickEventHandler(this.alcConfirmacao_HtmlElementMouseClick);
-            // 
-            // svgImageCollection1
-            // 
-            this.svgImageCollection1.Add("State_Validation_Invalid", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollection1.State_Validation_Invalid"))));
-            this.svgImageCollection1.Add("State_Validation_Valid", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollection1.State_Validation_Valid"))));
-            // 
             // uc_EstoqueProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -254,7 +237,6 @@ namespace App_TelasCompartilhadas.Produtos
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LayoutEstoqueFiliais)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.svgImageCollection1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -277,7 +259,5 @@ namespace App_TelasCompartilhadas.Produtos
         private DevExpress.XtraGrid.Columns.GridColumn Filial;
         private DevExpress.XtraGrid.Columns.GridColumn Descricao;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
-        private DevExpress.XtraBars.Alerter.AlertControl alcConfirmacao;
-        private DevExpress.Utils.SvgImageCollection svgImageCollection1;
     }
 }

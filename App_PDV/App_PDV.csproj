@@ -235,6 +235,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Caixa\Atendimento\Venda\rp_ImpressaoCupomNaoFiscal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Caixa\Atendimento\Venda\rp_ImpressaoCupomNaoFiscal.Designer.cs">
+      <DependentUpon>rp_ImpressaoCupomNaoFiscal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Caixa\Fluxo de Caixa\Abertura Caixa\rp_ImpressaoAberturaCaixa.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -303,6 +309,9 @@
     <Compile Include="Caixa\Atendimento\Venda\uc_PDV.Designer.cs">
       <DependentUpon>uc_PDV.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Caixa\Atendimento\Venda\rp_ImpressaoCupomNaoFiscal.resx">
+      <DependentUpon>rp_ImpressaoCupomNaoFiscal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Caixa\Fluxo de Caixa\Abertura Caixa\rp_ImpressaoAberturaCaixa.resx">
       <DependentUpon>rp_ImpressaoAberturaCaixa.cs</DependentUpon>
     </EmbeddedResource>

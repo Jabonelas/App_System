@@ -31,12 +31,12 @@ namespace App_TelasCompartilhadas.Ator
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_CadAtor));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.btnSalvar = new DevExpress.XtraEditors.SimpleButton();
             this.btnVoltar = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
@@ -77,10 +77,10 @@ namespace App_TelasCompartilhadas.Ator
             this.tabbedControlGroup2 = new DevExpress.XtraLayout.TabbedControlGroup();
             this.layoutControlGroup6 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.tabbedControlGroup4 = new DevExpress.XtraLayout.TabbedControlGroup();
-            this.layoutControlGroup11 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.abaPessoaJuridica = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlGroup13 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.abaPessoaFisica = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem26 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup10 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -117,8 +117,6 @@ namespace App_TelasCompartilhadas.Ator
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.xtraOpenFileDialog1 = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
             this.uc_TituloTelas1 = new App_TelasCompartilhadas.uc_TituloTelas();
-            this.alcConfirmacao = new DevExpress.XtraBars.Alerter.AlertControl(this.components);
-            this.svgImageCollection1 = new DevExpress.Utils.SvgImageCollection(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCEP.Properties)).BeginInit();
@@ -158,10 +156,10 @@ namespace App_TelasCompartilhadas.Ator
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.abaPessoaJuridica)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.abaPessoaFisica)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup10)).BeginInit();
@@ -196,7 +194,6 @@ namespace App_TelasCompartilhadas.Ator
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.svgImageCollection1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalvar
@@ -274,9 +271,9 @@ namespace App_TelasCompartilhadas.Ator
             // 
             this.txtCEP.Location = new System.Drawing.Point(36, 136);
             this.txtCEP.Name = "txtCEP";
-            editorButtonImageOptions2.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions2.SvgImage")));
+            editorButtonImageOptions1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions1.SvgImage")));
             this.txtCEP.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.txtCEP.Properties.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("txtCEP.Properties.ContextImageOptions.Image")));
             this.txtCEP.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
             this.txtCEP.Properties.MaskSettings.Set("MaskManagerSignature", "ignoreMaskBlank=True");
@@ -747,7 +744,7 @@ namespace App_TelasCompartilhadas.Ator
             // 
             this.tabbedControlGroup2.Location = new System.Drawing.Point(0, 40);
             this.tabbedControlGroup2.Name = "tabbedControlGroup2";
-            this.tabbedControlGroup2.SelectedTabPage = this.AbaFiscal;
+            this.tabbedControlGroup2.SelectedTabPage = this.layoutControlGroup6;
             this.tabbedControlGroup2.Size = new System.Drawing.Size(1223, 317);
             this.tabbedControlGroup2.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup6,
@@ -769,21 +766,21 @@ namespace App_TelasCompartilhadas.Ator
             // 
             this.tabbedControlGroup4.Location = new System.Drawing.Point(0, 0);
             this.tabbedControlGroup4.Name = "tabbedControlGroup4";
-            this.tabbedControlGroup4.SelectedTabPage = this.layoutControlGroup11;
+            this.tabbedControlGroup4.SelectedTabPage = this.abaPessoaJuridica;
             this.tabbedControlGroup4.Size = new System.Drawing.Size(1199, 270);
             this.tabbedControlGroup4.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlGroup11,
-            this.layoutControlGroup13});
+            this.abaPessoaJuridica,
+            this.abaPessoaFisica});
             // 
-            // layoutControlGroup11
+            // abaPessoaJuridica
             // 
-            this.layoutControlGroup11.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.abaPessoaJuridica.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem7,
             this.layoutControlItem1});
-            this.layoutControlGroup11.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup11.Name = "layoutControlGroup11";
-            this.layoutControlGroup11.Size = new System.Drawing.Size(1175, 223);
-            this.layoutControlGroup11.Text = "Pessoa Jurídica (PJ)";
+            this.abaPessoaJuridica.Location = new System.Drawing.Point(0, 0);
+            this.abaPessoaJuridica.Name = "abaPessoaJuridica";
+            this.abaPessoaJuridica.Size = new System.Drawing.Size(1175, 223);
+            this.abaPessoaJuridica.Text = "Pessoa Jurídica (PJ)";
             // 
             // layoutControlItem7
             // 
@@ -805,15 +802,15 @@ namespace App_TelasCompartilhadas.Ator
             this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem1.TextSize = new System.Drawing.Size(182, 13);
             // 
-            // layoutControlGroup13
+            // abaPessoaFisica
             // 
-            this.layoutControlGroup13.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.abaPessoaFisica.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem8,
             this.layoutControlItem26});
-            this.layoutControlGroup13.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup13.Name = "layoutControlGroup13";
-            this.layoutControlGroup13.Size = new System.Drawing.Size(1175, 223);
-            this.layoutControlGroup13.Text = "Pessoa Física (PF)";
+            this.abaPessoaFisica.Location = new System.Drawing.Point(0, 0);
+            this.abaPessoaFisica.Name = "abaPessoaFisica";
+            this.abaPessoaFisica.Size = new System.Drawing.Size(1175, 223);
+            this.abaPessoaFisica.Text = "Pessoa Física (PF)";
             // 
             // layoutControlItem8
             // 
@@ -1218,18 +1215,6 @@ namespace App_TelasCompartilhadas.Ator
             this.uc_TituloTelas1.Size = new System.Drawing.Size(1259, 32);
             this.uc_TituloTelas1.TabIndex = 49;
             // 
-            // alcConfirmacao
-            // 
-            this.alcConfirmacao.HtmlImages = this.svgImageCollection1;
-            this.alcConfirmacao.HtmlTemplate.Styles = resources.GetString("alcConfirmacao.HtmlTemplate.Styles");
-            this.alcConfirmacao.HtmlTemplate.Template = resources.GetString("alcConfirmacao.HtmlTemplate.Template");
-            this.alcConfirmacao.HtmlElementMouseClick += new DevExpress.XtraBars.Alerter.AlertHtmlElementMouseClickEventHandler(this.alcConfirmacao_HtmlElementMouseClick);
-            // 
-            // svgImageCollection1
-            // 
-            this.svgImageCollection1.Add("State_Validation_Invalid", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollection1.State_Validation_Invalid"))));
-            this.svgImageCollection1.Add("State_Validation_Valid", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollection1.State_Validation_Valid"))));
-            // 
             // uc_CadAtor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1280,10 +1265,10 @@ namespace App_TelasCompartilhadas.Ator
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.abaPessoaJuridica)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.abaPessoaFisica)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup10)).EndInit();
@@ -1318,7 +1303,6 @@ namespace App_TelasCompartilhadas.Ator
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.svgImageCollection1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1378,10 +1362,10 @@ namespace App_TelasCompartilhadas.Ator
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem18;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup6;
         private DevExpress.XtraLayout.TabbedControlGroup tabbedControlGroup4;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup11;
+        private DevExpress.XtraLayout.LayoutControlGroup abaPessoaJuridica;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup13;
+        private DevExpress.XtraLayout.LayoutControlGroup abaPessoaFisica;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem26;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup10;
@@ -1405,7 +1389,5 @@ namespace App_TelasCompartilhadas.Ator
         private uc_TituloTelas uc_TituloTelas1;
         private DevExpress.XtraEditors.TextEdit txtMetaMensal;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
-        private DevExpress.XtraBars.Alerter.AlertControl alcConfirmacao;
-        private DevExpress.Utils.SvgImageCollection svgImageCollection1;
     }
 }

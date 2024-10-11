@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_Categoria));
             this.grdCategorias = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -44,8 +42,6 @@
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.uc_TituloTelas1 = new App_TelasCompartilhadas.uc_TituloTelas();
-            this.alcExclusao = new DevExpress.XtraBars.Alerter.AlertControl(this.components);
-            this.svgImageCollection1 = new DevExpress.Utils.SvgImageCollection(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.grdCategorias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -53,7 +49,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.svgImageCollection1)).BeginInit();
             this.SuspendLayout();
             // 
             // grdCategorias
@@ -208,18 +203,6 @@
             this.uc_TituloTelas1.Size = new System.Drawing.Size(1259, 33);
             this.uc_TituloTelas1.TabIndex = 25;
             // 
-            // alcExclusao
-            // 
-            this.alcExclusao.HtmlImages = this.svgImageCollection1;
-            this.alcExclusao.HtmlTemplate.Styles = resources.GetString("alcExclusao.HtmlTemplate.Styles");
-            this.alcExclusao.HtmlTemplate.Template = resources.GetString("alcExclusao.HtmlTemplate.Template");
-            this.alcExclusao.HtmlElementMouseClick += new DevExpress.XtraBars.Alerter.AlertHtmlElementMouseClickEventHandler(this.alcExclusao_HtmlElementMouseClick);
-            // 
-            // svgImageCollection1
-            // 
-            this.svgImageCollection1.Add("State_Validation_Invalid", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollection1.State_Validation_Invalid"))));
-            this.svgImageCollection1.Add("State_Validation_Warning", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollection1.State_Validation_Warning"))));
-            // 
             // uc_Categoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -240,7 +223,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.svgImageCollection1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -261,7 +243,5 @@
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private App_TelasCompartilhadas.uc_TituloTelas uc_TituloTelas1;
-        private DevExpress.XtraBars.Alerter.AlertControl alcExclusao;
-        private DevExpress.Utils.SvgImageCollection svgImageCollection1;
     }
 }

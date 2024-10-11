@@ -3,18 +3,11 @@ using DevExpress.Xpo;
 using App_TelasCompartilhadas.bancoSQLite;
 using App_TelasCompartilhadas.Classes;
 using System;
-using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using App_TelasCompartilhadas.Login;
+using App_TelasCompartilhadas.Mensagens_Canto_Inferior_Direito;
 using DevExpress.XtraGrid.Views.Grid;
-using DevExpress.XtraBars.Alerter;
-using DevExpress.XtraGrid.Columns;
-using DevExpress.XtraGrid;
-using DevExpress.XtraEditors.Repository;
-
-using DevExpress.XtraEditors.Repository;
-using DevExpress.XtraGrid.Columns;
 
 namespace App_TelasCompartilhadas.Produtos
 {
@@ -30,7 +23,7 @@ namespace App_TelasCompartilhadas.Produtos
         {
             InitializeComponent();
 
-            Layout();
+            LayoutBotoes();
 
             formaOrdenarGrid = _formaOrdenarGrid;
             painelTelaInicial = _painelTelaInicial;
@@ -59,7 +52,7 @@ namespace App_TelasCompartilhadas.Produtos
             }
         }
 
-        private void Layout()
+        private void LayoutBotoes()
         {
             ConfigBotoes configBotoes = new ConfigBotoes();
 
@@ -333,20 +326,6 @@ namespace App_TelasCompartilhadas.Produtos
             }
         }
 
-        private void AlertaExclusaoCantoInferiorDireito()
-        {
-            // Obtém o FluentDesignForm ao qual o FluentDesignFormContainer pertence
-            Form parentForm = painelTelaInicial.FindForm();
-
-            // Verifica se o parentForm não é nulo
-            if (parentForm != null)
-            {
-                // Cria a mensagem e exibe o AlertControl
-                AlertInfo info = new AlertInfo("", "");
-                alcExclusao.Show(parentForm, info);
-            }
-        }
-
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             //Gerente 102
@@ -384,7 +363,7 @@ namespace App_TelasCompartilhadas.Produtos
 
                     CarregarGridProdutosAtivos();
 
-                    AlertaExclusaoCantoInferiorDireito();
+                    uc_MensagemExclusao mensagemExclusaoCantoInferiorDireito = new uc_MensagemExclusao(painelTelaInicial);
                 }
             }
         }
@@ -408,24 +387,15 @@ namespace App_TelasCompartilhadas.Produtos
             TelaEstoqueProduto(formaOrdenarGrid);
         }
 
-        private void alcExclusao_HtmlElementMouseClick(object sender, AlertHtmlElementMouseEventArgs e)
-        {
-            // Verifica qual elemento foi clicado pelo 'id'
-            if (e.ElementId == "dialogresult-ok")
-            {
-                alcExclusao.Dispose();
-            }
-            else if (e.ElementId == "close")
-            {
-                alcExclusao.Dispose();
-            }
-        }
-
         private void gridView1_DoubleClick(object sender, EventArgs e)
         {
             PegaIdProdutoSelecionadoGrid();
 
             TelaEstoqueProduto(formaOrdenarGrid);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
         }
     }
 }

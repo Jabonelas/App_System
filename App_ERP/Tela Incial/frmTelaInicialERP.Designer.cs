@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTelaInicialERP));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barStatusPDV = new DevExpress.XtraBars.BarButtonItem();
@@ -71,10 +70,7 @@
             this.pnlTelaPrincipal = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
-            this.alcEstoqueBaixo = new DevExpress.XtraBars.Alerter.AlertControl(this.components);
-            this.svgImageCollection1 = new DevExpress.Utils.SvgImageCollection(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.svgImageCollection1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon
@@ -438,17 +434,6 @@
             this.barButtonItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
             this.barButtonItem2.Name = "barButtonItem2";
             // 
-            // alcEstoqueBaixo
-            // 
-            this.alcEstoqueBaixo.HtmlImages = this.svgImageCollection1;
-            this.alcEstoqueBaixo.HtmlTemplate.Styles = resources.GetString("alcEstoqueBaixo.HtmlTemplate.Styles");
-            this.alcEstoqueBaixo.HtmlTemplate.Template = resources.GetString("alcEstoqueBaixo.HtmlTemplate.Template");
-            this.alcEstoqueBaixo.HtmlElementMouseClick += new DevExpress.XtraBars.Alerter.AlertHtmlElementMouseClickEventHandler(this.alcEstoqueBaixo_HtmlElementMouseClick);
-            // 
-            // svgImageCollection1
-            // 
-            this.svgImageCollection1.Add("State_Validation_Invalid", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollection1.State_Validation_Invalid"))));
-            // 
             // frmTelaInicialERP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -464,7 +449,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar;
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.svgImageCollection1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -513,7 +497,5 @@
         private DevExpress.XtraBars.BarButtonItem btnRelatorioFluxoSaida;
         private DevExpress.XtraBars.BarButtonItem btnRelatorioVendaVendedor;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
-        private DevExpress.XtraBars.Alerter.AlertControl alcEstoqueBaixo;
-        private DevExpress.Utils.SvgImageCollection svgImageCollection1;
     }
 }

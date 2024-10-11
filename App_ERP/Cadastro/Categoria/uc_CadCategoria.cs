@@ -5,7 +5,7 @@ using System.Windows.Forms;
 using DevExpress.Xpo;
 using App_TelasCompartilhadas.bancoSQLite;
 using App_TelasCompartilhadas.Classes;
-using DevExpress.XtraBars.Alerter;
+using App_TelasCompartilhadas;
 
 namespace App_ERP
 {
@@ -24,7 +24,7 @@ namespace App_ERP
         {
             InitializeComponent();
 
-            Layout();
+            LayoutBotoes();
 
             PreencherSecoes();
 
@@ -40,7 +40,7 @@ namespace App_ERP
             }
         }
 
-        private void Layout()
+        private void LayoutBotoes()
         {
             ConfigBotoes configBotoes = new ConfigBotoes();
 
@@ -275,7 +275,7 @@ namespace App_ERP
                     CadastrarCategoria();
                 }
 
-                AlertaConfirmacaoCantoInferiorDireito();
+                uc_MensagemConfirmacao mensagemConfirmacaoCantoInferiorDireito = new uc_MensagemConfirmacao(_frmTelaInicial.pnlTelaPrincipal);
             }
             else
             {
@@ -290,38 +290,11 @@ namespace App_ERP
 
                     AlterarCategoria();
 
-                    AlertaConfirmacaoCantoInferiorDireito();
+                    uc_MensagemConfirmacao mensagemConfirmacaoCantoInferiorDireito = new uc_MensagemConfirmacao(_frmTelaInicial.pnlTelaPrincipal);
                 }
             }
 
             _frmTelaInicial.TelaCategoria();
-        }
-
-        private void AlertaConfirmacaoCantoInferiorDireito()
-        {
-            // Obtém o FluentDesignForm ao qual o FluentDesignFormContainer pertence
-            Form parentForm = _frmTelaInicial.FindForm();
-
-            // Verifica se o parentForm não é nulo
-            if (parentForm != null)
-            {
-                // Cria a mensagem e exibe o AlertControl
-                AlertInfo info = new AlertInfo("", "");
-                alcConfirmacao.Show(parentForm, info);
-            }
-        }
-
-        private void alcConfirmacao_HtmlElementMouseClick(object sender, AlertHtmlElementMouseEventArgs e)
-        {
-            // Verifica qual elemento foi clicado pelo 'id'
-            if (e.ElementId == "dialogresult-ok")
-            {
-                alcConfirmacao.Dispose();
-            }
-            else if (e.ElementId == "close")
-            {
-                alcConfirmacao.Dispose();
-            }
         }
     }
 }

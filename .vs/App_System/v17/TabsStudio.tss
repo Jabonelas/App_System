@@ -2,50 +2,24 @@
 <ArrayOfArrayOfArrayOfString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ArrayOfArrayOfString>
     <ArrayOfString>
-      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Cadastro\Produtos\uc_EstoqueProduto.cs</string>
-      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Cadastro\Produtos\uc_EstoqueProduto.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Atendimento\Venda\frmPagamentoPDV.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Atendimento\Venda\frmPagamentoPDV.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Cadastro\Ator\uc_CadAtor.cs</string>
-      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Cadastro\Ator\uc_CadAtor.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Atendimento\Venda\rp_ImpressaoCupomNaoFiscal.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Atendimento\Venda\rp_ImpressaoCupomNaoFiscal.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Login\frmAutenticacaoUsuario.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Classes\VariaveisGlobais.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Cadastro\Ator\uc_Ator.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\Users\israe\source\repos\App_System\App_PDV\Tela Inicial\frmTelaInicialPDV.cs</string>
-      <string>C:\Users\israe\source\repos\App_System\App_PDV\Tela Inicial\frmTelaInicialPDV.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Cadastro\Produtos\uc_Produto.cs</string>
-      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Cadastro\Produtos\uc_Produto.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Relatorios\rp_ImpressaoRelatorioFluxoSaida.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Relatorios\rp_ImpressaoRelatorioFluxoSaida.cs</string>
     </ArrayOfString>
     <ArrayOfString>
       <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Atendimento\Venda\uc_PDV.cs</string>
       <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Atendimento\Venda\uc_PDV.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Atendimento\Venda\frmPagamentoPDV.cs</string>
-      <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Atendimento\Venda\frmPagamentoPDV.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Classes\Configuracoes - Validacoes\ConfigBotoes.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\frmImagensGeralSistema.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Cadastro\Produtos\uc_CadProduto.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Relatorios\uc_RelatorioFluxoSaida.cs</string>
-      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Relatorios\uc_RelatorioFluxoSaida.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Cadastro\Ator\uc_CadAtor.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Cadastro\Ator\uc_CadAtor.cs</string>
     </ArrayOfString>
   </ArrayOfArrayOfString>
 </ArrayOfArrayOfArrayOfString>

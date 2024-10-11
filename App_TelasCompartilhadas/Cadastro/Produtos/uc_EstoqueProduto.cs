@@ -1,19 +1,12 @@
-﻿using DevExpress.Data.Linq;
-using DevExpress.Xpo;
+﻿using DevExpress.Xpo;
 using App_TelasCompartilhadas.bancoSQLite;
 using App_TelasCompartilhadas.Classes;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using DevExpress.XtraGrid.Views.Grid;
 using System.Windows.Forms;
-using DevExpress.XtraGrid;
-using DevExpress.Data.PLinq;
-using DevExpress.DataAccess.Native.DataFederation.QueryBuilder;
 using System.ComponentModel;
 using App_TelasCompartilhadas.Login;
-using static App_TelasCompartilhadas.Produtos.uc_EstoqueProduto;
-using DevExpress.XtraBars.Alerter;
 
 namespace App_TelasCompartilhadas.Produtos
 {
@@ -43,7 +36,7 @@ namespace App_TelasCompartilhadas.Produtos
 
             HabilitarEventoAlteracaoDentroGrid();
 
-            Layout();
+            LayoutBotoes();
 
             CarregarGridProdutoEstoqueFiliais();
         }
@@ -169,12 +162,13 @@ namespace App_TelasCompartilhadas.Produtos
             AtualizarProdutoFilial(idProdutoFilial, novoValorQuantidade);
 
             // Mostrar alerta de confirmação
-            AlertaConfirmacaoCantoInferiorDireito();
 
             VariaveisGlobais.isUsuarioComPermissao = false;
+
+            uc_MensagemConfirmacao mensagemConfirmacaoCantoInferiorDireito = new uc_MensagemConfirmacao(painelTelaInicial);
         }
 
-        private void AtualizarProdutoFilial(long idProdutoFilial,  object novoValor)
+        private void AtualizarProdutoFilial(long idProdutoFilial, object novoValor)
         {
             try
             {
@@ -249,7 +243,7 @@ namespace App_TelasCompartilhadas.Produtos
             }
         }
 
-        private void Layout()
+        private void LayoutBotoes()
         {
             ConfigBotoes configBotoes = new ConfigBotoes();
 
@@ -271,33 +265,6 @@ namespace App_TelasCompartilhadas.Produtos
             painelTelaInicial.Tag = ucProduto;
 
             ucProduto.Show();
-        }
-
-        private void AlertaConfirmacaoCantoInferiorDireito()
-        {
-            // Obtém o FluentDesignForm ao qual o FluentDesignFormContainer pertence
-            Form parentForm = painelTelaInicial.FindForm();
-
-            // Verifica se o parentForm não é nulo
-            if (parentForm != null)
-            {
-                // Cria a mensagem e exibe o AlertControl
-                AlertInfo info = new AlertInfo("", "");
-                alcConfirmacao.Show(parentForm, info);
-            }
-        }
-
-        private void alcConfirmacao_HtmlElementMouseClick(object sender, DevExpress.XtraBars.Alerter.AlertHtmlElementMouseEventArgs e)
-        {
-            // Verifica qual elemento foi clicado pelo 'id'
-            if (e.ElementId == "dialogresult-ok")
-            {
-                alcConfirmacao.Dispose();
-            }
-            else if (e.ElementId == "close")
-            {
-                alcConfirmacao.Dispose();
-            }
         }
     }
 }

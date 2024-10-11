@@ -3,11 +3,6 @@ using DevExpress.Xpo;
 using App_TelasCompartilhadas.bancoSQLite;
 using System.Linq;
 using App_TelasCompartilhadas.Classes;
-using DevExpress.XtraGrid.Views.Grid;
-using DevExpress.Data.Linq;
-using DevExpress.Utils.StructuredStorage.Internal;
-using Unimake.Business.DFe.Xml.SNCM;
-using Unimake.Business.DFe.Xml.GNRE;
 
 namespace App_PDV.FechamentoCaixa
 {
@@ -49,18 +44,14 @@ namespace App_PDV.FechamentoCaixa
 
                     var queryMovimentacoesAtivas =
                         from movimentacao in session.Query<tb_movimentacao>()
-                        join movimentacaoPagamento in session.Query<tb_movimentacao_pagamento>()
-                            on movimentacao.id_movimentacao equals movimentacaoPagamento.fk_tb_movimentacao.id_movimentacao
-                        join subFormaPagamento in session.Query<tb_sub_forma_pagamento>()
-                            on movimentacaoPagamento.fk_tb_sub_forma_pagamento.id_sub_forma_pagamento equals subFormaPagamento.id_sub_forma_pagamento
-                        where movimentacao.fk_tb_jornada == _jornada && movimentacao.mv_movTipo == 150
-                        group movimentacaoPagamento by movimentacao.fk_tb_jornada into grupoAtendente
+                        where movimentacao.fk_tb_jornada.id_jornada == 271 && movimentacao.mv_movTipo == 150
+                        group movimentacao by movimentacao.fk_tb_jornada into grupoAtendente
                         select new
                         {
-                            quantidadeItens = grupoAtendente.Sum(m => m.fk_tb_movimentacao.mv_qtdItens),
-                            valorTotalMovimentacao = grupoAtendente.Sum(m => m.fk_tb_movimentacao.mv_nfeVlrTotProd),      // Soma dos valores de movimentação
-                            valorTotalReal = grupoAtendente.Sum(m => m.fk_tb_movimentacao.mv_nfeVlrTotNF), // Soma dos valores reais de nota fiscal
-                            valorTotalDesconto = grupoAtendente.Sum(m => m.fk_tb_movimentacao.mv_nfeVlrTotDesc) // Somando os descontos, se houver
+                            quantidadeItens = grupoAtendente.Sum(m => m.mv_qtdItens),
+                            valorTotalMovimentacao = grupoAtendente.Sum(m => m.mv_nfeVlrTotProd),  // Soma dos valores de movimentação
+                            valorTotalReal = grupoAtendente.Sum(m => m.mv_nfeVlrTotNF),            // Soma dos valores reais de nota fiscal
+                            valorTotalDesconto = grupoAtendente.Sum(m => m.mv_nfeVlrTotDesc)       // Somando os descontos, se houver
                         };
 
                     // Obtemos o primeiro resultado ou null

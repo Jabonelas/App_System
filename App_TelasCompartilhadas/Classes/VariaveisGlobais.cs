@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using App_TelasCompartilhadas.bancoSQLite;
+﻿using App_TelasCompartilhadas.bancoSQLite;
 
 namespace App_TelasCompartilhadas.Classes
 {

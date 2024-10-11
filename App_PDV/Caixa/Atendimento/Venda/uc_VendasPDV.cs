@@ -16,7 +16,7 @@ namespace App_PDV
         {
             InitializeComponent();
 
-            Layout();
+            LayoutBotoes();
 
             _frmTelaInicial = _form;
 
@@ -30,7 +30,7 @@ namespace App_PDV
             }
         }
 
-        private void Layout()
+        private void LayoutBotoes()
         {
             ConfigBotoes configBotoes = new ConfigBotoes();
 

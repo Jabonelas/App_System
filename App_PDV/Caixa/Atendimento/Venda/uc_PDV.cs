@@ -6,7 +6,6 @@ using DevExpress.Xpo;
 using App_TelasCompartilhadas.bancoSQLite;
 using App_TelasCompartilhadas.Classes;
 using DevExpress.XtraGrid.Views.Grid;
-using static App_PDV.uc_PDV;
 
 namespace App_PDV
 {
@@ -26,7 +25,7 @@ namespace App_PDV
 
             HabilitarEventoAlteracaoDentroGrid();
 
-            Layout();
+            LayoutBotoes();
 
             _frmTelaInicial = _form;
 
@@ -35,7 +34,7 @@ namespace App_PDV
             listaProdutoSelecionado.Clear();
         }
 
-        private void Layout()
+        private void LayoutBotoes()
         {
             ConfigBotoes configBotoes = new ConfigBotoes();
 
@@ -300,6 +299,11 @@ namespace App_PDV
 
         private void AdicionarProdutoVenda()
         {
+            if (cmbProdutos.Text == "Selecione o Produto")
+            {
+                return;
+            }
+
             if (IsExisteRepeticaoItemNaVenda())
             {
                 MensagensDoSistema.MensagemAtencaoOk("Este produto já foi adicionado à venda. Altere a quantidade ou escolha outro item.");

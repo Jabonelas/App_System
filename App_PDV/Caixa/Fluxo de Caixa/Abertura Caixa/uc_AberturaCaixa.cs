@@ -3,15 +3,9 @@ using System.Linq;
 using DevExpress.Xpo;
 using App_TelasCompartilhadas.bancoSQLite;
 using App_TelasCompartilhadas.Classes;
-using static App_TelasCompartilhadas.Classes.DadosGeralNfe;
 using System.Globalization;
-
-using App_TelasCompartilhadas.bancoSQLite;
-
-using App_PDV.FechamentoCaixa;
 using DevExpress.XtraReports.UI;
-using DevExpress.XtraBars.Alerter;
-using System.Windows.Forms;
+using App_TelasCompartilhadas;
 
 namespace App_PDV.AberturaCaixa
 {
@@ -29,7 +23,7 @@ namespace App_PDV.AberturaCaixa
         {
             InitializeComponent();
 
-            Layout();
+            LayoutBotoes();
 
             _frmTelaInicial = _form;
 
@@ -41,7 +35,7 @@ namespace App_PDV.AberturaCaixa
             }
         }
 
-        private void Layout()
+        private void LayoutBotoes()
         {
             ConfigBotoes configBotoes = new ConfigBotoes();
 
@@ -162,7 +156,7 @@ namespace App_PDV.AberturaCaixa
 
                 AberturaCaixa();
 
-                AlertaConfirmacaoCantoInferiorDireito();
+                uc_MensagemConfirmacao mensagemConfirmacaoCantoInferiorDireito = new uc_MensagemConfirmacao(_frmTelaInicial.pnlTelaPrincipal);
 
                 ImprimiRelatorioAberturaCaixa();
             }
@@ -178,20 +172,6 @@ namespace App_PDV.AberturaCaixa
                 //}
 
                 MensagensDoSistema.MensagemAtencaoOk("A abertura do caixa já foi realizada!");
-            }
-        }
-
-        private void AlertaConfirmacaoCantoInferiorDireito()
-        {
-            // Obtém o FluentDesignForm ao qual o FluentDesignFormContainer pertence
-            Form parentForm = _frmTelaInicial.FindForm();
-
-            // Verifica se o parentForm não é nulo
-            if (parentForm != null)
-            {
-                // Cria a mensagem e exibe o AlertControl
-                AlertInfo info = new AlertInfo("", "");
-                alcConfirmacao.Show(parentForm, info);
             }
         }
 
@@ -227,19 +207,6 @@ namespace App_PDV.AberturaCaixa
             catch (Exception ex)
             {
                 MensagensDoSistema.MensagemErroOk($"Erro ao fechar jornada na abertura de caixa: {ex.Message}");
-            }
-        }
-
-        private void alcConfirmacao_HtmlElementMouseClick(object sender, AlertHtmlElementMouseEventArgs e)
-        {
-            // Verifica qual elemento foi clicado pelo 'id'
-            if (e.ElementId == "dialogresult-ok")
-            {
-                alcConfirmacao.Dispose();
-            }
-            else if (e.ElementId == "close")
-            {
-                alcConfirmacao.Dispose();
             }
         }
     }

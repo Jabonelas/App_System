@@ -18,8 +18,9 @@ using DANFe = Unimake.Unidanfe;
 using XmlNFe = Unimake.Business.DFe.Xml.NFe;
 
 using System.IO;
-using DevExpress.XtraBars.Alerter;
+using App_PDV.Caixa.Atendimento.Venda;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraReports.UI;
 
 namespace App_PDV
 {
@@ -33,11 +34,14 @@ namespace App_PDV
         private int serie = 0;
 
         private tb_movimentacao movimentacao = null;
-        private tb_ator dadosEmitente = null;
+        private tb_movimentacao caixaAberto = null;
         private tb_ator dadosDestinatario = null;
+        private tb_ator dadosEmitente = null;
+        private tb_jornada jornada = null;
         private tb_pdv dadosPDV = null;
 
         public List<PamentosRealizados> listaPagamentosRealizados = new List<PamentosRealizados>();
+
         private List<long> idMovimentacaoProdutos = new List<long>();
 
         private List<long> idMovimentoPagamento = new List<long>();
@@ -48,7 +52,7 @@ namespace App_PDV
         {
             InitializeComponent();
 
-            Layout();
+            LayoutBotoes();
 
             PreencherCampos();
 
@@ -76,7 +80,7 @@ namespace App_PDV
             }
         }
 
-        private void Layout()
+        private void LayoutBotoes()
         {
             ConfigBotoes configBotoes = new ConfigBotoes();
 
@@ -511,6 +515,7 @@ namespace App_PDV
                         movimentacaoProduto.mp_tipoDesc = '$';
                         //movimentacaoProduto.mp_nfePisCofinsCst = (int)SEnNfePisCofinsCst.OpSemIncidencia08;
                         movimentacaoProduto.mp_unMedCom = produto.pd_unMedCom;
+                        movimentacaoProduto.mp_codRef = produto.pd_codRef;
                         movimentacaoProduto.fk_tb_atorAtend = usuarioLogado;
                         movimentacaoProduto.fk_tb_produto = produto;
                         movimentacaoProduto.fk_tb_movimentacao = _movimentacao;
@@ -1383,8 +1388,6 @@ namespace App_PDV
 
         #endregion CamposXML
 
-        private tb_movimentacao caixaAberto;
-
         private void CaixaAberto()
         {
             try
@@ -1403,8 +1406,6 @@ namespace App_PDV
             }
         }
 
-        private tb_jornada jornada;
-
         private void BuscarJornada()
         {
             try
@@ -1418,6 +1419,15 @@ namespace App_PDV
             {
                 MensagensDoSistema.MensagemErroOk($"Erro ao buscar jornada na venda: {ex.Message}");
             }
+        }
+
+        private void GerarCupomNaoFiscal()
+        {
+            string nomeVendedor = cmbVendedor.Text;
+            string nomeCliente = txtNomeCliente.Text;
+
+            rp_ImpressaoCupomNaoFiscal impressaoCupomNaoFiscal = new rp_ImpressaoCupomNaoFiscal(nomeCliente, nomeVendedor, movimentacao.id_movimentacao);
+            impressaoCupomNaoFiscal.ShowPreview();
         }
 
         private void btnFinalizarVenda_Click(object sender, EventArgs e)
@@ -1452,14 +1462,21 @@ namespace App_PDV
 
             TelaCarregamento.ExibirCarregamentoForm(this);
 
-            if (IsSefazEstavel())
+            if (VariaveisGlobais.FilialLogada.at_nfeTipoAmb == 0)
             {
-                GerarNFCe();
+                GerarCupomNaoFiscal();
             }
             else
             {
-                MensagensDoSistema.MensagemAtencaoOk(
-                    "Estamos enfrentando uma instabilidade momentânea na conexão com a SEFAZ.");
+                if (IsSefazEstavel())
+                {
+                    GerarNFCe();
+                }
+                else
+                {
+                    MensagensDoSistema.MensagemAtencaoOk(
+                        "Estamos enfrentando uma instabilidade momentânea na conexão com a SEFAZ.");
+                }
             }
 
             TelaCarregamento.EsconderCarregamento();

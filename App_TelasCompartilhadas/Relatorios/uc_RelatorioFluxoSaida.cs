@@ -23,7 +23,7 @@ namespace App_TelasCompartilhadas.Relatorios
 
             painelTelaInicial = _painelTelaInicial;
 
-            Layout();
+            LayoutBotoes();
 
             PreencherFilial();
 
@@ -75,7 +75,7 @@ namespace App_TelasCompartilhadas.Relatorios
             }
         }
 
-        private void Layout()
+        private void LayoutBotoes()
         {
             ConfigBotoes configBotoes = new ConfigBotoes();
 
@@ -127,7 +127,7 @@ namespace App_TelasCompartilhadas.Relatorios
             LinqInstantFeedbackSource linqInstantFeedbackSource = new LinqInstantFeedbackSource();
 
             linqInstantFeedbackSource.KeyExpression = "CodProduto"; //Coluna Primary Key
-            linqInstantFeedbackSource.DefaultSorting = "CodProduto ASC"; //Coluna de ordenação padrão na ordem escolhida
+            linqInstantFeedbackSource.DefaultSorting = "SomaQuantidadeItens DESC"; //Coluna de ordenação padrão na ordem escolhida
 
             linqInstantFeedbackSource.GetQueryable +=
                 linqBuscarDadosMovimentacaoCadastradosAtivos; //Buscar os dados que vao preencher o grid.

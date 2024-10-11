@@ -15,12 +15,12 @@ namespace App_ERP
         {
             InitializeComponent();
 
-            Layout();
+            LayoutBotoes();
 
             CarregandoDadosGrafico();
         }
 
-        private void Layout()
+        private void LayoutBotoes()
         {
             lblBemVindoUsuario.Font = new Font("Exo 2", 20);
             lblBemVindoUsuario.Text = $"Bem-vindo(a), {VariaveisGlobais.UsuarioLogado.at_nomeUsuario}!";

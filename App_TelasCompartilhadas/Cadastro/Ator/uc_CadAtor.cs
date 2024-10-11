@@ -7,7 +7,6 @@ using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using DevExpress.XtraBars.Alerter;
 
 namespace App_TelasCompartilhadas.Ator
 {
@@ -19,11 +18,23 @@ namespace App_TelasCompartilhadas.Ator
 
         private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer painelTelaInicial;
 
+        //Tipos Ator
+
+        //(1, 'Consumidor'),
+        //(10, 'Empresa'),
+        //(11, 'Filial'),
+        //(20, 'Fornecedor'),
+        //(30, 'Transporte'),
+        //(40, 'Intermediador'),
+        //(100, 'Funcionário'),
+        //(101, 'Vendedor'),
+        //(102, 'Gerente');
+
         public uc_CadAtor(DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer _painelTelaInicial, string _operacao, long _idAtor, int _tipoAtor)
         {
             InitializeComponent();
 
-            Layout();
+            LayoutBotoes();
 
             painelTelaInicial = _painelTelaInicial;
 
@@ -52,14 +63,34 @@ namespace App_TelasCompartilhadas.Ator
                 PreencherCampoAtorSelecionado();
             }
 
+            LayoutAbas();
+        }
+
+        private void LayoutAbas()
+        {
+            //(11 - 'Filial')
             if (tipoAtor == 11)
             {
                 AbaFiscal.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
                 AbaRFB.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
+
+                abaPessoaFisica.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            }
+
+            //(10 - 'Empresa'), (20 - 'Fornecedor'), (30 - 'Transporte')
+            if (tipoAtor == 10 || tipoAtor == 20 || tipoAtor == 30)
+            {
+                abaPessoaFisica.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            }
+
+            //(1, 'Consumidor')
+            if (tipoAtor == 1)
+            {
+                abaPessoaJuridica.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             }
         }
 
-        private void Layout()
+        private void LayoutBotoes()
         {
             ConfigBotoes configBotoes = new ConfigBotoes();
 
@@ -846,7 +877,7 @@ namespace App_TelasCompartilhadas.Ator
                     CadastroProdutoFilial(idAtorCadastrado);
                 }
 
-                AlertaConfirmacaoCantoInferiorDireito();
+                uc_MensagemConfirmacao mensagemConfirmacaoCantoInferiorDireito = new uc_MensagemConfirmacao(painelTelaInicial);
             }
             else
             {
@@ -856,25 +887,11 @@ namespace App_TelasCompartilhadas.Ator
                 {
                     AlterarDadosAtor();
 
-                    AlertaConfirmacaoCantoInferiorDireito();
+                    uc_MensagemConfirmacao mensagemConfirmacaoCantoInferiorDireito = new uc_MensagemConfirmacao(painelTelaInicial);
                 }
             }
 
             ExibirTelaAnterior();
-        }
-
-        private void AlertaConfirmacaoCantoInferiorDireito()
-        {
-            // Obtém o FluentDesignForm ao qual o FluentDesignFormContainer pertence
-            Form parentForm = painelTelaInicial.FindForm();
-
-            // Verifica se o parentForm não é nulo
-            if (parentForm != null)
-            {
-                // Cria a mensagem e exibe o AlertControl
-                AlertInfo info = new AlertInfo("", "");
-                alcConfirmacao.Show(parentForm, info);
-            }
         }
 
         private void CadastroProdutoFilial(long _idAtorFilialCadastrada)
@@ -946,19 +963,6 @@ namespace App_TelasCompartilhadas.Ator
             if (e.KeyChar == (char)Keys.Enter)
             {
                 PreencherCEP();
-            }
-        }
-
-        private void alcConfirmacao_HtmlElementMouseClick(object sender, DevExpress.XtraBars.Alerter.AlertHtmlElementMouseEventArgs e)
-        {
-            // Verifica qual elemento foi clicado pelo 'id'
-            if (e.ElementId == "dialogresult-ok")
-            {
-                alcConfirmacao.Dispose();
-            }
-            else if (e.ElementId == "close")
-            {
-                alcConfirmacao.Dispose();
             }
         }
     }

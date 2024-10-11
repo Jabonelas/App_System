@@ -9,7 +9,6 @@ using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using DevExpress.XtraBars.Alerter;
 
 namespace App_TelasCompartilhadas.Produtos
 {
@@ -47,7 +46,7 @@ namespace App_TelasCompartilhadas.Produtos
 
             PreencherMarca();
 
-            Layout();
+            LayoutBotoes();
 
             if (operacao == "cadastrar")
             {
@@ -67,7 +66,7 @@ namespace App_TelasCompartilhadas.Produtos
             cmbModalidade_ICMSEProprio.Properties.AddEnum<DadosGeralNfe.SEnNfeModBc>();
         }
 
-        private void Layout()
+        private void LayoutBotoes()
         {
             ConfigBotoes configBotoes = new ConfigBotoes();
 
@@ -593,7 +592,7 @@ namespace App_TelasCompartilhadas.Produtos
 
                 CadastroProdutoFilial(idProduto);
 
-                AlertaConfirmacaoCantoInferiorDireito();
+                uc_MensagemConfirmacao mensagemConfirmacaoCantoInferiorDireito = new uc_MensagemConfirmacao(painelTelaInicial);
             }
             else
             {
@@ -610,7 +609,7 @@ namespace App_TelasCompartilhadas.Produtos
 
                     AlterarDadosProdutoFilial();
 
-                    AlertaConfirmacaoCantoInferiorDireito();
+                    uc_MensagemConfirmacao mensagemConfirmacaoCantoInferiorDireito = new uc_MensagemConfirmacao(painelTelaInicial);
                 }
             }
 
@@ -620,20 +619,6 @@ namespace App_TelasCompartilhadas.Produtos
             painelTelaInicial.Tag = ucProduto;
 
             ucProduto.Show();
-        }
-
-        private void AlertaConfirmacaoCantoInferiorDireito()
-        {
-            // Obtém o FluentDesignForm ao qual o FluentDesignFormContainer pertence
-            Form parentForm = painelTelaInicial.FindForm();
-
-            // Verifica se o parentForm não é nulo
-            if (parentForm != null)
-            {
-                // Cria a mensagem e exibe o AlertControl
-                AlertInfo info = new AlertInfo("", "");
-                alcConfirmacao.Show(parentForm, info);
-            }
         }
 
         private void ValidarDigitos(object sender, KeyPressEventArgs e)
@@ -763,19 +748,6 @@ namespace App_TelasCompartilhadas.Produtos
             else
             {
                 //txtPrecoUn.Text = vlrProdInicial.ToString();
-            }
-        }
-
-        private void alcConfimacao_HtmlElementMouseClick(object sender, AlertHtmlElementMouseEventArgs e)
-        {
-            // Verifica qual elemento foi clicado pelo 'id'
-            if (e.ElementId == "dialogresult-ok")
-            {
-                alcConfirmacao.Dispose();
-            }
-            else if (e.ElementId == "close")
-            {
-                alcConfirmacao.Dispose();
             }
         }
     }

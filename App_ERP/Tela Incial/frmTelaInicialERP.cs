@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
 using DevExpress.XtraBars;
 using App_ERP.Cadastro.Marca;
 using App_ERP.Cadastro.Matriz;
@@ -14,14 +12,10 @@ using App_TelasCompartilhadas;
 using App_TelasCompartilhadas.Produtos;
 using App_TelasCompartilhadas.Relatorios;
 using App_ERP.Relatorios;
-using DevExpress.XtraBars.Alerter;
-using DevExpress.Utils;
-using DevExpress.Utils.Svg;
-using System.IO;
 using App_TelasCompartilhadas.bancoSQLite;
 using DevExpress.Xpo;
-using Microsoft.EntityFrameworkCore.Internal;
 using System.Linq;
+using App_TelasCompartilhadas.Mensagens_Canto_Inferior_Direito;
 
 namespace App_ERP
 {
@@ -50,8 +44,8 @@ namespace App_ERP
         {
             if (VerificarEstoqueBaixo())
             {
-                AlertInfo info = new AlertInfo("", "");
-                alcEstoqueBaixo.Show(this, info);
+                uc_MensagemEstoqueBaixo ucMensagemEstoqueBaixo = new uc_MensagemEstoqueBaixo(pnlTelaPrincipal);
+                ucMensagemEstoqueBaixo.Show();
             }
         }
 
@@ -334,22 +328,6 @@ namespace App_ERP
         private void btnRelatorioVendaVendedor_ItemClick(object sender, ItemClickEventArgs e)
         {
             TelaRelatorioVendaVendedor();
-        }
-
-        private void alcEstoqueBaixo_HtmlElementMouseClick(object sender, AlertHtmlElementMouseEventArgs e)
-        {
-            if (e.ElementId == "dialogresult-verificar")
-            {
-                TelaProduto("Estoque");
-            }
-            else if (e.ElementId == "dialogresult-cancelar")
-            {
-                alcEstoqueBaixo.Dispose();
-            }
-            else if (e.ElementId == "close")
-            {
-                alcEstoqueBaixo.Dispose();
-            }
         }
     }
 }

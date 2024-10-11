@@ -508,3 +508,4 @@ C:\Users\israe\source\repos\App_System\App_PDV\obj\Debug\App_PDV.csproj.CopyComp
 C:\Users\israe\source\repos\App_System\App_PDV\obj\Debug\App_PDV.exe
 C:\Users\israe\source\repos\App_System\App_PDV\obj\Debug\App_PDV.pdb
 C:\Users\israe\source\repos\App_System\App_PDV\obj\Debug\App_PDV.AberturaCaixa.rp_ImpressaoAberturaCaixa.resources
+C:\Users\israe\source\repos\App_System\App_PDV\obj\Debug\App_PDV.Caixa.Atendimento.Venda.rp_ImpressaoCupomNaoFiscal.resources

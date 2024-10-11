@@ -1,19 +1,10 @@
 ﻿using DevExpress.Data.Linq;
 using DevExpress.Xpo;
-using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
 using App_TelasCompartilhadas.bancoSQLite;
 using App_TelasCompartilhadas.Classes;
-using App_PDV.Fluxo_de_Caixa.Entrada_Caixa;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace App_PDV.Fluxo_de_Caixa.Saida_Caixa
 {
@@ -27,7 +18,7 @@ namespace App_PDV.Fluxo_de_Caixa.Saida_Caixa
         {
             InitializeComponent();
 
-            Layout();
+            LayoutBotoes();
 
             _frmTelaInicial = _form;
 
@@ -38,7 +29,7 @@ namespace App_PDV.Fluxo_de_Caixa.Saida_Caixa
             RodaPeGridValorTotal();
         }
 
-        private void Layout()
+        private void LayoutBotoes()
         {
             ConfigBotoes configBotoes = new ConfigBotoes();
 

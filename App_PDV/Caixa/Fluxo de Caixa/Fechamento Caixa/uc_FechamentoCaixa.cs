@@ -9,8 +9,7 @@ using static App_TelasCompartilhadas.Classes.DadosGeralNfe;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraReports.UI;
 using DevExpress.XtraEditors;
-using Unimake.Business.DFe.Xml.SNCM;
-using DevExpress.XtraBars.Alerter;
+using App_TelasCompartilhadas;
 
 namespace App_PDV.FechamentoCaixa
 {
@@ -24,7 +23,7 @@ namespace App_PDV.FechamentoCaixa
         {
             InitializeComponent();
 
-            Layout();
+            LayoutBotoes();
 
             _frmTelaInicial = _form;
 
@@ -38,7 +37,7 @@ namespace App_PDV.FechamentoCaixa
             }
         }
 
-        private void Layout()
+        private void LayoutBotoes()
         {
             ConfigBotoes configBotoes = new ConfigBotoes();
 
@@ -202,23 +201,9 @@ namespace App_PDV.FechamentoCaixa
 
                 FecharJornada();
 
-                AlertaConfirmacaoCantoInferiorDireito();
+                uc_MensagemConfirmacao mensagemConfirmacaoCantoInferiorDireito = new uc_MensagemConfirmacao(_frmTelaInicial.pnlTelaPrincipal);
 
                 ImprimiRelatorioFechamentoCaixa();
-            }
-        }
-
-        private void AlertaConfirmacaoCantoInferiorDireito()
-        {
-            // Obtém o FluentDesignForm ao qual o FluentDesignFormContainer pertence
-            Form parentForm = _frmTelaInicial.FindForm();
-
-            // Verifica se o parentForm não é nulo
-            if (parentForm != null)
-            {
-                // Cria a mensagem e exibe o AlertControl
-                AlertInfo info = new AlertInfo("", "");
-                alcConfirmacao.Show(parentForm, info);
             }
         }
 
@@ -290,19 +275,6 @@ namespace App_PDV.FechamentoCaixa
             else
             {
                 MensagensDoSistema.MensagemAtencaoOk("Por favor, primeiro inicie a busca.");
-            }
-        }
-
-        private void alcConfirmacao_HtmlElementMouseClick(object sender, DevExpress.XtraBars.Alerter.AlertHtmlElementMouseEventArgs e)
-        {
-            // Verifica qual elemento foi clicado pelo 'id'
-            if (e.ElementId == "dialogresult-ok")
-            {
-                alcConfirmacao.Dispose();
-            }
-            else if (e.ElementId == "close")
-            {
-                alcConfirmacao.Dispose();
             }
         }
     }

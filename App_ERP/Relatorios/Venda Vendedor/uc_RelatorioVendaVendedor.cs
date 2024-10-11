@@ -21,7 +21,7 @@ namespace App_ERP.Relatorios
         {
             InitializeComponent();
 
-            Layout();
+            LayoutBotoes();
 
             frmTelaInicialERP = _form;
 
@@ -33,7 +33,7 @@ namespace App_ERP.Relatorios
             }
         }
 
-        private void Layout()
+        private void LayoutBotoes()
         {
             ConfigBotoes configBotoes = new ConfigBotoes();
 

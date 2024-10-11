@@ -9,7 +9,6 @@ using System.Text;
 using System.Windows.Forms;
 using System.Security.Cryptography;
 using App_TelasCompartilhadas.Ator;
-using DevExpress.XtraBars.Alerter;
 
 namespace App_TelasCompartilhadas.Cadastro.Funcionario
 {
@@ -27,7 +26,7 @@ namespace App_TelasCompartilhadas.Cadastro.Funcionario
         {
             InitializeComponent();
 
-            Layout();
+            LayoutBotoes();
 
             var button = txtCEP.Properties.Buttons[0];
             button.Kind = DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph;
@@ -54,7 +53,7 @@ namespace App_TelasCompartilhadas.Cadastro.Funcionario
             }
         }
 
-        private void Layout()
+        private void LayoutBotoes()
         {
             ConfigBotoes configBotoes = new ConfigBotoes();
 
@@ -665,8 +664,6 @@ namespace App_TelasCompartilhadas.Cadastro.Funcionario
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            var a = cmbNivelAcesso.EditValue;
-
             if (operacao == "cadastrar" && !IsCamposPreenchidos())
             {
                 return;
@@ -678,7 +675,7 @@ namespace App_TelasCompartilhadas.Cadastro.Funcionario
 
                 CadastroFuncionario();
 
-                AlertaConfirmacaoCantoInferiorDireito();
+                uc_MensagemConfirmacao mensagemConfirmacaoCantoInferiorDireito = new uc_MensagemConfirmacao(painelTelaInicial);
             }
             else
             {
@@ -690,7 +687,7 @@ namespace App_TelasCompartilhadas.Cadastro.Funcionario
 
                     AlterarDadosFuncionario();
 
-                    AlertaConfirmacaoCantoInferiorDireito();
+                    uc_MensagemConfirmacao mensagemConfirmacaoCantoInferiorDireito = new uc_MensagemConfirmacao(painelTelaInicial);
                 }
             }
 
@@ -720,35 +717,6 @@ namespace App_TelasCompartilhadas.Cadastro.Funcionario
                 MensagensDoSistema.MensagemErroOk($"Erro ao verificar nome usuário: {ex.Message}");
 
                 return false;
-            }
-        }
-
-        private void AlertaConfirmacaoCantoInferiorDireito()
-        {
-            var asd = painelTelaInicial;
-
-            // Obtém o FluentDesignForm ao qual o FluentDesignFormContainer pertence
-            Form parentForm = painelTelaInicial.FindForm();
-
-            // Verifica se o parentForm não é nulo
-            if (parentForm != null)
-            {
-                // Cria a mensagem e exibe o AlertControl
-                AlertInfo info = new AlertInfo("", "");
-                alcConfimacao.Show(parentForm, info);
-            }
-        }
-
-        private void alcConfimacao_HtmlElementMouseClick(object sender, DevExpress.XtraBars.Alerter.AlertHtmlElementMouseEventArgs e)
-        {
-            // Verifica qual elemento foi clicado pelo 'id'
-            if (e.ElementId == "dialogresult-ok")
-            {
-                alcConfimacao.Dispose();
-            }
-            else if (e.ElementId == "close")
-            {
-                alcConfimacao.Dispose();
             }
         }
     }

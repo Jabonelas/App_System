@@ -202,6 +202,18 @@
     <Compile Include="Cadastro\Produtos\uc_Produto.Designer.cs">
       <DependentUpon>uc_Produto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mensagens Canto Inferior Direito\uc_MensagemEstoqueBaixo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mensagens Canto Inferior Direito\uc_MensagemEstoqueBaixo.Designer.cs">
+      <DependentUpon>uc_MensagemEstoqueBaixo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mensagens Canto Inferior Direito\uc_MensagemExclusao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mensagens Canto Inferior Direito\uc_MensagemExclusao.Designer.cs">
+      <DependentUpon>uc_MensagemExclusao.cs</DependentUpon>
+    </Compile>
     <Compile Include="ORMDataModelCode\ConnectionHelper.cs" />
     <Compile Include="ORMDataModelCode\tb_ator.cs" />
     <Compile Include="ORMDataModelCode\tb_ator.Designer.cs">
@@ -414,6 +426,12 @@
     <Compile Include="Relatorios\uc_RelatorioFluxoSaida.Designer.cs">
       <DependentUpon>uc_RelatorioFluxoSaida.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mensagens Canto Inferior Direito\uc_MensagemConfirmacao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mensagens Canto Inferior Direito\uc_MensagemConfirmacao.Designer.cs">
+      <DependentUpon>uc_MensagemConfirmacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="uc_TelaInicial.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -470,6 +488,12 @@
     <EmbeddedResource Include="Cadastro\Produtos\uc_Produto.resx">
       <DependentUpon>uc_Produto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mensagens Canto Inferior Direito\uc_MensagemEstoqueBaixo.resx">
+      <DependentUpon>uc_MensagemEstoqueBaixo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mensagens Canto Inferior Direito\uc_MensagemExclusao.resx">
+      <DependentUpon>uc_MensagemExclusao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -482,6 +506,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Relatorios\uc_RelatorioFluxoSaida.resx">
       <DependentUpon>uc_RelatorioFluxoSaida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mensagens Canto Inferior Direito\uc_MensagemConfirmacao.resx">
+      <DependentUpon>uc_MensagemConfirmacao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uc_TelaInicial.resx">
       <DependentUpon>uc_TelaInicial.cs</DependentUpon>

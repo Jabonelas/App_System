@@ -1,13 +1,7 @@
 ﻿using System;
 using DevExpress.Xpo;
 using App_TelasCompartilhadas.bancoSQLite;
-using System.Linq;
 using App_TelasCompartilhadas.Classes;
-using DevExpress.XtraGrid.Views.Grid;
-using DevExpress.Data.Linq;
-using DevExpress.Utils.StructuredStorage.Internal;
-using Unimake.Business.DFe.Xml.SNCM;
-using Unimake.Business.DFe.Xml.GNRE;
 
 namespace App_PDV.AberturaCaixa
 {

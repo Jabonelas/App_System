@@ -18,7 +18,7 @@ namespace App_PDV.Fluxo_de_Caixa.Entrada_Caixa
         {
             InitializeComponent();
 
-            Layout();
+            LayoutBotoes();
 
             _frmTelaInicial = _form;
 
@@ -29,7 +29,7 @@ namespace App_PDV.Fluxo_de_Caixa.Entrada_Caixa
             RodaPeGridValorTotal();
         }
 
-        private void Layout()
+        private void LayoutBotoes()
         {
             ConfigBotoes configBotoes = new ConfigBotoes();
 

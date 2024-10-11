@@ -6,7 +6,7 @@ using System;
 using System.Linq;
 using System.Windows.Forms;
 using App_TelasCompartilhadas.Classes;
-using DevExpress.XtraBars.Alerter;
+using App_TelasCompartilhadas.Mensagens_Canto_Inferior_Direito;
 
 namespace App_ERP.Cadastro.Secao
 {
@@ -20,14 +20,14 @@ namespace App_ERP.Cadastro.Secao
         {
             InitializeComponent();
 
-            Layout();
+            LayoutBotoes();
 
             CarregarGridSecaoAtivas();
 
             _frmTelaInicial = _frm;
         }
 
-        private void Layout()
+        private void LayoutBotoes()
         {
             ConfigBotoes configBotoes = new ConfigBotoes();
 
@@ -190,36 +190,8 @@ namespace App_ERP.Cadastro.Secao
                 if (result == DialogResult.Yes)
                 {
                     ExcluirSecao();
-
-                    AlertaExclusaoCantoInferiorDireito();
+                    uc_MensagemExclusao mensagemExclusaoCantoInferiorDireito = new uc_MensagemExclusao(_frmTelaInicial.pnlTelaPrincipal);
                 }
-            }
-        }
-
-        private void AlertaExclusaoCantoInferiorDireito()
-        {
-            // Obtém o FluentDesignForm ao qual o FluentDesignFormContainer pertence
-            Form parentForm = _frmTelaInicial.FindForm();
-
-            // Verifica se o parentForm não é nulo
-            if (parentForm != null)
-            {
-                // Cria a mensagem e exibe o AlertControl
-                AlertInfo info = new AlertInfo("", "");
-                alcExclusao.Show(parentForm, info);
-            }
-        }
-
-        private void alcExclusao_HtmlElementMouseClick(object sender, DevExpress.XtraBars.Alerter.AlertHtmlElementMouseEventArgs e)
-        {
-            // Verifica qual elemento foi clicado pelo 'id'
-            if (e.ElementId == "dialogresult-ok")
-            {
-                alcExclusao.Dispose();
-            }
-            else if (e.ElementId == "close")
-            {
-                alcExclusao.Dispose();
             }
         }
     }

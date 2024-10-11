@@ -5,8 +5,7 @@ using System;
 using System.Globalization;
 using System.Linq;
 using static App_TelasCompartilhadas.Classes.DadosGeralNfe;
-using DevExpress.XtraBars.Alerter;
-using System.Windows.Forms;
+using App_TelasCompartilhadas;
 
 namespace App_PDV.Fluxo_de_Caixa.Saida_Caixa
 {
@@ -22,7 +21,7 @@ namespace App_PDV.Fluxo_de_Caixa.Saida_Caixa
         {
             InitializeComponent();
 
-            Layout();
+            LayoutBotoes();
 
             _frmTelaInicial = _form;
 
@@ -31,7 +30,7 @@ namespace App_PDV.Fluxo_de_Caixa.Saida_Caixa
             PegarDadosCaixaAberto();
         }
 
-        private void Layout()
+        private void LayoutBotoes()
         {
             ConfigBotoes configBotoes = new ConfigBotoes();
 
@@ -52,23 +51,9 @@ namespace App_PDV.Fluxo_de_Caixa.Saida_Caixa
 
             SaidaCaixa();
 
-            AlertaConfirmacaoCantoInferiorDireito();
-
             _frmTelaInicial.TelaVisualizarSaidaCaixa();
-        }
 
-        private void AlertaConfirmacaoCantoInferiorDireito()
-        {
-            // Obtém o FluentDesignForm ao qual o FluentDesignFormContainer pertence
-            Form parentForm = _frmTelaInicial.FindForm();
-
-            // Verifica se o parentForm não é nulo
-            if (parentForm != null)
-            {
-                // Cria a mensagem e exibe o AlertControl
-                AlertInfo info = new AlertInfo("", "");
-                alcConfirmacao.Show(parentForm, info);
-            }
+            uc_MensagemConfirmacao mensagemConfirmacaoCantoInferiorDireito = new uc_MensagemConfirmacao(_frmTelaInicial.pnlTelaPrincipal);
         }
 
         private void uc_SaidaCaixa_Load(object sender, EventArgs e)
@@ -150,19 +135,6 @@ namespace App_PDV.Fluxo_de_Caixa.Saida_Caixa
             catch (Exception ex)
             {
                 MensagensDoSistema.MensagemErroOk($"Erro ao realizar retirada no caixa: {ex.Message}");
-            }
-        }
-
-        private void alcConfirmacao_HtmlElementMouseClick(object sender, AlertHtmlElementMouseEventArgs e)
-        {
-            // Verifica qual elemento foi clicado pelo 'id'
-            if (e.ElementId == "dialogresult-ok")
-            {
-                alcConfirmacao.Dispose();
-            }
-            else if (e.ElementId == "close")
-            {
-                alcConfirmacao.Dispose();
             }
         }
     }

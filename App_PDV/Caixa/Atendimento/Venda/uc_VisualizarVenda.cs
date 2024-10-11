@@ -39,7 +39,7 @@ namespace App_PDV
         {
             InitializeComponent();
 
-            Layout();
+            LayoutBotoes();
 
             _frmTelaInicial = _form;
 
@@ -52,7 +52,7 @@ namespace App_PDV
             dadosEmitente = VariaveisGlobais.FilialLogada;
         }
 
-        private void Layout()
+        private void LayoutBotoes()
         {
             ConfigBotoes configBotoes = new ConfigBotoes();
 

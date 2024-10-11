@@ -27,51 +27,52 @@ namespace App_TelasCompartilhadas.Relatorios
         {
             try
             {
-                using (Session session = new Session())
-                {
-                    var queryMovimentacoesAtivas =
-                        from movimentacao in session.Query<tb_movimentacao>()
-                        join produto in session.Query<tb_movimentacao_produto>()
-                            on movimentacao.id_movimentacao equals produto.fk_tb_movimentacao.id_movimentacao
-                        where movimentacao.mv_dtCri.Date >= dataInicio.Date
-                              && movimentacao.mv_dtCri.Date <= dataFinal.Date
-                              && movimentacao.mv_movTipo == 150
-                              && movimentacao.fk_tb_ator_emit.id_ator == idFilial
-                        group produto by new { produto.mp_desc, produto.fk_tb_produto.pd_codRef } into grupoAtendente
-                        select new
-                        {
-                            CodProduto = grupoAtendente.Key.pd_codRef,
-                            Produto = grupoAtendente.Key.mp_desc,
-                            SomaQuantidadeItens = grupoAtendente.Sum(m => m.fk_tb_movimentacao.mv_qtdItens),
-                            SomaValorTotalNF = grupoAtendente.Sum(m => m.fk_tb_movimentacao.mv_nfeVlrTotNF),
-                            SomaValorTotalProd = grupoAtendente.Sum(m => m.fk_tb_movimentacao.mv_nfeVlrTotProd),
-                            SomaValorTotalDesc = grupoAtendente.Sum(m => m.fk_tb_movimentacao.mv_nfeVlrTotDesc)
-                        };
-
-                    this.DataSource = queryMovimentacoesAtivas;
-
-                    lblCodRef.DataBindings.Clear();
-                    lblCodRef.DataBindings.Add("Text", null, "CodProduto");
-
-                    lblDescProd.DataBindings.Clear();
-                    lblDescProd.DataBindings.Add("Text", null, "Produto");
-
-                    lblQtdTotalProd.DataBindings.Clear();
-                    lblQtdTotalProd.DataBindings.Add("Text", null, "SomaQuantidadeItens");
-
-                    lblVlrTotalProd.DataBindings.Clear();
-                    lblVlrTotalProd.DataBindings.Add("Text", null, "SomaValorTotalProd");
-
-                    decimal total = 0;
-
-                    foreach (var item in queryMovimentacoesAtivas)
+                Session session = new Session();
+                var queryMovimentacoesAtivas =
+                    from movimentacao in session.Query<tb_movimentacao>()
+                    join produto in session.Query<tb_movimentacao_produto>()
+                        on movimentacao.id_movimentacao equals produto.fk_tb_movimentacao.id_movimentacao
+                    where movimentacao.mv_dtCri.Date >= dataInicio.Date
+                          && movimentacao.mv_dtCri.Date <= dataFinal.Date
+                          && movimentacao.mv_movTipo == 150
+                          && movimentacao.fk_tb_ator_emit.id_ator == idFilial
+                    group produto by new { produto.mp_desc, produto.fk_tb_produto.pd_codRef }
+                    into grupoAtendente
+                    let SomaQuantidadeItens = grupoAtendente.Sum(m => m.fk_tb_movimentacao.mv_qtdItens)
+                    orderby SomaQuantidadeItens descending
+                    select new
                     {
-                        total += item.SomaValorTotalProd;
-                    }
+                        CodProduto = grupoAtendente.Key.pd_codRef,
+                        Produto = grupoAtendente.Key.mp_desc,
+                        SomaQuantidadeItens,
+                        SomaValorTotalNF = grupoAtendente.Sum(m => m.fk_tb_movimentacao.mv_nfeVlrTotNF),
+                        SomaValorTotalProd = grupoAtendente.Sum(m => m.fk_tb_movimentacao.mv_nfeVlrTotProd),
+                        SomaValorTotalDesc = grupoAtendente.Sum(m => m.fk_tb_movimentacao.mv_nfeVlrTotDesc)
+                    };
 
-                    lblTotal.DataBindings.Clear();
-                    lblTotal.Text = total.ToString("C2");
+                this.DataSource = queryMovimentacoesAtivas;
+
+                lblCodRef.DataBindings.Clear();
+                lblCodRef.DataBindings.Add("Text", null, "CodProduto");
+
+                lblDescProd.DataBindings.Clear();
+                lblDescProd.DataBindings.Add("Text", null, "Produto");
+
+                lblQtdTotalProd.DataBindings.Clear();
+                lblQtdTotalProd.DataBindings.Add("Text", null, "SomaQuantidadeItens");
+
+                lblVlrTotalProd.DataBindings.Clear();
+                lblVlrTotalProd.DataBindings.Add("Text", null, "SomaValorTotalProd");
+
+                decimal total = 0;
+
+                foreach (var item in queryMovimentacoesAtivas)
+                {
+                    total += item.SomaValorTotalProd;
                 }
+
+                lblTotal.DataBindings.Clear();
+                lblTotal.Text = total.ToString("C2");
             }
             catch (Exception ex)
             {
