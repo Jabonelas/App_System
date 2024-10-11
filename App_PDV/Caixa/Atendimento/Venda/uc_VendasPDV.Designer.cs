@@ -38,7 +38,7 @@ namespace App_PDV
             this.idMovimentacao = new DevExpress.XtraGrid.Columns.GridColumn();
             this.dtCri = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Vendedor = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.NumNFe = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NumVenda = new DevExpress.XtraGrid.Columns.GridColumn();
             this.QtdItens = new DevExpress.XtraGrid.Columns.GridColumn();
             this.VlrTot = new DevExpress.XtraGrid.Columns.GridColumn();
             this.VlrDesconto = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -122,7 +122,7 @@ namespace App_PDV
             this.idMovimentacao,
             this.dtCri,
             this.Vendedor,
-            this.NumNFe,
+            this.NumVenda,
             this.QtdItens,
             this.VlrTot,
             this.VlrDesconto});
@@ -155,16 +155,16 @@ namespace App_PDV
             this.Vendedor.OptionsColumn.ReadOnly = true;
             this.Vendedor.Visible = true;
             this.Vendedor.VisibleIndex = 1;
-            this.Vendedor.Width = 348;
+            this.Vendedor.Width = 460;
             // 
-            // NumNFe
+            // NumVenda
             // 
-            this.NumNFe.Caption = "Nº Nota Fiscal";
-            this.NumNFe.FieldName = "nf_nfe1ResProtNFeInfProt0ChNFe";
-            this.NumNFe.Name = "NumNFe";
-            this.NumNFe.Visible = true;
-            this.NumNFe.VisibleIndex = 2;
-            this.NumNFe.Width = 358;
+            this.NumVenda.Caption = "Nº Venda";
+            this.NumVenda.FieldName = "NumeroChaveExtraido";
+            this.NumVenda.Name = "NumVenda";
+            this.NumVenda.Visible = true;
+            this.NumVenda.VisibleIndex = 2;
+            this.NumVenda.Width = 232;
             // 
             // QtdItens
             // 
@@ -174,7 +174,7 @@ namespace App_PDV
             this.QtdItens.OptionsColumn.ReadOnly = true;
             this.QtdItens.Visible = true;
             this.QtdItens.VisibleIndex = 3;
-            this.QtdItens.Width = 106;
+            this.QtdItens.Width = 110;
             // 
             // VlrTot
             // 
@@ -186,7 +186,7 @@ namespace App_PDV
             this.VlrTot.OptionsColumn.ReadOnly = true;
             this.VlrTot.Visible = true;
             this.VlrTot.VisibleIndex = 4;
-            this.VlrTot.Width = 103;
+            this.VlrTot.Width = 107;
             // 
             // VlrDesconto
             // 
@@ -197,7 +197,7 @@ namespace App_PDV
             this.VlrDesconto.Name = "VlrDesconto";
             this.VlrDesconto.Visible = true;
             this.VlrDesconto.VisibleIndex = 5;
-            this.VlrDesconto.Width = 116;
+            this.VlrDesconto.Width = 122;
             // 
             // btnNovoRegistro
             // 
@@ -298,7 +298,7 @@ namespace App_PDV
         private DevExpress.XtraGrid.Columns.GridColumn QtdItens;
         private DevExpress.XtraGrid.Columns.GridColumn VlrTot;
         private DevExpress.XtraGrid.Columns.GridColumn VlrDesconto;
-        private DevExpress.XtraGrid.Columns.GridColumn NumNFe;
+        private DevExpress.XtraGrid.Columns.GridColumn NumVenda;
         private DevExpress.XtraEditors.SimpleButton btnNovoRegistro;
         private uc_TituloTelas uc_TituloTelas1;
         private DevExpress.XtraLayout.LayoutControl layoutControl1;

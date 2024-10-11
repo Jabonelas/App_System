@@ -99,6 +99,12 @@ namespace App_TelasCompartilhadas.bancoSQLite
             get { return fpf_estMin; }
             set { SetPropertyValue<decimal>(nameof(pf_estMin), ref fpf_estMin, value); }
         }
+        decimal fpf_estMax;
+        public decimal pf_estMax
+        {
+            get { return fpf_estMax; }
+            set { SetPropertyValue<decimal>(nameof(pf_estMax), ref fpf_estMax, value); }
+        }
         decimal fpf_est;
         public decimal pf_est
         {

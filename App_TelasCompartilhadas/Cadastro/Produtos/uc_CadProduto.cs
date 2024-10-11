@@ -367,6 +367,7 @@ namespace App_TelasCompartilhadas.Produtos
                         produtoFilial.pf_vlrUnCom = _produto.pd_vlrUnComBase;
                         produtoFilial.pf_cstUnCom = _produto.pd_cstUnComBase;
                         produtoFilial.pf_estMin = _produto.pd_estMinBase;
+                        produtoFilial.pf_estMax = _produto.pd_estMaxBase;
                         produtoFilial.pf_est = 0;
                         produtoFilial.pf_desat = 0;
                         produtoFilial.fk_tb_ator = item;
@@ -496,26 +497,52 @@ namespace App_TelasCompartilhadas.Produtos
             {
                 using (UnitOfWork uow = new UnitOfWork())
                 {
-                    tb_produto_filial produtoFilial = uow.GetObjectByKey<tb_produto_filial>(Convert.ToInt64(idProduto));
+                    var produtosFilial = uow.Query<tb_produto_filial>().Where(x => x.fk_tb_produto.id_produto == idProduto);
 
-                    produtoFilial.pf_codRef = Convert.ToInt64(txtCodProd.Text);
-                    produtoFilial.pf_desc = txtDesc.Text;
-                    produtoFilial.pf_descCurta = txtDescCurta.Text;
-                    produtoFilial.pf_proTipo = 1;
-                    produtoFilial.pf_unMedCom = Convert.ToByte(dicUnMed.FirstOrDefault(x => x.Value == cmbUn.Text).Key);
-                    produtoFilial.pf_dtCri = DateTime.Now;
-                    produtoFilial.pf_dtAlt = DateTime.Now;
-                    produtoFilial.pf_cstUnCom = Convert.ToInt32(txtPrecoCusto.Text);
-                    produtoFilial.pf_estMin = Convert.ToDecimal(txtEstoqMinimo.Text);
-                    produtoFilial.pf_est = 0;
-                    produtoFilial.pf_desat = 0;
-
-                    if (vlrProdInicial == produtoFilial.pf_vlrUnCom)
+                    foreach (var item in produtosFilial)
                     {
-                        produtoFilial.pf_vlrUnCom = Convert.ToInt32(txtPrecoUn.Text);
+                        item.pf_codRef = Convert.ToInt64(txtCodProd.Text);
+                        item.pf_desc = txtDesc.Text;
+                        item.pf_descCurta = txtDescCurta.Text;
+                        item.pf_proTipo = 1;
+                        item.pf_unMedCom = Convert.ToByte(dicUnMed.FirstOrDefault(x => x.Value == cmbUn.Text).Key);
+                        item.pf_dtCri = DateTime.Now;
+                        item.pf_dtAlt = DateTime.Now;
+                        item.pf_cstUnCom = Convert.ToInt32(txtPrecoCusto.Text);
+                        item.pf_estMin = Convert.ToDecimal(txtEstoqMinimo.Text);
+                        item.pf_estMax = Convert.ToDecimal(txtEstoqMaximo.Text);
+                        item.pf_est = 0;
+                        item.pf_desat = 0;
+
+                        if (vlrProdInicial == item.pf_vlrUnCom)
+                        {
+                            item.pf_vlrUnCom = Convert.ToInt32(txtPrecoUn.Text);
+                        }
+
+                        uow.CommitChanges();
                     }
 
-                    uow.CommitChanges();
+                    //tb_produto_filial produtoFilial = uow.GetObjectByKey<tb_produto_filial>(Convert.ToInt64(idProduto));
+
+                    //produtoFilial.pf_codRef = Convert.ToInt64(txtCodProd.Text);
+                    //produtoFilial.pf_desc = txtDesc.Text;
+                    //produtoFilial.pf_descCurta = txtDescCurta.Text;
+                    //produtoFilial.pf_proTipo = 1;
+                    //produtoFilial.pf_unMedCom = Convert.ToByte(dicUnMed.FirstOrDefault(x => x.Value == cmbUn.Text).Key);
+                    //produtoFilial.pf_dtCri = DateTime.Now;
+                    //produtoFilial.pf_dtAlt = DateTime.Now;
+                    //produtoFilial.pf_cstUnCom = Convert.ToInt32(txtPrecoCusto.Text);
+                    //produtoFilial.pf_estMin = Convert.ToDecimal(txtEstoqMinimo.Text);
+                    //produtoFilial.pf_estMax = Convert.ToDecimal(txtEstoqMaximo.Text);
+                    //produtoFilial.pf_est = 0;
+                    //produtoFilial.pf_desat = 0;
+
+                    //if (vlrProdInicial == produtoFilial.pf_vlrUnCom)
+                    //{
+                    //    produtoFilial.pf_vlrUnCom = Convert.ToInt32(txtPrecoUn.Text);
+                    //}
+
+                    //uow.CommitChanges();
                 }
             }
             catch (Exception ex)

@@ -18,7 +18,7 @@ namespace App_TelasCompartilhadas.Produtos
 
         private string formaOrdenarGrid = "";
 
-        public static BindingList<produtosSelecionados> listaProdutoFilial = new BindingList<produtosSelecionados>();
+        public BindingList<produtosSelecionados> listaProdutoFilial = new BindingList<produtosSelecionados>();
 
         public uc_EstoqueProduto(DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer _painelTelaInicial, long _idProduto, string _formaOrdenarGrid)
         {
@@ -38,7 +38,14 @@ namespace App_TelasCompartilhadas.Produtos
 
             LayoutBotoes();
 
-            CarregarGridProdutoEstoqueFiliais();
+            if (formaOrdenarGrid == "EstoqueMinimo")
+            {
+                CarregarGridProdutoEstoqueFiliaisEstoqueMinimo();
+            }
+            else
+            {
+                CarregarGridProdutoEstoqueFiliais();
+            }
         }
 
         public class produtosSelecionados : INotifyPropertyChanged
@@ -203,9 +210,8 @@ namespace App_TelasCompartilhadas.Produtos
                             on produtoFilial.fk_tb_produto.id_produto equals produto.id_produto
                         join filial in uow.Query<tb_ator>()
                             on produtoFilial.fk_tb_ator.id_ator equals filial.id_ator
-                        where produto.pd_desat == 0 && produto.id_produto == idProduto
-                        orderby produtoFilial.pf_desc
-                        //orderby produtoFilial.fk_tb_ator
+                        where produto.pd_desat == 0 && produtoFilial.fk_tb_produto.id_produto == idProduto
+                        orderby produtoFilial.pf_est descending
                         select new
                         {
                             produtoFilial.id_produto_filial,
@@ -243,13 +249,75 @@ namespace App_TelasCompartilhadas.Produtos
             }
         }
 
+        private void CarregarGridProdutoEstoqueFiliaisEstoqueMinimo()
+        {
+            try
+            {
+                using (Session uow = new Session())
+                {
+                    var produtoSelecionado =
+                        from produtoFilial in uow.Query<tb_produto_filial>()
+                        join produto in uow.Query<tb_produto>()
+                            on produtoFilial.fk_tb_produto.id_produto equals produto.id_produto
+                        join filial in uow.Query<tb_ator>()
+                            on produtoFilial.fk_tb_ator.id_ator equals filial.id_ator
+                        where produto.pd_desat == 0 && produtoFilial.fk_tb_produto.id_produto == idProduto
+                        orderby produtoFilial.pf_est ascending
+                        select new
+                        {
+                            produtoFilial.id_produto_filial,
+                            produtoFilial.pf_codRef,
+                            produtoFilial.pf_descCurta,
+                            produtoFilial.pf_desc,
+                            produtoFilial.pf_vlrUnCom,
+                            produtoFilial.pf_desat,
+                            produtoFilial.pf_est,
+                            filial.at_cnpj,
+                            filial.at_nomeFant,
+                        };
+
+                    foreach (var item in produtoSelecionado)
+                    {
+                        listaProdutoFilial.Add(new produtosSelecionados
+                        {
+                            idProdutoFilial = Convert.ToInt16(item.id_produto_filial),
+                            codRef = Convert.ToInt16(item.pf_codRef),
+                            descCurta = item.pf_descCurta,
+                            desc = item.pf_desc,
+                            quantidade = Convert.ToInt32(item.pf_est),
+                            vlrUnCom = item.pf_vlrUnCom,
+                            cnpjFilial = item.at_cnpj,
+                            filial = item.at_nomeFant
+                        });
+                    }
+
+                    grdListaProdutos.DataSource = listaProdutoFilial;
+                }
+            }
+            catch (Exception exception)
+            {
+                MensagensDoSistema.MensagemErroOk($"Erro ao preencher tabela com produtos das filiais com estoque minimo: {exception}");
+            }
+        }
+
         private void LayoutBotoes()
         {
             ConfigBotoes configBotoes = new ConfigBotoes();
 
             configBotoes.BotaoVoltar(btnVoltar);
 
-            uc_TituloTelas1.lblTituloTela.Text = "Estoque do Produto em todas as Filiais";
+            if (formaOrdenarGrid == "EstoqueMinimo")
+            {
+                uc_TituloTelas1.lblTituloTela.Text = "Estoque Minimo - Estoque do Produto em todas as Filiais";
+            }
+            else if (formaOrdenarGrid == "EstoqueMaximo")
+            {
+                uc_TituloTelas1.lblTituloTela.Text = "Estoque Máximo - Estoque do Produto em todas as Filiais";
+            }
+            else
+            {
+                uc_TituloTelas1.lblTituloTela.Text = "Estoque do Produto em todas as Filiais";
+            }
         }
 
         private void uc_EstoqueProduto_Load(object sender, EventArgs e)

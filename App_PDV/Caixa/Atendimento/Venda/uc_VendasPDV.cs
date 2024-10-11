@@ -59,10 +59,52 @@ namespace App_PDV
             linqInstantFeedbackSource.KeyExpression = "id_movimentacao"; //Coluna Primary Key
             linqInstantFeedbackSource.DefaultSorting = "mv_dtCri DESC"; //Coluna de ordenação padrão na ordem escolhida
 
-            linqInstantFeedbackSource.GetQueryable += linqBuscarDadosMovimentacaoCadastradosAtivos; //Buscar os dados que vao preencher o grid.
+            if (VariaveisGlobais.FilialLogada.at_nfeTipoAmb == 0)
+            {
+                linqInstantFeedbackSource.GetQueryable += linqBuscarDadosMovimentacaoCupomNaoFiscalAtivos; //Buscar os dados que vao preencher o grid.
+            }
+            else
+            {
+                linqInstantFeedbackSource.GetQueryable += linqBuscarDadosMovimentacaoCadastradosAtivos; //Buscar os dados que vao preencher o grid.
+            }
 
             linqInstantFeedbackSource.DismissQueryable += linq_DismissQueryable; //Basta deixar vazio dentro do metodo.
             grdListaVendas.DataSource = linqInstantFeedbackSource;
+        }
+
+        private void linqBuscarDadosMovimentacaoCupomNaoFiscalAtivos(object sender, GetQueryableEventArgs e)
+        {
+            try
+            {
+                Session session = new Session();
+
+                tb_ator filialLogado = session.GetObjectByKey<tb_ator>(VariaveisGlobais.FilialLogada.id_ator);
+
+                DateTime dataLimite = DateTime.Now.AddDays(-30);
+
+                var queryMovimentacoesAtivas =
+                    from movimentacao in session.Query<tb_movimentacao>()
+                    join movimentacaoCaixa in session.Query<tb_movimentacao_caixa>()
+                        on movimentacao.id_movimentacao equals movimentacaoCaixa.fk_tb_movimentacao.id_movimentacao
+                    where movimentacao.mv_dtCri >= dataLimite && movimentacao.fk_tb_ator_emit == filialLogado
+                    orderby movimentacao.mv_dtCri descending
+                    select new
+                    {
+                        movimentacao.id_movimentacao,
+                        movimentacao.mv_dtCri,
+                        movimentacao.fk_tb_ator_atend.at_razSoc,
+                        NumeroChaveExtraido = movimentacaoCaixa.id_movimentacao_caixa,
+                        movimentacao.mv_qtdItens,
+                        movimentacao.mv_nfeVlrTotNF,
+                        movimentacao.mv_nfeVlrTotDesc,
+                    };
+
+                e.QueryableSource = queryMovimentacoesAtivas;
+            }
+            catch (Exception exception)
+            {
+                MensagensDoSistema.MensagemErroOk($"Erro ao preencher tabela com vendas realizadas produtos não fiscal: {exception}");
+            }
         }
 
         private void linqBuscarDadosMovimentacaoCadastradosAtivos(object sender, GetQueryableEventArgs e)
@@ -86,7 +128,7 @@ namespace App_PDV
                         movimentacao.id_movimentacao,
                         movimentacao.mv_dtCri,
                         movimentacao.fk_tb_ator_atend.at_razSoc,
-                        nfe.nf_nfe1ResProtNFeInfProt0ChNFe,
+                        NumeroChaveExtraido = nfe.nf_nfe1ResProtNFeInfProt0ChNFe.Substring(29, 5), // Extrai "60109"
                         movimentacao.mv_qtdItens,
                         movimentacao.mv_nfeVlrTotNF,
                         movimentacao.mv_nfeVlrTotDesc,

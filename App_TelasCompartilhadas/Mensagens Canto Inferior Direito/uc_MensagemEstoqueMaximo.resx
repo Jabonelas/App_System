@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="svgImageCollection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>16, 17</value>
+    <value>9, 18</value>
   </metadata>
   <assembly alias="DevExpress.Data.v23.1" name="DevExpress.Data.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="svgImageCollection1.State_Validation_Invalid" type="DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v23.1" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -136,8 +136,8 @@
         LDQgIGw0LTRsMywzbC00LDRMMjMsMjB6IiBjbGFzcz0iUmVkIiAvPg0KPC9zdmc+Cw==
 </value>
   </data>
-  <metadata name="alcEstoqueBaixo.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>177, 17</value>
+  <metadata name="alcEstoqueMaximo.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>174, 18</value>
   </metadata>
   <data name="alcEstoqueBaixo.HtmlTemplate.Styles" xml:space="preserve">
     <value>body{
@@ -152,7 +152,7 @@
 	box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.2);
 }
 .header {
-	background-color: @Critical;
+	background-color: @Yellow;
 	padding: 5px;
 	display: flex;
 	align-items: center;
@@ -194,7 +194,7 @@
 	justify-content: flex-end;
 }
 .button {
-	color: @Critical;
+	color: @Yellow;
 	border-radius: 5px;
 	padding: 8px 24px;
 	margin: 0px 5px;
@@ -202,17 +202,17 @@
 }
 .button:hover {
 	color: @White;
-	background-color: @Critical;
+	background-color: @Yellow;
 	box-shadow: 0px 0px 10px @Critical/0.5;
 }
 .button:focus {
-	border-color: @Critical;
+	border-color: @Yellow;
 }</value>
   </data>
   <data name="alcEstoqueBaixo.HtmlTemplate.Template" xml:space="preserve">
     <value>&lt;div class="frame" id="frame"&gt;
 	&lt;div class="header"&gt;
-		&lt;div class="header-element caption"&gt;Aviso: Estoque Crítico!&lt;/div&gt;
+		&lt;div class="header-element caption"&gt;Aviso: Estoque Acima do Ideal!&lt;/div&gt;
 		
 		&lt;div class="close-button" id="closebutton"&gt;
 			&lt;img src="State_Validation_Invalid" class="close-button-img" id="close"&gt;
@@ -220,8 +220,8 @@
 			
 	
 	&lt;/div&gt;
-	&lt;div class="message-text" id="content"&gt;Alguns produtos estão com estoque abaixo do nível mínimo. 
-Verifique e reabasteça o quanto antes.&lt;/div&gt;
+	&lt;div class="message-text" id="content"&gt;Alguns produtos estão com estoque acima do nível máximo. 
+Por favor, verifique os itens e ajuste conforme necessário.&lt;/div&gt;
 	&lt;div class="buttons"&gt;
 		&lt;div class="button" tabindex="1" id="dialogresult-verificar"&gt;Verificar&lt;/div&gt;
 		&lt;div class="button" tabindex="2" id="dialogresult-cancelar"&gt;Cancelar&lt;/div&gt;
@@ -229,6 +229,6 @@ Verifique e reabasteça o quanto antes.&lt;/div&gt;
 &lt;/div&gt;</value>
   </data>
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>317, 17</value>
+    <value>314, 18</value>
   </metadata>
 </root>

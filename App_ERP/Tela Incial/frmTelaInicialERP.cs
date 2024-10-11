@@ -35,17 +35,42 @@ namespace App_ERP
 
             ExibirPainelCentral();
 
-            AlertaEstoqueBaixoCantoInferiorDireito();
+            AlertasCantoInferiorDireito();
 
             RotaPe();
         }
 
-        private void AlertaEstoqueBaixoCantoInferiorDireito()
+        private void AlertasCantoInferiorDireito()
         {
             if (VerificarEstoqueBaixo())
             {
                 uc_MensagemEstoqueBaixo ucMensagemEstoqueBaixo = new uc_MensagemEstoqueBaixo(pnlTelaPrincipal);
                 ucMensagemEstoqueBaixo.Show();
+            }
+
+            if (VerificarEstoqueMaximo())
+            {
+                uc_MensagemEstoqueMaximo uc_MensagemEstoqueMaximo = new uc_MensagemEstoqueMaximo(pnlTelaPrincipal);
+                uc_MensagemEstoqueMaximo.Show();
+            }
+        }
+
+        private bool VerificarEstoqueMaximo()
+        {
+            try
+            {
+                using (UnitOfWork uow = new UnitOfWork())
+                {
+                    bool isEstoqueMaximo = uow.Query<tb_produto_filial>().Any(x => x.pf_est > x.pf_estMax && x.pf_estMax != 0);
+
+                    return isEstoqueMaximo;
+                }
+            }
+            catch (Exception ex)
+            {
+                MensagensDoSistema.MensagemErroOk($"Erro ao verificar produtos com estoque máximo: {ex}");
+
+                return false;
             }
         }
 

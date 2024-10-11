@@ -208,6 +208,12 @@
     <Compile Include="Mensagens Canto Inferior Direito\uc_MensagemEstoqueBaixo.Designer.cs">
       <DependentUpon>uc_MensagemEstoqueBaixo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mensagens Canto Inferior Direito\uc_MensagemEstoqueMaximo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mensagens Canto Inferior Direito\uc_MensagemEstoqueMaximo.Designer.cs">
+      <DependentUpon>uc_MensagemEstoqueMaximo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mensagens Canto Inferior Direito\uc_MensagemExclusao.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -490,6 +496,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mensagens Canto Inferior Direito\uc_MensagemEstoqueBaixo.resx">
       <DependentUpon>uc_MensagemEstoqueBaixo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mensagens Canto Inferior Direito\uc_MensagemEstoqueMaximo.resx">
+      <DependentUpon>uc_MensagemEstoqueMaximo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mensagens Canto Inferior Direito\uc_MensagemExclusao.resx">
       <DependentUpon>uc_MensagemExclusao.cs</DependentUpon>

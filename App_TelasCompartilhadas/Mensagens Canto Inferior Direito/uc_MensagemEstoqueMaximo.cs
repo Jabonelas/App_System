@@ -1,14 +1,23 @@
 ﻿using App_TelasCompartilhadas.Produtos;
 using DevExpress.XtraBars.Alerter;
+using DevExpress.XtraEditors;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace App_TelasCompartilhadas.Mensagens_Canto_Inferior_Direito
 {
-    public partial class uc_MensagemEstoqueBaixo : DevExpress.XtraEditors.XtraUserControl
+    public partial class uc_MensagemEstoqueMaximo : DevExpress.XtraEditors.XtraUserControl
     {
         private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer painelTelaInicial;
 
-        public uc_MensagemEstoqueBaixo(DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer _painelTelaInicial)
+        public uc_MensagemEstoqueMaximo(DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer _painelTelaInicial)
         {
             InitializeComponent();
 
@@ -25,7 +34,7 @@ namespace App_TelasCompartilhadas.Mensagens_Canto_Inferior_Direito
             {
                 // Cria a mensagem e exibe o AlertControl
                 AlertInfo info = new AlertInfo("", "");
-                alcEstoqueBaixo.Show(parentForm, info);
+                alcEstoqueMaximo.Show(parentForm, info);
             }
         }
 
@@ -42,15 +51,15 @@ namespace App_TelasCompartilhadas.Mensagens_Canto_Inferior_Direito
         {
             if (e.ElementId == "dialogresult-verificar")
             {
-                TelaProduto("EstoqueMinimo");
+                TelaProduto("EstoqueMaximo");
             }
             else if (e.ElementId == "dialogresult-cancelar")
             {
-                alcEstoqueBaixo.Dispose();
+                alcEstoqueMaximo.Dispose();
             }
             else if (e.ElementId == "close")
             {
-                alcEstoqueBaixo.Dispose();
+                alcEstoqueMaximo.Dispose();
             }
         }
     }

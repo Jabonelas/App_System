@@ -86,14 +86,19 @@ namespace App_TelasCompartilhadas.Produtos
 
             linqInstantFeedbackSource.KeyExpression = "id_produto"; //Coluna Primary Key
 
-            if (formaOrdenarGrid == "Estoque")
+            if (formaOrdenarGrid == "EstoqueMinimo")
             {
                 linqInstantFeedbackSource.DefaultSorting = "pd_estTot ASC"; //Coluna de ordenação padrão na ordem escolhida
                 linqInstantFeedbackSource.GetQueryable += linqBuscarDadosProdutosEstoqueBaixoAtivos; //Buscar os dados que vao preencher o grid com produtos com estoque baixo.
             }
+            else if (formaOrdenarGrid == "EstoqueMaximo")
+            {
+                linqInstantFeedbackSource.DefaultSorting = "pd_estTot ASC"; //Coluna de ordenação padrão na ordem escolhida
+                linqInstantFeedbackSource.GetQueryable += linqBuscarDadosProdutosEstoqueMaximoAtivos; //Buscar os dados que vao preencher o grid com produtos com estoque baixo.
+            }
             else
             {
-                linqInstantFeedbackSource.DefaultSorting = "pd_codRef DESC"; //Coluna de ordenação padrão na ordem escolhida
+                linqInstantFeedbackSource.DefaultSorting = "pd_codRef ASC"; //Coluna de ordenação padrão na ordem escolhida
                 linqInstantFeedbackSource.GetQueryable += linqBuscarDadosProdutosCadastradosAtivos; //Buscar os dados que vao preencher o grid.
             }
 
@@ -158,32 +163,71 @@ namespace App_TelasCompartilhadas.Produtos
             {
                 Session session = new Session();
 
-                var queryProdutoCadastradosAtivos = from produto in session.Query<tb_produto>()
-                                                    join subcategoria in session.Query<tb_subcategoria_produto>()
-                                                        on produto.fk_tb_subcategoria_produto.id_subcategoria_produto equals subcategoria.id_subcategoria_produto
-                                                    join categoria in session.Query<tb_categoria_produto>()
-                                                        on subcategoria.fk_tb_categoria_produto.id_categoria_produto equals categoria.id_categoria_produto
-                                                    join marca in session.Query<tb_marca_produto>()
-                                                        on produto.fk_tb_marca_produto.id_marca_produto equals marca.id_marca_produto
-                                                    join produtoFilial in session.Query<tb_produto_filial>()
-                                                        on produto.id_produto equals produtoFilial.fk_tb_produto.id_produto
-                                                    where produto.pd_desat == 0 && produtoFilial.pf_est <= produtoFilial.pf_estMin
-                                                    group new { produto, produtoFilial } by produtoFilial.pf_codRef into g
-                                                    select new ProdutoEstoqueBaixoModel
-                                                    {
-                                                        id_produto = g.Max(p => p.produto.id_produto), // Usar Max ou Min para pegar um id válido
-                                                        cp_desc = g.Max(p => p.produto.fk_tb_subcategoria_produto.fk_tb_categoria_produto.cp_desc), // Pega o campo desejado
-                                                        scp_desc = g.Max(p => p.produto.fk_tb_subcategoria_produto.scp_desc),
-                                                        pd_codRef = g.Key, // Usa a chave do grupo
-                                                        pd_descCurta = g.Max(p => p.produto.pd_descCurta),
-                                                        pd_desc = g.Max(p => p.produto.pd_desc),
-                                                        pd_vlrUnComBase = g.Max(p => p.produto.pd_vlrUnComBase),
-                                                        pd_desat = g.Max(p => p.produto.pd_desat),
-                                                        pd_estTot = g.Max(p => p.produto.pd_estTot),
-                                                        mp_desc = g.Max(p => p.produto.fk_tb_marca_produto.mp_desc)
-                                                    };
+                var queryProdutoEstoqueMinimoAtivos = from produto in session.Query<tb_produto>()
+                                                      join subcategoria in session.Query<tb_subcategoria_produto>()
+                                                          on produto.fk_tb_subcategoria_produto.id_subcategoria_produto equals subcategoria.id_subcategoria_produto
+                                                      join categoria in session.Query<tb_categoria_produto>()
+                                                          on subcategoria.fk_tb_categoria_produto.id_categoria_produto equals categoria.id_categoria_produto
+                                                      join marca in session.Query<tb_marca_produto>()
+                                                          on produto.fk_tb_marca_produto.id_marca_produto equals marca.id_marca_produto
+                                                      join produtoFilial in session.Query<tb_produto_filial>()
+                                                          on produto.id_produto equals produtoFilial.fk_tb_produto.id_produto
+                                                      where produto.pd_desat == 0 && produtoFilial.pf_est < produtoFilial.pf_estMin
+                                                      group new { produto, produtoFilial } by produtoFilial.pf_codRef into g
+                                                      select new ProdutoEstoqueBaixoModel
+                                                      {
+                                                          id_produto = g.Max(p => p.produto.id_produto), // Usar Max ou Min para pegar um id válido
+                                                          cp_desc = g.Max(p => p.produto.fk_tb_subcategoria_produto.fk_tb_categoria_produto.cp_desc), // Pega o campo desejado
+                                                          scp_desc = g.Max(p => p.produto.fk_tb_subcategoria_produto.scp_desc),
+                                                          pd_codRef = g.Key, // Usa a chave do grupo
+                                                          pd_descCurta = g.Max(p => p.produto.pd_descCurta),
+                                                          pd_desc = g.Max(p => p.produto.pd_desc),
+                                                          pd_vlrUnComBase = g.Max(p => p.produto.pd_vlrUnComBase),
+                                                          pd_desat = g.Max(p => p.produto.pd_desat),
+                                                          pd_estTot = g.Max(p => p.produto.pd_estTot),
+                                                          mp_desc = g.Max(p => p.produto.fk_tb_marca_produto.mp_desc)
+                                                      };
 
-                e.QueryableSource = queryProdutoCadastradosAtivos;
+                e.QueryableSource = queryProdutoEstoqueMinimoAtivos;
+            }
+            catch (Exception exception)
+            {
+                MensagensDoSistema.MensagemErroOk($"Erro ao preencher tabela com produtos com estoque baixo e ativos: {exception}");
+            }
+        }
+
+        private void linqBuscarDadosProdutosEstoqueMaximoAtivos(object sender, GetQueryableEventArgs e)
+        {
+            try
+            {
+                Session session = new Session();
+
+                var queryProdutoEstoqueMaximoAtivos = from produto in session.Query<tb_produto>()
+                                                      join subcategoria in session.Query<tb_subcategoria_produto>()
+                                                          on produto.fk_tb_subcategoria_produto.id_subcategoria_produto equals subcategoria.id_subcategoria_produto
+                                                      join categoria in session.Query<tb_categoria_produto>()
+                                                          on subcategoria.fk_tb_categoria_produto.id_categoria_produto equals categoria.id_categoria_produto
+                                                      join marca in session.Query<tb_marca_produto>()
+                                                          on produto.fk_tb_marca_produto.id_marca_produto equals marca.id_marca_produto
+                                                      join produtoFilial in session.Query<tb_produto_filial>()
+                                                          on produto.id_produto equals produtoFilial.fk_tb_produto.id_produto
+                                                      where produto.pd_desat == 0 && produtoFilial.pf_est > produtoFilial.pf_estMax && produtoFilial.pf_estMax > 0
+                                                      group new { produto, produtoFilial } by produtoFilial.pf_codRef into g
+                                                      select new ProdutoEstoqueBaixoModel
+                                                      {
+                                                          id_produto = g.Max(p => p.produto.id_produto), // Usar Max ou Min para pegar um id válido
+                                                          cp_desc = g.Max(p => p.produto.fk_tb_subcategoria_produto.fk_tb_categoria_produto.cp_desc), // Pega o campo desejado
+                                                          scp_desc = g.Max(p => p.produto.fk_tb_subcategoria_produto.scp_desc),
+                                                          pd_codRef = g.Key, // Usa a chave do grupo
+                                                          pd_descCurta = g.Max(p => p.produto.pd_descCurta),
+                                                          pd_desc = g.Max(p => p.produto.pd_desc),
+                                                          pd_vlrUnComBase = g.Max(p => p.produto.pd_vlrUnComBase),
+                                                          pd_desat = g.Max(p => p.produto.pd_desat),
+                                                          pd_estTot = g.Max(p => p.produto.pd_estTot),
+                                                          mp_desc = g.Max(p => p.produto.fk_tb_marca_produto.mp_desc)
+                                                      };
+
+                e.QueryableSource = queryProdutoEstoqueMaximoAtivos;
             }
             catch (Exception exception)
             {

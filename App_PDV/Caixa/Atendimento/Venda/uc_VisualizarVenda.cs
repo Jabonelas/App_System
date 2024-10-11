@@ -17,16 +17,18 @@ using ServicoNFCe = Unimake.Business.DFe.Servicos.NFCe;
 using XmlNFe = Unimake.Business.DFe.Xml.NFe;
 
 using System.IO;
+using App_PDV.Caixa.Atendimento.Venda;
+using DevExpress.XtraReports.UI;
 
 namespace App_PDV
 {
     public partial class uc_VisualizarVenda : DevExpress.XtraEditors.XtraUserControl
     {
-        private frmTelaInicialPDV _frmTelaInicial;
+        private frmTelaInicialPDV _frmTelaInicial = null;
 
-        private tb_movimentacao movimentacao;
-        private tb_ator dadosEmitente;
-        private tb_pdv dadosPDV;
+        private tb_movimentacao movimentacao = null;
+        private tb_ator dadosEmitente = null;
+        private tb_pdv dadosPDV = null;
 
         private List<long> idMovimentacaoProdutos = new List<long>();
         private List<long> idMovimentoPagamento = new List<long>();
@@ -34,6 +36,11 @@ namespace App_PDV
         private int idMovimentacaoSelecionado = 0;
         private int numeroNota = 0;
         private int serie = 0;
+
+        private long idMovimentacaoCaixa = 0;
+        private string nomeVendedor = "";
+
+        private DateTime dataVenda = SNullDateTime;
 
         public uc_VisualizarVenda(frmTelaInicialPDV _form, int _idMovimentacao)
         {
@@ -1323,32 +1330,75 @@ namespace App_PDV
 
         private void btnReimprimirCupomFiscal_Click(object sender, EventArgs e)
         {
-            if (IsNfeExiste())
+            if (VariaveisGlobais.FilialLogada.at_nfeTipoAmb == 0)
             {
-                ReemprimirCupomFiscal();
+                BuscaDadosParaImpressaoCupomNaoFiscal();
+
+                GerarCupomNaoFiscal();
             }
             else
             {
-                PegarNumeroNota();
-
-                if (IsSefazEstavel())
+                if (IsNfeExiste())
                 {
-                    PegandoMovimentacao();
-
-                    PegandoMovimentacaoProduto();
-
-                    PegandoMovimentacaoPagamento();
-
-                    GerarNFCe();
+                    ReemprimirCupomFiscal();
                 }
                 else
                 {
-                    MensagensDoSistema.MensagemAtencaoOk("Estamos enfrentando uma instabilidade momentânea na conexão com a SEFAZ.");
+                    PegarNumeroNota();
+
+                    if (IsSefazEstavel())
+                    {
+                        PegandoMovimentacao();
+
+                        PegandoMovimentacaoProduto();
+
+                        PegandoMovimentacaoPagamento();
+
+                        GerarNFCe();
+                    }
+                    else
+                    {
+                        MensagensDoSistema.MensagemAtencaoOk("Estamos enfrentando uma instabilidade momentânea na conexão com a SEFAZ.");
+                    }
+                }
+                _frmTelaInicial.TelaVendasPDV();
+
+                this.Visible = false;
+            }
+        }
+
+        private void BuscaDadosParaImpressaoCupomNaoFiscal()
+        {
+            try
+            {
+                using (UnitOfWork uow = new UnitOfWork())
+                {
+                    idMovimentacaoCaixa = uow.Query<tb_movimentacao_caixa>()
+                        .Where(x => x.fk_tb_movimentacao.id_movimentacao == idMovimentacaoSelecionado)
+                        .Select(x => x.id_movimentacao_caixa)
+                        .FirstOrDefault();
+
+                    var dadosMovimentacao = uow.Query<tb_movimentacao>()
+                        .Where(x => x.id_movimentacao == idMovimentacaoSelecionado)
+                        .Select(x => new { x.fk_tb_ator_atend.at_razSoc, x.mv_dtCri })
+                        .FirstOrDefault();
+
+                    nomeVendedor = dadosMovimentacao.at_razSoc;
+                    dataVenda = dadosMovimentacao.mv_dtCri;
                 }
             }
-            _frmTelaInicial.TelaVendasPDV();
+            catch (Exception ex)
+            {
+                MensagensDoSistema.MensagemErroOk($"Erro ao buscar dados para o cupom não fiscal: {ex.Message}");
+            }
+        }
 
-            this.Visible = false;
+        private void GerarCupomNaoFiscal()
+        {
+            string nomeCliente = txtNomeCliente.Text;
+
+            rp_ImpressaoCupomNaoFiscal impressaoCupomNaoFiscal = new rp_ImpressaoCupomNaoFiscal(nomeCliente, nomeVendedor, idMovimentacaoSelecionado, idMovimentacaoCaixa, dataVenda);
+            impressaoCupomNaoFiscal.ShowPreview();
         }
 
         private void ReemprimirCupomFiscal()

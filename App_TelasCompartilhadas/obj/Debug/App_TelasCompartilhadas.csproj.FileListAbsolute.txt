@@ -158,3 +158,4 @@ C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_Tel
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.uc_MensagemConfirmacao.resources
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.Mensagens_Canto_Inferior_Direito.uc_MensagemEstoqueBaixo.resources
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.Mensagens_Canto_Inferior_Direito.uc_MensagemExclusao.resources
+C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.Mensagens_Canto_Inferior_Direito.uc_MensagemEstoqueMaximo.resources

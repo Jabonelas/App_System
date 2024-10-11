@@ -1421,12 +1421,12 @@ namespace App_PDV
             }
         }
 
-        private void GerarCupomNaoFiscal()
+        private void GerarCupomNaoFiscal(long _idMovimentacaoCaixa)
         {
             string nomeVendedor = cmbVendedor.Text;
             string nomeCliente = txtNomeCliente.Text;
 
-            rp_ImpressaoCupomNaoFiscal impressaoCupomNaoFiscal = new rp_ImpressaoCupomNaoFiscal(nomeCliente, nomeVendedor, movimentacao.id_movimentacao);
+            rp_ImpressaoCupomNaoFiscal impressaoCupomNaoFiscal = new rp_ImpressaoCupomNaoFiscal(nomeCliente, nomeVendedor, movimentacao.id_movimentacao, _idMovimentacaoCaixa, movimentacao.mv_dtCri);
             impressaoCupomNaoFiscal.ShowPreview();
         }
 
@@ -1458,16 +1458,18 @@ namespace App_PDV
 
             //AlterarEstoqueProduto();
 
-            PegarNumeroNota();
-
             TelaCarregamento.ExibirCarregamentoForm(this);
 
             if (VariaveisGlobais.FilialLogada.at_nfeTipoAmb == 0)
             {
-                GerarCupomNaoFiscal();
+                long idMovimentacaoCaixa = SalvarMovimentacaoCaixa();
+
+                GerarCupomNaoFiscal(idMovimentacaoCaixa);
             }
             else
             {
+                PegarNumeroNota();
+
                 if (IsSefazEstavel())
                 {
                     GerarNFCe();
@@ -1484,6 +1486,33 @@ namespace App_PDV
             _frmTelaInicial.TelaVendasPDV();
 
             this.Close();
+        }
+
+        private long SalvarMovimentacaoCaixa()
+        {
+            try
+            {
+                using (UnitOfWork uow = new UnitOfWork())
+                {
+                    tb_movimentacao _movimentacao = uow.GetObjectByKey<tb_movimentacao>(movimentacao.id_movimentacao);
+
+                    tb_movimentacao_caixa movimentacaoCaixa = new tb_movimentacao_caixa(uow);
+
+                    movimentacaoCaixa.mc_canc = 0;
+                    movimentacaoCaixa.fk_tb_movimentacao = _movimentacao;
+
+                    uow.Save(movimentacaoCaixa);
+                    uow.CommitChanges();
+
+                    return movimentacaoCaixa.id_movimentacao_caixa;
+                }
+            }
+            catch (Exception ex)
+            {
+                MensagensDoSistema.MensagemErroOk($"Erro ao salvar movimentação de caixa: {ex.Message}");
+
+                return 0;
+            }
         }
 
         private void BuscarDestinatario()
@@ -1505,7 +1534,7 @@ namespace App_PDV
                     }
                     else
                     {
-                        txtNomeCliente.Text = "Cliente não cadastrado!";
+                        txtNomeCliente.Text = "Cliente não cadastrado";
                     }
                 }
             }

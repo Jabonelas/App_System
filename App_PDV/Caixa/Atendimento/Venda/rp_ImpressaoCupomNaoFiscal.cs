@@ -10,16 +10,17 @@ namespace App_PDV.Caixa.Atendimento.Venda
     {
         private long idMovimentacao = 0;
 
-        public rp_ImpressaoCupomNaoFiscal(string _nomeCliente, string _nomeVendedor, long _idMovimentacao)
+        public rp_ImpressaoCupomNaoFiscal(string _nomeCliente, string _nomeVendedor, long _idMovimentacao, long _idMovimentacaoCaixa, DateTime _data)
         {
             InitializeComponent();
 
             PreencherCabecario();
 
             lblNomeVendedor.Text = _nomeVendedor;
+            lblNumeroVenda.Text = $"VENDA Nº 0{_idMovimentacaoCaixa}";
             lblNomeCliente.Text = _nomeCliente;
-            lblDataAtual.Text = DateTime.Now.ToString("dd/MM/yyyy");
-            lblHoraAtual.Text = DateTime.Now.ToString("HH:mm:ss");
+            lblDataAtual.Text = _data.ToString("dd/MM/yyyy");
+            lblHoraAtual.Text = _data.ToString("HH:mm:ss");
 
             idMovimentacao = _idMovimentacao;
 
