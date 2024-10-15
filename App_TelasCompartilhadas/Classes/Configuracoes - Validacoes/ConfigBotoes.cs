@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using DevExpress.Utils;
 using DevExpress.XtraEditors;
 using DevExpress.Utils.Svg;
 
@@ -32,6 +33,7 @@ namespace App_TelasCompartilhadas.Classes
 
             Image image = svgImage.Render(null);
 
+            button.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             button.ImageOptions.Image = image;
             button.ImageOptions.ImageToTextAlignment = ImageAlignToText.BottomCenter;
             button.ImageOptions.SvgImageSize = new Size(40, 40);
@@ -49,6 +51,7 @@ namespace App_TelasCompartilhadas.Classes
 
             Image image = svgImage.Render(null);
 
+            button.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             button.ImageOptions.Image = image;
             button.ImageOptions.ImageToTextAlignment = ImageAlignToText.BottomCenter;
             button.ImageOptions.SvgImageSize = new Size(40, 40);
@@ -66,6 +69,7 @@ namespace App_TelasCompartilhadas.Classes
 
             Image image = svgImage.Render(null);
 
+            button.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             button.ImageOptions.Image = image;
             button.ImageOptions.ImageToTextAlignment = ImageAlignToText.BottomCenter;
             button.ImageOptions.SvgImageSize = new Size(40, 40);
@@ -83,6 +87,7 @@ namespace App_TelasCompartilhadas.Classes
 
             Image image = svgImage.Render(null);
 
+            button.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             button.ImageOptions.Image = image;
             button.ImageOptions.ImageToTextAlignment = ImageAlignToText.BottomCenter;
             button.ImageOptions.SvgImageSize = new Size(40, 40);
@@ -100,6 +105,7 @@ namespace App_TelasCompartilhadas.Classes
 
             Image image = svgImage.Render(null);
 
+            button.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             button.ImageOptions.Image = image;
             button.ImageOptions.ImageToTextAlignment = ImageAlignToText.BottomCenter;
             button.ImageOptions.SvgImageSize = new Size(40, 40);
@@ -117,6 +123,7 @@ namespace App_TelasCompartilhadas.Classes
 
             Image image = svgImage.Render(null);
 
+            button.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             button.ImageOptions.Image = image;
             button.ImageOptions.ImageToTextAlignment = ImageAlignToText.BottomCenter;
             button.ImageOptions.SvgImageSize = new Size(40, 40);
@@ -134,6 +141,7 @@ namespace App_TelasCompartilhadas.Classes
 
             Image image = svgImage.Render(null);
 
+            button.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             button.ImageOptions.Image = image;
             button.ImageOptions.ImageToTextAlignment = ImageAlignToText.BottomCenter;
             button.ImageOptions.SvgImageSize = new Size(40, 40);
@@ -151,6 +159,7 @@ namespace App_TelasCompartilhadas.Classes
 
             Image image = svgImage.Render(null);
 
+            button.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             button.ImageOptions.Image = image;
             button.ImageOptions.ImageToTextAlignment = ImageAlignToText.BottomCenter;
             button.ImageOptions.SvgImageSize = new Size(40, 40);
@@ -168,6 +177,7 @@ namespace App_TelasCompartilhadas.Classes
 
             Image image = svgImage.Render(null);
 
+            button.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             button.ImageOptions.Image = image;
             button.ImageOptions.ImageToTextAlignment = ImageAlignToText.BottomCenter;
             button.ImageOptions.SvgImageSize = new Size(40, 40);
@@ -185,6 +195,7 @@ namespace App_TelasCompartilhadas.Classes
 
             Image image = svgImage.Render(null);
 
+            button.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             button.ImageOptions.Image = image;
             button.ImageOptions.ImageToTextAlignment = ImageAlignToText.BottomCenter;
             button.ImageOptions.SvgImageSize = new Size(40, 40);
@@ -202,6 +213,7 @@ namespace App_TelasCompartilhadas.Classes
 
             Image image = svgImage.Render(null);
 
+            button.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             button.ImageOptions.Image = image;
             button.ImageOptions.ImageToTextAlignment = ImageAlignToText.BottomCenter;
             button.ImageOptions.SvgImageSize = new Size(40, 40);
@@ -219,6 +231,7 @@ namespace App_TelasCompartilhadas.Classes
 
             Image image = svgImage.Render(null);
 
+            button.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             button.ImageOptions.Image = image;
             button.ImageOptions.ImageToTextAlignment = ImageAlignToText.BottomCenter;
             button.ImageOptions.SvgImageSize = new Size(40, 40);
@@ -236,6 +249,7 @@ namespace App_TelasCompartilhadas.Classes
 
             Image image = svgImage.Render(null);
 
+            button.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             button.ImageOptions.Image = image;
             button.ImageOptions.ImageToTextAlignment = ImageAlignToText.BottomCenter;
             button.ImageOptions.SvgImageSize = new Size(40, 40);
@@ -253,6 +267,7 @@ namespace App_TelasCompartilhadas.Classes
 
             Image image = svgImage.Render(null);
 
+            button.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             button.ImageOptions.Image = image;
             button.ImageOptions.ImageToTextAlignment = ImageAlignToText.BottomCenter;
             button.ImageOptions.SvgImageSize = new Size(40, 40);

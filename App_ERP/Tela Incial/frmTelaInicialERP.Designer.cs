@@ -117,6 +117,7 @@
             // 
             this.barStatusPDV.Caption = "PDV";
             this.barStatusPDV.Id = 1;
+            this.barStatusPDV.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.barStatusPDV.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStatusPDV.ImageOptions.SvgImage")));
             this.barStatusPDV.Name = "barStatusPDV";
             // 
@@ -124,6 +125,7 @@
             // 
             this.barStatusFilail.Caption = "Filial";
             this.barStatusFilail.Id = 2;
+            this.barStatusFilail.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.barStatusFilail.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStatusFilail.ImageOptions.SvgImage")));
             this.barStatusFilail.Name = "barStatusFilail";
             // 
@@ -131,6 +133,7 @@
             // 
             this.barStatusVendedor.Caption = "Vendedor";
             this.barStatusVendedor.Id = 3;
+            this.barStatusVendedor.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.barStatusVendedor.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStatusVendedor.ImageOptions.SvgImage")));
             this.barStatusVendedor.Name = "barStatusVendedor";
             // 
@@ -139,6 +142,7 @@
             this.barStatusUsuario.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
             this.barStatusUsuario.Caption = "Usuario";
             this.barStatusUsuario.Id = 4;
+            this.barStatusUsuario.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.barStatusUsuario.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStatusUsuario.ImageOptions.SvgImage")));
             this.barStatusUsuario.Name = "barStatusUsuario";
             // 
@@ -146,6 +150,7 @@
             // 
             this.btnCadastrarProduto.Caption = "Produto";
             this.btnCadastrarProduto.Id = 5;
+            this.btnCadastrarProduto.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.btnCadastrarProduto.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCadastrarProduto.ImageOptions.SvgImage")));
             this.btnCadastrarProduto.Name = "btnCadastrarProduto";
             this.btnCadastrarProduto.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCadastrarProduto_ItemClick);

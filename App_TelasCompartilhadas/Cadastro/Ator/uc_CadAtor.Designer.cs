@@ -31,16 +31,20 @@ namespace App_TelasCompartilhadas.Ator
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_CadAtor));
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.btnSalvar = new DevExpress.XtraEditors.SimpleButton();
             this.btnVoltar = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.txtCEP = new DevExpress.XtraEditors.ButtonEdit();
             this.cmbMatriz = new DevExpress.XtraEditors.LookUpEdit();
             this.cmbEstado = new DevExpress.XtraEditors.LookUpEdit();
             this.cmbMunicipio = new DevExpress.XtraEditors.LookUpEdit();
@@ -94,7 +98,6 @@ namespace App_TelasCompartilhadas.Ator
             this.layoutControlItem33 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem30 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem34 = new DevExpress.XtraLayout.LayoutControlItem();
             this.AbaFiscal = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -116,10 +119,13 @@ namespace App_TelasCompartilhadas.Ator
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.xtraOpenFileDialog1 = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
+            this.txtSenhaCertificadoDigital = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.txtCEP = new DevExpress.XtraEditors.ButtonEdit();
+            this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
             this.uc_TituloTelas1 = new App_TelasCompartilhadas.uc_TituloTelas();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCEP.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbMatriz.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbEstado.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbMunicipio.Properties)).BeginInit();
@@ -173,7 +179,6 @@ namespace App_TelasCompartilhadas.Ator
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem33)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem34)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AbaFiscal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
@@ -194,6 +199,10 @@ namespace App_TelasCompartilhadas.Ator
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSenhaCertificadoDigital.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCEP.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalvar
@@ -227,7 +236,6 @@ namespace App_TelasCompartilhadas.Ator
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.txtCEP);
             this.layoutControl1.Controls.Add(this.cmbMatriz);
             this.layoutControl1.Controls.Add(this.cmbEstado);
             this.layoutControl1.Controls.Add(this.cmbMunicipio);
@@ -259,6 +267,8 @@ namespace App_TelasCompartilhadas.Ator
             this.layoutControl1.Controls.Add(this.txtTokenCodSegContProd);
             this.layoutControl1.Controls.Add(this.txtNumeroEnd);
             this.layoutControl1.Controls.Add(this.txtMetaMensal);
+            this.layoutControl1.Controls.Add(this.txtSenhaCertificadoDigital);
+            this.layoutControl1.Controls.Add(this.txtCEP);
             this.layoutControl1.Location = new System.Drawing.Point(-3, 95);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1289, 477, 650, 400);
@@ -266,29 +276,6 @@ namespace App_TelasCompartilhadas.Ator
             this.layoutControl1.Size = new System.Drawing.Size(1267, 422);
             this.layoutControl1.TabIndex = 48;
             this.layoutControl1.Text = "layoutControl1";
-            // 
-            // txtCEP
-            // 
-            this.txtCEP.Location = new System.Drawing.Point(36, 136);
-            this.txtCEP.Name = "txtCEP";
-            editorButtonImageOptions1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions1.SvgImage")));
-            this.txtCEP.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.txtCEP.Properties.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("txtCEP.Properties.ContextImageOptions.Image")));
-            this.txtCEP.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
-            this.txtCEP.Properties.MaskSettings.Set("MaskManagerSignature", "ignoreMaskBlank=True");
-            this.txtCEP.Properties.MaskSettings.Set("mask", "00000-000");
-            this.txtCEP.Properties.ButtonPressed += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtCEP_Properties_ButtonPressed);
-            this.txtCEP.Properties.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.buttonEdit1_Properties_KeyPress);
-            this.txtCEP.Properties.Validating += new System.ComponentModel.CancelEventHandler(this.buttonEdit1_Properties_Validating);
-            this.txtCEP.Size = new System.Drawing.Size(194, 20);
-            this.txtCEP.StyleController = this.layoutControl1;
-            this.txtCEP.TabIndex = 33;
-            this.txtCEP.ToolTip = "Informe o CEP para ajudar na identificação do endereço.  Este é o código postal p" +
-    "ara identificar sua localização.";
-            this.txtCEP.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.txtCEP.ToolTipTitle = "C.E.P. (Código de Endereçamento Postal):";
-            this.txtCEP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCEP_KeyPress);
             // 
             // cmbMatriz
             // 
@@ -308,14 +295,14 @@ namespace App_TelasCompartilhadas.Ator
             // 
             // cmbEstado
             // 
-            this.cmbEstado.Location = new System.Drawing.Point(1129, 136);
+            this.cmbEstado.Location = new System.Drawing.Point(1100, 136);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbEstado.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("eb_sigla", "Sigla"),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("eb_nome", "Nome")});
-            this.cmbEstado.Size = new System.Drawing.Size(102, 20);
+            this.cmbEstado.Size = new System.Drawing.Size(131, 20);
             this.cmbEstado.StyleController = this.layoutControl1;
             this.cmbEstado.TabIndex = 13;
             this.cmbEstado.ToolTip = "Informe a sigla do estado onde o endereço está localizado. ";
@@ -324,13 +311,13 @@ namespace App_TelasCompartilhadas.Ator
             // 
             // cmbMunicipio
             // 
-            this.cmbMunicipio.Location = new System.Drawing.Point(962, 136);
+            this.cmbMunicipio.Location = new System.Drawing.Point(951, 136);
             this.cmbMunicipio.Name = "cmbMunicipio";
             this.cmbMunicipio.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbMunicipio.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("mu_nome", "Nome")});
-            this.cmbMunicipio.Size = new System.Drawing.Size(163, 20);
+            this.cmbMunicipio.Size = new System.Drawing.Size(145, 20);
             this.cmbMunicipio.StyleController = this.layoutControl1;
             this.cmbMunicipio.TabIndex = 13;
             this.cmbMunicipio.ToolTip = "Informe o nome do município onde o endereço está localizado. O município é a cida" +
@@ -410,10 +397,10 @@ namespace App_TelasCompartilhadas.Ator
             // 
             // txtEndereco
             // 
-            this.txtEndereco.Location = new System.Drawing.Point(234, 136);
+            this.txtEndereco.Location = new System.Drawing.Point(222, 136);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Properties.MaxLength = 200;
-            this.txtEndereco.Size = new System.Drawing.Size(471, 20);
+            this.txtEndereco.Size = new System.Drawing.Size(466, 20);
             this.txtEndereco.StyleController = this.layoutControl1;
             this.txtEndereco.TabIndex = 14;
             this.txtEndereco.ToolTip = "Informe o nome da rua, avenida, ou outro tipo de logradouro.";
@@ -422,10 +409,10 @@ namespace App_TelasCompartilhadas.Ator
             // 
             // txtBairro
             // 
-            this.txtBairro.Location = new System.Drawing.Point(780, 136);
+            this.txtBairro.Location = new System.Drawing.Point(760, 136);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Properties.MaxLength = 50;
-            this.txtBairro.Size = new System.Drawing.Size(178, 20);
+            this.txtBairro.Size = new System.Drawing.Size(187, 20);
             this.txtBairro.StyleController = this.layoutControl1;
             this.txtBairro.TabIndex = 14;
             this.txtBairro.ToolTip = "Informe o nome do bairro onde o imóvel está localizado. Isso ajuda a identificar " +
@@ -523,6 +510,8 @@ namespace App_TelasCompartilhadas.Ator
             // 
             this.txtEmailContabilidade.Location = new System.Drawing.Point(303, 216);
             this.txtEmailContabilidade.Name = "txtEmailContabilidade";
+            this.txtEmailContabilidade.Properties.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.txtEmailContabilidade.Properties.ContextImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.txtEmailContabilidade.Properties.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("txtEmailContabilidade.Properties.ContextImageOptions.Image")));
             this.txtEmailContabilidade.Size = new System.Drawing.Size(928, 20);
             this.txtEmailContabilidade.StyleController = this.layoutControl1;
@@ -578,8 +567,13 @@ namespace App_TelasCompartilhadas.Ator
             // 
             this.btnArquivoCertDig.Location = new System.Drawing.Point(36, 176);
             this.btnArquivoCertDig.Name = "btnArquivoCertDig";
+            this.btnArquivoCertDig.Properties.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            editorButtonImageOptions1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions1.SvgImage")));
             this.btnArquivoCertDig.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Search, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.btnArquivoCertDig.Properties.ContextImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.btnArquivoCertDig.Properties.ContextImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnArquivoCertDig.Properties.ContextImageOptions.SvgImage")));
+            this.btnArquivoCertDig.Properties.ContextImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.btnArquivoCertDig.Properties.ButtonPressed += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnArquivoCertDig_Properties_ButtonPressed);
             this.btnArquivoCertDig.Size = new System.Drawing.Size(1195, 20);
             this.btnArquivoCertDig.StyleController = this.layoutControl1;
@@ -609,6 +603,8 @@ namespace App_TelasCompartilhadas.Ator
             // 
             this.txtTelFixo.Location = new System.Drawing.Point(36, 136);
             this.txtTelFixo.Name = "txtTelFixo";
+            this.txtTelFixo.Properties.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.txtTelFixo.Properties.ContextImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.txtTelFixo.Properties.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("txtTelFixo.Properties.ContextImageOptions.Image")));
             this.txtTelFixo.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
             this.txtTelFixo.Properties.MaskSettings.Set("MaskManagerSignature", "ignoreMaskBlank=True");
@@ -624,6 +620,8 @@ namespace App_TelasCompartilhadas.Ator
             // 
             this.txtTelCel.Location = new System.Drawing.Point(273, 136);
             this.txtTelCel.Name = "txtTelCel";
+            this.txtTelCel.Properties.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.txtTelCel.Properties.ContextImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.txtTelCel.Properties.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("txtTelCel.Properties.ContextImageOptions.Image")));
             this.txtTelCel.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
             this.txtTelCel.Properties.MaskSettings.Set("MaskManagerSignature", "ignoreMaskBlank=True");
@@ -640,6 +638,8 @@ namespace App_TelasCompartilhadas.Ator
             // 
             this.txtEmail.Location = new System.Drawing.Point(512, 136);
             this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Properties.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.txtEmail.Properties.ContextImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.txtEmail.Properties.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("txtEmail.Properties.ContextImageOptions.Image")));
             this.txtEmail.Properties.MaxLength = 100;
             this.txtEmail.Size = new System.Drawing.Size(719, 20);
@@ -694,9 +694,9 @@ namespace App_TelasCompartilhadas.Ator
             // 
             // txtNumeroEnd
             // 
-            this.txtNumeroEnd.Location = new System.Drawing.Point(709, 136);
+            this.txtNumeroEnd.Location = new System.Drawing.Point(692, 136);
             this.txtNumeroEnd.Name = "txtNumeroEnd";
-            this.txtNumeroEnd.Size = new System.Drawing.Size(67, 20);
+            this.txtNumeroEnd.Size = new System.Drawing.Size(64, 20);
             this.txtNumeroEnd.StyleController = this.layoutControl1;
             this.txtNumeroEnd.TabIndex = 32;
             this.txtNumeroEnd.ToolTip = "Digite o número do imóvel, que é o complemento do logradouro, para identificar a " +
@@ -884,7 +884,7 @@ namespace App_TelasCompartilhadas.Ator
             this.layoutControlItem33,
             this.layoutControlItem30,
             this.layoutControlItem10,
-            this.layoutControlItem34});
+            this.layoutControlItem25});
             this.layoutControlGroup7.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup7.Name = "layoutControlGroup7";
             this.layoutControlGroup7.Size = new System.Drawing.Size(1199, 270);
@@ -895,9 +895,9 @@ namespace App_TelasCompartilhadas.Ator
             this.layoutControlItem11.Control = this.txtEndereco;
             this.layoutControlItem11.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem11.CustomizationFormText = "layoutControlItem9";
-            this.layoutControlItem11.Location = new System.Drawing.Point(198, 0);
+            this.layoutControlItem11.Location = new System.Drawing.Point(186, 0);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(475, 40);
+            this.layoutControlItem11.Size = new System.Drawing.Size(470, 40);
             this.layoutControlItem11.Text = "Endereço";
             this.layoutControlItem11.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem11.TextSize = new System.Drawing.Size(182, 13);
@@ -919,11 +919,11 @@ namespace App_TelasCompartilhadas.Ator
             this.layoutControlItem13.Control = this.txtBairro;
             this.layoutControlItem13.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem13.CustomizationFormText = "layoutControlItem9";
-            this.layoutControlItem13.Location = new System.Drawing.Point(744, 0);
+            this.layoutControlItem13.Location = new System.Drawing.Point(724, 0);
             this.layoutControlItem13.MaxSize = new System.Drawing.Size(0, 40);
             this.layoutControlItem13.MinSize = new System.Drawing.Size(100, 40);
             this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(182, 40);
+            this.layoutControlItem13.Size = new System.Drawing.Size(191, 40);
             this.layoutControlItem13.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem13.Text = "Bairro";
             this.layoutControlItem13.TextLocation = DevExpress.Utils.Locations.Top;
@@ -932,11 +932,11 @@ namespace App_TelasCompartilhadas.Ator
             // layoutControlItem33
             // 
             this.layoutControlItem33.Control = this.cmbMunicipio;
-            this.layoutControlItem33.Location = new System.Drawing.Point(926, 0);
+            this.layoutControlItem33.Location = new System.Drawing.Point(915, 0);
             this.layoutControlItem33.MaxSize = new System.Drawing.Size(0, 40);
             this.layoutControlItem33.MinSize = new System.Drawing.Size(100, 40);
             this.layoutControlItem33.Name = "layoutControlItem33";
-            this.layoutControlItem33.Size = new System.Drawing.Size(167, 40);
+            this.layoutControlItem33.Size = new System.Drawing.Size(149, 40);
             this.layoutControlItem33.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem33.Text = "Município";
             this.layoutControlItem33.TextLocation = DevExpress.Utils.Locations.Top;
@@ -945,11 +945,11 @@ namespace App_TelasCompartilhadas.Ator
             // layoutControlItem30
             // 
             this.layoutControlItem30.Control = this.cmbEstado;
-            this.layoutControlItem30.Location = new System.Drawing.Point(1093, 0);
+            this.layoutControlItem30.Location = new System.Drawing.Point(1064, 0);
             this.layoutControlItem30.MaxSize = new System.Drawing.Size(0, 40);
             this.layoutControlItem30.MinSize = new System.Drawing.Size(100, 40);
             this.layoutControlItem30.Name = "layoutControlItem30";
-            this.layoutControlItem30.Size = new System.Drawing.Size(106, 40);
+            this.layoutControlItem30.Size = new System.Drawing.Size(135, 40);
             this.layoutControlItem30.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem30.Text = "Estado";
             this.layoutControlItem30.TextLocation = DevExpress.Utils.Locations.Top;
@@ -958,25 +958,15 @@ namespace App_TelasCompartilhadas.Ator
             // layoutControlItem10
             // 
             this.layoutControlItem10.Control = this.txtNumeroEnd;
-            this.layoutControlItem10.Location = new System.Drawing.Point(673, 0);
+            this.layoutControlItem10.Location = new System.Drawing.Point(656, 0);
             this.layoutControlItem10.MaxSize = new System.Drawing.Size(0, 40);
             this.layoutControlItem10.MinSize = new System.Drawing.Size(50, 20);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(71, 40);
+            this.layoutControlItem10.Size = new System.Drawing.Size(68, 40);
             this.layoutControlItem10.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem10.Text = "Número";
             this.layoutControlItem10.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem10.TextSize = new System.Drawing.Size(182, 13);
-            // 
-            // layoutControlItem34
-            // 
-            this.layoutControlItem34.Control = this.txtCEP;
-            this.layoutControlItem34.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem34.Name = "layoutControlItem34";
-            this.layoutControlItem34.Size = new System.Drawing.Size(198, 40);
-            this.layoutControlItem34.Text = "C.E.P.";
-            this.layoutControlItem34.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem34.TextSize = new System.Drawing.Size(182, 13);
             // 
             // AbaFiscal
             // 
@@ -1146,7 +1136,8 @@ namespace App_TelasCompartilhadas.Ator
             // 
             this.AbaRFB.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem19,
-            this.layoutControlItem6});
+            this.layoutControlItem6,
+            this.layoutControlItem9});
             this.AbaRFB.Location = new System.Drawing.Point(0, 0);
             this.AbaRFB.Name = "AbaRFB";
             this.AbaRFB.Size = new System.Drawing.Size(1199, 270);
@@ -1158,7 +1149,7 @@ namespace App_TelasCompartilhadas.Ator
             this.layoutControlItem19.Control = this.btnArquivoCertDig;
             this.layoutControlItem19.Location = new System.Drawing.Point(0, 40);
             this.layoutControlItem19.Name = "layoutControlItem19";
-            this.layoutControlItem19.Size = new System.Drawing.Size(1199, 230);
+            this.layoutControlItem19.Size = new System.Drawing.Size(1199, 40);
             this.layoutControlItem19.Text = "Arquivo de certificado digital (PFX)";
             this.layoutControlItem19.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem19.TextSize = new System.Drawing.Size(182, 13);
@@ -1207,6 +1198,54 @@ namespace App_TelasCompartilhadas.Ator
             // 
             this.xtraOpenFileDialog1.FileName = "xtraOpenFileDialog1";
             // 
+            // txtSenhaCertificadoDigital
+            // 
+            this.txtSenhaCertificadoDigital.Location = new System.Drawing.Point(36, 216);
+            this.txtSenhaCertificadoDigital.Name = "txtSenhaCertificadoDigital";
+            this.txtSenhaCertificadoDigital.Size = new System.Drawing.Size(1195, 20);
+            this.txtSenhaCertificadoDigital.StyleController = this.layoutControl1;
+            this.txtSenhaCertificadoDigital.TabIndex = 35;
+            // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.Control = this.txtSenhaCertificadoDigital;
+            this.layoutControlItem9.Location = new System.Drawing.Point(0, 80);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(1199, 190);
+            this.layoutControlItem9.Text = "Senha certificado digital";
+            this.layoutControlItem9.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(182, 13);
+            // 
+            // txtCEP
+            // 
+            this.txtCEP.Location = new System.Drawing.Point(36, 136);
+            this.txtCEP.Name = "txtCEP";
+            this.txtCEP.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Search, "cep", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.txtCEP.Properties.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("buttonEdit1.Properties.ContextImageOptions.Image")));
+            this.txtCEP.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
+            this.txtCEP.Properties.MaskSettings.Set("mask", "00000-000");
+            this.txtCEP.Properties.ButtonPressed += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit1_Properties_ButtonPressed);
+            this.txtCEP.Properties.Validating += new System.ComponentModel.CancelEventHandler(this.buttonEdit1_Properties_Validating_1);
+            this.txtCEP.Size = new System.Drawing.Size(182, 20);
+            this.txtCEP.StyleController = this.layoutControl1;
+            this.txtCEP.TabIndex = 36;
+            this.txtCEP.ToolTip = "Informe o CEP para ajudar na identificação do endereço.  Este é o código postal p" +
+    "ara identificar sua localização.";
+            this.txtCEP.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.txtCEP.ToolTipTitle = "C.E.P. (Código de Endereçamento Postal):";
+            this.txtCEP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCEP_KeyPress_1);
+            // 
+            // layoutControlItem25
+            // 
+            this.layoutControlItem25.Control = this.txtCEP;
+            this.layoutControlItem25.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem25.Name = "layoutControlItem25";
+            this.layoutControlItem25.Size = new System.Drawing.Size(186, 40);
+            this.layoutControlItem25.Text = "C.E.P.";
+            this.layoutControlItem25.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem25.TextSize = new System.Drawing.Size(182, 13);
+            // 
             // uc_TituloTelas1
             // 
             this.uc_TituloTelas1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -1228,7 +1267,6 @@ namespace App_TelasCompartilhadas.Ator
             this.Load += new System.EventHandler(this.uc_CadAtor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtCEP.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbMatriz.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbEstado.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbMunicipio.Properties)).EndInit();
@@ -1282,7 +1320,6 @@ namespace App_TelasCompartilhadas.Ator
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem33)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem34)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AbaFiscal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
@@ -1303,6 +1340,10 @@ namespace App_TelasCompartilhadas.Ator
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSenhaCertificadoDigital.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCEP.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1312,7 +1353,6 @@ namespace App_TelasCompartilhadas.Ator
         private DevExpress.XtraEditors.SimpleButton btnSalvar;
         private DevExpress.XtraEditors.SimpleButton btnVoltar;
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
-        private DevExpress.XtraEditors.ButtonEdit txtCEP;
         private DevExpress.XtraEditors.LookUpEdit cmbMatriz;
         private DevExpress.XtraEditors.LookUpEdit cmbEstado;
         private DevExpress.XtraEditors.LookUpEdit cmbMunicipio;
@@ -1379,7 +1419,6 @@ namespace App_TelasCompartilhadas.Ator
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem33;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem30;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem34;
         private DevExpress.XtraLayout.LayoutControlGroup AbaRFB;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem19;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
@@ -1389,5 +1428,9 @@ namespace App_TelasCompartilhadas.Ator
         private uc_TituloTelas uc_TituloTelas1;
         private DevExpress.XtraEditors.TextEdit txtMetaMensal;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.XtraEditors.TextEdit txtSenhaCertificadoDigital;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
+        private DevExpress.XtraEditors.ButtonEdit txtCEP;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem25;
     }
 }

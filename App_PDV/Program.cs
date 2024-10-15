@@ -40,6 +40,7 @@ namespace App_PDV
                 "Seven Classic",
                 "Sharp Plus"
             };
+
             var skinContainerList = SkinManager.Default.Skins;
             for (int i = skinContainerList.Count - 1; i >= 0; i--)
             {

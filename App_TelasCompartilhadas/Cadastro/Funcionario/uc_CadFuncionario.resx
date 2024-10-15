@@ -120,34 +120,6 @@
   <data name="cmbMatriz.ToolTip" xml:space="preserve">
     <value>Selecione a identificação da matriz da empresa. Escolha a matriz que representa a sede principal ou unidade principal de operação da empresa. Esta informação é essencial para organizar e gerenciar as operações corporativas.</value>
   </data>
-  <assembly alias="DevExpress.Data.v23.1" name="DevExpress.Data.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-  <data name="editorButtonImageOptions1.SvgImage" type="DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v23.1" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFlEZXZFeHByZXNzLkRhdGEudjIzLjEsIFZlcnNpb249MjMuMS41
-        LjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjg4ZDE3NTRkNzAwZTQ5YQUBAAAAHURl
-        dkV4cHJlc3MuVXRpbHMuU3ZnLlN2Z0ltYWdlAQAAAAREYXRhBwICAAAACQMAAAAPAwAAAJUEAAAC77u/
-        PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz4NCjxzdmcgd2lkdGg9IjE2cHgiIGhl
-        aWdodD0iMTZweCIgdmlld0JveD0iMCAwIDI2IDI2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAw
-        MC9zdmciPg0KICA8cGF0aCBkPSJNMTAgMC4xODc1QzQuNTc4MTI1IDAuMTg3NSAwLjE4NzUgNC41Nzgx
-        MjUgMC4xODc1IDEwQzAuMTg3NSAxNS40MjE4NzUgNC41NzgxMjUgMTkuODEyNSAxMCAxOS44MTI1QzEy
-        LjI4OTA2MyAxOS44MTI1IDE0LjM5NDUzMSAxOS4wMDM5MDYgMTYuMDYyNSAxNy42ODc1TDE2LjkzNzUg
-        MTguNTYyNUMxNi41NzAzMTMgMTkuMjUzOTA2IDE2LjY5OTIxOSAyMC4xMzY3MTkgMTcuMjgxMjUgMjAu
-        NzE4NzVMMjEuODc1IDI1LjM0Mzc1QzIyLjU4OTg0NCAyNi4wNTg1OTQgMjMuNzUzOTA2IDI2LjA1ODU5
-        NCAyNC40Njg3NSAyNS4zNDM3NUwyNS4zNDM3NSAyNC40Njg3NUMyNi4wNTg1OTQgMjMuNzUzOTA2IDI2
-        LjA1ODU5NCAyMi41ODk4NDQgMjUuMzQzNzUgMjEuODc1TDIwLjcxODc1IDE3LjI4MTI1QzIwLjEzMjgx
-        MyAxNi42OTUzMTMgMTkuMjUzOTA2IDE2LjU5Mzc1IDE4LjU2MjUgMTYuOTY4NzVMMTcuNjg3NSAxNi4w
-        OTM3NUMxOS4wMTE3MTkgMTQuNDIxODc1IDE5LjgxMjUgMTIuMzAwNzgxIDE5LjgxMjUgMTBDMTkuODEy
-        NSA0LjU3ODEyNSAxNS40MjE4NzUgMC4xODc1IDEwIDAuMTg3NSBaIE0gMTAgMkMxNC40MTc5NjkgMiAx
-        OCA1LjU4MjAzMSAxOCAxMEMxOCAxNC40MTc5NjkgMTQuNDE3OTY5IDE4IDEwIDE4QzUuNTgyMDMxIDE4
-        IDIgMTQuNDE3OTY5IDIgMTBDMiA1LjU4MjAzMSA1LjU4MjAzMSAyIDEwIDIgWiBNIDQuOTM3NSA3LjQ2
-        ODc1QzQuNDIxODc1IDguMzA0Njg4IDQuMTI1IDkuMjg5MDYzIDQuMTI1IDEwLjM0Mzc1QzQuMTI1IDEz
-        LjM3MTA5NCA2LjU2NjQwNiAxNS44MTI1IDkuNTkzNzUgMTUuODEyNUMxMC43NjE3MTkgMTUuODEyNSAx
-        MS44NTkzNzUgMTUuNDMzNTk0IDEyLjc1IDE0LjgxMjVDMTIuNTExNzE5IDE0LjgzOTg0NCAxMi4yNDYw
-        OTQgMTQuODQzNzUgMTIgMTQuODQzNzVDOC4wODU5MzggMTQuODQzNzUgNC45Mzc1IDExLjY5NTMxMyA0
-        LjkzNzUgNy43ODEyNUM0LjkzNzUgNy42NzU3ODEgNC45MzM1OTQgNy41NzQyMTkgNC45Mzc1IDcuNDY4
-        NzVaIiBmaWxsPSIjMEYwRjExIiAvPg0KPC9zdmc+Cw==
-</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="txtCEP.Properties.ContextImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

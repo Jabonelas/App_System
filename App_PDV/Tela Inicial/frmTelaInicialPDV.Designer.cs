@@ -180,6 +180,7 @@
             // 
             this.barStatusFilail.Caption = "Filial";
             this.barStatusFilail.Id = 11;
+            this.barStatusFilail.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.barStatusFilail.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStatusFilail.ImageOptions.SvgImage")));
             this.barStatusFilail.Name = "barStatusFilail";
             // 
@@ -188,6 +189,7 @@
             this.barStatusUsuario.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
             this.barStatusUsuario.Caption = "Usuario";
             this.barStatusUsuario.Id = 12;
+            this.barStatusUsuario.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.barStatusUsuario.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStatusUsuario.ImageOptions.SvgImage")));
             this.barStatusUsuario.Name = "barStatusUsuario";
             // 
@@ -195,6 +197,7 @@
             // 
             this.barStatusVendedor.Caption = "Vendedor";
             this.barStatusVendedor.Id = 13;
+            this.barStatusVendedor.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.barStatusVendedor.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStatusVendedor.ImageOptions.SvgImage")));
             this.barStatusVendedor.Name = "barStatusVendedor";
             // 
@@ -249,6 +252,7 @@
             // 
             this.barStatusPDV.Caption = "PDV";
             this.barStatusPDV.Id = 20;
+            this.barStatusPDV.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.barStatusPDV.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStatusPDV.ImageOptions.SvgImage")));
             this.barStatusPDV.Name = "barStatusPDV";
             // 

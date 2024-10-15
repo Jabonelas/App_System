@@ -40,6 +40,7 @@
             this.btnVoltar = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.cmbMatriz = new DevExpress.XtraEditors.LookUpEdit();
+            this.txtConfirmarSenha = new DevExpress.UITemplates.Collection.Editors.PasswordBox();
             this.cmbNivelAcesso = new DevExpress.XtraEditors.LookUpEdit();
             this.txtNomeCompl = new DevExpress.XtraEditors.TextEdit();
             this.txtNomeUsuario = new DevExpress.XtraEditors.TextEdit();
@@ -55,17 +56,18 @@
             this.txtTelFixo = new DevExpress.XtraEditors.TextEdit();
             this.txtTelCel = new DevExpress.XtraEditors.TextEdit();
             this.txtEmail = new DevExpress.XtraEditors.TextEdit();
+            this.txtSenha = new DevExpress.UITemplates.Collection.Editors.PasswordBox();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
-            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem26 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup5 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem28 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem29 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem31 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem26 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -77,16 +79,15 @@
             this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup8 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.uc_TituloTelas1 = new App_TelasCompartilhadas.uc_TituloTelas();
-            this.txtConfirmarSenha = new DevExpress.UITemplates.Collection.Editors.PasswordBox();
-            this.txtSenha = new DevExpress.UITemplates.Collection.Editors.PasswordBox();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbMatriz.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtConfirmarSenha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbNivelAcesso.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNomeCompl.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNomeUsuario.Properties)).BeginInit();
@@ -102,17 +103,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTelFixo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelCel.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSenha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem28)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
@@ -124,12 +126,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtConfirmarSenha)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSenha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup8)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalvar
@@ -206,6 +206,21 @@
             this.cmbMatriz.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.cmbMatriz.ToolTipTitle = "Matriz:";
             // 
+            // txtConfirmarSenha
+            // 
+            this.txtConfirmarSenha.FooterLabel = "";
+            this.txtConfirmarSenha.Location = new System.Drawing.Point(635, 176);
+            this.txtConfirmarSenha.Name = "txtConfirmarSenha";
+            this.txtConfirmarSenha.ShowStrengthIndicator = true;
+            this.txtConfirmarSenha.Size = new System.Drawing.Size(596, 22);
+            this.txtConfirmarSenha.StyleController = this.layoutControl1;
+            this.txtConfirmarSenha.TabIndex = 27;
+            this.txtConfirmarSenha.ToolTip = "Digite novamente a senha para confirmar. Certifique-se de que as senhas correspon" +
+    "dem para concluir o cadastro com sucesso.";
+            this.txtConfirmarSenha.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.txtConfirmarSenha.ToolTipTitle = "Confirmar Senha:";
+            this.txtConfirmarSenha.Validating += new System.ComponentModel.CancelEventHandler(this.txtConfirmarSenha_Validating_1);
+            // 
             // cmbNivelAcesso
             // 
             this.cmbNivelAcesso.Location = new System.Drawing.Point(635, 136);
@@ -275,7 +290,7 @@
             this.txtNumeroEnd.Location = new System.Drawing.Point(739, 136);
             this.txtNumeroEnd.Name = "txtNumeroEnd";
             this.txtNumeroEnd.Properties.MaxLength = 10;
-            this.txtNumeroEnd.Size = new System.Drawing.Size(79, 20);
+            this.txtNumeroEnd.Size = new System.Drawing.Size(93, 20);
             this.txtNumeroEnd.StyleController = this.layoutControl1;
             this.txtNumeroEnd.TabIndex = 14;
             this.txtNumeroEnd.ToolTip = "Digite o número do imóvel, que é o complemento do logradouro, para identificar a " +
@@ -285,10 +300,10 @@
             // 
             // txtBairro
             // 
-            this.txtBairro.Location = new System.Drawing.Point(822, 136);
+            this.txtBairro.Location = new System.Drawing.Point(836, 136);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Properties.MaxLength = 50;
-            this.txtBairro.Size = new System.Drawing.Size(155, 20);
+            this.txtBairro.Size = new System.Drawing.Size(150, 20);
             this.txtBairro.StyleController = this.layoutControl1;
             this.txtBairro.TabIndex = 14;
             this.txtBairro.ToolTip = "Informe o nome do bairro onde o imóvel está localizado. Isso ajuda a identificar " +
@@ -298,13 +313,13 @@
             // 
             // cmbMunicipio
             // 
-            this.cmbMunicipio.Location = new System.Drawing.Point(981, 136);
+            this.cmbMunicipio.Location = new System.Drawing.Point(990, 136);
             this.cmbMunicipio.Name = "cmbMunicipio";
             this.cmbMunicipio.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbMunicipio.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("mu_nome", "Nome")});
-            this.cmbMunicipio.Size = new System.Drawing.Size(123, 20);
+            this.cmbMunicipio.Size = new System.Drawing.Size(118, 20);
             this.cmbMunicipio.StyleController = this.layoutControl1;
             this.cmbMunicipio.TabIndex = 13;
             this.cmbMunicipio.ToolTip = "Informe o nome do município onde o endereço está localizado. O município é a cida" +
@@ -314,14 +329,14 @@
             // 
             // cmbEstado
             // 
-            this.cmbEstado.Location = new System.Drawing.Point(1108, 136);
+            this.cmbEstado.Location = new System.Drawing.Point(1112, 136);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbEstado.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("eb_sigla", "Sigla"),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("eb_nome", "Nome")});
-            this.cmbEstado.Size = new System.Drawing.Size(123, 20);
+            this.cmbEstado.Size = new System.Drawing.Size(119, 20);
             this.cmbEstado.StyleController = this.layoutControl1;
             this.cmbEstado.TabIndex = 13;
             this.cmbEstado.ToolTip = "Informe a sigla do estado onde o endereço está localizado. ";
@@ -332,10 +347,13 @@
             // 
             this.txtCEP.Location = new System.Drawing.Point(36, 136);
             this.txtCEP.Name = "txtCEP";
-            editorButtonImageOptions1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions1.SvgImage")));
+            this.txtCEP.Properties.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            editorButtonImageOptions1.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.txtCEP.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Search, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.txtCEP.Properties.ContextImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.txtCEP.Properties.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("txtCEP.Properties.ContextImageOptions.Image")));
+            this.txtCEP.Properties.ContextImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.txtCEP.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
             this.txtCEP.Properties.MaskSettings.Set("MaskManagerSignature", "ignoreMaskBlank=True");
             this.txtCEP.Properties.MaskSettings.Set("mask", "00000-000");
@@ -384,6 +402,8 @@
             // 
             this.txtTelFixo.Location = new System.Drawing.Point(36, 136);
             this.txtTelFixo.Name = "txtTelFixo";
+            this.txtTelFixo.Properties.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.txtTelFixo.Properties.ContextImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.txtTelFixo.Properties.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("txtTelFixo.Properties.ContextImageOptions.Image")));
             this.txtTelFixo.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
             this.txtTelFixo.Properties.MaskSettings.Set("MaskManagerSignature", "ignoreMaskBlank=True");
@@ -399,6 +419,8 @@
             // 
             this.txtTelCel.Location = new System.Drawing.Point(300, 136);
             this.txtTelCel.Name = "txtTelCel";
+            this.txtTelCel.Properties.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.txtTelCel.Properties.ContextImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.txtTelCel.Properties.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("txtTelCel.Properties.ContextImageOptions.Image")));
             this.txtTelCel.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
             this.txtTelCel.Properties.MaskSettings.Set("MaskManagerSignature", "ignoreMaskBlank=True");
@@ -415,6 +437,8 @@
             // 
             this.txtEmail.Location = new System.Drawing.Point(606, 136);
             this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Properties.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.txtEmail.Properties.ContextImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.txtEmail.Properties.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("txtEmail.Properties.ContextImageOptions.Image")));
             this.txtEmail.Properties.MaxLength = 100;
             this.txtEmail.Size = new System.Drawing.Size(625, 20);
@@ -425,6 +449,20 @@
             this.txtEmail.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.txtEmail.ToolTipTitle = "E-mail:";
             this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
+            // 
+            // txtSenha
+            // 
+            this.txtSenha.FooterLabel = "A senha deve ter no mínimo 8 caracteres.";
+            this.txtSenha.Location = new System.Drawing.Point(36, 176);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.ShowStrengthIndicator = true;
+            this.txtSenha.Size = new System.Drawing.Size(595, 34);
+            this.txtSenha.StyleController = this.layoutControl1;
+            this.txtSenha.TabIndex = 27;
+            this.txtSenha.ToolTip = "Digite novamente a senha para confirmar. Certifique-se de que as senhas correspon" +
+    "dem para concluir o cadastro com sucesso.";
+            this.txtSenha.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.txtSenha.ToolTipTitle = "Confirmar Senha:";
             // 
             // Root
             // 
@@ -450,58 +488,13 @@
             // 
             this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 40);
             this.tabbedControlGroup1.Name = "tabbedControlGroup1";
-            this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup2;
+            this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup5;
             this.tabbedControlGroup1.Size = new System.Drawing.Size(1223, 317);
             this.tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup2,
             this.layoutControlGroup5,
             this.layoutControlGroup3,
             this.layoutControlGroup4});
-            // 
-            // layoutControlGroup2
-            // 
-            this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem2,
-            this.layoutControlItem8,
-            this.layoutControlItem26});
-            this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(1199, 270);
-            this.layoutControlGroup2.Text = "Dados";
-            // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.Control = this.txtNomeCompl;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(599, 270);
-            this.layoutControlItem2.Text = "Nome completo";
-            this.layoutControlItem2.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(79, 13);
-            // 
-            // layoutControlItem8
-            // 
-            this.layoutControlItem8.Control = this.txtCPF;
-            this.layoutControlItem8.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem8.CustomizationFormText = "C.P.F.";
-            this.layoutControlItem8.Location = new System.Drawing.Point(599, 0);
-            this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(300, 270);
-            this.layoutControlItem8.Text = "C.P.F.";
-            this.layoutControlItem8.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(79, 13);
-            // 
-            // layoutControlItem26
-            // 
-            this.layoutControlItem26.Control = this.txtRG;
-            this.layoutControlItem26.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem26.CustomizationFormText = "R.G";
-            this.layoutControlItem26.Location = new System.Drawing.Point(899, 0);
-            this.layoutControlItem26.Name = "layoutControlItem26";
-            this.layoutControlItem26.Size = new System.Drawing.Size(300, 270);
-            this.layoutControlItem26.Text = "R.G";
-            this.layoutControlItem26.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem26.TextSize = new System.Drawing.Size(79, 13);
             // 
             // layoutControlGroup5
             // 
@@ -550,6 +543,51 @@
             this.layoutControlItem31.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem31.TextSize = new System.Drawing.Size(79, 13);
             // 
+            // layoutControlGroup2
+            // 
+            this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem2,
+            this.layoutControlItem8,
+            this.layoutControlItem26});
+            this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup2.Name = "layoutControlGroup2";
+            this.layoutControlGroup2.Size = new System.Drawing.Size(1199, 270);
+            this.layoutControlGroup2.Text = "Dados";
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.txtNomeCompl;
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(599, 270);
+            this.layoutControlItem2.Text = "Nome completo";
+            this.layoutControlItem2.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(79, 13);
+            // 
+            // layoutControlItem8
+            // 
+            this.layoutControlItem8.Control = this.txtCPF;
+            this.layoutControlItem8.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem8.CustomizationFormText = "C.P.F.";
+            this.layoutControlItem8.Location = new System.Drawing.Point(599, 0);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            this.layoutControlItem8.Size = new System.Drawing.Size(300, 270);
+            this.layoutControlItem8.Text = "C.P.F.";
+            this.layoutControlItem8.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(79, 13);
+            // 
+            // layoutControlItem26
+            // 
+            this.layoutControlItem26.Control = this.txtRG;
+            this.layoutControlItem26.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem26.CustomizationFormText = "R.G";
+            this.layoutControlItem26.Location = new System.Drawing.Point(899, 0);
+            this.layoutControlItem26.Name = "layoutControlItem26";
+            this.layoutControlItem26.Size = new System.Drawing.Size(300, 270);
+            this.layoutControlItem26.Text = "R.G";
+            this.layoutControlItem26.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem26.TextSize = new System.Drawing.Size(79, 13);
+            // 
             // layoutControlGroup3
             // 
             this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
@@ -596,7 +634,7 @@
             this.layoutControlItem9.CustomizationFormText = "Número";
             this.layoutControlItem9.Location = new System.Drawing.Point(703, 0);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(83, 40);
+            this.layoutControlItem9.Size = new System.Drawing.Size(97, 40);
             this.layoutControlItem9.Text = "Número";
             this.layoutControlItem9.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem9.TextSize = new System.Drawing.Size(79, 13);
@@ -606,9 +644,9 @@
             this.layoutControlItem13.Control = this.txtBairro;
             this.layoutControlItem13.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem13.CustomizationFormText = "layoutControlItem9";
-            this.layoutControlItem13.Location = new System.Drawing.Point(786, 0);
+            this.layoutControlItem13.Location = new System.Drawing.Point(800, 0);
             this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(159, 40);
+            this.layoutControlItem13.Size = new System.Drawing.Size(154, 40);
             this.layoutControlItem13.Text = "Bairro";
             this.layoutControlItem13.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem13.TextSize = new System.Drawing.Size(79, 13);
@@ -618,9 +656,9 @@
             this.layoutControlItem33.Control = this.cmbMunicipio;
             this.layoutControlItem33.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem33.CustomizationFormText = "Município";
-            this.layoutControlItem33.Location = new System.Drawing.Point(945, 0);
+            this.layoutControlItem33.Location = new System.Drawing.Point(954, 0);
             this.layoutControlItem33.Name = "layoutControlItem33";
-            this.layoutControlItem33.Size = new System.Drawing.Size(127, 40);
+            this.layoutControlItem33.Size = new System.Drawing.Size(122, 40);
             this.layoutControlItem33.Text = "Município";
             this.layoutControlItem33.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem33.TextSize = new System.Drawing.Size(79, 13);
@@ -642,9 +680,9 @@
             this.layoutControlItem30.Control = this.cmbEstado;
             this.layoutControlItem30.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem30.CustomizationFormText = "Estado";
-            this.layoutControlItem30.Location = new System.Drawing.Point(1072, 0);
+            this.layoutControlItem30.Location = new System.Drawing.Point(1076, 0);
             this.layoutControlItem30.Name = "layoutControlItem30";
-            this.layoutControlItem30.Size = new System.Drawing.Size(127, 40);
+            this.layoutControlItem30.Size = new System.Drawing.Size(123, 40);
             this.layoutControlItem30.Text = "Estado";
             this.layoutControlItem30.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem30.TextSize = new System.Drawing.Size(79, 13);
@@ -683,6 +721,28 @@
             this.layoutControlItem4.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem4.TextSize = new System.Drawing.Size(79, 13);
             // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.txtConfirmarSenha;
+            this.layoutControlItem6.Location = new System.Drawing.Point(599, 40);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(600, 230);
+            this.layoutControlItem6.Text = "Confirmar senha";
+            this.layoutControlItem6.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(79, 13);
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.txtSenha;
+            this.layoutControlItem3.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem3.CustomizationFormText = "Confirmar senha";
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 40);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(599, 230);
+            this.layoutControlItem3.Text = "Senha";
+            this.layoutControlItem3.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(79, 13);
+            // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.cmbMatriz;
@@ -708,57 +768,6 @@
             this.uc_TituloTelas1.Size = new System.Drawing.Size(1259, 31);
             this.uc_TituloTelas1.TabIndex = 44;
             // 
-            // txtConfirmarSenha
-            // 
-            this.txtConfirmarSenha.FooterLabel = "";
-            this.txtConfirmarSenha.Location = new System.Drawing.Point(635, 176);
-            this.txtConfirmarSenha.Name = "txtConfirmarSenha";
-            this.txtConfirmarSenha.ShowStrengthIndicator = true;
-            this.txtConfirmarSenha.Size = new System.Drawing.Size(596, 22);
-            this.txtConfirmarSenha.StyleController = this.layoutControl1;
-            this.txtConfirmarSenha.TabIndex = 27;
-            this.txtConfirmarSenha.ToolTip = "Digite novamente a senha para confirmar. Certifique-se de que as senhas correspon" +
-    "dem para concluir o cadastro com sucesso.";
-            this.txtConfirmarSenha.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.txtConfirmarSenha.ToolTipTitle = "Confirmar Senha:";
-            this.txtConfirmarSenha.Validating += new System.ComponentModel.CancelEventHandler(this.txtConfirmarSenha_Validating_1);
-            // 
-            // txtSenha
-            // 
-            this.txtSenha.FooterLabel = "A senha deve ter no mínimo 8 caracteres.";
-            this.txtSenha.Location = new System.Drawing.Point(36, 176);
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.ShowStrengthIndicator = true;
-            this.txtSenha.Size = new System.Drawing.Size(595, 34);
-            this.txtSenha.StyleController = this.layoutControl1;
-            this.txtSenha.TabIndex = 27;
-            this.txtSenha.ToolTip = "Digite novamente a senha para confirmar. Certifique-se de que as senhas correspon" +
-    "dem para concluir o cadastro com sucesso.";
-            this.txtSenha.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.txtSenha.ToolTipTitle = "Confirmar Senha:";
-            // 
-            // layoutControlItem6
-            // 
-            this.layoutControlItem6.Control = this.txtConfirmarSenha;
-            this.layoutControlItem6.Location = new System.Drawing.Point(599, 40);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(600, 230);
-            this.layoutControlItem6.Text = "Confirmar senha";
-            this.layoutControlItem6.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(79, 13);
-            // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.Control = this.txtSenha;
-            this.layoutControlItem3.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem3.CustomizationFormText = "Confirmar senha";
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 40);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(599, 230);
-            this.layoutControlItem3.Text = "Senha";
-            this.layoutControlItem3.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(79, 13);
-            // 
             // uc_CadFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -773,6 +782,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cmbMatriz.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtConfirmarSenha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbNivelAcesso.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNomeCompl.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNomeUsuario.Properties)).EndInit();
@@ -788,17 +798,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTelFixo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelCel.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSenha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem28)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
@@ -810,12 +821,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtConfirmarSenha)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSenha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup8)).EndInit();
             this.ResumeLayout(false);
 
         }

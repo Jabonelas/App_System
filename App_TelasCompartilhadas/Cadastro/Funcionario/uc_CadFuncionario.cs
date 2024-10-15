@@ -28,8 +28,9 @@ namespace App_TelasCompartilhadas.Cadastro.Funcionario
 
             LayoutBotoes();
 
-            var button = txtCEP.Properties.Buttons[0];
-            button.Kind = DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph;
+            //imagem botao da pesquisa do CEP
+            //var button = txtCEP.Properties.Buttons[0];
+            //button.Kind = DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph;
 
             painelTelaInicial = _painelTelaInicial;
 

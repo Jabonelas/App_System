@@ -159,3 +159,10 @@ C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_Tel
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.Mensagens_Canto_Inferior_Direito.uc_MensagemEstoqueBaixo.resources
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.Mensagens_Canto_Inferior_Direito.uc_MensagemExclusao.resources
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.Mensagens_Canto_Inferior_Direito.uc_MensagemEstoqueMaximo.resources
+C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\System.Security.Cryptography.Xml.dll
+C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\Unimake.Business.DFe.dll
+C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\Unimake.Cryptography.dll
+C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\Unimake.Extensions.dll
+C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\Unimake.Utils.dll
+C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\System.Security.Cryptography.Xml.xml
+C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\Unimake.Business.DFe.xml

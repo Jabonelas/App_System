@@ -6,7 +6,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Windows.Forms;
+using Unimake.Business.Security;
+using Unimake.Business.DFe.Servicos;
+using System.Text.RegularExpressions;
 
 namespace App_TelasCompartilhadas.Ator
 {
@@ -15,6 +19,8 @@ namespace App_TelasCompartilhadas.Ator
         private long idAtor = 0;
         private int tipoAtor = 0;
         private string operacao = string.Empty;
+
+        private X509Certificate2 certificadoDigital = null;
 
         private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer painelTelaInicial;
 
@@ -38,9 +44,9 @@ namespace App_TelasCompartilhadas.Ator
 
             painelTelaInicial = _painelTelaInicial;
 
-            var button = txtCEP.Properties.Buttons[0];
-
-            button.Kind = DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph;
+            //imagem botao da pesquisa do CEP
+            //var button = txtCEP.Properties.Buttons[0];
+            //button.Kind = DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph;
 
             operacao = _operacao;
 
@@ -349,13 +355,10 @@ namespace App_TelasCompartilhadas.Ator
             }
         }
 
-        private void txtCEP_Properties_ButtonPressed(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        //Botao do CEP
+        private void buttonEdit1_Properties_ButtonPressed(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             PreencherCEP();
-        }
-
-        private void buttonEdit1_Properties_KeyPress(object sender, KeyPressEventArgs e)
-        {
         }
 
         private void btnArquivoCertDig_Properties_ButtonPressed(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
@@ -369,77 +372,61 @@ namespace App_TelasCompartilhadas.Ator
 
             if (xtraOpenFileDialog.ShowDialog() == DialogResult.OK)
             {
-                //base.SxClick(sender, e);
-                //if (SxInDesignMode) return;
-
-                //if (ReadOnly || Properties.ReadOnly || !Enabled) return;
-                //SxEvLoadFile.Invoke(sender, e);
-
-                if (string.IsNullOrWhiteSpace(xtraOpenFileDialog.FileName))
+                if (string.IsNullOrWhiteSpace(xtraOpenFileDialog.FileName) || string.IsNullOrEmpty(txtSenhaCertificadoDigital.Text))
                 {
-                    //SxDialogError(SxETranslatedText.ArquivoNaoCarregadoE);
                     return;
                 }
                 if (!File.Exists(xtraOpenFileDialog.FileName) || new FileInfo(xtraOpenFileDialog.FileName).Length <= 0)
                 {
-                    //SxDialogError(SxETranslatedText.ArquivoSelecionadoInvalidoE);
                     return;
                 }
-                byte[] rawData = null;
+
                 try
                 {
-                    rawData = File.ReadAllBytes(xtraOpenFileDialog.FileName);
+                    var certificado = new CertificadoDigital();
 
-                    string base64String = Convert.ToBase64String(rawData);
+                    var certificadoBase64 = certificado.ToBase64(xtraOpenFileDialog.FileName);
+
+                    var certificadoSelecionado = certificado.FromBase64(certificadoBase64, txtSenhaCertificadoDigital.Text);
+
+                    certificadoDigital = certificadoSelecionado;
                 }
-                catch
+                catch (Exception ex)
                 {
-                    //SxDialogError(SxETranslatedText.ArquivoNaoCarregadoE); return;
+                    MensagensDoSistema.MensagemErroOk($"Erro ao pegar dados do certificado digital selecionado: {ex.Message}");
                 }
-
-                CButtonEditFileBinaryCertDig_SxEvLoadFile(sender, e, xtraOpenFileDialog.FileName, rawData);
             }
 
             TelaCarregamento.EsconderCarregamento();
         }
 
-        private void CButtonEditFileBinaryCertDig_SxEvLoadFile(object sender, EventArgs eventArgs, string fullName, byte[] rawData)
+        private void SalvarCertificadoDigital()
         {
-            //var uow = new UnitOfWork();
-            //var cert = new tb_certificado_digital(uow);
-            //cert.cd_rawData = null;
-            //cert.cd_rawData = rawData;
-            ////cert.cd_pwd = "12345678";
-            //{
-            //    //var auth = new tb_certificado_digital();
-            //    //auth.SxFileName = fullName;
-            //    //switch (XtraDialog.Show(auth.SxDialogArgs))
-            //    //{
-            //    //    case DialogResult.Cancel: return;
-            //    //    case DialogResult.OK: cert.cd_pwd = auth.cd_pwd; break;
-            //    //    default: SxDebuggerBreak(); break;
-            //    //}
-            //}
-            //var _ = cert.SFillDetailsFields();
-            //if (_ != null)
-            //{
-            //    switch (_.HResult)
-            //    {
-            //        case -2147024810: // The specified network password is not correct.
+            try
+            {
+                using (UnitOfWork uow = new UnitOfWork())
+                {
+                    tb_certificado_digital cert = new tb_certificado_digital(uow);
 
-            //            //SxDialogError(SxETranslatedText.SenhaInformadaInvalidaE);
+                    cert.cd_dtCri = DateTime.Now;
+                    cert.cd_dtAlt = DateTime.Now;
+                    cert.cd_cnpj = Regex.Replace(txtCNPJ.Text, @"[^\d]", "");
+                    cert.cd_razSoc = txtRazaoSocialNomeCompl.Text;
+                    cert.cd_pwd = txtSenhaCertificadoDigital.Text;
+                    cert.cd_serial = certificadoDigital.SerialNumber;
+                    cert.cd_dtPub = certificadoDigital.NotBefore;
+                    cert.cd_dtExp = certificadoDigital.NotAfter;
+                    cert.cd_ativo = 1;
+                    cert.cd_rawData = certificadoDigital.Export(X509ContentType.Pfx, txtSenhaCertificadoDigital.Text);
 
-            //            break;
-
-            //        default:
-            //            break;
-            //    }
-            //    return;
-            //}
-            //cert.Save();
-            //uow.CommitChanges();
-
-            ////SxEvLoadCertDig.Invoke(this, new(), cert);
+                    cert.Save();
+                    uow.CommitChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                MensagensDoSistema.MensagemErroOk($"Erro ao salvar dados do certificado digital: {ex.Message}");
+            }
         }
 
         private void uc_CadAtor_Load(object sender, EventArgs e)
@@ -571,7 +558,7 @@ namespace App_TelasCompartilhadas.Ator
             }
         }
 
-        private void buttonEdit1_Properties_Validating(object sender, CancelEventArgs e)
+        private void buttonEdit1_Properties_Validating_1(object sender, CancelEventArgs e)
         {
             if (txtCEP.Text == "_____-___")
             {
@@ -843,19 +830,44 @@ namespace App_TelasCompartilhadas.Ator
                 return false;
             }
 
-            //if (string.IsNullOrEmpty(txtNomeFantNomeAbrev.Text))
-            //{
-            //    MensagensDoSistema.MensagemInformacaoOk("Preencha o campo Nome Fantasia / Nome Abreviado.");
-            //    txtNomeFantNomeAbrev.Focus();
-            //    return false;
-            //}
+            if (string.IsNullOrEmpty(txtCEP.Text) || string.IsNullOrEmpty(txtEndereco.Text) || string.IsNullOrEmpty(txtNumeroEnd.Text) || string.IsNullOrEmpty(txtBairro.Text) || cmbMunicipio.Text == "Selecione o Município" || cmbEstado.Text == "Selecione o Estado")
+            {
+                MensagensDoSistema.MensagemInformacaoOk("Preencha os campos de endereço corretamente.");
+                return false;
+            }
 
-            //if (string.IsNullOrEmpty(txtRazaoSocialNomeCompl.Text))
-            //{
-            //    MensagensDoSistema.MensagemInformacaoOk("Preencha o campo Razão Social / Nome Completo.");
-            //    txtRazaoSocialNomeCompl.Focus();
-            //    return false;
-            //}
+            return true;
+        }
+
+        private bool IsCamposPreenchidosEmissaoNFCe()
+        {
+            //Tipo ambiente 1 ou 2, emite cupom fiscal - NFCe
+            if ((byte)(DadosGeralNfe.SEnNfeTipoAmb)cmbTipoAmbEmis.EditValue != 0)
+            {
+                if (string.IsNullOrEmpty(txtInscEstad.Text))
+                {
+                    MensagensDoSistema.MensagemInformacaoOk("Preencha o campo Inscrição estadual (I.E.).");
+                    return false;
+                }
+
+                if (string.IsNullOrEmpty(txtInscMunic.Text))
+                {
+                    MensagensDoSistema.MensagemInformacaoOk("Preencha o campo Inscrição municipal (I.M.).");
+                    return false;
+                }
+
+                if (string.IsNullOrEmpty(txtTokenCodSegContHom.Text) || string.IsNullOrEmpty(txtTokenCodSegContProd.Text))
+                {
+                    MensagensDoSistema.MensagemInformacaoOk("Preencha os campos Token do C.S.C. - Hom e Token do C.S.C. - Prod.");
+                    return false;
+                }
+
+                if (string.IsNullOrEmpty(txtCodSegContHom.Text) || string.IsNullOrEmpty(txtCodSegContProd.Text))
+                {
+                    MensagensDoSistema.MensagemInformacaoOk("Preencha os campos Cód. seg. do C.S.C. - Hom e Cód. seg. do C.S.C. - Prod.");
+                    return false;
+                }
+            }
 
             return true;
         }
@@ -874,7 +886,14 @@ namespace App_TelasCompartilhadas.Ator
                 //Verificar se o ator cadastrado é filial
                 if (tipoAtor == 11)
                 {
+                    if (!IsCamposPreenchidosEmissaoNFCe())
+                    {
+                        return;
+                    }
+
                     CadastroProdutoFilial(idAtorCadastrado);
+
+                    SalvarCertificadoDigital();
                 }
 
                 uc_MensagemConfirmacao mensagemConfirmacaoCantoInferiorDireito = new uc_MensagemConfirmacao(painelTelaInicial);
@@ -958,7 +977,7 @@ namespace App_TelasCompartilhadas.Ator
             }
         }
 
-        private void txtCEP_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtCEP_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {

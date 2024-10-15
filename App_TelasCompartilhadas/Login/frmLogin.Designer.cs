@@ -149,6 +149,7 @@
             // 
             // txtSenha
             // 
+            this.txtSenha.LeadingIconOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.txtSenha.Location = new System.Drawing.Point(24, 101);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Placeholder = "Digite a sua senha...";
