@@ -82,6 +82,7 @@
             this.repositoryItemRibbonSearchEdit1 = new DevExpress.XtraBars.Ribbon.Internal.RepositoryItemRibbonSearchEdit();
             this.repositoryItemRibbonSearchEdit2 = new DevExpress.XtraBars.Ribbon.Internal.RepositoryItemRibbonSearchEdit();
             this.pnlTelaPrincipal = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCalcEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRibbonSearchEdit1)).BeginInit();
@@ -383,11 +384,20 @@
             this.pnlTelaPrincipal.Size = new System.Drawing.Size(1270, 510);
             this.pnlTelaPrincipal.TabIndex = 1;
             // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(562, 41);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(112, 13);
+            this.labelControl1.TabIndex = 3;
+            this.labelControl1.Text = "israel de oliveira santos";
+            // 
             // frmTelaInicialPDV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1270, 679);
+            this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.pnlTelaPrincipal);
             this.Controls.Add(this.ribbonControl1);
@@ -440,6 +450,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
         private DevExpress.XtraBars.BarButtonItem barStatusPDV;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }
 

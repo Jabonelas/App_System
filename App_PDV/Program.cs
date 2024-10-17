@@ -7,6 +7,7 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
 using App_TelasCompartilhadas.Classes;
@@ -84,7 +85,20 @@ namespace App_PDV
         {
             try
             {
-                string versaoAtual = "1.0.2"; // Versão atual da sua aplicação
+                string caminhoArquivo = @"C:\Users\israe\Desktop\Nova pasta (2)\PDV-1.0.0\App_PDV\bin\Debug\version.txt";
+
+                // Lê todas as linhas do arquivo
+                string[] linhas = File.ReadAllLines(caminhoArquivo);
+
+                string versaoAtual = "";
+
+                // Exibe cada linha no console
+                foreach (string linha in linhas)
+                {
+                    versaoAtual = linha;
+                }
+
+                //string versaoAtual = "1.0.2"; // Versão atual da sua aplicação
                 string versaoAtualUrl = "https://raw.githubusercontent.com/Jabonelas/PDV/refs/heads/main/version.txt?token=GHSAT0AAAAAACSVGVGU2CHRFEENSLZVQPXQZYQLITA"; // URL do arquivo version.txt no GitHub
 
                 // Verifica se há uma versão mais recente disponível

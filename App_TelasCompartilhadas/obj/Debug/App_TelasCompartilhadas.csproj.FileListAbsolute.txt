@@ -58,6 +58,7 @@ C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpr
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.Dialogs.v23.1.Core.dll
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.Drawing.v23.1.dll
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.Printing.v23.1.Core.dll
+C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.Sparkline.v23.1.Core.dll
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.Utils.v23.1.dll
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.Xpo.v23.1.dll
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.XtraBars.v23.1.dll
@@ -75,6 +76,11 @@ C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpr
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.XtraReports.v23.1.Extensions.dll
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.XtraWizard.v23.1.dll
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\Newtonsoft.Json.dll
+C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\System.Security.Cryptography.Xml.dll
+C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\Unimake.Business.DFe.dll
+C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\Unimake.Cryptography.dll
+C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\Unimake.Extensions.dll
+C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\Unimake.Utils.dll
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.RichEdit.v23.1.Core.dll
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.Office.v23.1.Core.dll
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.Pdf.v23.1.Core.dll
@@ -87,7 +93,6 @@ C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpr
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.XtraVerticalGrid.v23.1.dll
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.XtraTreeList.v23.1.dll
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.XtraNavBar.v23.1.dll
-C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.Sparkline.v23.1.Core.dll
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.PivotGrid.v23.1.Core.dll
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.XtraGauges.v23.1.Core.dll
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.XtraRichEdit.v23.1.dll
@@ -101,6 +106,7 @@ C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpr
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.DataAccess.v23.1.xml
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.Drawing.v23.1.xml
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.Printing.v23.1.Core.xml
+C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.Sparkline.v23.1.Core.xml
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.Utils.v23.1.xml
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.Xpo.v23.1.xml
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.XtraBars.v23.1.xml
@@ -116,6 +122,8 @@ C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpr
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.XtraReports.v23.1.xml
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.XtraReports.v23.1.Extensions.xml
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.XtraWizard.v23.1.xml
+C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\System.Security.Cryptography.Xml.xml
+C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\Unimake.Business.DFe.xml
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.RichEdit.v23.1.Core.xml
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.Office.v23.1.Core.xml
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.Pdf.v23.1.Core.xml
@@ -126,7 +134,6 @@ C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpr
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.XtraVerticalGrid.v23.1.xml
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.XtraTreeList.v23.1.xml
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.XtraNavBar.v23.1.xml
-C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.Sparkline.v23.1.Core.xml
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.PivotGrid.v23.1.Core.xml
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.XtraGauges.v23.1.Core.xml
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.XtraRichEdit.v23.1.xml
@@ -140,9 +147,14 @@ C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_Tel
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.Produtos.uc_CadProduto.resources
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.Produtos.uc_EstoqueProduto.resources
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.Produtos.uc_Produto.resources
+C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.Mensagens_Canto_Inferior_Direito.uc_MensagemEstoqueBaixo.resources
+C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.Mensagens_Canto_Inferior_Direito.uc_MensagemEstoqueMaximo.resources
+C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.Mensagens_Canto_Inferior_Direito.uc_MensagemExclusao.resources
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.Properties.Resources.resources
+C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.frmImagensGeralSistema.resources
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.Relatorios.rp_ImpressaoRelatorioFluxoSaida.resources
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.Relatorios.uc_RelatorioFluxoSaida.resources
+C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.uc_MensagemConfirmacao.resources
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.uc_TelaInicial.resources
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.uc_TituloTelas.resources
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.frmSelecionarFilial.resources
@@ -154,15 +166,3 @@ C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_Tel
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.csproj.CopyComplete
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.dll
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.pdb
-C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.frmImagensGeralSistema.resources
-C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.uc_MensagemConfirmacao.resources
-C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.Mensagens_Canto_Inferior_Direito.uc_MensagemEstoqueBaixo.resources
-C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.Mensagens_Canto_Inferior_Direito.uc_MensagemExclusao.resources
-C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.Mensagens_Canto_Inferior_Direito.uc_MensagemEstoqueMaximo.resources
-C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\System.Security.Cryptography.Xml.dll
-C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\Unimake.Business.DFe.dll
-C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\Unimake.Cryptography.dll
-C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\Unimake.Extensions.dll
-C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\Unimake.Utils.dll
-C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\System.Security.Cryptography.Xml.xml
-C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\Unimake.Business.DFe.xml
