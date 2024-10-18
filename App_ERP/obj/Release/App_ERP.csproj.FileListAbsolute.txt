@@ -104,7 +104,6 @@ C:\Users\israe\source\repos\App_System\App_ERP\bin\Release\DevExpress.XtraLayout
 C:\Users\israe\source\repos\App_System\App_ERP\bin\Release\DevExpress.XtraPrinting.v23.1.xml
 C:\Users\israe\source\repos\App_System\App_ERP\bin\Release\DevExpress.XtraReports.v23.1.xml
 C:\Users\israe\source\repos\App_System\App_ERP\bin\Release\DevExpress.XtraReports.v23.1.Extensions.xml
-C:\Users\israe\source\repos\App_System\App_ERP\bin\Release\EntityFramework.xml
 C:\Users\israe\source\repos\App_System\App_ERP\bin\Release\EntityFramework.SqlServer.xml
 C:\Users\israe\source\repos\App_System\App_ERP\bin\Release\Microsoft.Bcl.AsyncInterfaces.xml
 C:\Users\israe\source\repos\App_System\App_ERP\bin\Release\Microsoft.Bcl.HashCode.xml

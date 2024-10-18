@@ -82,7 +82,7 @@
             this.repositoryItemRibbonSearchEdit1 = new DevExpress.XtraBars.Ribbon.Internal.RepositoryItemRibbonSearchEdit();
             this.repositoryItemRibbonSearchEdit2 = new DevExpress.XtraBars.Ribbon.Internal.RepositoryItemRibbonSearchEdit();
             this.pnlTelaPrincipal = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.btnAtualizar = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCalcEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRibbonSearchEdit1)).BeginInit();
@@ -110,9 +110,10 @@
             this.btnEmpresas,
             this.btnConsumidores,
             this.btnDeslogar,
-            this.barStatusPDV});
+            this.barStatusPDV,
+            this.btnAtualizar});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 21;
+            this.ribbonControl1.MaxItemId = 22;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -324,6 +325,7 @@
             // 
             // ribbonPageGroup7
             // 
+            this.ribbonPageGroup7.ItemLinks.Add(this.btnAtualizar);
             this.ribbonPageGroup7.ItemLinks.Add(this.btnDeslogar);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
             this.ribbonPageGroup7.Text = "Sistema";
@@ -384,20 +386,19 @@
             this.pnlTelaPrincipal.Size = new System.Drawing.Size(1270, 510);
             this.pnlTelaPrincipal.TabIndex = 1;
             // 
-            // labelControl1
+            // btnAtualizar
             // 
-            this.labelControl1.Location = new System.Drawing.Point(562, 41);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(112, 13);
-            this.labelControl1.TabIndex = 3;
-            this.labelControl1.Text = "israel de oliveira santos";
+            this.btnAtualizar.Caption = "Atualizar";
+            this.btnAtualizar.Id = 21;
+            this.btnAtualizar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAtualizar_ItemClick);
             // 
             // frmTelaInicialPDV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1270, 679);
-            this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.pnlTelaPrincipal);
             this.Controls.Add(this.ribbonControl1);
@@ -450,7 +451,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
         private DevExpress.XtraBars.BarButtonItem barStatusPDV;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraBars.BarButtonItem btnAtualizar;
     }
 }
 

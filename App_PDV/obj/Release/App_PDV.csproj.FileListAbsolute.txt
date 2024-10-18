@@ -161,3 +161,5 @@ C:\Users\israe\source\repos\App_System\App_PDV\obj\Release\App_PDV.csproj.CoreCo
 C:\Users\israe\source\repos\App_System\App_PDV\obj\Release\App_PDV.csproj.CopyComplete
 C:\Users\israe\source\repos\App_System\App_PDV\obj\Release\App_PDV.exe
 C:\Users\israe\source\repos\App_System\App_PDV\obj\Release\App_PDV.pdb
+C:\Users\israe\source\repos\App_System\App_PDV\obj\Release\App_PDV.Caixa.Atendimento.Venda.rp_ImpressaoCupomNaoFiscal.resources
+C:\Users\israe\source\repos\App_System\App_PDV\obj\Release\App_PDV.AberturaCaixa.rp_ImpressaoAberturaCaixa.resources

@@ -160,6 +160,7 @@
       <DependentUpon>uc_CadFuncionario.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\API Correios\API.cs" />
+    <Compile Include="Classes\Atualizacao.cs" />
     <Compile Include="Classes\Configuracoes - Validacoes\ConfigBotoes.cs" />
     <Compile Include="Classes\API Correios\DadosCep.cs" />
     <Compile Include="Classes\DadosGeralNfe.cs" />
@@ -216,6 +217,12 @@
     </Compile>
     <Compile Include="Cadastro\Produtos\uc_Produto.Designer.cs">
       <DependentUpon>uc_Produto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mensagens Canto Inferior Direito\uc_MensagemAtualizacao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mensagens Canto Inferior Direito\uc_MensagemAtualizacao.Designer.cs">
+      <DependentUpon>uc_MensagemAtualizacao.cs</DependentUpon>
     </Compile>
     <Compile Include="Mensagens Canto Inferior Direito\uc_MensagemEstoqueBaixo.cs">
       <SubType>UserControl</SubType>
@@ -509,6 +516,9 @@
     <EmbeddedResource Include="Cadastro\Produtos\uc_Produto.resx">
       <DependentUpon>uc_Produto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mensagens Canto Inferior Direito\uc_MensagemAtualizacao.resx">
+      <DependentUpon>uc_MensagemAtualizacao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mensagens Canto Inferior Direito\uc_MensagemEstoqueBaixo.resx">
       <DependentUpon>uc_MensagemEstoqueBaixo.cs</DependentUpon>
     </EmbeddedResource>
@@ -563,6 +573,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="unimake.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -8,6 +8,8 @@ using DevExpress.Xpo;
 
 using App_TelasCompartilhadas.Classes;
 using App_TelasCompartilhadas.bancoSQLite;
+using System.Net.NetworkInformation;
+using App_TelasCompartilhadas.Mensagens_Canto_Inferior_Direito;
 
 namespace App_TelasCompartilhadas
 {
@@ -30,6 +32,11 @@ namespace App_TelasCompartilhadas
             txtUsuario.ForeColor = Color.Gray;
             txtUsuario.Text = "geral";
             txtSenha.Text = "123456789";
+
+            if (Atualizacao.IsExisteConexaoInternet())
+            {
+                Atualizacao.VerificarAtualizacaoDisponivel(this);
+            }
         }
 
         private static bool IsSenhaUsuarioValido(string _senha, string _usuario)

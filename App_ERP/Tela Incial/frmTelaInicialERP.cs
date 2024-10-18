@@ -354,5 +354,17 @@ namespace App_ERP
         {
             TelaRelatorioVendaVendedor();
         }
+
+        private void btnAtualizar_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (Atualizacao.IsExisteConexaoInternet())
+            {
+                Atualizacao.VerificarAtualizacaoDisponivel(this);
+            }
+            else
+            {
+                MensagensDoSistema.MensagemInformacaoOk("Você está sem conexão com a internet para verificar se há atualizações disponíveis.");
+            }
+        }
     }
 }

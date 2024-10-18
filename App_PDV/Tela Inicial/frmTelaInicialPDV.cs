@@ -344,5 +344,17 @@ namespace App_PDV
         {
             TelaAtor(10);
         }
+
+        private void btnAtualizar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (Atualizacao.IsExisteConexaoInternet())
+            {
+                Atualizacao.VerificarAtualizacaoDisponivel(this);
+            }
+            else
+            {
+                MensagensDoSistema.MensagemInformacaoOk("Você está sem conexão com a internet para verificar se há atualizações disponíveis.");
+            }
+        }
     }
 }

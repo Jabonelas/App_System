@@ -22,15 +22,37 @@
     </ArrayOfString>
     <ArrayOfString>
       <string>C:\Users\israe\source\repos\App_System\App_ERP\Tela Incial\frmTelaInicialERP.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_ERP\Tela Incial\frmTelaInicialERP.cs</string>
     </ArrayOfString>
     <ArrayOfString>
       <string>C:\Users\israe\source\repos\App_System\App_PDV\Program.cs</string>
     </ArrayOfString>
     <ArrayOfString>
       <string>C:\Users\israe\source\repos\App_System\App_PDV\Tela Inicial\frmTelaInicialPDV.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_PDV\Tela Inicial\frmTelaInicialPDV.cs</string>
     </ArrayOfString>
     <ArrayOfString>
       <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\uc_TituloTelas.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\ORMDataModelCode\ConnectionHelper.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\app.config</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Classes\Mensagens de Erros\MensagensDoSistema.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Login\frmLogin.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Login\frmLogin.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Mensagens Canto Inferior Direito\uc_MensagemAtualizacao.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Mensagens Canto Inferior Direito\uc_MensagemAtualizacao.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Classes\Atualizacao.cs</string>
     </ArrayOfString>
   </ArrayOfArrayOfString>
 </ArrayOfArrayOfArrayOfString>

@@ -54,6 +54,7 @@
             this.btnRelatorioFluxoSaida = new DevExpress.XtraBars.BarButtonItem();
             this.btnRelatorioVendaVendedor = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAtualizar = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -101,9 +102,10 @@
             this.skinDropDownButtonItem1,
             this.btnRelatorioFluxoSaida,
             this.btnRelatorioVendaVendedor,
-            this.barButtonItem1});
+            this.barButtonItem1,
+            this.btnAtualizar});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 27;
+            this.ribbon.MaxItemId = 28;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -150,7 +152,6 @@
             // 
             this.btnCadastrarProduto.Caption = "Produto";
             this.btnCadastrarProduto.Id = 5;
-            this.btnCadastrarProduto.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.btnCadastrarProduto.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCadastrarProduto.ImageOptions.SvgImage")));
             this.btnCadastrarProduto.Name = "btnCadastrarProduto";
             this.btnCadastrarProduto.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCadastrarProduto_ItemClick);
@@ -304,6 +305,14 @@
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.Caption = "Atualizar";
+            this.btnAtualizar.Id = 27;
+            this.btnAtualizar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAtualizar.ImageOptions.SvgImage")));
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAtualizar_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -394,6 +403,7 @@
             // 
             // ribbonPageGroup7
             // 
+            this.ribbonPageGroup7.ItemLinks.Add(this.btnAtualizar);
             this.ribbonPageGroup7.ItemLinks.Add(this.btnDeslogar);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
             this.ribbonPageGroup7.Text = "Sistema";
@@ -502,5 +512,6 @@
         private DevExpress.XtraBars.BarButtonItem btnRelatorioFluxoSaida;
         private DevExpress.XtraBars.BarButtonItem btnRelatorioVendaVendedor;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem btnAtualizar;
     }
 }

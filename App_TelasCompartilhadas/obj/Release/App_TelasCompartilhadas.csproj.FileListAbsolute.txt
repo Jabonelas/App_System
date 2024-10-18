@@ -106,3 +106,15 @@ C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Release\App_T
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Release\App_TelasCompartilhadas.dll
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Release\App_TelasCompartilhadas.pdb
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Release\App_TelasCompartilhadas.frmImagensGeralSistema.resources
+C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Release\System.Security.Cryptography.Xml.dll
+C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Release\Unimake.Business.DFe.dll
+C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Release\Unimake.Cryptography.dll
+C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Release\Unimake.Extensions.dll
+C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Release\Unimake.Utils.dll
+C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Release\System.Security.Cryptography.Xml.xml
+C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Release\Unimake.Business.DFe.xml
+C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Release\App_TelasCompartilhadas.Mensagens_Canto_Inferior_Direito.uc_MensagemEstoqueBaixo.resources
+C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Release\App_TelasCompartilhadas.Mensagens_Canto_Inferior_Direito.uc_MensagemEstoqueMaximo.resources
+C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Release\App_TelasCompartilhadas.Mensagens_Canto_Inferior_Direito.uc_MensagemExclusao.resources
+C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Release\App_TelasCompartilhadas.uc_MensagemConfirmacao.resources
+C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Release\App_TelasCompartilhadas.Mensagens_Canto_Inferior_Direito.uc_MensagemAtualizacao.resources
