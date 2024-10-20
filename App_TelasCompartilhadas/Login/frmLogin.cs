@@ -35,7 +35,7 @@ namespace App_TelasCompartilhadas
 
             if (Atualizacao.IsExisteConexaoInternet())
             {
-                Atualizacao.VerificarAtualizacaoDisponivel(this);
+                Atualizacao.VerificarAtualizacaoDisponivel(this, telaAcesso);
             }
         }
 

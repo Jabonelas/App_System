@@ -57,16 +57,13 @@
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.btnFechamentoCaixa = new DevExpress.XtraBars.BarButtonItem();
             this.skinDropDownButtonItem1 = new DevExpress.XtraBars.SkinDropDownButtonItem();
-            this.barStatusFilail = new DevExpress.XtraBars.BarButtonItem();
-            this.barStatusUsuario = new DevExpress.XtraBars.BarButtonItem();
-            this.barStatusVendedor = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.btnRelatorioFluxoSaida = new DevExpress.XtraBars.BarButtonItem();
             this.btnProdutos = new DevExpress.XtraBars.BarButtonItem();
             this.btnEmpresas = new DevExpress.XtraBars.BarButtonItem();
             this.btnConsumidores = new DevExpress.XtraBars.BarButtonItem();
             this.btnDeslogar = new DevExpress.XtraBars.BarButtonItem();
-            this.barStatusPDV = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAtualizar = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -82,7 +79,14 @@
             this.repositoryItemRibbonSearchEdit1 = new DevExpress.XtraBars.Ribbon.Internal.RepositoryItemRibbonSearchEdit();
             this.repositoryItemRibbonSearchEdit2 = new DevExpress.XtraBars.Ribbon.Internal.RepositoryItemRibbonSearchEdit();
             this.pnlTelaPrincipal = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
-            this.btnAtualizar = new DevExpress.XtraBars.BarButtonItem();
+            this.barStatusVersaoSistema = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem3 = new DevExpress.XtraBars.BarStaticItem();
+            this.barStatusVendedor = new DevExpress.XtraBars.BarStaticItem();
+            this.barStatusUsuario = new DevExpress.XtraBars.BarStaticItem();
+            this.barStatusFilail = new DevExpress.XtraBars.BarStaticItem();
+            this.barStatusPDV = new DevExpress.XtraBars.BarStaticItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCalcEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRibbonSearchEdit1)).BeginInit();
@@ -101,19 +105,23 @@
             this.barButtonItem5,
             this.btnFechamentoCaixa,
             this.skinDropDownButtonItem1,
-            this.barStatusFilail,
-            this.barStatusUsuario,
-            this.barStatusVendedor,
             this.barButtonItem1,
             this.btnRelatorioFluxoSaida,
             this.btnProdutos,
             this.btnEmpresas,
             this.btnConsumidores,
             this.btnDeslogar,
-            this.barStatusPDV,
-            this.btnAtualizar});
+            this.btnAtualizar,
+            this.barStatusVersaoSistema,
+            this.barStaticItem1,
+            this.barStaticItem2,
+            this.barStaticItem3,
+            this.barStatusVendedor,
+            this.barStatusUsuario,
+            this.barStatusFilail,
+            this.barStatusPDV});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 22;
+            this.ribbonControl1.MaxItemId = 30;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -178,31 +186,6 @@
             this.skinDropDownButtonItem1.Id = 8;
             this.skinDropDownButtonItem1.Name = "skinDropDownButtonItem1";
             // 
-            // barStatusFilail
-            // 
-            this.barStatusFilail.Caption = "Filial";
-            this.barStatusFilail.Id = 11;
-            this.barStatusFilail.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.barStatusFilail.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStatusFilail.ImageOptions.SvgImage")));
-            this.barStatusFilail.Name = "barStatusFilail";
-            // 
-            // barStatusUsuario
-            // 
-            this.barStatusUsuario.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
-            this.barStatusUsuario.Caption = "Usuario";
-            this.barStatusUsuario.Id = 12;
-            this.barStatusUsuario.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.barStatusUsuario.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStatusUsuario.ImageOptions.SvgImage")));
-            this.barStatusUsuario.Name = "barStatusUsuario";
-            // 
-            // barStatusVendedor
-            // 
-            this.barStatusVendedor.Caption = "Vendedor";
-            this.barStatusVendedor.Id = 13;
-            this.barStatusVendedor.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.barStatusVendedor.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStatusVendedor.ImageOptions.SvgImage")));
-            this.barStatusVendedor.Name = "barStatusVendedor";
-            // 
             // barButtonItem1
             // 
             this.barButtonItem1.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
@@ -250,13 +233,13 @@
             this.btnDeslogar.Name = "btnDeslogar";
             this.btnDeslogar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDeslogar_ItemClick);
             // 
-            // barStatusPDV
+            // btnAtualizar
             // 
-            this.barStatusPDV.Caption = "PDV";
-            this.barStatusPDV.Id = 20;
-            this.barStatusPDV.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.barStatusPDV.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStatusPDV.ImageOptions.SvgImage")));
-            this.barStatusPDV.Name = "barStatusPDV";
+            this.btnAtualizar.Caption = "Atualizar";
+            this.btnAtualizar.Id = 21;
+            this.btnAtualizar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAtualizar.ImageOptions.SvgImage")));
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAtualizar_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -346,8 +329,12 @@
             // ribbonStatusBar1
             // 
             this.ribbonStatusBar1.ItemLinks.Add(this.barStatusPDV);
+            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem1);
             this.ribbonStatusBar1.ItemLinks.Add(this.barStatusFilail);
+            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem2);
             this.ribbonStatusBar1.ItemLinks.Add(this.barStatusUsuario);
+            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem3);
+            this.ribbonStatusBar1.ItemLinks.Add(this.barStatusVersaoSistema);
             this.ribbonStatusBar1.ItemLinks.Add(this.barStatusVendedor);
             this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 655);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
@@ -386,13 +373,69 @@
             this.pnlTelaPrincipal.Size = new System.Drawing.Size(1270, 510);
             this.pnlTelaPrincipal.TabIndex = 1;
             // 
-            // btnAtualizar
+            // barStatusVersaoSistema
             // 
-            this.btnAtualizar.Caption = "Atualizar";
-            this.btnAtualizar.Id = 21;
-            this.btnAtualizar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
-            this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAtualizar_ItemClick);
+            this.barStatusVersaoSistema.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.barStatusVersaoSistema.Caption = "Versão: 1.0.0";
+            this.barStatusVersaoSistema.Id = 22;
+            this.barStatusVersaoSistema.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.barStatusVersaoSistema.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barStaticItem1.ImageOptions.Image")));
+            this.barStatusVersaoSistema.Name = "barStatusVersaoSistema";
+            this.barStatusVersaoSistema.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
+            // barStaticItem1
+            // 
+            this.barStaticItem1.Caption = " | ";
+            this.barStaticItem1.Id = 23;
+            this.barStaticItem1.Name = "barStaticItem1";
+            // 
+            // barStaticItem2
+            // 
+            this.barStaticItem2.Caption = " | ";
+            this.barStaticItem2.Id = 24;
+            this.barStaticItem2.Name = "barStaticItem2";
+            // 
+            // barStaticItem3
+            // 
+            this.barStaticItem3.Caption = " | ";
+            this.barStaticItem3.Id = 25;
+            this.barStaticItem3.Name = "barStaticItem3";
+            // 
+            // barStatusVendedor
+            // 
+            this.barStatusVendedor.Caption = "Vendedor";
+            this.barStatusVendedor.Id = 26;
+            this.barStatusVendedor.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.barStatusVendedor.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStatusVendedor.ImageOptions.SvgImage")));
+            this.barStatusVendedor.Name = "barStatusVendedor";
+            this.barStatusVendedor.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
+            // barStatusUsuario
+            // 
+            this.barStatusUsuario.Caption = "Usuario";
+            this.barStatusUsuario.Id = 27;
+            this.barStatusUsuario.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.barStatusUsuario.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStaticItem4.ImageOptions.SvgImage")));
+            this.barStatusUsuario.Name = "barStatusUsuario";
+            this.barStatusUsuario.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
+            // barStatusFilail
+            // 
+            this.barStatusFilail.Caption = "Filial";
+            this.barStatusFilail.Id = 28;
+            this.barStatusFilail.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.barStatusFilail.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStaticItem4.ImageOptions.SvgImage1")));
+            this.barStatusFilail.Name = "barStatusFilail";
+            this.barStatusFilail.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
+            // barStatusPDV
+            // 
+            this.barStatusPDV.Caption = "PDV";
+            this.barStatusPDV.Id = 29;
+            this.barStatusPDV.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.barStatusPDV.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStaticItem4.ImageOptions.SvgImage2")));
+            this.barStatusPDV.Name = "barStatusPDV";
+            this.barStatusPDV.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
             // frmTelaInicialPDV
             // 
@@ -434,10 +477,7 @@
         private DevExpress.XtraBars.Ribbon.Internal.RepositoryItemRibbonSearchEdit repositoryItemRibbonSearchEdit2;
         public DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer pnlTelaPrincipal;
         public DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
-        private DevExpress.XtraBars.BarButtonItem barStatusFilail;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
-        private DevExpress.XtraBars.BarButtonItem barStatusUsuario;
-        private DevExpress.XtraBars.BarButtonItem barStatusVendedor;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem btnRelatorioFluxoSaida;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
@@ -450,8 +490,15 @@
         private DevExpress.XtraBars.BarButtonItem btnDeslogar;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
-        private DevExpress.XtraBars.BarButtonItem barStatusPDV;
         private DevExpress.XtraBars.BarButtonItem btnAtualizar;
+        private DevExpress.XtraBars.BarStaticItem barStatusVersaoSistema;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem1;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem2;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem3;
+        private DevExpress.XtraBars.BarStaticItem barStatusVendedor;
+        private DevExpress.XtraBars.BarStaticItem barStatusUsuario;
+        private DevExpress.XtraBars.BarStaticItem barStatusFilail;
+        private DevExpress.XtraBars.BarStaticItem barStatusPDV;
     }
 }
 

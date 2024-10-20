@@ -154,7 +154,7 @@
   <metadata name="alcAtualizacao.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>185, 20</value>
   </metadata>
-  <data name="alcConfirmacao.HtmlTemplate.Styles" xml:space="preserve">
+  <data name="alcAtualizacao.HtmlTemplate.Styles" xml:space="preserve">
     <value>body{
 	padding: 15px;
 	font-size: 14px;
@@ -218,13 +218,13 @@
 .button:hover {
 	color: @White;
 	background-color: @Blue;
-	box-shadow: 0px 0px 10px @Critical/0.5;
+	box-shadow: 0px 0px 10px @Blue/0.5;
 }
 .button:focus {
 	border-color: @Blue;
 }</value>
   </data>
-  <data name="alcConfirmacao.HtmlTemplate.Template" xml:space="preserve">
+  <data name="alcAtualizacao.HtmlTemplate.Template" xml:space="preserve">
     <value>&lt;div class="frame" id="frame"&gt;
 	&lt;div class="header"&gt;
 		&lt;div class="header-element caption"&gt;Aviso: Uma nova versão está disponível!&lt;/div&gt;

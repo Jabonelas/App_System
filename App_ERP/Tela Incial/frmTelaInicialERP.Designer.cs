@@ -30,10 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTelaInicialERP));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.barStatusPDV = new DevExpress.XtraBars.BarButtonItem();
-            this.barStatusFilail = new DevExpress.XtraBars.BarButtonItem();
-            this.barStatusVendedor = new DevExpress.XtraBars.BarButtonItem();
-            this.barStatusUsuario = new DevExpress.XtraBars.BarButtonItem();
             this.btnCadastrarProduto = new DevExpress.XtraBars.BarButtonItem();
             this.btnCadastrarCategoria = new DevExpress.XtraBars.BarButtonItem();
             this.btnCadastrarSubCategoria = new DevExpress.XtraBars.BarButtonItem();
@@ -71,6 +67,14 @@
             this.pnlTelaPrincipal = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.barStatusVersaoSistema = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem3 = new DevExpress.XtraBars.BarStaticItem();
+            this.barStatusVendedor = new DevExpress.XtraBars.BarStaticItem();
+            this.barStatusUsuario = new DevExpress.XtraBars.BarStaticItem();
+            this.barStatusFilail = new DevExpress.XtraBars.BarStaticItem();
+            this.barStatusPDV = new DevExpress.XtraBars.BarStaticItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,10 +83,6 @@
             this.ribbon.ExpandCollapseItem.Id = 0;
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbon.ExpandCollapseItem,
-            this.barStatusPDV,
-            this.barStatusFilail,
-            this.barStatusVendedor,
-            this.barStatusUsuario,
             this.btnCadastrarProduto,
             this.btnCadastrarCategoria,
             this.btnCadastrarSubCategoria,
@@ -103,9 +103,17 @@
             this.btnRelatorioFluxoSaida,
             this.btnRelatorioVendaVendedor,
             this.barButtonItem1,
-            this.btnAtualizar});
+            this.btnAtualizar,
+            this.barStatusVersaoSistema,
+            this.barStaticItem1,
+            this.barStaticItem2,
+            this.barStaticItem3,
+            this.barStatusVendedor,
+            this.barStatusUsuario,
+            this.barStatusFilail,
+            this.barStatusPDV});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 28;
+            this.ribbon.MaxItemId = 36;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -114,39 +122,6 @@
             this.ribbonPage4});
             this.ribbon.Size = new System.Drawing.Size(1278, 169);
             this.ribbon.StatusBar = this.ribbonStatusBar;
-            // 
-            // barStatusPDV
-            // 
-            this.barStatusPDV.Caption = "PDV";
-            this.barStatusPDV.Id = 1;
-            this.barStatusPDV.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.barStatusPDV.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStatusPDV.ImageOptions.SvgImage")));
-            this.barStatusPDV.Name = "barStatusPDV";
-            // 
-            // barStatusFilail
-            // 
-            this.barStatusFilail.Caption = "Filial";
-            this.barStatusFilail.Id = 2;
-            this.barStatusFilail.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.barStatusFilail.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStatusFilail.ImageOptions.SvgImage")));
-            this.barStatusFilail.Name = "barStatusFilail";
-            // 
-            // barStatusVendedor
-            // 
-            this.barStatusVendedor.Caption = "Vendedor";
-            this.barStatusVendedor.Id = 3;
-            this.barStatusVendedor.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.barStatusVendedor.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStatusVendedor.ImageOptions.SvgImage")));
-            this.barStatusVendedor.Name = "barStatusVendedor";
-            // 
-            // barStatusUsuario
-            // 
-            this.barStatusUsuario.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
-            this.barStatusUsuario.Caption = "Usuario";
-            this.barStatusUsuario.Id = 4;
-            this.barStatusUsuario.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.barStatusUsuario.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStatusUsuario.ImageOptions.SvgImage")));
-            this.barStatusUsuario.Name = "barStatusUsuario";
             // 
             // btnCadastrarProduto
             // 
@@ -417,9 +392,13 @@
             // ribbonStatusBar
             // 
             this.ribbonStatusBar.ItemLinks.Add(this.barStatusPDV);
+            this.ribbonStatusBar.ItemLinks.Add(this.barStaticItem1);
             this.ribbonStatusBar.ItemLinks.Add(this.barStatusFilail);
-            this.ribbonStatusBar.ItemLinks.Add(this.barStatusVendedor);
+            this.ribbonStatusBar.ItemLinks.Add(this.barStaticItem2);
             this.ribbonStatusBar.ItemLinks.Add(this.barStatusUsuario);
+            this.ribbonStatusBar.ItemLinks.Add(this.barStaticItem3);
+            this.ribbonStatusBar.ItemLinks.Add(this.barStatusVersaoSistema);
+            this.ribbonStatusBar.ItemLinks.Add(this.barStatusVendedor);
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 655);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
@@ -449,6 +428,70 @@
             this.barButtonItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
             this.barButtonItem2.Name = "barButtonItem2";
             // 
+            // barStatusVersaoSistema
+            // 
+            this.barStatusVersaoSistema.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.barStatusVersaoSistema.Caption = "Versão: 1.0.0";
+            this.barStatusVersaoSistema.Id = 28;
+            this.barStatusVersaoSistema.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.barStatusVersaoSistema.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barStaticItem1.ImageOptions.Image")));
+            this.barStatusVersaoSistema.Name = "barStatusVersaoSistema";
+            this.barStatusVersaoSistema.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
+            // barStaticItem1
+            // 
+            this.barStaticItem1.Caption = " | ";
+            this.barStaticItem1.Id = 29;
+            this.barStaticItem1.Name = "barStaticItem1";
+            // 
+            // barStaticItem2
+            // 
+            this.barStaticItem2.Caption = " | ";
+            this.barStaticItem2.Id = 30;
+            this.barStaticItem2.Name = "barStaticItem2";
+            // 
+            // barStaticItem3
+            // 
+            this.barStaticItem3.Caption = " | ";
+            this.barStaticItem3.Id = 31;
+            this.barStaticItem3.Name = "barStaticItem3";
+            // 
+            // barStatusVendedor
+            // 
+            this.barStatusVendedor.Caption = "Vendedor";
+            this.barStatusVendedor.Id = 32;
+            this.barStatusVendedor.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.barStatusVendedor.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStaticItem4.ImageOptions.SvgImage")));
+            this.barStatusVendedor.Name = "barStatusVendedor";
+            this.barStatusVendedor.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
+            // barStatusUsuario
+            // 
+            this.barStatusUsuario.Caption = "Usuario";
+            this.barStatusUsuario.Id = 33;
+            this.barStatusUsuario.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.barStatusUsuario.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStaticItem4.ImageOptions.SvgImage1")));
+            this.barStatusUsuario.Name = "barStatusUsuario";
+            this.barStatusUsuario.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
+            // barStatusFilail
+            // 
+            this.barStatusFilail.Caption = "Filial";
+            this.barStatusFilail.Id = 34;
+            this.barStatusFilail.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.barStatusFilail.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStaticItem4.ImageOptions.SvgImage2")));
+            this.barStatusFilail.Name = "barStatusFilail";
+            this.barStatusFilail.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
+            // barStatusPDV
+            // 
+            this.barStatusPDV.Caption = "PDV";
+            this.barStatusPDV.Id = 35;
+            this.barStatusPDV.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.barStatusPDV.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStaticItem4.ImageOptions.SvgImage3")));
+            this.barStatusPDV.Name = "barStatusPDV";
+            this.barStatusPDV.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
             // frmTelaInicialERP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -458,7 +501,6 @@
             this.Controls.Add(this.pnlTelaPrincipal);
             this.Controls.Add(this.ribbon);
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "frmTelaInicialERP";
             this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -476,10 +518,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
         public DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer pnlTelaPrincipal;
-        private DevExpress.XtraBars.BarButtonItem barStatusPDV;
-        private DevExpress.XtraBars.BarButtonItem barStatusFilail;
-        private DevExpress.XtraBars.BarButtonItem barStatusVendedor;
-        private DevExpress.XtraBars.BarButtonItem barStatusUsuario;
         private DevExpress.XtraBars.BarButtonItem btnCadastrarProduto;
         private DevExpress.XtraBars.BarButtonItem btnCadastrarCategoria;
         private DevExpress.XtraBars.BarButtonItem btnCadastrarSubCategoria;
@@ -513,5 +551,13 @@
         private DevExpress.XtraBars.BarButtonItem btnRelatorioVendaVendedor;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem btnAtualizar;
+        private DevExpress.XtraBars.BarStaticItem barStatusVersaoSistema;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem1;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem2;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem3;
+        private DevExpress.XtraBars.BarStaticItem barStatusVendedor;
+        private DevExpress.XtraBars.BarStaticItem barStatusUsuario;
+        private DevExpress.XtraBars.BarStaticItem barStatusFilail;
+        private DevExpress.XtraBars.BarStaticItem barStatusPDV;
     }
 }

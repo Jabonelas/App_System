@@ -45,11 +45,12 @@ namespace App_PDV
         {
             if (VariaveisGlobais.FilialLogada != null && VariaveisGlobais.PDVLogado != null)
             {
-                barStatusFilail.Caption = $"C.N.P.J: {VariaveisGlobais.FilialLogada.at_cnpj} - Filial: {VariaveisGlobais.FilialLogada.at_nomeFant}";
+                barStatusFilail.Caption = $"Filial: {VariaveisGlobais.FilialLogada.at_nomeFant}  |  C.N.P.J: {VariaveisGlobais.FilialLogada.at_cnpj}";
                 barStatusPDV.Caption = $"PDV: {VariaveisGlobais.PDVLogado.pdv_pdvNum}";
             }
             barStatusVendedor.Caption = $"Vendedor: {VariaveisGlobais.UsuarioLogado.at_razSoc}";
             barStatusUsuario.Caption = $"Usuário: {VariaveisGlobais.UsuarioLogado.at_nomeUsuario}";
+            barStatusVersaoSistema.Caption = $"Versão: {VariaveisGlobais.versaoAtualSistema}";
         }
 
         public void ExibirTelaInicial(UserControl userControl)
@@ -349,7 +350,7 @@ namespace App_PDV
         {
             if (Atualizacao.IsExisteConexaoInternet())
             {
-                Atualizacao.VerificarAtualizacaoDisponivel(this);
+                Atualizacao.VerificarAtualizacaoDisponivel(this, "PDV");
             }
             else
             {

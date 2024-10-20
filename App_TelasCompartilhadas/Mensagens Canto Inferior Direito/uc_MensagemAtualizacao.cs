@@ -17,11 +17,15 @@ namespace App_TelasCompartilhadas.Mensagens_Canto_Inferior_Direito
     {
         private Form form;
 
-        public uc_MensagemAtualizacao(Form _form)
+        private string telaAcesso;
+
+        public uc_MensagemAtualizacao(Form _form, string _telaAcesso)
         {
             InitializeComponent();
 
             form = _form;
+
+            telaAcesso = _telaAcesso;
 
             timer1.Stop();
             timer1.Start();
@@ -42,7 +46,7 @@ namespace App_TelasCompartilhadas.Mensagens_Canto_Inferior_Direito
         {
             if (e.ElementId == "dialogresult-atualizar")
             {
-                Atualizacao.ExecutarAtualizacao(form);
+                Atualizacao.ExecutarAtualizacao(telaAcesso);
             }
             else if (e.ElementId == "dialogresult-cancelar")
             {

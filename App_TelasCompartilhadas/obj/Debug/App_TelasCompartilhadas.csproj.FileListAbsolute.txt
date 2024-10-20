@@ -166,3 +166,4 @@ C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_Tel
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.csproj.CopyComplete
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.dll
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.pdb
+C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.Mensagens_Canto_Inferior_Direito.uc_MensagemAtualizacao.resources

@@ -44,8 +44,8 @@
             // alcAtualizacao
             // 
             this.alcAtualizacao.HtmlImages = this.svgImageCollection1;
-            this.alcAtualizacao.HtmlTemplate.Styles = resources.GetString("alcConfirmacao.HtmlTemplate.Styles");
-            this.alcAtualizacao.HtmlTemplate.Template = resources.GetString("alcConfirmacao.HtmlTemplate.Template");
+            this.alcAtualizacao.HtmlTemplate.Styles = resources.GetString("alcAtualizacao.HtmlTemplate.Styles");
+            this.alcAtualizacao.HtmlTemplate.Template = resources.GetString("alcAtualizacao.HtmlTemplate.Template");
             this.alcAtualizacao.HtmlElementMouseClick += new DevExpress.XtraBars.Alerter.AlertHtmlElementMouseClickEventHandler(this.alcConfirmacao_HtmlElementMouseClick);
             // 
             // timer1

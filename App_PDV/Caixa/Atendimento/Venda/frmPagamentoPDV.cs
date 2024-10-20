@@ -1675,7 +1675,7 @@ namespace App_PDV
                         case 301: //Uso Denegado: Irregularidade fiscal do emitente
                         case 302: //Uso Denegado: Irregularidade fiscal do destinatário
                         case 303: //Uso Denegado: Destinatário não habilitado a operar na UF
-                            autorizacao.GravarXmlDistribuicao(@"C:\Users\israe\Desktop\XML - teste");
+                            autorizacao.GravarXmlDistribuicao(@"C:\App_System\PDV\XML");
                             //var docProcNFe = autorizacao.NfeProcResult.GerarXML(); //Gerar o Objeto para pegar a string e gravar em banco de dados
 
                             //Como é assíncrono, tenho que prever a possibilidade de ter mais de uma NFe no lote, então teremos vários XMLs com protocolos.
@@ -1722,7 +1722,7 @@ namespace App_PDV
             try
             {
                 var destinoArqXml =
-                    $@"C:\Users\israe\Desktop\XML - teste\{Regex.Replace(movimentacao.fk_tb_ator_emit.at_cnpj, @"[.\-/]", "")}\{(int)movimentacao.mv_nfeTipoAmb}\{serie:000}\";
+                    $@"C:\App_System\PDV\XML\{Regex.Replace(movimentacao.fk_tb_ator_emit.at_cnpj, @"[.\-/]", "")}\{(int)movimentacao.mv_nfeTipoAmb}\{serie:000}\";
 
                 var SNfeXmlProcRes = autorizacao.NfeProcResults[autorizacao.Result.ProtNFe?.InfProt?.ChNFe]?.GerarXML()
                     ?.OuterXml;

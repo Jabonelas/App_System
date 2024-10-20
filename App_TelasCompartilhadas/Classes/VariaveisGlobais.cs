@@ -17,5 +17,7 @@ namespace App_TelasCompartilhadas.Classes
         public static bool isUsuarioComPermissao { get; set; }
 
         public static bool isInicializarSistema { get; set; }
+
+        public static string versaoAtualSistema { get; set; }
     }
 }

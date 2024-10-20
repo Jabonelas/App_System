@@ -17,15 +17,17 @@ namespace App_TelasCompartilhadas.Classes
 {
     public class Atualizacao
     {
-        private static string versaoAtualUrl = "https://raw.githubusercontent.com/Jabonelas/PDV/refs/heads/main/App_PDV/bin/Debug/version.txt?token=GHSAT0AAAAAACSVGVGUBVQ7TOPLOQ77A3XUZYRSECQ"; // URL do arquivo version.txt no GitHub
+        private static string versaoAtualUrl = ""; // URL do arquivo version.txt no GitHub
+        private static string caminhoArquivo = "";
         private static string token = "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";
-        private static string caminhoArquivo = @"C:\Users\israe\Desktop\Nova pasta (2)\PDV-1.0.0\App_PDV\bin\Debug\version.txt";
         private static string versaoAtual = "";
 
-        public static async Task VerificarAtualizacaoDisponivel(Form _forms)
+        public static async Task VerificarAtualizacaoDisponivel(Form _form, string _telaAcesso)
         {
             try
             {
+                DadosSistemaAtualizar(_telaAcesso);
+
                 // Lê todas as linhas do arquivo
                 string[] linhas = File.ReadAllLines(caminhoArquivo);
 
@@ -33,6 +35,7 @@ namespace App_TelasCompartilhadas.Classes
                 foreach (string linha in linhas)
                 {
                     versaoAtual = linha;
+                    VariaveisGlobais.versaoAtualSistema = linha;
                 }
 
                 // Verifica se há uma versão mais recente disponível
@@ -46,17 +49,17 @@ namespace App_TelasCompartilhadas.Classes
 
                 if (versaoAtual != versaoMaisRecente)
                 {
-                    if (_forms.Name == "frmLogin")
+                    if (_form.Name == "frmLogin")
                     {
-                        uc_MensagemAtualizacao mensagemAtualizacao = new uc_MensagemAtualizacao(_forms);
+                        uc_MensagemAtualizacao mensagemAtualizacao = new uc_MensagemAtualizacao(_form, _telaAcesso);
                         mensagemAtualizacao.Show();
                     }
                     else
                     {
-                        ExecutarAtualizacao(_forms);
+                        ExecutarAtualizacao(_telaAcesso);
                     }
                 }
-                else if (_forms.Name == "frmTelaInicialERP" || _forms.Name == "frmTelaInicialPDV")
+                else if (_form.Name == "frmTelaInicialPDV" || _form.Name == "frmTelaInicialERP")
                 {
                     MensagensDoSistema.MensagemInformacaoOk("A aplicação está atualizada.");
                 }
@@ -67,7 +70,21 @@ namespace App_TelasCompartilhadas.Classes
             }
         }
 
-        public static void ExecutarAtualizacao(Form _forms)
+        private static void DadosSistemaAtualizar(string _telaAcesso)
+        {
+            if (_telaAcesso == "PDV")
+            {
+                versaoAtualUrl = "https://raw.githubusercontent.com/Jabonelas/PDV/refs/heads/main/App_PDV/bin/Release/version.txt?token=GHSAT0AAAAAACSVGVGUAKKK2DVBQITGKMJ4ZYS7HOA";//url do arquivo version.txt no GitHub
+                caminhoArquivo = @"C:\App_System\PDV\Release\version.txt";
+            }
+            else if (_telaAcesso == "ERP")
+            {
+                versaoAtualUrl = "https://raw.githubusercontent.com/Jabonelas/PDV/refs/heads/main/App_ERP/bin/Release/version.txt?token=GHSAT0AAAAAACSVGVGVKMGRGXAV67ITEYQKZYS7GTA";//url do arquivo version.txt no GitHub
+                caminhoArquivo = @"C:\App_System\ERP\Release\version.txt";
+            }
+        }
+
+        public static void ExecutarAtualizacao(string _telaAcesso)
         {
             try
             {
@@ -76,10 +93,7 @@ namespace App_TelasCompartilhadas.Classes
                 if (dialog == DialogResult.Yes)
                 {
                     // Chama o atualizador externo e passa um parâmetro
-                    Process.Start(@"C:\PDV\Atualizacao\Release\net8.0-windows\Atualizacao-Automatica.exe", $"{_forms.Name}");
-
-                    // Feche a aplicação principal para permitir a atualização
-                    Environment.Exit(0);
+                    Process.Start(@"C:\App_System\Atualizacao\Release\net8.0-windows\Atualizacao-Automatica.exe", $"{_telaAcesso}");
                 }
             }
             catch (Exception e)
