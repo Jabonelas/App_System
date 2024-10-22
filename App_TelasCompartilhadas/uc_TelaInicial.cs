@@ -23,7 +23,7 @@ namespace App_TelasCompartilhadas
         private void LayoutBotoes()
         {
             lblBemVindoUsuario.Font = new Font("Exo 2", 20);
-            lblBemVindoUsuario.Text = $"Bem-vindo(a), {App_TelasCompartilhadas.Classes.VariaveisGlobais.UsuarioLogado.at_nomeUsuario}!";
+            lblBemVindoUsuario.Text = $"Bem-vindo(a), {App_TelasCompartilhadas.Classes.VariaveisGlobais.UsuarioLogado.at_razSoc}!";
             lblFraseVenda.Font = new Font("Exo 2", 10, FontStyle.Bold);
             lblFraseDenifa.Font = new Font("Exo 2", 10);
         }
@@ -154,7 +154,7 @@ namespace App_TelasCompartilhadas
                 //title.Text = "<b>Gráfico de acompanhamento da meta mensal</b>";
                 //chartControl1.Titles.Add(title);
 
-                decimal metaDoMes = (decimal)VariaveisGlobais.FilialLogada.at_metaMensal;
+                decimal metaDoMes = VariaveisGlobais.FilialLogada == null ? 0 : (decimal)VariaveisGlobais.FilialLogada.at_metaMensal;
 
                 if (metaDoMes > 0)
                 {

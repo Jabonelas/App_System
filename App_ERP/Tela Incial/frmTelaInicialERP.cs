@@ -16,6 +16,14 @@ using App_TelasCompartilhadas.bancoSQLite;
 using DevExpress.Xpo;
 using System.Linq;
 using App_TelasCompartilhadas.Mensagens_Canto_Inferior_Direito;
+using DevExpress.Utils;
+
+using DevExpress.Utils;
+using System;
+
+using System.Drawing;
+
+using System.Windows.Forms;
 
 namespace App_ERP
 {
@@ -37,7 +45,22 @@ namespace App_ERP
 
             AlertasCantoInferiorDireito();
 
+            FormatandoTelaApenasUsuarioADMIN();
+
             RotaPe();
+        }
+
+        private void FormatandoTelaApenasUsuarioADMIN()
+        {
+            if (VariaveisGlobais.UsuarioLogado.at_nomeUsuario == "admin")
+            {
+                ribbonPageRelatorio.Visible = false;
+                ribbonPageMovimentacao.Visible = false;
+                ribbonPageGroupItens.Visible = false;
+                ribbonPageGroupClientes.Visible = false;
+                btnCadastrarFornecedor.Visibility = BarItemVisibility.Never;
+                btnCadastrarTransportadora.Visibility = BarItemVisibility.Never;
+            }
         }
 
         private void AlertasCantoInferiorDireito()

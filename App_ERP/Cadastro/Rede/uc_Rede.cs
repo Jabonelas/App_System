@@ -80,7 +80,10 @@ namespace App_ERP.Cadastro.Rede
         {
             PegaIdRedeSelecionadaGrid();
 
-            TelaCadastrarRede("Alterar", idRede);
+            if (VariaveisGlobais.FilialLogada != null)
+            {
+                TelaCadastrarRede("Alterar", idRede);
+            }
         }
 
         private void ExcluirRede()

@@ -107,7 +107,22 @@ namespace App_TelasCompartilhadas.Produtos
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
-            this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem22 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem23 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem26 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.abaFiscal = new DevExpress.XtraLayout.LayoutControlGroup();
             this.tabbedControlGroup2 = new DevExpress.XtraLayout.TabbedControlGroup();
             this.layoutControlGroup6 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup14 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -152,21 +167,6 @@ namespace App_TelasCompartilhadas.Produtos
             this.layoutControlGroup19 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem42 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem43 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem22 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem23 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem26 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup16 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.uc_TituloTelas1 = new App_TelasCompartilhadas.uc_TituloTelas();
@@ -216,7 +216,22 @@ namespace App_TelasCompartilhadas.Produtos
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.abaFiscal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup14)).BeginInit();
@@ -261,21 +276,6 @@ namespace App_TelasCompartilhadas.Produtos
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem42)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem43)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup16)).BeginInit();
             this.SuspendLayout();
@@ -898,16 +898,206 @@ namespace App_TelasCompartilhadas.Produtos
             this.tabbedControlGroup1.Size = new System.Drawing.Size(1220, 367);
             this.tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup4,
-            this.layoutControlGroup3});
+            this.abaFiscal});
             // 
-            // layoutControlGroup3
+            // layoutControlGroup4
             // 
-            this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlGroup4.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem13,
+            this.layoutControlItem21,
+            this.layoutControlItem14,
+            this.layoutControlItem24,
+            this.layoutControlItem15,
+            this.layoutControlItem22,
+            this.layoutControlItem23,
+            this.layoutControlItem16,
+            this.layoutControlItem18,
+            this.layoutControlItem17,
+            this.layoutControlItem19,
+            this.layoutControlItem26,
+            this.layoutControlItem25,
+            this.layoutControlItem20});
+            this.layoutControlGroup4.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup4.Name = "layoutControlGroup4";
+            this.layoutControlGroup4.Size = new System.Drawing.Size(1196, 320);
+            this.layoutControlGroup4.Text = "Dados";
+            // 
+            // layoutControlItem13
+            // 
+            this.layoutControlItem13.Control = this.txtCodProd;
+            this.layoutControlItem13.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem13.CustomizationFormText = "Código";
+            this.layoutControlItem13.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem13.Name = "layoutControlItem13";
+            this.layoutControlItem13.Size = new System.Drawing.Size(163, 40);
+            this.layoutControlItem13.Text = "Código";
+            this.layoutControlItem13.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem13.TextSize = new System.Drawing.Size(157, 13);
+            // 
+            // layoutControlItem21
+            // 
+            this.layoutControlItem21.Control = this.txtDescCurta;
+            this.layoutControlItem21.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem21.CustomizationFormText = "Descrição Curta";
+            this.layoutControlItem21.Location = new System.Drawing.Point(163, 0);
+            this.layoutControlItem21.Name = "layoutControlItem21";
+            this.layoutControlItem21.Size = new System.Drawing.Size(219, 40);
+            this.layoutControlItem21.Text = "Descrição Curta";
+            this.layoutControlItem21.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem21.TextSize = new System.Drawing.Size(157, 13);
+            // 
+            // layoutControlItem14
+            // 
+            this.layoutControlItem14.Control = this.txtDesc;
+            this.layoutControlItem14.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem14.CustomizationFormText = "Descrição";
+            this.layoutControlItem14.Location = new System.Drawing.Point(382, 0);
+            this.layoutControlItem14.Name = "layoutControlItem14";
+            this.layoutControlItem14.Size = new System.Drawing.Size(486, 40);
+            this.layoutControlItem14.Text = "Descrição";
+            this.layoutControlItem14.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem14.TextSize = new System.Drawing.Size(157, 13);
+            // 
+            // layoutControlItem24
+            // 
+            this.layoutControlItem24.Control = this.cmbMarca;
+            this.layoutControlItem24.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem24.CustomizationFormText = "Marca";
+            this.layoutControlItem24.Location = new System.Drawing.Point(868, 0);
+            this.layoutControlItem24.Name = "layoutControlItem24";
+            this.layoutControlItem24.Size = new System.Drawing.Size(328, 40);
+            this.layoutControlItem24.Text = "Marca";
+            this.layoutControlItem24.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem24.TextSize = new System.Drawing.Size(157, 13);
+            // 
+            // layoutControlItem15
+            // 
+            this.layoutControlItem15.Control = this.txtBarras;
+            this.layoutControlItem15.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem15.CustomizationFormText = "Cód. Barras";
+            this.layoutControlItem15.Location = new System.Drawing.Point(0, 40);
+            this.layoutControlItem15.Name = "layoutControlItem15";
+            this.layoutControlItem15.Size = new System.Drawing.Size(163, 40);
+            this.layoutControlItem15.Text = "Cód. Barras";
+            this.layoutControlItem15.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem15.TextSize = new System.Drawing.Size(157, 13);
+            // 
+            // layoutControlItem22
+            // 
+            this.layoutControlItem22.Control = this.cmbCategoria;
+            this.layoutControlItem22.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem22.CustomizationFormText = "Categoria";
+            this.layoutControlItem22.Location = new System.Drawing.Point(163, 40);
+            this.layoutControlItem22.Name = "layoutControlItem22";
+            this.layoutControlItem22.Size = new System.Drawing.Size(216, 40);
+            this.layoutControlItem22.Text = "Categoria";
+            this.layoutControlItem22.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem22.TextSize = new System.Drawing.Size(157, 13);
+            // 
+            // layoutControlItem23
+            // 
+            this.layoutControlItem23.Control = this.cmbSubcategoria;
+            this.layoutControlItem23.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem23.CustomizationFormText = "SubCategoria";
+            this.layoutControlItem23.Location = new System.Drawing.Point(379, 40);
+            this.layoutControlItem23.Name = "layoutControlItem23";
+            this.layoutControlItem23.Size = new System.Drawing.Size(163, 40);
+            this.layoutControlItem23.Text = "SubCategoria";
+            this.layoutControlItem23.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem23.TextSize = new System.Drawing.Size(157, 13);
+            // 
+            // layoutControlItem16
+            // 
+            this.layoutControlItem16.Control = this.txtPrecoCusto;
+            this.layoutControlItem16.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem16.CustomizationFormText = "Prç. Custo";
+            this.layoutControlItem16.Location = new System.Drawing.Point(542, 40);
+            this.layoutControlItem16.Name = "layoutControlItem16";
+            this.layoutControlItem16.Size = new System.Drawing.Size(163, 40);
+            this.layoutControlItem16.Text = "Prç. Custo";
+            this.layoutControlItem16.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem16.TextSize = new System.Drawing.Size(157, 13);
+            // 
+            // layoutControlItem18
+            // 
+            this.layoutControlItem18.Control = this.cmbUn;
+            this.layoutControlItem18.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem18.CustomizationFormText = "Un.";
+            this.layoutControlItem18.Location = new System.Drawing.Point(705, 40);
+            this.layoutControlItem18.Name = "layoutControlItem18";
+            this.layoutControlItem18.Size = new System.Drawing.Size(164, 40);
+            this.layoutControlItem18.Text = "Un.";
+            this.layoutControlItem18.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem18.TextSize = new System.Drawing.Size(157, 13);
+            // 
+            // layoutControlItem17
+            // 
+            this.layoutControlItem17.Control = this.txtPrecoUn;
+            this.layoutControlItem17.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem17.CustomizationFormText = "Prç. Custo";
+            this.layoutControlItem17.Location = new System.Drawing.Point(869, 40);
+            this.layoutControlItem17.Name = "layoutControlItem17";
+            this.layoutControlItem17.Size = new System.Drawing.Size(163, 40);
+            this.layoutControlItem17.Text = "Prç. un.";
+            this.layoutControlItem17.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem17.TextSize = new System.Drawing.Size(157, 13);
+            // 
+            // layoutControlItem19
+            // 
+            this.layoutControlItem19.Control = this.txtAjustGeralPreco;
+            this.layoutControlItem19.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem19.CustomizationFormText = "Sub-Categoria";
+            this.layoutControlItem19.Location = new System.Drawing.Point(1032, 40);
+            this.layoutControlItem19.Name = "layoutControlItem19";
+            this.layoutControlItem19.Size = new System.Drawing.Size(164, 40);
+            this.layoutControlItem19.Text = "Ajuste Geral de Preço (% ou R$)";
+            this.layoutControlItem19.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem19.TextSize = new System.Drawing.Size(157, 13);
+            // 
+            // layoutControlItem26
+            // 
+            this.layoutControlItem26.Control = this.txtEstoqInicial;
+            this.layoutControlItem26.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem26.CustomizationFormText = "Prç. Custo";
+            this.layoutControlItem26.Location = new System.Drawing.Point(0, 80);
+            this.layoutControlItem26.Name = "layoutControlItem26";
+            this.layoutControlItem26.Size = new System.Drawing.Size(370, 240);
+            this.layoutControlItem26.Text = "Estoque Inicial";
+            this.layoutControlItem26.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem26.TextSize = new System.Drawing.Size(157, 13);
+            // 
+            // layoutControlItem25
+            // 
+            this.layoutControlItem25.Control = this.txtEstoqMinimo;
+            this.layoutControlItem25.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem25.CustomizationFormText = "Prç. Custo";
+            this.layoutControlItem25.Location = new System.Drawing.Point(783, 80);
+            this.layoutControlItem25.Name = "layoutControlItem25";
+            this.layoutControlItem25.Size = new System.Drawing.Size(413, 240);
+            this.layoutControlItem25.Text = "Estoque Mínimo";
+            this.layoutControlItem25.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem25.TextSize = new System.Drawing.Size(157, 13);
+            // 
+            // layoutControlItem20
+            // 
+            this.layoutControlItem20.Control = this.txtEstoqMaximo;
+            this.layoutControlItem20.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem20.CustomizationFormText = "Prç. Custo";
+            this.layoutControlItem20.Location = new System.Drawing.Point(370, 80);
+            this.layoutControlItem20.Name = "layoutControlItem20";
+            this.layoutControlItem20.Size = new System.Drawing.Size(413, 240);
+            this.layoutControlItem20.Text = "Estoque Máximo";
+            this.layoutControlItem20.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem20.TextSize = new System.Drawing.Size(157, 13);
+            // 
+            // abaFiscal
+            // 
+            this.abaFiscal.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.tabbedControlGroup2});
-            this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup3.Name = "layoutControlGroup3";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(1196, 320);
-            this.layoutControlGroup3.Text = "Fiscal";
+            this.abaFiscal.Location = new System.Drawing.Point(0, 0);
+            this.abaFiscal.Name = "abaFiscal";
+            this.abaFiscal.Size = new System.Drawing.Size(1196, 320);
+            this.abaFiscal.Text = "Fiscal";
             // 
             // tabbedControlGroup2
             // 
@@ -1378,196 +1568,6 @@ namespace App_TelasCompartilhadas.Produtos
             this.layoutControlItem43.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem43.TextSize = new System.Drawing.Size(157, 13);
             // 
-            // layoutControlGroup4
-            // 
-            this.layoutControlGroup4.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem13,
-            this.layoutControlItem21,
-            this.layoutControlItem14,
-            this.layoutControlItem24,
-            this.layoutControlItem15,
-            this.layoutControlItem22,
-            this.layoutControlItem23,
-            this.layoutControlItem16,
-            this.layoutControlItem18,
-            this.layoutControlItem17,
-            this.layoutControlItem19,
-            this.layoutControlItem26,
-            this.layoutControlItem25,
-            this.layoutControlItem20});
-            this.layoutControlGroup4.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup4.Name = "layoutControlGroup4";
-            this.layoutControlGroup4.Size = new System.Drawing.Size(1196, 320);
-            this.layoutControlGroup4.Text = "Dados";
-            // 
-            // layoutControlItem13
-            // 
-            this.layoutControlItem13.Control = this.txtCodProd;
-            this.layoutControlItem13.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem13.CustomizationFormText = "Código";
-            this.layoutControlItem13.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(163, 40);
-            this.layoutControlItem13.Text = "Código";
-            this.layoutControlItem13.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem13.TextSize = new System.Drawing.Size(157, 13);
-            // 
-            // layoutControlItem21
-            // 
-            this.layoutControlItem21.Control = this.txtDescCurta;
-            this.layoutControlItem21.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem21.CustomizationFormText = "Descrição Curta";
-            this.layoutControlItem21.Location = new System.Drawing.Point(163, 0);
-            this.layoutControlItem21.Name = "layoutControlItem21";
-            this.layoutControlItem21.Size = new System.Drawing.Size(219, 40);
-            this.layoutControlItem21.Text = "Descrição Curta";
-            this.layoutControlItem21.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem21.TextSize = new System.Drawing.Size(157, 13);
-            // 
-            // layoutControlItem14
-            // 
-            this.layoutControlItem14.Control = this.txtDesc;
-            this.layoutControlItem14.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem14.CustomizationFormText = "Descrição";
-            this.layoutControlItem14.Location = new System.Drawing.Point(382, 0);
-            this.layoutControlItem14.Name = "layoutControlItem14";
-            this.layoutControlItem14.Size = new System.Drawing.Size(486, 40);
-            this.layoutControlItem14.Text = "Descrição";
-            this.layoutControlItem14.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem14.TextSize = new System.Drawing.Size(157, 13);
-            // 
-            // layoutControlItem24
-            // 
-            this.layoutControlItem24.Control = this.cmbMarca;
-            this.layoutControlItem24.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem24.CustomizationFormText = "Marca";
-            this.layoutControlItem24.Location = new System.Drawing.Point(868, 0);
-            this.layoutControlItem24.Name = "layoutControlItem24";
-            this.layoutControlItem24.Size = new System.Drawing.Size(328, 40);
-            this.layoutControlItem24.Text = "Marca";
-            this.layoutControlItem24.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem24.TextSize = new System.Drawing.Size(157, 13);
-            // 
-            // layoutControlItem15
-            // 
-            this.layoutControlItem15.Control = this.txtBarras;
-            this.layoutControlItem15.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem15.CustomizationFormText = "Cód. Barras";
-            this.layoutControlItem15.Location = new System.Drawing.Point(0, 40);
-            this.layoutControlItem15.Name = "layoutControlItem15";
-            this.layoutControlItem15.Size = new System.Drawing.Size(163, 40);
-            this.layoutControlItem15.Text = "Cód. Barras";
-            this.layoutControlItem15.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem15.TextSize = new System.Drawing.Size(157, 13);
-            // 
-            // layoutControlItem22
-            // 
-            this.layoutControlItem22.Control = this.cmbCategoria;
-            this.layoutControlItem22.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem22.CustomizationFormText = "Categoria";
-            this.layoutControlItem22.Location = new System.Drawing.Point(163, 40);
-            this.layoutControlItem22.Name = "layoutControlItem22";
-            this.layoutControlItem22.Size = new System.Drawing.Size(216, 40);
-            this.layoutControlItem22.Text = "Categoria";
-            this.layoutControlItem22.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem22.TextSize = new System.Drawing.Size(157, 13);
-            // 
-            // layoutControlItem23
-            // 
-            this.layoutControlItem23.Control = this.cmbSubcategoria;
-            this.layoutControlItem23.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem23.CustomizationFormText = "SubCategoria";
-            this.layoutControlItem23.Location = new System.Drawing.Point(379, 40);
-            this.layoutControlItem23.Name = "layoutControlItem23";
-            this.layoutControlItem23.Size = new System.Drawing.Size(163, 40);
-            this.layoutControlItem23.Text = "SubCategoria";
-            this.layoutControlItem23.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem23.TextSize = new System.Drawing.Size(157, 13);
-            // 
-            // layoutControlItem16
-            // 
-            this.layoutControlItem16.Control = this.txtPrecoCusto;
-            this.layoutControlItem16.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem16.CustomizationFormText = "Prç. Custo";
-            this.layoutControlItem16.Location = new System.Drawing.Point(542, 40);
-            this.layoutControlItem16.Name = "layoutControlItem16";
-            this.layoutControlItem16.Size = new System.Drawing.Size(163, 40);
-            this.layoutControlItem16.Text = "Prç. Custo";
-            this.layoutControlItem16.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem16.TextSize = new System.Drawing.Size(157, 13);
-            // 
-            // layoutControlItem18
-            // 
-            this.layoutControlItem18.Control = this.cmbUn;
-            this.layoutControlItem18.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem18.CustomizationFormText = "Un.";
-            this.layoutControlItem18.Location = new System.Drawing.Point(705, 40);
-            this.layoutControlItem18.Name = "layoutControlItem18";
-            this.layoutControlItem18.Size = new System.Drawing.Size(164, 40);
-            this.layoutControlItem18.Text = "Un.";
-            this.layoutControlItem18.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem18.TextSize = new System.Drawing.Size(157, 13);
-            // 
-            // layoutControlItem17
-            // 
-            this.layoutControlItem17.Control = this.txtPrecoUn;
-            this.layoutControlItem17.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem17.CustomizationFormText = "Prç. Custo";
-            this.layoutControlItem17.Location = new System.Drawing.Point(869, 40);
-            this.layoutControlItem17.Name = "layoutControlItem17";
-            this.layoutControlItem17.Size = new System.Drawing.Size(163, 40);
-            this.layoutControlItem17.Text = "Prç. un.";
-            this.layoutControlItem17.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem17.TextSize = new System.Drawing.Size(157, 13);
-            // 
-            // layoutControlItem19
-            // 
-            this.layoutControlItem19.Control = this.txtAjustGeralPreco;
-            this.layoutControlItem19.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem19.CustomizationFormText = "Sub-Categoria";
-            this.layoutControlItem19.Location = new System.Drawing.Point(1032, 40);
-            this.layoutControlItem19.Name = "layoutControlItem19";
-            this.layoutControlItem19.Size = new System.Drawing.Size(164, 40);
-            this.layoutControlItem19.Text = "Ajuste Geral de Preço (% ou R$)";
-            this.layoutControlItem19.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem19.TextSize = new System.Drawing.Size(157, 13);
-            // 
-            // layoutControlItem26
-            // 
-            this.layoutControlItem26.Control = this.txtEstoqInicial;
-            this.layoutControlItem26.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem26.CustomizationFormText = "Prç. Custo";
-            this.layoutControlItem26.Location = new System.Drawing.Point(0, 80);
-            this.layoutControlItem26.Name = "layoutControlItem26";
-            this.layoutControlItem26.Size = new System.Drawing.Size(370, 240);
-            this.layoutControlItem26.Text = "Estoque Inicial";
-            this.layoutControlItem26.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem26.TextSize = new System.Drawing.Size(157, 13);
-            // 
-            // layoutControlItem25
-            // 
-            this.layoutControlItem25.Control = this.txtEstoqMinimo;
-            this.layoutControlItem25.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem25.CustomizationFormText = "Prç. Custo";
-            this.layoutControlItem25.Location = new System.Drawing.Point(783, 80);
-            this.layoutControlItem25.Name = "layoutControlItem25";
-            this.layoutControlItem25.Size = new System.Drawing.Size(413, 240);
-            this.layoutControlItem25.Text = "Estoque Mínimo";
-            this.layoutControlItem25.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem25.TextSize = new System.Drawing.Size(157, 13);
-            // 
-            // layoutControlItem20
-            // 
-            this.layoutControlItem20.Control = this.txtEstoqMaximo;
-            this.layoutControlItem20.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem20.CustomizationFormText = "Prç. Custo";
-            this.layoutControlItem20.Location = new System.Drawing.Point(370, 80);
-            this.layoutControlItem20.Name = "layoutControlItem20";
-            this.layoutControlItem20.Size = new System.Drawing.Size(413, 240);
-            this.layoutControlItem20.Text = "Estoque Máximo";
-            this.layoutControlItem20.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem20.TextSize = new System.Drawing.Size(157, 13);
-            // 
             // layoutControlItem8
             // 
             this.layoutControlItem8.Location = new System.Drawing.Point(0, 40);
@@ -1648,7 +1648,22 @@ namespace App_TelasCompartilhadas.Produtos
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.abaFiscal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup14)).EndInit();
@@ -1693,21 +1708,6 @@ namespace App_TelasCompartilhadas.Produtos
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem42)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem43)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup16)).EndInit();
             this.ResumeLayout(false);
@@ -1751,7 +1751,7 @@ namespace App_TelasCompartilhadas.Produtos
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem26;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem25;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem20;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup3;
+        private DevExpress.XtraLayout.LayoutControlGroup abaFiscal;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
         private DevExpress.XtraLayout.TabbedControlGroup tabbedControlGroup2;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup5;

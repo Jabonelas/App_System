@@ -76,6 +76,8 @@ namespace App_TelasCompartilhadas.Ator
             this.txtTokenCodSegContProd = new DevExpress.XtraEditors.TextEdit();
             this.txtNumeroEnd = new DevExpress.XtraEditors.TextEdit();
             this.txtMetaMensal = new DevExpress.XtraEditors.TextEdit();
+            this.txtSenhaCertificadoDigital = new DevExpress.XtraEditors.TextEdit();
+            this.txtCEP = new DevExpress.XtraEditors.ButtonEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.tabbedControlGroup2 = new DevExpress.XtraLayout.TabbedControlGroup();
@@ -98,6 +100,7 @@ namespace App_TelasCompartilhadas.Ator
             this.layoutControlItem33 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem30 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
             this.AbaFiscal = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -115,14 +118,11 @@ namespace App_TelasCompartilhadas.Ator
             this.AbaRFB = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.xtraOpenFileDialog1 = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
-            this.txtSenhaCertificadoDigital = new DevExpress.XtraEditors.TextEdit();
-            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtCEP = new DevExpress.XtraEditors.ButtonEdit();
-            this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
             this.uc_TituloTelas1 = new App_TelasCompartilhadas.uc_TituloTelas();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -157,6 +157,8 @@ namespace App_TelasCompartilhadas.Ator
             ((System.ComponentModel.ISupportInitialize)(this.txtTokenCodSegContProd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumeroEnd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMetaMensal.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSenhaCertificadoDigital.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCEP.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup2)).BeginInit();
@@ -179,6 +181,7 @@ namespace App_TelasCompartilhadas.Ator
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem33)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AbaFiscal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
@@ -196,13 +199,10 @@ namespace App_TelasCompartilhadas.Ator
             ((System.ComponentModel.ISupportInitialize)(this.AbaRFB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSenhaCertificadoDigital.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCEP.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalvar
@@ -718,6 +718,34 @@ namespace App_TelasCompartilhadas.Ator
             this.txtMetaMensal.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.txtMetaMensal.ToolTipTitle = "Meta Mensal:";
             // 
+            // txtSenhaCertificadoDigital
+            // 
+            this.txtSenhaCertificadoDigital.Location = new System.Drawing.Point(36, 216);
+            this.txtSenhaCertificadoDigital.Name = "txtSenhaCertificadoDigital";
+            this.txtSenhaCertificadoDigital.Size = new System.Drawing.Size(1195, 20);
+            this.txtSenhaCertificadoDigital.StyleController = this.layoutControl1;
+            this.txtSenhaCertificadoDigital.TabIndex = 35;
+            // 
+            // txtCEP
+            // 
+            this.txtCEP.Location = new System.Drawing.Point(36, 136);
+            this.txtCEP.Name = "txtCEP";
+            this.txtCEP.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Search, "cep", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.txtCEP.Properties.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("txtCEP.Properties.ContextImageOptions.Image")));
+            this.txtCEP.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
+            this.txtCEP.Properties.MaskSettings.Set("mask", "00000-000");
+            this.txtCEP.Properties.ButtonPressed += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit1_Properties_ButtonPressed);
+            this.txtCEP.Properties.Validating += new System.ComponentModel.CancelEventHandler(this.buttonEdit1_Properties_Validating_1);
+            this.txtCEP.Size = new System.Drawing.Size(182, 20);
+            this.txtCEP.StyleController = this.layoutControl1;
+            this.txtCEP.TabIndex = 36;
+            this.txtCEP.ToolTip = "Informe o CEP para ajudar na identificação do endereço.  Este é o código postal p" +
+    "ara identificar sua localização.";
+            this.txtCEP.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.txtCEP.ToolTipTitle = "C.E.P. (Código de Endereçamento Postal):";
+            this.txtCEP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCEP_KeyPress_1);
+            // 
             // Root
             // 
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -968,6 +996,16 @@ namespace App_TelasCompartilhadas.Ator
             this.layoutControlItem10.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem10.TextSize = new System.Drawing.Size(182, 13);
             // 
+            // layoutControlItem25
+            // 
+            this.layoutControlItem25.Control = this.txtCEP;
+            this.layoutControlItem25.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem25.Name = "layoutControlItem25";
+            this.layoutControlItem25.Size = new System.Drawing.Size(186, 40);
+            this.layoutControlItem25.Text = "C.E.P.";
+            this.layoutControlItem25.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem25.TextSize = new System.Drawing.Size(182, 13);
+            // 
             // AbaFiscal
             // 
             this.AbaFiscal.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
@@ -1164,6 +1202,16 @@ namespace App_TelasCompartilhadas.Ator
             this.layoutControlItem6.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem6.TextSize = new System.Drawing.Size(182, 13);
             // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.Control = this.txtSenhaCertificadoDigital;
+            this.layoutControlItem9.Location = new System.Drawing.Point(0, 80);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(1199, 190);
+            this.layoutControlItem9.Text = "Senha certificado digital";
+            this.layoutControlItem9.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(182, 13);
+            // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.cmbMatriz;
@@ -1197,54 +1245,6 @@ namespace App_TelasCompartilhadas.Ator
             // xtraOpenFileDialog1
             // 
             this.xtraOpenFileDialog1.FileName = "xtraOpenFileDialog1";
-            // 
-            // txtSenhaCertificadoDigital
-            // 
-            this.txtSenhaCertificadoDigital.Location = new System.Drawing.Point(36, 216);
-            this.txtSenhaCertificadoDigital.Name = "txtSenhaCertificadoDigital";
-            this.txtSenhaCertificadoDigital.Size = new System.Drawing.Size(1195, 20);
-            this.txtSenhaCertificadoDigital.StyleController = this.layoutControl1;
-            this.txtSenhaCertificadoDigital.TabIndex = 35;
-            // 
-            // layoutControlItem9
-            // 
-            this.layoutControlItem9.Control = this.txtSenhaCertificadoDigital;
-            this.layoutControlItem9.Location = new System.Drawing.Point(0, 80);
-            this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(1199, 190);
-            this.layoutControlItem9.Text = "Senha certificado digital";
-            this.layoutControlItem9.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem9.TextSize = new System.Drawing.Size(182, 13);
-            // 
-            // txtCEP
-            // 
-            this.txtCEP.Location = new System.Drawing.Point(36, 136);
-            this.txtCEP.Name = "txtCEP";
-            this.txtCEP.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Search, "cep", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.txtCEP.Properties.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("buttonEdit1.Properties.ContextImageOptions.Image")));
-            this.txtCEP.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
-            this.txtCEP.Properties.MaskSettings.Set("mask", "00000-000");
-            this.txtCEP.Properties.ButtonPressed += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit1_Properties_ButtonPressed);
-            this.txtCEP.Properties.Validating += new System.ComponentModel.CancelEventHandler(this.buttonEdit1_Properties_Validating_1);
-            this.txtCEP.Size = new System.Drawing.Size(182, 20);
-            this.txtCEP.StyleController = this.layoutControl1;
-            this.txtCEP.TabIndex = 36;
-            this.txtCEP.ToolTip = "Informe o CEP para ajudar na identificação do endereço.  Este é o código postal p" +
-    "ara identificar sua localização.";
-            this.txtCEP.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.txtCEP.ToolTipTitle = "C.E.P. (Código de Endereçamento Postal):";
-            this.txtCEP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCEP_KeyPress_1);
-            // 
-            // layoutControlItem25
-            // 
-            this.layoutControlItem25.Control = this.txtCEP;
-            this.layoutControlItem25.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem25.Name = "layoutControlItem25";
-            this.layoutControlItem25.Size = new System.Drawing.Size(186, 40);
-            this.layoutControlItem25.Text = "C.E.P.";
-            this.layoutControlItem25.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem25.TextSize = new System.Drawing.Size(182, 13);
             // 
             // uc_TituloTelas1
             // 
@@ -1298,6 +1298,8 @@ namespace App_TelasCompartilhadas.Ator
             ((System.ComponentModel.ISupportInitialize)(this.txtTokenCodSegContProd.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumeroEnd.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMetaMensal.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSenhaCertificadoDigital.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCEP.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup2)).EndInit();
@@ -1320,6 +1322,7 @@ namespace App_TelasCompartilhadas.Ator
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem33)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AbaFiscal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
@@ -1337,13 +1340,10 @@ namespace App_TelasCompartilhadas.Ator
             ((System.ComponentModel.ISupportInitialize)(this.AbaRFB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSenhaCertificadoDigital.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCEP.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -107,9 +107,9 @@
             // 
             this.btnCancelar.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
             this.btnCancelar.ImageOptions.SvgImageSize = new System.Drawing.Size(20, 20);
-            this.btnCancelar.Location = new System.Drawing.Point(146, 487);
+            this.btnCancelar.Location = new System.Drawing.Point(898, 486);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(128, 30);
+            this.btnCancelar.Size = new System.Drawing.Size(84, 31);
             this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -118,9 +118,9 @@
             // 
             this.btnConfimar.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
             this.btnConfimar.ImageOptions.SvgImageSize = new System.Drawing.Size(20, 20);
-            this.btnConfimar.Location = new System.Drawing.Point(12, 487);
+            this.btnConfimar.Location = new System.Drawing.Point(808, 486);
             this.btnConfimar.Name = "btnConfimar";
-            this.btnConfimar.Size = new System.Drawing.Size(128, 30);
+            this.btnConfimar.Size = new System.Drawing.Size(84, 31);
             this.btnConfimar.TabIndex = 3;
             this.btnConfimar.Text = "Confirmar";
             this.btnConfimar.Click += new System.EventHandler(this.btnConfimar_Click);
@@ -163,7 +163,7 @@
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
-            // frmSelecionarPDV
+            // frmSelecionarFilial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -173,7 +173,7 @@
             this.Controls.Add(this.btnConfimar);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmSelecionarPDV";
+            this.Name = "frmSelecionarFilial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.grdPDV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

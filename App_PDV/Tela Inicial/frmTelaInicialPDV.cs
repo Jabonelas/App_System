@@ -30,6 +30,17 @@ namespace App_PDV
             ExibirPainelCentral();
 
             RotaPe();
+
+            FormatandoTelaApenasUsuarioADMIN();
+        }
+
+        private void FormatandoTelaApenasUsuarioADMIN()
+        {
+            if (VariaveisGlobais.UsuarioLogado.at_nomeUsuario == "admin")
+            {
+                ribbonPageCaixa.Visible = false;
+                ribbonPageConsultas.Visible = false;
+            }
         }
 
         private void ExibirPainelCentral()

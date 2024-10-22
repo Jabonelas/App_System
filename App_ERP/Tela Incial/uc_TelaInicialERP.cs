@@ -23,7 +23,7 @@ namespace App_ERP
         private void LayoutBotoes()
         {
             lblBemVindoUsuario.Font = new Font("Exo 2", 20);
-            lblBemVindoUsuario.Text = $"Bem-vindo(a), {VariaveisGlobais.UsuarioLogado.at_nomeUsuario}!";
+            lblBemVindoUsuario.Text = $"Bem-vindo(a), {VariaveisGlobais.UsuarioLogado.at_razSoc}!";
             lblFraseVenda.Font = new Font("Exo 2", 10, FontStyle.Bold);
             lblFraseDenifa.Font = new Font("Exo 2", 10);
         }
@@ -105,7 +105,7 @@ namespace App_ERP
                 title.Text = "<b>Gráfico de acompanhamento da meta mensal</b>";
                 chartControl1.Titles.Add(title);
 
-                //----------------------------------------------------------------------------------------------------------
+                //--------------------------------------------------------------------------------------------------------------------------
 
                 //DateTime dtFrom = DateTime.Now.FirstDayMonth();
                 //DateTime dtTo = DateTime.Now.Day > 1 ? DateTime.Now.AddDays(-1).Date.AddDays(1).AddTicks(-1) : DateTime.Now;
@@ -148,7 +148,7 @@ namespace App_ERP
                 //title.Text = "<b>Gráfico de acompanhamento da meta mensal</b>";
                 //chartControl1.Titles.Add(title);
 
-                decimal metaDoMes = (decimal)VariaveisGlobais.FilialLogada.at_metaMensal;
+                decimal metaDoMes = VariaveisGlobais.FilialLogada == null ? 0 : (decimal)VariaveisGlobais.FilialLogada.at_metaMensal;
 
                 if (metaDoMes > 0)
                 {

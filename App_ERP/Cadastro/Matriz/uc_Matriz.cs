@@ -85,7 +85,10 @@ namespace App_ERP.Cadastro.Matriz
         {
             PegaIdMatrizSelecionadaGrid();
 
-            TelaCadastrarMatriz("Alterar", idMatriz);
+            if (VariaveisGlobais.FilialLogada != null)
+            {
+                TelaCadastrarMatriz("Alterar", idMatriz);
+            }
         }
 
         private bool IsMatrizComAtorCadastro()

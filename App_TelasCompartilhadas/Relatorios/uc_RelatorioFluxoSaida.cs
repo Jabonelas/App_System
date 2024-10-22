@@ -44,7 +44,7 @@ namespace App_TelasCompartilhadas.Relatorios
         {
             cmbFilial.ReadOnly = true;
 
-            cmbFilial.EditValue = VariaveisGlobais.FilialLogada.id_ator;
+            cmbFilial.EditValue = VariaveisGlobais.FilialLogada == null ? 0 : VariaveisGlobais.FilialLogada.id_ator;
         }
 
         private void PreencherFilial()
@@ -195,22 +195,25 @@ namespace App_TelasCompartilhadas.Relatorios
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-            DateTime dataInicio = Convert.ToDateTime(dtInicio.EditValue);
-            DateTime dataFinal = Convert.ToDateTime(dtFinal.EditValue);
-
-            if (IscamposPreenchidos())
+            if (VariaveisGlobais.FilialLogada != null)
             {
-                if (dataInicio <= dataFinal)
-                {
-                    long idFilial = Convert.ToInt32(cmbFilial.EditValue);
+                DateTime dataInicio = Convert.ToDateTime(dtInicio.EditValue);
+                DateTime dataFinal = Convert.ToDateTime(dtFinal.EditValue);
 
-                    rp_ImpressaoRelatorioFluxoSaida relatorio =
-                        new rp_ImpressaoRelatorioFluxoSaida(dataInicio, dataFinal, idFilial);
-                    relatorio.ShowPreview();
-                }
-                else
+                if (IscamposPreenchidos())
                 {
-                    MensagensDoSistema.MensagemAtencaoOk("A data de início não pode ser posterior à data final!");
+                    if (dataInicio <= dataFinal)
+                    {
+                        long idFilial = Convert.ToInt32(cmbFilial.EditValue);
+
+                        rp_ImpressaoRelatorioFluxoSaida relatorio =
+                            new rp_ImpressaoRelatorioFluxoSaida(dataInicio, dataFinal, idFilial);
+                        relatorio.ShowPreview();
+                    }
+                    else
+                    {
+                        MensagensDoSistema.MensagemAtencaoOk("A data de início não pode ser posterior à data final!");
+                    }
                 }
             }
         }

@@ -124,7 +124,10 @@ namespace App_ERP.Cadastro.PDV
         {
             PegaIdPDVSelecionadaGrid();
 
-            TelaCadastrarPDV("Alterar", idPDV);
+            if (VariaveisGlobais.FilialLogada != null)
+            {
+                TelaCadastrarPDV("Alterar", idPDV);
+            }
         }
 
         private bool IsPDVComFilial()

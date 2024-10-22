@@ -298,7 +298,10 @@ namespace App_TelasCompartilhadas.Produtos
 
                 PegaIdProdutoSelecionadoGrid();
 
-                TelaCadastrarProduto("alterar", Convert.ToInt16(idProduto));
+                if (VariaveisGlobais.FilialLogada != null)
+                {
+                    TelaCadastrarProduto("alterar", Convert.ToInt16(idProduto));
+                }
             }
         }
 
@@ -388,26 +391,29 @@ namespace App_TelasCompartilhadas.Produtos
 
                 PegaIdProdutoSelecionadoGrid();
 
-                if (!IsEstoqueZerado())
+                if (idProduto != 0)
                 {
-                    MensagensDoSistema.MensagemAtencaoOk("Não é possível excluir o cadastro de um produto que ainda possui estoque.");
+                    if (!IsEstoqueZerado())
+                    {
+                        MensagensDoSistema.MensagemAtencaoOk("Não é possível excluir o cadastro de um produto que ainda possui estoque.");
 
-                    idProduto = 0;
+                        idProduto = 0;
 
-                    return;
-                }
+                        return;
+                    }
 
-                var dialogResult = MensagensDoSistema.MensagemAtencaoYesNo("Você tem certeza de que deseja excluir este produto?");
+                    var dialogResult = MensagensDoSistema.MensagemAtencaoYesNo("Você tem certeza de que deseja excluir este produto?");
 
-                if (dialogResult == DialogResult.Yes)
-                {
-                    DesativarDadosProduto();
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        DesativarDadosProduto();
 
-                    DesativarDadosProdutoFilial();
+                        DesativarDadosProdutoFilial();
 
-                    CarregarGridProdutosAtivos();
+                        CarregarGridProdutosAtivos();
 
-                    uc_MensagemExclusao mensagemExclusaoCantoInferiorDireito = new uc_MensagemExclusao(painelTelaInicial);
+                        uc_MensagemExclusao mensagemExclusaoCantoInferiorDireito = new uc_MensagemExclusao(painelTelaInicial);
+                    }
                 }
             }
         }

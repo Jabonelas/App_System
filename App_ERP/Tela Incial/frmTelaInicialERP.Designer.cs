@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTelaInicialERP));
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnCadastrarProduto = new DevExpress.XtraBars.BarButtonItem();
             this.btnCadastrarCategoria = new DevExpress.XtraBars.BarButtonItem();
@@ -51,22 +53,6 @@
             this.btnRelatorioVendaVendedor = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.btnAtualizar = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.pnlTelaPrincipal = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
-            this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barStatusVersaoSistema = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
@@ -75,6 +61,22 @@
             this.barStatusUsuario = new DevExpress.XtraBars.BarStaticItem();
             this.barStatusFilail = new DevExpress.XtraBars.BarStaticItem();
             this.barStatusPDV = new DevExpress.XtraBars.BarStaticItem();
+            this.ribbonPageCadastro = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroupItens = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroupClientes = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroupMatriz = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroupSistema = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageMovimentacao = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageRelatorio = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageSistema = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.pnlTelaPrincipal = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
+            this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -116,10 +118,10 @@
             this.ribbon.MaxItemId = 36;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPage1,
-            this.ribbonPage2,
-            this.ribbonPage3,
-            this.ribbonPage4});
+            this.ribbonPageCadastro,
+            this.ribbonPageMovimentacao,
+            this.ribbonPageRelatorio,
+            this.ribbonPageSistema});
             this.ribbon.Size = new System.Drawing.Size(1278, 169);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
@@ -209,6 +211,9 @@
             this.btnCadastrarFilial.Id = 16;
             this.btnCadastrarFilial.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCadastrarFilial.ImageOptions.SvgImage")));
             this.btnCadastrarFilial.Name = "btnCadastrarFilial";
+            toolTipItem1.Text = "israel";
+            superToolTip1.Items.Add(toolTipItem1);
+            this.btnCadastrarFilial.SuperTip = superToolTip1;
             this.btnCadastrarFilial.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCadastrarFilial_ItemClick);
             // 
             // btnCadastrarMatriz
@@ -288,60 +293,124 @@
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAtualizar_ItemClick);
             // 
-            // ribbonPage1
+            // barStatusVersaoSistema
             // 
-            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1,
-            this.ribbonPageGroup2,
-            this.ribbonPageGroup3,
-            this.ribbonPageGroup4});
-            this.ribbonPage1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ribbonPage1.ImageOptions.SvgImage")));
-            this.ribbonPage1.ImageOptions.SvgImageSize = new System.Drawing.Size(24, 24);
-            this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "Cadastros";
+            this.barStatusVersaoSistema.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.barStatusVersaoSistema.Caption = "Versão: 1.0.0";
+            this.barStatusVersaoSistema.Id = 28;
+            this.barStatusVersaoSistema.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.barStatusVersaoSistema.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barStatusVersaoSistema.ImageOptions.Image")));
+            this.barStatusVersaoSistema.Name = "barStatusVersaoSistema";
+            this.barStatusVersaoSistema.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
-            // ribbonPageGroup1
+            // barStaticItem1
             // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.btnCadastrarProduto);
-            this.ribbonPageGroup1.ItemLinks.Add(this.btnCadastrarCategoria);
-            this.ribbonPageGroup1.ItemLinks.Add(this.btnCadastrarSubCategoria);
-            this.ribbonPageGroup1.ItemLinks.Add(this.btnCadastrarSecao);
-            this.ribbonPageGroup1.ItemLinks.Add(this.btnCadastrarMarca);
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "Itens";
+            this.barStaticItem1.Caption = " | ";
+            this.barStaticItem1.Id = 29;
+            this.barStaticItem1.Name = "barStaticItem1";
             // 
-            // ribbonPageGroup2
+            // barStaticItem2
             // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.btnCadastrarConsumidor);
-            this.ribbonPageGroup2.ItemLinks.Add(this.btnCadastrarEmpresa);
-            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.Text = "Cleintes";
+            this.barStaticItem2.Caption = " | ";
+            this.barStaticItem2.Id = 30;
+            this.barStaticItem2.Name = "barStaticItem2";
             // 
-            // ribbonPageGroup3
+            // barStaticItem3
             // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.btnCadastrarFornecedor);
-            this.ribbonPageGroup3.ItemLinks.Add(this.btnCadastrarTransportadora);
-            this.ribbonPageGroup3.ItemLinks.Add(this.btnCadastrarFuncionario);
-            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            this.ribbonPageGroup3.Text = "Matriz";
+            this.barStaticItem3.Caption = " | ";
+            this.barStaticItem3.Id = 31;
+            this.barStaticItem3.Name = "barStaticItem3";
             // 
-            // ribbonPageGroup4
+            // barStatusVendedor
             // 
-            this.ribbonPageGroup4.ItemLinks.Add(this.btnCadastrarFilial);
-            this.ribbonPageGroup4.ItemLinks.Add(this.btnCadastrarMatriz);
-            this.ribbonPageGroup4.ItemLinks.Add(this.btnCadastrarRede);
-            this.ribbonPageGroup4.ItemLinks.Add(this.btnCadastrarPDV);
-            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
-            this.ribbonPageGroup4.Text = "Sistema";
+            this.barStatusVendedor.Caption = "Vendedor";
+            this.barStatusVendedor.Id = 32;
+            this.barStatusVendedor.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.barStatusVendedor.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStatusVendedor.ImageOptions.SvgImage")));
+            this.barStatusVendedor.Name = "barStatusVendedor";
+            this.barStatusVendedor.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
-            // ribbonPage2
+            // barStatusUsuario
             // 
-            this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.barStatusUsuario.Caption = "Usuario";
+            this.barStatusUsuario.Id = 33;
+            this.barStatusUsuario.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.barStatusUsuario.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStatusUsuario.ImageOptions.SvgImage")));
+            this.barStatusUsuario.Name = "barStatusUsuario";
+            this.barStatusUsuario.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
+            // barStatusFilail
+            // 
+            this.barStatusFilail.Caption = "Filial";
+            this.barStatusFilail.Id = 34;
+            this.barStatusFilail.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.barStatusFilail.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStatusFilail.ImageOptions.SvgImage")));
+            this.barStatusFilail.Name = "barStatusFilail";
+            this.barStatusFilail.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
+            // barStatusPDV
+            // 
+            this.barStatusPDV.Caption = "PDV";
+            this.barStatusPDV.Id = 35;
+            this.barStatusPDV.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.barStatusPDV.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStatusPDV.ImageOptions.SvgImage")));
+            this.barStatusPDV.Name = "barStatusPDV";
+            this.barStatusPDV.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
+            // ribbonPageCadastro
+            // 
+            this.ribbonPageCadastro.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroupItens,
+            this.ribbonPageGroupClientes,
+            this.ribbonPageGroupMatriz,
+            this.ribbonPageGroupSistema});
+            this.ribbonPageCadastro.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ribbonPage1.ImageOptions.SvgImage")));
+            this.ribbonPageCadastro.ImageOptions.SvgImageSize = new System.Drawing.Size(24, 24);
+            this.ribbonPageCadastro.Name = "ribbonPageCadastro";
+            this.ribbonPageCadastro.Text = "Cadastros";
+            // 
+            // ribbonPageGroupItens
+            // 
+            this.ribbonPageGroupItens.ItemLinks.Add(this.btnCadastrarProduto);
+            this.ribbonPageGroupItens.ItemLinks.Add(this.btnCadastrarCategoria);
+            this.ribbonPageGroupItens.ItemLinks.Add(this.btnCadastrarSubCategoria);
+            this.ribbonPageGroupItens.ItemLinks.Add(this.btnCadastrarSecao);
+            this.ribbonPageGroupItens.ItemLinks.Add(this.btnCadastrarMarca);
+            this.ribbonPageGroupItens.Name = "ribbonPageGroupItens";
+            this.ribbonPageGroupItens.Text = "Itens";
+            // 
+            // ribbonPageGroupClientes
+            // 
+            this.ribbonPageGroupClientes.ItemLinks.Add(this.btnCadastrarConsumidor);
+            this.ribbonPageGroupClientes.ItemLinks.Add(this.btnCadastrarEmpresa);
+            this.ribbonPageGroupClientes.Name = "ribbonPageGroupClientes";
+            this.ribbonPageGroupClientes.Text = "Cleintes";
+            // 
+            // ribbonPageGroupMatriz
+            // 
+            this.ribbonPageGroupMatriz.ItemLinks.Add(this.btnCadastrarFornecedor);
+            this.ribbonPageGroupMatriz.ItemLinks.Add(this.btnCadastrarTransportadora);
+            this.ribbonPageGroupMatriz.ItemLinks.Add(this.btnCadastrarFuncionario);
+            this.ribbonPageGroupMatriz.Name = "ribbonPageGroupMatriz";
+            this.ribbonPageGroupMatriz.Text = "Matriz";
+            // 
+            // ribbonPageGroupSistema
+            // 
+            this.ribbonPageGroupSistema.ItemLinks.Add(this.btnCadastrarFilial);
+            this.ribbonPageGroupSistema.ItemLinks.Add(this.btnCadastrarMatriz);
+            this.ribbonPageGroupSistema.ItemLinks.Add(this.btnCadastrarRede);
+            this.ribbonPageGroupSistema.ItemLinks.Add(this.btnCadastrarPDV);
+            this.ribbonPageGroupSistema.Name = "ribbonPageGroupSistema";
+            this.ribbonPageGroupSistema.Text = "Sistema";
+            // 
+            // ribbonPageMovimentacao
+            // 
+            this.ribbonPageMovimentacao.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup5});
-            this.ribbonPage2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ribbonPage2.ImageOptions.SvgImage")));
-            this.ribbonPage2.ImageOptions.SvgImageSize = new System.Drawing.Size(24, 24);
-            this.ribbonPage2.Name = "ribbonPage2";
-            this.ribbonPage2.Text = "Movimentações";
+            this.ribbonPageMovimentacao.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ribbonPage2.ImageOptions.SvgImage")));
+            this.ribbonPageMovimentacao.ImageOptions.SvgImageSize = new System.Drawing.Size(24, 24);
+            this.ribbonPageMovimentacao.Name = "ribbonPageMovimentacao";
+            this.ribbonPageMovimentacao.Text = "Movimentações";
             // 
             // ribbonPageGroup5
             // 
@@ -349,14 +418,14 @@
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             this.ribbonPageGroup5.Text = "Entrada";
             // 
-            // ribbonPage3
+            // ribbonPageRelatorio
             // 
-            this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageRelatorio.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup6});
-            this.ribbonPage3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ribbonPage3.ImageOptions.SvgImage")));
-            this.ribbonPage3.ImageOptions.SvgImageSize = new System.Drawing.Size(24, 24);
-            this.ribbonPage3.Name = "ribbonPage3";
-            this.ribbonPage3.Text = "Relatórios";
+            this.ribbonPageRelatorio.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ribbonPage3.ImageOptions.SvgImage")));
+            this.ribbonPageRelatorio.ImageOptions.SvgImageSize = new System.Drawing.Size(24, 24);
+            this.ribbonPageRelatorio.Name = "ribbonPageRelatorio";
+            this.ribbonPageRelatorio.Text = "Relatórios";
             // 
             // ribbonPageGroup6
             // 
@@ -366,15 +435,15 @@
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             this.ribbonPageGroup6.Text = "Relatórios";
             // 
-            // ribbonPage4
+            // ribbonPageSistema
             // 
-            this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageSistema.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup7,
             this.ribbonPageGroup8});
-            this.ribbonPage4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ribbonPage4.ImageOptions.SvgImage")));
-            this.ribbonPage4.ImageOptions.SvgImageSize = new System.Drawing.Size(24, 24);
-            this.ribbonPage4.Name = "ribbonPage4";
-            this.ribbonPage4.Text = "Sistemas";
+            this.ribbonPageSistema.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ribbonPage4.ImageOptions.SvgImage")));
+            this.ribbonPageSistema.ImageOptions.SvgImageSize = new System.Drawing.Size(24, 24);
+            this.ribbonPageSistema.Name = "ribbonPageSistema";
+            this.ribbonPageSistema.Text = "Sistema";
             // 
             // ribbonPageGroup7
             // 
@@ -428,70 +497,6 @@
             this.barButtonItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
             this.barButtonItem2.Name = "barButtonItem2";
             // 
-            // barStatusVersaoSistema
-            // 
-            this.barStatusVersaoSistema.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
-            this.barStatusVersaoSistema.Caption = "Versão: 1.0.0";
-            this.barStatusVersaoSistema.Id = 28;
-            this.barStatusVersaoSistema.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.barStatusVersaoSistema.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barStaticItem1.ImageOptions.Image")));
-            this.barStatusVersaoSistema.Name = "barStatusVersaoSistema";
-            this.barStatusVersaoSistema.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            // 
-            // barStaticItem1
-            // 
-            this.barStaticItem1.Caption = " | ";
-            this.barStaticItem1.Id = 29;
-            this.barStaticItem1.Name = "barStaticItem1";
-            // 
-            // barStaticItem2
-            // 
-            this.barStaticItem2.Caption = " | ";
-            this.barStaticItem2.Id = 30;
-            this.barStaticItem2.Name = "barStaticItem2";
-            // 
-            // barStaticItem3
-            // 
-            this.barStaticItem3.Caption = " | ";
-            this.barStaticItem3.Id = 31;
-            this.barStaticItem3.Name = "barStaticItem3";
-            // 
-            // barStatusVendedor
-            // 
-            this.barStatusVendedor.Caption = "Vendedor";
-            this.barStatusVendedor.Id = 32;
-            this.barStatusVendedor.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.barStatusVendedor.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStaticItem4.ImageOptions.SvgImage")));
-            this.barStatusVendedor.Name = "barStatusVendedor";
-            this.barStatusVendedor.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            // 
-            // barStatusUsuario
-            // 
-            this.barStatusUsuario.Caption = "Usuario";
-            this.barStatusUsuario.Id = 33;
-            this.barStatusUsuario.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.barStatusUsuario.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStaticItem4.ImageOptions.SvgImage1")));
-            this.barStatusUsuario.Name = "barStatusUsuario";
-            this.barStatusUsuario.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            // 
-            // barStatusFilail
-            // 
-            this.barStatusFilail.Caption = "Filial";
-            this.barStatusFilail.Id = 34;
-            this.barStatusFilail.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.barStatusFilail.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStaticItem4.ImageOptions.SvgImage2")));
-            this.barStatusFilail.Name = "barStatusFilail";
-            this.barStatusFilail.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            // 
-            // barStatusPDV
-            // 
-            this.barStatusPDV.Caption = "PDV";
-            this.barStatusPDV.Id = 35;
-            this.barStatusPDV.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.barStatusPDV.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStaticItem4.ImageOptions.SvgImage3")));
-            this.barStatusPDV.Name = "barStatusPDV";
-            this.barStatusPDV.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            // 
             // frmTelaInicialERP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -514,8 +519,8 @@
         #endregion
 
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPageCadastro;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroupItens;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
         public DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer pnlTelaPrincipal;
         private DevExpress.XtraBars.BarButtonItem btnCadastrarProduto;
@@ -524,7 +529,7 @@
         private DevExpress.XtraBars.BarButtonItem btnCadastrarSecao;
         private DevExpress.XtraBars.BarButtonItem btnCadastrarMarca;
         private DevExpress.XtraBars.BarButtonItem btnCadastrarConsumidor;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroupClientes;
         private DevExpress.XtraBars.BarButtonItem btnCadastrarEmpresa;
         private DevExpress.XtraBars.BarButtonItem btnCadastrarFornecedor;
         private DevExpress.XtraBars.BarButtonItem btnCadastrarTransportadora;
@@ -533,14 +538,14 @@
         private DevExpress.XtraBars.BarButtonItem btnCadastrarMatriz;
         private DevExpress.XtraBars.BarButtonItem btnCadastrarRede;
         private DevExpress.XtraBars.BarButtonItem btnCadastrarPDV;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroupMatriz;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroupSistema;
         private DevExpress.XtraBars.BarButtonItem barButtonItem9;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPageMovimentacao;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPageRelatorio;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage4;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPageSistema;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
         private DevExpress.XtraBars.BarButtonItem btnDeslogar;
         private DevExpress.XtraBars.BarButtonItem btnCompra;

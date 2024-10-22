@@ -38,7 +38,7 @@
             this.cmbICMS = new DevExpress.XtraEditors.ImageComboBoxEdit();
             this.imageComboBoxEdit1 = new DevExpress.XtraEditors.ImageComboBoxEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.abaImposto = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.tabbedControlGroup2 = new DevExpress.XtraLayout.TabbedControlGroup();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -62,7 +62,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbICMS.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageComboBoxEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.abaImposto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
@@ -200,23 +200,23 @@
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.Root.GroupBordersVisible = false;
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlGroup1,
+            this.abaImposto,
             this.simpleSeparator1,
             this.layoutControlGroup6});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(1266, 408);
             this.Root.TextVisible = false;
             // 
-            // layoutControlGroup1
+            // abaImposto
             // 
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.abaImposto.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem3,
             this.tabbedControlGroup2,
             this.layoutControlItem6});
-            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 86);
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1246, 302);
-            this.layoutControlGroup1.Text = "Impostos";
+            this.abaImposto.Location = new System.Drawing.Point(0, 86);
+            this.abaImposto.Name = "abaImposto";
+            this.abaImposto.Size = new System.Drawing.Size(1246, 302);
+            this.abaImposto.Text = "Impostos";
             // 
             // layoutControlItem3
             // 
@@ -367,7 +367,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbICMS.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageComboBoxEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.abaImposto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
@@ -393,7 +393,7 @@
         private DevExpress.XtraLayout.LayoutControlGroup Root;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraLayout.LayoutControlGroup abaImposto;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.TabbedControlGroup tabbedControlGroup2;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;

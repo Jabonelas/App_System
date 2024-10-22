@@ -9,6 +9,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using DevExpress.XtraLayout.Utils;
 
 namespace App_TelasCompartilhadas.Produtos
 {
@@ -64,6 +65,8 @@ namespace App_TelasCompartilhadas.Produtos
             cmbModalidade_ICMSST.Properties.AddEnum<DadosGeralNfe.SEnNfeModBcSt>();
 
             cmbModalidade_ICMSEProprio.Properties.AddEnum<DadosGeralNfe.SEnNfeModBc>();
+
+            abaFiscal.Visibility = LayoutVisibility.Never;
         }
 
         private void LayoutBotoes()

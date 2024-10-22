@@ -48,7 +48,7 @@ namespace App_TelasCompartilhadas
                                                 on ator.fk_tb_matriz.id_matriz equals matriz.id_matriz
                                             join pdv in session.Query<tb_pdv>()
                                                 on ator.id_ator equals pdv.fk_tb_ator.id_ator
-                                            where ator.at_atorTipo == 11 && ator.at_desat == 0 && pdv.pdv_nicMacAddress == null && pdv.pdv_dskSerialNumber == null && pdv.pdv_boardSerialNumber == null
+                                            where ator.at_atorTipo == 11 && ator.at_desat == 0 && pdv.pdv_dskSerialNumber == null && pdv.pdv_boardSerialNumber == null
                                             orderby ator.at_razSoc
                                             select new
                                             {

@@ -123,7 +123,10 @@ namespace App_ERP
         {
             PegaIdCategoriaSelecionadaGrid();
 
-            TelaCadastrarCategoria("Alterar", idCategoria);
+            if (VariaveisGlobais.FilialLogada != null)
+            {
+                TelaCadastrarCategoria("Alterar", idCategoria);
+            }
         }
 
         private bool IsProdutoComCategoria()

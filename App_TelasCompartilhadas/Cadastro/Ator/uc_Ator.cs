@@ -324,14 +324,19 @@ namespace App_TelasCompartilhadas.Ator
 
                 PegaIdCategoriaSelecionadaGrid();
 
-                //entra caso for cadastro de funcionário
-                if (tipoAtor == 100)
+                var a = grdAtor.DataSource;
+
+                if (VariaveisGlobais.FilialLogada != null)
                 {
-                    TelaCadastrarFuncionario("Alterar", idAtor);
-                }
-                else
-                {
-                    TelaCadastrarAtor("Alterar", idAtor);
+                    //entra caso for cadastro de funcionário
+                    if (tipoAtor == 100)
+                    {
+                        TelaCadastrarFuncionario("Alterar", idAtor);
+                    }
+                    else
+                    {
+                        TelaCadastrarAtor("Alterar", idAtor);
+                    }
                 }
             }
         }

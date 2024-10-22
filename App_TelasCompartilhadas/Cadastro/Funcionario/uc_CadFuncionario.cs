@@ -524,6 +524,13 @@ namespace App_TelasCompartilhadas.Cadastro.Funcionario
                 return false;
             }
 
+            if (cmbMatriz.Text == "Selecione a Matriz")
+            {
+                MensagensDoSistema.MensagemInformacaoOk("Selecione o campo Matriz.");
+                txtConfirmarSenha.Focus();
+                return false;
+            }
+
             return true;
         }
 

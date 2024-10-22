@@ -74,11 +74,12 @@ namespace App_TelasCompartilhadas.bancoSQLite
             get { return ffk_tb_pdv; }
             set { SetPropertyValue<tb_pdv>(nameof(fk_tb_pdv), ref ffk_tb_pdv, value); }
         }
-        long ffk_tb_est;
-        public long fk_tb_est
+        tb_est ffk_tb_est;
+        [Association(@"tb_jornadaReferencestb_est")]
+        public tb_est fk_tb_est
         {
             get { return ffk_tb_est; }
-            set { SetPropertyValue<long>(nameof(fk_tb_est), ref ffk_tb_est, value); }
+            set { SetPropertyValue<tb_est>(nameof(fk_tb_est), ref ffk_tb_est, value); }
         }
         [Association(@"tb_movimentacaoReferencestb_jornada")]
         public XPCollection<tb_movimentacao> tb_movimentacaos { get { return GetCollection<tb_movimentacao>(nameof(tb_movimentacaos)); } }

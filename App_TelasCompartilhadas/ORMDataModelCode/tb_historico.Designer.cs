@@ -57,11 +57,12 @@ namespace App_TelasCompartilhadas.bancoSQLite
             get { return fhi_conteudoNovo; }
             set { SetPropertyValue<string>(nameof(hi_conteudoNovo), ref fhi_conteudoNovo, value); }
         }
-        long ffk_tb_est;
-        public long fk_tb_est
+        tb_est ffk_tb_est;
+        [Association(@"tb_historicoReferencestb_est")]
+        public tb_est fk_tb_est
         {
             get { return ffk_tb_est; }
-            set { SetPropertyValue<long>(nameof(fk_tb_est), ref ffk_tb_est, value); }
+            set { SetPropertyValue<tb_est>(nameof(fk_tb_est), ref ffk_tb_est, value); }
         }
         tb_ator ffk_tb_ator;
         [Association(@"tb_historicoReferencestb_ator")]

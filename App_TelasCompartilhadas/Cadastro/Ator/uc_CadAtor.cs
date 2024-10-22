@@ -64,6 +64,8 @@ namespace App_TelasCompartilhadas.Ator
 
             PreencherMatriz();
 
+            cmbTipoAmbEmis.EditValue = DadosGeralNfe.SEnNfeTipoAmb.nd0;
+
             if (idAtor != 0)
             {
                 PreencherCampoAtorSelecionado();
@@ -830,9 +832,16 @@ namespace App_TelasCompartilhadas.Ator
                 return false;
             }
 
-            if (string.IsNullOrEmpty(txtCEP.Text) || string.IsNullOrEmpty(txtEndereco.Text) || string.IsNullOrEmpty(txtNumeroEnd.Text) || string.IsNullOrEmpty(txtBairro.Text) || cmbMunicipio.Text == "Selecione o Município" || cmbEstado.Text == "Selecione o Estado")
+            if (string.IsNullOrEmpty(txtCEP.Text) || string.IsNullOrEmpty(txtEndereco.Text) || string.IsNullOrEmpty(txtBairro.Text) || cmbMunicipio.Text == "Selecione o Município" || cmbEstado.Text == "Selecione o Estado")
             {
                 MensagensDoSistema.MensagemInformacaoOk("Preencha os campos de endereço corretamente.");
+                return false;
+            }
+
+            if (cmbMatriz.Text == "Selecione a Matriz")
+            {
+                MensagensDoSistema.MensagemInformacaoOk("Selecione o campo Matriz.");
+                cmbMatriz.Focus();
                 return false;
             }
 
@@ -893,7 +902,10 @@ namespace App_TelasCompartilhadas.Ator
 
                     CadastroProdutoFilial(idAtorCadastrado);
 
-                    SalvarCertificadoDigital();
+                    if ((DadosGeralNfe.SEnNfeTipoAmb)cmbTipoAmbEmis.EditValue != DadosGeralNfe.SEnNfeTipoAmb.nd0)
+                    {
+                        SalvarCertificadoDigital();
+                    }
                 }
 
                 uc_MensagemConfirmacao mensagemConfirmacaoCantoInferiorDireito = new uc_MensagemConfirmacao(painelTelaInicial);

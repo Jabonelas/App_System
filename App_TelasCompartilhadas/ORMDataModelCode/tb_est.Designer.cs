@@ -1107,6 +1107,10 @@ namespace App_TelasCompartilhadas.bancoSQLite
             get { return ffk_tb_matriz; }
             set { SetPropertyValue<tb_marca_produto>(nameof(fk_tb_matriz), ref ffk_tb_matriz, value); }
         }
+        [Association(@"tb_historicoReferencestb_est")]
+        public XPCollection<tb_historico> tb_historicos { get { return GetCollection<tb_historico>(nameof(tb_historicos)); } }
+        [Association(@"tb_jornadaReferencestb_est")]
+        public XPCollection<tb_jornada> tb_jornadas { get { return GetCollection<tb_jornada>(nameof(tb_jornadas)); } }
         [Association(@"tb_produtoReferencestb_est")]
         public XPCollection<tb_produto> tb_produtos { get { return GetCollection<tb_produto>(nameof(tb_produtos)); } }
     }

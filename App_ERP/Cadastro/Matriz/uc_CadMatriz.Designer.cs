@@ -162,6 +162,7 @@
     "tifica a empresa perante a Receita Federal.";
             this.txtCNPJ.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.txtCNPJ.ToolTipTitle = "C.N.P.J. (Cadastro Nacional da Pessoa Jurídica):";
+            this.txtCNPJ.Validating += new System.ComponentModel.CancelEventHandler(this.txtCNPJ_Validating);
             // 
             // Root
             // 

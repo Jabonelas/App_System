@@ -127,7 +127,10 @@ namespace App_ERP.Subcategoria
         {
             PegaIdSubCategoriaSelecionadaGrid();
 
-            TelaCadastrarSubcategoria("Alterar", idSubategoria);
+            if (VariaveisGlobais.FilialLogada != null)
+            {
+                TelaCadastrarSubcategoria("Alterar", idSubategoria);
+            }
         }
 
         private bool IsProdutoComCategoria()

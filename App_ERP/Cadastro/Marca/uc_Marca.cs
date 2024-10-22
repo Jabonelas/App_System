@@ -84,7 +84,10 @@ namespace App_ERP.Cadastro.Marca
         {
             PegaIdMarcaSelecionadaGrid();
 
-            TelaCadastrarMarca("Alterar", idMarca);
+            if (VariaveisGlobais.FilialLogada != null)
+            {
+                TelaCadastrarMarca("Alterar", idMarca);
+            }
         }
 
         private bool IsProdutoComMarca()

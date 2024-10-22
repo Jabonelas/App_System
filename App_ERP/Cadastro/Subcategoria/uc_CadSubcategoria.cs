@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using App_TelasCompartilhadas.Classes;
 using static App_TelasCompartilhadas.Classes.DadosGeralNfe;
 using App_TelasCompartilhadas;
+using DevExpress.XtraLayout.Utils;
 
 namespace App_ERP.Subcategoria
 {
@@ -43,6 +44,8 @@ namespace App_ERP.Subcategoria
             {
                 PreencherCampos();
             }
+
+            abaImposto.Visibility = LayoutVisibility.Never;
         }
 
         private void LayoutBotoes()

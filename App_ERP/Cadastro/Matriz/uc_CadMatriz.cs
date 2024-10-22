@@ -260,5 +260,25 @@ namespace App_ERP
                 MensagensDoSistema.MensagemErroOk($"Erro ao alterar matriz: {ex.Message}");
             }
         }
+
+        private void txtCNPJ_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (txtCNPJ.Text == "__.___.___/____-__")
+            {
+                txtCNPJ.ErrorText = string.Empty;
+                e.Cancel = false;
+                return;
+            }
+
+            if (!ValidacoesCampos.IsCnpjValido(txtCNPJ.Text) && txtCNPJ.Text != "__.___.___/____-__")
+            {
+                txtCNPJ.ErrorText = "C.N.P.J. informado invalido!";
+                e.Cancel = true;
+            }
+            else
+            {
+                txtCNPJ.ErrorText = string.Empty;
+            }
+        }
     }
 }

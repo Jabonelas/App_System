@@ -31,6 +31,7 @@ namespace App_TelasCompartilhadas
             txtUsuario.EditValue = PlaceholderText;
             txtUsuario.ForeColor = Color.Gray;
             txtUsuario.Text = "geral";
+            //txtUsuario.Text = "admin";
             txtSenha.Text = "123456789";
 
             if (Atualizacao.IsExisteConexaoInternet())
@@ -61,9 +62,12 @@ namespace App_TelasCompartilhadas
 
                     VariaveisGlobais.MatrizLogada = dadosUsuario.fk_tb_matriz;
 
-                    tb_matriz dadosMatriz = uow.GetObjectByKey<tb_matriz>(Convert.ToInt64(dadosUsuario.fk_tb_matriz.id_matriz));
+                    if (dadosUsuario.fk_tb_matriz != null)
+                    {
+                        tb_matriz dadosMatriz = uow.GetObjectByKey<tb_matriz>(Convert.ToInt64(dadosUsuario.fk_tb_matriz.id_matriz));
 
-                    VariaveisGlobais.RedeLogada = dadosMatriz.fk_tb_rede;
+                        VariaveisGlobais.RedeLogada = dadosMatriz.fk_tb_rede;
+                    }
 
                     return isSenhaIgual;
                 }
@@ -135,6 +139,17 @@ namespace App_TelasCompartilhadas
 
                     //var cadastroMaquina = uow.Query<tb_pdv>().FirstOrDefault(x => x.pdv_nicMacAddress == macAddress && x.pdv_dskSerialNumber == diskSerialNumber && x.pdv_boardSerialNumber == motherboardSerialNumber);
                     var cadastroMaquina = uow.Query<tb_pdv>().FirstOrDefault(x => x.pdv_dskSerialNumber == diskSerialNumber && x.pdv_boardSerialNumber == motherboardSerialNumber);
+
+                    if (VariaveisGlobais.UsuarioLogado.at_nomeUsuario == "admin")
+                    {
+                        TelaCarregamento.EsconderCarregamento();
+
+                        this.Hide();
+
+                        VariaveisGlobais.isInicializarSistema = true;
+
+                        return;
+                    }
 
                     if (cadastroMaquina == null)
                     {

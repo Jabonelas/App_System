@@ -126,7 +126,10 @@ namespace App_ERP.Cadastro.Secao
         {
             PegaIdSecaoSelecionadaGrid();
 
-            TelaCadastrarSecao("Alterar", idSecao);
+            if (VariaveisGlobais.FilialLogada != null)
+            {
+                TelaCadastrarSecao("Alterar", idSecao);
+            }
         }
 
         private bool IsCategoriaComSecao()
