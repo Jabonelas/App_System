@@ -19,7 +19,7 @@ namespace App_TelasCompartilhadas.bancoSQLite
     public partial class tb_planCont : XPLiteObject
     {
         long fid_planCont;
-        [Key(AutoGenerate = true)]
+        [Key]
         public long id_planCont
         {
             get { return fid_planCont; }

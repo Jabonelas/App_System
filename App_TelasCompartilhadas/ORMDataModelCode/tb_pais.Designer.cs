@@ -19,7 +19,7 @@ namespace App_TelasCompartilhadas.bancoSQLite
     public partial class tb_pais : XPLiteObject
     {
         long fid_pais;
-        [Key(AutoGenerate = true)]
+        [Key]
         public long id_pais
         {
             get { return fid_pais; }

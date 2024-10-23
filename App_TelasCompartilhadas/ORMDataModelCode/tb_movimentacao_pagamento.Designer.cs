@@ -19,7 +19,7 @@ namespace App_TelasCompartilhadas.bancoSQLite
     public partial class tb_movimentacao_pagamento : XPLiteObject
     {
         long fid_movimentacao_pagamento;
-        [Key(AutoGenerate = true)]
+        [Key]
         public long id_movimentacao_pagamento
         {
             get { return fid_movimentacao_pagamento; }

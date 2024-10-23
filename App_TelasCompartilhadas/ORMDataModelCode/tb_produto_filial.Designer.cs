@@ -19,7 +19,7 @@ namespace App_TelasCompartilhadas.bancoSQLite
     public partial class tb_produto_filial : XPLiteObject
     {
         long fid_produto_filial;
-        [Key(AutoGenerate = true)]
+        [Key]
         public long id_produto_filial
         {
             get { return fid_produto_filial; }
@@ -99,6 +99,12 @@ namespace App_TelasCompartilhadas.bancoSQLite
             get { return fpf_estMin; }
             set { SetPropertyValue<decimal>(nameof(pf_estMin), ref fpf_estMin, value); }
         }
+        decimal fpf_estMax;
+        public decimal pf_estMax
+        {
+            get { return fpf_estMax; }
+            set { SetPropertyValue<decimal>(nameof(pf_estMax), ref fpf_estMax, value); }
+        }
         decimal fpf_est;
         public decimal pf_est
         {
@@ -130,12 +136,6 @@ namespace App_TelasCompartilhadas.bancoSQLite
         {
             get { return ffk_tb_ator; }
             set { SetPropertyValue<tb_ator>(nameof(fk_tb_ator), ref ffk_tb_ator, value); }
-        }
-        decimal fpf_estMax;
-        public decimal pf_estMax
-        {
-            get { return fpf_estMax; }
-            set { SetPropertyValue<decimal>(nameof(pf_estMax), ref fpf_estMax, value); }
         }
         [Association(@"tb_relacao_produto_cadastro_XMLReferencestb_produto_filial")]
         public XPCollection<tb_relacao_produto_cadastro_XML> tb_relacao_produto_cadastro_XMLs { get { return GetCollection<tb_relacao_produto_cadastro_XML>(nameof(tb_relacao_produto_cadastro_XMLs)); } }

@@ -19,7 +19,7 @@ namespace App_TelasCompartilhadas.bancoSQLite
     public partial class tb_nfe : XPLiteObject
     {
         long fid_nfe;
-        [Key(AutoGenerate = true)]
+        [Key]
         public long id_nfe
         {
             get { return fid_nfe; }

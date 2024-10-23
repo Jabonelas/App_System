@@ -19,7 +19,7 @@ namespace App_TelasCompartilhadas.bancoSQLite
     public partial class tb_certificado_digital : XPLiteObject
     {
         long fid_certificado_digital;
-        [Key(AutoGenerate = true)]
+        [Key]
         public long id_certificado_digital
         {
             get { return fid_certificado_digital; }

@@ -19,7 +19,7 @@ namespace App_TelasCompartilhadas.bancoSQLite
     public partial class tb_matriz : XPLiteObject
     {
         long fid_matriz;
-        [Key(AutoGenerate = true)]
+        [Key]
         public long id_matriz
         {
             get { return fid_matriz; }

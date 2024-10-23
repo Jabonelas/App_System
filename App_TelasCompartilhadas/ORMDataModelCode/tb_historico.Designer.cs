@@ -19,7 +19,7 @@ namespace App_TelasCompartilhadas.bancoSQLite
     public partial class tb_historico : XPLiteObject
     {
         long fid_historico;
-        [Key(AutoGenerate = true)]
+        [Key]
         public long id_historico
         {
             get { return fid_historico; }
