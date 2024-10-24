@@ -106,6 +106,7 @@ namespace App_PDV
             this.cmbProdutos.ToolTip = "Escolha o produto que será incluído na venda.";
             this.cmbProdutos.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.cmbProdutos.ToolTipTitle = "Seleção de produtos:";
+            this.cmbProdutos.TextChanged += new System.EventHandler(this.cmbProdutos_TextChanged);
             this.cmbProdutos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbProdutos_KeyPress);
             // 
             // dataLayoutControl1

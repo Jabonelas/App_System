@@ -29,26 +29,26 @@ namespace App_ERP
             //UserLookAndFeel.Default.SetSkinStyle("The Asphalt World");
             UserLookAndFeel.Default.SetSkinStyle("Sharp Plus");
 
-            // Registrar apenas os temas permitidos
-            var allowedSkins = new string[]
-            {
-                "Basic",
-                //"High Contrast",
-                "The Asphalt World",
-                "McSkin",
-                "Office 2019 Colorful",
-                "Seven Classic",
-                "Sharp Plus"
-            };
-            var skinContainerList = SkinManager.Default.Skins;
-            for (int i = skinContainerList.Count - 1; i >= 0; i--)
-            {
-                var skinName = skinContainerList[i].SkinName;
-                if (Array.IndexOf(allowedSkins, skinName) < 0)
-                {
-                    skinContainerList.RemoveAt(i);
-                }
-            }
+            //// Registrar apenas os temas permitidos
+            //var allowedSkins = new string[]
+            //{
+            //    "Basic",
+            //    //"High Contrast",
+            //    "The Asphalt World",
+            //    "McSkin",
+            //    "Office 2019 Colorful",
+            //    "Seven Classic",
+            //    "Sharp Plus"
+            //};
+            //var skinContainerList = SkinManager.Default.Skins;
+            //for (int i = skinContainerList.Count - 1; i >= 0; i--)
+            //{
+            //    var skinName = skinContainerList[i].SkinName;
+            //    if (Array.IndexOf(allowedSkins, skinName) < 0)
+            //    {
+            //        skinContainerList.RemoveAt(i);
+            //    }
+            //}
 
             #endregion Aplicacao/selecao dos temas
 

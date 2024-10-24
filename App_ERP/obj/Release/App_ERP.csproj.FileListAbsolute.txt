@@ -176,3 +176,5 @@ C:\Users\israe\source\repos\App_System\App_ERP\bin\Release\DevExpress.XtraPivotG
 C:\Users\israe\source\repos\App_System\App_ERP\obj\Release\App_ERP.csproj.CopyComplete
 C:\Users\israe\source\repos\App_System\App_ERP\obj\Release\App_ERP.exe
 C:\Users\israe\source\repos\App_System\App_ERP\obj\Release\App_ERP.pdb
+C:\Users\israe\source\repos\App_System\App_ERP\bin\Release\DevExpress.XtraWizard.v24.1.dll
+C:\Users\israe\source\repos\App_System\App_ERP\bin\Release\DevExpress.XtraWizard.v24.1.xml

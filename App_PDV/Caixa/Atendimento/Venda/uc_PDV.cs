@@ -6,6 +6,7 @@ using DevExpress.Xpo;
 using App_TelasCompartilhadas.bancoSQLite;
 using App_TelasCompartilhadas.Classes;
 using DevExpress.XtraGrid.Views.Grid;
+using Unimake.Business.DFe.Xml.ESocial;
 
 namespace App_PDV
 {
@@ -480,6 +481,33 @@ namespace App_PDV
         private void txtQuant_KeyUp(object sender, KeyEventArgs e)
         {
             CalculandoTotalPorProduto();
+        }
+
+        private void cmbProdutos_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(cmbProdutos.Text))
+                {
+                    return;
+                }
+
+                using (UnitOfWork uow = new UnitOfWork())
+                {
+                    long idProdutoFilial = Convert.ToInt64(cmbProdutos.EditValue) == 0 ? _idProduto : Convert.ToInt64(cmbProdutos.EditValue);
+
+                    tb_produto_filial produtoSelecionado = uow.GetObjectByKey<tb_produto_filial>(idProdutoFilial);
+
+                    if (produtoSelecionado != null)
+                    {
+                        txtVlrTotal.Text = produtoSelecionado.pf_vlrUnCom.ToString("C2");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MensagensDoSistema.MensagemErroOk($"Erro ao preencher valor do produto selecionado: {ex.Message}");
+            }
         }
     }
 }

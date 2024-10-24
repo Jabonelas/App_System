@@ -127,7 +127,7 @@ namespace App_TelasCompartilhadas
             }
         }
 
-        private void VerificandoMaquina()
+        private tb_pdv DadosMaquina()
         {
             try
             {
@@ -139,6 +139,32 @@ namespace App_TelasCompartilhadas
 
                     //var cadastroMaquina = uow.Query<tb_pdv>().FirstOrDefault(x => x.pdv_nicMacAddress == macAddress && x.pdv_dskSerialNumber == diskSerialNumber && x.pdv_boardSerialNumber == motherboardSerialNumber);
                     var cadastroMaquina = uow.Query<tb_pdv>().FirstOrDefault(x => x.pdv_dskSerialNumber == diskSerialNumber && x.pdv_boardSerialNumber == motherboardSerialNumber);
+
+                    return cadastroMaquina;
+                }
+            }
+            catch (Exception ex)
+            {
+                MensagensDoSistema.MensagemErroOk($"Não foi possível verificar a identificação da máquina: {ex.Message}");
+
+                return null;
+            }
+        }
+
+        private void VerificandoMaquina()
+        {
+            try
+            {
+                using (UnitOfWork uow = new UnitOfWork())
+                {
+                    ////string macAddress = new VerificarComponentesPC().GetMacAddress();
+                    //string diskSerialNumber = new VerificarComponentesPC().GetDiskSerialNumber();
+                    //string motherboardSerialNumber = new VerificarComponentesPC().GetMotherboardSerialNumber();
+
+                    ////var cadastroMaquina = uow.Query<tb_pdv>().FirstOrDefault(x => x.pdv_nicMacAddress == macAddress && x.pdv_dskSerialNumber == diskSerialNumber && x.pdv_boardSerialNumber == motherboardSerialNumber);
+                    //var cadastroMaquina = uow.Query<tb_pdv>().FirstOrDefault(x => x.pdv_dskSerialNumber == diskSerialNumber && x.pdv_boardSerialNumber == motherboardSerialNumber);
+
+                    var cadastroMaquina = DadosMaquina();
 
                     if (VariaveisGlobais.UsuarioLogado.at_nomeUsuario == "admin")
                     {
@@ -164,6 +190,12 @@ namespace App_TelasCompartilhadas
                         {
                             return;
                         }
+
+                        cadastroMaquina = DadosMaquina();
+
+                        VariaveisGlobais.PDVLogado = cadastroMaquina;
+
+                        VariaveisGlobais.FilialLogada = cadastroMaquina.fk_tb_ator;
 
                         VariaveisGlobais.isInicializarSistema = true;
                     }

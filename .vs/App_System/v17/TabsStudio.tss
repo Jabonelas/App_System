@@ -3,6 +3,7 @@
   <ArrayOfArrayOfString>
     <ArrayOfString>
       <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Atendimento\Venda\uc_PDV.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Atendimento\Venda\uc_PDV.cs</string>
     </ArrayOfString>
     <ArrayOfString>
       <string>C:\Users\israe\source\repos\App_System\App_PDV\Tela Inicial\frmTelaInicialPDV.cs</string>
@@ -29,6 +30,7 @@
     </ArrayOfString>
     <ArrayOfString>
       <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Cadastro\Funcionario\uc_CadFuncionario.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Cadastro\Funcionario\uc_CadFuncionario.cs</string>
     </ArrayOfString>
     <ArrayOfString>
       <string>C:\Users\israe\source\repos\App_System\App_PDV\Caixa\Fluxo de Caixa\Abertura Caixa\uc_AberturaCaixa.cs</string>
@@ -36,6 +38,25 @@
     <ArrayOfString>
       <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Cadastro\Ator\uc_CadAtor.cs</string>
       <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Cadastro\Ator\uc_CadAtor.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\frmSelecionarFilial.cs</string>
+      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\frmSelecionarFilial.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Login\frmLogin.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Classes\VariaveisGlobais.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\App_System\App_PDV\Program.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\App_System\App_ERP\Program.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Cadastro\Produtos\uc_CadProduto.cs</string>
     </ArrayOfString>
   </ArrayOfArrayOfString>
 </ArrayOfArrayOfArrayOfString>

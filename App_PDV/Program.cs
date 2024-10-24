@@ -36,27 +36,27 @@ namespace App_PDV
             //UserLookAndFeel.Default.SetSkinStyle("The Asphalt World");
             UserLookAndFeel.Default.SetSkinStyle("Sharp Plus");
 
-            // Registrar apenas os temas permitidos
-            var allowedSkins = new string[]
-            {
-                "Basic",
-                //"High Contrast",
-                "McSkin",
-                "The Asphalt World",
-                "Office 2019 Colorful",
-                "Seven Classic",
-                "Sharp Plus"
-            };
+            //// Registrar apenas os temas permitidos
+            //var allowedSkins = new string[]
+            //{
+            //    "Basic",
+            //    //"High Contrast",
+            //    "McSkin",
+            //    "The Asphalt World",
+            //    "Office 2019 Colorful",
+            //    "Seven Classic",
+            //    "Sharp Plus"
+            //};
 
-            var skinContainerList = SkinManager.Default.Skins;
-            for (int i = skinContainerList.Count - 1; i >= 0; i--)
-            {
-                var skinName = skinContainerList[i].SkinName;
-                if (Array.IndexOf(allowedSkins, skinName) < 0)
-                {
-                    skinContainerList.RemoveAt(i);
-                }
-            }
+            //var skinContainerList = SkinManager.Default.Skins;
+            //for (int i = skinContainerList.Count - 1; i >= 0; i--)
+            //{
+            //    var skinName = skinContainerList[i].SkinName;
+            //    if (Array.IndexOf(allowedSkins, skinName) < 0)
+            //    {
+            //        skinContainerList.RemoveAt(i);
+            //    }
+            //}
 
             #endregion Aplicacao/selecao dos temas
 
