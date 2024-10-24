@@ -160,6 +160,11 @@ namespace App_TelasCompartilhadas
                         frmSelecionarFilial selecionarPdv = new frmSelecionarFilial();
                         selecionarPdv.ShowDialog();
 
+                        if (VariaveisGlobais.isInicializarSistema == false)
+                        {
+                            return;
+                        }
+
                         VariaveisGlobais.isInicializarSistema = true;
                     }
                     else

@@ -19,7 +19,7 @@ namespace App_TelasCompartilhadas.bancoSQLite
     public partial class tb_est : XPLiteObject
     {
         long fid_est;
-        [Key]
+        [Key(AutoGenerate = true)]
         public long id_est
         {
             get { return fid_est; }

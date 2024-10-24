@@ -19,7 +19,7 @@ namespace App_TelasCompartilhadas.bancoSQLite
     public partial class tb_resEventoNFe : XPLiteObject
     {
         long fid_resEventoNFe;
-        [Key]
+        [Key(AutoGenerate = true)]
         public long id_resEventoNFe
         {
             get { return fid_resEventoNFe; }

@@ -19,7 +19,7 @@ namespace App_TelasCompartilhadas.bancoSQLite
     public partial class tb_contExt : XPLiteObject
     {
         long fid_contExt;
-        [Key]
+        [Key(AutoGenerate = true)]
         public long id_contExt
         {
             get { return fid_contExt; }

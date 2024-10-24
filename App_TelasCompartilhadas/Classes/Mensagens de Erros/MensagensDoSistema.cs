@@ -33,7 +33,7 @@ namespace App_TelasCompartilhadas.Classes
 
         public static void MensagemErroOk(string _mensagem)
         {
-            LogErros.GravarLog(_mensagem);
+            LogErros.GravarLogErros(_mensagem);
 
             XtraMessageBox.Show(_mensagem, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }

@@ -19,7 +19,7 @@ namespace App_TelasCompartilhadas.bancoSQLite
     public partial class tb_pdv : XPLiteObject
     {
         long fid_pdv;
-        [Key]
+        [Key(AutoGenerate = true)]
         public long id_pdv
         {
             get { return fid_pdv; }

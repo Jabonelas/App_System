@@ -1588,16 +1588,16 @@ namespace App_TelasCompartilhadas.Produtos
             this.uc_TituloTelas1.Dock = System.Windows.Forms.DockStyle.Top;
             this.uc_TituloTelas1.Location = new System.Drawing.Point(0, 0);
             this.uc_TituloTelas1.Name = "uc_TituloTelas1";
-            this.uc_TituloTelas1.Size = new System.Drawing.Size(1259, 32);
-            this.uc_TituloTelas1.TabIndex = 38;
+            this.uc_TituloTelas1.Size = new System.Drawing.Size(1259, 29);
+            this.uc_TituloTelas1.TabIndex = 45;
             // 
             // uc_CadProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.uc_TituloTelas1);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnVoltar);
-            this.Controls.Add(this.uc_TituloTelas1);
             this.Controls.Add(this.layoutControl2);
             this.Name = "uc_CadProduto";
             this.Size = new System.Drawing.Size(1259, 579);
@@ -1715,8 +1715,6 @@ namespace App_TelasCompartilhadas.Produtos
         }
 
         #endregion
-
-        private uc_TituloTelas uc_TituloTelas1;
         private DevExpress.XtraEditors.SimpleButton btnSalvar;
         private DevExpress.XtraEditors.SimpleButton btnVoltar;
         private DevExpress.XtraLayout.LayoutControl layoutControl2;
@@ -1826,5 +1824,6 @@ namespace App_TelasCompartilhadas.Produtos
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup16;
         private DevExpress.XtraEditors.ImageComboBoxEdit imageComboBoxEdit4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem43;
+        private uc_TituloTelas uc_TituloTelas1;
     }
 }

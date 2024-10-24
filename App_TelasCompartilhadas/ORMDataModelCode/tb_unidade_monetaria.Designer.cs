@@ -19,7 +19,7 @@ namespace App_TelasCompartilhadas.bancoSQLite
     public partial class tb_unidade_monetaria : XPLiteObject
     {
         long fid_unidade_monetaria;
-        [Key]
+        [Key(AutoGenerate = true)]
         public long id_unidade_monetaria
         {
             get { return fid_unidade_monetaria; }

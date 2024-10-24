@@ -15,9 +15,9 @@ namespace App_TelasCompartilhadas.Produtos
 {
     public partial class uc_CadProduto : DevExpress.XtraEditors.XtraUserControl
     {
+        public static string vlrAjuste = "";
         private string formaOrdenarGrid = "";
         private string operacao = "";
-        public static string vlrAjuste = "";
         private long idProduto = 0;
         private long idMarcaProduto = 0;
         private decimal vlrProdInicial = 0;

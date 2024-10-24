@@ -12,7 +12,7 @@ namespace App_ERP.Subcategoria
 {
     public partial class uc_CadSubcategoria : DevExpress.XtraEditors.XtraUserControl
     {
-        private frmTelaInicialERP _frmTelaInicial;
+        private frmTelaInicialERP _frmTelaInicial = null;
 
         private string operacao = string.Empty;
 

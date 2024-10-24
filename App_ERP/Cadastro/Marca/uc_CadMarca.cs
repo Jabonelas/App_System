@@ -10,7 +10,7 @@ namespace App_ERP.Cadastro.Marca
 {
     public partial class uc_CadMarca : DevExpress.XtraEditors.XtraUserControl
     {
-        private frmTelaInicialERP _frmTelaInicial;
+        private frmTelaInicialERP _frmTelaInicial = null;
 
         private long idMarca = 0;
 

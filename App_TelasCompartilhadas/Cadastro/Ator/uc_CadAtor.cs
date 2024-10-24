@@ -820,7 +820,7 @@ namespace App_TelasCompartilhadas.Ator
             }
             catch (Exception ex)
             {
-                MensagensDoSistema.MensagemErroOk($"Erro ao alterar cadastro ator: {ex.Message}");
+                MensagensDoSistema.MensagemErroOk($"Erro ao alterar cadastro ator: {ex.Message} - {ex}");
             }
         }
 

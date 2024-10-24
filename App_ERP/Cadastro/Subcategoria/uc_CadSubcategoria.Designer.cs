@@ -344,8 +344,8 @@
             this.uc_TituloTelas1.Dock = System.Windows.Forms.DockStyle.Top;
             this.uc_TituloTelas1.Location = new System.Drawing.Point(0, 0);
             this.uc_TituloTelas1.Name = "uc_TituloTelas1";
-            this.uc_TituloTelas1.Size = new System.Drawing.Size(1259, 31);
-            this.uc_TituloTelas1.TabIndex = 42;
+            this.uc_TituloTelas1.Size = new System.Drawing.Size(1259, 29);
+            this.uc_TituloTelas1.TabIndex = 12;
             // 
             // uc_CadSubcategoria
             // 
@@ -409,7 +409,7 @@
         private DevExpress.XtraLayout.SimpleSeparator simpleSeparator1;
         private DevExpress.XtraEditors.LookUpEdit cmbCategoria;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
-        private App_TelasCompartilhadas.uc_TituloTelas uc_TituloTelas1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup6;
+        private App_TelasCompartilhadas.uc_TituloTelas uc_TituloTelas1;
     }
 }

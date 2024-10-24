@@ -19,7 +19,7 @@ namespace App_TelasCompartilhadas.bancoSQLite
     public partial class tb_sub_forma_pagamento : XPLiteObject
     {
         long fid_sub_forma_pagamento;
-        [Key]
+        [Key(AutoGenerate = true)]
         public long id_sub_forma_pagamento
         {
             get { return fid_sub_forma_pagamento; }

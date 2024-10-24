@@ -57,19 +57,22 @@ namespace App_PDV.AberturaCaixa
                 lblNomeFilial.Text = SNome;
 
                 var compl = !string.IsNullOrWhiteSpace(dadosFilial.at_end_Compl) ? $"{dadosFilial.at_end_Compl}" : string.Empty;
+
                 var linha1 = string.Empty;
                 var linha2 = string.Empty;
                 var linha3 = string.Empty;
                 var linha4 = string.Empty;
                 var linhaComCmpl = string.Empty;
-                linha1 += $"{dadosFilial.at_end_Logr}, {dadosFilial.at_end_Num}";
+                linha1 += $"{dadosFilial.at_end_Logr},  {(string.IsNullOrEmpty(dadosFilial?.at_end_Num) ? "S/N" : dadosFilial.at_end_Num)}";
+                //linha1 += $"{dadosFilial.at_end_Logr}, {dadosFilial.at_end_Num}";
                 linhaComCmpl += $"{dadosFilial.at_end_Logr}, {dadosFilial.at_end_Num}{compl}";
                 if (linhaComCmpl.Length <= 50)
                     linha1 += $" - {compl} - {dadosFilial.at_end_Bairro}";
                 else
                     linha2 += $" {compl} - {dadosFilial.at_end_Bairro}";
                 linha3 += $" CEP: {dadosFilial.at_end_Cep} - {dadosFilial.fk_tb_municipio?.mu_nome} - {dadosFilial.fk_tb_estados_br?.eb_sigla}";
-                linha4 += $"CNPJ: {dadosFilial.at_cnpj} - IE:{dadosFilial.at_inscEst}";
+                linha4 += $"CNPJ: {dadosFilial.at_cnpj} - IE: {(string.IsNullOrEmpty(dadosFilial?.at_inscEst) ? "N/A" : dadosFilial.at_inscEst)}";
+                //linha4 += $"CNPJ: {dadosFilial.at_cnpj} - IE:{dadosFilial.at_inscEst}";
                 var SEnd = "";
                 if (string.IsNullOrWhiteSpace(linha2))
                     SEnd += $"{linha1}{Environment.NewLine}{linha3}{Environment.NewLine}{linha4}".ToUpper();
