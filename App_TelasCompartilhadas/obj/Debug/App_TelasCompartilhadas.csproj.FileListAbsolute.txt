@@ -82,7 +82,6 @@ C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_Tel
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.csproj.GenerateResource.cache
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.dll.licenses
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.csproj.CoreCompileInputs.cache
-C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.csproj.CopyComplete
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.dll
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_TelasCompartilhadas.pdb
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.Charts.v24.1.Core.dll
@@ -169,3 +168,4 @@ C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpr
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.XtraPivotGrid.v24.1.xml
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.XtraDiagram.v24.1.xml
 C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\bin\Debug\DevExpress.Diagram.v24.1.Core.xml
+C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\obj\Debug\App_Tela.1E861530.Up2Date

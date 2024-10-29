@@ -614,7 +614,6 @@ C:\Users\israe\source\repos\App_System\App_ERP\obj\Debug\App_ERP.uc_TelaInicialE
 C:\Users\israe\source\repos\App_System\App_ERP\obj\Debug\App_ERP.csproj.GenerateResource.cache
 C:\Users\israe\source\repos\App_System\App_ERP\obj\Debug\App_ERP.exe.licenses
 C:\Users\israe\source\repos\App_System\App_ERP\obj\Debug\App_ERP.csproj.CoreCompileInputs.cache
-C:\Users\israe\source\repos\App_System\App_ERP\obj\Debug\App_ERP.csproj.CopyComplete
 C:\Users\israe\source\repos\App_System\App_ERP\obj\Debug\App_ERP.exe
 C:\Users\israe\source\repos\App_System\App_ERP\obj\Debug\App_ERP.pdb
 C:\Users\israe\source\repos\App_System\App_ERP\bin\Debug\DevExpress.BonusSkins.v24.1.dll
@@ -697,3 +696,6 @@ C:\Users\israe\source\repos\App_System\App_ERP\bin\Debug\DevExpress.XtraNavBar.v
 C:\Users\israe\source\repos\App_System\App_ERP\bin\Debug\DevExpress.PivotGrid.v24.1.Core.xml
 C:\Users\israe\source\repos\App_System\App_ERP\bin\Debug\DevExpress.XtraGauges.v24.1.Core.xml
 C:\Users\israe\source\repos\App_System\App_ERP\bin\Debug\DevExpress.XtraPivotGrid.v24.1.xml
+C:\Users\israe\source\repos\App_System\App_ERP\bin\Debug\DevExpress.XtraWizard.v24.1.dll
+C:\Users\israe\source\repos\App_System\App_ERP\bin\Debug\DevExpress.XtraWizard.v24.1.xml
+C:\Users\israe\source\repos\App_System\App_ERP\obj\Debug\App_ERP.csproj.Up2Date

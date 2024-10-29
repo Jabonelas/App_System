@@ -423,7 +423,6 @@ C:\Users\israe\source\repos\App_System\App_PDV\obj\Debug\App_PDV.uc_TelaInicialP
 C:\Users\israe\source\repos\App_System\App_PDV\obj\Debug\App_PDV.csproj.GenerateResource.cache
 C:\Users\israe\source\repos\App_System\App_PDV\obj\Debug\App_PDV.exe.licenses
 C:\Users\israe\source\repos\App_System\App_PDV\obj\Debug\App_PDV.csproj.CoreCompileInputs.cache
-C:\Users\israe\source\repos\App_System\App_PDV\obj\Debug\App_PDV.csproj.CopyComplete
 C:\Users\israe\source\repos\App_System\App_PDV\obj\Debug\App_PDV.exe
 C:\Users\israe\source\repos\App_System\App_PDV\obj\Debug\App_PDV.pdb
 C:\Users\israe\source\repos\App_System\App_PDV\bin\Debug\DevExpress.BonusSkins.v24.1.dll
@@ -511,3 +510,4 @@ C:\Users\israe\source\repos\App_System\App_PDV\bin\Debug\DevExpress.DataAccess.v
 C:\Users\israe\source\repos\App_System\App_PDV\bin\Debug\DevExpress.XtraPivotGrid.v24.1.xml
 C:\Users\israe\source\repos\App_System\App_PDV\bin\Debug\DevExpress.XtraDiagram.v24.1.xml
 C:\Users\israe\source\repos\App_System\App_PDV\bin\Debug\DevExpress.Diagram.v24.1.Core.xml
+C:\Users\israe\source\repos\App_System\App_PDV\obj\Debug\App_PDV.csproj.Up2Date

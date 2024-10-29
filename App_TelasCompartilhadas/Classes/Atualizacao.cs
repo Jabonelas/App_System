@@ -75,12 +75,12 @@ namespace App_TelasCompartilhadas.Classes
             if (_telaAcesso == "PDV")
             {
                 versaoAtualUrl = "https://raw.githubusercontent.com/Jabonelas/PDV/refs/heads/main/App_PDV/bin/Release/version.txt?token=GHSAT0AAAAAACSVGVGUAKKK2DVBQITGKMJ4ZYS7HOA";//url do arquivo version.txt no GitHub
-                caminhoArquivo = @"C:\App_System\PDV\Release\version.txt";
+                caminhoArquivo = @"C:\App_System\App_System_PDV\version.txt";
             }
             else if (_telaAcesso == "ERP")
             {
                 versaoAtualUrl = "https://raw.githubusercontent.com/Jabonelas/PDV/refs/heads/main/App_ERP/bin/Release/version.txt?token=GHSAT0AAAAAACSVGVGVKMGRGXAV67ITEYQKZYS7GTA";//url do arquivo version.txt no GitHub
-                caminhoArquivo = @"C:\App_System\ERP\Release\version.txt";
+                caminhoArquivo = @"C:\App_System\App_System_ERP\version.txt";
             }
         }
 
@@ -93,7 +93,7 @@ namespace App_TelasCompartilhadas.Classes
                 if (dialog == DialogResult.Yes)
                 {
                     // Chama o atualizador externo e passa um parâmetro
-                    Process.Start(@"C:\App_System\Atualizacao\Release\net8.0-windows\Atualizacao-Automatica.exe", $"{_telaAcesso}");
+                    Process.Start(@"C:\App_System\App_System_Update\Atualizacao_Automatica.exe", $"{_telaAcesso}");
                 }
             }
             catch (Exception e)
