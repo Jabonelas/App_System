@@ -3,7 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\israe\\source\\repos\\App_System\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\classes\\atualizacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\cadastro\\ator\\uc_cadator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\cadastro\\ator\\uc_cadator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\cadastro\\ator\\uc_cadator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\cadastro\\ator\\uc_cadator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|c:\\users\\israe\\source\\repos\\app_system\\app_telascompartilhadas\\classes\\atualizacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\classes\\atualizacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,7 +19,7 @@
       "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\login\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|c:\\users\\israe\\source\\repos\\app_system\\app_telascompartilhadas\\frmimagensgeralsistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\frmimagensgeralsistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\frmimagensgeralsistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -41,14 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\frmselecionarfilial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\frmselecionarfilial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\cadastro\\ator\\uc_cadator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\cadastro\\ator\\uc_cadator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\cadastro\\ator\\uc_cadator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\cadastro\\ator\\uc_cadator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\cadastro\\funcionario\\uc_cadfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -122,7 +122,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 25,
+          "SelectedChildIndex": 16,
           "Children": [
             {
               "$type": "Bookmark",
@@ -134,19 +134,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "frmImagensGeralSistema.cs [Design]",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\frmImagensGeralSistema.cs",
               "RelativeDocumentMoniker": "App_TelasCompartilhadas\\frmImagensGeralSistema.cs",
               "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\frmImagensGeralSistema.cs [Design]",
               "RelativeToolTip": "App_TelasCompartilhadas\\frmImagensGeralSistema.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T21:19:18.721Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-10-28T21:19:18.721Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "app.config",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\app.config",
               "RelativeDocumentMoniker": "App_TelasCompartilhadas\\app.config",
@@ -154,11 +153,12 @@
               "RelativeToolTip": "App_TelasCompartilhadas\\app.config",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAMAAAB7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-10-25T16:39:14.625Z"
+              "WhenOpened": "2024-10-25T16:39:14.625Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "App.config",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_PDV\\App.config",
               "RelativeDocumentMoniker": "App_PDV\\App.config",
@@ -166,11 +166,12 @@
               "RelativeToolTip": "App_PDV\\App.config",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAB4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-10-25T16:39:01.394Z"
+              "WhenOpened": "2024-10-25T16:39:01.394Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "App.config",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_ERP\\App.config",
               "RelativeDocumentMoniker": "App_ERP\\App.config",
@@ -178,19 +179,19 @@
               "RelativeToolTip": "App_ERP\\App.config",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-10-25T16:38:01.56Z"
+              "WhenOpened": "2024-10-25T16:38:01.56Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "frmLogin.cs [Design]",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Login\\frmLogin.cs",
               "RelativeDocumentMoniker": "App_TelasCompartilhadas\\Login\\frmLogin.cs",
               "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Login\\frmLogin.cs [Design]",
               "RelativeToolTip": "App_TelasCompartilhadas\\Login\\frmLogin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T02:23:50.027Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-10-25T02:23:50.027Z"
             },
             {
               "$type": "Document",
@@ -201,7 +202,8 @@
               "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Cadastro\\Funcionario\\uc_CadFuncionario.cs [Design]",
               "RelativeToolTip": "App_TelasCompartilhadas\\Cadastro\\Funcionario\\uc_CadFuncionario.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T17:44:54.128Z"
+              "WhenOpened": "2024-10-24T17:44:54.128Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -212,7 +214,8 @@
               "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Cadastro\\Produtos\\uc_CadProduto.cs [Design]",
               "RelativeToolTip": "App_TelasCompartilhadas\\Cadastro\\Produtos\\uc_CadProduto.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T17:44:50.672Z"
+              "WhenOpened": "2024-10-24T17:44:50.672Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -252,7 +255,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "frmLogin.cs",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Login\\frmLogin.cs",
               "RelativeDocumentMoniker": "App_TelasCompartilhadas\\Login\\frmLogin.cs",
@@ -260,8 +263,7 @@
               "RelativeToolTip": "App_TelasCompartilhadas\\Login\\frmLogin.cs",
               "ViewState": "AgIAAD0AAAAAAAAAAAAewJgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T16:51:33.789Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T16:51:33.789Z"
             },
             {
               "$type": "Document",
@@ -277,7 +279,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "frmSelecionarFilial.cs [Design]",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\frmSelecionarFilial.cs",
               "RelativeDocumentMoniker": "App_TelasCompartilhadas\\frmSelecionarFilial.cs",
@@ -300,26 +302,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 0,
               "Title": "uc_CadAtor.cs",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Cadastro\\Ator\\uc_CadAtor.cs",
               "RelativeDocumentMoniker": "App_TelasCompartilhadas\\Cadastro\\Ator\\uc_CadAtor.cs",
               "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Cadastro\\Ator\\uc_CadAtor.cs",
               "RelativeToolTip": "App_TelasCompartilhadas\\Cadastro\\Ator\\uc_CadAtor.cs",
-              "ViewState": "AgIAALoCAAAAAAAAAIAwwBcDAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAEkDAAAAAAAAAAAlwFIDAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T20:00:16.482Z"
+              "WhenOpened": "2024-10-23T20:00:16.482Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 1,
               "Title": "uc_CadAtor.cs [Design]",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Cadastro\\Ator\\uc_CadAtor.cs",
               "RelativeDocumentMoniker": "App_TelasCompartilhadas\\Cadastro\\Ator\\uc_CadAtor.cs",
               "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Cadastro\\Ator\\uc_CadAtor.cs [Design]",
               "RelativeToolTip": "App_TelasCompartilhadas\\Cadastro\\Ator\\uc_CadAtor.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T20:00:14.34Z"
+              "WhenOpened": "2024-10-23T20:00:14.34Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -353,9 +357,10 @@
               "RelativeDocumentMoniker": "App_TelasCompartilhadas\\Cadastro\\Funcionario\\uc_CadFuncionario.cs",
               "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Cadastro\\Funcionario\\uc_CadFuncionario.cs",
               "RelativeToolTip": "App_TelasCompartilhadas\\Cadastro\\Funcionario\\uc_CadFuncionario.cs",
-              "ViewState": "AQIAAKECAAAAAAAAAAAQwKECAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2024-10-23T14:15:45.822Z"
+              "ViewState": "AgIAAKECAAAAAAAAAAAQwKECAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T14:15:45.822Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -367,7 +372,8 @@
               "RelativeToolTip": "App_ERP\\Cadastro\\PDV\\uc_CadPDV.cs",
               "ViewState": "AgIAABUBAAAAAAAAAAApwDEBAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T14:15:45.835Z"
+              "WhenOpened": "2024-10-23T14:15:45.835Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -406,7 +412,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Atualizacao.cs",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Classes\\Atualizacao.cs",
               "RelativeDocumentMoniker": "App_TelasCompartilhadas\\Classes\\Atualizacao.cs",
@@ -439,22 +445,24 @@
               "RelativeToolTip": "App_PDV\\Tela Inicial\\frmTelaInicialPDV.cs",
               "ViewState": "AgIAAEcAAAAAAAAAAAAUwF0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T15:32:38.236Z"
+              "WhenOpened": "2024-10-23T15:32:38.236Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "frmTelaInicialPDV.cs [Design]",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_PDV\\Tela Inicial\\frmTelaInicialPDV.cs",
               "RelativeDocumentMoniker": "App_PDV\\Tela Inicial\\frmTelaInicialPDV.cs",
               "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_PDV\\Tela Inicial\\frmTelaInicialPDV.cs [Design]",
               "RelativeToolTip": "App_PDV\\Tela Inicial\\frmTelaInicialPDV.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T15:32:36.078Z"
+              "WhenOpened": "2024-10-23T15:32:36.078Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "uc_PDV.cs [Design]",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_PDV\\Caixa\\Atendimento\\Venda\\uc_PDV.cs",
               "RelativeDocumentMoniker": "App_PDV\\Caixa\\Atendimento\\Venda\\uc_PDV.cs",

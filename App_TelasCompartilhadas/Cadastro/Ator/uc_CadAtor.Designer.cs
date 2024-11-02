@@ -286,7 +286,7 @@ namespace App_TelasCompartilhadas.Ator
             this.cmbMatriz.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("mt_cnpj", "CNPJ"),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("mt_nomeFant", "Nome Fantasia")});
-            this.cmbMatriz.Size = new System.Drawing.Size(242, 20);
+            this.cmbMatriz.Size = new System.Drawing.Size(216, 20);
             this.cmbMatriz.StyleController = this.layoutControl1;
             this.cmbMatriz.TabIndex = 13;
             this.cmbMatriz.ToolTip = resources.GetString("cmbMatriz.ToolTip");
@@ -327,10 +327,10 @@ namespace App_TelasCompartilhadas.Ator
             // 
             // txtRazaoSocialNomeCompl
             // 
-            this.txtRazaoSocialNomeCompl.Location = new System.Drawing.Point(668, 61);
+            this.txtRazaoSocialNomeCompl.Location = new System.Drawing.Point(612, 61);
             this.txtRazaoSocialNomeCompl.Name = "txtRazaoSocialNomeCompl";
             this.txtRazaoSocialNomeCompl.Properties.MaxLength = 100;
-            this.txtRazaoSocialNomeCompl.Size = new System.Drawing.Size(575, 20);
+            this.txtRazaoSocialNomeCompl.Size = new System.Drawing.Size(381, 20);
             this.txtRazaoSocialNomeCompl.StyleController = this.layoutControl1;
             this.txtRazaoSocialNomeCompl.TabIndex = 5;
             this.txtRazaoSocialNomeCompl.ToolTip = "Informe a razão social da empresa ou o nome completo da pessoa física.";
@@ -339,9 +339,9 @@ namespace App_TelasCompartilhadas.Ator
             // 
             // txtNomeFantNomeAbrev
             // 
-            this.txtNomeFantNomeAbrev.Location = new System.Drawing.Point(270, 61);
+            this.txtNomeFantNomeAbrev.Location = new System.Drawing.Point(244, 61);
             this.txtNomeFantNomeAbrev.Name = "txtNomeFantNomeAbrev";
-            this.txtNomeFantNomeAbrev.Size = new System.Drawing.Size(394, 20);
+            this.txtNomeFantNomeAbrev.Size = new System.Drawing.Size(364, 20);
             this.txtNomeFantNomeAbrev.StyleController = this.layoutControl1;
             this.txtNomeFantNomeAbrev.TabIndex = 6;
             this.txtNomeFantNomeAbrev.ToolTip = "Informe o nome fantasia da empresa ou o nome abreviado para pessoa física.";
@@ -565,7 +565,7 @@ namespace App_TelasCompartilhadas.Ator
             // 
             // btnArquivoCertDig
             // 
-            this.btnArquivoCertDig.Location = new System.Drawing.Point(36, 176);
+            this.btnArquivoCertDig.Location = new System.Drawing.Point(36, 136);
             this.btnArquivoCertDig.Name = "btnArquivoCertDig";
             this.btnArquivoCertDig.Properties.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             editorButtonImageOptions1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions1.SvgImage")));
@@ -653,11 +653,11 @@ namespace App_TelasCompartilhadas.Ator
             // 
             // cmbTipoAmbEmis
             // 
-            this.cmbTipoAmbEmis.Location = new System.Drawing.Point(36, 136);
+            this.cmbTipoAmbEmis.Location = new System.Drawing.Point(997, 61);
             this.cmbTipoAmbEmis.Name = "cmbTipoAmbEmis";
             this.cmbTipoAmbEmis.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbTipoAmbEmis.Size = new System.Drawing.Size(1195, 20);
+            this.cmbTipoAmbEmis.Size = new System.Drawing.Size(246, 20);
             this.cmbTipoAmbEmis.StyleController = this.layoutControl1;
             this.cmbTipoAmbEmis.TabIndex = 27;
             this.cmbTipoAmbEmis.ToolTip = "Selecione o tipo de ambiente para a emissão da Nota Fiscal Eletrônica (NF-e). Esc" +
@@ -720,7 +720,7 @@ namespace App_TelasCompartilhadas.Ator
             // 
             // txtSenhaCertificadoDigital
             // 
-            this.txtSenhaCertificadoDigital.Location = new System.Drawing.Point(36, 216);
+            this.txtSenhaCertificadoDigital.Location = new System.Drawing.Point(36, 176);
             this.txtSenhaCertificadoDigital.Name = "txtSenhaCertificadoDigital";
             this.txtSenhaCertificadoDigital.Size = new System.Drawing.Size(1195, 20);
             this.txtSenhaCertificadoDigital.StyleController = this.layoutControl1;
@@ -762,7 +762,8 @@ namespace App_TelasCompartilhadas.Ator
             this.tabbedControlGroup2,
             this.layoutControlItem5,
             this.layoutControlItem3,
-            this.layoutControlItem2});
+            this.layoutControlItem2,
+            this.layoutControlItem6});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(1247, 402);
@@ -772,7 +773,7 @@ namespace App_TelasCompartilhadas.Ator
             // 
             this.tabbedControlGroup2.Location = new System.Drawing.Point(0, 40);
             this.tabbedControlGroup2.Name = "tabbedControlGroup2";
-            this.tabbedControlGroup2.SelectedTabPage = this.layoutControlGroup6;
+            this.tabbedControlGroup2.SelectedTabPage = this.AbaFiscal;
             this.tabbedControlGroup2.Size = new System.Drawing.Size(1223, 317);
             this.tabbedControlGroup2.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup6,
@@ -1174,7 +1175,6 @@ namespace App_TelasCompartilhadas.Ator
             // 
             this.AbaRFB.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem19,
-            this.layoutControlItem6,
             this.layoutControlItem9});
             this.AbaRFB.Location = new System.Drawing.Point(0, 0);
             this.AbaRFB.Name = "AbaRFB";
@@ -1185,7 +1185,7 @@ namespace App_TelasCompartilhadas.Ator
             // layoutControlItem19
             // 
             this.layoutControlItem19.Control = this.btnArquivoCertDig;
-            this.layoutControlItem19.Location = new System.Drawing.Point(0, 40);
+            this.layoutControlItem19.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem19.Name = "layoutControlItem19";
             this.layoutControlItem19.Size = new System.Drawing.Size(1199, 40);
             this.layoutControlItem19.Text = "Arquivo de certificado digital (PFX)";
@@ -1195,9 +1195,9 @@ namespace App_TelasCompartilhadas.Ator
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.cmbTipoAmbEmis;
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem6.Location = new System.Drawing.Point(973, 0);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(1199, 40);
+            this.layoutControlItem6.Size = new System.Drawing.Size(250, 40);
             this.layoutControlItem6.Text = "Tipo do ambiente da emissão da NF-e";
             this.layoutControlItem6.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem6.TextSize = new System.Drawing.Size(182, 13);
@@ -1205,9 +1205,9 @@ namespace App_TelasCompartilhadas.Ator
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.txtSenhaCertificadoDigital;
-            this.layoutControlItem9.Location = new System.Drawing.Point(0, 80);
+            this.layoutControlItem9.Location = new System.Drawing.Point(0, 40);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(1199, 190);
+            this.layoutControlItem9.Size = new System.Drawing.Size(1199, 230);
             this.layoutControlItem9.Text = "Senha certificado digital";
             this.layoutControlItem9.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem9.TextSize = new System.Drawing.Size(182, 13);
@@ -1217,7 +1217,7 @@ namespace App_TelasCompartilhadas.Ator
             this.layoutControlItem5.Control = this.cmbMatriz;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(246, 40);
+            this.layoutControlItem5.Size = new System.Drawing.Size(220, 40);
             this.layoutControlItem5.Text = "Matriz";
             this.layoutControlItem5.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem5.TextSize = new System.Drawing.Size(182, 13);
@@ -1225,9 +1225,9 @@ namespace App_TelasCompartilhadas.Ator
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.txtNomeFantNomeAbrev;
-            this.layoutControlItem3.Location = new System.Drawing.Point(246, 0);
+            this.layoutControlItem3.Location = new System.Drawing.Point(220, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(398, 40);
+            this.layoutControlItem3.Size = new System.Drawing.Size(368, 40);
             this.layoutControlItem3.Text = "Nome fantasia ou Nome abreviado";
             this.layoutControlItem3.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem3.TextSize = new System.Drawing.Size(182, 13);
@@ -1235,9 +1235,9 @@ namespace App_TelasCompartilhadas.Ator
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.txtRazaoSocialNomeCompl;
-            this.layoutControlItem2.Location = new System.Drawing.Point(644, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(588, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(579, 40);
+            this.layoutControlItem2.Size = new System.Drawing.Size(385, 40);
             this.layoutControlItem2.Text = "Razão social ou Nome completo";
             this.layoutControlItem2.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem2.TextSize = new System.Drawing.Size(182, 13);
