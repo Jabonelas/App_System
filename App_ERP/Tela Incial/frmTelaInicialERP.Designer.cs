@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTelaInicialERP));
-            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnCadastrarProduto = new DevExpress.XtraBars.BarButtonItem();
             this.btnCadastrarCategoria = new DevExpress.XtraBars.BarButtonItem();
@@ -61,6 +61,7 @@
             this.barStatusUsuario = new DevExpress.XtraBars.BarStaticItem();
             this.barStatusFilail = new DevExpress.XtraBars.BarStaticItem();
             this.barStatusPDV = new DevExpress.XtraBars.BarStaticItem();
+            this.barToggleSwitchItem1 = new DevExpress.XtraBars.BarToggleSwitchItem();
             this.ribbonPageCadastro = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroupItens = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroupClientes = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -113,9 +114,10 @@
             this.barStatusVendedor,
             this.barStatusUsuario,
             this.barStatusFilail,
-            this.barStatusPDV});
+            this.barStatusPDV,
+            this.barToggleSwitchItem1});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 36;
+            this.ribbon.MaxItemId = 37;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPageCadastro,
@@ -211,9 +213,9 @@
             this.btnCadastrarFilial.Id = 16;
             this.btnCadastrarFilial.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCadastrarFilial.ImageOptions.SvgImage")));
             this.btnCadastrarFilial.Name = "btnCadastrarFilial";
-            toolTipItem1.Text = "israel";
-            superToolTip1.Items.Add(toolTipItem1);
-            this.btnCadastrarFilial.SuperTip = superToolTip1;
+            toolTipItem2.Text = "israel";
+            superToolTip2.Items.Add(toolTipItem2);
+            this.btnCadastrarFilial.SuperTip = superToolTip2;
             this.btnCadastrarFilial.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCadastrarFilial_ItemClick);
             // 
             // btnCadastrarMatriz
@@ -357,6 +359,13 @@
             this.barStatusPDV.Name = "barStatusPDV";
             this.barStatusPDV.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
+            // barToggleSwitchItem1
+            // 
+            this.barToggleSwitchItem1.Caption = "Modo Noite";
+            this.barToggleSwitchItem1.Id = 36;
+            this.barToggleSwitchItem1.Name = "barToggleSwitchItem1";
+            this.barToggleSwitchItem1.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.barToggleSwitchItem1_CheckedChanged);
+            // 
             // ribbonPageCadastro
             // 
             this.ribbonPageCadastro.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -364,7 +373,7 @@
             this.ribbonPageGroupClientes,
             this.ribbonPageGroupMatriz,
             this.ribbonPageGroupSistema});
-            this.ribbonPageCadastro.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ribbonPage1.ImageOptions.SvgImage")));
+            this.ribbonPageCadastro.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ribbonPageCadastro.ImageOptions.SvgImage")));
             this.ribbonPageCadastro.ImageOptions.SvgImageSize = new System.Drawing.Size(24, 24);
             this.ribbonPageCadastro.Name = "ribbonPageCadastro";
             this.ribbonPageCadastro.Text = "Cadastros";
@@ -407,7 +416,7 @@
             // 
             this.ribbonPageMovimentacao.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup5});
-            this.ribbonPageMovimentacao.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ribbonPage2.ImageOptions.SvgImage")));
+            this.ribbonPageMovimentacao.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ribbonPageMovimentacao.ImageOptions.SvgImage")));
             this.ribbonPageMovimentacao.ImageOptions.SvgImageSize = new System.Drawing.Size(24, 24);
             this.ribbonPageMovimentacao.Name = "ribbonPageMovimentacao";
             this.ribbonPageMovimentacao.Text = "Movimentações";
@@ -422,7 +431,7 @@
             // 
             this.ribbonPageRelatorio.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup6});
-            this.ribbonPageRelatorio.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ribbonPage3.ImageOptions.SvgImage")));
+            this.ribbonPageRelatorio.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ribbonPageRelatorio.ImageOptions.SvgImage")));
             this.ribbonPageRelatorio.ImageOptions.SvgImageSize = new System.Drawing.Size(24, 24);
             this.ribbonPageRelatorio.Name = "ribbonPageRelatorio";
             this.ribbonPageRelatorio.Text = "Relatórios";
@@ -440,7 +449,7 @@
             this.ribbonPageSistema.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup7,
             this.ribbonPageGroup8});
-            this.ribbonPageSistema.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ribbonPage4.ImageOptions.SvgImage")));
+            this.ribbonPageSistema.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ribbonPageSistema.ImageOptions.SvgImage")));
             this.ribbonPageSistema.ImageOptions.SvgImageSize = new System.Drawing.Size(24, 24);
             this.ribbonPageSistema.Name = "ribbonPageSistema";
             this.ribbonPageSistema.Text = "Sistema";
@@ -455,6 +464,7 @@
             // ribbonPageGroup8
             // 
             this.ribbonPageGroup8.ItemLinks.Add(this.skinDropDownButtonItem1);
+            this.ribbonPageGroup8.ItemLinks.Add(this.barToggleSwitchItem1);
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
             this.ribbonPageGroup8.Text = "Temas";
             // 
@@ -564,5 +574,6 @@
         private DevExpress.XtraBars.BarStaticItem barStatusUsuario;
         private DevExpress.XtraBars.BarStaticItem barStatusFilail;
         private DevExpress.XtraBars.BarStaticItem barStatusPDV;
+        private DevExpress.XtraBars.BarToggleSwitchItem barToggleSwitchItem1;
     }
 }

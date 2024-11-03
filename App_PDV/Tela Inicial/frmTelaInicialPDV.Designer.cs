@@ -87,6 +87,7 @@
             this.repositoryItemRibbonSearchEdit1 = new DevExpress.XtraBars.Ribbon.Internal.RepositoryItemRibbonSearchEdit();
             this.repositoryItemRibbonSearchEdit2 = new DevExpress.XtraBars.Ribbon.Internal.RepositoryItemRibbonSearchEdit();
             this.pnlTelaPrincipal = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
+            this.barToggleSwitchItem1 = new DevExpress.XtraBars.BarToggleSwitchItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCalcEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRibbonSearchEdit1)).BeginInit();
@@ -119,9 +120,10 @@
             this.barStatusVendedor,
             this.barStatusUsuario,
             this.barStatusFilail,
-            this.barStatusPDV});
+            this.barStatusPDV,
+            this.barToggleSwitchItem1});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 30;
+            this.ribbonControl1.MaxItemId = 31;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPageCaixa,
@@ -311,7 +313,7 @@
             this.ribbonPageGroup1,
             this.ribbonPageGroup2,
             this.ribbonPageGroup4});
-            this.ribbonPageCaixa.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ribbonPage1.ImageOptions.SvgImage")));
+            this.ribbonPageCaixa.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ribbonPageCaixa.ImageOptions.SvgImage")));
             this.ribbonPageCaixa.ImageOptions.SvgImageSize = new System.Drawing.Size(24, 24);
             this.ribbonPageCaixa.Name = "ribbonPageCaixa";
             this.ribbonPageCaixa.Text = "Caixa";
@@ -342,7 +344,7 @@
             this.ribbonPageConsultas.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup5,
             this.ribbonPageGroup6});
-            this.ribbonPageConsultas.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ribbonPage2.ImageOptions.SvgImage")));
+            this.ribbonPageConsultas.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ribbonPageConsultas.ImageOptions.SvgImage")));
             this.ribbonPageConsultas.ImageOptions.SvgImageSize = new System.Drawing.Size(24, 24);
             this.ribbonPageConsultas.Name = "ribbonPageConsultas";
             this.ribbonPageConsultas.Text = "Consultas";
@@ -365,7 +367,7 @@
             this.ribbonPageSistema.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup7,
             this.ribbonPageGroup3});
-            this.ribbonPageSistema.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ribbonPage3.ImageOptions.SvgImage")));
+            this.ribbonPageSistema.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ribbonPageSistema.ImageOptions.SvgImage")));
             this.ribbonPageSistema.ImageOptions.SvgImageSize = new System.Drawing.Size(24, 24);
             this.ribbonPageSistema.Name = "ribbonPageSistema";
             this.ribbonPageSistema.Text = "Sistema";
@@ -380,6 +382,7 @@
             // ribbonPageGroup3
             // 
             this.ribbonPageGroup3.ItemLinks.Add(this.skinDropDownButtonItem1);
+            this.ribbonPageGroup3.ItemLinks.Add(this.barToggleSwitchItem1);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "Temas";
             // 
@@ -436,6 +439,13 @@
             this.pnlTelaPrincipal.Name = "pnlTelaPrincipal";
             this.pnlTelaPrincipal.Size = new System.Drawing.Size(1270, 510);
             this.pnlTelaPrincipal.TabIndex = 1;
+            // 
+            // barToggleSwitchItem1
+            // 
+            this.barToggleSwitchItem1.Caption = "Modo Noite";
+            this.barToggleSwitchItem1.Id = 30;
+            this.barToggleSwitchItem1.Name = "barToggleSwitchItem1";
+            this.barToggleSwitchItem1.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.barToggleSwitchItem1_CheckedChanged);
             // 
             // frmTelaInicialPDV
             // 
@@ -499,6 +509,7 @@
         private DevExpress.XtraBars.BarStaticItem barStatusUsuario;
         private DevExpress.XtraBars.BarStaticItem barStatusFilail;
         private DevExpress.XtraBars.BarStaticItem barStatusPDV;
+        private DevExpress.XtraBars.BarToggleSwitchItem barToggleSwitchItem1;
     }
 }
 

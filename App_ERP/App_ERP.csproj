@@ -13,8 +13,7 @@
     <AssemblyName>App_ERP</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
+    <NuGetPackageImportStamp></NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -253,6 +252,17 @@
     <Reference Include="Unimake.Utils, Version=2024.6.12.1842, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Unimake.Utils.20240612.1842.1\lib\netstandard2.0\Unimake.Utils.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.Utils.v23.2" />
+    <Reference Include="DevExpress.XtraEditors.v23.2" />
+    <Reference Include="DevExpress.XtraGrid.v23.2" />
+    <Reference Include="DevExpress.Data.Desktop.v23.2" />
+    <Reference Include="DevExpress.XtraLayout.v23.2" />
+    <Reference Include="DevExpress.XtraBars.v23.2" />
+    <Reference Include="DevExpress.XtraTreeList.v23.2" />
+    <Reference Include="DevExpress.Data.v23.2" />
+    <Reference Include="DevExpress.Drawing.v23.2" />
+    <Reference Include="DevExpress.Mvvm.v23.2" />
+    <Reference Include="DevExpress.Printing.v23.2.Core" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cadastro\Marca\uc_CadMarca.cs">
@@ -492,6 +502,14 @@
     <EmbeddedResource Include="Assets\SVG\UIElements\Show.svg" />
     <Compile Include="Components\StrengthIndicator.cs" />
     <Compile Include="Components\Base\ProgressIndicatorBase.cs" />
+    <Compile Include="Editors\ToggleButton.cs" />
+    <EmbeddedResource Include="Assets\Toolbox\ToggleButton.bmp" />
+    <Compile Include="Editors\Base\ButtonBase.cs" />
+    <Compile Include="Editors\Base\ButtonImageOptionsBase.cs" />
+    <Compile Include="Editors\Base\CheckButtonBase.cs" />
+    <Compile Include="Components\Base\CheckItemBase.cs" />
+    <EmbeddedResource Include="Assets\HTML\ToggleButton.html" />
+    <EmbeddedResource Include="Assets\CSS\ToggleButton.css" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="unimake.ico" />

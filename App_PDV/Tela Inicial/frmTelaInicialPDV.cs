@@ -11,6 +11,7 @@ using App_PDV.Fluxo_de_Caixa.Saida_Caixa;
 using App_TelasCompartilhadas.Login;
 using App_TelasCompartilhadas.Produtos;
 using App_TelasCompartilhadas.Relatorios;
+using DevExpress.LookAndFeel;
 using UserControl = System.Windows.Forms.UserControl;
 
 namespace App_PDV
@@ -366,6 +367,22 @@ namespace App_PDV
             else
             {
                 MensagensDoSistema.MensagemInformacaoOk("Você está sem conexão com a internet para verificar se há atualizações disponíveis.");
+            }
+        }
+
+        private void barToggleSwitchItem1_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (barToggleSwitchItem1.Checked == false)
+            {
+                barToggleSwitchItem1.Caption = "Modo Noite";
+
+                UserLookAndFeel.Default.SetSkinStyle("Sharp Plus");
+            }
+            else
+            {
+                barToggleSwitchItem1.Caption = "Modo Dia";
+
+                UserLookAndFeel.Default.SetSkinStyle("Foggy");
             }
         }
     }

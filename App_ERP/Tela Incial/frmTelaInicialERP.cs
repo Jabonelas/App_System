@@ -25,6 +25,8 @@ using System.Drawing;
 
 using System.Windows.Forms;
 
+using DevExpress.LookAndFeel;
+
 namespace App_ERP
 {
     public partial class frmTelaInicialERP : DevExpress.XtraBars.Ribbon.RibbonForm
@@ -389,6 +391,22 @@ namespace App_ERP
             else
             {
                 MensagensDoSistema.MensagemInformacaoOk("Você está sem conexão com a internet para verificar se há atualizações disponíveis.");
+            }
+        }
+
+        private void barToggleSwitchItem1_CheckedChanged(object sender, ItemClickEventArgs e)
+        {
+            if (barToggleSwitchItem1.Checked == false)
+            {
+                barToggleSwitchItem1.Caption = "Modo Noite";
+
+                UserLookAndFeel.Default.SetSkinStyle("Sharp Plus");
+            }
+            else
+            {
+                barToggleSwitchItem1.Caption = "Modo Dia";
+
+                UserLookAndFeel.Default.SetSkinStyle("Foggy");
             }
         }
     }
