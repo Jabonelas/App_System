@@ -78,5 +78,8 @@
     <ArrayOfString>
       <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Classes\Configuracoes - Validacoes\ConfigBotoes.cs</string>
     </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\App_System\App_TelasCompartilhadas\Classes\Mensagens de Erros\MensagensDoSistema.cs</string>
+    </ArrayOfString>
   </ArrayOfArrayOfString>
 </ArrayOfArrayOfArrayOfString>

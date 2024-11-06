@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using System.Windows.Forms;
 using App_TelasCompartilhadas.Classes;
 using DevExpress.Data.Linq;
 using DevExpress.Xpo;

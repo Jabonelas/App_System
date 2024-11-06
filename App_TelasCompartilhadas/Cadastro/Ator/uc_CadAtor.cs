@@ -9,7 +9,6 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Windows.Forms;
 using Unimake.Business.Security;
-using Unimake.Business.DFe.Servicos;
 using System.Text.RegularExpressions;
 
 namespace App_TelasCompartilhadas.Ator

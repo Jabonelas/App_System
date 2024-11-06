@@ -6,7 +6,6 @@ using DevExpress.Xpo;
 using App_TelasCompartilhadas.bancoSQLite;
 using App_TelasCompartilhadas.Classes;
 using DevExpress.XtraGrid.Views.Grid;
-using Unimake.Business.DFe.Xml.ESocial;
 
 namespace App_PDV
 {

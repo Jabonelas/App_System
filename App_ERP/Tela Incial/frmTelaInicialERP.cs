@@ -16,15 +16,6 @@ using App_TelasCompartilhadas.bancoSQLite;
 using DevExpress.Xpo;
 using System.Linq;
 using App_TelasCompartilhadas.Mensagens_Canto_Inferior_Direito;
-using DevExpress.Utils;
-
-using DevExpress.Utils;
-using System;
-
-using System.Drawing;
-
-using System.Windows.Forms;
-
 using DevExpress.LookAndFeel;
 
 namespace App_ERP

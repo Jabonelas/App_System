@@ -1,8 +1,6 @@
 ﻿using System.Drawing;
-using DevExpress.Utils;
 using DevExpress.XtraEditors;
 using DevExpress.Utils.Svg;
-using DevExpress.XtraBars;
 
 namespace App_TelasCompartilhadas.Classes
 {

@@ -1,17 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Net.Http.Headers;
 using System.Net.Http;
 using System.Net.NetworkInformation;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using App_TelasCompartilhadas.Mensagens_Canto_Inferior_Direito;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
-using static DevExpress.Utils.Drawing.Helpers.NativeMethods;
 
 namespace App_TelasCompartilhadas.Classes
 {
@@ -27,6 +22,13 @@ namespace App_TelasCompartilhadas.Classes
             try
             {
                 DadosSistemaAtualizar(_telaAcesso);
+
+                if (!File.Exists(caminhoArquivo))
+                {
+                    MensagensDoSistema.MensagemErroOk("Arquivo de versão não encontrado.");
+
+                    return;
+                }
 
                 // Lê todas as linhas do arquivo
                 string[] linhas = File.ReadAllLines(caminhoArquivo);

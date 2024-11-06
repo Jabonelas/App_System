@@ -13,7 +13,8 @@
     <AssemblyName>App_ERP</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <NuGetPackageImportStamp></NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -502,11 +503,17 @@
     <EmbeddedResource Include="Assets\SVG\UIElements\Show.svg" />
     <Compile Include="Components\StrengthIndicator.cs" />
     <Compile Include="Components\Base\ProgressIndicatorBase.cs" />
-    <Compile Include="Editors\ToggleButton.cs" />
+    <Compile Include="Editors\ToggleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="Assets\Toolbox\ToggleButton.bmp" />
-    <Compile Include="Editors\Base\ButtonBase.cs" />
+    <Compile Include="Editors\Base\ButtonBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Editors\Base\ButtonImageOptionsBase.cs" />
-    <Compile Include="Editors\Base\CheckButtonBase.cs" />
+    <Compile Include="Editors\Base\CheckButtonBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Components\Base\CheckItemBase.cs" />
     <EmbeddedResource Include="Assets\HTML\ToggleButton.html" />
     <EmbeddedResource Include="Assets\CSS\ToggleButton.css" />

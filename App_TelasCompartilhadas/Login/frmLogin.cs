@@ -8,8 +8,6 @@ using DevExpress.Xpo;
 
 using App_TelasCompartilhadas.Classes;
 using App_TelasCompartilhadas.bancoSQLite;
-using System.Net.NetworkInformation;
-using App_TelasCompartilhadas.Mensagens_Canto_Inferior_Direito;
 
 namespace App_TelasCompartilhadas
 {
