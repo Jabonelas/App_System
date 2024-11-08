@@ -179,11 +179,11 @@
             this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.svgImageBox1);
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("frmAutenticacaoUsuario.IconOptions.Image")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAutenticacaoUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmAutenticacaoUsuario";
             this.Load += new System.EventHandler(this.frmAutenticacaoUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);

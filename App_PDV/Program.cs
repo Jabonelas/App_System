@@ -7,6 +7,7 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using System.Globalization;
 
 namespace App_PDV
 {
@@ -66,6 +67,15 @@ namespace App_PDV
 
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
+
+                #region Traducao
+
+                CultureInfo culture = CultureInfo.CreateSpecificCulture("pt-BR");
+                CultureInfo.DefaultThreadCurrentCulture = culture;
+                CultureInfo.DefaultThreadCurrentUICulture = culture;
+
+                #endregion Traducao
+
                 //Application.Run(new frmTelaInicial());
 
                 App_TelasCompartilhadas.frmLogin frmTelaInicial = new App_TelasCompartilhadas.frmLogin("PDV");

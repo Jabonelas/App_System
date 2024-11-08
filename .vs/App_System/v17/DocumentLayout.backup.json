@@ -3,76 +3,168 @@
   "WorkspaceRootPath": "C:\\Users\\israe\\source\\repos\\App_System\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|c:\\users\\israe\\source\\repos\\app_system\\app_erp\\tela incial\\frmtelainicialerp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|solutionrelative:app_erp\\tela incial\\frmtelainicialerp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\login\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\login\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\classes\\mensagens de erros\\logerros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\classes\\mensagens de erros\\logerros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25FD8C93-1B36-41F3-9DF4-02DB2EDCF375}|App_PDV\\App_PDV.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_pdv\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25FD8C93-1B36-41F3-9DF4-02DB2EDCF375}|App_PDV\\App_PDV.csproj|solutionrelative:app_pdv\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25FD8C93-1B36-41F3-9DF4-02DB2EDCF375}|App_PDV\\App_PDV.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_pdv\\tela inicial\\frmtelainicialpdv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25FD8C93-1B36-41F3-9DF4-02DB2EDCF375}|App_PDV\\App_PDV.csproj|solutionrelative:app_pdv\\tela inicial\\frmtelainicialpdv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25FD8C93-1B36-41F3-9DF4-02DB2EDCF375}|App_PDV\\App_PDV.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_pdv\\caixa\\atendimento\\venda\\frmpagamentopdv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25FD8C93-1B36-41F3-9DF4-02DB2EDCF375}|App_PDV\\App_PDV.csproj|solutionrelative:app_pdv\\caixa\\atendimento\\venda\\frmpagamentopdv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\classes\\atualizacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\classes\\atualizacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|c:\\users\\israe\\source\\repos\\app_system\\app_telascompartilhadas\\classes\\mensagens de erros\\mensagensdosistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\classes\\mensagens de erros\\mensagensdosistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\login\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\login\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25FD8C93-1B36-41F3-9DF4-02DB2EDCF375}|App_PDV\\App_PDV.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_pdv\\tela inicial\\frmtelainicialpdv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{25FD8C93-1B36-41F3-9DF4-02DB2EDCF375}|App_PDV\\App_PDV.csproj|solutionrelative:app_pdv\\tela inicial\\frmtelainicialpdv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\classes\\configuracoes - validacoes\\configbotoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\classes\\configuracoes - validacoes\\configbotoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_erp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|solutionrelative:app_erp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_erp\\tela incial\\frmtelainicialerp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|solutionrelative:app_erp\\tela incial\\frmtelainicialerp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\cadastro\\funcionario\\uc_cadfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\cadastro\\funcionario\\uc_cadfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\frmimagensgeralsistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\frmimagensgeralsistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\cadastro\\produtos\\uc_cadproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\cadastro\\produtos\\uc_cadproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\cadastro\\ator\\uc_cadator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\cadastro\\ator\\uc_cadator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\cadastro\\ator\\uc_cadator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\cadastro\\ator\\uc_cadator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|c:\\users\\israe\\source\\repos\\app_system\\app_telascompartilhadas\\cadastro\\produtos\\uc_cadproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\cadastro\\produtos\\uc_cadproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25FD8C93-1B36-41F3-9DF4-02DB2EDCF375}|App_PDV\\App_PDV.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_pdv\\caixa\\atendimento\\venda\\frmpagamentopdv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25FD8C93-1B36-41F3-9DF4-02DB2EDCF375}|App_PDV\\App_PDV.csproj|solutionrelative:app_pdv\\caixa\\atendimento\\venda\\frmpagamentopdv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_erp\\tela incial\\frmtelainicialerp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|solutionrelative:app_erp\\tela incial\\frmtelainicialerp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_erp\\tela incial\\frmtelainicialerp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|solutionrelative:app_erp\\tela incial\\frmtelainicialerp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\classes\\atualizacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\classes\\atualizacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\classes\\variaveisglobais.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\classes\\variaveisglobais.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\login\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\login\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\login\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\login\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25FD8C93-1B36-41F3-9DF4-02DB2EDCF375}|App_PDV\\App_PDV.csproj|c:\\users\\israe\\source\\repos\\app_system\\app_pdv\\caixa\\atendimento\\venda\\uc_visualizarvenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25FD8C93-1B36-41F3-9DF4-02DB2EDCF375}|App_PDV\\App_PDV.csproj|solutionrelative:app_pdv\\caixa\\atendimento\\venda\\uc_visualizarvenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\classes\\mensagens de erros\\logerros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\classes\\mensagens de erros\\logerros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25FD8C93-1B36-41F3-9DF4-02DB2EDCF375}|App_PDV\\App_PDV.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_pdv\\caixa\\atendimento\\venda\\frmpagamentopdv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{25FD8C93-1B36-41F3-9DF4-02DB2EDCF375}|App_PDV\\App_PDV.csproj|solutionrelative:app_pdv\\caixa\\atendimento\\venda\\frmpagamentopdv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25FD8C93-1B36-41F3-9DF4-02DB2EDCF375}|App_PDV\\App_PDV.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_pdv\\tela inicial\\frmtelainicialpdv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{25FD8C93-1B36-41F3-9DF4-02DB2EDCF375}|App_PDV\\App_PDV.csproj|solutionrelative:app_pdv\\tela inicial\\frmtelainicialpdv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\login\\frmautenticacaousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\login\\frmautenticacaousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\frmimagensgeralsistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\frmimagensgeralsistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\frmselecionarfilial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\frmselecionarfilial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_erp\\entradaxml\\frmrelacionarprodentradaxml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|solutionrelative:app_erp\\entradaxml\\frmrelacionarprodentradaxml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_erp\\entradaxml\\frmentradaxml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|solutionrelative:app_erp\\entradaxml\\frmentradaxml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_erp\\cadastro\\rede\\uc_cadrede.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|solutionrelative:app_erp\\cadastro\\rede\\uc_cadrede.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_erp\\cadastro\\secao\\uc_cadsecao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|solutionrelative:app_erp\\cadastro\\secao\\uc_cadsecao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_erp\\cadastro\\subcategoria\\uc_cadsubcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|solutionrelative:app_erp\\cadastro\\subcategoria\\uc_cadsubcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_erp\\cadastro\\subcategoria\\uc_subcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|solutionrelative:app_erp\\cadastro\\subcategoria\\uc_subcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_erp\\cadastro\\secao\\uc_secao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|solutionrelative:app_erp\\cadastro\\secao\\uc_secao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_erp\\cadastro\\rede\\uc_rede.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|solutionrelative:app_erp\\cadastro\\rede\\uc_rede.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_erp\\cadastro\\pdv\\uc_pdv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|solutionrelative:app_erp\\cadastro\\pdv\\uc_pdv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_erp\\cadastro\\matriz\\uc_matriz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|solutionrelative:app_erp\\cadastro\\matriz\\uc_matriz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_erp\\cadastro\\marca\\uc_marca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|solutionrelative:app_erp\\cadastro\\marca\\uc_marca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_erp\\cadastro\\categoria\\uc_categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|solutionrelative:app_erp\\cadastro\\categoria\\uc_categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\cadastro\\ator\\uc_ator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\cadastro\\ator\\uc_ator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\cadastro\\funcionario\\uc_cadfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\cadastro\\funcionario\\uc_cadfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\cadastro\\produtos\\uc_cadproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\cadastro\\produtos\\uc_cadproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\cadastro\\produtos\\uc_estoqueproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\cadastro\\produtos\\uc_estoqueproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\cadastro\\produtos\\uc_produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\cadastro\\produtos\\uc_produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_erp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|solutionrelative:app_erp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25FD8C93-1B36-41F3-9DF4-02DB2EDCF375}|App_PDV\\App_PDV.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_pdv\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25FD8C93-1B36-41F3-9DF4-02DB2EDCF375}|App_PDV\\App_PDV.csproj|solutionrelative:app_pdv\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_erp\\tela incial\\uc_telainicialerp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|solutionrelative:app_erp\\tela incial\\uc_telainicialerp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25FD8C93-1B36-41F3-9DF4-02DB2EDCF375}|App_PDV\\App_PDV.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_pdv\\tela inicial\\frmtelainicialpdv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25FD8C93-1B36-41F3-9DF4-02DB2EDCF375}|App_PDV\\App_PDV.csproj|solutionrelative:app_pdv\\tela inicial\\frmtelainicialpdv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\classes\\mensagens de erros\\mensagensdosistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\classes\\mensagens de erros\\mensagensdosistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\classes\\configuracoes - validacoes\\configbotoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\classes\\configuracoes - validacoes\\configbotoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\cadastro\\funcionario\\uc_cadfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\cadastro\\funcionario\\uc_cadfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -91,24 +183,12 @@
       "RelativeMoniker": "D:0:0:{25FD8C93-1B36-41F3-9DF4-02DB2EDCF375}|App_PDV\\App_PDV.csproj|solutionrelative:app_pdv\\caixa\\atendimento\\venda\\uc_pdv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\frmselecionarfilial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\frmselecionarfilial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\cadastro\\funcionario\\uc_cadfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\cadastro\\funcionario\\uc_cadfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{25FD8C93-1B36-41F3-9DF4-02DB2EDCF375}|App_PDV\\App_PDV.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_pdv\\caixa\\atendimento\\venda\\uc_vendaspdv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{25FD8C93-1B36-41F3-9DF4-02DB2EDCF375}|App_PDV\\App_PDV.csproj|solutionrelative:app_pdv\\caixa\\atendimento\\venda\\uc_vendaspdv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{25FD8C93-1B36-41F3-9DF4-02DB2EDCF375}|App_PDV\\App_PDV.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_pdv\\caixa\\atendimento\\venda\\uc_pdv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{25FD8C93-1B36-41F3-9DF4-02DB2EDCF375}|App_PDV\\App_PDV.csproj|solutionrelative:app_pdv\\caixa\\atendimento\\venda\\uc_pdv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\classes\\variaveisglobais.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\classes\\variaveisglobais.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\frmselecionarfilial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -125,10 +205,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_erp\\cadastro\\pdv\\uc_cadpdv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{86369153-4207-488D-B77D-748E5E58E7AE}|App_ERP\\App_ERP.csproj|solutionrelative:app_erp\\cadastro\\pdv\\uc_cadpdv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25FD8C93-1B36-41F3-9DF4-02DB2EDCF375}|App_PDV\\App_PDV.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_pdv\\caixa\\atendimento\\venda\\frmpagamentopdv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{25FD8C93-1B36-41F3-9DF4-02DB2EDCF375}|App_PDV\\App_PDV.csproj|solutionrelative:app_pdv\\caixa\\atendimento\\venda\\frmpagamentopdv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -138,19 +214,228 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 38,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "uc_CadProduto.cs",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Cadastro\\Produtos\\uc_CadProduto.cs",
+              "RelativeDocumentMoniker": "App_TelasCompartilhadas\\Cadastro\\Produtos\\uc_CadProduto.cs",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Cadastro\\Produtos\\uc_CadProduto.cs",
+              "RelativeToolTip": "App_TelasCompartilhadas\\Cadastro\\Produtos\\uc_CadProduto.cs",
+              "ViewState": "AgIAAMQBAAAAAAAAAAAlwOQBAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T19:55:58.781Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
+              "Title": "uc_VisualizarVenda.cs",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_PDV\\Caixa\\Atendimento\\Venda\\uc_VisualizarVenda.cs",
+              "RelativeDocumentMoniker": "App_PDV\\Caixa\\Atendimento\\Venda\\uc_VisualizarVenda.cs",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_PDV\\Caixa\\Atendimento\\Venda\\uc_VisualizarVenda.cs",
+              "RelativeToolTip": "App_PDV\\Caixa\\Atendimento\\Venda\\uc_VisualizarVenda.cs",
+              "ViewState": "AgIAACABAAAAAAAAAAAAAB8BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T01:50:23.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "frmAutenticacaoUsuario.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Login\\frmAutenticacaoUsuario.cs",
+              "RelativeDocumentMoniker": "App_TelasCompartilhadas\\Login\\frmAutenticacaoUsuario.cs",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Login\\frmAutenticacaoUsuario.cs [Design]",
+              "RelativeToolTip": "App_TelasCompartilhadas\\Login\\frmAutenticacaoUsuario.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T01:33:54.058Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "frmEntradaXML.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_ERP\\EntradaXML\\frmEntradaXML.cs",
+              "RelativeDocumentMoniker": "App_ERP\\EntradaXML\\frmEntradaXML.cs",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_ERP\\EntradaXML\\frmEntradaXML.cs [Design]",
+              "RelativeToolTip": "App_ERP\\EntradaXML\\frmEntradaXML.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T01:32:08.144Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "frmRelacionarProdEntradaXML.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_ERP\\EntradaXML\\frmRelacionarProdEntradaXML.cs",
+              "RelativeDocumentMoniker": "App_ERP\\EntradaXML\\frmRelacionarProdEntradaXML.cs",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_ERP\\EntradaXML\\frmRelacionarProdEntradaXML.cs [Design]",
+              "RelativeToolTip": "App_ERP\\EntradaXML\\frmRelacionarProdEntradaXML.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T01:31:23.807Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "uc_CadRede.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_ERP\\Cadastro\\Rede\\uc_CadRede.cs",
+              "RelativeDocumentMoniker": "App_ERP\\Cadastro\\Rede\\uc_CadRede.cs",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_ERP\\Cadastro\\Rede\\uc_CadRede.cs [Design]",
+              "RelativeToolTip": "App_ERP\\Cadastro\\Rede\\uc_CadRede.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T02:33:57.391Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "uc_CadSecao.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_ERP\\Cadastro\\Secao\\uc_CadSecao.cs",
+              "RelativeDocumentMoniker": "App_ERP\\Cadastro\\Secao\\uc_CadSecao.cs",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_ERP\\Cadastro\\Secao\\uc_CadSecao.cs [Design]",
+              "RelativeToolTip": "App_ERP\\Cadastro\\Secao\\uc_CadSecao.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T02:33:55.373Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "uc_CadSubcategoria.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_ERP\\Cadastro\\Subcategoria\\uc_CadSubcategoria.cs",
+              "RelativeDocumentMoniker": "App_ERP\\Cadastro\\Subcategoria\\uc_CadSubcategoria.cs",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_ERP\\Cadastro\\Subcategoria\\uc_CadSubcategoria.cs [Design]",
+              "RelativeToolTip": "App_ERP\\Cadastro\\Subcategoria\\uc_CadSubcategoria.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T02:33:52.958Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "uc_SubCategoria.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_ERP\\Cadastro\\Subcategoria\\uc_SubCategoria.cs",
+              "RelativeDocumentMoniker": "App_ERP\\Cadastro\\Subcategoria\\uc_SubCategoria.cs",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_ERP\\Cadastro\\Subcategoria\\uc_SubCategoria.cs [Design]",
+              "RelativeToolTip": "App_ERP\\Cadastro\\Subcategoria\\uc_SubCategoria.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T02:33:38.351Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "uc_Secao.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_ERP\\Cadastro\\Secao\\uc_Secao.cs",
+              "RelativeDocumentMoniker": "App_ERP\\Cadastro\\Secao\\uc_Secao.cs",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_ERP\\Cadastro\\Secao\\uc_Secao.cs [Design]",
+              "RelativeToolTip": "App_ERP\\Cadastro\\Secao\\uc_Secao.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T02:33:20.823Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "uc_Rede.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_ERP\\Cadastro\\Rede\\uc_Rede.cs",
+              "RelativeDocumentMoniker": "App_ERP\\Cadastro\\Rede\\uc_Rede.cs",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_ERP\\Cadastro\\Rede\\uc_Rede.cs [Design]",
+              "RelativeToolTip": "App_ERP\\Cadastro\\Rede\\uc_Rede.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T02:33:04.891Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "uc_PDV.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_ERP\\Cadastro\\PDV\\uc_PDV.cs",
+              "RelativeDocumentMoniker": "App_ERP\\Cadastro\\PDV\\uc_PDV.cs",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_ERP\\Cadastro\\PDV\\uc_PDV.cs [Design]",
+              "RelativeToolTip": "App_ERP\\Cadastro\\PDV\\uc_PDV.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T02:32:50.318Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "uc_Matriz.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_ERP\\Cadastro\\Matriz\\uc_Matriz.cs",
+              "RelativeDocumentMoniker": "App_ERP\\Cadastro\\Matriz\\uc_Matriz.cs",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_ERP\\Cadastro\\Matriz\\uc_Matriz.cs [Design]",
+              "RelativeToolTip": "App_ERP\\Cadastro\\Matriz\\uc_Matriz.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T02:32:35.122Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "uc_Marca.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_ERP\\Cadastro\\Marca\\uc_Marca.cs",
+              "RelativeDocumentMoniker": "App_ERP\\Cadastro\\Marca\\uc_Marca.cs",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_ERP\\Cadastro\\Marca\\uc_Marca.cs [Design]",
+              "RelativeToolTip": "App_ERP\\Cadastro\\Marca\\uc_Marca.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T02:32:19.86Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "uc_Categoria.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_ERP\\Cadastro\\Categoria\\uc_Categoria.cs",
+              "RelativeDocumentMoniker": "App_ERP\\Cadastro\\Categoria\\uc_Categoria.cs",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_ERP\\Cadastro\\Categoria\\uc_Categoria.cs [Design]",
+              "RelativeToolTip": "App_ERP\\Cadastro\\Categoria\\uc_Categoria.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T02:32:04.577Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "uc_Ator.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Cadastro\\Ator\\uc_Ator.cs",
+              "RelativeDocumentMoniker": "App_TelasCompartilhadas\\Cadastro\\Ator\\uc_Ator.cs",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Cadastro\\Ator\\uc_Ator.cs [Design]",
+              "RelativeToolTip": "App_TelasCompartilhadas\\Cadastro\\Ator\\uc_Ator.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T02:31:42.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "uc_EstoqueProduto.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Cadastro\\Produtos\\uc_EstoqueProduto.cs",
+              "RelativeDocumentMoniker": "App_TelasCompartilhadas\\Cadastro\\Produtos\\uc_EstoqueProduto.cs",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Cadastro\\Produtos\\uc_EstoqueProduto.cs [Design]",
+              "RelativeToolTip": "App_TelasCompartilhadas\\Cadastro\\Produtos\\uc_EstoqueProduto.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T02:31:28.311Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "uc_Produto.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Cadastro\\Produtos\\uc_Produto.cs",
+              "RelativeDocumentMoniker": "App_TelasCompartilhadas\\Cadastro\\Produtos\\uc_Produto.cs",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Cadastro\\Produtos\\uc_Produto.cs [Design]",
+              "RelativeToolTip": "App_TelasCompartilhadas\\Cadastro\\Produtos\\uc_Produto.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T02:30:52.849Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "uc_TelaInicialERP.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_ERP\\Tela Incial\\uc_TelaInicialERP.cs",
+              "RelativeDocumentMoniker": "App_ERP\\Tela Incial\\uc_TelaInicialERP.cs",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_ERP\\Tela Incial\\uc_TelaInicialERP.cs [Design]",
+              "RelativeToolTip": "App_ERP\\Tela Incial\\uc_TelaInicialERP.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T01:54:29.448Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
               "Title": "MensagensDoSistema.cs",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Classes\\Mensagens de Erros\\MensagensDoSistema.cs",
               "RelativeDocumentMoniker": "App_TelasCompartilhadas\\Classes\\Mensagens de Erros\\MensagensDoSistema.cs",
@@ -158,12 +443,11 @@
               "RelativeToolTip": "App_TelasCompartilhadas\\Classes\\Mensagens de Erros\\MensagensDoSistema.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T00:16:51.159Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T00:16:51.159Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 39,
               "Title": "ConfigBotoes.cs",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Classes\\Configuracoes - Validacoes\\ConfigBotoes.cs",
               "RelativeDocumentMoniker": "App_TelasCompartilhadas\\Classes\\Configuracoes - Validacoes\\ConfigBotoes.cs",
@@ -175,31 +459,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "frmTelaInicialERP.cs",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_ERP\\Tela Incial\\frmTelaInicialERP.cs",
               "RelativeDocumentMoniker": "App_ERP\\Tela Incial\\frmTelaInicialERP.cs",
               "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_ERP\\Tela Incial\\frmTelaInicialERP.cs",
               "RelativeToolTip": "App_ERP\\Tela Incial\\frmTelaInicialERP.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBEAAAA/AAAAAAAAAA==",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAmwI0AAABgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-02T01:40:58.08Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 5,
               "Title": "frmTelaInicialERP.cs [Design]",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_ERP\\Tela Incial\\frmTelaInicialERP.cs",
               "RelativeDocumentMoniker": "App_ERP\\Tela Incial\\frmTelaInicialERP.cs",
               "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_ERP\\Tela Incial\\frmTelaInicialERP.cs [Design]",
               "RelativeToolTip": "App_ERP\\Tela Incial\\frmTelaInicialERP.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T01:07:15.011Z"
+              "WhenOpened": "2024-11-02T01:07:15.011Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "frmImagensGeralSistema.cs [Design]",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\frmImagensGeralSistema.cs",
               "RelativeDocumentMoniker": "App_TelasCompartilhadas\\frmImagensGeralSistema.cs",
@@ -210,7 +495,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 41,
               "Title": "app.config",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\app.config",
               "RelativeDocumentMoniker": "App_TelasCompartilhadas\\app.config",
@@ -223,7 +508,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 42,
               "Title": "App.config",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_PDV\\App.config",
               "RelativeDocumentMoniker": "App_PDV\\App.config",
@@ -236,7 +521,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 43,
               "Title": "App.config",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_ERP\\App.config",
               "RelativeDocumentMoniker": "App_ERP\\App.config",
@@ -249,7 +534,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "frmLogin.cs [Design]",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Login\\frmLogin.cs",
               "RelativeDocumentMoniker": "App_TelasCompartilhadas\\Login\\frmLogin.cs",
@@ -261,7 +546,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 30,
               "Title": "uc_CadFuncionario.cs [Design]",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Cadastro\\Funcionario\\uc_CadFuncionario.cs",
               "RelativeDocumentMoniker": "App_TelasCompartilhadas\\Cadastro\\Funcionario\\uc_CadFuncionario.cs",
@@ -272,68 +557,69 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 31,
               "Title": "uc_CadProduto.cs [Design]",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Cadastro\\Produtos\\uc_CadProduto.cs",
               "RelativeDocumentMoniker": "App_TelasCompartilhadas\\Cadastro\\Produtos\\uc_CadProduto.cs",
               "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Cadastro\\Produtos\\uc_CadProduto.cs [Design]",
               "RelativeToolTip": "App_TelasCompartilhadas\\Cadastro\\Produtos\\uc_CadProduto.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T17:44:50.672Z"
+              "WhenOpened": "2024-10-24T17:44:50.672Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 34,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_ERP\\Program.cs",
               "RelativeDocumentMoniker": "App_ERP\\Program.cs",
               "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_ERP\\Program.cs",
               "RelativeToolTip": "App_ERP\\Program.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAqwCQAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAAAAAEgAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-24T17:15:12.925Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 35,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_PDV\\Program.cs",
               "RelativeDocumentMoniker": "App_PDV\\Program.cs",
               "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_PDV\\Program.cs",
               "RelativeToolTip": "App_PDV\\Program.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAABUAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAQwEYAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T17:14:50.049Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T17:14:50.049Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 7,
               "Title": "VariaveisGlobais.cs",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Classes\\VariaveisGlobais.cs",
               "RelativeDocumentMoniker": "App_TelasCompartilhadas\\Classes\\VariaveisGlobais.cs",
               "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Classes\\VariaveisGlobais.cs",
               "RelativeToolTip": "App_TelasCompartilhadas\\Classes\\VariaveisGlobais.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAoAAAA2AAAA",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T16:52:51.5Z"
+              "WhenOpened": "2024-10-24T16:52:51.5Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "frmLogin.cs",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Login\\frmLogin.cs",
               "RelativeDocumentMoniker": "App_TelasCompartilhadas\\Login\\frmLogin.cs",
               "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Login\\frmLogin.cs",
               "RelativeToolTip": "App_TelasCompartilhadas\\Login\\frmLogin.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAawBQAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAuwGsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-24T16:51:33.789Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 47,
               "Title": "frmSelecionarFilial.cs",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\frmSelecionarFilial.cs",
               "RelativeDocumentMoniker": "App_TelasCompartilhadas\\frmSelecionarFilial.cs",
@@ -345,7 +631,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 16,
               "Title": "frmSelecionarFilial.cs [Design]",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\frmSelecionarFilial.cs",
               "RelativeDocumentMoniker": "App_TelasCompartilhadas\\frmSelecionarFilial.cs",
@@ -356,7 +642,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 46,
               "Title": "uc_PDV.cs",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_PDV\\Caixa\\Atendimento\\Venda\\uc_PDV.cs",
               "RelativeDocumentMoniker": "App_PDV\\Caixa\\Atendimento\\Venda\\uc_PDV.cs",
@@ -368,30 +654,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 0,
               "Title": "uc_CadAtor.cs",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Cadastro\\Ator\\uc_CadAtor.cs",
               "RelativeDocumentMoniker": "App_TelasCompartilhadas\\Cadastro\\Ator\\uc_CadAtor.cs",
               "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Cadastro\\Ator\\uc_CadAtor.cs",
               "RelativeToolTip": "App_TelasCompartilhadas\\Cadastro\\Ator\\uc_CadAtor.cs",
-              "ViewState": "AgIAAEkDAAAAAAAAAAAlwFIDAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAOUBAAAAAAAAAAAcwPIBAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T20:00:16.482Z"
+              "WhenOpened": "2024-10-23T20:00:16.482Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 1,
               "Title": "uc_CadAtor.cs [Design]",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Cadastro\\Ator\\uc_CadAtor.cs",
               "RelativeDocumentMoniker": "App_TelasCompartilhadas\\Cadastro\\Ator\\uc_CadAtor.cs",
               "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Cadastro\\Ator\\uc_CadAtor.cs [Design]",
               "RelativeToolTip": "App_TelasCompartilhadas\\Cadastro\\Ator\\uc_CadAtor.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T20:00:14.34Z"
+              "WhenOpened": "2024-10-23T20:00:14.34Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 49,
               "Title": "uc_AberturaCaixa.cs",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_PDV\\Caixa\\Fluxo de Caixa\\Abertura Caixa\\uc_AberturaCaixa.cs",
               "RelativeDocumentMoniker": "App_PDV\\Caixa\\Fluxo de Caixa\\Abertura Caixa\\uc_AberturaCaixa.cs",
@@ -403,7 +691,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 48,
               "Title": "rp_ImpressaoAberturaCaixa.cs",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_PDV\\Caixa\\Fluxo de Caixa\\Abertura Caixa\\rp_ImpressaoAberturaCaixa.cs",
               "RelativeDocumentMoniker": "App_PDV\\Caixa\\Fluxo de Caixa\\Abertura Caixa\\rp_ImpressaoAberturaCaixa.cs",
@@ -415,7 +703,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 40,
               "Title": "uc_CadFuncionario.cs",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Cadastro\\Funcionario\\uc_CadFuncionario.cs",
               "RelativeDocumentMoniker": "App_TelasCompartilhadas\\Cadastro\\Funcionario\\uc_CadFuncionario.cs",
@@ -427,7 +715,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 50,
               "Title": "uc_CadPDV.cs",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_ERP\\Cadastro\\PDV\\uc_CadPDV.cs",
               "RelativeDocumentMoniker": "App_ERP\\Cadastro\\PDV\\uc_CadPDV.cs",
@@ -439,20 +727,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "frmPagamentoPDV.cs",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_PDV\\Caixa\\Atendimento\\Venda\\frmPagamentoPDV.cs",
               "RelativeDocumentMoniker": "App_PDV\\Caixa\\Atendimento\\Venda\\frmPagamentoPDV.cs",
               "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_PDV\\Caixa\\Atendimento\\Venda\\frmPagamentoPDV.cs",
               "RelativeToolTip": "App_PDV\\Caixa\\Atendimento\\Venda\\frmPagamentoPDV.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACoGAAAAAAAAAAAvwD4GAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-23T17:11:23.259Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 12,
               "Title": "frmPagamentoPDV.cs [Design]",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_PDV\\Caixa\\Atendimento\\Venda\\frmPagamentoPDV.cs",
               "RelativeDocumentMoniker": "App_PDV\\Caixa\\Atendimento\\Venda\\frmPagamentoPDV.cs",
@@ -464,7 +752,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 45,
               "Title": "uc_VendasPDV.cs",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_PDV\\Caixa\\Atendimento\\Venda\\uc_VendasPDV.cs",
               "RelativeDocumentMoniker": "App_PDV\\Caixa\\Atendimento\\Venda\\uc_VendasPDV.cs",
@@ -482,52 +770,49 @@
               "RelativeDocumentMoniker": "App_TelasCompartilhadas\\Classes\\Atualizacao.cs",
               "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Classes\\Atualizacao.cs",
               "RelativeToolTip": "App_TelasCompartilhadas\\Classes\\Atualizacao.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAswCcAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-23T15:48:02.082Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 11,
               "Title": "LogErros.cs",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Classes\\Mensagens de Erros\\LogErros.cs",
               "RelativeDocumentMoniker": "App_TelasCompartilhadas\\Classes\\Mensagens de Erros\\LogErros.cs",
               "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_TelasCompartilhadas\\Classes\\Mensagens de Erros\\LogErros.cs",
               "RelativeToolTip": "App_TelasCompartilhadas\\Classes\\Mensagens de Erros\\LogErros.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAxwCQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAQwCQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T15:33:00.937Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T15:33:00.937Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 37,
               "Title": "frmTelaInicialPDV.cs",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_PDV\\Tela Inicial\\frmTelaInicialPDV.cs",
               "RelativeDocumentMoniker": "App_PDV\\Tela Inicial\\frmTelaInicialPDV.cs",
               "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_PDV\\Tela Inicial\\frmTelaInicialPDV.cs",
               "RelativeToolTip": "App_PDV\\Tela Inicial\\frmTelaInicialPDV.cs",
-              "ViewState": "AgIAAFsBAAAAAAAAAAAUwIEBAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAH4BAAAAAAAAAABRwIEBAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T15:32:38.236Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T15:32:38.236Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "frmTelaInicialPDV.cs [Design]",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_PDV\\Tela Inicial\\frmTelaInicialPDV.cs",
               "RelativeDocumentMoniker": "App_PDV\\Tela Inicial\\frmTelaInicialPDV.cs",
               "ToolTip": "C:\\Users\\israe\\source\\repos\\App_System\\App_PDV\\Tela Inicial\\frmTelaInicialPDV.cs [Design]",
               "RelativeToolTip": "App_PDV\\Tela Inicial\\frmTelaInicialPDV.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T15:32:36.078Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-10-23T15:32:36.078Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 44,
               "Title": "uc_PDV.cs [Design]",
               "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\App_System\\App_PDV\\Caixa\\Atendimento\\Venda\\uc_PDV.cs",
               "RelativeDocumentMoniker": "App_PDV\\Caixa\\Atendimento\\Venda\\uc_PDV.cs",

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRelacionarProdEntradaXML));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.cmbProduto = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -266,11 +267,11 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnConfimar);
             this.Controls.Add(this.layoutControl1);
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("frmRelacionarProdEntradaXML.IconOptions.Image")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmRelacionarProdEntradaXML";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmRelacionarProdEntradaXML";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cmbProduto.Properties)).EndInit();

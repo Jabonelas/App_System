@@ -180,6 +180,7 @@
             this.Controls.Add(this.svgImageBox1);
             this.Controls.Add(this.btnLogar);
             this.Controls.Add(this.layoutControl1);
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("frmLogin.IconOptions.Image")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmLogin";

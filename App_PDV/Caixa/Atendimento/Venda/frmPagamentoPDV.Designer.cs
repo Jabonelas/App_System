@@ -30,6 +30,7 @@ namespace App_PDV
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPagamentoPDV));
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.cmbVendedor = new DevExpress.XtraEditors.LookUpEdit();
             this.txtDesconto = new DevExpress.XtraEditors.TextEdit();
@@ -668,6 +669,7 @@ namespace App_PDV
             this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.layoutControl2);
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("frmPagamentoPDV.IconOptions.Image")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmPagamentoPDV";

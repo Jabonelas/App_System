@@ -557,11 +557,11 @@
             this.ClientSize = new System.Drawing.Size(684, 623);
             this.Controls.Add(this.imageSlider1);
             this.Controls.Add(this.layoutControl1);
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("frmEntradaXML.IconOptions.Image")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmEntradaXML";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmEntradaXML";
             this.Load += new System.EventHandler(this.frmEntradaXML_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);

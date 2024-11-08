@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTelaInicialERP));
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip11 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem11 = new DevExpress.Utils.ToolTipItem();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnCadastrarProduto = new DevExpress.XtraBars.BarButtonItem();
             this.btnCadastrarCategoria = new DevExpress.XtraBars.BarButtonItem();
@@ -213,9 +213,9 @@
             this.btnCadastrarFilial.Id = 16;
             this.btnCadastrarFilial.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCadastrarFilial.ImageOptions.SvgImage")));
             this.btnCadastrarFilial.Name = "btnCadastrarFilial";
-            toolTipItem2.Text = "israel";
-            superToolTip2.Items.Add(toolTipItem2);
-            this.btnCadastrarFilial.SuperTip = superToolTip2;
+            toolTipItem11.Text = "israel";
+            superToolTip11.Items.Add(toolTipItem11);
+            this.btnCadastrarFilial.SuperTip = superToolTip11;
             this.btnCadastrarFilial.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCadastrarFilial_ItemClick);
             // 
             // btnCadastrarMatriz
@@ -515,6 +515,7 @@
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.pnlTelaPrincipal);
             this.Controls.Add(this.ribbon);
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("frmTelaInicialERP.IconOptions.Image")));
             this.MaximizeBox = false;
             this.Name = "frmTelaInicialERP";
             this.Ribbon = this.ribbon;

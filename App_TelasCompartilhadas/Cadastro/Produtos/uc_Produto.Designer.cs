@@ -156,7 +156,6 @@ namespace App_TelasCompartilhadas.Produtos
             this.VlrUnProd,
             this.EstTotal});
             this.gridView1.GridControl = this.grdProdutos;
-            this.gridView1.GroupPanelText = "Buscar...";
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.ReadOnly = true;
             this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);

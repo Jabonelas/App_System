@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSelecionarFilial));
             this.grdPDV = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.idAtor = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -171,6 +172,7 @@
             this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnConfimar);
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("frmSelecionarFilial.IconOptions.Image")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmSelecionarFilial";

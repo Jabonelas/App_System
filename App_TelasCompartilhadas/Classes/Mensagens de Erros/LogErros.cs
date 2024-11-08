@@ -11,7 +11,7 @@ namespace App_TelasCompartilhadas.Classes
         {
             try
             {
-                string path = @"C:\App_System\Logs\LogErros.txt";
+                string path = @"C:\App_System\App_System_Logs\LogErros.txt";
 
                 if (!File.Exists(path))
                 {
@@ -40,7 +40,7 @@ namespace App_TelasCompartilhadas.Classes
             try
             {
                 // Defina o caminho da pasta
-                string folderPath = @"C:\App_System\App_System_Logs";
+                string folderPath = @"C:\App_System\App_System_Logs\LogVerificacao.txt";
 
                 // Crie a pasta (se ela não existir)
                 if (!Directory.Exists(folderPath))

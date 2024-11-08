@@ -6,6 +6,7 @@ using System;
 using System.Windows.Forms;
 using DevExpress.LookAndFeel;
 using System.Drawing;
+using System.Globalization;
 
 namespace App_ERP
 {
@@ -62,6 +63,14 @@ namespace App_ERP
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            #region Traducao
+
+            CultureInfo culture = CultureInfo.CreateSpecificCulture("pt-BR");
+            CultureInfo.DefaultThreadCurrentCulture = culture;
+            CultureInfo.DefaultThreadCurrentUICulture = culture;
+
+            #endregion Traducao
 
             App_TelasCompartilhadas.frmLogin frmTelaInicial = new App_TelasCompartilhadas.frmLogin("ERP");
             frmTelaInicial.ShowDialog();

@@ -19,6 +19,7 @@ using XmlNFe = Unimake.Business.DFe.Xml.NFe;
 
 using System.IO;
 using App_PDV.Caixa.Atendimento.Venda;
+using DevExpress.Data.Filtering.Helpers;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraReports.UI;
 
@@ -575,6 +576,12 @@ namespace App_PDV
                     tb_certificado_digital teste = uow.Query<tb_certificado_digital>()
                         .FirstOrDefault(x => x.cd_cnpj == Regex.Replace(dadosEmitente.at_cnpj, @"[^\d]", ""));
 
+                    if (teste == null)
+                    {
+                        MensagensDoSistema.MensagemAtencaoOk("O certificado digital não esta vinculado a esse C.N.P.J.");
+
+                        return new X509Certificate2("", "", X509KeyStorageFlags.MachineKeySet);
+                    }
                     // Recuperar os dados do certificado
                     byte[] rawData = (byte[])teste.cd_rawData;
                     string senha = teste.cd_pwd.ToString();
@@ -1426,7 +1433,8 @@ namespace App_PDV
             string nomeVendedor = cmbVendedor.Text;
             string nomeCliente = txtNomeCliente.Text;
 
-            rp_ImpressaoCupomNaoFiscal impressaoCupomNaoFiscal = new rp_ImpressaoCupomNaoFiscal(nomeCliente, nomeVendedor, movimentacao.id_movimentacao, _idMovimentacaoCaixa, movimentacao.mv_dtCri);
+            rp_ImpressaoCupomNaoFiscal impressaoCupomNaoFiscal = new rp_ImpressaoCupomNaoFiscal(nomeCliente,
+                nomeVendedor, movimentacao.id_movimentacao, _idMovimentacaoCaixa, movimentacao.mv_dtCri);
             impressaoCupomNaoFiscal.ShowPreview();
         }
 
@@ -1525,7 +1533,8 @@ namespace App_PDV
 
                     if (!string.IsNullOrEmpty(cpf))
                     {
-                        dadosDestinatario = uow.Query<tb_ator>().FirstOrDefault(x => x.at_cpf == cpf && x.at_atorTipo == 1 && x.at_desat == 0);
+                        dadosDestinatario = uow.Query<tb_ator>()
+                            .FirstOrDefault(x => x.at_cpf == cpf && x.at_atorTipo == 1 && x.at_desat == 0);
                     }
 
                     if (dadosDestinatario != null)
@@ -1550,12 +1559,14 @@ namespace App_PDV
             {
                 using (UnitOfWork uow = new UnitOfWork())
                 {
-                    tb_movimentacao _movimentacao = uow.GetObjectByKey<tb_movimentacao>(Convert.ToInt64(movimentacao.id_movimentacao));
+                    tb_movimentacao _movimentacao =
+                        uow.GetObjectByKey<tb_movimentacao>(Convert.ToInt64(movimentacao.id_movimentacao));
 
                     _movimentacao.mv_conc = 1;
                     _movimentacao.mv_quit = 1;
                     _movimentacao.mv_nfeChave = autorizacao.EnviNFe.NFe[0].InfNFe[0].Chave;
-                    _movimentacao.mv_nfeXmlProcRes = autorizacao.NfeProcResults[autorizacao.EnviNFe.NFe[0].InfNFe[0].Chave].GerarXML().OuterXml;
+                    _movimentacao.mv_nfeXmlProcRes = autorizacao
+                        .NfeProcResults[autorizacao.EnviNFe.NFe[0].InfNFe[0].Chave].GerarXML().OuterXml;
 
                     uow.Save(_movimentacao);
                     uow.CommitChanges();
@@ -1563,7 +1574,8 @@ namespace App_PDV
             }
             catch (Exception ex)
             {
-                MensagensDoSistema.MensagemErroOk($"Erro ao alterar dados da movimentação após finalização da venda: {ex.Message}");
+                MensagensDoSistema.MensagemErroOk(
+                    $"Erro ao alterar dados da movimentação após finalização da venda: {ex.Message}");
             }
         }
 
@@ -1575,10 +1587,17 @@ namespace App_PDV
                 {
                     Versao = "4.00",
                     CUF = UFBrasil.SP,
-                    TpAmb = VariaveisGlobais.FilialLogada.at_nfeTipoAmb == 1 ? TipoAmbiente.Producao : TipoAmbiente.Homologacao,
+                    TpAmb = VariaveisGlobais.FilialLogada.at_nfeTipoAmb == 1
+                        ? TipoAmbiente.Producao
+                        : TipoAmbiente.Homologacao,
                 };
 
                 var CertificadoSelecionado = CarregarCertificaDigitaldoDoBanco();
+
+                if (CertificadoSelecionado.IsNullOrEmpty())
+                {
+                    return false;
+                }
 
                 var configuracao = new Configuracao
                 {
@@ -1610,33 +1629,33 @@ namespace App_PDV
                     IndSinc = SimNao.Sim,
                     NFe = new List<XmlNFe.NFe>
                     {
-                    new XmlNFe.NFe
+                        new XmlNFe.NFe
                         {
-                        InfNFe = new List<XmlNFe.InfNFe>
-                        {
-                            new XmlNFe.InfNFe
+                            InfNFe = new List<XmlNFe.InfNFe>
                             {
-                                Versao = "4.00",
+                                new XmlNFe.InfNFe
+                                {
+                                    Versao = "4.00",
 
-                                Ide =  CampoIdeXml(),
+                                    Ide = CampoIdeXml(),
 
-                                Emit =  CampoEmitXml(),
+                                    Emit = CampoEmitXml(),
 
-                                Dest = CampoDestXml(),
+                                    Dest = CampoDestXml(),
 
-                                Det = CampoDetXml(),
+                                    Det = CampoDetXml(),
 
-                                Total = CampoTotalXml(),
+                                    Total = CampoTotalXml(),
 
-                                Transp = CampoTranspXml(),
+                                    Transp = CampoTranspXml(),
 
-                                Pag = CampoPagXml(),
+                                    Pag = CampoPagXml(),
 
-                                InfAdic =CampoInfAdicXml(),
+                                    InfAdic = CampoInfAdicXml(),
 
-                                InfRespTec = CampoInfRespTecXml(),
+                                    InfRespTec = CampoInfRespTecXml(),
+                                }
                             }
-                        }
                         }
                     }
                 };
@@ -1648,21 +1667,30 @@ namespace App_PDV
                     TipoDFe = TipoDFe.NFCe,
                     CertificadoDigital = CertificadoSelecionado,
 
-                    CSC = VariaveisGlobais.UsuarioLogado.at_nfeTipoAmb == 1 ? dadosEmitente.at_nfeCscTokenProd : dadosEmitente.at_nfeCscTokenHom,
-                    CSCIDToken = VariaveisGlobais.UsuarioLogado.at_nfeTipoAmb == 1 ? Convert.ToInt32(dadosEmitente.at_nfeCscIdProd) : Convert.ToInt32(dadosEmitente.at_nfeCscIdHom)
+                    CSC = VariaveisGlobais.UsuarioLogado.at_nfeTipoAmb == 1
+                        ? dadosEmitente.at_nfeCscTokenProd
+                        : dadosEmitente.at_nfeCscTokenHom,
+                    CSCIDToken = VariaveisGlobais.UsuarioLogado.at_nfeTipoAmb == 1
+                        ? Convert.ToInt32(dadosEmitente.at_nfeCscIdProd)
+                        : Convert.ToInt32(dadosEmitente.at_nfeCscIdHom)
                 };
 
                 var autorizacao = new ServicoNFCe.Autorizacao(xml, configuracao);
                 autorizacao.Executar();
 
                 //caso a nota seja rejeitada por duplicidade, incrementa o número da nota ate que seja autorizada
-                if (autorizacao.Result.ProtNFe.InfProt.CStat != null && (autorizacao.Result.ProtNFe.InfProt.CStat == 204 || autorizacao.Result.ProtNFe.InfProt.CStat == 539)) // 204: Rejeição por duplicação de nnf (Já foi emitido por outro PDV)
+                if (autorizacao.Result.ProtNFe.InfProt.CStat != null &&
+                    (autorizacao.Result.ProtNFe.InfProt.CStat == 204 ||
+                     autorizacao.Result.ProtNFe.InfProt.CStat ==
+                     539)) // 204: Rejeição por duplicação de nnf (Já foi emitido por outro PDV)
                 {
                     serie = ++serie;
                     numeroNota = ++numeroNota;
 
                     return GerarNFCe();
                 }
+
+                VerificarExistenciaPastaXML();
 
                 if (autorizacao.Result.ProtNFe != null)
                 {
@@ -1675,7 +1703,7 @@ namespace App_PDV
                         case 301: //Uso Denegado: Irregularidade fiscal do emitente
                         case 302: //Uso Denegado: Irregularidade fiscal do destinatário
                         case 303: //Uso Denegado: Destinatário não habilitado a operar na UF
-                            autorizacao.GravarXmlDistribuicao(@"C:\App_System\PDV\XML");
+                            autorizacao.GravarXmlDistribuicao(@"C:\App_System\App_System_PDV\XML");
                             //var docProcNFe = autorizacao.NfeProcResult.GerarXML(); //Gerar o Objeto para pegar a string e gravar em banco de dados
 
                             //Como é assíncrono, tenho que prever a possibilidade de ter mais de uma NFe no lote, então teremos vários XMLs com protocolos.
@@ -1704,7 +1732,8 @@ namespace App_PDV
                 }
                 else
                 {
-                    MensagensDoSistema.MensagemAtencaoOk($"Não foi possível gerar a NFC-e./n Cód.: {autorizacao.Result.ProtNFe.InfProt.CStat} /n Motivo: {autorizacao.Result.ProtNFe.InfProt.XMotivo} ");
+                    MensagensDoSistema.MensagemAtencaoOk(
+                        $"Não foi possível gerar a NFC-e./n Cód.: {autorizacao.Result.ProtNFe.InfProt.CStat} /n Motivo: {autorizacao.Result.ProtNFe.InfProt.XMotivo} ");
                 }
 
                 SalvaNfe(autorizacao);
@@ -1717,12 +1746,23 @@ namespace App_PDV
             return 0;
         }
 
+        private void VerificarExistenciaPastaXML()
+        {
+            // Defina o caminho da pasta
+            string folderPath = @"C:\App_System\App_System_PDV\XML";
+
+            // Crie a pasta (se ela não existir)
+            if (!Directory.Exists(folderPath))
+            {
+                Directory.CreateDirectory(folderPath);
+            }
+        }
+
         private void SalvarXMLPasta(ServicoNFCe.Autorizacao autorizacao)
         {
             try
             {
-                var destinoArqXml =
-                    $@"C:\App_System\PDV\XML\{Regex.Replace(movimentacao.fk_tb_ator_emit.at_cnpj, @"[.\-/]", "")}\{(int)movimentacao.mv_nfeTipoAmb}\{serie:000}\";
+                var destinoArqXml = $@"C:\App_System\App_System_PDV\XML\{Regex.Replace(movimentacao.fk_tb_ator_emit.at_cnpj, @"[.\-/]", "")}\{(int)movimentacao.mv_nfeTipoAmb}\{serie:000}\";
 
                 var SNfeXmlProcRes = autorizacao.NfeProcResults[autorizacao.Result.ProtNFe?.InfProt?.ChNFe]?.GerarXML()
                     ?.OuterXml;

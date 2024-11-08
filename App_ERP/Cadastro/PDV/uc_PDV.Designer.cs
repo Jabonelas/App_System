@@ -70,7 +70,6 @@
             this.NomeFantasia,
             this.NumPDV});
             this.gridView1.GridControl = this.grdPDV;
-            this.gridView1.GroupPanelText = "Buscar...";
             this.gridView1.Name = "gridView1";
             // 
             // gridColumn6

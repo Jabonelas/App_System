@@ -66,7 +66,6 @@
             this.gridColumn6,
             this.NomeMarca});
             this.gridView1.GridControl = this.grdMarca;
-            this.gridView1.GroupPanelText = "Buscar...";
             this.gridView1.Name = "gridView1";
             // 
             // gridColumn6
