@@ -32,7 +32,7 @@ namespace App_ERP
             ribbon.Minimized = true;
 
             // Desabilitar a opção de maximizar a tela
-            //this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
             ExibirPainelCentral();
 
@@ -139,7 +139,7 @@ namespace App_ERP
 
             barStatusVendedor.Caption = $"Vendedor: {VariaveisGlobais.UsuarioLogado.at_razSoc}";
             barStatusUsuario.Caption = $"Usuário: {VariaveisGlobais.UsuarioLogado.at_nomeUsuario}";
-            //barStatusVersaoSistema.Caption = $"Versão: {VariaveisGlobais.versaoAtualSistema}";
+            barStatusVersaoSistema.Caption = $"Versão: {VariaveisGlobais.versaoAtualSistema}";
         }
 
         public void TelaProduto(string _formaOrdenarGrid)
