@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\israe\\source\\repos\\App_System\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_telascompartilhadas\\classes\\mensagens de erros\\logerros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|c:\\users\\israe\\source\\repos\\app_system\\app_telascompartilhadas\\classes\\mensagens de erros\\logerros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ABED4231-0D41-4E0B-BD7C-FECFAA6439DB}|App_TelasCompartilhadas\\App_TelasCompartilhadas.csproj|solutionrelative:app_telascompartilhadas\\classes\\mensagens de erros\\logerros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25FD8C93-1B36-41F3-9DF4-02DB2EDCF375}|App_PDV\\App_PDV.csproj|c:\\users\\israe\\source\\repos\\app_system\\app_pdv\\tela inicial\\frmtelainicialpdv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{25FD8C93-1B36-41F3-9DF4-02DB2EDCF375}|App_PDV\\App_PDV.csproj|C:\\Users\\israe\\source\\repos\\App_System\\app_pdv\\tela inicial\\frmtelainicialpdv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{25FD8C93-1B36-41F3-9DF4-02DB2EDCF375}|App_PDV\\App_PDV.csproj|solutionrelative:app_pdv\\tela inicial\\frmtelainicialpdv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -782,8 +782,7 @@
               "RelativeToolTip": "App_PDV\\Tela Inicial\\frmTelaInicialPDV.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAAABwAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T15:32:38.236Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T15:32:38.236Z"
             },
             {
               "$type": "Document",
